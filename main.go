@@ -8,6 +8,9 @@ import (
 	"path/filepath"
 )
 
+var IGN string = "Leroidesafk"
+var HypixelAPIKey string = "6031e81e-677f-4922-b46c-5149f06b0f9c"
+
 type Infos struct {
 	Name string
 }
@@ -16,8 +19,34 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/menu", http.StatusFound)
 }
 
+type DataMenuPage struct {
+	Name      string
+	ListCapes []string
+	ImageURLs []string
+}
+
 func menuHandler(w http.ResponseWriter, r *http.Request) {
-	infos := Infos{Name: ""}
+	// Charger les capes par défaut pour Leroidesafk
+	infos := DataMenuPage{"Leroidesafk", load.Load("Leroidesafk", HypixelAPIKey), []string{}}
+
+	// Si un joueur est spécifié, charger ses capes
+	IGN := r.FormValue("playername")
+	if IGN != "" {
+		listCapes := load.Load(IGN, HypixelAPIKey)
+		imageURLs := []string{}
+		for _, cape := range listCapes {
+			imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
+		}
+		infos = DataMenuPage{IGN, listCapes, imageURLs}
+	} else {
+		// Si aucun joueur spécifié, afficher les capes par défaut de Leroidesafk
+		listCapes := load.Load("Leroidesafk", HypixelAPIKey)
+		imageURLs := []string{}
+		for _, cape := range listCapes {
+			imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
+		}
+		infos.ImageURLs = imageURLs
+	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
 	tmpl, err := template.ParseFiles(tmplPath)
@@ -34,8 +63,7 @@ func setupFileServer(path, route string) {
 }
 
 func main() {
-	IGN := "Leroidesafk"
-	HypixelAPIKey := "74a12d16-fc4a-4446-8ef2-2c666606a01e"
+
 	load.Load(IGN, HypixelAPIKey)
 
 	http.HandleFunc("/", rootHandler)

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypixel Api</title>
+    <link rel="stylesheet" href="../styles/menu.css?v=1.0">
+    <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li>
+                    <form action="/menu" method="get" class="input-group">
+                        <input type="text" name="playername" placeholder="Find Player" class="find-player"
+                            id="playerInput" required>
+                        <button class="show-button" type="submit">Show</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="player-card" id="playerCard">
+            <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image">
+            <p id="playerName">{{.Name}}</p>
+        </div>
+
+        <!-- carte MinecraftStats -->
+        <div class="minecraftstats-card" id="minecraftStatsCard">
+            <div class="stats-header">
+                <h2>Minecraft Capes</h2>
+            </div>
+            <div class="stats-body">
+                {{range .ImageURLs}}
+                <img src="{{.}}" alt="Cape Image" class="cape-image">
+                {{end}}
+            </div>
+        </div>        
+
+        <!-- carte HypixelStats -->
+        <div class="hypixelstats-card" id="hypixelStatsCard">
+            <div class="stats-header">
+                <h2>Hypixel Stats</h2>
+            </div>
+            <div class="stats-body">
+                <p id="hypixelStats">Les statistiques du joueur seront affichées ici.</p>
+            </div>
+        </div>
+    </main>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/utilities/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    height: 200%;
+}
+
+body.scrolled {
+    transition: background 0.5s ease;
+}
+
+.navbar {
+    background-color: #6E2F2F;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    height: 75px;
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.find-player {
+    padding: 10px;
+    border: 2px solid #491F1F;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #491F1F;
+    color: #fff;
+    width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.find-player::placeholder {
+    color: #aaa;
+}
+
+.find-player:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.show-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #491F1F;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.show-button:hover {
+    background-color: #603030;
+}
+
+main {
+    padding-top: 100px;
+}
+
+.player-card {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 2.5%;
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    z-index: 500;
+}
+
+.profile-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+#playerName {
+    margin-left: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: -10%;
+}
+
+/* Styles pour Minecraft Stats Card */
+.minecraftstats-card {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    background-color: #323232;
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    overflow-y: auto;
+    height: 250px;
+    z-index: 400;
+}
+
+.minecraftstats-card .stats-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.cape-image {
+    width: calc(70% / 6 - 10px); /* Chaque cape occupe 1/6 de la largeur moins l'écart */
+    height: auto;
+    object-fit: contain; /* Laisse l'image s'adapter sans déformation */
+    border-radius: 0;
+    flex-shrink: 0;
+    image-rendering: pixelated; /* Pour éviter le lissage et garder les bords nets du pixel art */
+}
+
+
+/* Styles pour Hypixel Stats Card */
+.hypixelstats-card {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    background-color: #323232;
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    overflow-y: auto;
+    height: 250px;
+    z-index: 400;
+}
+
+.stats-header {
+    background-color: #292929;
+    padding: 15px;
+    text-align: center;
+}
+
+.stats-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+}
+
+.stats-body {
+    background-color: #323232;
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stats-body p {
+    font-size: 18px;
+    color: #aaa;
+}
