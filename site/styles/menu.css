@@ -1,3 +1,4 @@
+/* Styles généraux pour le corps et la page */
 body, html {
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@ body.scrolled {
     transition: background 0.5s ease;
 }
 
+/* Navbar */
 .navbar {
     background-color: #6E2F2F;
     padding: 15px 0;
@@ -80,10 +82,12 @@ body.scrolled {
     background-color: #603030;
 }
 
+/* Espace principal */
 main {
     padding-top: 100px;
 }
 
+/* Player Card */
 .player-card {
     display: none;
     position: fixed;
@@ -119,7 +123,7 @@ main {
     top: -10%;
 }
 
-/* Styles pour Minecraft Stats Card */
+/* Minecraft Stats Card */
 .minecraftstats-card {
     display: flex;
     flex-direction: column;
@@ -136,6 +140,30 @@ main {
     overflow-y: auto;
     height: 250px;
     z-index: 400;
+}
+
+.minecraftstats-card .stats-header {
+    background-color: #292929;
+    padding: 15px;
+    display: flex;
+    align-items: center; /* Alignement de l'icône et du texte */
+    justify-content: center; /* Centrer le texte */
+}
+
+.minecraftstats-card .stats-header .minecraft-icon {
+    width: 30px;  /* Taille de l'icône */
+    height: auto;
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    position: absolute;
+    left: 20px; /* Positionner l'icône à gauche */
+}
+
+.minecraftstats-card .stats-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+    text-align: center; /* Centrer le texte */
+    flex-grow: 1; /* Permet de pousser le texte à droite après l'icône */
 }
 
 .minecraftstats-card .stats-body {
@@ -156,8 +184,7 @@ main {
     image-rendering: pixelated; /* Pour éviter le lissage et garder les bords nets du pixel art */
 }
 
-
-/* Styles pour Hypixel Stats Card */
+/* Hypixel Stats Card */
 .hypixelstats-card {
     display: flex;
     flex-direction: column;
@@ -176,19 +203,31 @@ main {
     z-index: 400;
 }
 
-.stats-header {
+.hypixelstats-card .stats-header {
     background-color: #292929;
     padding: 15px;
-    text-align: center;
+    display: flex;
+    align-items: center; /* Alignement de l'icône et du texte */
+    justify-content: center; /* Centrer le texte */
 }
 
-.stats-header h2 {
+.hypixelstats-card .stats-header .hypixel-icon {
+    width: 30px;  /* Taille de l'icône */
+    height: auto;
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    position: absolute;
+    left: 20px; /* Positionner l'icône à gauche */
+}
+
+.hypixelstats-card .stats-header h2 {
     font-size: 24px;
     margin: 0;
     color: #fff;
+    text-align: center; /* Centrer le texte */
+    flex-grow: 1; /* Permet de pousser le texte à droite après l'icône */
 }
 
-.stats-body {
+.hypixelstats-card .stats-body {
     background-color: #323232;
     padding: 10px;
     text-align: center;
@@ -198,7 +237,7 @@ main {
     justify-content: flex-start;
 }
 
-.stats-body p {
+.hypixelstats-card .stats-body p {
     font-size: 18px;
     color: #aaa;
 }
