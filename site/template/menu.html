@@ -1,83 +1,85 @@
-<!DOCTYPE html>
-<html lang="fr">
+    <!DOCTYPE html>
+    <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hypixel Api</title>
-    <link rel="stylesheet" href="../styles/menu.css?v=1.0">
-    <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hypixel Api</title>
+        <link rel="stylesheet" href="../styles/menu.css?v=1.0">
+        <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
+    </head>
 
-<body>
-    <header class="navbar">
-        <nav>
-            <ul>
-                <li>
-                    <form action="/menu" method="get" class="input-group">
-                        <input type="text" name="playername" placeholder="Find Player" class="find-player"
-                            id="playerInput" required>
-                        <button class="show-button" type="submit">Show</button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- Conteneur général pour les cartes -->
-        <div class="stats-container">
-           <!-- Player Card -->
-            <div class="player-card" id="playerCard">
-                <div class="profile-info">
-                    <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image">
-                    <p id="playerName">{{.Name}}</p>
+    <body>
+        <header class="navbar">
+            <nav>
+                <ul>
+                    <li>
+                        <form action="/menu" method="get" class="input-group">
+                            <input type="text" name="playername" placeholder="Find Player" class="find-player"
+                                id="playerInput" required>
+                            <button class="show-button" type="submit">Show</button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Conteneur général pour les cartes -->
+            <div class="stats-container">
+            <!-- Player Card -->
+                <div class="player-card" id="playerCard">
+                    <div class="profile-info">
+                        <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image">
+                        <p id="playerName">{{.Name}}</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Minecraft Stats Card -->
-            <div class="minecraftstats-card" id="minecraftStatsCard">
-                <div class="stats-header">
-                    <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
-                    <h2>Minecraft Capes</h2>
-                </div>
-                <div class="stats-body">
-                    {{if .ImageURLs}}
-                        {{range .ImageURLs}}
-                            <!-- Vérification avec la fonction contains pour les capes spéciales -->
-                            {{if or (contains "15A" .) (contains "cherry" .) (contains "mcc" .) (contains "migrator_cape" .) (contains "mojangoffice" .) (contains "vanilla_cape" .) (contains "tiktok" .) (contains "twitch" .)}}
-                                <img src="{{.}}" alt="Cape Image" class="cape-image common-cape"> <!-- Classe communes -->
-                            {{else}}
-                                <img src="{{.}}" alt="Cape Image" class="cape-image"> <!-- Autres capes -->
+                <!-- Minecraft Stats Card -->
+                <div class="minecraftstats-card" id="minecraftStatsCard">
+                    <div class="stats-header">
+                        <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
+                        <h2>Minecraft Capes</h2>
+                    </div>
+                    <div class="stats-body">
+                        {{if .ImageURLs}}
+                            {{range .ImageURLs}}
+                                <!-- Vérification avec la fonction contains pour les capes spéciales -->
+                                {{if or (contains "15A" .) (contains "cherry" .) (contains "mcc" .) (contains "migrator_cape" .) (contains "mojangoffice" .) (contains "vanilla_cape" .) (contains "tiktok" .) (contains "twitch" .)}}
+                                    <img src="{{.}}" alt="Cape Image" class="cape-image common-cape"> <!-- Classe communes -->
+                                {{else if or (contains "birthday" .) (contains "cobalt" .) (contains "db" .) (contains "millionth" .) (contains "mojang" .) (contains "mojangold" .) (contains "mojangstudios" .) (contains "mojira" .) (contains "prismarine" .) (contains "realms" .) (contains "scrolls" .) (contains "sniffer" .) (contains "snowman" .) (contains "spade" .) (contains "translator" .) (contains "translatorchinese" .) (contains "translatorjapanese" .) (contains "turtle" .) (contains "valentine" .)}}
+                                    <img src="{{.}}" alt="Cape Image" class="cape-image special-cape"> <!-- Capes spéciales -->
+                                {{else}}
+                                    <img src="{{.}}" alt="Cape Image" class="cape-image"> <!-- Autres capes -->
+                                {{end}}
                             {{end}}
+                        {{else}}
+                            <p class="no-cape">Ce Joueur ne Possède aucune cape</p>
                         {{end}}
-                    {{else}}
-                        <p class="no-cape">Ce Joueur ne Possède aucune cape</p>
-                    {{end}}
+                    </div>
+                </div>
+        
+                <!-- Hypixel Stats Card -->
+                <div class="hypixelstats-card" id="hypixelStatsCard">
+                    <div class="stats-header">
+                        <img src="../img/utilities/hypixelicon.png" alt="Hypixel Icon" class="hypixel-icon">
+                        <h2>Hypixel Stats</h2>
+                    </div>
+                    <div class="stats-body">
+                        <p id="hypixelStats">Les statistiques du joueur seront affichées ici.</p>
+                    </div>
+                </div>
+                <!-- MCC Stats Card -->
+                <div class="mccstats-card" id="mccStatsCard">
+                    <div class="stats-header">
+                        <img src="../img/utilities/mccicon.png" alt="MCC Icon" class="mcc-icon">
+                        <h2>MCC Stats</h2>
+                    </div>
+                    <div class="stats-body">
+                        <p id="mccStats">Les statistiques MCC du joueur seront affichées ici.</p>
+                    </div>
                 </div>
             </div>
-    
-            <!-- Hypixel Stats Card -->
-            <div class="hypixelstats-card" id="hypixelStatsCard">
-                <div class="stats-header">
-                    <img src="../img/utilities/hypixelicon.png" alt="Hypixel Icon" class="hypixel-icon">
-                    <h2>Hypixel Stats</h2>
-                </div>
-                <div class="stats-body">
-                    <p id="hypixelStats">Les statistiques du joueur seront affichées ici.</p>
-                </div>
-            </div>
-            <!-- MCC Stats Card -->
-            <div class="mccstats-card" id="mccStatsCard">
-                <div class="stats-header">
-                    <img src="../img/utilities/mccicon.png" alt="MCC Icon" class="mcc-icon">
-                    <h2>MCC Stats</h2>
-                </div>
-                <div class="stats-body">
-                    <p id="mccStats">Les statistiques MCC du joueur seront affichées ici.</p>
-                </div>
-            </div>
-        </div>
-    </main>
-    <script src="../js/menu.js"></script>
-</body>
+        </main>
+        <script src="../js/menu.js"></script>
+    </body>
 
-</html>
+    </html>

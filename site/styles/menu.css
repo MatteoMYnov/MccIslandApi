@@ -194,9 +194,13 @@ main {
 
 .common-cape:hover {
     transform: scale(1.02); /* Légère augmentation de la taille */
-    box-shadow: 0 0 10px 2px gray; /* Changer de cyan à gray pour les capes spécifiques */
+    box-shadow: 0 0 10px 2px gray; /* Changer de cyan pour les capes spécifiques */
 }
 
+.special-cape:hover {
+    transform: scale(1.02); /* Effet de zoom au survol */
+    box-shadow: 0 0 10px 2px #ff00ff; /* Changer de mauve pour les capes spécifiques */
+}
 .no-cape {
     font-size: 20px;
     color: #fff;

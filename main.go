@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/json"
 	"html/template"
 	"hypixel-info/load"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"path/filepath"
@@ -11,10 +13,17 @@ import (
 
 var IGN string = "Leroidesafk"
 
-//var HypixelAPIKey string = "e6fbfd94-d9c9-4638-8503-7e9248bb26d1"
+// Structure pour contenir les groupes de capes
+type CapeGroups struct {
+	Special []string `json:"special"`
+	Normal  []string `json:"normal"`
+	Common  []string `json:"common"`
+}
 
 type Infos struct {
-	Name string
+	Name      string
+	ListCapes []string
+	ImageURLs []string
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -31,36 +40,85 @@ func contains(sub, str string) bool {
 	return strings.Contains(str, sub)
 }
 
-func menuHandler(w http.ResponseWriter, r *http.Request) {
-	// Charger les capes par défaut pour Leroidesafk
-	infos := DataMenuPage{"Leroidesafk", load.Load("Leroidesafk"), []string{}}
-
-	// Si un joueur est spécifié, charger ses capes
-	IGN := r.FormValue("playername")
-	if IGN != "" {
-		listCapes := load.Load(IGN)
-		imageURLs := []string{}
-		if len(listCapes) == 0 {
-			infos.ImageURLs = []string{}                    // Pas de capes
-			infos.Name = "Ce Joueur ne Possède aucune cape" // Message alternatif
-		} else {
-			for _, cape := range listCapes {
-				imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
-			}
-			infos.ImageURLs = imageURLs
-		}
-		infos.Name = IGN
-	} else {
-		// Si aucun joueur spécifié, afficher les capes par défaut de Leroidesafk
-		listCapes := load.Load("Leroidesafk")
-		imageURLs := []string{}
-		for _, cape := range listCapes {
-			imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
-		}
-		infos.ImageURLs = imageURLs
+// Charger les capes du fichier JSON
+func loadCapeGroups() (CapeGroups, error) {
+	var capeGroups CapeGroups
+	file, err := ioutil.ReadFile("./site/infos/capes.json")
+	if err != nil {
+		return capeGroups, err
 	}
 
-	// Passer la fonction contains au template
+	err = json.Unmarshal(file, &capeGroups)
+	if err != nil {
+		return capeGroups, err
+	}
+
+	return capeGroups, nil
+}
+
+// Trier les capes selon les groupes définis
+func prioritizeCapes(allCapes []string, capeGroups CapeGroups) []string {
+	var prioritizedCapes []string
+	// Prioriser les capes par groupe
+	for _, group := range [][]string{capeGroups.Special, capeGroups.Normal, capeGroups.Common} {
+		for _, cape := range group {
+			if containsAny(allCapes, cape) {
+				prioritizedCapes = append(prioritizedCapes, cape)
+			}
+		}
+	}
+	// Ajouter le reste des capes non prioritaires
+	for _, cape := range allCapes {
+		if !containsAny(prioritizedCapes, cape) {
+			prioritizedCapes = append(prioritizedCapes, cape)
+		}
+	}
+	return prioritizedCapes
+}
+
+// Vérifier si une cape existe dans un tableau
+func containsAny(list []string, item string) bool {
+	for _, v := range list {
+		if v == item {
+			return true
+		}
+	}
+	return false
+}
+
+func menuHandler(w http.ResponseWriter, r *http.Request) {
+	// Charger les groupes de capes depuis le JSON
+	capeGroups, err := loadCapeGroups()
+	if err != nil {
+		log.Fatal("Erreur de chargement des groupes de capes:", err)
+	}
+
+	// Charger les capes du joueur
+	IGN := r.FormValue("playername")
+	var listCapes []string
+	if IGN != "" {
+		listCapes = load.Load(IGN)
+	} else {
+		listCapes = load.Load("Leroidesafk")
+	}
+
+	// Prioriser les capes en fonction des groupes
+	prioritizedCapes := prioritizeCapes(listCapes, capeGroups)
+
+	// Générer les URLs des images de capes
+	imageURLs := []string{}
+	for _, cape := range prioritizedCapes {
+		imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
+	}
+
+	// Passer les informations au template
+	infos := DataMenuPage{
+		Name:      IGN,
+		ListCapes: prioritizedCapes,
+		ImageURLs: imageURLs,
+	}
+
+	// Charger et exécuter le template
 	tmplPath := filepath.Join("site", "template", "menu.html")
 	tmpl, err := template.New("menu.html").Funcs(template.FuncMap{
 		"contains": contains, // Ajouter la fonction personnalisée
@@ -78,7 +136,6 @@ func setupFileServer(path, route string) {
 }
 
 func main() {
-
 	load.Load(IGN)
 
 	http.HandleFunc("/", rootHandler)
