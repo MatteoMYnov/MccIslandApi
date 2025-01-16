@@ -112,14 +112,15 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("Erreur de chargement des groupes de capes:", err)
 	}
 
-	// Charger les capes du joueur
+	// Si aucun nom de joueur n'est spécifié dans la requête, utiliser "Leroidesafk" par défaut
 	IGN := r.FormValue("playername")
-	var listCapes []string
-	if IGN != "" {
-		listCapes = load.Load(IGN)
-	} else {
-		listCapes = load.Load("Leroidesafk")
+	if IGN == "" {
+		IGN = "Leroidesafk"
 	}
+
+	// Charger les capes du joueur
+	var listCapes []string
+	listCapes = load.Load(IGN)
 
 	// Prioriser les capes en fonction des groupes
 	prioritizedCapes := prioritizeCapes(listCapes, capeGroups)
