@@ -24,32 +24,41 @@
         </nav>
     </header>
     <main>
-        <div class="player-card" id="playerCard">
-            <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image">
-            <p id="playerName">{{.Name}}</p>
-        </div>
-
-        <!-- carte MinecraftStats -->
-        <div class="minecraftstats-card" id="minecraftStatsCard">
-            <div class="stats-header">
-                <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
-                <h2>Minecraft Capes</h2>
+        <!-- Conteneur général pour les cartes -->
+        <div class="stats-container">
+           <!-- Player Card -->
+            <div class="player-card" id="playerCard">
+                <div class="profile-info">
+                    <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image">
+                    <p id="playerName">{{.Name}}</p>
+                </div>
             </div>
-            <div class="stats-body">
-                {{range .ImageURLs}}
-                <img src="{{.}}" alt="Cape Image" class="cape-image">
-                {{end}}
+            <!-- Minecraft Stats Card -->
+            <div class="minecraftstats-card" id="minecraftStatsCard">
+                <div class="stats-header">
+                    <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
+                    <h2>Minecraft Capes</h2>
+                </div>
+                <div class="stats-body">
+                    {{if .ImageURLs}}
+                        {{range .ImageURLs}}
+                            <img src="{{.}}" alt="Cape Image" class="cape-image">
+                        {{end}}
+                    {{else}}
+                        <p class="no-cape">Ce Joueur ne Possède aucune cape</p>
+                    {{end}}
+                </div>
             </div>
-        </div>        
-
-        <!-- carte HypixelStats -->
-        <div class="hypixelstats-card" id="hypixelStatsCard">
-            <div class="stats-header">
-                <img src="../img/utilities/hypixelicon.png" alt="Hypixel Icon" class="hypixel-icon">
-                <h2>Hypixel Stats</h2>
-            </div>
-            <div class="stats-body">
-                <p id="hypixelStats">Les statistiques du joueur seront affichées ici.</p>
+    
+            <!-- Hypixel Stats Card -->
+            <div class="hypixelstats-card" id="hypixelStatsCard">
+                <div class="stats-header">
+                    <img src="../img/utilities/hypixelicon.png" alt="Hypixel Icon" class="hypixel-icon">
+                    <h2>Hypixel Stats</h2>
+                </div>
+                <div class="stats-body">
+                    <p id="hypixelStats">Les statistiques du joueur seront affichées ici.</p>
+                </div>
             </div>
         </div>
     </main>

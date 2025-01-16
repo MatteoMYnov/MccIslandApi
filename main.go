@@ -9,7 +9,8 @@ import (
 )
 
 var IGN string = "Leroidesafk"
-var HypixelAPIKey string = "6031e81e-677f-4922-b46c-5149f06b0f9c"
+
+//var HypixelAPIKey string = "e6fbfd94-d9c9-4638-8503-7e9248bb26d1"
 
 type Infos struct {
 	Name string
@@ -27,20 +28,26 @@ type DataMenuPage struct {
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
 	// Charger les capes par défaut pour Leroidesafk
-	infos := DataMenuPage{"Leroidesafk", load.Load("Leroidesafk", HypixelAPIKey), []string{}}
+	infos := DataMenuPage{"Leroidesafk", load.Load("Leroidesafk"), []string{}}
 
 	// Si un joueur est spécifié, charger ses capes
 	IGN := r.FormValue("playername")
 	if IGN != "" {
-		listCapes := load.Load(IGN, HypixelAPIKey)
+		listCapes := load.Load(IGN)
 		imageURLs := []string{}
-		for _, cape := range listCapes {
-			imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
+		if len(listCapes) == 0 {
+			infos.ImageURLs = []string{}                    // Pas de capes
+			infos.Name = "Ce Joueur ne Possède aucune cape" // Message alternatif
+		} else {
+			for _, cape := range listCapes {
+				imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
+			}
+			infos.ImageURLs = imageURLs
 		}
-		infos = DataMenuPage{IGN, listCapes, imageURLs}
+		infos.Name = IGN
 	} else {
 		// Si aucun joueur spécifié, afficher les capes par défaut de Leroidesafk
-		listCapes := load.Load("Leroidesafk", HypixelAPIKey)
+		listCapes := load.Load("Leroidesafk")
 		imageURLs := []string{}
 		for _, cape := range listCapes {
 			imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
@@ -64,7 +71,7 @@ func setupFileServer(path, route string) {
 
 func main() {
 
-	load.Load(IGN, HypixelAPIKey)
+	load.Load(IGN)
 
 	http.HandleFunc("/", rootHandler)
 
@@ -74,8 +81,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	log.Println("Démarrage du serveur sur le port 1551...")
-	if err := http.ListenAndServe(":1551", nil); err != nil {
+	if err := http.ListenAndServe(":1555", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

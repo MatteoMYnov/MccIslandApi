@@ -2,24 +2,22 @@ package load
 
 import (
 	"fmt"
-	"log"
 	"time"
 
 	"hypixel-info/hypixel"
 	"hypixel-info/minecraft"
 )
 
-func Load(Name string, HypixelAPIKey string) []string {
-	PlayerUUID := minecraft.GetUUID(Name)
+func Load(Name string) []string {
+	// PlayerUUID := minecraft.GetUUID(Name)
 	PlayerCapes := minecraft.GetCapes(Name)
 
-	client := hypixel.NewClient(HypixelAPIKey)
+	// client := hypixel.NewClient(HypixelAPIKey)
 
-	playerInfo, err := client.GetPlayerInfo(PlayerUUID)
-	if err != nil {
-		log.Fatalf("Erreur lors de la récupération des données : %v", err)
-	}
-	fmt.Println(playerInfo.Name)
+	// playerInfo, err := client.GetPlayerInfo(PlayerUUID)
+	// if err != nil {
+	// 	log.Fatalf("Erreur lors de la récupération des données : %v", err)
+	// }
 
 	/* fmt.Printf("        Nom du joueur : %s\n", playerInfo.Name)
 	fmt.Println("---------' Minecraft '---------")
