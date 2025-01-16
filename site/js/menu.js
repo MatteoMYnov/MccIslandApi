@@ -1,24 +1,30 @@
-function showPlayer() {
+function showMCCStats() {
     var playerName = document.getElementById("playerInput").value;
-    var playerCard = document.getElementById("playerCard");
-    var playerNameElement = document.getElementById("playerName");
-
-
-    var hypixelStatsCard = document.getElementById("hypixelStatsCard");
-    var hypixelStatsElement = document.getElementById("hypixelStats");
+    var mccStatsCard = document.getElementById("mccStatsCard");
+    var mccStatsElement = document.getElementById("mccStats");
 
     if (playerName) {
-        playerCard.style.display = "block";
-        hypixelStatsCard.style.display = "block";
-
-        playerNameElement.textContent = playerName;
-
-        hypixelStatsElement.textContent = "Voici les statistiques Hypixel du joueur " + playerName;
-
+        mccStatsCard.style.display = "block";
+        mccStatsElement.textContent = "Voici les statistiques MCC du joueur " + playerName;
     } else {
         alert("Please enter a player name.");
     }
 }
+
+document.getElementById("playerInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        showMCCStats();
+    }
+});
+
+window.onload = function() {
+    var defaultPlayerName = "Leroidesafk";
+    var mccStatsCard = document.getElementById("mccStatsCard");
+    var mccStatsElement = document.getElementById("mccStats");
+
+    mccStatsCard.style.display = "block";
+    mccStatsElement.textContent = "Voici les statistiques MCC du joueur " + defaultPlayerName;
+};
 
 document.getElementById("playerInput").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
