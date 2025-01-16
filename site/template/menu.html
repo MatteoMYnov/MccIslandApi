@@ -42,17 +42,10 @@
                     <div class="stats-body">
                         {{if .ImageURLs}}
                             {{range .ImageURLs}}
-                                <!-- Vérification avec la fonction contains pour les capes spéciales -->
-                                {{if or (contains "15A" .) (contains "cherry" .) (contains "mcc" .) (contains "migrator_cape" .) (contains "mojangoffice" .) (contains "vanilla_cape" .) (contains "tiktok" .) (contains "twitch" .)}}
-                                    <img src="{{.}}" alt="Cape Image" class="cape-image common-cape"> <!-- Classe communes -->
-                                {{else if or (contains "birthday" .) (contains "cobalt" .) (contains "db" .) (contains "millionth" .) (contains "mojang" .) (contains "mojangold" .) (contains "mojangstudios" .) (contains "mojira" .) (contains "prismarine" .) (contains "realms" .) (contains "scrolls" .) (contains "sniffer" .) (contains "snowman" .) (contains "spade" .) (contains "translator" .) (contains "translatorchinese" .) (contains "translatorjapanese" .) (contains "turtle" .) (contains "valentine" .)}}
-                                    <img src="{{.}}" alt="Cape Image" class="cape-image special-cape"> <!-- Capes spéciales -->
-                                {{else}}
-                                    <img src="{{.}}" alt="Cape Image" class="cape-image"> <!-- Autres capes -->
-                                {{end}}
+                                <img src="{{.URL}}" alt="Cape Image" class="cape-image {{.Class}}">
                             {{end}}
                         {{else}}
-                            <p class="no-cape">Ce Joueur ne Possède aucune cape</p>
+                            <p class="no-cape">Ce joueur ne possède aucune cape</p>
                         {{end}}
                     </div>
                 </div>

@@ -20,22 +20,19 @@ type CapeGroups struct {
 	Common  []string `json:"common"`
 }
 
+// Structure pour contenir les informations d'une cape avec URL et classe CSS
+type CapeInfo struct {
+	URL   string
+	Class string
+}
+
 type Infos struct {
 	Name      string
 	ListCapes []string
-	ImageURLs []string
+	ImageURLs []CapeInfo // Modifier pour inclure les objets CapeInfo avec URL et Class
 }
 
-func rootHandler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/menu", http.StatusFound)
-}
-
-type DataMenuPage struct {
-	Name      string
-	ListCapes []string
-	ImageURLs []string
-}
-
+// Fonction pour vérifier si une chaîne est présente dans un tableau
 func contains(sub, str string) bool {
 	return strings.Contains(str, sub)
 }
@@ -86,8 +83,30 @@ func containsAny(list []string, item string) bool {
 	return false
 }
 
+// Fonction pour obtenir la classe CSS en fonction du groupe de la cape
+func getCapeClass(cape string, capeGroups CapeGroups) string {
+	if containsAny(capeGroups.Special, cape) {
+		return "special-cape"
+	} else if containsAny(capeGroups.Normal, cape) {
+		return "normal-cape"
+	} else if containsAny(capeGroups.Common, cape) {
+		return "common-cape"
+	}
+	return "" // Pas de classe spécifique si la cape n'est dans aucun groupe
+}
+
+func rootHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/menu", http.StatusFound)
+}
+
+type DataMenuPage struct {
+	Name      string
+	ListCapes []string
+	ImageURLs []CapeInfo // Passer les infos de capes avec les classes dynamiques
+}
+
 func menuHandler(w http.ResponseWriter, r *http.Request) {
-	// Charger les groupes de capes depuis le JSON
+	// Charger les groupes de capes depuis le fichier JSON
 	capeGroups, err := loadCapeGroups()
 	if err != nil {
 		log.Fatal("Erreur de chargement des groupes de capes:", err)
@@ -105,17 +124,21 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	// Prioriser les capes en fonction des groupes
 	prioritizedCapes := prioritizeCapes(listCapes, capeGroups)
 
-	// Générer les URLs des images de capes
-	imageURLs := []string{}
+	// Générer les URLs des images de capes et leur classe CSS dynamique
+	capeInfos := []CapeInfo{}
 	for _, cape := range prioritizedCapes {
-		imageURLs = append(imageURLs, "/img/capes/"+cape+".png")
+		class := getCapeClass(cape, capeGroups) // Obtenir la classe CSS pour chaque cape
+		capeInfos = append(capeInfos, CapeInfo{
+			URL:   "/img/capes/" + cape + ".png",
+			Class: class,
+		})
 	}
 
 	// Passer les informations au template
 	infos := DataMenuPage{
 		Name:      IGN,
 		ListCapes: prioritizedCapes,
-		ImageURLs: imageURLs,
+		ImageURLs: capeInfos,
 	}
 
 	// Charger et exécuter le template
