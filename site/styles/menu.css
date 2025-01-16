@@ -192,6 +192,11 @@ main {
     box-shadow: 0 0 10px 2px cyan; /* Ajout de l'effet cyan */
 }
 
+.common-cape:hover {
+    transform: scale(1.02); /* Légère augmentation de la taille */
+    box-shadow: 0 0 10px 2px gray; /* Changer de cyan à gray pour les capes spécifiques */
+}
+
 .no-cape {
     font-size: 20px;
     color: #fff;

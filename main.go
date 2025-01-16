@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"path/filepath"
+	"strings"
 )
 
 var IGN string = "Leroidesafk"
@@ -24,6 +25,10 @@ type DataMenuPage struct {
 	Name      string
 	ListCapes []string
 	ImageURLs []string
+}
+
+func contains(sub, str string) bool {
+	return strings.Contains(str, sub)
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
@@ -55,8 +60,11 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		infos.ImageURLs = imageURLs
 	}
 
+	// Passer la fonction contains au template
 	tmplPath := filepath.Join("site", "template", "menu.html")
-	tmpl, err := template.ParseFiles(tmplPath)
+	tmpl, err := template.New("menu.html").Funcs(template.FuncMap{
+		"contains": contains, // Ajouter la fonction personnalisée
+	}).ParseFiles(tmplPath)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
