@@ -22,9 +22,10 @@ type CapeGroups struct {
 
 // Structure pour contenir les informations d'une cape avec URL et classe CSS
 type CapeInfo struct {
-	URL     string
-	Class   string
-	Removed bool
+	URL      string
+	Class    string
+	CapeName string
+	Removed  bool
 }
 
 type Infos struct {
@@ -142,9 +143,10 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 		// Ajouter l'info de la cape avec URL et classe
 		capeInfos = append(capeInfos, CapeInfo{
-			URL:     "/img/capes/" + capeName + ".png",
-			Class:   class,
-			Removed: removed,
+			URL:      "/img/capes/" + capeName + ".png",
+			Class:    class,
+			CapeName: capeName,
+			Removed:  removed,
 		})
 	}
 

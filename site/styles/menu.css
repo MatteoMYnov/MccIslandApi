@@ -12,6 +12,7 @@ body.scrolled {
     transition: background 0.5s ease;
 }
 
+/* bar de Navigation */
 .navbar {
     background-color: #6E2F2F;
     padding: 15px 0;
@@ -94,6 +95,7 @@ main {
     gap: 20px;
 }
 
+/* Cards */
 .player-card, .minecraftstats-card, .hypixelstats-card, .mccstats-card {
     width: 80%;
     max-width: 600px;
@@ -178,6 +180,7 @@ main {
     padding: 10px;
 }
 
+/* Capes et leurs affichage*/
 .cape-image {
     width: calc(70% / 6 - 10px);
     height: auto;
