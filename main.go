@@ -22,8 +22,9 @@ type CapeGroups struct {
 
 // Structure pour contenir les informations d'une cape avec URL et classe CSS
 type CapeInfo struct {
-	URL   string
-	Class string
+	URL     string
+	Class   string
+	Removed bool
 }
 
 type Infos struct {
@@ -37,7 +38,7 @@ func contains(sub, str string) bool {
 	return strings.Contains(str, sub)
 }
 
-// Charger les capes du fichier JSON
+// Charger les groupes de capes depuis le fichier JSON
 func loadCapeGroups() (CapeGroups, error) {
 	var capeGroups CapeGroups
 	file, err := ioutil.ReadFile("./site/infos/capes.json")
@@ -118,28 +119,53 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		IGN = "Leroidesafk"
 	}
 
-	// Charger les capes du joueur
+	// Charger les capes du joueur (c'est une liste de JSON)
+	playerCapesJSON := load.Load(IGN)
+
+	// Extraire les noms des capes et leur état "removed"
 	var listCapes []string
-	listCapes = load.Load(IGN)
+	capeInfos := []CapeInfo{}
+	for _, cape := range playerCapesJSON {
+		capeName := cape["cape"].(string)
+		removed := cape["removed"].(bool) // Récupérer l'état "removed"
+
+		// Ajoutez la cape à la liste
+		listCapes = append(listCapes, capeName)
+
+		// Obtenez la classe CSS de base pour la cape
+		class := getCapeClass(capeName, capeGroups)
+
+		// Si la cape est supprimée, ajouter la classe "removed-cape"
+		if removed {
+			class = class + " removed-cape"
+		}
+
+		// Ajouter l'info de la cape avec URL et classe
+		capeInfos = append(capeInfos, CapeInfo{
+			URL:     "/img/capes/" + capeName + ".png",
+			Class:   class,
+			Removed: removed,
+		})
+	}
 
 	// Prioriser les capes en fonction des groupes
 	prioritizedCapes := prioritizeCapes(listCapes, capeGroups)
 
-	// Générer les URLs des images de capes et leur classe CSS dynamique
-	capeInfos := []CapeInfo{}
+	// Réorganiser les informations de capes en fonction de la priorité
+	var prioritizedCapeInfos []CapeInfo
 	for _, cape := range prioritizedCapes {
-		class := getCapeClass(cape, capeGroups) // Obtenir la classe CSS pour chaque cape
-		capeInfos = append(capeInfos, CapeInfo{
-			URL:   "/img/capes/" + cape + ".png",
-			Class: class,
-		})
+		for _, capeInfo := range capeInfos {
+			if capeInfo.URL == "/img/capes/"+cape+".png" {
+				prioritizedCapeInfos = append(prioritizedCapeInfos, capeInfo)
+			}
+		}
 	}
 
 	// Passer les informations au template
 	infos := DataMenuPage{
 		Name:      IGN,
 		ListCapes: prioritizedCapes,
-		ImageURLs: capeInfos,
+		ImageURLs: prioritizedCapeInfos,
 	}
 
 	// Charger et exécuter le template
@@ -160,7 +186,6 @@ func setupFileServer(path, route string) {
 }
 
 func main() {
-	load.Load(IGN)
 
 	http.HandleFunc("/", rootHandler)
 
@@ -170,7 +195,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	if err := http.ListenAndServe(":1551", nil); err != nil {
+	if err := http.ListenAndServe(":1556", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

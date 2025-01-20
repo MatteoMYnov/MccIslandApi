@@ -187,19 +187,23 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.removed-cape {
+    filter: grayscale(100%) brightness(1.1);
+}
+
 .cape-image:hover {
-    transform: scale(1.02); /* Légère augmentation de la taille */
-    box-shadow: 0 0 10px 2px cyan; /* Ajout de l'effet cyan */
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 2px cyan;
 }
 
 .common-cape:hover {
-    transform: scale(1.02); /* Légère augmentation de la taille */
-    box-shadow: 0 0 10px 2px gray; /* Changer de cyan pour les capes spécifiques */
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 2px gray;
 }
 
 .special-cape:hover {
-    transform: scale(1.02); /* Effet de zoom au survol */
-    box-shadow: 0 0 10px 2px #ff00ff; /* Changer de mauve pour les capes spécifiques */
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 2px #ff00ff;
 }
 .no-cape {
     font-size: 20px;

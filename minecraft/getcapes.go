@@ -18,7 +18,7 @@ type CapesResponse struct {
 	Capes    []Cape `json:"capes"`
 }
 
-func GetCapes(name string) []string {
+func GetCapes(name string) []map[string]interface{} {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
 	if err != nil {
@@ -45,12 +45,14 @@ func GetCapes(name string) []string {
 		return nil
 	}
 
-	var capeTypes []string
+	var capesList []map[string]interface{}
 	for _, cape := range response.Capes {
-		if !cape.Removed {
-			capeTypes = append(capeTypes, cape.Type)
+		capeObj := map[string]interface{}{
+			"cape":    cape.Type,
+			"removed": cape.Removed,
 		}
+		capesList = append(capesList, capeObj)
 	}
 
-	return capeTypes
+	return capesList
 }
