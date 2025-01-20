@@ -1,0 +1,299 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/utilities/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    height: 200%;
+}
+
+body.scrolled {
+    transition: background 0.5s ease;
+}
+
+/* bar de Navigation */
+.navbar {
+    background-color: #6E2F2F;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    height: 75px;
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.find-player {
+    padding: 10px;
+    border: 2px solid #491F1F;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #491F1F;
+    color: #fff;
+    width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.find-player::placeholder {
+    color: #aaa;
+}
+
+.find-player:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.show-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #491F1F;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.show-button:hover {
+    background-color: #603030;
+}
+
+main {
+    padding-top: 100px;
+}
+
+/* Stats-Container */
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+/* Cards */
+.player-card, .minecraftstats-card, .hypixelstats-card, .mccstats-card {
+    width: 80%;
+    max-width: 600px;
+    flex-shrink: 0;
+    background-color: #323232;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Player-Card */
+.player-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.profile-image {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+#playerName {
+    font-size: 35px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Minecraft-Card */
+.minecraftstats-card {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.minecraftstats-card .stats-header {
+    background-color: #292929;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minecraftstats-card .stats-header .minecraft-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.minecraftstats-card .stats-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.minecraftstats-card .stats-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Capes et leurs affichage*/
+.cape-image {
+    width: calc(70% / 6 - 10px);
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    image-rendering: pixelated;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.removed-cape {
+    filter: grayscale(100%) brightness(1.1);
+}
+
+.cape-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 2px cyan;
+}
+
+.common-cape:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 2px gray;
+}
+
+.special-cape:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 2px #ff00ff;
+}
+.no-cape {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    background-color: #292929;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* HypixelCard */
+.hypixelstats-card {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.hypixelstats-card .stats-header {
+    background-color: #292929;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hypixelstats-card .stats-header .hypixel-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.hypixelstats-card .stats-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.hypixelstats-card .stats-body {
+    text-align: center;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.hypixelstats-card .stats-body p {
+    font-size: 18px;
+    color: #aaa;
+}
+
+/* MCC Card */
+.mccstats-card {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.mccstats-card .stats-header {
+    background-color: #292929;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mccstats-card .stats-header .mcc-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.mccstats-card .stats-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.mccstats-card .stats-body {
+    text-align: center;
+    padding: 10px;
+}
+
+.mccstats-card .stats-body p {
+    font-size: 18px;
+    color: #aaa;
+}
