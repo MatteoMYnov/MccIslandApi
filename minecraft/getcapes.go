@@ -53,6 +53,5 @@ func GetCapes(name string) []map[string]interface{} {
 		}
 		capesList = append(capesList, capeObj)
 	}
-
 	return capesList
 }

@@ -11,7 +11,8 @@ import (
 func Load(Name string) []map[string]interface{} {
 	// PlayerUUID := minecraft.GetUUID(Name)
 	PlayerCapes := minecraft.GetCapes(Name)
-
+	PlayerBadges := minecraft.LoadBadges(PlayerCapes)
+	fmt.Print(PlayerBadges)
 	// client := hypixel.NewClient(HypixelAPIKey)
 
 	// playerInfo, err := client.GetPlayerInfo(PlayerUUID)
