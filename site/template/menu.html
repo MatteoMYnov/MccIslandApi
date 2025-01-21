@@ -50,21 +50,19 @@
                     </div>
                 </div>  
                 <!-- Badge Card -->
+                {{if .BadgeURLs}}
                 <div class="badge-card" id="badgeCard">
                     <div class="stats-header">
                         <img src="../img/utilities/badgesicon.png" alt="Badge Icon" class="badge-icon">
                         <h2>Badges</h2>
                     </div>
                     <div class="stats-body">
-                        {{if .BadgeURLs}}
-                            {{range .BadgeURLs}}
-                                <img src="{{.URL}}" title="{{.BadgeName}}" alt="Badge Image" class="badge-image {{.Class}}">
-                            {{end}}
-                        {{else}}
-                            <p class="no-badge">Ce joueur ne possède aucun badge</p>
+                        {{range .BadgeURLs}}
+                            <img src="{{.URL}}" title="{{.BadgeName}}" alt="Badge Image" class="badge-image {{.Class}}">
                         {{end}}
                     </div>
                 </div>
+                {{end}}
                 <!-- Hypixel Stats Card -->
                 <div class="hypixelstats-card" id="hypixelStatsCard">
                     <div class="stats-header">

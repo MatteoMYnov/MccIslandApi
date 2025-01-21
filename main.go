@@ -172,6 +172,11 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
+	// Si aucun badge n'est présent, mettre BadgeURLs à nil
+	if len(badgeInfos) == 0 {
+		badgeInfos = nil
+	}
+
 	// Prioriser les capes en fonction des groupes
 	prioritizedCapes := prioritizeCapes(listCapes, capeGroups)
 
@@ -185,7 +190,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Passer les informations au template
+	// Déclarer la variable infos avant de l'utiliser
 	infos := DataMenuPage{
 		Name:      IGN,
 		ListCapes: prioritizedCapes,
