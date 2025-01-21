@@ -179,7 +179,53 @@ main {
     justify-content: center;
     padding: 10px;
 }
+/* Badge Card */
+.badge-card {
+    position: absolute;
+    top: calc(265px);
+    left: calc(50% + 320px);
+    background-color: #323232;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
 
+.badge-card .stats-header {
+    background-color: #292929;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-card .stats-header .badge-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.badge-card .stats-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.badge-card .stats-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.badge-card .stats-body p {
+    font-size: 18px;
+    color: #aaa;
+}
 /* Capes et leurs affichage*/
 .cape-image {
     width: calc(70% / 6 - 10px);
