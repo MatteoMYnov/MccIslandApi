@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"html/template"
 	"hypixel-info/load"
+	"hypixel-info/minecraft"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -28,10 +29,18 @@ type CapeInfo struct {
 	Removed  bool
 }
 
+// Structure pour contenir les informations d'un badge avec URL et classe CSS
+type BadgeInfo struct {
+	URL       string
+	Class     string
+	BadgeName string
+}
+
 type Infos struct {
 	Name      string
 	ListCapes []string
-	ImageURLs []CapeInfo // Modifier pour inclure les objets CapeInfo avec URL et Class
+	ImageURLs []CapeInfo
+	BadgeURLs []BadgeInfo // Nouvelle section pour inclure les badges
 }
 
 // Fonction pour vérifier si une chaîne est présente dans un tableau
@@ -104,7 +113,8 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 type DataMenuPage struct {
 	Name      string
 	ListCapes []string
-	ImageURLs []CapeInfo // Passer les infos de capes avec les classes dynamiques
+	ImageURLs []CapeInfo
+	BadgeURLs []BadgeInfo // Informations pour les badges
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
@@ -122,18 +132,19 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Charger les capes du joueur (c'est une liste de JSON)
 	playerCapesJSON := load.Load(IGN)
+	playerBadgesJSON := minecraft.LoadBadgesByName(IGN) // Charger les badges du joueur
 
 	// Extraire les noms des capes et leur état "removed"
 	var listCapes []string
 	capeInfos := []CapeInfo{}
 	for _, cape := range playerCapesJSON {
 		capeName := cape["cape"].(string)
-		removed := cape["removed"].(bool) // Récupérer l'état "removed"
+		removed := cape["removed"].(bool)
 
-		// Ajoutez la cape à la liste
+		// Ajouter la cape à la liste
 		listCapes = append(listCapes, capeName)
 
-		// Obtenez la classe CSS de base pour la cape
+		// Obtenir la classe CSS de base pour la cape
 		class := getCapeClass(capeName, capeGroups)
 
 		// Si la cape est supprimée, ajouter la classe "removed-cape"
@@ -147,6 +158,17 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 			Class:    class,
 			CapeName: capeName,
 			Removed:  removed,
+		})
+	}
+
+	// Gérer les badges du joueur
+	badgeInfos := []BadgeInfo{}
+	for _, badgeName := range playerBadgesJSON { // "playerBadgesJSON" est directement un tableau de strings
+		// Ajouter l'info du badge avec URL et classe CSS
+		badgeInfos = append(badgeInfos, BadgeInfo{
+			URL:       "/img/badges/" + badgeName + ".png",
+			Class:     "badge-class", // Ajouter une classe par défaut ou dynamique
+			BadgeName: badgeName,
 		})
 	}
 
@@ -168,6 +190,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		Name:      IGN,
 		ListCapes: prioritizedCapes,
 		ImageURLs: prioritizedCapeInfos,
+		BadgeURLs: badgeInfos,
 	}
 
 	// Charger et exécuter le template
@@ -188,7 +211,6 @@ func setupFileServer(path, route string) {
 }
 
 func main() {
-
 	http.HandleFunc("/", rootHandler)
 
 	setupFileServer("./site/styles", "/styles/")
@@ -197,7 +219,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	if err := http.ListenAndServe(":1557", nil); err != nil {
+	if err := http.ListenAndServe(":1556", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

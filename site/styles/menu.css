@@ -204,6 +204,7 @@ main {
 .badge-card .stats-header .badge-icon {
     width: 30px;
     height: auto;
+    image-rendering: pixelated;
     margin-right: 10px;
 }
 
@@ -225,6 +226,27 @@ main {
 .badge-card .stats-body p {
     font-size: 18px;
     color: #aaa;
+}
+/* Badges et leurs affichage */
+.badge-image {
+    width: calc(140% / 6 - 10px);
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    image-rendering: pixelated;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 2px gold;
+}
+
+.no-badge {
+    font-size: 18px;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
 }
 /* Capes et leurs affichage*/
 .cape-image {

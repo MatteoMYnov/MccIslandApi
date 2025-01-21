@@ -14,8 +14,16 @@ type BadgeGroup struct {
 
 type BadgeGroups map[string]BadgeGroup
 
-// Cette fonction retourne directement les badges associés aux capes
-func LoadBadges(capes []map[string]interface{}) []string {
+func LoadBadgesByName(name string) []string {
+	capes := GetCapeNames(name)
+	if capes == nil {
+		fmt.Println("Impossible de récupérer les capes pour l'utilisateur :", name)
+		return nil
+	}
+	return LoadBadges(capes)
+}
+
+func LoadBadges(capes []string) []string {
 	// Charger les badges depuis un fichier JSON
 	badges, err := LoadBadgesFromFile("./site/infos/badges.json")
 	if err != nil {
@@ -53,11 +61,11 @@ func LoadBadgesFromFile(filePath string) (BadgeGroups, error) {
 }
 
 // Récupère les badges du joueur en fonction de ses capes et des badges chargés
-func GetBadges(capes []map[string]interface{}, badges BadgeGroups) []string {
-	// Créer une carte des capes possédées par le joueur
+func GetBadges(capes []string, badges BadgeGroups) []string {
+	// Créer une carte des capes possédées par le joueur pour un accès rapide
 	capeTypes := make(map[string]bool)
 	for _, cape := range capes {
-		capeTypes[cape["cape"].(string)] = true
+		capeTypes[cape] = true
 	}
 
 	// Créer une liste des badges du joueur
@@ -92,6 +100,7 @@ func containsAnyCape(badgeGroup []string, capeTypes map[string]bool) bool {
 	return false
 }
 
+// Vérifie si le joueur possède toutes les capes du groupe
 func containsAllCapes(badgeGroup []string, capeTypes map[string]bool) bool {
 	for _, badge := range badgeGroup {
 		if !capeTypes[badge] {

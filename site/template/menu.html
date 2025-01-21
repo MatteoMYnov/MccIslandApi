@@ -48,7 +48,7 @@
                             <p class="no-cape">Ce joueur ne possède aucune cape</p>
                         {{end}}
                     </div>
-                </div>
+                </div>  
                 <!-- Badge Card -->
                 <div class="badge-card" id="badgeCard">
                     <div class="stats-header">
@@ -56,7 +56,13 @@
                         <h2>Badges</h2>
                     </div>
                     <div class="stats-body">
-                        <p>Les badges du joueur seront affichés ici.</p>
+                        {{if .BadgeURLs}}
+                            {{range .BadgeURLs}}
+                                <img src="{{.URL}}" title="{{.BadgeName}}" alt="Badge Image" class="badge-image {{.Class}}">
+                            {{end}}
+                        {{else}}
+                            <p class="no-badge">Ce joueur ne possède aucun badge</p>
+                        {{end}}
                     </div>
                 </div>
                 <!-- Hypixel Stats Card -->
