@@ -1,8 +1,8 @@
 {
   "mojang": {"restriction":"one","capes":["mojangold", "mojangstudios", "mojang"],"uuid":[]},
-  "all-minecons": {"restriction":"all","capes":["2011", "2012", "2013", "2015", "2016"],"uuid":[]},
-  "gift-by-mojang": {"restriction":"one","capes":["birthday", "db", "millionth", "prismarine", "turtle", "valentine", "sniffer", "snowman", "spade", "translatorjapanese", "translatorchinese", "scrolls", "cobalt", "translator", "mojira", "realms"],"uuid":[]},
   "unique-cape": {"restriction":"one","capes":["birthday", "db", "millionth", "prismarine", "turtle", "sniffer", "snowman", "spade", "translatorjapanese"],"uuid":[]},
+  "gift-by-mojang": {"restriction":"one","capes":["birthday", "db", "millionth", "prismarine", "turtle", "valentine", "sniffer", "snowman", "spade", "translatorjapanese", "translatorchinese", "scrolls", "cobalt", "translator", "mojira", "realms"],"uuid":[]},
+  "all-minecons": {"restriction":"all","capes":["2011", "2012", "2013", "2015", "2016"],"uuid":[]},
   "all-commons": {"restriction":"all","capes":["mcc", "mojangoffice", "tiktok", "twitch", "cherry", "vanilla_cape", "15A", "migrator_cape"],"uuid":[]},
   "all-events": {"restriction":"all","capes":["mcc", "mojangoffice"],"uuid":[]},
   "unusual-squad": {"restriction":"one","capes":[],"uuid":["cc4b7d74-bbe2-4310-9106-0e52d292c758","76461bef-2c1d-4440-b8d0-1f992398c1a0","63781be2-b6b3-4b25-8af4-3d963f6bc164","8dd9ad20-80d5-45b3-a6e4-56af90d891c9","b582223b-ff29-4277-ab55-0d3e9586163c","356b6896-757c-4a22-ab10-894606fa581c"]},
