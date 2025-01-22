@@ -14,14 +14,12 @@ import (
 
 var IGN string = "Leroidesafk"
 
-// Structure pour contenir les groupes de capes
 type CapeGroups struct {
 	Special []string `json:"special"`
 	Normal  []string `json:"normal"`
 	Common  []string `json:"common"`
 }
 
-// Structure pour contenir les informations d'une cape avec URL et classe CSS
 type CapeInfo struct {
 	URL      string
 	Class    string
@@ -29,7 +27,6 @@ type CapeInfo struct {
 	Removed  bool
 }
 
-// Structure pour contenir les informations d'un badge avec URL et classe CSS
 type BadgeInfo struct {
 	URL       string
 	Class     string
@@ -40,15 +37,13 @@ type Infos struct {
 	Name      string
 	ListCapes []string
 	ImageURLs []CapeInfo
-	BadgeURLs []BadgeInfo // Nouvelle section pour inclure les badges
+	BadgeURLs []BadgeInfo
 }
 
-// Fonction pour vérifier si une chaîne est présente dans un tableau
 func contains(sub, str string) bool {
 	return strings.Contains(str, sub)
 }
 
-// Charger les groupes de capes depuis le fichier JSON
 func loadCapeGroups() (CapeGroups, error) {
 	var capeGroups CapeGroups
 	file, err := ioutil.ReadFile("./site/infos/capes.json")
@@ -64,10 +59,8 @@ func loadCapeGroups() (CapeGroups, error) {
 	return capeGroups, nil
 }
 
-// Trier les capes selon les groupes définis
 func prioritizeCapes(allCapes []string, capeGroups CapeGroups) []string {
 	var prioritizedCapes []string
-	// Prioriser les capes par groupe
 	for _, group := range [][]string{capeGroups.Special, capeGroups.Normal, capeGroups.Common} {
 		for _, cape := range group {
 			if containsAny(allCapes, cape) {
@@ -75,7 +68,6 @@ func prioritizeCapes(allCapes []string, capeGroups CapeGroups) []string {
 			}
 		}
 	}
-	// Ajouter le reste des capes non prioritaires
 	for _, cape := range allCapes {
 		if !containsAny(prioritizedCapes, cape) {
 			prioritizedCapes = append(prioritizedCapes, cape)
@@ -84,7 +76,6 @@ func prioritizeCapes(allCapes []string, capeGroups CapeGroups) []string {
 	return prioritizedCapes
 }
 
-// Vérifier si une cape existe dans un tableau
 func containsAny(list []string, item string) bool {
 	for _, v := range list {
 		if v == item {
@@ -94,7 +85,6 @@ func containsAny(list []string, item string) bool {
 	return false
 }
 
-// Fonction pour obtenir la classe CSS en fonction du groupe de la cape
 func getCapeClass(cape string, capeGroups CapeGroups) string {
 	if containsAny(capeGroups.Special, cape) {
 		return "special-cape"
@@ -103,7 +93,7 @@ func getCapeClass(cape string, capeGroups CapeGroups) string {
 	} else if containsAny(capeGroups.Common, cape) {
 		return "common-cape"
 	}
-	return "" // Pas de classe spécifique si la cape n'est dans aucun groupe
+	return ""
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -114,11 +104,10 @@ type DataMenuPage struct {
 	Name      string
 	ListCapes []string
 	ImageURLs []CapeInfo
-	BadgeURLs []BadgeInfo // Informations pour les badges
+	BadgeURLs []BadgeInfo
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
-	// Charger les groupes de capes depuis le fichier JSON
 	capeGroups, err := loadCapeGroups()
 	if err != nil {
 		log.Fatal("Erreur de chargement des groupes de capes:", err)
