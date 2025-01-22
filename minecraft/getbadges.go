@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strings"
 )
 
 type BadgeGroup struct {
@@ -75,7 +76,7 @@ func GetBadges(name string, capes []string, badges BadgeGroups) []string {
 
 	// Créer une liste des badges du joueur
 	var playerBadges []string
-
+	normalizedPlayerName := strings.ToLower(name)
 	// Vérifier chaque groupe de badges
 	for badgeName, badge := range badges {
 		if badge.Restriction == "one" {
@@ -93,7 +94,10 @@ func GetBadges(name string, capes []string, badges BadgeGroups) []string {
 		// Vérifier si le joueur est dans la liste des UUID
 		if len(badge.UUID) > 0 {
 			for _, playerUUID := range badge.UUID {
-				if GetName(playerUUID) == name {
+				// Normaliser le nom obtenu via l'UUID
+				normalizedUUIDName := strings.ToLower(GetName(playerUUID))
+				// Comparer les deux noms normalisés
+				if normalizedUUIDName == normalizedPlayerName {
 					playerBadges = append(playerBadges, badgeName)
 					break
 				}
