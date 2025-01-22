@@ -133,7 +133,7 @@ main {
     margin-right: 10px;
 }
 
-#playerName {
+.playerName {
     font-size: 35px;
     font-weight: bold;
     white-space: nowrap;
@@ -141,6 +141,18 @@ main {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    color: white;
+}
+
+.badName {
+    font-size: 35px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
 }
 
 /* Minecraft-Card */

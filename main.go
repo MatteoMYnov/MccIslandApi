@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"path/filepath"
+	"regexp"
 	"strings"
 )
 
@@ -34,10 +35,11 @@ type BadgeInfo struct {
 }
 
 type Infos struct {
-	Name      string
-	ListCapes []string
-	ImageURLs []CapeInfo
-	BadgeURLs []BadgeInfo
+	Name        string
+	ListCapes   []string
+	ImageURLs   []CapeInfo
+	BadgeURLs   []BadgeInfo
+	PlayerClass string
 }
 
 func contains(sub, str string) bool {
@@ -101,10 +103,17 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 type DataMenuPage struct {
-	Name      string
-	ListCapes []string
-	ImageURLs []CapeInfo
-	BadgeURLs []BadgeInfo
+	Name        string
+	ListCapes   []string
+	ImageURLs   []CapeInfo
+	BadgeURLs   []BadgeInfo
+	PlayerClass string
+}
+
+func isValidIGN(name string) bool {
+	validIGNPattern := "^[a-zA-Z0-9_]+$"
+	matched, _ := regexp.MatchString(validIGNPattern, name)
+	return matched
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
@@ -117,6 +126,13 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	IGN := r.FormValue("playername")
 	if IGN == "" {
 		IGN = "Leroidesafk"
+	}
+
+	playerClass := ""
+	if !isValidIGN(IGN) {
+		playerClass = "badName"
+	} else {
+		playerClass = "playerName"
 	}
 
 	// Charger les capes du joueur (c'est une liste de JSON)
@@ -181,10 +197,11 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Déclarer la variable infos avant de l'utiliser
 	infos := DataMenuPage{
-		Name:      IGN,
-		ListCapes: prioritizedCapes,
-		ImageURLs: prioritizedCapeInfos,
-		BadgeURLs: badgeInfos,
+		Name:        IGN,
+		ListCapes:   prioritizedCapes,
+		ImageURLs:   prioritizedCapeInfos,
+		BadgeURLs:   badgeInfos,
+		PlayerClass: playerClass,
 	}
 
 	// Charger et exécuter le template
@@ -213,7 +230,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	if err := http.ListenAndServe(":1556", nil); err != nil {
+	if err := http.ListenAndServe(":1557", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
