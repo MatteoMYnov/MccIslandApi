@@ -14,7 +14,9 @@ type BadgeGroup struct {
 	UUID        []string `json:"uuid"`
 }
 
-type BadgeGroups map[string]BadgeGroup
+type BadgeGroups struct {
+	Badges []map[string]BadgeGroup `json:"badges"`
+}
 
 // Fonction pour charger les badges d'un joueur à partir de son nom
 func LoadBadgesByName(name string) []string {
@@ -46,21 +48,21 @@ func LoadBadgesFromFile(filePath string) (BadgeGroups, error) {
 	// Lire le fichier JSON
 	file, err := os.Open(filePath)
 	if err != nil {
-		return nil, fmt.Errorf("erreur lors de l'ouverture du fichier : %v", err)
+		return BadgeGroups{}, fmt.Errorf("erreur lors de l'ouverture du fichier : %v", err)
 	}
 	defer file.Close()
 
 	// Lire le contenu du fichier
 	data, err := ioutil.ReadAll(file)
 	if err != nil {
-		return nil, fmt.Errorf("erreur lors de la lecture du fichier : %v", err)
+		return BadgeGroups{}, fmt.Errorf("erreur lors de la lecture du fichier : %v", err)
 	}
 
 	// Décoder le JSON dans une structure BadgeGroups
 	var badges BadgeGroups
 	err = json.Unmarshal(data, &badges)
 	if err != nil {
-		return nil, fmt.Errorf("erreur lors du décodage JSON : %v", err)
+		return BadgeGroups{}, fmt.Errorf("erreur lors du décodage JSON : %v", err)
 	}
 
 	return badges, nil
@@ -78,28 +80,30 @@ func GetBadges(name string, capes []string, badges BadgeGroups) []string {
 	var playerBadges []string
 	normalizedPlayerName := strings.ToLower(name)
 	// Vérifier chaque groupe de badges
-	for badgeName, badge := range badges {
-		if badge.Restriction == "one" {
-			// Vérifier si le joueur possède au moins une cape du groupe
-			if containsAnyCape(badge.Capes, capeTypes) {
-				playerBadges = append(playerBadges, badgeName)
-			}
-		} else if badge.Restriction == "all" {
-			// Vérifier si le joueur possède toutes les capes du groupe
-			if containsAllCapes(badge.Capes, capeTypes) {
-				playerBadges = append(playerBadges, badgeName)
-			}
-		}
-
-		// Vérifier si le joueur est dans la liste des UUID
-		if len(badge.UUID) > 0 {
-			for _, playerUUID := range badge.UUID {
-				// Normaliser le nom obtenu via l'UUID
-				normalizedUUIDName := strings.ToLower(GetName(playerUUID))
-				// Comparer les deux noms normalisés
-				if normalizedUUIDName == normalizedPlayerName {
+	for _, badgeGroup := range badges.Badges {
+		for badgeName, badge := range badgeGroup {
+			if badge.Restriction == "one" {
+				// Vérifier si le joueur possède au moins une cape du groupe
+				if containsAnyCape(badge.Capes, capeTypes) {
 					playerBadges = append(playerBadges, badgeName)
-					break
+				}
+			} else if badge.Restriction == "all" {
+				// Vérifier si le joueur possède toutes les capes du groupe
+				if containsAllCapes(badge.Capes, capeTypes) {
+					playerBadges = append(playerBadges, badgeName)
+				}
+			}
+
+			// Vérifier si le joueur est dans la liste des UUID
+			if len(badge.UUID) > 0 {
+				for _, playerUUID := range badge.UUID {
+					// Normaliser le nom obtenu via l'UUID
+					normalizedUUIDName := strings.ToLower(GetName(playerUUID))
+					// Comparer les deux noms normalisés
+					if normalizedUUIDName == normalizedPlayerName {
+						playerBadges = append(playerBadges, badgeName)
+						break
+					}
 				}
 			}
 		}
