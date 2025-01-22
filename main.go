@@ -195,22 +195,12 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Réorganiser les badges dans l'ordre du JSON
-	var prioritizedBadgeInfos []BadgeInfo
-	for _, badgeName := range playerBadgesJSON {
-		for _, badge := range badgeInfos {
-			if badge.BadgeName == badgeName {
-				prioritizedBadgeInfos = append(prioritizedBadgeInfos, badge)
-			}
-		}
-	}
-
 	// Déclarer la variable infos avant de l'utiliser
 	infos := DataMenuPage{
 		Name:        IGN,
 		ListCapes:   prioritizedCapes,
 		ImageURLs:   prioritizedCapeInfos,
-		BadgeURLs:   prioritizedBadgeInfos,
+		BadgeURLs:   badgeInfos,
 		PlayerClass: playerClass,
 	}
 
@@ -240,7 +230,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	if err := http.ListenAndServe(":1556", nil); err != nil {
+	if err := http.ListenAndServe(":1557", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
