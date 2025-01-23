@@ -16,7 +16,7 @@
           "uuid":["cc4b7d74-bbe2-4310-9106-0e52d292c758","76461bef-2c1d-4440-b8d0-1f992398c1a0","63781be2-b6b3-4b25-8af4-3d963f6bc164","8dd9ad20-80d5-45b3-a6e4-56af90d891c9","b582223b-ff29-4277-ab55-0d3e9586163c","356b6896-757c-4a22-ab10-894606fa581c"]}},
     {"website-dev": {"restriction":"one","capes":[],
           "uuid":["cc4b7d74-bbe2-4310-9106-0e52d292c758"]}},
-    {"fox": {"restriction":"one","capes":[],
+    {"muscles": {"restriction":"one","capes":[],
           "uuid":["f8cf2730-4d05-43af-b870-346eb8de5458"]}}
   ]
 }
