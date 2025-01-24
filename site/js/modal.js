@@ -18,7 +18,7 @@ function closeModal() {
 }
 
 // Ouvrir le modal lorsque l'on clique sur une image avec un data-id contenant "using-modal"
-const modalTriggers = document.querySelectorAll('[data-id*="using-modalBLOCKED"]');
+const modalTriggers = document.querySelectorAll('[data-id*="using-modal"]');
 modalTriggers.forEach(trigger => {
     trigger.addEventListener('click', openModal);
 });

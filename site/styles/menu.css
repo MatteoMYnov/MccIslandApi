@@ -430,3 +430,11 @@ main {
     font-size: 18px;
     color: #aaa;
 }
+
+.modal-name {
+    font-size: 36px !important;  /* Taille du texte plus grande */
+    font-weight: bold;
+    color: #fff !important;  /* Texte en blanc */
+    text-align: center;
+    margin-top: 20px;
+}
