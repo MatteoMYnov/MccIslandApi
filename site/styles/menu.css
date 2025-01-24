@@ -378,17 +378,23 @@ main {
     color: #aaa;
 }
 
+/* Empêcher le scroll sur l'arrière-plan lorsque le modal est ouvert */
+body.modal-open {
+    overflow: hidden;
+}
+
 /* Modal */
 .modal {
     display: none; /* Initialement masqué */
     position: fixed;
     z-index: 1000;
-    left: 50%; /* Centrer horizontalement */
-    top: 50%; /* Centrer verticalement */
-    transform: translate(-50%, -50%); /* Ajuster pour centrer exactement */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto; /* Permettre le scroll si nécessaire */
 }
 
 /* Contenu du modal */
@@ -400,11 +406,13 @@ main {
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #fff;
+    max-height: 100%; /* Limiter la hauteur du modal */
+    overflow-y: auto; /* Permettre le scroll dans le modal */
 }
 
 /* En-tête du modal */
 .modal-header {
-    background-color: #292929; /* Seconde couleur du site */
+    background-color: #292929;
     text-align: center;
     padding: 10px;
 }
@@ -416,7 +424,7 @@ main {
     border-radius: 5px;
     image-rendering: pixelated;
     object-fit: cover;
-    background-color: #292929; /* Gris le plus foncé */
+    background-color: #292929;
     padding: 10px;
 }
 
@@ -431,17 +439,20 @@ main {
     color: #aaa;
 }
 
-.modal-name {
-    font-size: 36px !important;  /* Taille du texte plus grande */
+.modal-name, .modal-date {
+    font-size: 36px;
     font-weight: bold;
-    color: #fff !important;  /* Texte en blanc */
     text-align: center;
+    color: #fff;
     margin-top: 20px;
 }
+
 .modal-date {
-    font-size: 18px !important;  /* Taille du texte plus grande */
-    font-weight: bold;
-    color: #bbbb !important;  /* Texte en blanc */
-    text-align: center;
-    margin-top: 20px;
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Pour un défilement fluide dans le modal */
+.modal-content {
+    transition: max-height 0.3s ease-in-out;
 }
