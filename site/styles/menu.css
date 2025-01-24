@@ -438,3 +438,10 @@ main {
     text-align: center;
     margin-top: 20px;
 }
+.modal-date {
+    font-size: 18px !important;  /* Taille du texte plus grande */
+    font-weight: bold;
+    color: #bbbb !important;  /* Texte en blanc */
+    text-align: center;
+    margin-top: 20px;
+}
