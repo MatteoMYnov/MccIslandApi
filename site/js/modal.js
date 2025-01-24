@@ -85,9 +85,49 @@ const modalData = {
         "description":"Cette cape a été remise aux joueurs qui ont participé à l'événement interactif Minecraft Experience : Villager Rescue. Une fois que les participants ont validé leurs billets lors de l'événement, un code pour la cape est envoyé à votre adresse e-mail, que vous pouvez échanger sur le site web minecraft.ne/redeem. Elle est disponible pour Java depuis le 23 octobre 2024 pour ceux qui on utiliser un code pour la cape sur Bedrock Edition. Le nom interne de cette cape dans l'édition Bedrock est LBE, ce qui signifie Location Based Entertainment (divertissement basé sur la localisation). À l'origine, la texture Elytra de l'édition Java utilisait un design monochrome violet foncé inachevé, qui a été initialement téléchargé sur le serveur d'essai de l'édition Bedrock. Le 25 octobre 2024, la texture de la cape de l'édition Java a été mise à jour pour ressembler à celle de l'édition Bedrock, avec un visage de villageois zombies sur les ailes."
     },
     "realms": {
-        "name": "Realms MapMaker cape",
+        "name": "Realms MapMaker Cape",
         "date": "Obtentions: 14 décembre 2015 jusqu'à aujourd'hui",
         "description": "Cette cape est attribuée aux MapMakers du programme de création de contenu de Java Realms, cette cape est décernée à ceux ayant satisfait aux critères spécifiés sur le site Atlas. Cependant, elle a également été la plus retirée des joueurs en raison de vols de comptes, de boost ou de comportements inappropriés. Cette cape est destinée exclusivement aux créateurs de maps, et sa vente ou son utilisation pour des boosts d'autres joueurs est strictement interdite."
+    },
+    "translator": {
+        "name": "Translator Cape",
+        "date": "Obtentions: 16 mai 2012",
+        "description": "Cette cape est remise à certains traducteurs expérimentés ayant des permissions de modération pour leur langue sur le projet de traduction de Minecraft sur Crowdin. Ces capes auraient été distribuées le 16 mai 2012 à 29 contributeurs par un jet de dés équitable, avec l'intention d'en distribuer d'autres de temps en temps. Cependant, après avoir constaté des comportements abusifs de la part de certains traducteurs, comme l'utilisation de l'auto-traduction et le down-voting de traductions légitimes, Jeb a annulé le projet. La cape a de nouveau été utilisée quelques années plus tard pour récompenser certains traducteurs pour leur importante contribution au projet.  Elle fait aussi partit des rares capes qui peuvent être retiré d'un compte suite à la vente d'un compte ou d'un mauvais comportement."
+    },
+    "mojira": {
+        "name": "Mojira Moderator Cape",
+        "date": "Obtentions: 25 décembre 2014 jusqu'à aujourd'hui",
+        "description": "Cette cape est remise aux modérateurs sur le bug tracker de Mojira. Elle fait aussi partit des rares capes qui peuvent être retiré d'un compte suite à la vente d'un compte ou d'un mauvais comportement."
+    },
+    "cobalt": {
+        "name": "Cobalt Cape",
+        "date": "2016",
+        "description": "Cette cape a été remise à certains participants/gagnants de concours de création de niveaux et de tournois de la Ligue Cobalt, la texture des élytres est basée sur l'ennemi guêpe de Cobalt."
+    },
+    "scrolls": {
+        "name": "Scrolls Champion Cape",
+        "date":"Obtentions: 4 et 5 juillet 2015",
+        "description": "Cette cape a été remise Remis aux joueurs qui ont obtenu le badge de gagnant de la première place hebdomadaire cinq fois dans Scrolls à partir du 7 novembre 2014. Lors de la MINECON 2015, l'Open MINECON Scrolls a également été organisé pour gagner des objets en jeu de Scrolls et d'autres prix, notamment la cape dans Minecraft Depuis le 30 septembre 2015, il n'est plus possible de gagner cette cape Les 11 et 12 décembre 2014, tous les joueurs ont été temporairement montrés avec cette cape pour fêter la sortie de Scrolls."
+    },
+    "translatorchinese": {
+        "name": "Chinese Translator cape",
+        "date": "Obtentions: 4 juin 2015",
+        "description": "Remis à Powup333, Craft_Lawrence et sjjklh le 4 juin 2015 pour avoir joué un rôle essentiel dans le projet de traduction de Minecraft sur Crowdin en chinois. La cape est identique à la cape de traducteur, à l'exception du drapeau chinois sur le dessous de la cape."
+    },
+    "turtle": {
+        "name": "Turtle Cape",
+        "date": "Obtention: 14 février 2018",
+        "description": "La cape a été remise à billyK_ pour avoir suggéré d'ajouter des tortues au jeu. La cape a également été remise à Michael, Andersson et el_hefe_, employés de Mojang, pour avoir testé les endpoints de la cape. Elle a ensuite été retiré de tous les comptes à l'exeption du détenteur originel."
+    },
+    "valentine": {
+        "name": "Valentine Cape",
+        "date": "Obtention: 13 Août 2022",
+        "description": "Offerte à LolFoxy2 par un employé des studios Mojang après avoir résolu des problèmes de migration avec son compte Mojang. La cape a été retirée après que l'employé se soit rendu compte de sa rareté. Le 24 janvier 2023, il a également été découvert pendant une courte période sur le compte JoinGrave. La cape n'avait jamais été vue auparavant."
+    },
+    "birthday": {
+        "name": "Birthday Cape",
+        "date": "Obtention: Aucune date n'a été donné",
+        "description": "Offert à Gr8Bizzo, employé des studios Mojang, soi-disant comme cadeau d'anniversaire."
     }
 };
 
