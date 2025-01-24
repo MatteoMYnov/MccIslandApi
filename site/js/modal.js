@@ -110,14 +110,14 @@ const modalData = {
         "description": "Cette cape a été remise Remis aux joueurs qui ont obtenu le badge de gagnant de la première place hebdomadaire cinq fois dans Scrolls à partir du 7 novembre 2014. Lors de la MINECON 2015, l'Open MINECON Scrolls a également été organisé pour gagner des objets en jeu de Scrolls et d'autres prix, notamment la cape dans Minecraft Depuis le 30 septembre 2015, il n'est plus possible de gagner cette cape Les 11 et 12 décembre 2014, tous les joueurs ont été temporairement montrés avec cette cape pour fêter la sortie de Scrolls."
     },
     "translatorchinese": {
-        "name": "Chinese Translator cape",
+        "name": "Translator Cape (Chinese)",
         "date": "Obtentions: 4 juin 2015",
         "description": "Remis à Powup333, Craft_Lawrence et sjjklh le 4 juin 2015 pour avoir joué un rôle essentiel dans le projet de traduction de Minecraft sur Crowdin en chinois. La cape est identique à la cape de traducteur, à l'exception du drapeau chinois sur le dessous de la cape."
     },
     "turtle": {
         "name": "Turtle Cape",
         "date": "Obtention: 14 février 2018",
-        "description": "La cape a été remise à billyK_ pour avoir suggéré d'ajouter des tortues au jeu. La cape a également été remise à Michael, Andersson et el_hefe_, employés de Mojang, pour avoir testé les endpoints de la cape. Elle a ensuite été retiré de tous les comptes à l'exeption du détenteur originel."
+        "description": "La cape a été remise à billyK_ pour avoir suggéré d'ajouter des tortues au jeu. La cape a également été remise à Michael, Andersson et el_hefe_, employés de Mojang, pour avoir testé les endpoints de la cape. Elle a ensuite été retiré de tous les comptes à l'exeption du détenteur originel. Son compte fut piraté, mais ne se laissa pas faire et fut l'un des rares joueurs aidé par mojang eux même pour retrouver son compte."
     },
     "valentine": {
         "name": "Valentine Cape",
@@ -128,6 +128,46 @@ const modalData = {
         "name": "Birthday Cape",
         "date": "Obtention: Aucune date n'a été donné",
         "description": "Offert à Gr8Bizzo, employé de Mojang Studios, soi-disant comme cadeau d'anniversaire."
+    },
+    "dB": {
+        "name": "dannyBstyle's Cape",
+        "date": "14 décembre 2010",
+        "description": "Cette cape a été offerte à DannyBstyle, un compositeur de musique de jeux vidéo, car Notch était fan de sa musique."
+    },
+    "millionth": {
+        "name": "Millionth Customer Cape",
+        "date": "Obtention: 20 janvier 2011",
+        "description": "Cette cape a été offerte à akronman1, l'heureux acquéreur de la 1 000 000e copie de Minecraft. La cape a été désigné par Kinten. apres cela il fut piraté par simswap son adresse mail et perdit le compte."
+    },
+    "prismarine": {
+        "name": "Prismarine Cape",
+        "date": "Obtention: 22 juillet 2015",
+        "description": "Cette cape a été offerte à Drullkus pour avoir recréé le bloc Prismarine pour l'utiliser dans dans Minecraft plutôt que dans son mod Chisel, Jeb avait fait fabriquer cette cape avant de contacter Drullkus mais elle n'avait pas de propriétaire, avant que cette cape ne soit donnée, un employé de Mojang, KrisJelbring l'avait sur son compte mais elle a été supprimée plus tard."
+    },
+    "snowman": {
+        "name": "JulianClark's Cape",
+        "date": "Obtention: 25 décembre 2010",
+        "description": "Cette cape a été offerte à JulianClark pour avoir présenté à Notch, le présentateur de télévision et acteur, Ray Cokes."
+    },
+    "spade": {
+        "name": "Spade Cape",
+        "date": "Obtention: 14 juillet 2011",
+        "description": "Cette cape a été offerte à MrMessiah en guise de « remerciement » pour la création du mod BetterLight, responsable de certaines fonctionnalités d'éclairage et d'herbe de Minecraft, la cape a été évoquée en 2011, mais elle n'a été accordée qu'en 2015."
+    },
+    "sniffer": {
+        "name": "Test Cape",
+        "date": "Obtention: 10 octobre 2023",
+        "description": "Cette cape a été mise sur le compte de etanaratsastaja, un employé de Mojang, lors d'un test sur l'API de Mojang. Le design est similaire à celui d'un Sniffer. Il a été téléchargé sur le serveur de textures de Mojang le 10 octobre 2023 et sur le serveur de production de textures de Mojang 7 jours plus tard, le 17 octobre 2023. La cape a été vue pour la première fois sur 2 comptes dans la base de données du serveur de préparation de Mojang." 
+    },
+    "translatorjapanese": {
+        "name": "Translator Cape (Japanese)",
+        "date": "Obtention: 19 octobre 2013",
+        "description": "Cette cape a été offerte à cheapsh0t en octobre 2013 pour avoir aidé l'équipe de Mojang à Tokyo. La cape est identique à la cape du traducteur à l'exception du drapeau japonais sur le dessous de la cape."
+    },
+    "bacon": {
+        "name": "Bacon Cape",
+        "date": "Obtention: 2010",
+        "description": "Offerte à Miclee par Notch pour son idée d'ajouter le Pigmen. La cape a été faite par Miclee lui-même. La cape a cependant été révoquée en raison d'un grand afflux de joueurs demandant à Notch leurs propres capes sur le jeu."
     }
 };
 
