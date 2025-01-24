@@ -101,7 +101,7 @@ const modalData = {
     },
     "cobalt": {
         "name": "Cobalt Cape",
-        "date": "2016",
+        "date": "Obtentions: 2016",
         "description": "Cette cape a été remise à certains participants/gagnants de concours de création de niveaux et de tournois de la Ligue Cobalt, la texture des élytres est basée sur l'ennemi guêpe de Cobalt."
     },
     "scrolls": {
