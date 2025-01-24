@@ -48,7 +48,7 @@ func contains(sub, str string) bool {
 
 func loadCapeGroups() (CapeGroups, error) {
 	var capeGroups CapeGroups
-	file, err := ioutil.ReadFile("./site/infos/capes.json")
+	file, err := ioutil.ReadFile("./site/infos/capes_rarity.json")
 	if err != nil {
 		return capeGroups, err
 	}
