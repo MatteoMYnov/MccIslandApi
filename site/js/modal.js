@@ -207,7 +207,7 @@ const modalData = {
     "muscles": {
         "name": "Muscles Badge",
         "date": "",
-        "description": "Ce Badge est attribué à Taizeur, pour avoir de gros très bras et être un pompier modèle"
+        "description": "Ce Badge est attribué à Taizeur, pour avoir de très gros bras et être un pompier modèle"
     },
     "gift-by-mojang": {
         "name": "Gift By Mojang Badge",
