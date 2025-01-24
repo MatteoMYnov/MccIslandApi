@@ -1,6 +1,6 @@
 { 
   "badges" : [
-    {"mojang": {"restriction":"one","capes":["mojangold", "mojangstudios", "mojang"],
+    {"mojang-employee": {"restriction":"one","capes":["mojangold", "mojangstudios", "mojang"],
           "uuid":[]}},
     {"unique-cape": {"restriction":"one","capes":["birthday", "db", "millionth", "prismarine", "turtle", "sniffer", "snowman", "spade", "translatorjapanese", "bacon"],
           "uuid":[]}},
