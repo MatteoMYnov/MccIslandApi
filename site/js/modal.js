@@ -76,8 +76,18 @@ const modalData = {
     },
     "mojangoffice": {
         "name": "Mojang Office Cape",
-        "date": "7 décembre 2024",
+        "date": "Obtentions: 7 décembre 2024",
         "description": "Cette cape a fait l'objet d'une fuite le 25 novembre 2024 sur le site web de Minecraft avec le titre « Achetez une cape, obtenez une cape » La cape a été retirée de la page quelques heures plus tard. Mais les joueurs ont pu comprendre qu'en achetant une cape de Creeper de n'importe quelle taille dans la boutique officielle de Minecraft à partir du 7 décembre 2024, vous étiez censé recevoir un code pour déverrouiller une cape exclusive dans le jeu appelée la cape Eyeblossom. Le 28 novembre 2024, la page de la boutique pour la cape Creeper a été mise à jour pour inclure l'information que l'achat de cette cape débloquerait une cape exclusive dans le jeu. Cependant, cet extrait a ensuite été supprimé de la page et remplacé par une promotion incluant un objet Bedrock Character Creator peu de temps après. Le 9 décembre 2024, Mojang a annoncé le serveur événementiel Eerie Mojang Office Party qui, comme indiqué dans l'article, donnerait aux joueurs la cape après avoir terminé 5 défis quotidiens Le nom de la cape a également été révélé comme étant la « Mojang Office cape ». Le 7 décembre 2024, un employé de Mojang a confirmé que la cape serait multiplateforme et à 9 h 23 EST le même jour, elle a été ajoutée au back-end de la Java Edition. Après avoir terminé le cinquième et dernier défi quotidien sur le serveur d'événements, les joueurs pouvaient immédiatement accéder à la cape dans les deux versions du jeu."
+    },
+    "mcexp": {
+        "name":"MC Experience Cape",
+        "date":"Obtentions: 23 octobre 2024 jusqu'à aujourd'hui",
+        "description":"Cette cape a été remise aux joueurs qui ont participé à l'événement interactif Minecraft Experience : Villager Rescue. Une fois que les participants ont validé leurs billets lors de l'événement, un code pour la cape est envoyé à votre adresse e-mail, que vous pouvez échanger sur le site web minecraft.ne/redeem. Elle est disponible pour Java depuis le 23 octobre 2024 pour ceux qui on utiliser un code pour la cape sur Bedrock Edition. Le nom interne de cette cape dans l'édition Bedrock est LBE, ce qui signifie Location Based Entertainment (divertissement basé sur la localisation). À l'origine, la texture Elytra de l'édition Java utilisait un design monochrome violet foncé inachevé, qui a été initialement téléchargé sur le serveur d'essai de l'édition Bedrock. Le 25 octobre 2024, la texture de la cape de l'édition Java a été mise à jour pour ressembler à celle de l'édition Bedrock, avec un visage de villageois zombies sur les ailes."
+    },
+    "realms": {
+        "name": "Realms MapMaker cape",
+        "date": "Obtentions: 14 décembre 2015 jusqu'à aujourd'hui",
+        "description": "Cette cape est attribuée aux MapMakers du programme de création de contenu de Java Realms, cette cape est décernée à ceux ayant satisfait aux critères spécifiés sur le site Atlas. Cependant, elle a également été la plus retirée des joueurs en raison de vols de comptes, de boost ou de comportements inappropriés. Cette cape est destinée exclusivement aux créateurs de maps, et sa vente ou son utilisation pour des boosts d'autres joueurs est strictement interdite."
     }
 };
 

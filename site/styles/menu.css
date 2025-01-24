@@ -378,7 +378,6 @@ main {
     color: #aaa;
 }
 
-/* Empêcher le scroll sur l'arrière-plan lorsque le modal est ouvert */
 body.modal-open {
     overflow: hidden;
 }
@@ -424,7 +423,7 @@ body.modal-open {
     border-radius: 5px;
     image-rendering: pixelated;
     object-fit: cover;
-    background-color: #292929;
+    background-color: #222;
     padding: 10px;
 }
 
@@ -439,7 +438,7 @@ body.modal-open {
     color: #aaa;
 }
 
-.modal-name, .modal-date {
+.modal-name{
     font-size: 36px;
     font-weight: bold;
     text-align: center;
