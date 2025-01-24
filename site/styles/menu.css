@@ -404,14 +404,20 @@ main {
 
 /* En-tête du modal */
 .modal-header {
+    background-color: #292929; /* Seconde couleur du site */
     text-align: center;
+    padding: 10px;
 }
 
+/* Image du modal */
 .modal-image {
     width: 100px;
-    height: 100px;
+    height: auto;
+    border-radius: 5px;
+    image-rendering: pixelated;
     object-fit: cover;
-    border-radius: 50%;
+    background-color: #292929; /* Gris le plus foncé */
+    padding: 10px;
 }
 
 /* Corps du modal */

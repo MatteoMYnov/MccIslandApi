@@ -1,16 +1,23 @@
-// Fonction pour ouvrir le modal
-function openModal() {
+// Fonction pour ouvrir le modal et afficher l'image cliquée
+function openModal(event) {
     const modal = document.getElementById("myModal");
-    modal.style.display = "flex"; // Afficher le modal
+    const modalImage = document.querySelector(".modal-image");
+    const clickedImage = event.target;  // L'image sur laquelle on a cliqué
+    
+    // Mettre l'image cliquée dans le modal
+    modalImage.src = clickedImage.src;  // Prendre la source de l'image cliquée
+    
+    // Afficher le modal
+    modal.style.display = "flex";
 }
 
 // Fonction pour fermer le modal
 function closeModal() {
     const modal = document.getElementById("myModal");
-    modal.style.display = "none"; // Masquer le modal
+    modal.style.display = "none";  // Masquer le modal
 }
 
-// Ouvrir le modal lorsque l'on clique sur une image avec un data-id contenant "temp"
+// Ouvrir le modal lorsque l'on clique sur une image avec un data-id contenant "using-modal"
 const modalTriggers = document.querySelectorAll('[data-id*="using-modalBLOCKED"]');
 modalTriggers.forEach(trigger => {
     trigger.addEventListener('click', openModal);
