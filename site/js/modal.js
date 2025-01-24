@@ -168,6 +168,56 @@ const modalData = {
         "name": "Bacon Cape",
         "date": "Obtention: 2010",
         "description": "Offerte à Miclee par Notch pour son idée d'ajouter le Pigmen. La cape a été faite par Miclee lui-même. La cape a cependant été révoquée en raison d'un grand afflux de joueurs demandant à Notch leurs propres capes sur le jeu."
+    },
+    "mojang-employee": {
+        "name": "Mojang Employee Badge",
+        "date": "",
+        "description": "Ce Badge est attribué à tous les employés de mojang possédant une cape de l'équipe sur leur compte."
+    },
+    "perfect-mojang-employee": {
+        "name": "Perfect Mojang Employee Badge",
+        "date": "",
+        "description": "Ce Badge est attribué à tous les employés de mojang possédant toutes cape de l'équipe sur leur compte. Et qui sont donc la depuis le tout début du jeu, et qui travaillent toujours pour Mojang."
+    },
+    "unusual-squad": {
+        "name": "UnusualSquad Badge",
+        "date": "",
+        "description": "Ce Badge est attribué à tous les membres de L'Unusual Squad."
+    },
+    "website-dev": {
+        "name": "Website Developer Badge",
+        "date": "",
+        "description": "Ce Badge est attribué à Leroidesafk pour avoir fait le site web."
+    },
+    "all-events": {
+        "name": "All Events Badge",
+        "date": "",
+        "description": "Ce Badge est attribué à tous les joueurs ayant toutes les capes des évenements en jeu."
+    },
+    "all-commons": {
+        "name": "All Commons Badge",
+        "date": "",
+        "description": "Ce Badge est attribué à tous les joueurs ayant toutes les capes communes du jeu."
+    },
+    "all-minecons":{
+        "name": "All Minecons Badge",
+        "date": "",
+        "description": "Ce Badges est attribué à tous les joueurs ayant toutes les capes Minecons du jeu."
+    },
+    "muscles": {
+        "name": "Muscles Badge",
+        "date": "",
+        "description": "Ce Badge est attribué à Taizeur, pour avoir de gros très bras et être un pompier modèle"
+    },
+    "gift-by-mojang": {
+        "name": "Gift By Mojang Badge",
+        "date": "",
+        "description": "Ce Badge est attribué à tous les joueurs ayant eu un cadeau spécial de la part de moajng sur le compte."
+    },
+    "unique-cape": {
+        "name": "Unique Cape",
+        "date": "",
+        "description": "Ce Badge est attribué à tous les joueurs ayant eu une cape à un seul exemplaire."
     }
 };
 
