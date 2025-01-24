@@ -299,6 +299,13 @@ main {
     margin-top: 20px;
 }
 
+.cape-image, .badge-image, .modal-header {
+    -webkit-user-select: none; /* Pour Safari */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer/Edge */
+    user-select: none;         /* Pour les navigateurs modernes */
+}
+
 /* HypixelCard */
 .hypixelstats-card {
     display: flex;
@@ -433,22 +440,22 @@ body.modal-open {
     text-align: center;
 }
 
-.modal-body p {
-    font-size: 18px;
-    color: #aaa;
-}
-
 .modal-name{
     font-size: 36px;
     font-weight: bold;
     text-align: center;
-    color: #fff;
+    color: #fff ;
     margin-top: 20px;
 }
 
 .modal-date {
     font-size: 18px;
-    color: #bbb;
+    color: #ddd;
+}
+
+.modal-desc {
+    font-size: 18px;
+    color: #aaa;
 }
 
 /* Pour un défilement fluide dans le modal */
