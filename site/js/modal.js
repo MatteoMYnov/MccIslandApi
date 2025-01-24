@@ -122,12 +122,12 @@ const modalData = {
     "valentine": {
         "name": "Valentine Cape",
         "date": "Obtention: 13 Août 2022",
-        "description": "Offerte à LolFoxy2 par un employé des studios Mojang après avoir résolu des problèmes de migration avec son compte Mojang. La cape a été retirée après que l'employé se soit rendu compte de sa rareté. Le 24 janvier 2023, il a également été découvert pendant une courte période sur le compte JoinGrave. La cape n'avait jamais été vue auparavant."
+        "description": "Offerte à LolFoxy2 par un employé de Mojang Studios après avoir résolu des problèmes de migration avec son compte Mojang. La cape a été retirée après que l'employé se soit rendu compte de sa rareté. Le 24 janvier 2023, il a également été découvert pendant une courte période sur le compte JoinGrave. La cape n'avait jamais été vue auparavant."
     },
     "birthday": {
         "name": "Birthday Cape",
         "date": "Obtention: Aucune date n'a été donné",
-        "description": "Offert à Gr8Bizzo, employé des studios Mojang, soi-disant comme cadeau d'anniversaire."
+        "description": "Offert à Gr8Bizzo, employé de Mojang Studios, soi-disant comme cadeau d'anniversaire."
     }
 };
 
