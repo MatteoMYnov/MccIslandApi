@@ -407,7 +407,8 @@ main {
 }
 
 body.modal-open {
-    overflow: hidden;
+    overflow: hidden; /* Désactive le défilement */
+    height: 100%; /* Assure que le contenu ne dépasse pas */
 }
 
 /* Modal */
@@ -421,7 +422,7 @@ body.modal-open {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    overflow: auto; /* Permettre le scroll si nécessaire */
+    overflow: hidden; /* Permettre le scroll si nécessaire */
 }
 
 /* Contenu du modal */
@@ -446,6 +447,7 @@ body.modal-open {
 
 /* Contenu du modal */
 .modal-content {
+    overflow-y: auto;
     background-color: #323232;
     padding: 20px;
     border-radius: 10px;
