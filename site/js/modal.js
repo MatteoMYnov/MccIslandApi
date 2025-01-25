@@ -386,7 +386,7 @@ function openModal(event) {
             const imgElement = document.createElement("img");
             imgElement.src = image.URL || "../img/capes/default-placeholder.png";
             imgElement.alt = image.Alt || "Image";
-            imgElement.title = image.Title || "Image";
+            imgElement.title = image.Alt || "Image";
             imgElement.className = "modal-image-item";
             modalImagesContainer.appendChild(imgElement);
         });
