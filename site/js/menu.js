@@ -1,13 +1,17 @@
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () { 
     const scrollPosition = window.scrollY;
     const maxScroll = document.body.scrollHeight - window.innerHeight;
 
     let opacity = 0;
-    if (scrollPosition > (maxScroll * 0.3)) {
-        opacity = Math.min((scrollPosition - (maxScroll * 0.30)) / (maxScroll * 0.30), 1);
+    if (scrollPosition > (maxScroll * 0.1)) {
+        opacity = Math.min((scrollPosition - (maxScroll * 0.10)) / (maxScroll * 0.10), 1);
     }
 
-    document.body.style.background = `rgba(23, 23, 23, ${opacity})`;
+    // Change l'opacité du div #bgdark
+    const bgdark = document.getElementById("bgdark");
+    if (bgdark) {
+        bgdark.style.opacity = opacity;
+    }
 
     const playerCard = document.getElementById("playerCard");
     const hypixelStatsCard = document.getElementById("hypixelStatsCard");
