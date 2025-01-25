@@ -482,3 +482,12 @@ body.modal-open {
 .modal-content {
     transition: max-height 0.3s ease-in-out;
 }
+
+.skin-3d {
+    position: absolute;
+    width: 10px !important; /* Ajustez cette valeur pour définir la taille souhaitée */
+    height: auto !important; /* Maintient les proportions */
+    top: 100px;
+    right: calc(50% + 830px);
+    margin-top: 80px;
+}
