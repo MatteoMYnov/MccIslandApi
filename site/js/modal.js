@@ -307,52 +307,52 @@ const modalData = {
     },
     "mojang-employee": {
         "name": "Mojang Employee Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à tous les employés de Mojang possédant une cape de l'équipe sur leur compte."
     },
     "perfect-mojang-employee": {
         "name": "Perfect Mojang Employee Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à tous les employés de Mojang possédant toutes les capes de l'équipe sur leur compte. Et qui sont donc là depuis le tout début du jeu, et qui travaillent toujours pour Mojang."
     },
     "unusual-squad": {
         "name": "UnusualSquad Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à tous les membres de l'Unusual Squad."
     },
     "website-dev": {
         "name": "Website Developer Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à Leroidesafk pour avoir fait le site web."
     },
     "all-events": {
         "name": "All Events Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes des événements en jeu."
     },
     "all-commons": {
         "name": "All Commons Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes communes du jeu."
     },
     "all-minecons": {
         "name": "All Minecons Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes Minecon du jeu."
     },
     "muscles": {
         "name": "Muscles Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à Taizeur, pour avoir de très gros bras et être un pompier modèle."
     },
     "gift-by-mojang": {
         "name": "Gift By Mojang Badge",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à tous les joueurs ayant reçu un cadeau spécial de la part de Mojang sur leur compte."
     },
     "unique-cape": {
         "name": "Unique Cape",
-        "date": "",
+        "date": " ",
         "description": "Ce badge est attribué à tous les joueurs ayant eu une cape à un seul exemplaire."
     }
 };
