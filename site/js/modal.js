@@ -2,41 +2,73 @@ const modalData = {
     "2011": {
         "name": "Minecon 2011",
         "date": "Obtention : 7 avril 2011, à Las Vegas, États-Unis",
+        "images": [
+            {"URL": "../img/capes/dummy/2011-cape.png","Alt": "Cape Minecon 2011"},
+            {"URL": "../img/capes/dummy/2011-elytra.png","Alt": "Elytra Minecon 2011"}
+        ],
         "description": "Cette cape a été remise aux participants de la Minecon 2011. Elle était attribuée en fonction de leur pseudonyme, marquant la première et dernière fois que cette méthode a été utilisée."
     },
     "2012": {
         "name": "Minecon 2012",
         "date": "Obtention : 18 juillet 2012, à Disneyland Paris, France",
+        "images": [
+            {"URL": "../img/capes/dummy/2012-cape.png","Alt": "Cape Minecon 2012"},
+            {"URL": "../img/capes/dummy/2012-elytra.png","Alt": "Elytra Minecon 2012"}
+        ],
         "description": "Cette cape a été remise aux participants de la Minecon 2012. Les joueurs recevaient un code par e-mail qu'ils devaient entrer sur le site minecraft.net pour récupérer leur récompense."
     },
     "2013": {
         "name": "Minecon 2013",
         "date": "Obtention : 1er juillet 2013, à Orlando, Floride",
+        "images": [
+            {"URL": "../img/capes/dummy/2013-cape.png","Alt": "Cape Minecon 2013"},
+            {"URL": "../img/capes/dummy/2013-elytra.png","Alt": "Elytra Minecon 2013"}
+        ],
         "description": "Cette cape a été remise aux participants de la Minecon 2013. Les joueurs recevaient un code par e-mail qu'ils devaient entrer sur le site minecraft.net pour récupérer leur récompense."
     },
     "2015": {
         "name": "Minecon 2015",
         "date": "Obtention : 4 et 5 juillet 2015, à Londres, Royaume-Uni",
+        "images": [
+            {"URL": "../img/capes/dummy/2015-cape.png","Alt": "Cape Minecon 2015"},
+            {"URL": "../img/capes/dummy/2015-elytra.png","Alt": "Elytra Minecon 2015"}
+        ],
         "description": "Cette cape a été remise aux participants de la Minecon 2015. Les joueurs recevaient un code par e-mail uniquement après avoir scanné leur billet sur place, qu'ils devaient ensuite entrer sur le site minecraft.net pour récupérer leur récompense."
     },
     "2016": {
         "name": "Minecon 2016",
         "date": "Obtention : 24 et 25 septembre 2016, à Anaheim, États-Unis",
+        "images": [
+            {"URL": "../img/capes/dummy/2016-cape.png","Alt": "Cape Minecon 2016"},
+            {"URL": "../img/capes/dummy/2016-elytra.png","Alt": "Elytra Minecon 2016"}
+        ],
         "description": "Cette cape a été remise aux participants de la Minecon 2016. Les joueurs recevaient un code par e-mail uniquement après avoir scanné leur billet sur place, qu'ils devaient ensuite entrer sur le site minecraft.net pour récupérer leur récompense."
     },
     "mojangold": {
         "name": "Mojang Cape (classique)",
         "date": "Obtention : 20 décembre 2010 au 7 octobre 2015",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangold-cape.png","Alt": "Cape Mojang (Classic)"},
+            {"URL": "../img/capes/dummy/mojangold-elytra.png","Alt": "Elytra Mojang (Classic)"}
+        ],
         "description": "Cette cape a été remise aux employés de Mojang Studios entre ces deux dates."
     },
     "mojang": {
         "name": "Mojang Cape",
         "date": "Obtention : 7 octobre 2015 au 26 juillet 2021",
+        "images": [
+            {"URL": "../img/capes/dummy/mojang-cape.png","Alt": "Cape Mojang"},
+            {"URL": "../img/capes/dummy/mojang-elytra.png","Alt": "Elytra Mojang"}
+        ],
         "description": "Cette cape a été attribuée aux employés de Mojang Studios entre ces deux dates. Sa couleur a été modifiée pour mieux correspondre à la nouvelle identité visuelle de Mojang Studios."
     },
     "mojangstudios": {
         "name": "Mojang Studios Cape",
         "date": "Obtention : 26 juillet 2021 jusqu'à aujourd'hui",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangstudios-cape.png","Alt": "Cape Mojang Studios"},
+            {"URL": "../img/capes/dummy/mojangstudios-elytra.png","Alt": "Elytra Mojang Studios"}
+        ],
         "description": "Cette cape a été attribuée aux employés de Mojang Studios depuis la refonte du logo réalisée par Johan Aronson."
     },
     "migrator_cape": {
@@ -228,50 +260,69 @@ function openModal(event) {
     const modalName = document.querySelector(".modal-name");
     const modalDate = document.querySelector(".modal-date");
     const modalDesc = document.querySelector(".modal-desc");
+    const modalImagesContainer = document.querySelector(".modal-images");
     const clickedImage = event.target;
 
-    // Récupérer l'ID (title) de l'image cliquée
+    // Récupérer le titre (ID) de l'image cliquée
     const imageTitle = clickedImage.getAttribute("title");
+    const modalDataEntry = modalData[imageTitle] || {};
+    const images = modalDataEntry.images || [];
 
-    // Si les informations sont présentes dans le JSON, les insérer dans le modal
-    if (modalData[imageTitle]) {
-        modalName.textContent = modalData[imageTitle].name;
-        modalDate.textContent = modalData[imageTitle].date;
-        modalDesc.textContent = modalData[imageTitle].description;
+    // Mettre à jour les informations principales du modal
+    modalName.textContent = modalDataEntry.name || "Nom non trouvé";
+    modalDate.textContent = modalDataEntry.date || "Date non trouvée";
+    modalDesc.textContent = modalDataEntry.description || "Description non disponible";
+
+    // Vider le conteneur des images pour éviter des doublons
+    modalImagesContainer.innerHTML = "";
+
+    // Ajouter dynamiquement les images s'il y en a
+    if (images.length > 0) {
+        images.forEach((image) => {
+            const imgElement = document.createElement("img");
+            imgElement.src = image.URL || "../img/capes/default-placeholder.png";
+            imgElement.alt = image.Alt || "Image";
+            imgElement.title = image.Title || "Image";
+            imgElement.className = "modal-image-item";
+            modalImagesContainer.appendChild(imgElement);
+        });
     } else {
-        modalName.textContent = "Nom non trouvé";
-        modalDate.textContent = "Date non trouvée";
-        modalDesc.textContent = "Description non disponible";
+        // Si aucune image, cacher le conteneur
+        modalImagesContainer.style.display = "none";
     }
 
-    // Mettre l'image cliquée dans le modal
+    // Mettre l'image cliquée dans le modal (visuel principal)
     modalImage.src = clickedImage.src;
 
     // Afficher le modal
     modal.style.display = "flex";
-    
+
     // Désactiver le scroll de l'arrière-plan
-    document.body.classList.add('modal-open');
+    document.body.classList.add("modal-open");
 }
 
 // Fonction pour fermer le modal
 function closeModal() {
     const modal = document.getElementById("myModal");
-    modal.style.display = "none";  // Masquer le modal
-    
+    modal.style.display = "none"; // Masquer le modal
+
     // Réactiver le scroll de l'arrière-plan
-    document.body.classList.remove('modal-open');
+    document.body.classList.remove("modal-open");
+
+    // Réinitialiser le conteneur d'images
+    const modalImagesContainer = document.querySelector(".modal-images");
+    modalImagesContainer.style.display = "block"; // Réactiver l'affichage pour les prochains modals
 }
 
 // Ouvrir le modal lorsque l'on clique sur une image avec un data-id contenant "using-modal"
 const modalTriggers = document.querySelectorAll('[data-id*="using-modal"]');
-modalTriggers.forEach(trigger => {
-    trigger.addEventListener('click', openModal);
+modalTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", openModal);
 });
 
 // Fermer le modal si l'on clique en dehors de la fenêtre du modal
 const modal = document.getElementById("myModal");
-modal.addEventListener('click', (event) => {
+modal.addEventListener("click", (event) => {
     if (event.target === modal) {
         closeModal();
     }

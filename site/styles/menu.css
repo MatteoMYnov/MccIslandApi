@@ -506,6 +506,26 @@ body.modal-open {
     transition: max-height 0.3s ease-in-out;
 }
 
+.modal-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.modal-images:empty {
+    display: none !important;
+}
+
+.modal-image-item {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    background-color: #222;
+    padding: 5px;
+}
+
 .skin-3d {
     position: absolute;
     width: 10px !important; /* Ajustez cette valeur pour définir la taille souhaitée */

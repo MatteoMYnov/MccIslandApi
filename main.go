@@ -259,7 +259,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	if err := http.ListenAndServe(":1542", nil); err != nil {
+	if err := http.ListenAndServe(":1548", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
