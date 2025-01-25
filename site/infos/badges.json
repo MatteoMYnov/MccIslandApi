@@ -7,7 +7,7 @@
     {"unique-cape": {"restriction":"one","capes":["birthday", "db", "millionth", "prismarine", "turtle", "sniffer", "snowman", "spade", "translatorjapanese", "bacon"],
           "uuid":[]}},
     {"gift-by-mojang": {"restriction":"one","capes":["birthday", "db", "millionth", "prismarine", "turtle", "valentine", "sniffer", "snowman", "spade", "translatorjapanese", "translatorchinese", "scrolls", "cobalt", "translator", "mojira", "realms", "bacon"],
-          "uuid":["4dbc8921-3a8a-40af-bd4f-884fb8a607f1","6080251c-368a-4865-9217-128212baae3e"]}},
+          "uuid":["6080251c-368a-4865-9217-128212baae3e","4dbc8921-3a8a-40af-bd4f-884fb8a607f1","3da6b9a1-beca-485e-97be-d2e619044dba"]}},
     {"all-minecons": {"restriction":"all","capes":["2011", "2012", "2013", "2015", "2016"],
           "uuid":[]}},
     {"all-commons": {"restriction":"all","capes":["mcc", "mojangoffice", "tiktok", "twitch", "cherry", "vanilla_cape", "15A", "migrator_cape"],
