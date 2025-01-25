@@ -7,10 +7,12 @@ import (
 	"hypixel-info/minecraft"
 	"io/ioutil"
 	"log"
+	"math/rand"
 	"net/http"
 	"path/filepath"
 	"regexp"
 	"strings"
+	"time"
 )
 
 var IGN string = "Leroidesafk"
@@ -116,16 +118,43 @@ func isValidIGN(name string) bool {
 	return matched
 }
 
+func getRandomName() string {
+	var names struct {
+		Name []string `json:"name"`
+	}
+
+	// Lire le fichier names.json
+	file, err := ioutil.ReadFile("./site/infos/names.json")
+	if err != nil {
+		log.Fatalf("Erreur lors de la lecture du fichier names.json: %v", err)
+	}
+
+	// Désérialiser le JSON
+	err = json.Unmarshal(file, &names)
+	if err != nil {
+		log.Fatalf("Erreur lors du décodage du JSON: %v", err)
+	}
+
+	// Vérifier que la liste n'est pas vide
+	if len(names.Name) == 0 {
+		log.Fatalf("La liste des noms est vide dans names.json")
+	}
+
+	// Sélectionner un nom aléatoire
+	rand.Seed(time.Now().UnixNano())
+	return names.Name[rand.Intn(len(names.Name))]
+}
+
 func menuHandler(w http.ResponseWriter, r *http.Request) {
 	capeGroups, err := loadCapeGroups()
 	if err != nil {
 		log.Fatal("Erreur de chargement des groupes de capes:", err)
 	}
 
-	// Si aucun nom de joueur n'est spécifié dans la requête, utiliser "Leroidesafk" par défaut
+	// Récupérer le nom du joueur depuis les paramètres ou choisir un nom par défaut
 	IGN := r.FormValue("playername")
 	if IGN == "" {
-		IGN = "Leroidesafk"
+		IGN = getRandomName()
 	}
 
 	playerClass := ""
