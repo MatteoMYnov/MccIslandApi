@@ -5,12 +5,10 @@ import (
 	"time"
 
 	"hypixel-info/hypixel"
-	"hypixel-info/minecraft"
 )
 
 func Load(Name string) []map[string]interface{} {
 	// PlayerUUID := minecraft.GetUUID(Name)
-	PlayerCapes := minecraft.GetCapes(Name)
 
 	// client := hypixel.NewClient(HypixelAPIKey)
 
@@ -33,15 +31,7 @@ func Load(Name string) []map[string]interface{} {
 	printLoginInfo(playerInfo)
 	printGameInfo(playerInfo)
 	fmt.Println("-------------------------------") */
-	var capesList []map[string]interface{}
-	for _, cape := range PlayerCapes {
-		capeObj := map[string]interface{}{
-			"cape":    cape["cape"],    // Nom de la cape
-			"removed": cape["removed"], // Statut de la cape
-		}
-		capesList = append(capesList, capeObj)
-	}
-	return capesList
+	return nil
 }
 
 func printLoginInfo(playerInfo *hypixel.PlayerInfo) {

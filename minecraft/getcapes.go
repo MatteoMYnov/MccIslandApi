@@ -5,11 +5,24 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
+	"strings"
 )
+
+// Structures pour représenter les capes
+type CapeGroups struct {
+	Capes []CapeForced `json:"capes"`
+}
 
 type Cape struct {
 	Type    string `json:"type"`
 	Removed bool   `json:"removed"`
+}
+
+type CapeForced struct {
+	Name string   `json:"name"`
+	Type string   `json:"type"`
+	UUID []string `json:"uuid"`
 }
 
 type CapesResponse struct {
@@ -18,6 +31,7 @@ type CapesResponse struct {
 	Capes    []Cape `json:"capes"`
 }
 
+// Fonction pour récupérer les noms des capes d'un utilisateur
 func GetCapeNames(name string) []string {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
@@ -54,7 +68,40 @@ func GetCapeNames(name string) []string {
 	return capesList
 }
 
-func GetCapes(name string) []map[string]interface{} {
+// Fonction pour charger les capes par nom
+func LoadCapesByName(name string) []map[string]interface{} {
+	capesList, err := LoadCapesFromFile("./site/infos/capes.json")
+	if err != nil {
+		fmt.Println("Erreur lors du chargement des capes :", err)
+		return nil
+	}
+	return GetCapes(name, capesList)
+}
+
+// Fonction pour charger les capes à partir d'un fichier JSON
+func LoadCapesFromFile(filePath string) (CapeGroups, error) {
+	file, err := os.Open(filePath)
+	if err != nil {
+		return CapeGroups{}, fmt.Errorf("erreur lors de l'ouverture du fichier : %v", err)
+	}
+	defer file.Close()
+
+	data, err := ioutil.ReadAll(file)
+	if err != nil {
+		return CapeGroups{}, fmt.Errorf("erreur lors de la lecture du fichier : %v", err)
+	}
+
+	var capes CapeGroups
+	err = json.Unmarshal(data, &capes)
+	if err != nil {
+		return CapeGroups{}, fmt.Errorf("erreur lors du décodage JSON : %v", err)
+	}
+
+	return capes, nil
+}
+
+// Fonction principale pour obtenir les capes
+func GetCapes(name string, capeGroup CapeGroups) []map[string]interface{} {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
 	if err != nil {
@@ -82,6 +129,8 @@ func GetCapes(name string) []map[string]interface{} {
 	}
 
 	var capesList []map[string]interface{}
+
+	// Ajouter les capes récupérées depuis l'API
 	for _, cape := range response.Capes {
 		capeObj := map[string]interface{}{
 			"cape":    cape.Type,
@@ -89,5 +138,21 @@ func GetCapes(name string) []map[string]interface{} {
 		}
 		capesList = append(capesList, capeObj)
 	}
+
+	// Ajouter les capes associées au joueur
+	normalizedPlayerName := strings.ToLower(name)
+	for _, cape := range capeGroup.Capes {
+		for _, playerUUID := range cape.UUID {
+			// Comparer les noms normalisés
+			if strings.ToLower(GetName(playerUUID)) == normalizedPlayerName {
+				capesList = append(capesList, map[string]interface{}{
+					"cape":    cape.Name,
+					"removed": false,
+				})
+				break
+			}
+		}
+	}
+
 	return capesList
 }
