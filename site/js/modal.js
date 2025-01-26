@@ -305,6 +305,15 @@ const modalData = {
         ],
         "description": "Offerte à Miclee par Notch pour son idée d'ajouter les Pigmen. La cape a été faite par Miclee lui-même. La cape a cependant été révoquée en raison d'un grand afflux de joueurs demandant à Notch leurs propres capes dans le jeu."
     },
+    "realmsnew": {
+        "name": "New Realms Cape",
+        "date": "Obtention : N/A",
+        "images": [
+            {"URL": "../img/capes/dummy/realmsnew-cape.png","Alt": "New Realms Cape"},
+            {"URL": "../img/capes/dummy/realmsnew-elytra.png","Alt": "New Realms Elytra"}
+        ],
+        "description": "No more infos"
+    },
     "mojang-employee": {
         "name": "Mojang Employee Badge",
         "date": " ",

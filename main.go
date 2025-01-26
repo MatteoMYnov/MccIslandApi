@@ -67,20 +67,19 @@ func loadCapeGroups() (CapeGroups, error) {
 
 func prioritizeCapes(allCapes []string, capeGroups CapeGroups) []string {
 	var prioritizedCapes []string
-	typeOrder := []string{"special", "normal", "common"}
 
-	for _, capeType := range typeOrder {
-		for _, cape := range capeGroups.Capes {
-			if cape.Type == capeType && containsAny(allCapes, cape.Name) {
-				prioritizedCapes = append(prioritizedCapes, cape.Name)
-			}
+	for _, cape := range capeGroups.Capes {
+		if containsAny(allCapes, cape.Name) {
+			prioritizedCapes = append(prioritizedCapes, cape.Name)
 		}
 	}
+
 	for _, cape := range allCapes {
 		if !containsAny(prioritizedCapes, cape) {
 			prioritizedCapes = append(prioritizedCapes, cape)
 		}
 	}
+
 	return prioritizedCapes
 }
 
@@ -243,7 +242,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	if err := http.ListenAndServe(":1533", nil); err != nil {
+	if err := http.ListenAndServe(":1535", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

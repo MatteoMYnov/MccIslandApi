@@ -33,6 +33,7 @@
     {"name": "cherry", "type": "common", "uuid": []},
     {"name": "vanilla_cape", "type": "common", "uuid": []},
     {"name": "15A", "type": "common", "uuid": []},
-    {"name": "migrator_cape", "type": "common", "uuid": []}
+    {"name": "migrator_cape", "type": "common", "uuid": []},
+    {"name": "realmsnew", "type": "optifine", "uuid": ["cc4b7d74-bbe2-4310-9106-0e52d292c758","63781be2-b6b3-4b25-8af4-3d963f6bc164"]}
   ]
 }

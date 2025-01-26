@@ -309,6 +309,12 @@ main {
     transform: scale(1.02);
     box-shadow: 0 0 10px 2px #ff00ff;
 }
+
+.optifine-cape:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 2px #ff0000;
+}
+
 .no-cape {
     font-size: 20px;
     color: #fff;
