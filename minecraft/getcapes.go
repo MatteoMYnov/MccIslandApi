@@ -31,7 +31,7 @@ type CapesResponse struct {
 	Capes    []Cape `json:"capes"`
 }
 
-// Fonction pour récupérer les noms des capes d'un utilisateur
+// Fonction pour récupérer les noms des capes d'un utilisateur, incluant celles par UUID
 func GetCapeNames(name string) []string {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
@@ -60,11 +60,32 @@ func GetCapeNames(name string) []string {
 	}
 
 	var capesList []string
+
+	// Ajouter les capes récupérées depuis l'API
 	for _, cape := range response.Capes {
 		if !cape.Removed {
 			capesList = append(capesList, cape.Type)
 		}
 	}
+
+	// Charger les capes depuis le fichier JSON
+	capeGroups, err := LoadCapesFromFile("./site/infos/capes.json")
+	if err != nil {
+		fmt.Printf("Erreur lors du chargement des capes : %v\n", err)
+		return capesList // Retourner uniquement les capes de l'API si une erreur survient
+	}
+
+	// Ajouter les capes associées au joueur par UUID
+	normalizedPlayerName := strings.ToLower(name)
+	for _, cape := range capeGroups.Capes {
+		for _, playerUUID := range cape.UUID {
+			if strings.ToLower(GetName(playerUUID)) == normalizedPlayerName {
+				capesList = append(capesList, cape.Name)
+				break
+			}
+		}
+	}
+
 	return capesList
 }
 
