@@ -28,9 +28,9 @@ body, html {
 .stats-container .minecraftstats-card,
 .stats-container .hypixelstats-card,
 .stats-container .mccstats-card,
-.badge-card {
+.badge-card .skin-3d {
     position: relative; /* Assurez un contexte de pile pour le z-index */
-    z-index: 1; /* Priorité sur #bgdark */
+    z-index: 2; /* Priorité sur #bgdark */
 }
 
 /* bar de Navigation */
@@ -114,6 +114,7 @@ main {
     margin: 0 auto;
     padding: 20px 0;
     gap: 20px;
+    z-index: 2
 }
 
 /* Cards */
@@ -138,6 +139,7 @@ main {
     position: relative;
     text-align: center;
     margin-bottom: 50px;
+    z-index: 2
 }
 
 .profile-info {
@@ -534,9 +536,11 @@ body.modal-open {
 
 .skin-3d {
     position: absolute;
-    width: 10px !important; /* Ajustez cette valeur pour définir la taille souhaitée */
-    height: auto !important; /* Maintient les proportions */
-    top: 100px;
-    right: calc(50% + 830px);
-    margin-top: 80px;
+    top: 5vh;
+    left: calc(50% - 66vh);
+    width: 20%; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Maintient les proportions */
+    transform: translate(-50%, -50%); /* Ajuste pour être parfaitement centré */
+    margin-top: 50vh;
+    padding: 20px;
 }
