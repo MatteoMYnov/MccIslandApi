@@ -303,7 +303,7 @@ const modalData = {
             {"URL": "../img/capes/dummy/bacon-cape.png","Alt": "Bacon Cape"},
             {"URL": "../img/capes/dummy/bacon-elytra.png","Alt": "Bacon Elytra"}
         ],
-        "description": "Offerte à Miclee par Notch pour son idée d'ajouter les Pigmen. La cape a été faite par Miclee lui-même. La cape a cependant été révoquée en raison d'un grand afflux de joueurs demandant à Notch leurs propres capes dans le jeu."
+        "description": "Offerte à Miclee par Notch pour son idée d'ajouter les Pigmen. La cape a été faite par Miclee lui-même. La cape a cependant été révoquée en raison d'un grand afflux de joueurs demandant à Notch leurs propres capes dans le jeu. C'est également la seule cape à ne pas avoir de version élytra, car elle a été retirée avant l'ajout de ces dernières dans le jeu."
     },
     "realmsnew": {
         "name": "New Realms Cape",
@@ -317,12 +317,22 @@ const modalData = {
     "mojang-employee": {
         "name": "Mojang Employee Badge",
         "date": " ",
-        "description": "Ce badge est attribué à tous les employés de Mojang possédant une cape de l'équipe sur leur compte."
+        "description": "Ce badge est attribué à tous les employés de Mojang possédant une cape de l'équipe sur leur compte.",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangold-cape.png","Alt": "Mojang Cape (Classic)"},
+            {"URL": "../img/capes/dummy/mojangstudios-cape.png","Alt": "Mojang Studios Cape"},
+            {"URL": "../img/capes/dummy/mojang-cape.png","Alt": "Mojang Cape"}
+        ]
     },
     "perfect-mojang-employee": {
         "name": "Perfect Mojang Employee Badge",
         "date": " ",
-        "description": "Ce badge est attribué à tous les employés de Mojang possédant toutes les capes de l'équipe sur leur compte. Et qui sont donc là depuis le tout début du jeu, et qui travaillent toujours pour Mojang."
+        "description": "Ce badge est attribué à tous les employés de Mojang possédant toutes les capes de l'équipe sur leur compte. Et qui sont donc là depuis le tout début du jeu, et qui travaillent toujours pour Mojang.",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangold-cape.png","Alt": "Mojang Cape (Classic)"},
+            {"URL": "../img/capes/dummy/mojangstudios-cape.png","Alt": "Mojang Studios Cape"},
+            {"URL": "../img/capes/dummy/mojang-cape.png","Alt": "Mojang Cape"}
+        ]
     },
     "unusual-squad": {
         "name": "UnusualSquad Badge",
@@ -337,17 +347,39 @@ const modalData = {
     "all-events": {
         "name": "All Events Badge",
         "date": " ",
-        "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes des événements en jeu."
+        "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes des événements en jeu.",
+        "images": [
+            {"URL": "../img/capes/dummy/mcc-cape.png","Alt": "MCC 15th Year Cape"},
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"}
+        ]
     },
     "all-commons": {
         "name": "All Commons Badge",
         "date": " ",
-        "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes communes du jeu."
+        "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes communes du jeu.",
+        "images": [
+            {"URL": "../img/capes/dummy/mcc-cape.png","Alt": "MCC 15th Year Cape"},
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"},
+            {"URL": "../img/capes/dummy/tiktok-cape.png","Alt": "Follower's Cape"},
+            {"URL": "../img/capes/dummy/twitch-cape.png","Alt": "Purple Heart Cape"},
+            {"URL": "../img/capes/dummy/cherry-cape.png","Alt": "Cherry Blossom Cape"},
+            {"URL": "../img/capes/dummy/vanilla_cape-cape.png","Alt": "Vanilla Cape"},
+            {"URL": "../img/capes/dummy/15A-cape.png","Alt": "15th Anniversary Cape"},
+            {"URL": "../img/capes/dummy/migrator_cape-cape.png","Alt": "Migrator Cape"}
+
+        ]
     },
     "all-minecons": {
         "name": "All Minecons Badge",
         "date": " ",
-        "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes Minecon du jeu."
+        "description": "Ce badge est attribué à tous les joueurs ayant toutes les capes Minecon du jeu.",
+        "images": [
+            {"URL": "../img/capes/dummy/2011-cape.png","Alt": "Minecon 2011 Cape"},
+            {"URL": "../img/capes/dummy/2012-cape.png","Alt": "Minecon 2012 Cape"},
+            {"URL": "../img/capes/dummy/2013-cape.png","Alt": "Minecon 2013 Cape"},
+            {"URL": "../img/capes/dummy/2015-cape.png","Alt": "Minecon 2015 Cape"},
+            {"URL": "../img/capes/dummy/2016-cape.png","Alt": "Minecon 2016 Cape"}
+        ]
     },
     "muscles": {
         "name": "Muscles Badge",
@@ -357,12 +389,45 @@ const modalData = {
     "gift-by-mojang": {
         "name": "Gift By Mojang Badge",
         "date": " ",
-        "description": "Ce badge est attribué à tous les joueurs ayant reçu un cadeau spécial de la part de Mojang sur leur compte."
+        "description": "Ce badge est attribué à tous les joueurs ayant reçu un cadeau spécial de la part de Mojang sur leur compte.",
+        "images": [
+            {"URL": "../img/capes/dummy/bacon-cape.png","Alt": "Bacon Cape"},
+            {"URL": "../img/capes/dummy/valentine-cape.png","Alt": "Valentine Cape"},
+            {"URL": "../img/capes/dummy/translatorjapanese-cape.png","Alt": "Translator Cape (Japanese)"},
+            {"URL": "../img/capes/dummy/turtle-cape.png","Alt": "Turtle Cape"},
+            {"URL": "../img/capes/dummy/birthday-cape.png","Alt": "Birthday Cape"},
+            {"URL": "../img/capes/dummy/dB-cape.png","Alt": "dannyBstyle's Cape"},
+            {"URL": "../img/capes/dummy/millionth-cape.png","Alt": "Millionth Customer Cape"},
+            {"URL": "../img/capes/dummy/prismarine-cape.png","Alt": "Prismarine Cape"},
+            {"URL": "../img/capes/dummy/snowman-cape.png","Alt": "JulianClark's Cape"},
+            {"URL": "../img/capes/dummy/spade-cape.png","Alt": "Spade Cape"},
+            {"URL": "../img/capes/dummy/sniffer-cape.png","Alt": "Test Cape"},
+            {"URL": "../img/capes/dummy/translatorchinese-cape.png","Alt": "Translator Cape (Chinese)"},
+            {"URL": "../img/capes/dummy/scrolls-cape.png","Alt": "Scrolls Champion Cape"},
+            {"URL": "../img/capes/dummy/cobalt-cape.png","Alt": "Cobalt Cape"},
+            {"URL": "../img/capes/dummy/mojira-cape.png","Alt": "Mojira Moderator Cape"},
+            {"URL": "../img/capes/dummy/translator-cape.png","Alt": "Translator Cape"},
+            {"URL": "../img/capes/dummy/realms-cape.png","Alt": "Realms MapMaker Cape"}
+        ]
     },
     "unique-cape": {
         "name": "Unique Cape",
         "date": " ",
-        "description": "Ce badge est attribué à tous les joueurs ayant eu une cape à un seul exemplaire."
+        "description": "Ce badge est attribué à tous les joueurs ayant eu une cape à un seul exemplaire.",
+        "images": [
+            {"URL": "../img/capes/dummy/bacon-cape.png","Alt": "Bacon Cape"},
+            {"URL": "../img/capes/dummy/valentine-cape.png","Alt": "Valentine Cape"},
+            {"URL": "../img/capes/dummy/translatorjapanese-cape.png","Alt": "Translator Cape (Japanese)"},
+            {"URL": "../img/capes/dummy/turtle-cape.png","Alt": "Turtle Cape"},
+            {"URL": "../img/capes/dummy/birthday-cape.png","Alt": "Birthday Cape"},
+            {"URL": "../img/capes/dummy/dB-cape.png","Alt": "dannyBstyle's Cape"},
+            {"URL": "../img/capes/dummy/millionth-cape.png","Alt": "Millionth Customer Cape"},
+            {"URL": "../img/capes/dummy/prismarine-cape.png","Alt": "Prismarine Cape"},
+            {"URL": "../img/capes/dummy/snowman-cape.png","Alt": "JulianClark's Cape"},
+            {"URL": "../img/capes/dummy/spade-cape.png","Alt": "Spade Cape"},
+            {"URL": "../img/capes/dummy/sniffer-cape.png","Alt": "Test Cape"},
+            {"URL": "../img/capes/dummy/translatorchinese-cape.png","Alt": "Translator Cape (Chinese)"}
+        ]
     }
 };
 
