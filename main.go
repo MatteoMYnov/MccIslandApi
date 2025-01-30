@@ -14,6 +14,8 @@ import (
 	"time"
 )
 
+// 14719ec2-7760-4b7c-a85f-f8d3775a2bb5
+
 // Nouveau format JSON pour les capes
 type Cape struct {
 	Name  string   `json:"name"`
