@@ -41,7 +41,10 @@
                     <div class="stats-body">
                         {{if .ImageURLs}}
                             {{range .ImageURLs}}
-                                <img src="{{.URL}}" title="{{.CapeName}}" alt="Cape Image" class="cape-image {{.Class}}" data-id="using-modal">
+                                <div class="cape-container">
+                                    <img src="{{.URL}}" alt="Cape Image" class="cape-image {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}">
+                                    <p class="cape-title">{{.Title}}</p>
+                                </div>
                             {{end}}
                         {{else}}
                             <p class="no-cape">Ce joueur ne possède aucune cape</p>
@@ -57,7 +60,7 @@
                     </div>
                     <div class="stats-body">
                         {{range .BadgeURLs}}
-                            <img src="{{.URL}}" title="{{.BadgeName}}" alt="Badge Image" class="badge-image {{.Class}}" data-id="using-modal {{.BadgeName}}">
+                            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image {{.Class}}" data-id="using-modal {{.BadgeName}}">
                         {{end}}
                     </div>
                 </div>

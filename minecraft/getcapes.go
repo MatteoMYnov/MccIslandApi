@@ -20,9 +20,10 @@ type Cape struct {
 }
 
 type CapeForced struct {
-	Name string   `json:"name"`
-	Type string   `json:"type"`
-	UUID []string `json:"uuid"`
+	Name  string   `json:"name"`
+	Type  string   `json:"type"`
+	Title string   `json:"title"`
+	UUID  []string `json:"uuid"`
 }
 
 type CapesResponse struct {

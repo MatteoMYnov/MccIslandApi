@@ -16,9 +16,10 @@ import (
 
 // Nouveau format JSON pour les capes
 type Cape struct {
-	Name string   `json:"name"`
-	Type string   `json:"type"`
-	UUID []string `json:"UUID"`
+	Name  string   `json:"name"`
+	Type  string   `json:"type"`
+	Title string   `json:"title"`
+	UUID  []string `json:"UUID"`
 }
 
 type CapeGroups struct {
@@ -29,6 +30,7 @@ type CapeInfo struct {
 	URL      string
 	Class    string
 	CapeName string
+	Title    string
 	Removed  bool
 }
 
@@ -172,15 +174,24 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		listCapes = append(listCapes, capeName)
 
 		class := getCapeClass(capeName, capeGroups)
+		title := ""
 
 		if removed {
 			class += " removed-cape"
+		}
+
+		for _, capeGroup := range capeGroups.Capes {
+			if capeGroup.Name == capeName {
+				title = capeGroup.Title
+				break
+			}
 		}
 
 		capeInfos = append(capeInfos, CapeInfo{
 			URL:      "/img/capes/" + capeName + ".png",
 			Class:    class,
 			CapeName: capeName,
+			Title:    title,
 			Removed:  removed,
 		})
 	}
@@ -242,7 +253,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	if err := http.ListenAndServe(":1521", nil); err != nil {
+	if err := http.ListenAndServe(":1512", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

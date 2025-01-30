@@ -284,13 +284,60 @@ main {
     padding: 10px;
 }
 /* Capes et leurs affichage*/
-.cape-image {
+.cape-container {
     width: calc(70% / 6 - 10px);
     height: auto;
     object-fit: contain;
     border-radius: 5px;
     image-rendering: pixelated;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Nécessaire pour que le titre soit centré à l'intérieur */
+}
+
+.cape-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    image-rendering: pixelated;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('fonts/Minecraftia.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cape-title {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    opacity: 0; /* Initialement invisible */
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrage par rapport à l'image */
+    font-size: 12px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease; /* Transition d'opacité */
+    pointer-events: none;
+
+    /* Centrage du texte */
+    text-align: center;    /* Centre le texte horizontalement */
+    display: flex;         /* Utilise flexbox */
+    flex-direction: column; /* Empile le texte en colonne */
+    justify-content: center; /* Centre verticalement dans la boîte */
+    align-items: center;   /* Centre les éléments sur l'axe horizontal */
+    z-index: 3
+}
+
+
+.cape-container:hover .cape-title {
+    opacity: 1; /* Visible au survol */
 }
 
 .removed-cape {
@@ -537,7 +584,7 @@ body.modal-open {
 .skin-3d {
     position: absolute;
     top: 5vh;
-    left: calc(50% - 66vh);
+    left: calc(50% - 73vh);
     width: 20%; /* Ajustez la largeur selon vos besoins */
     height: auto; /* Maintient les proportions */
     transform: translate(-50%, -50%); /* Ajuste pour être parfaitement centré */

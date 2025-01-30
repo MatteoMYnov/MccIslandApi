@@ -144,7 +144,7 @@ const modalData = {
     "description": "Cette cape a fait l'objet d'une fuite le 25 novembre 2024 sur le site web de Minecraft avec le titre « Achetez une cape, obtenez une cape ». La cape a été retirée de la page quelques heures plus tard. Mais les joueurs ont pu comprendre qu'en achetant une cape de Creeper de n'importe quelle taille dans la boutique officielle de Minecraft à partir du 7 décembre 2024, vous étiez censé recevoir un code pour déverrouiller une cape exclusive dans le jeu appelée la cape Eyeblossom. Le 28 novembre 2024, la page de la boutique pour la cape Creeper a été mise à jour pour inclure l'information que l'achat de cette cape débloquerait une cape exclusive dans le jeu. Cependant, cet extrait a ensuite été supprimé de la page et remplacé par une promotion incluant un objet Bedrock Character Creator peu de temps après. Le 9 décembre 2024, Mojang a annoncé le serveur événementiel Eerie Mojang Office Party qui, comme indiqué dans l'article, donnerait aux joueurs la cape après avoir terminé 5 défis quotidiens. Le nom de la cape a également été révélé comme étant la « Mojang Office cape ». Le 7 décembre 2024, un employé de Mojang a confirmé que la cape serait multiplateforme et à 9 h 23 EST le même jour, elle a été ajoutée au back-end de la Java Edition. Après avoir terminé le cinquième et dernier défi quotidien sur le serveur d'événements, les joueurs pouvaient immédiatement accéder à la cape dans les deux versions du jeu."
     },
     "mcexp": {
-        "name": "MC Experience Cape",
+        "name": "Minecraft Experience Cape",
         "date": "Obtention : 23 octobre 2024 jusqu'à aujourd'hui",
         "images": [
             {"URL": "../img/capes/dummy/mcexp-cape.png","Alt": "MC Experience Cape"},
@@ -442,8 +442,8 @@ function openModal(event) {
     const clickedImage = event.target;
 
     // Récupérer le titre (ID) de l'image cliquée
-    const imageTitle = clickedImage.getAttribute("title");
-    const modalDataEntry = modalData[imageTitle] || {};
+    const utilName  = clickedImage.getAttribute("data-name");
+    const modalDataEntry = modalData[utilName ] || {};
     const images = modalDataEntry.images || [];
 
     // Mettre à jour les informations principales du modal
