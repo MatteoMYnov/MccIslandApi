@@ -1,7 +1,7 @@
 const modalData = {
     "2011": {
         "name": "Minecon 2011",
-        "date": "Obtention : 7 avril 2011, à Las Vegas, États-Unis",
+        "date": "Obtention : 7 avril 2011, à Las Vegas, aux États-Unis",
         "images": [
             {"URL": "../img/capes/dummy/2011-cape.png","Alt": "Minecon 2011 Cape"},
             {"URL": "../img/capes/dummy/2011-elytra.png","Alt": "Minecon 2011 Elytra"}
@@ -10,7 +10,7 @@ const modalData = {
     },
     "2012": {
         "name": "Minecon 2012",
-        "date": "Obtention : 18 juillet 2012, à Disneyland Paris, France",
+        "date": "Obtention : 18 juillet 2012, à Disneyland Paris, en France",
         "images": [
             {"URL": "../img/capes/dummy/2012-cape.png","Alt": "Minecon 2012 Cape"},
             {"URL": "../img/capes/dummy/2012-elytra.png","Alt": "Minecon 2012 Elytra"}
@@ -19,7 +19,7 @@ const modalData = {
     },
     "2013": {
         "name": "Minecon 2013",
-        "date": "Obtention : 1er juillet 2013, à Orlando, Floride",
+        "date": "Obtention : 1er juillet 2013, à Orlando, en Floride",
         "images": [
             {"URL": "../img/capes/dummy/2013-cape.png","Alt": "Minecon 2013 Cape"},
             {"URL": "../img/capes/dummy/2013-elytra.png","Alt": "Minecon 2013 Elytra"}
@@ -28,7 +28,7 @@ const modalData = {
     },
     "2015": {
         "name": "Minecon 2015",
-        "date": "Obtention : 4 et 5 juillet 2015, à Londres, Royaume-Uni",
+        "date": "Obtention : 4 et 5 juillet 2015, à Londres, au Royaume-Uni",
         "images": [
             {"URL": "../img/capes/dummy/2015-cape.png","Alt": "Minecon 2015 Cape"},
             {"URL": "../img/capes/dummy/2015-elytra.png","Alt": "Minecon 2015 Elytra"}
@@ -37,7 +37,7 @@ const modalData = {
     },
     "2016": {
         "name": "Minecon 2016",
-        "date": "Obtention : 24 et 25 septembre 2016, à Anaheim, États-Unis",
+        "date": "Obtention : 24 et 25 septembre 2016, à Anaheim, aux États-Unis",
         "images": [
             {"URL": "../img/capes/dummy/2016-cape.png","Alt": "Minecon 2016 Cape"},
             {"URL": "../img/capes/dummy/2016-elytra.png","Alt": "Minecon 2016 Elytra"}
@@ -145,7 +145,7 @@ const modalData = {
     },
     "mcexp": {
         "name": "Minecraft Experience Cape",
-        "date": "Obtention : 23 octobre 2024 jusqu'à aujourd'hui",
+        "date": "Obtention : 23 octobre 2024 jusqu'à aujourd'hui, à Dallas (Texas), aux États-Unis",
         "images": [
             {"URL": "../img/capes/dummy/mcexp-cape.png","Alt": "MC Experience Cape"},
             {"URL": "../img/capes/dummy/mcexp-elytra.png","Alt": "MC Experience Elytra"}
@@ -240,7 +240,7 @@ const modalData = {
             {"URL": "../img/capes/dummy/dB-cape.png","Alt": "dannyBstyle's Cape"},
             {"URL": "../img/capes/dummy/dB-elytra.png","Alt": "dannyBstyle's Elytra"}
         ],
-        "description": "Cette cape a été offerte à DannyBstyle, un compositeur de musique de jeux vidéo, car Notch était fan de sa musique."
+        "description": "Cette cape a été offerte à DannyBstyle par Notch, qui était fan de sa musique. Cependant, le 8 septembre 2015, son compte a été piraté après qu'un mot de passe ait fuité dans une base de données. Un hacker nommé Hostage l'a volé, lui a attribué un skin de Megaman et l'a revendu pour environ 300 dollars à un certain Tre. Ce dernier a renommé le compte en TreIsAGod, mais cinq heures après ce changement, Mojang a rétabli l'accès à son propriétaire et a imposé le retour du nom et du skin d'origine. Six mois plus tard, le 12 mars 2016, le compte a été de nouveau piraté par un certain Fox. Mojang l'a bloqué et restitué une fois encore à dBstyle. Puis, en 2020, il a subi un troisième piratage, au cours duquel l'attaquant a changé l'adresse e-mail associée avant de revendre le compte à un certain debuggg. Ce dernier est connu pour avoir accédé à plusieurs comptes, y compris ceux d'employés de Mojang, qu'il renommait uhDebug. Aussi surprenant que cela puisse paraître, DannyBstyle semble ne pas s'en préoccuper et, à ce jour, il ne détient toujours pas son compte."
     },
     "millionth": {
         "name": "Millionth Customer Cape",
