@@ -585,10 +585,9 @@ body.modal-open {
 
 .skin-3d {
     position: absolute;
-    top: -10%;
+    top: 100px;
     right: calc(50% + 320px);
     width: 100;
     height: auto;
-    margin-top: 50vh;
     padding: 20px;
 }
