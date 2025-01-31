@@ -152,7 +152,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("Erreur de chargement des groupes de capes:", err)
 	}
 
-	IGN := r.FormValue("playername")
+	IGN := r.FormValue("q")
 	if IGN == "" {
 		IGN = getRandomName()
 	}
@@ -255,7 +255,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 
-	if err := http.ListenAndServe(":1502", nil); err != nil {
+	if err := http.ListenAndServe(":1504", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
