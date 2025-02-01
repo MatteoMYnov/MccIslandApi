@@ -135,8 +135,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	mccInfos := mcc.GetInfos(playerUUID)
 	MccRank := "PLAYER"
-	if len(mccInfos) > 0 {
-		MccRank = mccInfos[0]
+	if mccInfos != nil && len(mccInfos.Ranks) > 0 {
+		MccRank = mccInfos.Ranks[0]
 	}
 
 	infos := DataMenuPage{

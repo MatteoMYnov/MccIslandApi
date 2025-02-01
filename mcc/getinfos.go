@@ -35,7 +35,11 @@ type APIConfig struct {
 	Mcctoken string `json:"mcctoken"`
 }
 
-func GetInfos(UUID string) []string {
+type MccInfos struct {
+	Ranks []string `json:"ranks"`
+}
+
+func GetInfos(UUID string) *MccInfos {
 	// Lire le fichier contenant le token de l'API
 	file, err := ioutil.ReadFile("./site/infos/api.json")
 	if err != nil {
@@ -118,5 +122,9 @@ func GetInfos(UUID string) []string {
 		return nil
 	}
 
-	return response.Data.Player.Ranks
+	Infos := &MccInfos{
+		Ranks: response.Data.Player.Ranks,
+	}
+
+	return Infos
 }
