@@ -80,7 +80,10 @@
                         <h2>MCC Stats</h2>
                     </div>
                     <div class="stats-body">
-                        <p id="mccStats">Les statistiques MCC du joueur seront affichées ici.</p>
+                        <div class="mcc-header">
+                            <img class="mcc-rank" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}">
+                            <p class="mcc-playername">{{.Name}}</p>
+                        </div>
                     </div>
                 </div>
                 <!-- Hypixel Stats Card -->

@@ -2,6 +2,7 @@ package main
 
 import (
 	"html/template"
+	"hypixel-info/mcc"
 	"hypixel-info/minecraft"
 	"log"
 	"net/http"
@@ -48,6 +49,7 @@ type DataMenuPage struct {
 	ImageURLs   []CapeInfo
 	BadgeURLs   []BadgeInfo
 	PlayerClass string
+	MccRank     string
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -72,6 +74,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		playerClass = "playerName"
 	}
 
+	playerUUID := minecraft.GetUUID(IGN)
 	playerCapesJSON := minecraft.LoadCapesByName(IGN)
 	playerBadgesJSON := minecraft.LoadBadgesByName(IGN)
 
@@ -130,12 +133,19 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	mccInfos := mcc.GetInfos(playerUUID)
+	MccRank := "PLAYER"
+	if len(mccInfos) > 0 {
+		MccRank = mccInfos[0]
+	}
+
 	infos := DataMenuPage{
 		Name:        IGN,
 		ListCapes:   prioritizedCapes,
 		ImageURLs:   prioritizedCapeInfos,
 		BadgeURLs:   badgeInfos,
 		PlayerClass: playerClass,
+		MccRank:     MccRank,
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
@@ -198,7 +208,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1600", nil); err != nil {
+	if err := http.ListenAndServe(":1605", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

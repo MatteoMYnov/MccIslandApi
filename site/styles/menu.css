@@ -610,3 +610,26 @@ body.modal-open {
     height: auto;
     padding: 20px;
 }
+
+/* MCCTHINGS */
+.mcc-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacement entre les éléments */
+    text-align: center;
+}
+
+.mcc-rank {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border: 0px;
+    image-rendering: pixelated;
+}
+
+.mcc-playername {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #fff !important;
+}
