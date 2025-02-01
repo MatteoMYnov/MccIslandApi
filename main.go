@@ -45,19 +45,25 @@ type Infos struct {
 }
 
 type DataMenuPage struct {
-	Name             string
-	ListCapes        []string
-	ImageURLs        []CapeInfo
-	BadgeURLs        []BadgeInfo
-	PlayerClass      string
-	MccRank          string
-	Evolution        string
-	CrownLevel       string
-	Evolutionplus1   string
-	CrownLevelplus1  string
-	CrownObtained    int
-	CrownObtainable  int
-	CrownPourcentage int
+	Name                 string
+	ListCapes            []string
+	ImageURLs            []CapeInfo
+	BadgeURLs            []BadgeInfo
+	PlayerClass          string
+	MccRank              string
+	Evolution            string
+	CrownLevel           string
+	Evolutionplus1       string
+	CrownLevelplus1      string
+	CrownObtained        int
+	CrownObtainable      int
+	CrownPourcentage     int
+	CurrencyCoins        int
+	CurrencyGems         int
+	CurrencyRoyalRep     int
+	CurrencySilver       int
+	CurrencyMaterialDust int
+	CurrencyAnglrTokens  int
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -151,7 +157,6 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Calculer l'évolution et le niveau de couronne pour le joueur
-	evolutionPlus1 := mccInfos.Evolution + 1
 	crownLevelPlus1 := mccInfos.CrownLevel + 1
 
 	// Obtenez les informations de la couronne
@@ -161,7 +166,14 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		crownObtained = mccInfos.CrownObtained
 		crownObtainable = mccInfos.CrownObtainable
 	}
-	calculatedPercent := (mccInfos.CrownObtained * 100) / mccInfos.CrownObtainable
+	var calculatedPercent int
+	if mccInfos.CrownObtainable > 0 {
+		calculatedPercent = (mccInfos.CrownObtained * 100) / mccInfos.CrownObtainable
+	} else {
+		calculatedPercent = 0 // Ou une valeur par défaut si tu préfères
+	}
+
+	fmt.Println(mccInfos.Currency.Coins, mccInfos.Currency.Gems, mccInfos.Currency.RoyalReputation, mccInfos.Currency.Silver, mccInfos.Currency.MaterialDust, mccInfos.Currency.AnglrTokens)
 
 	infos := DataMenuPage{
 		Name:             IGN,
@@ -172,11 +184,17 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		MccRank:          MccRank,
 		Evolution:        fmt.Sprintf("%d", mccInfos.Evolution),
 		CrownLevel:       fmt.Sprintf("%d", mccInfos.CrownLevel),
-		Evolutionplus1:   fmt.Sprintf("%d", evolutionPlus1),
 		CrownLevelplus1:  fmt.Sprintf("%d", crownLevelPlus1),
 		CrownObtained:    crownObtained,
 		CrownObtainable:  crownObtainable,
 		CrownPourcentage: calculatedPercent,
+		// Ajout des informations de currency en tant qu'entiers
+		CurrencyCoins:        mccInfos.Currency.Coins,
+		CurrencyGems:         mccInfos.Currency.Gems,
+		CurrencyRoyalRep:     mccInfos.Currency.RoyalReputation,
+		CurrencySilver:       mccInfos.Currency.Silver,
+		CurrencyMaterialDust: mccInfos.Currency.MaterialDust,
+		CurrencyAnglrTokens:  mccInfos.Currency.AnglrTokens,
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
@@ -239,7 +257,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1607", nil); err != nil {
+	if err := http.ListenAndServe(":1608", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

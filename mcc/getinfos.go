@@ -24,11 +24,23 @@ type CrownLevel struct {
 	NextLevelProgress NextLevelProgress `json:"nextLevelProgress"`
 }
 
+type Currency struct {
+	Coins           int `json:"coins"`
+	Gems            int `json:"gems"`
+	RoyalReputation int `json:"royalReputation"`
+	Silver          int `json:"silver"`
+	MaterialDust    int `json:"materialDust"`
+	AnglrTokens     int `json:"anglrTokens"`
+}
+
 type Player struct {
-	UUID       string     `json:"uuid"`
-	Username   string     `json:"username"`
-	Ranks      []string   `json:"ranks"`
-	CrownLevel CrownLevel `json:"crownLevel"`
+	UUID        string     `json:"uuid"`
+	Username    string     `json:"username"`
+	Ranks       []string   `json:"ranks"`
+	CrownLevel  CrownLevel `json:"crownLevel"`
+	Collections struct {
+		Currency Currency `json:"currency"`
+	} `json:"collections"`
 }
 
 type Response struct {
@@ -47,6 +59,7 @@ type MccInfos struct {
 	Evolution       int      `json:"evolution"`
 	CrownObtained   int      `json:"crownObtained"`
 	CrownObtainable int      `json:"crownObtainable"`
+	Currency        Currency `json:"currency"`
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -73,8 +86,6 @@ func GetInfos(UUID string) *MccInfos {
 	query := `
 		query player($uuid: UUID!) {
 			player(uuid: $uuid) {
-				uuid
-				username
 				ranks
 				crownLevel {
       				level
@@ -82,6 +93,16 @@ func GetInfos(UUID string) *MccInfos {
 					nextLevelProgress {
 						obtained
 						obtainable
+					}
+				}
+				collections {
+					currency {
+						coins
+						gems
+						royalReputation
+						silver
+						materialDust
+						anglrTokens
 					}
     			}
 			}
@@ -140,6 +161,14 @@ func GetInfos(UUID string) *MccInfos {
 		Evolution:       response.Data.Player.CrownLevel.Evolution,
 		CrownObtained:   response.Data.Player.CrownLevel.NextLevelProgress.CrownObtained,
 		CrownObtainable: response.Data.Player.CrownLevel.NextLevelProgress.CrownObtainable,
+		Currency: Currency{
+			Coins:           response.Data.Player.Collections.Currency.Coins,
+			Gems:            response.Data.Player.Collections.Currency.Gems,
+			RoyalReputation: response.Data.Player.Collections.Currency.RoyalReputation,
+			Silver:          response.Data.Player.Collections.Currency.Silver,
+			MaterialDust:    response.Data.Player.Collections.Currency.MaterialDust,
+			AnglrTokens:     response.Data.Player.Collections.Currency.AnglrTokens,
+		},
 	}
 
 	return Infos

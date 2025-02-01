@@ -620,6 +620,37 @@ body.modal-open {
     text-align: center;
 }
 
+.mcc-case1 {
+    border: 2px solid #00000000 !important; /* Couleur de la bordure */
+    border-radius: 10px; /* Bordure arrondie */
+    padding: 10px; /* Ajoute un peu de marge interne */
+    margin: 5px; /* Augmente l'espacement autour de chaque case */
+}
+
+.mcc-case {
+    border: 2px solid #282828; /* Couleur de la bordure */
+    border-radius: 10px; /* Bordure arrondie */
+    padding: 10px; /* Ajoute un peu de marge interne */
+    margin: 5px; /* Augmente l'espacement autour de chaque case */
+}
+
+.mcc-bigcase {
+    display: flex;           /* Affichage en flexbox */
+    justify-content: space-between;  /* Espacement égal entre les éléments */
+    gap: 5px; /* Espacement entre les cases */
+}
+
+.mcc-case2, .mcc-case3 {
+    flex-basis: 48%;  /* Chaque case occupe environ 48% de la largeur disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #282828;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .mcc-rank {
     width: 30px;
     height: 30px;
@@ -671,6 +702,10 @@ body.modal-open {
     margin-bottom: -5px;
 }
 
+.mcc-crown {
+    margin-top: -20px;
+}
+
 .mcc-crownbar::-webkit-progress-bar {
     background-color: #444;
     border-radius: 10px;
@@ -709,4 +744,10 @@ body.modal-open {
     margin-top: 10px; /* Espace au-dessus du texte */
     text-align: center;
     margin-top: -10px;
+}
+.mcc-casetitle {
+    font-size: 30px !important;
+    color: #fff !important;
+    text-align: center;
+    font-weight: bold; /* Met le titre en gras */
 }

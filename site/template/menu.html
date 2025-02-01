@@ -80,19 +80,29 @@
                         <h2>MCC Stats</h2>
                     </div>
                     <div class="stats-body">
-                        <div class="mcc-header">
-                            <img class="mcc-image mcc-rank" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}">
-                            <p class="mcc-playername">{{.Name}}</p>
-                        </div>
-                        <div class="mcc-image mcc-crown">
-                            <img class="mcc-actualcrown" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}">
-                            <p class="mcc-actualcrownlevel">{{.CrownLevel}}</p>
-                            <!-- Progress Bar -->
-                            <progress class="mcc-crownbar" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
-                            <p class="mcc-futurcrownlevel">{{.CrownLevelplus1}}</p>
-                        </div>
-                        <div class="mcc-pourcentprogress">
-                            <p class="mcc-crownprogress">Progress: </p><p class="mcc-crownprogresspourcent">{{.CrownPourcentage}}%</p><p class="mcc-crownprogress"> ({{.CrownObtained}}/{{.CrownObtainable}})</p>
+                        <div class="mcc-case mcc-case1">
+                            <div class="mcc-header">
+                                <img class="mcc-image mcc-rank" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}">
+                                <p class="mcc-playername">{{.Name}}</p>
+                            </div>
+                            <div class="mcc-image mcc-crown">
+                                <img class="mcc-actualcrown" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}">
+                                <p class="mcc-actualcrownlevel">{{.CrownLevel}}</p>
+                                <!-- Progress Bar -->
+                                <progress class="mcc-crownbar" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
+                                <p class="mcc-futurcrownlevel">{{.CrownLevelplus1}}</p>
+                            </div>
+                            <div class="mcc-pourcentprogress">
+                                <p class="mcc-crownprogress">Progress: </p><p class="mcc-crownprogresspourcent">{{.CrownPourcentage}}%</p><p class="mcc-crownprogress"> ({{.CrownObtained}}/{{.CrownObtainable}})</p>
+                            </div>
+                        </div> 
+                        <div class="mcc-bigcase">
+                            <div class="mcc-case mcc-case2">
+                                <p class="mcc-casetitle">Wallet</p> 
+                            </div>
+                            <div class="mcc-case mcc-case3">
+                                <p class="mcc-casetitle">Trophies</p> 
+                            </div>
                         </div>
                     </div>
                 </div>
