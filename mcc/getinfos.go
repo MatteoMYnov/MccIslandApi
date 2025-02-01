@@ -26,7 +26,6 @@ type CrownLevel struct {
 
 type Currency struct {
 	Coins           int `json:"coins"`
-	Gems            int `json:"gems"`
 	RoyalReputation int `json:"royalReputation"`
 	Silver          int `json:"silver"`
 	MaterialDust    int `json:"materialDust"`
@@ -98,7 +97,6 @@ func GetInfos(UUID string) *MccInfos {
 				collections {
 					currency {
 						coins
-						gems
 						royalReputation
 						silver
 						materialDust
@@ -163,7 +161,6 @@ func GetInfos(UUID string) *MccInfos {
 		CrownObtainable: response.Data.Player.CrownLevel.NextLevelProgress.CrownObtainable,
 		Currency: Currency{
 			Coins:           response.Data.Player.Collections.Currency.Coins,
-			Gems:            response.Data.Player.Collections.Currency.Gems,
 			RoyalReputation: response.Data.Player.Collections.Currency.RoyalReputation,
 			Silver:          response.Data.Player.Collections.Currency.Silver,
 			MaterialDust:    response.Data.Player.Collections.Currency.MaterialDust,

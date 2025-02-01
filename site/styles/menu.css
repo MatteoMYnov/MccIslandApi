@@ -405,6 +405,14 @@ main {
 }
 
 /* HypixelCard */
+.no-background-header {
+    background-color: transparent !important; /* Enlève le fond */
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .hypixelstats-card {
     display: flex;
     flex-direction: column;
@@ -612,6 +620,7 @@ body.modal-open {
 }
 
 /* MCCTHINGS */
+
 .mcc-header {
     display: flex;
     align-items: center;
@@ -628,6 +637,8 @@ body.modal-open {
 }
 
 .mcc-case {
+    position: relative; /* Assure que l'en-tête est positionné par rapport à la case */
+    padding-top: 40px; /* Ajoute un padding en haut pour éviter que le contenu ne recouvre le header */
     border: 2px solid #282828; /* Couleur de la bordure */
     border-radius: 10px; /* Bordure arrondie */
     padding: 10px; /* Ajoute un peu de marge interne */
@@ -635,13 +646,13 @@ body.modal-open {
 }
 
 .mcc-bigcase {
-    display: flex;           /* Affichage en flexbox */
+    display: flex;  /* Affichage en flexbox */
     justify-content: space-between;  /* Espacement égal entre les éléments */
     gap: 5px; /* Espacement entre les cases */
+    width: 100%;  /* Assurez-vous que la largeur soit de 100% */
 }
 
 .mcc-case2, .mcc-case3 {
-    flex-basis: 48%;  /* Chaque case occupe environ 48% de la largeur disponible */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -649,6 +660,8 @@ body.modal-open {
     border: 2px solid #282828;
     border-radius: 10px;
     padding: 10px;
+    text-align: left;
+    flex: 1; /* Les deux cases prendront la moitié de l'espace disponible */
 }
 
 .mcc-rank {
@@ -744,10 +757,4 @@ body.modal-open {
     margin-top: 10px; /* Espace au-dessus du texte */
     text-align: center;
     margin-top: -10px;
-}
-.mcc-casetitle {
-    font-size: 30px !important;
-    color: #fff !important;
-    text-align: center;
-    font-weight: bold; /* Met le titre en gras */
 }

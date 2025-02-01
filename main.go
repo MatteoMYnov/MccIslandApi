@@ -173,7 +173,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		calculatedPercent = 0 // Ou une valeur par défaut si tu préfères
 	}
 
-	fmt.Println(mccInfos.Currency.Coins, mccInfos.Currency.Gems, mccInfos.Currency.RoyalReputation, mccInfos.Currency.Silver, mccInfos.Currency.MaterialDust, mccInfos.Currency.AnglrTokens)
+	fmt.Println(mccInfos.Currency.Coins, mccInfos.Currency.RoyalReputation, mccInfos.Currency.Silver, mccInfos.Currency.MaterialDust, mccInfos.Currency.AnglrTokens)
 
 	infos := DataMenuPage{
 		Name:             IGN,
@@ -190,7 +190,6 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		CrownPourcentage: calculatedPercent,
 		// Ajout des informations de currency en tant qu'entiers
 		CurrencyCoins:        mccInfos.Currency.Coins,
-		CurrencyGems:         mccInfos.Currency.Gems,
 		CurrencyRoyalRep:     mccInfos.Currency.RoyalReputation,
 		CurrencySilver:       mccInfos.Currency.Silver,
 		CurrencyMaterialDust: mccInfos.Currency.MaterialDust,
@@ -257,7 +256,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1608", nil); err != nil {
+	if err := http.ListenAndServe(":1609", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
