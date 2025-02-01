@@ -81,8 +81,15 @@
                     </div>
                     <div class="stats-body">
                         <div class="mcc-header">
-                            <img class="mcc-rank" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}">
+                            <img class="mcc-image mcc-rank" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}">
                             <p class="mcc-playername">{{.Name}}</p>
+                        </div>
+                        <div class="mcc-image mcc-crown">
+                            <img class="mcc-actualcrown" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}">
+                            <p class="mcc-actualcrownlevel">{{.CrownLevel}}</p>
+                            <!-- Progress Bar -->
+                            <progress class="mcc-crownbar" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
+                            <p class="mcc-futurcrownlevel">{{.CrownLevelplus1}}</p>
                         </div>
                     </div>
                 </div>

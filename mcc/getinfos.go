@@ -3,7 +3,6 @@ package mcc
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -14,8 +13,15 @@ type GraphQLRequest struct {
 	Variables map[string]string `json:"variables,omitempty"`
 }
 
+type NextLevelProgress struct {
+	CrownObtained   int `json:"obtained"`
+	CrownObtainable int `json:"obtainable"`
+}
+
 type CrownLevel struct {
-	Level int `json:"level"`
+	Level             int               `json:"level"`
+	Evolution         int               `json:"evolution"`
+	NextLevelProgress NextLevelProgress `json:"nextLevelProgress"`
 }
 
 type Player struct {
@@ -36,7 +42,11 @@ type APIConfig struct {
 }
 
 type MccInfos struct {
-	Ranks []string `json:"ranks"`
+	Ranks           []string `json:"ranks"`
+	CrownLevel      int      `json:"crownLevel"`
+	Evolution       int      `json:"evolution"`
+	CrownObtained   int      `json:"crownObtained"`
+	CrownObtainable int      `json:"crownObtainable"`
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -54,9 +64,6 @@ func GetInfos(UUID string) *MccInfos {
 		return nil
 	}
 
-	// DEBUG: Vérifier si le token est bien extrait
-	fmt.Printf("Token décodé: %s\n", apiConfig.Mcctoken)
-
 	if apiConfig.Mcctoken == "" {
 		log.Println("Le token API est vide")
 		return nil
@@ -71,6 +78,11 @@ func GetInfos(UUID string) *MccInfos {
 				ranks
 				crownLevel {
       				level
+					evolution
+					nextLevelProgress {
+						obtained
+						obtainable
+					}
     			}
 			}
 		}
@@ -123,7 +135,11 @@ func GetInfos(UUID string) *MccInfos {
 	}
 
 	Infos := &MccInfos{
-		Ranks: response.Data.Player.Ranks,
+		Ranks:           response.Data.Player.Ranks,
+		CrownLevel:      response.Data.Player.CrownLevel.Level,
+		Evolution:       response.Data.Player.CrownLevel.Evolution,
+		CrownObtained:   response.Data.Player.CrownLevel.NextLevelProgress.CrownObtained,
+		CrownObtainable: response.Data.Player.CrownLevel.NextLevelProgress.CrownObtainable,
 	}
 
 	return Infos

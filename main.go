@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"hypixel-info/mcc"
 	"hypixel-info/minecraft"
@@ -44,12 +45,18 @@ type Infos struct {
 }
 
 type DataMenuPage struct {
-	Name        string
-	ListCapes   []string
-	ImageURLs   []CapeInfo
-	BadgeURLs   []BadgeInfo
-	PlayerClass string
-	MccRank     string
+	Name            string
+	ListCapes       []string
+	ImageURLs       []CapeInfo
+	BadgeURLs       []BadgeInfo
+	PlayerClass     string
+	MccRank         string
+	Evolution       string
+	CrownLevel      string
+	Evolutionplus1  string
+	CrownLevelplus1 string
+	CrownObtained   int
+	CrownObtainable int
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -74,7 +81,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		playerClass = "playerName"
 	}
 
-	playerUUID := minecraft.GetUUID(IGN)
+	playerUUID := minecraft.GetUUID(IGN) // Utilisation de playerUUID pour obtenir les infos MCC
 	playerCapesJSON := minecraft.LoadCapesByName(IGN)
 	playerBadgesJSON := minecraft.LoadBadgesByName(IGN)
 
@@ -133,19 +140,40 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	// Obtenez les informations du MCC pour le joueur
 	mccInfos := mcc.GetInfos(playerUUID)
+
+	// Définir la valeur de MccRank
 	MccRank := "PLAYER"
 	if mccInfos != nil && len(mccInfos.Ranks) > 0 {
 		MccRank = mccInfos.Ranks[0]
 	}
 
+	// Calculer l'évolution et le niveau de couronne pour le joueur
+	evolutionPlus1 := mccInfos.Evolution + 1
+	crownLevelPlus1 := mccInfos.CrownLevel + 1
+
+	// Obtenez les informations de la couronne
+	crownObtained := 0
+	crownObtainable := 0
+	if mccInfos != nil {
+		crownObtained = mccInfos.CrownObtained
+		crownObtainable = mccInfos.CrownObtainable
+	}
+
 	infos := DataMenuPage{
-		Name:        IGN,
-		ListCapes:   prioritizedCapes,
-		ImageURLs:   prioritizedCapeInfos,
-		BadgeURLs:   badgeInfos,
-		PlayerClass: playerClass,
-		MccRank:     MccRank,
+		Name:            IGN,
+		ListCapes:       prioritizedCapes,
+		ImageURLs:       prioritizedCapeInfos,
+		BadgeURLs:       badgeInfos,
+		PlayerClass:     playerClass,
+		MccRank:         MccRank,
+		Evolution:       fmt.Sprintf("%d", mccInfos.Evolution),
+		CrownLevel:      fmt.Sprintf("%d", mccInfos.CrownLevel),
+		Evolutionplus1:  fmt.Sprintf("%d", evolutionPlus1),
+		CrownLevelplus1: fmt.Sprintf("%d", crownLevelPlus1),
+		CrownObtained:   crownObtained,
+		CrownObtainable: crownObtainable,
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
@@ -208,7 +236,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1605", nil); err != nil {
+	if err := http.ListenAndServe(":1607", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

@@ -633,3 +633,54 @@ body.modal-open {
     font-size: 12px;
     color: #fff !important;
 }
+
+.mcc-crown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacement entre les éléments */
+    text-align: center;
+}
+
+.mcc-actualcrown{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 0px;
+    image-rendering: pixelated;
+}
+
+.mcc-actualcrownlevel{
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #fff !important;
+}
+
+.mcc-futurcrownlevel {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #777 !important;
+}
+
+.mcc-crownbar {
+    width: 50%;
+    height: 20px;
+    appearance: none;
+    border-radius: 10px;
+    background-color: #444;
+}
+
+.mcc-crownbar::-webkit-progress-bar {
+    background-color: #444;
+    border-radius: 10px;
+}
+
+.mcc-crownbar::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.mcc-crownbar::-moz-progress-bar {
+    background-color: #4caf50;
+    border-radius: 10px;
+}
