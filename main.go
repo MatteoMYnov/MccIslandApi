@@ -45,18 +45,19 @@ type Infos struct {
 }
 
 type DataMenuPage struct {
-	Name            string
-	ListCapes       []string
-	ImageURLs       []CapeInfo
-	BadgeURLs       []BadgeInfo
-	PlayerClass     string
-	MccRank         string
-	Evolution       string
-	CrownLevel      string
-	Evolutionplus1  string
-	CrownLevelplus1 string
-	CrownObtained   int
-	CrownObtainable int
+	Name             string
+	ListCapes        []string
+	ImageURLs        []CapeInfo
+	BadgeURLs        []BadgeInfo
+	PlayerClass      string
+	MccRank          string
+	Evolution        string
+	CrownLevel       string
+	Evolutionplus1   string
+	CrownLevelplus1  string
+	CrownObtained    int
+	CrownObtainable  int
+	CrownPourcentage int
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -160,20 +161,22 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		crownObtained = mccInfos.CrownObtained
 		crownObtainable = mccInfos.CrownObtainable
 	}
+	calculatedPercent := (mccInfos.CrownObtained * 100) / mccInfos.CrownObtainable
 
 	infos := DataMenuPage{
-		Name:            IGN,
-		ListCapes:       prioritizedCapes,
-		ImageURLs:       prioritizedCapeInfos,
-		BadgeURLs:       badgeInfos,
-		PlayerClass:     playerClass,
-		MccRank:         MccRank,
-		Evolution:       fmt.Sprintf("%d", mccInfos.Evolution),
-		CrownLevel:      fmt.Sprintf("%d", mccInfos.CrownLevel),
-		Evolutionplus1:  fmt.Sprintf("%d", evolutionPlus1),
-		CrownLevelplus1: fmt.Sprintf("%d", crownLevelPlus1),
-		CrownObtained:   crownObtained,
-		CrownObtainable: crownObtainable,
+		Name:             IGN,
+		ListCapes:        prioritizedCapes,
+		ImageURLs:        prioritizedCapeInfos,
+		BadgeURLs:        badgeInfos,
+		PlayerClass:      playerClass,
+		MccRank:          MccRank,
+		Evolution:        fmt.Sprintf("%d", mccInfos.Evolution),
+		CrownLevel:       fmt.Sprintf("%d", mccInfos.CrownLevel),
+		Evolutionplus1:   fmt.Sprintf("%d", evolutionPlus1),
+		CrownLevelplus1:  fmt.Sprintf("%d", crownLevelPlus1),
+		CrownObtained:    crownObtained,
+		CrownObtainable:  crownObtainable,
+		CrownPourcentage: calculatedPercent,
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")

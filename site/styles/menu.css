@@ -668,6 +668,7 @@ body.modal-open {
     appearance: none;
     border-radius: 10px;
     background-color: #444;
+    margin-bottom: -5px;
 }
 
 .mcc-crownbar::-webkit-progress-bar {
@@ -683,4 +684,29 @@ body.modal-open {
 .mcc-crownbar::-moz-progress-bar {
     background-color: #4caf50;
     border-radius: 10px;
+}
+
+.mcc-pourcentprogress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacement entre les éléments */
+    text-align: center;
+}
+
+.mcc-crownprogress {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #999 !important;
+    margin-top: 10px; /* Espace au-dessus du texte */
+    text-align: center;
+    margin-top: -10px;
+}
+.mcc-crownprogresspourcent {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #ddd !important;
+    margin-top: 10px; /* Espace au-dessus du texte */
+    text-align: center;
+    margin-top: -10px;
 }
