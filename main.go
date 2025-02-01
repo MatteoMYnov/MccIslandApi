@@ -1,20 +1,12 @@
 package main
 
 import (
-	"encoding/json"
 	"html/template"
 	"hypixel-info/minecraft"
-	"io/ioutil"
 	"log"
-	"math/rand"
 	"net/http"
 	"path/filepath"
-	"regexp"
-	"strings"
-	"time"
 )
-
-// 14719ec2-7760-4b7c-a85f-f8d3775a2bb5
 
 // Nouveau format JSON pour les capes
 type Cape struct {
@@ -50,65 +42,6 @@ type Infos struct {
 	PlayerClass string
 }
 
-func contains(sub, str string) bool {
-	return strings.Contains(str, sub)
-}
-
-func loadCapeGroups() (CapeGroups, error) {
-	var capeGroups CapeGroups
-	file, err := ioutil.ReadFile("./site/infos/capes.json")
-	if err != nil {
-		return capeGroups, err
-	}
-
-	err = json.Unmarshal(file, &capeGroups)
-	if err != nil {
-		return capeGroups, err
-	}
-
-	return capeGroups, nil
-}
-
-func prioritizeCapes(allCapes []string, capeGroups CapeGroups) []string {
-	var prioritizedCapes []string
-
-	for _, cape := range capeGroups.Capes {
-		if containsAny(allCapes, cape.Name) {
-			prioritizedCapes = append(prioritizedCapes, cape.Name)
-		}
-	}
-
-	for _, cape := range allCapes {
-		if !containsAny(prioritizedCapes, cape) {
-			prioritizedCapes = append(prioritizedCapes, cape)
-		}
-	}
-
-	return prioritizedCapes
-}
-
-func containsAny(list []string, item string) bool {
-	for _, v := range list {
-		if v == item {
-			return true
-		}
-	}
-	return false
-}
-
-func getCapeClass(cape string, capeGroups CapeGroups) string {
-	for _, group := range capeGroups.Capes {
-		if group.Name == cape {
-			return group.Type + "-cape"
-		}
-	}
-	return ""
-}
-
-func rootHandler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/menu", http.StatusFound)
-}
-
 type DataMenuPage struct {
 	Name        string
 	ListCapes   []string
@@ -117,48 +50,23 @@ type DataMenuPage struct {
 	PlayerClass string
 }
 
-func isValidIGN(name string) bool {
-	validIGNPattern := "^[a-zA-Z0-9_]+$"
-	matched, _ := regexp.MatchString(validIGNPattern, name)
-	return matched
-}
-
-func getRandomName() string {
-	var names struct {
-		Name []string `json:"name"`
-	}
-
-	file, err := ioutil.ReadFile("./site/infos/names.json")
-	if err != nil {
-		log.Fatalf("Erreur lors de la lecture du fichier names.json: %v", err)
-	}
-
-	err = json.Unmarshal(file, &names)
-	if err != nil {
-		log.Fatalf("Erreur lors du décodage du JSON: %v", err)
-	}
-
-	if len(names.Name) == 0 {
-		log.Fatalf("La liste des noms est vide dans names.json")
-	}
-
-	rand.Seed(time.Now().UnixNano())
-	return names.Name[rand.Intn(len(names.Name))]
+func rootHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/menu", http.StatusFound)
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
-	capeGroups, err := loadCapeGroups()
+	capeGroups, err := minecraft.LoadCapeGroups()
 	if err != nil {
 		log.Fatal("Erreur de chargement des groupes de capes:", err)
 	}
 
 	IGN := r.FormValue("q")
 	if IGN == "" {
-		IGN = getRandomName()
+		IGN = minecraft.GetRandomName()
 	}
 
 	playerClass := ""
-	if !isValidIGN(IGN) {
+	if !minecraft.IsValidIGN(IGN) {
 		playerClass = "badName"
 	} else {
 		playerClass = "playerName"
@@ -175,7 +83,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 		listCapes = append(listCapes, capeName)
 
-		class := getCapeClass(capeName, capeGroups)
+		class := minecraft.GetCapeClass(capeName, capeGroups)
 		title := ""
 
 		if removed {
@@ -211,7 +119,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		badgeInfos = nil
 	}
 
-	prioritizedCapes := prioritizeCapes(listCapes, capeGroups)
+	prioritizedCapes := minecraft.PrioritizeCapes(listCapes, capeGroups)
 
 	var prioritizedCapeInfos []CapeInfo
 	for _, cape := range prioritizedCapes {
@@ -232,13 +140,51 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
 	tmpl, err := template.New("menu.html").Funcs(template.FuncMap{
-		"contains": contains,
+		"contains": minecraft.Contains,
 	}).ParseFiles(tmplPath)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	tmpl.Execute(w, infos)
+}
+
+func capesHandler(w http.ResponseWriter, r *http.Request) {
+	// Charger toutes les capes depuis le fichier JSON
+	capeGroups, err := minecraft.LoadCapeGroups()
+	if err != nil {
+		http.Error(w, "Erreur lors du chargement des capes", http.StatusInternalServerError)
+		return
+	}
+
+	// Construire une liste d'objets CapeInfo
+	var capeInfos []CapeInfo
+	for _, cape := range capeGroups.Capes {
+		capeInfos = append(capeInfos, CapeInfo{
+			URL:      "/img/capes/" + cape.Name + ".png",
+			Class:    cape.Type + "-cape",
+			CapeName: cape.Name,
+			Title:    cape.Title,
+			Removed:  false,
+		})
+	}
+
+	// Struct pour la page des capes
+	data := struct {
+		ImageURLs []CapeInfo
+	}{
+		ImageURLs: capeInfos,
+	}
+
+	// Charger et exécuter le template
+	tmplPath := filepath.Join("site", "template", "capes.html")
+	tmpl, err := template.ParseFiles(tmplPath)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	tmpl.Execute(w, data)
 }
 
 func setupFileServer(path, route string) {
@@ -254,8 +200,9 @@ func main() {
 	setupFileServer("./site/js", "/js/")
 
 	http.HandleFunc("/menu", menuHandler)
+	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1504", nil); err != nil {
+	if err := http.ListenAndServe(":1505", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
