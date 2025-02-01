@@ -150,14 +150,12 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func capesHandler(w http.ResponseWriter, r *http.Request) {
-	// Charger toutes les capes depuis le fichier JSON
 	capeGroups, err := minecraft.LoadCapeGroups()
 	if err != nil {
 		http.Error(w, "Erreur lors du chargement des capes", http.StatusInternalServerError)
 		return
 	}
 
-	// Construire une liste d'objets CapeInfo
 	var capeInfos []CapeInfo
 	for _, cape := range capeGroups.Capes {
 		capeInfos = append(capeInfos, CapeInfo{
@@ -169,14 +167,12 @@ func capesHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	// Struct pour la page des capes
 	data := struct {
 		ImageURLs []CapeInfo
 	}{
 		ImageURLs: capeInfos,
 	}
 
-	// Charger et exécuter le template
 	tmplPath := filepath.Join("site", "template", "capes.html")
 	tmpl, err := template.ParseFiles(tmplPath)
 	if err != nil {
@@ -202,7 +198,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1505", nil); err != nil {
+	if err := http.ListenAndServe(":1600", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

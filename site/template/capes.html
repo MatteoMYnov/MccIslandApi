@@ -10,11 +10,18 @@
     <body>
         <div id="bgdark"></div>
         <header class="navbar">
+            <nav>
+                <ul>
+                    <li class="page-cath">
+                        Capes
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
             <!-- Conteneur général pour les cartes -->
             <div class="capes-container">
-                <!-- Minecraft Stats Card -->
+                <!-- Minecraft Capes Card -->
                 <div class="minecraftcapes-card" id="minecraftCapessCard">
                     <div class="stats-header">
                         <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
@@ -29,7 +36,7 @@
                                 </div>
                             {{end}}
                         {{else}}
-                            <p class="no-cape">Ce joueur ne possède aucune cape</p>
+                            <p class="no-cape">Aucune cape disponible</p>
                         {{end}}
                     </div>
                 </div>  
@@ -38,7 +45,7 @@
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="modal-image">
+                        <img src="../img/capes/default-placeholder.png" alt="Image" class="modal-image">
                     </div>
                     <div class="modal-body">
                         <p class="modal-name">Name PlaceHolder</p>
@@ -51,7 +58,7 @@
                 </div>
             </div>
         </main>
-        <script src="../js/capes.js"></script>
+        <script src="../js/scroll.js"></script>
         <script src="../js/modal.js"></script>
     </body>
 </html>

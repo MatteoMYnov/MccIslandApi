@@ -29,6 +29,28 @@ body, html {
     z-index: 2; /* Priorité sur #bgdark */
 }
 
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('fonts/Minecraftia.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Page Cathegorie */
+.page-cath {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    position: absolute;
+    background-color: #491F1F;
+    padding: 5px;
+    border: 2px solid #491F1F;
+    border-radius: 10px;
+    right: 20px;  /* Aligne le texte à droite */
+    top: 50%;     /* Centre verticalement */
+    transform: translateY(-50%); /* Ajuste pour un centrage parfait */
+    font-size: 18px;
+    color: #fff;
+}
+
 /* bar de Navigation */
 .navbar {
     background-color: #6E2F2F;
@@ -40,6 +62,15 @@ body, html {
     text-align: center;
     height: 75px;
     box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -127,13 +158,6 @@ main {
     image-rendering: pixelated;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-}
-
-@font-face {
-    font-family: 'Minecraftia';
-    src: url('fonts/Minecraftia.woff') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
 
 .cape-title {
