@@ -890,8 +890,6 @@ body.modal-open {
     border-radius: 10px;
     padding: 10px;
     flex: 1 1 calc(33% - 10px); /* Chaque carte prendra un tiers de la largeur disponible, avec une petite marge */
-    margin-top: 5px;
-    margin-bottom: 5px; /* Espacement entre les cartes */
     box-sizing: border-box; /* Inclut les paddings et les bordures dans la taille */
     transition: background-color 0.3s, filter 0.3s; /* Transition pour les changements de couleur et d'effet */
     cursor: pointer; /* Curseur en forme de souris */
@@ -901,7 +899,7 @@ body.modal-open {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px;
+    padding: 0px;
     max-width: fit-content; /* Ajuste la largeur selon le contenu */
     margin: 0 auto; /* Centrer l'élément */
 }
@@ -946,6 +944,13 @@ body.modal-open {
     background-color: #323232;
     padding: 0 15px;
     transition: max-height 0.3s ease-in-out;
+}
+
+.interfriends-body {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
+    gap: 5px;
+    margin: 5px 5px;
 }
 
 .arrow {
