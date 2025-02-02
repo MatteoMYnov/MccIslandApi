@@ -165,8 +165,19 @@
                                 <h2>Friends</h2>
                             </div>
                             <div class="friends-body" id="friendsBody">
-                                <p>Les amis du joueur seront affichés ici.</p>
-                            </div>
+                                {{if .Friends}}
+                                    {{range .Friends}}
+                                        <div class="friend-card" data-playername="{{.}}" onclick="searchPlayer(this)">
+                                            <div class="friend-info">
+                                                <img src="https://mc-heads.net/head/{{.}}" class="friends-icon">
+                                                <p>{{.}}</p>
+                                            </div>
+                                        </div>
+                                    {{end}}
+                                {{else}}
+                                    <p>Le Joueur ne possède aucun amis, ou n'a pas les API d'ouverts.</p>
+                                {{end}}
+                            </div>                           
                         </div>
                     </div>
                 </div>

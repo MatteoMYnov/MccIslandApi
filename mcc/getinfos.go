@@ -48,6 +48,10 @@ type Currency struct {
 	AnglrTokens     int `json:"anglrTokens"`
 }
 
+type Friend struct { // Define the Friend struct
+	Username string `json:"username"`
+}
+
 type Player struct {
 	UUID        string     `json:"uuid"`
 	Username    string     `json:"username"`
@@ -56,6 +60,9 @@ type Player struct {
 	Collections struct {
 		Currency Currency `json:"currency"`
 	} `json:"collections"`
+	Social struct {
+		Friends []Friend `json:"friends"` // Use the named Friend struct here
+	} `json:"social"`
 }
 
 type Response struct {
@@ -80,6 +87,7 @@ type MccInfos struct {
 	TrophiesSKILL   Trophies    `json:"trophiesSKILL"`
 	TrophiesSTYLE   Trophies    `json:"trophiesSTYLE"`
 	TrophiesANGLER  Trophies    `json:"trophiesANGLER"`
+	Friends         []string    `json:"friends"` // Add friends here
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -148,6 +156,11 @@ func GetInfos(UUID string) *MccInfos {
 						anglrTokens
 					}
 				}
+				social {
+					friends {
+						username
+					}
+				}
 			}
 		}
 	`
@@ -214,7 +227,15 @@ func GetInfos(UUID string) *MccInfos {
 		TrophiesSKILL:  response.Data.Player.CrownLevel.TrophiesSKILL,
 		TrophiesSTYLE:  response.Data.Player.CrownLevel.TrophiesSTYLE,
 		TrophiesANGLER: response.Data.Player.CrownLevel.TrophiesANGLER,
+		Friends:        getFriends(response.Data.Player.Social.Friends),
 	}
-
 	return Infos
+}
+
+func getFriends(friends []Friend) []string { // Update to use the Friend type
+	var friendList []string
+	for _, friend := range friends {
+		friendList = append(friendList, friend.Username)
+	}
+	return friendList
 }

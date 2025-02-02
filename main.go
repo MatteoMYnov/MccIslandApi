@@ -77,6 +77,7 @@ type DataMenuPage struct {
 	ANGLERTrophies       string
 	MaxANGLERTrophies    string
 	BonusTrophies        string
+	Friends              []string
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -198,6 +199,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		fishingcalculatedPercent = 0
 	}
 
+	fmt.Println(mccInfos.Friends)
+
 	infos := DataMenuPage{
 		Name:        IGN,
 		ListCapes:   prioritizedCapes,
@@ -234,6 +237,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		ANGLERTrophies:       mcc.FormatNumberWithSpaces(mccInfos.TrophiesANGLER.Obtained),
 		MaxANGLERTrophies:    mcc.FormatNumberWithSpaces(mccInfos.TrophiesANGLER.Obtainable),
 		BonusTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Bonus),
+		Friends:              mccInfos.Friends,
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
@@ -296,7 +300,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1612", nil); err != nil {
+	if err := http.ListenAndServe(":1614", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
