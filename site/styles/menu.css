@@ -859,3 +859,47 @@ body.modal-open {
     text-align: center;
     margin-top: -10px;
 }
+
+/* FRIENDS */
+.friends-card {
+    width: 99%;
+    background-color: #292929;
+    border: 2px solid #292929; /* Ajout de la bordure */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.friends-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #292929;
+}
+
+.friends-header h2 {
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.friends-icon {
+    image-rendering: pixelated;
+    width: 40px;
+    height: 40px;
+}
+
+.friends-body {
+    border-radius: 0 0 10px 10px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #323232;
+    padding: 0 15px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.friends-body p {
+    color: white;
+    padding: 10px 0;
+}
