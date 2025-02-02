@@ -65,6 +65,12 @@ type DataMenuPage struct {
 	CurrencyAnglrTokens  string
 	TotalTrophies        string
 	MaxTotalTrophies     string
+	SKILLTrophies        string
+	MaxSKILLTrophies     string
+	STYLETrophies        string
+	MaxSTYLETrophies     string
+	ANGLERTrophies       string
+	MaxANGLERTrophies    string
 	BonusTrophies        string
 }
 
@@ -175,7 +181,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		calculatedPercent = 0 // Ou une valeur par défaut si tu préfères
 	}
 
-	fmt.Println(mccInfos.Trophies)
+	fmt.Println(mccInfos.TrophiesSKILL, mccInfos.TrophiesSTYLE, mccInfos.TrophiesANGLER)
 
 	infos := DataMenuPage{
 		Name:             IGN,
@@ -198,6 +204,12 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		CurrencyAnglrTokens:  mcc.FormatNumberWithSpaces(mccInfos.Currency.AnglrTokens),
 		TotalTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Obtained),
 		MaxTotalTrophies:     mcc.FormatNumberWithSpaces(mccInfos.Trophies.Obtainable),
+		SKILLTrophies:        mcc.FormatNumberWithSpaces(mccInfos.TrophiesSKILL.Obtained),
+		MaxSKILLTrophies:     mcc.FormatNumberWithSpaces(mccInfos.TrophiesSKILL.Obtainable),
+		STYLETrophies:        mcc.FormatNumberWithSpaces(mccInfos.TrophiesSTYLE.Obtained),
+		MaxSTYLETrophies:     mcc.FormatNumberWithSpaces(mccInfos.TrophiesSTYLE.Obtainable),
+		ANGLERTrophies:       mcc.FormatNumberWithSpaces(mccInfos.TrophiesANGLER.Obtained),
+		MaxANGLERTrophies:    mcc.FormatNumberWithSpaces(mccInfos.TrophiesANGLER.Obtainable),
 		BonusTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Bonus),
 	}
 
@@ -261,7 +273,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1609", nil); err != nil {
+	if err := http.ListenAndServe(":1610", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

@@ -21,7 +21,7 @@ type NextLevelProgress struct {
 type Trophies struct {
 	Obtained   int `json:"obtained"`
 	Obtainable int `json:"obtainable"`
-	Bonus      int `json:"bonus"`
+	Bonus      int `json:"bonus,omitempty"`
 }
 
 type CrownLevel struct {
@@ -29,6 +29,9 @@ type CrownLevel struct {
 	Evolution         int               `json:"evolution"`
 	NextLevelProgress NextLevelProgress `json:"nextLevelProgress"`
 	Trophies          Trophies          `json:"trophies"`
+	TrophiesSKILL     Trophies          `json:"trophiesSKILL,omitempty"`
+	TrophiesSTYLE     Trophies          `json:"trophiesSTYLE,omitempty"`
+	TrophiesANGLER    Trophies          `json:"trophiesANGLER,omitempty"`
 }
 
 type Currency struct {
@@ -67,6 +70,9 @@ type MccInfos struct {
 	CrownObtainable int      `json:"crownObtainable"`
 	Currency        Currency `json:"currency"`
 	Trophies        Trophies `json:"trophies"`
+	TrophiesSKILL   Trophies `json:"trophiesSKILL"`
+	TrophiesSTYLE   Trophies `json:"trophiesSTYLE"`
+	TrophiesANGLER  Trophies `json:"trophiesANGLER"`
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -105,6 +111,18 @@ func GetInfos(UUID string) *MccInfos {
 						obtained
 						obtainable
 						bonus
+					}
+					trophiesSKILL: trophies(category: SKILL) { 
+						obtained
+						obtainable
+					}
+					trophiesSTYLE: trophies(category: STYLE) { 
+						obtained
+						obtainable
+					}
+					trophiesANGLER: trophies(category: ANGLER) { 
+						obtained
+						obtainable
 					}
 				}
 				collections {
@@ -166,6 +184,7 @@ func GetInfos(UUID string) *MccInfos {
 		return nil
 	}
 
+	// Mapper la réponse aux informations de MCC
 	Infos := &MccInfos{
 		Ranks:           response.Data.Player.Ranks,
 		CrownLevel:      response.Data.Player.CrownLevel.Level,
@@ -183,6 +202,18 @@ func GetInfos(UUID string) *MccInfos {
 			Obtained:   response.Data.Player.CrownLevel.Trophies.Obtained,
 			Obtainable: response.Data.Player.CrownLevel.Trophies.Obtainable,
 			Bonus:      response.Data.Player.CrownLevel.Trophies.Bonus,
+		},
+		TrophiesSKILL: Trophies{
+			Obtained:   response.Data.Player.CrownLevel.TrophiesSKILL.Obtained,
+			Obtainable: response.Data.Player.CrownLevel.TrophiesSKILL.Obtainable,
+		},
+		TrophiesSTYLE: Trophies{
+			Obtained:   response.Data.Player.CrownLevel.TrophiesSTYLE.Obtained,
+			Obtainable: response.Data.Player.CrownLevel.TrophiesSTYLE.Obtainable,
+		},
+		TrophiesANGLER: Trophies{
+			Obtained:   response.Data.Player.CrownLevel.TrophiesANGLER.Obtained,
+			Obtainable: response.Data.Player.CrownLevel.TrophiesANGLER.Obtainable,
 		},
 	}
 	return Infos
