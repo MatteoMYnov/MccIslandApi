@@ -53,11 +53,16 @@ type DataMenuPage struct {
 	MccRank              string
 	Evolution            string
 	CrownLevel           string
-	Evolutionplus1       string
 	CrownLevelplus1      string
 	CrownObtained        int
 	CrownObtainable      int
 	CrownPourcentage     int
+	FishingEvolution     string
+	FishingLevel         string
+	FishingLevelplus1    string
+	FishingObtained      int
+	FishingObtainable    int
+	FishingPourcentage   int
 	CurrencyCoins        string
 	CurrencyRoyalRep     string
 	CurrencySilver       string
@@ -166,36 +171,54 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Calculer l'évolution et le niveau de couronne pour le joueur
 	crownLevelPlus1 := mccInfos.CrownLevel + 1
+	fishingLevelPlus1 := mccInfos.FishingData.Level + 1
+	fishingEvolution := mccInfos.FishingData.Level / 10
 
 	// Obtenez les informations de la couronne
 	crownObtained := 0
 	crownObtainable := 0
+	fishingObtained := 0
+	fishingObtainable := 0
 	if mccInfos != nil {
 		crownObtained = mccInfos.CrownObtained
 		crownObtainable = mccInfos.CrownObtainable
+		fishingObtained = mccInfos.FishingData.NextLevelProgress.CrownObtained
+		fishingObtainable = mccInfos.FishingData.NextLevelProgress.CrownObtainable
 	}
-	var calculatedPercent int
+	var crowncalculatedPercent int
+	var fishingcalculatedPercent int
 	if mccInfos.CrownObtainable > 0 {
-		calculatedPercent = (mccInfos.CrownObtained * 100) / mccInfos.CrownObtainable
+		crowncalculatedPercent = (mccInfos.CrownObtained * 100) / mccInfos.CrownObtainable
 	} else {
-		calculatedPercent = 0 // Ou une valeur par défaut si tu préfères
+		crowncalculatedPercent = 0
 	}
-
-	fmt.Println(mccInfos.TrophiesSKILL, mccInfos.TrophiesSTYLE, mccInfos.TrophiesANGLER)
+	if mccInfos.FishingData.NextLevelProgress.CrownObtainable > 0 {
+		fishingcalculatedPercent = (mccInfos.FishingData.NextLevelProgress.CrownObtained * 100) / mccInfos.FishingData.NextLevelProgress.CrownObtainable
+	} else {
+		fishingcalculatedPercent = 0
+	}
 
 	infos := DataMenuPage{
-		Name:             IGN,
-		ListCapes:        prioritizedCapes,
-		ImageURLs:        prioritizedCapeInfos,
-		BadgeURLs:        badgeInfos,
-		PlayerClass:      playerClass,
-		MccRank:          MccRank,
+		Name:        IGN,
+		ListCapes:   prioritizedCapes,
+		ImageURLs:   prioritizedCapeInfos,
+		BadgeURLs:   badgeInfos,
+		PlayerClass: playerClass,
+		MccRank:     MccRank,
+		// Crown
 		Evolution:        fmt.Sprintf("%d", mccInfos.Evolution),
 		CrownLevel:       fmt.Sprintf("%d", mccInfos.CrownLevel),
 		CrownLevelplus1:  fmt.Sprintf("%d", crownLevelPlus1),
 		CrownObtained:    crownObtained,
 		CrownObtainable:  crownObtainable,
-		CrownPourcentage: calculatedPercent,
+		CrownPourcentage: crowncalculatedPercent,
+		// Crown Fishing
+		FishingEvolution:   fmt.Sprintf("%d", fishingEvolution),
+		FishingLevel:       fmt.Sprintf("%d", mccInfos.FishingData.Level),
+		FishingLevelplus1:  fmt.Sprintf("%d", fishingLevelPlus1),
+		FishingObtained:    fishingObtained,
+		FishingObtainable:  fishingObtainable,
+		FishingPourcentage: fishingcalculatedPercent,
 		// Ajout des informations de currency en tant qu'entiers
 		CurrencyCoins:        mcc.FormatNumberWithSpaces(mccInfos.Currency.Coins),
 		CurrencyRoyalRep:     mcc.FormatNumberWithSpaces(mccInfos.Currency.RoyalReputation),
@@ -273,7 +296,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1611", nil); err != nil {
+	if err := http.ListenAndServe(":1612", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

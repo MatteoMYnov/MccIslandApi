@@ -89,11 +89,21 @@
                                 <img class="mcc-actualcrown" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}">
                                 <p class="mcc-actualcrownlevel">{{.CrownLevel}}</p>
                                 <!-- Progress Bar -->
-                                <progress class="mcc-crownbar" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
+                                <progress class="mcc-crownbar mcc-crown{{.Evolution}}" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
                                 <p class="mcc-futurcrownlevel">{{.CrownLevelplus1}}</p>
                             </div>
                             <div class="mcc-pourcentprogress">
                                 <p class="mcc-crownprogress">Progress: </p><p class="mcc-crownprogresspourcent">{{.CrownPourcentage}}%</p><p class="mcc-crownprogress"> ({{.CrownObtained}}/{{.CrownObtainable}})</p>
+                            </div>
+                            <div class="mcc-image mcc-crown">
+                                <img class="mcc-actualcrown" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}.png{{else}}0.png{{end}}">
+                                <p class="mcc-actualcrownlevel">{{.FishingLevel}}</p>
+                                <!-- Progress Bar -->
+                                <progress class="mcc-crownbar mcc-crown{{.FishingEvolution}}" value="{{.FishingObtained}}" max="{{.FishingObtainable}}"></progress>
+                                <p class="mcc-futurcrownlevel">{{.FishingLevelplus1}}</p>
+                            </div>
+                            <div class="mcc-pourcentprogress">
+                                <p class="mcc-crownprogress">Progress: </p><p class="mcc-crownprogresspourcent">{{.FishingPourcentage}}%</p><p class="mcc-crownprogress"> ({{.FishingObtained}}/{{.FishingObtainable}})</p>
                             </div>
                         </div> 
                         <div class="mcc-bigcase">

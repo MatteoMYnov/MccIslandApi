@@ -24,10 +24,16 @@ type Trophies struct {
 	Bonus      int `json:"bonus,omitempty"`
 }
 
+type FishingData struct {
+	Level             int               `json:"level"`
+	NextLevelProgress NextLevelProgress `json:"nextLevelProgress"`
+}
+
 type CrownLevel struct {
 	Level             int               `json:"level"`
 	Evolution         int               `json:"evolution"`
 	NextLevelProgress NextLevelProgress `json:"nextLevelProgress"`
+	FishingData       FishingData       `json:"fishingLevelData"`
 	Trophies          Trophies          `json:"trophies"`
 	TrophiesSKILL     Trophies          `json:"trophiesSKILL,omitempty"`
 	TrophiesSTYLE     Trophies          `json:"trophiesSTYLE,omitempty"`
@@ -63,16 +69,17 @@ type APIConfig struct {
 }
 
 type MccInfos struct {
-	Ranks           []string `json:"ranks"`
-	CrownLevel      int      `json:"crownLevel"`
-	Evolution       int      `json:"evolution"`
-	CrownObtained   int      `json:"crownObtained"`
-	CrownObtainable int      `json:"crownObtainable"`
-	Currency        Currency `json:"currency"`
-	Trophies        Trophies `json:"trophies"`
-	TrophiesSKILL   Trophies `json:"trophiesSKILL"`
-	TrophiesSTYLE   Trophies `json:"trophiesSTYLE"`
-	TrophiesANGLER  Trophies `json:"trophiesANGLER"`
+	Ranks           []string    `json:"ranks"`
+	CrownLevel      int         `json:"crownLevel"`
+	Evolution       int         `json:"evolution"`
+	CrownObtained   int         `json:"crownObtained"`
+	CrownObtainable int         `json:"crownObtainable"`
+	FishingData     FishingData `json:"fishingData"`
+	Currency        Currency    `json:"currency"`
+	Trophies        Trophies    `json:"trophies"`
+	TrophiesSKILL   Trophies    `json:"trophiesSKILL"`
+	TrophiesSTYLE   Trophies    `json:"trophiesSTYLE"`
+	TrophiesANGLER  Trophies    `json:"trophiesANGLER"`
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -106,6 +113,13 @@ func GetInfos(UUID string) *MccInfos {
 					nextLevelProgress {
 						obtained
 						obtainable
+					}
+					fishingLevelData {
+						level
+						nextLevelProgress {
+							obtained
+							obtainable
+						}
 					}
 					trophies {
 						obtained
@@ -191,30 +205,16 @@ func GetInfos(UUID string) *MccInfos {
 		Evolution:       response.Data.Player.CrownLevel.Evolution,
 		CrownObtained:   response.Data.Player.CrownLevel.NextLevelProgress.CrownObtained,
 		CrownObtainable: response.Data.Player.CrownLevel.NextLevelProgress.CrownObtainable,
-		Currency: Currency{
-			Coins:           response.Data.Player.Collections.Currency.Coins,
-			RoyalReputation: response.Data.Player.Collections.Currency.RoyalReputation,
-			Silver:          response.Data.Player.Collections.Currency.Silver,
-			MaterialDust:    response.Data.Player.Collections.Currency.MaterialDust,
-			AnglrTokens:     response.Data.Player.Collections.Currency.AnglrTokens,
+		FishingData: FishingData{
+			Level:             response.Data.Player.CrownLevel.FishingData.Level,
+			NextLevelProgress: response.Data.Player.CrownLevel.FishingData.NextLevelProgress,
 		},
-		Trophies: Trophies{
-			Obtained:   response.Data.Player.CrownLevel.Trophies.Obtained,
-			Obtainable: response.Data.Player.CrownLevel.Trophies.Obtainable,
-			Bonus:      response.Data.Player.CrownLevel.Trophies.Bonus,
-		},
-		TrophiesSKILL: Trophies{
-			Obtained:   response.Data.Player.CrownLevel.TrophiesSKILL.Obtained,
-			Obtainable: response.Data.Player.CrownLevel.TrophiesSKILL.Obtainable,
-		},
-		TrophiesSTYLE: Trophies{
-			Obtained:   response.Data.Player.CrownLevel.TrophiesSTYLE.Obtained,
-			Obtainable: response.Data.Player.CrownLevel.TrophiesSTYLE.Obtainable,
-		},
-		TrophiesANGLER: Trophies{
-			Obtained:   response.Data.Player.CrownLevel.TrophiesANGLER.Obtained,
-			Obtainable: response.Data.Player.CrownLevel.TrophiesANGLER.Obtainable,
-		},
+		Currency:       response.Data.Player.Collections.Currency,
+		Trophies:       response.Data.Player.CrownLevel.Trophies,
+		TrophiesSKILL:  response.Data.Player.CrownLevel.TrophiesSKILL,
+		TrophiesSTYLE:  response.Data.Player.CrownLevel.TrophiesSTYLE,
+		TrophiesANGLER: response.Data.Player.CrownLevel.TrophiesANGLER,
 	}
+
 	return Infos
 }
