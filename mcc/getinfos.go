@@ -18,10 +18,17 @@ type NextLevelProgress struct {
 	CrownObtainable int `json:"obtainable"`
 }
 
+type Trophies struct {
+	Obtained   int `json:"obtained"`
+	Obtainable int `json:"obtainable"`
+	Bonus      int `json:"bonus"`
+}
+
 type CrownLevel struct {
 	Level             int               `json:"level"`
 	Evolution         int               `json:"evolution"`
 	NextLevelProgress NextLevelProgress `json:"nextLevelProgress"`
+	Trophies          Trophies          `json:"trophies"`
 }
 
 type Currency struct {
@@ -59,6 +66,7 @@ type MccInfos struct {
 	CrownObtained   int      `json:"crownObtained"`
 	CrownObtainable int      `json:"crownObtainable"`
 	Currency        Currency `json:"currency"`
+	Trophies        Trophies `json:"trophies"`
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -87,11 +95,16 @@ func GetInfos(UUID string) *MccInfos {
 			player(uuid: $uuid) {
 				ranks
 				crownLevel {
-      				level
+					level
 					evolution
 					nextLevelProgress {
 						obtained
 						obtainable
+					}
+					trophies {
+						obtained
+						obtainable
+						bonus
 					}
 				}
 				collections {
@@ -102,7 +115,7 @@ func GetInfos(UUID string) *MccInfos {
 						materialDust
 						anglrTokens
 					}
-    			}
+				}
 			}
 		}
 	`
@@ -166,7 +179,11 @@ func GetInfos(UUID string) *MccInfos {
 			MaterialDust:    response.Data.Player.Collections.Currency.MaterialDust,
 			AnglrTokens:     response.Data.Player.Collections.Currency.AnglrTokens,
 		},
+		Trophies: Trophies{
+			Obtained:   response.Data.Player.CrownLevel.Trophies.Obtained,
+			Obtainable: response.Data.Player.CrownLevel.Trophies.Obtainable,
+			Bonus:      response.Data.Player.CrownLevel.Trophies.Bonus,
+		},
 	}
-
 	return Infos
 }

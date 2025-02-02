@@ -63,6 +63,9 @@ type DataMenuPage struct {
 	CurrencySilver       string
 	CurrencyMaterialDust string
 	CurrencyAnglrTokens  string
+	TotalTrophies        string
+	MaxTotalTrophies     string
+	BonusTrophies        string
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -172,7 +175,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		calculatedPercent = 0 // Ou une valeur par défaut si tu préfères
 	}
 
-	fmt.Println(mccInfos.Currency.Coins, mccInfos.Currency.RoyalReputation, mccInfos.Currency.Silver, mccInfos.Currency.MaterialDust, mccInfos.Currency.AnglrTokens)
+	fmt.Println(mccInfos.Trophies)
 
 	infos := DataMenuPage{
 		Name:             IGN,
@@ -193,6 +196,9 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		CurrencySilver:       mcc.FormatNumberWithSpaces(mccInfos.Currency.Silver),
 		CurrencyMaterialDust: mcc.FormatNumberWithSpaces(mccInfos.Currency.MaterialDust),
 		CurrencyAnglrTokens:  mcc.FormatNumberWithSpaces(mccInfos.Currency.AnglrTokens),
+		TotalTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Obtained),
+		MaxTotalTrophies:     mcc.FormatNumberWithSpaces(mccInfos.Trophies.Obtainable),
+		BonusTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Bonus),
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
