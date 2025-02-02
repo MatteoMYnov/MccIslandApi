@@ -888,7 +888,7 @@ body.modal-open {
     align-items: center;
     background-color: #292929;
     border-radius: 10px;
-    padding: 10px;
+    padding: 7px;
     flex: 1 1 calc(33% - 10px); /* Chaque carte prendra un tiers de la largeur disponible, avec une petite marge */
     box-sizing: border-box; /* Inclut les paddings et les bordures dans la taille */
     transition: background-color 0.3s, filter 0.3s; /* Transition pour les changements de couleur et d'effet */
@@ -900,8 +900,7 @@ body.modal-open {
     align-items: center;
     gap: 10px;
     padding: 0px;
-    max-width: fit-content; /* Ajuste la largeur selon le contenu */
-    margin: 0 auto; /* Centrer l'élément */
+    max-width: fit-content;
 }
 
 .friend-card:hover {
