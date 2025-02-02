@@ -58,12 +58,11 @@ type DataMenuPage struct {
 	CrownObtained        int
 	CrownObtainable      int
 	CrownPourcentage     int
-	CurrencyCoins        int
-	CurrencyGems         int
-	CurrencyRoyalRep     int
-	CurrencySilver       int
-	CurrencyMaterialDust int
-	CurrencyAnglrTokens  int
+	CurrencyCoins        string
+	CurrencyRoyalRep     string
+	CurrencySilver       string
+	CurrencyMaterialDust string
+	CurrencyAnglrTokens  string
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -189,11 +188,11 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		CrownObtainable:  crownObtainable,
 		CrownPourcentage: calculatedPercent,
 		// Ajout des informations de currency en tant qu'entiers
-		CurrencyCoins:        mccInfos.Currency.Coins,
-		CurrencyRoyalRep:     mccInfos.Currency.RoyalReputation,
-		CurrencySilver:       mccInfos.Currency.Silver,
-		CurrencyMaterialDust: mccInfos.Currency.MaterialDust,
-		CurrencyAnglrTokens:  mccInfos.Currency.AnglrTokens,
+		CurrencyCoins:        mcc.FormatNumberWithSpaces(mccInfos.Currency.Coins),
+		CurrencyRoyalRep:     mcc.FormatNumberWithSpaces(mccInfos.Currency.RoyalReputation),
+		CurrencySilver:       mcc.FormatNumberWithSpaces(mccInfos.Currency.Silver),
+		CurrencyMaterialDust: mcc.FormatNumberWithSpaces(mccInfos.Currency.MaterialDust),
+		CurrencyAnglrTokens:  mcc.FormatNumberWithSpaces(mccInfos.Currency.AnglrTokens),
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")

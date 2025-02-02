@@ -685,8 +685,8 @@ body.modal-open {
 }
 
 .mcc-list-item img {
-    width: 25px; /* Réduit légèrement la taille des icônes */
-    height: 25px;
+    width: 32px; /* Réduit légèrement la taille des icônes */
+    height: 32px;
     image-rendering: pixelated;
 }
 
