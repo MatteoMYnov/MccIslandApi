@@ -31,7 +31,7 @@
                 <!-- Player Card -->
                 <div class="player-card" id="playerCard">
                     <div class="profile-info">
-                        <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image">
+                        <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image no-select">
                         <p id="playerName" class="{{.PlayerClass}}">{{.Name}}</p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                         {{if .ImageURLs}}
                             {{range .ImageURLs}}
                                 <div class="cape-container">
-                                    <img src="{{.URL}}" alt="Cape Image" class="cape-image {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}">
+                                    <img src="{{.URL}}" alt="Cape Image" class="cape-image no-select {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}">
                                     <p class="cape-title">{{.Title}}</p>
                                 </div>
                             {{end}}
@@ -63,12 +63,12 @@
                     </div>
                     <div class="stats-body">
                         {{range .BadgeURLs}}
-                            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image {{.Class}}" data-id="using-modal {{.BadgeName}}">
+                            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image no-select {{.Class}}" data-id="using-modal {{.BadgeName}}">
                         {{end}}
                     </div>
                 </div>
                 {{end}}
-                <div class="skin-3d" id="PlayerSkin">
+                <div class="skin-3d no-select" id="PlayerSkin">
                     <div class="stats-header">
                         <img src="https://nmsr.nickac.dev/fullbody/{{.Name}}" style="width: 350px; height: auto;">
                     </div>
@@ -82,11 +82,11 @@
                     <div class="stats-body">
                         <div class="mcc-case mcc-case1">
                             <div class="mcc-header">
-                                <img class="mcc-image mcc-rank" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}">
+                                <img class="mcc-image mcc-rank no-select" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}">
                                 <p class="mcc-playername">{{.Name}}</p>
                             </div>
                             <div class="mcc-image mcc-crown">
-                                <img class="mcc-actualcrown" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}">
+                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}">
                                 <p class="mcc-actualcrownlevel">{{.CrownLevel}}</p>
                                 <!-- Progress Bar -->
                                 <progress class="mcc-crownbar mcc-crown{{.Evolution}}" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
@@ -96,7 +96,7 @@
                                 <p class="mcc-crownprogress">Progress: </p><p class="mcc-crownprogresspourcent">{{.CrownPourcentage}}%</p><p class="mcc-crownprogress"> ({{.CrownObtained}}/{{.CrownObtainable}})</p>
                             </div>
                             <div class="mcc-image mcc-crown">
-                                <img class="mcc-actualcrown" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}.png{{else}}0.png{{end}}">
+                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}.png{{else}}0.png{{end}}">
                                 <p class="mcc-actualcrownlevel">{{.FishingLevel}}</p>
                                 <!-- Progress Bar -->
                                 <progress class="mcc-crownbar mcc-crown{{.FishingEvolution}}" value="{{.FishingObtained}}" max="{{.FishingObtainable}}"></progress>
@@ -110,50 +110,50 @@
                             <div class="mcc-case mcc-case2">
                                 <h3>Wallet</h3>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/wallet/coins.png">
+                                    <img class="no-select" src="../img/mcc/wallet/coins.png">
                                     <p class="text">{{.CurrencyCoins}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/wallet/silver.png">
+                                    <img class="no-select" src="../img/mcc/wallet/silver.png">
                                     <p class="text">{{.CurrencySilver}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/wallet/material_dust.png">
+                                    <img class="no-select" src="../img/mcc/wallet/material_dust.png">
                                     <p class="text">{{.CurrencyMaterialDust}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/wallet/royal_reputation.png">
+                                    <img class="no-select" src="../img/mcc/wallet/royal_reputation.png">
                                     <p class="text">{{.CurrencyRoyalRep}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/wallet/anglr_token.png">
+                                    <img class="no-select" src="../img/mcc/wallet/anglr_token.png">
                                     <p class="text">{{.CurrencyAnglrTokens}}</p>
                                 </div>
                             </div>
                             <div class="mcc-case mcc-case3">
                                 <h3>Trophies</h3>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/trophies/total_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/total_trophies.png">
                                     <p class="text">{{.TotalTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxTotalTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/trophies/skill_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/skill_trophies.png">
                                     <p class="text">{{.SKILLTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxSKILLTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/trophies/style_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/style_trophies.png">
                                     <p class="text">{{.STYLETrophies}}</p>
                                     <p class="text-gray"> /{{.MaxSTYLETrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/trophies/angler_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/angler_trophies.png">
                                     <p class="text">{{.ANGLERTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxANGLERTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img src="../img/mcc/trophies/bonus_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/bonus_trophies.png">
                                     <p class="text">{{.BonusTrophies}}</p>
                                 </div>
                             </div>
@@ -161,15 +161,16 @@
                         <!-- ICI FRIENDS -->
                         <div class="friends-card" id="friendsCard">
                             <div class="friends-header" onclick="toggleFriends()">
-                                <img src="../img/mcc/utilities/friends.png" alt="Friends Icon" class="friends-icon">
+                                <img src="../img/mcc/utilities/friends.png" alt="Friends Icon" class="friends-icon no-select">
                                 <h2>Friends</h2>
+                                <img id="arrow" src="../img/mcc/utilities/arrow.png" alt="Arrow" class="arrow no-select">
                             </div>
                             <div class="friends-body" id="friendsBody">
                                 {{if .Friends}}
                                     {{range .Friends}}
                                         <div class="friend-card" data-playername="{{.}}" onclick="searchPlayer(this)">
                                             <div class="friend-info">
-                                                <img src="https://mc-heads.net/head/{{.}}" class="friends-icon">
+                                                <img src="https://mc-heads.net/head/{{.}}" class="friends-icon no-select">
                                                 <p>{{.}}</p>
                                             </div>
                                         </div>
@@ -196,14 +197,14 @@
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="../img/capes/default-placeholder.png" alt="Image" class="modal-image">
+                        <img src="../img/capes/default-placeholder.png" alt="Image" class="modal-image no-select">
                     </div>
                     <div class="modal-body">
                         <p class="modal-name">Name PlaceHolder</p>
                         <p class="modal-date">Date PlaceHolder</p>
                         <p class="modal-desc">Description PlaceHolder</p>
-                        <div class="modal-images" style="display: block;">
-                            <img src="../img/capes/default-placeholder.png" title="Default Title" alt="Default Alt" class="modal-image-item" id="modalImage1">
+                        <div class="modal-images no-select" style="display: block;">
+                            <img src="../img/capes/default-placeholder.png" title="Default Title" alt="Default Alt" class="modal-image-item no-select" id="modalImage1">
                         </div>
                     </div>
                 </div>

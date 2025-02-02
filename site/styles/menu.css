@@ -397,7 +397,7 @@ main {
     margin-top: 20px;
 }
 
-.cape-image, .badge-image, .modal-header {
+.no-select {
     -webkit-user-select: none; /* Pour Safari */
     -moz-user-select: none;    /* Pour Firefox */
     -ms-user-select: none;     /* Pour Internet Explorer/Edge */
@@ -946,4 +946,21 @@ body.modal-open {
     background-color: #323232;
     padding: 0 15px;
     transition: max-height 0.3s ease-in-out;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+    image-rendering: pixelated;
+    margin-left: auto; /* Déplace la flèche vers la droite */
+
+}
+
+.friends-body.open {
+    max-height: 1000px; /* Ajuste selon la hauteur réelle */
+}
+
+.friends-body.open + .friends-header #arrow {
+    transform: rotate(-90deg); /* Tourne la flèche à -90° */
 }

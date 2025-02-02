@@ -1,9 +1,13 @@
 function toggleFriends() {
     const friendsBody = document.getElementById("friendsBody");
+    const arrow = document.getElementById("arrow");
+
     if (friendsBody.style.maxHeight) {
         friendsBody.style.maxHeight = null;
+        arrow.style.transform = "rotate(0deg)"; // Remet la flèche à sa position initiale
     } else {
         friendsBody.style.maxHeight = friendsBody.scrollHeight + "px";
+        arrow.style.transform = "rotate(-90deg)"; // Fait tourner la flèche
     }
 }
 

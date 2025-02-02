@@ -199,8 +199,6 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		fishingcalculatedPercent = 0
 	}
 
-	fmt.Println(mccInfos.Friends)
-
 	infos := DataMenuPage{
 		Name:        IGN,
 		ListCapes:   prioritizedCapes,
