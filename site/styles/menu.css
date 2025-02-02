@@ -636,6 +636,10 @@ body.modal-open {
     margin: 5px; /* Augmente l'espacement autour de chaque case */
 }
 
+.mcc-case1 {
+    top: -10px;
+}
+
 .mcc-case {
     position: relative; /* Assure que l'en-tête est positionné par rapport à la case */
     padding-top: 40px; /* Ajoute un padding en haut pour éviter que le contenu ne recouvre le header */
@@ -646,22 +650,49 @@ body.modal-open {
 }
 
 .mcc-bigcase {
-    display: flex;  /* Affichage en flexbox */
-    justify-content: space-between;  /* Espacement égal entre les éléments */
-    gap: 5px; /* Espacement entre les cases */
-    width: 100%;  /* Assurez-vous que la largeur soit de 100% */
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .mcc-case2, .mcc-case3 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    border: 2px solid #282828;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: left;
-    flex: 1; /* Les deux cases prendront la moitié de l'espace disponible */
+    align-items: center;
+    width: 50%;
+    padding: 15px;
+}
+
+.mcc-list-item {
+    display: flex;
+    align-items: center;
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #fff !important;
+    gap: 5px; /* Réduit l'espacement entre l'image et le texte */
+    margin: -16px 0; /* Réduit l'espacement vertical entre les lignes */
+    width: 100%; /* Assure que l'élément prend toute la largeur */
+}
+
+.mcc-list-item .text {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #fff !important;
+}
+
+.mcc-list-item .text-gray {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #999 !important;
+}
+
+.mcc-list-item img {
+    width: 25px; /* Réduit légèrement la taille des icônes */
+    height: 25px;
+    image-rendering: pixelated;
+}
+
+.mcc-case h3 {
+    text-align: center;
+    margin: 5px 15px;
 }
 
 .mcc-rank {
