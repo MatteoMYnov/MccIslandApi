@@ -82,11 +82,11 @@
                     <div class="stats-body">
                         <div class="mcc-case mcc-case1">
                             <div class="mcc-header">
-                                <img class="mcc-image mcc-rank no-select" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}">
+                                <img class="mcc-image mcc-rank no-select" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}" data-tippy-content="{{if .MccRank}}{{.MccRank}}{{else}}PLAYER{{end}}">
                                 <p class="mcc-playername">{{.Name}}</p>
                             </div>
                             <div class="mcc-image mcc-crown">
-                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}">
+                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}" data-tippy-content="Crown Level">
                                 <p class="mcc-actualcrownlevel">{{.CrownLevel}}</p>
                                 <!-- Progress Bar -->
                                 <progress class="mcc-crownbar mcc-crown{{.Evolution}}" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
@@ -96,7 +96,7 @@
                                 <p class="mcc-crownprogress">Progress: </p><p class="mcc-crownprogresspourcent">{{.CrownPourcentage}}%</p><p class="mcc-crownprogress"> ({{.CrownObtained}}/{{.CrownObtainable}})</p>
                             </div>
                             <div class="mcc-image mcc-crown">
-                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}.png{{else}}0.png{{end}}">
+                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}.png{{else}}0.png{{end}}" data-tippy-content="Fishing Level">
                                 <p class="mcc-actualcrownlevel">{{.FishingLevel}}</p>
                                 <!-- Progress Bar -->
                                 <progress class="mcc-crownbar mcc-crown{{.FishingEvolution}}" value="{{.FishingObtained}}" max="{{.FishingObtainable}}"></progress>
@@ -110,50 +110,50 @@
                             <div class="mcc-case mcc-case2">
                                 <h3>Wallet</h3>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/wallet/coins.png">
+                                    <img class="no-select" src="../img/mcc/wallet/coins.png" data-tippy-content="Coins">
                                     <p class="text">{{.CurrencyCoins}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/wallet/silver.png">
+                                    <img class="no-select" src="../img/mcc/wallet/silver.png " data-tippy-content="Silver">
                                     <p class="text">{{.CurrencySilver}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/wallet/material_dust.png">
+                                    <img class="no-select" src="../img/mcc/wallet/material_dust.png" data-tippy-content="Dust">
                                     <p class="text">{{.CurrencyMaterialDust}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/wallet/royal_reputation.png">
+                                    <img class="no-select" src="../img/mcc/wallet/royal_reputation.png" data-tippy-content="Royal Reputation">
                                     <p class="text">{{.CurrencyRoyalRep}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/wallet/anglr_token.png">
+                                    <img class="no-select" src="../img/mcc/wallet/anglr_token.png" data-tippy-content="Angler Token">
                                     <p class="text">{{.CurrencyAnglrTokens}}</p>
                                 </div>
                             </div>
                             <div class="mcc-case mcc-case3">
                                 <h3>Trophies</h3>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/trophies/total_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/total_trophies.png" data-tippy-content="Total Trophies">
                                     <p class="text">{{.TotalTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxTotalTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/trophies/skill_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/skill_trophies.png" data-tippy-content="Skill Trophies">
                                     <p class="text">{{.SKILLTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxSKILLTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/trophies/style_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/style_trophies.png" data-tippy-content="Style Trophies">
                                     <p class="text">{{.STYLETrophies}}</p>
                                     <p class="text-gray"> /{{.MaxSTYLETrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/trophies/angler_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/angler_trophies.png" data-tippy-content="Angler Trophies">
                                     <p class="text">{{.ANGLERTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxANGLERTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item">
-                                    <img class="no-select" src="../img/mcc/trophies/bonus_trophies.png">
+                                    <img class="no-select" src="../img/mcc/trophies/bonus_trophies.png" data-tippy-content="Bonus Trophies">
                                     <p class="text">{{.BonusTrophies}}</p>
                                 </div>
                             </div>
@@ -172,8 +172,8 @@
                                             <div class="friend-card" data-playername="{{.Username}}" onclick="searchPlayer(this)">
                                                 <div class="friend-info">
                                                     <img src="https://mc-heads.net/head/{{.Username}}" class="friends-icon no-select">
-                                                    <img src="../img/mcc/crowns/{{if .CrownLevel.Evolution}}{{.CrownLevel.Evolution}}.png{{else}}0.png{{end}}" class="friends-icon no-select">
-                                                    <img src="../img/mcc/ranks/{{if .Ranks}}{{.Ranks}}.png{{else}}PLAYER.png{{end}}" class="friends-icon no-select">
+                                                    <img src="../img/mcc/crowns/{{if .CrownLevel.Evolution}}{{.CrownLevel.Evolution}}.png{{else}}0.png{{end}}" class="friends-icon no-select" data-tippy-content="{{.CrownLevel.Level}}">
+                                                    <img src="../img/mcc/ranks/{{if .Ranks}}{{.Ranks}}.png{{else}}PLAYER.png{{end}}" class="friends-icon no-select" data-tippy-content="{{if .Ranks}}{{.Ranks}}{{else}}PLAYER{{end}}">
                                                     <p>{{.Username}}</p>
                                                 </div>
                                             </div>
@@ -217,5 +217,12 @@
         <script src="../js/scroll.js"></script>
         <script src="../js/modal.js"></script>
         <script src="../js/friends.js"></script>
+        <script src ="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src ="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+            });
+        </script>
     </body>
 </html>

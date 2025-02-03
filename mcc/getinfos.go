@@ -53,6 +53,7 @@ type Friend struct {
 	Ranks      []string `json:"ranks"`
 	CrownLevel struct {
 		Evolution int `json:"evolution"`
+		Level     int `json:"level"`
 	} `json:"crownLevel"`
 }
 
@@ -165,6 +166,7 @@ func GetInfos(UUID string) *MccInfos {
 						username
 						ranks
 						crownLevel {
+							level
 							evolution
 						}
 					}

@@ -85,6 +85,7 @@ type FriendInfo struct {
 	Ranks      string
 	CrownLevel struct {
 		Evolution int
+		Level     int
 	}
 }
 
@@ -262,14 +263,18 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 	for _, friend := range friends {
 		rank := "PLAYER"
 		if len(friend.Ranks) > 0 {
-			rank = friend.Ranks[0] // Récupère le premier rank
+			rank = friend.Ranks[0] // Récupère le premier rang
 		}
 		friendInfo = append(friendInfo, FriendInfo{
 			Username: friend.Username,
-			Ranks:    rank, // Assurer que 'Ranks' contient uniquement le premier rank ou "vide"
+			Ranks:    rank,
 			CrownLevel: struct {
 				Evolution int
-			}{Evolution: friend.CrownLevel.Evolution},
+				Level     int
+			}{
+				Evolution: friend.CrownLevel.Evolution,
+				Level:     friend.CrownLevel.Level,
+			},
 		})
 	}
 	return friendInfo
@@ -324,7 +329,7 @@ func main() {
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1615", nil); err != nil {
+	if err := http.ListenAndServe(":1616", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
