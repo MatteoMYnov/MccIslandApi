@@ -48,8 +48,12 @@ type Currency struct {
 	AnglrTokens     int `json:"anglrTokens"`
 }
 
-type Friend struct { // Define the Friend struct
-	Username string `json:"username"`
+type Friend struct {
+	Username   string   `json:"username"`
+	Ranks      []string `json:"ranks"`
+	CrownLevel struct {
+		Evolution int `json:"evolution"`
+	} `json:"crownLevel"`
 }
 
 type Player struct {
@@ -61,7 +65,7 @@ type Player struct {
 		Currency Currency `json:"currency"`
 	} `json:"collections"`
 	Social struct {
-		Friends []Friend `json:"friends"` // Use the named Friend struct here
+		Friends []Friend `json:"friends"`
 	} `json:"social"`
 }
 
@@ -87,7 +91,7 @@ type MccInfos struct {
 	TrophiesSKILL   Trophies    `json:"trophiesSKILL"`
 	TrophiesSTYLE   Trophies    `json:"trophiesSTYLE"`
 	TrophiesANGLER  Trophies    `json:"trophiesANGLER"`
-	Friends         []string    `json:"friends"` // Add friends here
+	Friends         []Friend    `json:"friends"` // Liste des amis avec leurs informations
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -159,6 +163,10 @@ func GetInfos(UUID string) *MccInfos {
 				social {
 					friends {
 						username
+						ranks
+						crownLevel {
+							evolution
+						}
 					}
 				}
 			}
@@ -227,15 +235,7 @@ func GetInfos(UUID string) *MccInfos {
 		TrophiesSKILL:  response.Data.Player.CrownLevel.TrophiesSKILL,
 		TrophiesSTYLE:  response.Data.Player.CrownLevel.TrophiesSTYLE,
 		TrophiesANGLER: response.Data.Player.CrownLevel.TrophiesANGLER,
-		Friends:        getFriends(response.Data.Player.Social.Friends),
+		Friends:        response.Data.Player.Social.Friends, // Liste des amis avec leurs infos
 	}
 	return Infos
-}
-
-func getFriends(friends []Friend) []string { // Update to use the Friend type
-	var friendList []string
-	for _, friend := range friends {
-		friendList = append(friendList, friend.Username)
-	}
-	return friendList
 }

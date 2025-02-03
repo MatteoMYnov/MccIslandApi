@@ -77,7 +77,15 @@ type DataMenuPage struct {
 	ANGLERTrophies       string
 	MaxANGLERTrophies    string
 	BonusTrophies        string
-	Friends              []string
+	Friends              []FriendInfo // Mise à jour pour inclure les informations complètes sur les amis
+}
+
+type FriendInfo struct {
+	Username   string
+	Ranks      []string
+	CrownLevel struct {
+		Evolution int
+	}
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -235,7 +243,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		ANGLERTrophies:       mcc.FormatNumberWithSpaces(mccInfos.TrophiesANGLER.Obtained),
 		MaxANGLERTrophies:    mcc.FormatNumberWithSpaces(mccInfos.TrophiesANGLER.Obtainable),
 		BonusTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Bonus),
-		Friends:              mccInfos.Friends,
+		Friends:              convertToFriendInfo(mccInfos.Friends),
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
@@ -247,6 +255,24 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	tmpl.Execute(w, infos)
+}
+
+func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
+	var friendInfo []FriendInfo
+	for _, friend := range friends {
+		rank := ""
+		if len(friend.Ranks) > 0 {
+			rank = friend.Ranks[0] // Récupère le premier rank
+		}
+		friendInfo = append(friendInfo, FriendInfo{
+			Username: friend.Username,
+			Ranks:    []string{rank}, // Assurer que 'Ranks' contient uniquement le premier rank ou "vide"
+			CrownLevel: struct {
+				Evolution int
+			}{Evolution: friend.CrownLevel.Evolution},
+		})
+	}
+	return friendInfo
 }
 
 func capesHandler(w http.ResponseWriter, r *http.Request) {

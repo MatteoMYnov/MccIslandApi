@@ -169,10 +169,12 @@
                                 <div class="interfriends-body">
                                     {{if .Friends}}
                                         {{range .Friends}}
-                                            <div class="friend-card" data-playername="{{.}}" onclick="searchPlayer(this)">
+                                            <div class="friend-card" data-playername="{{.Username}}" onclick="searchPlayer(this)">
                                                 <div class="friend-info">
-                                                    <img src="https://mc-heads.net/head/{{.}}" class="friends-icon no-select">
-                                                    <p>{{.}}</p>
+                                                    <img src="https://mc-heads.net/head/{{.Username}}" class="friends-icon no-select">
+                                                    <img src="../img/mcc/crowns/{{if .CrownLevel.Evolution}}{{.CrownLevel.Evolution}}.png{{else}}0.png{{end}}" class="friends-icon no-select">
+                                                    <img src="../img/mcc/ranks/{{if .Ranks}}{{.Ranks}}.png{{else}}PLAYER.png{{end}}" class="friends-icon no-select">
+                                                    <p>{{.Username}}</p>
                                                 </div>
                                             </div>
                                         {{end}}

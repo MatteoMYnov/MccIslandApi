@@ -4,7 +4,7 @@ window.addEventListener("scroll", function () {
 
     let opacity = 0;
     if (scrollPosition > (maxScroll * 0.1)) {
-        opacity = Math.min((scrollPosition - (maxScroll * 0.10)) / (maxScroll * 0.10), 1);
+        opacity = Math.min((scrollPosition - (maxScroll * 0.20)) / (maxScroll * 0.20), 1);
     }
     const bgdark = document.getElementById("bgdark");
     if (bgdark) {
