@@ -82,7 +82,7 @@ type DataMenuPage struct {
 
 type FriendInfo struct {
 	Username   string
-	Ranks      []string
+	Ranks      string
 	CrownLevel struct {
 		Evolution int
 	}
@@ -260,13 +260,13 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 	var friendInfo []FriendInfo
 	for _, friend := range friends {
-		rank := ""
+		rank := "PLAYER"
 		if len(friend.Ranks) > 0 {
 			rank = friend.Ranks[0] // Récupère le premier rank
 		}
 		friendInfo = append(friendInfo, FriendInfo{
 			Username: friend.Username,
-			Ranks:    []string{rank}, // Assurer que 'Ranks' contient uniquement le premier rank ou "vide"
+			Ranks:    rank, // Assurer que 'Ranks' contient uniquement le premier rank ou "vide"
 			CrownLevel: struct {
 				Evolution int
 			}{Evolution: friend.CrownLevel.Evolution},
