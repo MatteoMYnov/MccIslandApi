@@ -376,7 +376,7 @@ func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
 
 	// Si le joueur n'a aucune cape, ne pas l'ajouter au classement
 	if capesCount == 0 {
-		return -1 // Ne rien faire si le joueur n'a pas de cape
+		return -1
 	}
 
 	// Récupérer les capes et leur score
@@ -386,10 +386,10 @@ func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
 		return -1
 	}
 
-	// Calculez le score total du joueur en fonction des capes
+	// Calculer le score total du joueur en fonction des capes
 	totalScore := 0
 	for _, cape := range capeGroups.Capes {
-		for _, capeName := range listCapes { // Assurez-vous que `listCapes` contient les capes du joueur
+		for _, capeName := range listCapes {
 			if capeName == cape.Name {
 				totalScore += cape.Score
 			}
@@ -400,7 +400,7 @@ func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
 	found := false
 	for i, player := range classement.Classement {
 		if player.UUID == uuid {
-			// Mettre à jour le score si le joueur est déjà dans le classement
+			// Mettre à jour le nombre de capes et le score du joueur
 			classement.Classement[i].Capes = capesCount
 			classement.Classement[i].Score = totalScore
 			found = true
@@ -408,12 +408,12 @@ func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
 		}
 	}
 
-	// Ajouter le joueur s'il n'existe pas
+	// Ajouter le joueur s'il n'existe pas encore
 	if !found {
 		classement.Classement = append(classement.Classement, PlayerRank{UUID: uuid, Capes: capesCount, Score: totalScore})
 	}
 
-	// Trier par score total décroissant
+	// Trier le classement : priorité au nombre de capes, puis au score
 	sort.Slice(classement.Classement, func(i, j int) bool {
 		if classement.Classement[i].Capes == classement.Classement[j].Capes {
 			return classement.Classement[i].Score > classement.Classement[j].Score
