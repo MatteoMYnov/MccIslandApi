@@ -156,12 +156,10 @@ func GetCapes(name string, capeGroups CapeGroups) []map[string]interface{} {
 
 	// Ajouter les capes récupérées depuis l'API
 	for _, cape := range response.Capes {
-		if !cape.Removed {
-			capesList = append(capesList, map[string]interface{}{
-				"cape":    cape.Type,
-				"removed": cape.Removed,
-			})
-		}
+		capesList = append(capesList, map[string]interface{}{
+			"cape":    cape.Type,
+			"removed": cape.Removed,
+		})
 	}
 
 	// Charger les capes depuis le fichier JSON
@@ -184,6 +182,6 @@ func GetCapes(name string, capeGroups CapeGroups) []map[string]interface{} {
 			}
 		}
 	}
-
+	fmt.Println(capesList)
 	return capesList
 }

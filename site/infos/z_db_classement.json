@@ -1724,6 +1724,16 @@
             "uuid": "a5c9bd19-b033-4f0d-b05e-c0dcdbf73db8",
             "capes": 8,
             "score": 9
+        },
+        {
+            "uuid": "76461bef-2c1d-4440-b8d0-1f992398c1a0",
+            "capes": 8,
+            "score": 9
+        },
+        {
+            "uuid": "3da6b9a1-beca-485e-97be-d2e619044dba",
+            "capes": 4,
+            "score": 15
         }
     ]
 }
