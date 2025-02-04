@@ -23,7 +23,8 @@ type CapeForced struct {
 	Name  string   `json:"name"`
 	Type  string   `json:"type"`
 	Title string   `json:"title"`
-	UUID  []string `json:"uuid"`
+	UUID  []string `json:"UUID"`
+	Score int      `json:"score"` // Ajout du champ Score
 }
 
 type CapesResponse struct {
@@ -123,7 +124,8 @@ func LoadCapesFromFile(filePath string) (CapeGroups, error) {
 }
 
 // Fonction principale pour obtenir les capes
-func GetCapes(name string, capeGroup CapeGroups) []map[string]interface{} {
+// Fonction pour obtenir les capes du joueur avec leur score associé
+func GetCapes(name string, capeGroups CapeGroups) []map[string]interface{} {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
 	if err != nil {
@@ -154,18 +156,25 @@ func GetCapes(name string, capeGroup CapeGroups) []map[string]interface{} {
 
 	// Ajouter les capes récupérées depuis l'API
 	for _, cape := range response.Capes {
-		capeObj := map[string]interface{}{
-			"cape":    cape.Type,
-			"removed": cape.Removed,
+		if !cape.Removed {
+			capesList = append(capesList, map[string]interface{}{
+				"cape":    cape.Type,
+				"removed": cape.Removed,
+			})
 		}
-		capesList = append(capesList, capeObj)
 	}
 
-	// Ajouter les capes associées au joueur
+	// Charger les capes depuis le fichier JSON
+	capeGroups, err = LoadCapesFromFile("./site/infos/capes.json")
+	if err != nil {
+		fmt.Printf("Erreur lors du chargement des capes : %v\n", err)
+		return capesList
+	}
+
+	// Ajouter les capes associées au joueur par UUID
 	normalizedPlayerName := strings.ToLower(name)
-	for _, cape := range capeGroup.Capes {
+	for _, cape := range capeGroups.Capes {
 		for _, playerUUID := range cape.UUID {
-			// Comparer les noms normalisés
 			if strings.ToLower(GetName(playerUUID)) == normalizedPlayerName {
 				capesList = append(capesList, map[string]interface{}{
 					"cape":    cape.Name,

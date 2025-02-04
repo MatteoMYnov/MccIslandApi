@@ -98,6 +98,7 @@ type FriendInfo struct {
 type PlayerRank struct {
 	UUID  string `json:"uuid"`
 	Capes int    `json:"capes"`
+	Score int    `json:"score"` // Ajout du champ Score
 }
 
 // Structure principale du fichier JSON
@@ -180,7 +181,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	playerRank := UpdateClassement(playerUUID, len(listCapes))
+	playerRank := UpdateClassement(playerUUID, len(listCapes), listCapes)
 
 	badgeInfos := []BadgeInfo{}
 	for _, badgeName := range playerBadgesJSON {
@@ -352,7 +353,7 @@ func capesHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, data)
 }
 
-func UpdateClassement(uuid string, capesCount int) int {
+func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
 	filePath := "./site/infos/z_db_classement.json"
 
 	// Lire le fichier
@@ -378,13 +379,30 @@ func UpdateClassement(uuid string, capesCount int) int {
 		return -1 // Ne rien faire si le joueur n'a pas de cape
 	}
 
+	// Récupérer les capes et leur score
+	capeGroups, err := minecraft.LoadCapeGroups()
+	if err != nil {
+		log.Printf("Erreur lors du chargement des groupes de capes : %v", err)
+		return -1
+	}
+
+	// Calculez le score total du joueur en fonction des capes
+	totalScore := 0
+	for _, cape := range capeGroups.Capes {
+		for _, capeName := range listCapes { // Assurez-vous que `listCapes` contient les capes du joueur
+			if capeName == cape.Name {
+				totalScore += cape.Score
+			}
+		}
+	}
+
 	// Vérifier si le joueur est déjà dans la liste
 	found := false
 	for i, player := range classement.Classement {
 		if player.UUID == uuid {
-			if player.Capes != capesCount {
-				classement.Classement[i].Capes = capesCount
-			}
+			// Mettre à jour le score si le joueur est déjà dans le classement
+			classement.Classement[i].Capes = capesCount
+			classement.Classement[i].Score = totalScore
 			found = true
 			break
 		}
@@ -392,11 +410,14 @@ func UpdateClassement(uuid string, capesCount int) int {
 
 	// Ajouter le joueur s'il n'existe pas
 	if !found {
-		classement.Classement = append(classement.Classement, PlayerRank{UUID: uuid, Capes: capesCount})
+		classement.Classement = append(classement.Classement, PlayerRank{UUID: uuid, Capes: capesCount, Score: totalScore})
 	}
 
-	// Trier par nombre de capes décroissant
+	// Trier par score total décroissant
 	sort.Slice(classement.Classement, func(i, j int) bool {
+		if classement.Classement[i].Capes == classement.Classement[j].Capes {
+			return classement.Classement[i].Score > classement.Classement[j].Score
+		}
 		return classement.Classement[i].Capes > classement.Classement[j].Capes
 	})
 
