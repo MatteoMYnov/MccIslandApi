@@ -5,16 +5,256 @@
             "capes": 20
         },
         {
-            "uuid": "cc4b7d74-bbe2-4310-9106-0e52d292c758",
-            "capes": 9
+            "uuid": "231881e6-de0f-4224-bfce-0b78e07d862b",
+            "capes": 15
+        },
+        {
+            "uuid": "0c063bfd-3521-413d-a766-50be1d71f00e",
+            "capes": 14
+        },
+        {
+            "uuid": "30135bad-a576-4477-8dd6-61c9f5dd5839",
+            "capes": 14
+        },
+        {
+            "uuid": "1ccef50b-f6ae-4542-b1a9-d434384a5b25",
+            "capes": 14
+        },
+        {
+            "uuid": "53f7e4c8-9469-4829-997d-f9a522e04b95",
+            "capes": 14
+        },
+        {
+            "uuid": "b274b907-073e-41c7-b447-6ad6e9307f18",
+            "capes": 13
+        },
+        {
+            "uuid": "ec071825-56b4-44d3-8e9a-f48bf74bde82",
+            "capes": 13
+        },
+        {
+            "uuid": "1e514849-5be0-4ab1-91e8-4b078f4f33a5",
+            "capes": 13
+        },
+        {
+            "uuid": "e3e96a4f-92ab-47a9-bc8e-6b72894316d6",
+            "capes": 13
+        },
+        {
+            "uuid": "0030df85-0a07-44d4-b22d-9c5ca1dc5167",
+            "capes": 13
+        },
+        {
+            "uuid": "fa0f91ac-8dbf-4d7c-b2d0-296ee7631986",
+            "capes": 12
+        },
+        {
+            "uuid": "151eae30-2635-4162-be1d-cec2ac58c3e7",
+            "capes": 12
+        },
+        {
+            "uuid": "12ecedbc-e19b-448c-ad38-aa4f57f3afda",
+            "capes": 12
+        },
+        {
+            "uuid": "c338518c-ebfc-4bcd-a3d7-7cd2141af37e",
+            "capes": 12
+        },
+        {
+            "uuid": "16751f79-c0b1-4e53-a0b5-90d31fc1d80d",
+            "capes": 12
+        },
+        {
+            "uuid": "3d6a256d-4c5e-4244-90ab-0439d17a5c6c",
+            "capes": 11
+        },
+        {
+            "uuid": "35c923ec-8290-4952-9d7c-1855f8e608ec",
+            "capes": 11
+        },
+        {
+            "uuid": "be1fab1b-2348-4bf9-a8d5-27d94a35efa6",
+            "capes": 11
+        },
+        {
+            "uuid": "b0e9158d-8885-489d-8bfb-bb47cf5a3dca",
+            "capes": 11
+        },
+        {
+            "uuid": "5fe443ce-3836-45a6-8ee8-a7d54b3e6250",
+            "capes": 11
+        },
+        {
+            "uuid": "bb2f590f-c158-457f-bb87-2927d17b3cb4",
+            "capes": 11
+        },
+        {
+            "uuid": "a0cb5c81-c93d-4e8c-97e5-c90be1e77afa",
+            "capes": 11
+        },
+        {
+            "uuid": "a7f14d3a-167f-4b92-9b24-525652bddf61",
+            "capes": 11
+        },
+        {
+            "uuid": "bb77a607-e531-44db-a312-ed30311c0b9a",
+            "capes": 11
+        },
+        {
+            "uuid": "3e5eff61-a965-4519-9d66-813ceb9709d2",
+            "capes": 11
+        },
+        {
+            "uuid": "4150a1d2-3181-49e7-aeea-2cb74b4843c3",
+            "capes": 11
+        },
+        {
+            "uuid": "2223b9fa-b318-4f08-a8fa-1e1b183b3600",
+            "capes": 11
+        },
+        {
+            "uuid": "40e301e0-6e34-4561-853d-ca9655279869",
+            "capes": 11
+        },
+        {
+            "uuid": "3f3514c7-74a6-4a58-b993-a726add76983",
+            "capes": 11
+        },
+        {
+            "uuid": "8502878d-22ba-4a93-bcbd-9319caa9b555",
+            "capes": 11
+        },
+        {
+            "uuid": "b882042a-09cd-4a61-8fd6-302927f49c4a",
+            "capes": 11
+        },
+        {
+            "uuid": "6e5b6db6-f3ce-4d9c-8cdd-576424a634bd",
+            "capes": 11
+        },
+        {
+            "uuid": "853c80ef-3c37-49fd-aa49-938b674adae6",
+            "capes": 10
+        },
+        {
+            "uuid": "c9b54008-fd80-4742-8b23-8787b5f2401c",
+            "capes": 10
+        },
+        {
+            "uuid": "615d0847-0ddd-4bc9-a410-355a79cdd519",
+            "capes": 10
+        },
+        {
+            "uuid": "58fbdb88-57bc-4d53-8c14-17748f5c438d",
+            "capes": 10
+        },
+        {
+            "uuid": "0b3013d0-a05f-4760-bf84-d897fe295715",
+            "capes": 10
+        },
+        {
+            "uuid": "0534fa77-2961-4976-983b-d3f0f34afaa0",
+            "capes": 10
+        },
+        {
+            "uuid": "b0790bf5-6203-449d-9cab-2911050c27c7",
+            "capes": 10
+        },
+        {
+            "uuid": "fccf6295-789c-4b84-b15a-35627eaf49a0",
+            "capes": 10
+        },
+        {
+            "uuid": "0226661d-f437-4c50-8f63-4fd4deb2112d",
+            "capes": 10
+        },
+        {
+            "uuid": "24aed5cf-e885-4c0b-ba06-908c47522bfc",
+            "capes": 10
+        },
+        {
+            "uuid": "42643840-8882-4a0f-8d2e-f7cf48e9c347",
+            "capes": 10
+        },
+        {
+            "uuid": "b9400082-ea88-4349-a994-649aa35865c4",
+            "capes": 10
+        },
+        {
+            "uuid": "628bf89c-5d77-48a2-8731-4b16512c7a1d",
+            "capes": 10
+        },
+        {
+            "uuid": "b19a07a0-75a9-47d4-a735-4ceb888b1bc6",
+            "capes": 10
         },
         {
             "uuid": "63781be2-b6b3-4b25-8af4-3d963f6bc164",
             "capes": 9
         },
         {
+            "uuid": "cc4b7d74-bbe2-4310-9106-0e52d292c758",
+            "capes": 9
+        },
+        {
+            "uuid": "101c204d-d99f-4d6c-8875-de52d46d4596",
+            "capes": 9
+        },
+        {
+            "uuid": "8ec6a028-be25-45e1-82f4-a819afee4527",
+            "capes": 9
+        },
+        {
+            "uuid": "0086e09d-0451-4ea3-98c2-8026bd9707e5",
+            "capes": 8
+        },
+        {
+            "uuid": "8ecf8beb-720c-442c-911a-c9744e65bd9d",
+            "capes": 8
+        },
+        {
+            "uuid": "76461bef-2c1d-4440-b8d0-1f992398c1a0",
+            "capes": 8
+        },
+        {
+            "uuid": "54efc6ef-bdd5-4749-96c3-d4b5d66ca08c",
+            "capes": 7
+        },
+        {
+            "uuid": "542189cf-68fb-415b-bbe6-c60da626e65a",
+            "capes": 5
+        },
+        {
+            "uuid": "a6eb2491-7365-4649-a795-2f032c9919f0",
+            "capes": 5
+        },
+        {
+            "uuid": "a1bc77a1-a243-42d2-9ada-5684756a358c",
+            "capes": 4
+        },
+        {
+            "uuid": "82a5be28-eb0f-48f4-9751-1b302c9c663e",
+            "capes": 2
+        },
+        {
             "uuid": "bffb1b32-55e3-4c03-a006-e602f06cffb3",
             "capes": 2
+        },
+        {
+            "uuid": "48fe3a11-67dd-48a0-901f-3e9959aa231d",
+            "capes": 2
+        },
+        {
+            "uuid": "cf6b19e6-5113-4a66-adb5-4877948fef21",
+            "capes": 1
+        },
+        {
+            "uuid": "e8666d45-a735-48c7-8fc8-4815bc2ca146",
+            "capes": 0
+        },
+        {
+            "uuid": "",
+            "capes": 0
         }
     ]
 }

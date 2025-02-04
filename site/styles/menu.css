@@ -207,10 +207,10 @@ main {
 
 .playerRank {
     position: absolute;
-    font-size: 35px;
-    right: 5vh;
+    font-size: 25px;
+    left: 5vh;
     font-family: 'Minecraftia', 'Roboto', sans-serif;
-    color: white;
+    color: yellow;
 }
 
 /* Minecraft-Card */

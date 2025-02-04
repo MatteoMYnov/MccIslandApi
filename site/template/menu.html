@@ -33,12 +33,12 @@
                     <div class="profile-info">
                         <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image no-select">
                         <p id="playerName" class="{{.PlayerClass}}">{{.Name}}</p>
-                        <p class="playerRank">#{{.PlayerRank}}</p>
                     </div>
                 </div>
                 <!-- Minecraft Stats Card -->
                 <div class="minecraftstats-card" id="minecraftStatsCard">
                     <div class="stats-header">
+                        <p class="playerRank" data-tippy-content="Rank #{{.PlayerRank}} Database classement">#{{.PlayerRank}}</p>
                         <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
                         <h2>Minecraft Capes</h2>
                     </div>
