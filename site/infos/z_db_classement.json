@@ -1761,6 +1761,16 @@
             "score": 35
         },
         {
+            "uuid": "951b54fc-6189-4fbd-8b9c-affd70ab8449",
+            "capes": 6,
+            "score": 22
+        },
+        {
+            "uuid": "c07edab6-e3e7-4ce2-930f-8b5c5de69366",
+            "capes": 6,
+            "score": 7
+        },
+        {
             "uuid": "fe5d6f18-6b24-4afb-8fba-fd8768d96e4b",
             "capes": 5,
             "score": 37
@@ -1791,6 +1801,11 @@
             "score": 11
         },
         {
+            "uuid": "047bcb7f-d352-411d-be68-0c449b33d028",
+            "capes": 3,
+            "score": 3
+        },
+        {
             "uuid": "5797c479-ad5a-43b0-87ca-8852d65ac639",
             "capes": 2,
             "score": 13
@@ -1799,6 +1814,11 @@
             "uuid": "861e3cb8-0e2e-4f53-a50f-fbd5356fa8c0",
             "capes": 2,
             "score": 13
+        },
+        {
+            "uuid": "3e7a89ee-c4e2-4392-a317-444b861b0794",
+            "capes": 2,
+            "score": 10
         },
         {
             "uuid": "0da8bb6c-4450-486d-bcef-2112f4ae857c",
@@ -1816,6 +1836,26 @@
             "score": 5
         },
         {
+            "uuid": "23bf3b42-29df-4a1c-b5ab-d0367f127b32",
+            "capes": 2,
+            "score": 5
+        },
+        {
+            "uuid": "48fe3a11-67dd-48a0-901f-3e9959aa231d",
+            "capes": 2,
+            "score": 5
+        },
+        {
+            "uuid": "7f0eda55-7034-4dc8-886d-d94321cdedcf",
+            "capes": 1,
+            "score": 12
+        },
+        {
+            "uuid": "d90b68bc-8172-4329-a047-f1186dcd4336",
+            "capes": 1,
+            "score": 12
+        },
+        {
             "uuid": "c0a062f1-4470-4095-bcd5-26d35da72e84",
             "capes": 1,
             "score": 10
@@ -1827,6 +1867,16 @@
         },
         {
             "uuid": "b01072fc-aa34-486e-93bf-287cb7ff2eca",
+            "capes": 1,
+            "score": 1
+        },
+        {
+            "uuid": "cf6b19e6-5113-4a66-adb5-4877948fef21",
+            "capes": 1,
+            "score": 1
+        },
+        {
+            "uuid": "da0cd371-4f6c-481a-96a1-e4786dd60f00",
             "capes": 1,
             "score": 1
         }

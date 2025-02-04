@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Capes List</title>
+        <title>Players Classement</title>
         <link rel="stylesheet" href="../styles/classement.css?v=1.0">
-        <link id="favicon" rel="icon" href="../img/utilities/minecrafticon.png" type="image/png">
+        <link id="favicon" rel="icon" href="../img/mcc/trophies/total_trophies.png" type="image/png">
     </head>
     <body>
         <div id="bgdark"></div>
@@ -21,27 +21,28 @@
         <main>
             <!-- Conteneur général pour les cartes -->
             <div class="players-container">
-                <!-- Minecraft Capes Card -->
+                <!-- Classement Card -->
                 <div class="players-card" id="playersCard">
                     <div class="stats-header">
                         <img src="../img/mcc/trophies/total_trophies.png" alt="Classement Icon" class="classement-icon">
                         <h2>Classement des Joueurs</h2>
                     </div>
-                    <div class="stats-body">
-                        <!-- Boucle sur le classement -->
-                        {{range .}}
-                        <div class="player-entry">
-                            <div class="player-rank">
-                                <h3>#{{.Position}}</h3>
-                            </div>
-                            <div class="player-info">
-                                <span class="player-name">{{.UUID}}</span>
-                                <span class="player-capes">Capes: {{.Capes}}</span>
-                                <span class="player-score">Score: {{.Score}}</span>
-                            </div>
+                    <div class="classement-body" id="classementBody">
+                        <div class="interclassement-body">
+                            {{if .Classement}}
+                                {{range .Classement}}
+                                    <div class="player-card" data-playername="{{.UUID}}">
+                                        <div class="player-info">
+                                            <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select">
+                                            <p>{{.UUID}}</p>
+                                        </div>
+                                    </div> 
+                                {{end}}
+                            {{else}}
+                                <p>La liste ne charge pas</p>
+                            {{end}}
                         </div>
-                        {{end}}
-                    </div>
+                    </div> 
                 </div>  
             </div>
             <!-- Modal -->

@@ -1,10 +1,12 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"html/template"
 	"hypixel-info/mcc"
 	"hypixel-info/minecraft"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -17,6 +19,22 @@ type Cape struct {
 	Type  string   `json:"type"`
 	Title string   `json:"title"`
 	UUID  []string `json:"UUID"`
+}
+
+type Player struct {
+	UUID  string `json:"uuid"`
+	Capes int    `json:"capes"`
+	Score int    `json:"score"`
+}
+
+type Joueur struct {
+	UUID  string `json:"uuid"`
+	Capes int    `json:"capes"`
+	Score int    `json:"score"`
+}
+
+type Classement struct {
+	Joueurs []Joueur `json:"classement"`
 }
 
 type CapeGroups struct {
@@ -355,6 +373,45 @@ func capesHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, data)
 }
 
+func classementHandler(w http.ResponseWriter, r *http.Request) {
+	// Lire le fichier JSON du classement
+	filePath := "./site/infos/z_db_classement.json"
+	file, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		http.Error(w, "Erreur de lecture du fichier de classement", http.StatusInternalServerError)
+		return
+	}
+
+	// Décoder le fichier JSON
+	var classement Classement
+	err = json.Unmarshal(file, &classement)
+	if err != nil {
+		http.Error(w, "Erreur lors du décodage du JSON", http.StatusInternalServerError)
+		return
+	}
+
+	// Renvoyer la page HTML avec les données du classement
+	tmplPath := filepath.Join("site", "template", "classement.html")
+	tmpl, err := template.New("classement.html").ParseFiles(tmplPath)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Créer un objet de données pour le template
+	data := struct {
+		Classement []Joueur
+	}{
+		Classement: classement.Joueurs,
+	}
+
+	// Exécuter le template avec les données
+	err = tmpl.Execute(w, data)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
 func setupFileServer(path, route string) {
 	fs := http.FileServer(http.Dir(path))
 	http.Handle(route, http.StripPrefix(route, fs))
@@ -371,8 +428,9 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
+	http.HandleFunc("/classement", classementHandler)
 
-	if err := http.ListenAndServe(":1621", nil); err != nil {
+	if err := http.ListenAndServe(":1624", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

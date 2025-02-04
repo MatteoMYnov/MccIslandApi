@@ -299,3 +299,91 @@ main {
     background-color: #222;
     padding: 5px !important;
 }
+
+/* classement */
+.classement-card {
+    width: 99%;
+    background-color: #292929;
+    border: 2px solid #292929; /* Ajout de la bordure */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0px; /* Espacement entre les cartes */
+}
+
+.classement-body {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
+    gap: 10px; /* Espace entre les cartes de joueurs */
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    background-color: #323232;
+    padding: 0 15px;
+}
+
+.player-card {
+    display: flex;
+    align-items: center;
+    background-color: #292929;
+    border-radius: 10px;
+    padding: 7px;
+    flex: 1 1 calc(33% - 10px); /* Chaque carte prendra un tiers de la largeur disponible, avec une petite marge */
+    box-sizing: border-box; /* Inclut les paddings et les bordures dans la taille */
+    transition: background-color 0.3s, filter 0.3s; /* Transition pour les changements de couleur et d'effet */
+    cursor: pointer; /* Curseur en forme de souris */
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px;
+    max-width: fit-content;
+}
+
+.player-card:hover {
+    background-color: #3c3c3c; /* Change la couleur de fond pour la rendre plus claire */
+    filter: brightness(1.2); /* Augmente la luminosité de la carte */
+}
+
+.player-info p {
+    color: white;
+    font-size: 16px;
+    margin: 0; /* Retirer les marges par défaut */
+    white-space: nowrap; /* Empêche le texte de s'étirer sur plusieurs lignes */
+}
+
+.classement-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #292929;
+}
+
+.classement-header h2 {
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.player-icon {
+    image-rendering: pixelated;
+    width: 40px;
+    height: 40px;
+}
+
+.classement-body {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
+    gap: 10px; /* Espace entre les cartes de joueurs */
+    border-radius: 0 0 10px 10px;
+    background-color: #323232;
+    padding: 0 15px;
+}
+
+.interclassement-body {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
+    gap: 5px;
+    margin: 5px 5px;
+}
