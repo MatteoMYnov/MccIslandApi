@@ -205,6 +205,14 @@ main {
     color: red;
 }
 
+.playerRank {
+    position: absolute;
+    font-size: 35px;
+    right: 5vh;
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: white;
+}
+
 /* Minecraft-Card */
 .minecraftstats-card {
     display: flex;

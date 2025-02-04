@@ -1,13 +1,17 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"html/template"
 	"hypixel-info/mcc"
 	"hypixel-info/minecraft"
+	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"path/filepath"
+	"sort"
 )
 
 // Nouveau format JSON pour les capes
@@ -77,7 +81,9 @@ type DataMenuPage struct {
 	ANGLERTrophies       string
 	MaxANGLERTrophies    string
 	BonusTrophies        string
-	Friends              []FriendInfo // Mise à jour pour inclure les informations complètes sur les amis
+	Friends              []FriendInfo
+	// Player Rank
+	PlayerRank int
 }
 
 type FriendInfo struct {
@@ -87,6 +93,16 @@ type FriendInfo struct {
 		Evolution int
 		Level     int
 	}
+}
+
+type PlayerRank struct {
+	UUID  string `json:"uuid"`
+	Capes int    `json:"capes"`
+}
+
+// Structure principale du fichier JSON
+type Classement struct {
+	Classement []PlayerRank `json:"classement"`
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
@@ -145,6 +161,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 			Removed:  removed,
 		})
 	}
+
+	playerRank := UpdateClassement(playerUUID, len(listCapes))
 
 	badgeInfos := []BadgeInfo{}
 	for _, badgeName := range playerBadgesJSON {
@@ -245,6 +263,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		MaxANGLERTrophies:    mcc.FormatNumberWithSpaces(mccInfos.TrophiesANGLER.Obtainable),
 		BonusTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Bonus),
 		Friends:              convertToFriendInfo(mccInfos.Friends),
+		// Player Rank
+		PlayerRank: playerRank,
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
@@ -312,6 +332,74 @@ func capesHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	tmpl.Execute(w, data)
+}
+
+func UpdateClassement(uuid string, capesCount int) int {
+	filePath := "./site/infos/z_db_classement.json"
+
+	// Lecture du fichier
+	file, err := ioutil.ReadFile(filePath)
+	if err != nil && !os.IsNotExist(err) {
+		log.Printf("Erreur lors de la lecture du fichier classement : %v", err)
+		return -1
+	}
+
+	var classement Classement
+
+	// Charger les données existantes
+	if len(file) > 0 {
+		err = json.Unmarshal(file, &classement)
+		if err != nil {
+			log.Printf("Erreur lors de l'analyse du JSON : %v", err)
+			return -1
+		}
+	}
+
+	// Vérifier si le joueur est déjà dans la liste
+	found := false
+	for i, player := range classement.Classement {
+		if player.UUID == uuid {
+			if player.Capes != capesCount {
+				classement.Classement[i].Capes = capesCount
+			}
+			found = true
+			break
+		}
+	}
+
+	// Ajouter le joueur s'il n'existe pas
+	if !found {
+		classement.Classement = append(classement.Classement, PlayerRank{UUID: uuid, Capes: capesCount})
+	}
+
+	// Trier par nombre de capes décroissant
+	sort.Slice(classement.Classement, func(i, j int) bool {
+		return classement.Classement[i].Capes > classement.Classement[j].Capes
+	})
+
+	// Trouver la position du joueur (1-based)
+	playerPosition := -1
+	for i, player := range classement.Classement {
+		if player.UUID == uuid {
+			playerPosition = i + 1
+			break
+		}
+	}
+
+	// Sauvegarder les modifications
+	updatedData, err := json.MarshalIndent(classement, "", "    ")
+	if err != nil {
+		log.Printf("Erreur lors de la conversion en JSON : %v", err)
+		return -1
+	}
+
+	err = ioutil.WriteFile(filePath, updatedData, 0644)
+	if err != nil {
+		log.Printf("Erreur lors de l'écriture du fichier classement : %v", err)
+		return -1
+	}
+
+	return playerPosition
 }
 
 func setupFileServer(path, route string) {
