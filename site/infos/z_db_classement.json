@@ -1293,6 +1293,10 @@
             "capes": 7
         },
         {
+            "uuid": "bb6552ab-f4da-4d90-84cb-3d2d27549f4f",
+            "capes": 7
+        },
+        {
             "uuid": "542189cf-68fb-415b-bbe6-c60da626e65a",
             "capes": 5
         },
@@ -1323,10 +1327,6 @@
         {
             "uuid": "cf6b19e6-5113-4a66-adb5-4877948fef21",
             "capes": 1
-        },
-        {
-            "uuid": "e8666d45-a735-48c7-8fc8-4815bc2ca146",
-            "capes": 0
         }
     ]
 }

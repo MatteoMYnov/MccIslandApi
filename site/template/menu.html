@@ -38,7 +38,9 @@
                 <!-- Minecraft Stats Card -->
                 <div class="minecraftstats-card" id="minecraftStatsCard">
                     <div class="stats-header">
-                        <p class="playerRank" data-tippy-content="Rank #{{.PlayerRank}} Database classement">#{{.PlayerRank}}</p>
+                        <p class="playerRank" data-tippy-content="{{if eq .PlayerRank -1}}Le joueur ne peut pas être classé{{else}}Rank #{{.PlayerRank}} Database classement{{end}}">
+                            {{if eq .PlayerRank -1}}N/A{{else}}#{{.PlayerRank}}{{end}}
+                        </p>
                         <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
                         <h2>Minecraft Capes</h2>
                     </div>

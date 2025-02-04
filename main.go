@@ -355,7 +355,7 @@ func capesHandler(w http.ResponseWriter, r *http.Request) {
 func UpdateClassement(uuid string, capesCount int) int {
 	filePath := "./site/infos/z_db_classement.json"
 
-	// Lecture du fichier
+	// Lire le fichier
 	file, err := ioutil.ReadFile(filePath)
 	if err != nil && !os.IsNotExist(err) {
 		log.Printf("Erreur lors de la lecture du fichier classement : %v", err)
@@ -371,6 +371,11 @@ func UpdateClassement(uuid string, capesCount int) int {
 			log.Printf("Erreur lors de l'analyse du JSON : %v", err)
 			return -1
 		}
+	}
+
+	// Si le joueur n'a aucune cape, ne pas l'ajouter au classement
+	if capesCount == 0 {
+		return -1 // Ne rien faire si le joueur n'a pas de cape
 	}
 
 	// Vérifier si le joueur est déjà dans la liste
