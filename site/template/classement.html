@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Capes List</title>
+        <link rel="stylesheet" href="../styles/classement.css?v=1.0">
+        <link id="favicon" rel="icon" href="../img/utilities/minecrafticon.png" type="image/png">
+    </head>
+    <body>
+        <div id="bgdark"></div>
+        <header class="navbar">
+            <nav>
+                <ul>
+                    <li class="page-cath">
+                        Classement
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Conteneur général pour les cartes -->
+            <div class="players-container">
+                <!-- Minecraft Capes Card -->
+                <div class="players-card" id="playersCard">
+                    <div class="stats-header">
+                        <img src="../img/mcc/trophies/total_trophies.png" alt="Classement Icon" class="classement-icon">
+                        <h2>Classement des Joueurs</h2>
+                    </div>
+                    <div class="stats-body">
+                        <!-- Boucle sur le classement -->
+                        {{range .Classement}}
+                        <div class="player-entry">
+                            <div class="player-rank">
+                                <h3>#{{.Position}}</h3>
+                            </div>
+                            <div class="player-info">
+                                <span class="player-name">{{.UUID}}</span>
+                                <span class="player-capes">Capes: {{.Capes}}</span>
+                                <span class="player-score">Score: {{.Score}}</span>
+                            </div>
+                        </div>
+                        {{end}}
+                    </div>
+                </div>  
+            </div>
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="../img/capes/default-placeholder.png" alt="Image" class="modal-image">
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-name">Name PlaceHolder</p>
+                        <p class="modal-date">Date PlaceHolder</p>
+                        <p class="modal-desc">Description PlaceHolder</p>
+                        <div class="modal-images" style="display: block;">
+                            <img src="../img/capes/default-placeholder.png" title="Default Title" alt="Default Alt" class="modal-image-item" id="modalImage1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="../js/scroll.js"></script>
+        <script src="../js/modal.js"></script>
+    </body>
+</html>

@@ -128,6 +128,121 @@ func downloadFileHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, filePath)
 }
 
+func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
+	filePath := "./site/infos/z_db_classement.json"
+
+	// Lire le fichier
+	file, err := ioutil.ReadFile(filePath)
+	if err != nil && !os.IsNotExist(err) {
+		log.Printf("Erreur lors de la lecture du fichier classement : %v", err)
+		return -1
+	}
+
+	var classement Classement
+
+	// Charger les données existantes
+	if len(file) > 0 {
+		err = json.Unmarshal(file, &classement)
+		if err != nil {
+			log.Printf("Erreur lors de l'analyse du JSON : %v", err)
+			return -1
+		}
+	}
+
+	// Si le joueur n'a aucune cape, ne pas l'ajouter au classement
+	if capesCount == 0 {
+		return -1
+	}
+
+	// Récupérer les capes et leur score
+	capeGroups, err := minecraft.LoadCapeGroups()
+	if err != nil {
+		log.Printf("Erreur lors du chargement des groupes de capes : %v", err)
+		return -1
+	}
+
+	// Calculer le score total du joueur en fonction des capes
+	totalScore := 0
+	for _, cape := range capeGroups.Capes {
+		for _, capeName := range listCapes {
+			if capeName == cape.Name {
+				totalScore += cape.Score
+			}
+		}
+	}
+
+	// Vérifier si le joueur est déjà dans la liste
+	found := false
+	for i, player := range classement.Classement {
+		if player.UUID == uuid {
+			// Mettre à jour le nombre de capes et le score du joueur
+			classement.Classement[i].Capes = capesCount
+			classement.Classement[i].Score = totalScore
+			found = true
+			break
+		}
+	}
+
+	// Ajouter le joueur s'il n'existe pas encore
+	if !found {
+		classement.Classement = append(classement.Classement, PlayerRank{UUID: uuid, Capes: capesCount, Score: totalScore})
+	}
+
+	// Trier le classement : priorité au nombre de capes, puis au score
+	sort.Slice(classement.Classement, func(i, j int) bool {
+		if classement.Classement[i].Capes == classement.Classement[j].Capes {
+			return classement.Classement[i].Score > classement.Classement[j].Score
+		}
+		return classement.Classement[i].Capes > classement.Classement[j].Capes
+	})
+
+	// Trouver la position du joueur (1-based)
+	playerPosition := -1
+	for i, player := range classement.Classement {
+		if player.UUID == uuid {
+			playerPosition = i + 1
+			break
+		}
+	}
+
+	// Sauvegarder les modifications
+	updatedData, err := json.MarshalIndent(classement, "", "    ")
+	if err != nil {
+		log.Printf("Erreur lors de la conversion en JSON : %v", err)
+		return -1
+	}
+
+	err = ioutil.WriteFile(filePath, updatedData, 0644)
+	if err != nil {
+		log.Printf("Erreur lors de l'écriture du fichier classement : %v", err)
+		return -1
+	}
+
+	return playerPosition
+}
+
+func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
+	var friendInfo []FriendInfo
+	for _, friend := range friends {
+		rank := "PLAYER"
+		if len(friend.Ranks) > 0 {
+			rank = friend.Ranks[0] // Récupère le premier rang
+		}
+		friendInfo = append(friendInfo, FriendInfo{
+			Username: friend.Username,
+			Ranks:    rank,
+			CrownLevel: struct {
+				Evolution int
+				Level     int
+			}{
+				Evolution: friend.CrownLevel.Evolution,
+				Level:     friend.CrownLevel.Level,
+			},
+		})
+	}
+	return friendInfo
+}
+
 func menuHandler(w http.ResponseWriter, r *http.Request) {
 	capeGroups, err := minecraft.LoadCapeGroups()
 	if err != nil {
@@ -297,28 +412,6 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, infos)
 }
 
-func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
-	var friendInfo []FriendInfo
-	for _, friend := range friends {
-		rank := "PLAYER"
-		if len(friend.Ranks) > 0 {
-			rank = friend.Ranks[0] // Récupère le premier rang
-		}
-		friendInfo = append(friendInfo, FriendInfo{
-			Username: friend.Username,
-			Ranks:    rank,
-			CrownLevel: struct {
-				Evolution int
-				Level     int
-			}{
-				Evolution: friend.CrownLevel.Evolution,
-				Level:     friend.CrownLevel.Level,
-			},
-		})
-	}
-	return friendInfo
-}
-
 func capesHandler(w http.ResponseWriter, r *http.Request) {
 	capeGroups, err := minecraft.LoadCapeGroups()
 	if err != nil {
@@ -353,14 +446,14 @@ func capesHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, data)
 }
 
-func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
+func classementHandler(w http.ResponseWriter, r *http.Request) {
 	filePath := "./site/infos/z_db_classement.json"
 
 	// Lire le fichier
 	file, err := ioutil.ReadFile(filePath)
 	if err != nil && !os.IsNotExist(err) {
-		log.Printf("Erreur lors de la lecture du fichier classement : %v", err)
-		return -1
+		http.Error(w, "Erreur lors de la lecture du fichier classement", http.StatusInternalServerError)
+		return
 	}
 
 	var classement Classement
@@ -369,48 +462,9 @@ func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
 	if len(file) > 0 {
 		err = json.Unmarshal(file, &classement)
 		if err != nil {
-			log.Printf("Erreur lors de l'analyse du JSON : %v", err)
-			return -1
+			http.Error(w, "Erreur lors de l'analyse du JSON", http.StatusInternalServerError)
+			return
 		}
-	}
-
-	// Si le joueur n'a aucune cape, ne pas l'ajouter au classement
-	if capesCount == 0 {
-		return -1
-	}
-
-	// Récupérer les capes et leur score
-	capeGroups, err := minecraft.LoadCapeGroups()
-	if err != nil {
-		log.Printf("Erreur lors du chargement des groupes de capes : %v", err)
-		return -1
-	}
-
-	// Calculer le score total du joueur en fonction des capes
-	totalScore := 0
-	for _, cape := range capeGroups.Capes {
-		for _, capeName := range listCapes {
-			if capeName == cape.Name {
-				totalScore += cape.Score
-			}
-		}
-	}
-
-	// Vérifier si le joueur est déjà dans la liste
-	found := false
-	for i, player := range classement.Classement {
-		if player.UUID == uuid {
-			// Mettre à jour le nombre de capes et le score du joueur
-			classement.Classement[i].Capes = capesCount
-			classement.Classement[i].Score = totalScore
-			found = true
-			break
-		}
-	}
-
-	// Ajouter le joueur s'il n'existe pas encore
-	if !found {
-		classement.Classement = append(classement.Classement, PlayerRank{UUID: uuid, Capes: capesCount, Score: totalScore})
 	}
 
 	// Trier le classement : priorité au nombre de capes, puis au score
@@ -421,29 +475,15 @@ func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
 		return classement.Classement[i].Capes > classement.Classement[j].Capes
 	})
 
-	// Trouver la position du joueur (1-based)
-	playerPosition := -1
-	for i, player := range classement.Classement {
-		if player.UUID == uuid {
-			playerPosition = i + 1
-			break
-		}
-	}
-
-	// Sauvegarder les modifications
-	updatedData, err := json.MarshalIndent(classement, "", "    ")
+	// Afficher le classement
+	tmplPath := filepath.Join("site", "template", "classement.html")
+	tmpl, err := template.ParseFiles(tmplPath)
 	if err != nil {
-		log.Printf("Erreur lors de la conversion en JSON : %v", err)
-		return -1
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
 	}
 
-	err = ioutil.WriteFile(filePath, updatedData, 0644)
-	if err != nil {
-		log.Printf("Erreur lors de l'écriture du fichier classement : %v", err)
-		return -1
-	}
-
-	return playerPosition
+	tmpl.Execute(w, classement.Classement)
 }
 
 func setupFileServer(path, route string) {
@@ -462,6 +502,7 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
+	http.HandleFunc("/classement", classementHandler)
 
 	if err := http.ListenAndServe(":1618", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
