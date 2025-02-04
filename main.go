@@ -109,6 +109,24 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/menu", http.StatusFound)
 }
 
+func downloadFileHandler(w http.ResponseWriter, r *http.Request) {
+	// Définir le chemin du fichier que tu veux télécharger
+	filePath := "./site/infos/z_db_classement.json"
+
+	// Vérifie si le fichier existe
+	if _, err := os.Stat(filePath); os.IsNotExist(err) {
+		http.Error(w, "Fichier non trouvé", http.StatusNotFound)
+		return
+	}
+
+	// Définir les en-têtes pour indiquer que le fichier est à télécharger
+	w.Header().Set("Content-Disposition", "attachment; filename=z_db_classement.json")
+	w.Header().Set("Content-Type", "application/json")
+
+	// Utilise http.ServeFile pour envoyer le fichier
+	http.ServeFile(w, r, filePath)
+}
+
 func menuHandler(w http.ResponseWriter, r *http.Request) {
 	capeGroups, err := minecraft.LoadCapeGroups()
 	if err != nil {
@@ -413,6 +431,8 @@ func main() {
 	setupFileServer("./site/styles", "/styles/")
 	setupFileServer("./site/img", "/img/")
 	setupFileServer("./site/js", "/js/")
+
+	http.HandleFunc("/download", downloadFileHandler) // pour Download la database des joueurs
 
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
