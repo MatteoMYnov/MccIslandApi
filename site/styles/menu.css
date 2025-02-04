@@ -480,6 +480,14 @@ main {
     margin-right: 10px;
 }
 
+.infos {
+    width: 30px;
+    height: auto;
+    image-rendering: pixelated;
+    position: absolute;
+    right: 3vh;
+}
+
 .mccstats-card .stats-header h2 {
     font-size: 24px;
     margin: 0;
@@ -962,8 +970,8 @@ body.modal-open {
 }
 
 .arrow {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     transition: transform 0.3s ease;
     image-rendering: pixelated;
     margin-left: auto; /* Déplace la flèche vers la droite */

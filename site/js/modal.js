@@ -428,6 +428,12 @@ const modalData = {
             {"URL": "../img/capes/dummy/sniffer-cape.png","Alt": "Test Cape"},
             {"URL": "../img/capes/dummy/translatorchinese-cape.png","Alt": "Translator Cape (Chinese)"}
         ]
+    },
+    "mcc-infos": {
+        "name": "Api Informations",
+        "date": " ",
+        "description": "Si les informations et la liste d'amis ne s'affichent pas, nous vous recommandons d'activer les API sur le serveur en vous connectant à play.mccisland.net, en accédant au Pocket Menu, puis en allant dans Settings > Api Settings et en activant les paramètres que vous souhaitez voir apparaître sur le site." ,
+        images: []
     }
 };
 
