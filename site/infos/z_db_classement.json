@@ -8,7 +8,7 @@
         {
             "uuid": "231881e6-de0f-4224-bfce-0b78e07d862b",
             "capes": 15,
-            "score": 43
+            "score": 36
         },
         {
             "uuid": "0c063bfd-3521-413d-a766-50be1d71f00e",
@@ -31,11 +31,6 @@
             "score": 35
         },
         {
-            "uuid": "e3e96a4f-92ab-47a9-bc8e-6b72894316d6",
-            "capes": 13,
-            "score": 34
-        },
-        {
             "uuid": "b274b907-073e-41c7-b447-6ad6e9307f18",
             "capes": 13,
             "score": 30
@@ -56,9 +51,14 @@
             "score": 28
         },
         {
+            "uuid": "e3e96a4f-92ab-47a9-bc8e-6b72894316d6",
+            "capes": 13,
+            "score": 27
+        },
+        {
             "uuid": "fa0f91ac-8dbf-4d7c-b2d0-296ee7631986",
             "capes": 12,
-            "score": 33
+            "score": 26
         },
         {
             "uuid": "16751f79-c0b1-4e53-a0b5-90d31fc1d80d",
@@ -96,6 +96,11 @@
             "score": 27
         },
         {
+            "uuid": "b0e9158d-8885-489d-8bfb-bb47cf5a3dca",
+            "capes": 11,
+            "score": 25
+        },
+        {
             "uuid": "3e5eff61-a965-4519-9d66-813ceb9709d2",
             "capes": 11,
             "score": 24
@@ -122,6 +127,11 @@
         },
         {
             "uuid": "35c923ec-8290-4952-9d7c-1855f8e608ec",
+            "capes": 11,
+            "score": 21
+        },
+        {
+            "uuid": "2223b9fa-b318-4f08-a8fa-1e1b183b3600",
             "capes": 11,
             "score": 21
         },
@@ -187,11 +197,6 @@
         },
         {
             "uuid": "fccf6295-789c-4b84-b15a-35627eaf49a0",
-            "capes": 10,
-            "score": 20
-        },
-        {
-            "uuid": "2223b9fa-b318-4f08-a8fa-1e1b183b3600",
             "capes": 10,
             "score": 20
         },
@@ -581,11 +586,6 @@
             "score": 21
         },
         {
-            "uuid": "b09f6cd9-65ab-4956-b3dc-7ddd98d49c91",
-            "capes": 9,
-            "score": 21
-        },
-        {
             "uuid": "ee2c5225-51df-49b8-8289-d3d0f3d80825",
             "capes": 9,
             "score": 20
@@ -791,6 +791,11 @@
             "score": 15
         },
         {
+            "uuid": "802a9453-1f0b-46d7-a776-0532e3672ad4",
+            "capes": 9,
+            "score": 15
+        },
+        {
             "uuid": "de8e264d-6f08-4b46-9c59-f85755dd607b",
             "capes": 9,
             "score": 14
@@ -832,6 +837,16 @@
         },
         {
             "uuid": "d7fd9c09-0aac-4788-97e0-5b4859006365",
+            "capes": 9,
+            "score": 14
+        },
+        {
+            "uuid": "b09f6cd9-65ab-4956-b3dc-7ddd98d49c91",
+            "capes": 9,
+            "score": 14
+        },
+        {
+            "uuid": "958a3da8-acf0-44dc-b5c0-7f7132b4bf9c",
             "capes": 9,
             "score": 14
         },
@@ -1716,16 +1731,6 @@
             "score": 45
         },
         {
-            "uuid": "802a9453-1f0b-46d7-a776-0532e3672ad4",
-            "capes": 8,
-            "score": 14
-        },
-        {
-            "uuid": "958a3da8-acf0-44dc-b5c0-7f7132b4bf9c",
-            "capes": 8,
-            "score": 13
-        },
-        {
             "uuid": "a5c9bd19-b033-4f0d-b05e-c0dcdbf73db8",
             "capes": 8,
             "score": 9
@@ -1806,9 +1811,24 @@
             "score": 5
         },
         {
+            "uuid": "24d2c87c-8307-48ad-aeff-300dab3460bd",
+            "capes": 2,
+            "score": 5
+        },
+        {
             "uuid": "c0a062f1-4470-4095-bcd5-26d35da72e84",
             "capes": 1,
             "score": 10
+        },
+        {
+            "uuid": "7c4a2fca-b627-4773-b8c7-22c76f3426e0",
+            "capes": 1,
+            "score": 1
+        },
+        {
+            "uuid": "b01072fc-aa34-486e-93bf-287cb7ff2eca",
+            "capes": 1,
+            "score": 1
         }
     ]
 }

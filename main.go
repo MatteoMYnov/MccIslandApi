@@ -1,17 +1,14 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"html/template"
 	"hypixel-info/mcc"
 	"hypixel-info/minecraft"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
-	"sort"
 )
 
 // Nouveau format JSON pour les capes
@@ -95,16 +92,7 @@ type FriendInfo struct {
 	}
 }
 
-type PlayerRank struct {
-	UUID  string `json:"uuid"`
-	Capes int    `json:"capes"`
-	Score int    `json:"score"` // Ajout du champ Score
-}
-
 // Structure principale du fichier JSON
-type Classement struct {
-	Classement []PlayerRank `json:"classement"`
-}
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/menu", http.StatusFound)
@@ -126,99 +114,6 @@ func downloadFileHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Utilise http.ServeFile pour envoyer le fichier
 	http.ServeFile(w, r, filePath)
-}
-
-func UpdateClassement(uuid string, capesCount int, listCapes []string) int {
-	filePath := "./site/infos/z_db_classement.json"
-
-	// Lire le fichier
-	file, err := ioutil.ReadFile(filePath)
-	if err != nil && !os.IsNotExist(err) {
-		log.Printf("Erreur lors de la lecture du fichier classement : %v", err)
-		return -1
-	}
-
-	var classement Classement
-
-	// Charger les données existantes
-	if len(file) > 0 {
-		err = json.Unmarshal(file, &classement)
-		if err != nil {
-			log.Printf("Erreur lors de l'analyse du JSON : %v", err)
-			return -1
-		}
-	}
-
-	// Si le joueur n'a aucune cape, ne pas l'ajouter au classement
-	if capesCount == 0 {
-		return -1
-	}
-
-	// Récupérer les capes et leur score
-	capeGroups, err := minecraft.LoadCapeGroups()
-	if err != nil {
-		log.Printf("Erreur lors du chargement des groupes de capes : %v", err)
-		return -1
-	}
-
-	// Calculer le score total du joueur en fonction des capes
-	totalScore := 0
-	for _, cape := range capeGroups.Capes {
-		for _, capeName := range listCapes {
-			if capeName == cape.Name {
-				totalScore += cape.Score
-			}
-		}
-	}
-
-	// Vérifier si le joueur est déjà dans la liste
-	found := false
-	for i, player := range classement.Classement {
-		if player.UUID == uuid {
-			// Mettre à jour le nombre de capes et le score du joueur
-			classement.Classement[i].Capes = capesCount
-			classement.Classement[i].Score = totalScore
-			found = true
-			break
-		}
-	}
-
-	// Ajouter le joueur s'il n'existe pas encore
-	if !found {
-		classement.Classement = append(classement.Classement, PlayerRank{UUID: uuid, Capes: capesCount, Score: totalScore})
-	}
-
-	// Trier le classement : priorité au nombre de capes, puis au score
-	sort.Slice(classement.Classement, func(i, j int) bool {
-		if classement.Classement[i].Capes == classement.Classement[j].Capes {
-			return classement.Classement[i].Score > classement.Classement[j].Score
-		}
-		return classement.Classement[i].Capes > classement.Classement[j].Capes
-	})
-
-	// Trouver la position du joueur (1-based)
-	playerPosition := -1
-	for i, player := range classement.Classement {
-		if player.UUID == uuid {
-			playerPosition = i + 1
-			break
-		}
-	}
-
-	// Sauvegarder les modifications
-	updatedData, err := json.MarshalIndent(classement, "", "    ")
-	if err != nil {
-		log.Printf("Erreur lors de la conversion en JSON : %v", err)
-		return -1
-	}
-
-	err = ioutil.WriteFile(filePath, updatedData, 0644)
-	if err != nil {
-		log.Printf("Erreur lors de l'écriture du fichier classement : %v", err)
-		return -1
-	}
-
-	return playerPosition
 }
 
 func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
@@ -296,7 +191,21 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	playerRank := UpdateClassement(playerUUID, len(listCapes), listCapes)
+	var capeDetails []struct {
+		Name    string
+		Removed bool
+	}
+	for _, cape := range capeInfos {
+		capeDetails = append(capeDetails, struct {
+			Name    string
+			Removed bool
+		}{
+			Name:    cape.CapeName,
+			Removed: cape.Removed,
+		})
+	}
+
+	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails)
 
 	badgeInfos := []BadgeInfo{}
 	for _, badgeName := range playerBadgesJSON {
@@ -446,46 +355,6 @@ func capesHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, data)
 }
 
-func classementHandler(w http.ResponseWriter, r *http.Request) {
-	filePath := "./site/infos/z_db_classement.json"
-
-	// Lire le fichier
-	file, err := ioutil.ReadFile(filePath)
-	if err != nil && !os.IsNotExist(err) {
-		http.Error(w, "Erreur lors de la lecture du fichier classement", http.StatusInternalServerError)
-		return
-	}
-
-	var classement Classement
-
-	// Charger les données existantes
-	if len(file) > 0 {
-		err = json.Unmarshal(file, &classement)
-		if err != nil {
-			http.Error(w, "Erreur lors de l'analyse du JSON", http.StatusInternalServerError)
-			return
-		}
-	}
-
-	// Trier le classement : priorité au nombre de capes, puis au score
-	sort.Slice(classement.Classement, func(i, j int) bool {
-		if classement.Classement[i].Capes == classement.Classement[j].Capes {
-			return classement.Classement[i].Score > classement.Classement[j].Score
-		}
-		return classement.Classement[i].Capes > classement.Classement[j].Capes
-	})
-
-	// Afficher le classement
-	tmplPath := filepath.Join("site", "template", "classement.html")
-	tmpl, err := template.ParseFiles(tmplPath)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	tmpl.Execute(w, classement.Classement)
-}
-
 func setupFileServer(path, route string) {
 	fs := http.FileServer(http.Dir(path))
 	http.Handle(route, http.StripPrefix(route, fs))
@@ -502,9 +371,8 @@ func main() {
 
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
-	http.HandleFunc("/classement", classementHandler)
 
-	if err := http.ListenAndServe(":1618", nil); err != nil {
+	if err := http.ListenAndServe(":1621", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
