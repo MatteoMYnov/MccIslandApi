@@ -6,14 +6,9 @@
             "score": 87
         },
         {
-            "uuid": "53f7e4c8-9469-4829-997d-f9a522e04b95",
-            "capes": 14,
-            "score": 35
-        },
-        {
             "uuid": "231881e6-de0f-4224-bfce-0b78e07d862b",
-            "capes": 14,
-            "score": 35
+            "capes": 15,
+            "score": 43
         },
         {
             "uuid": "0c063bfd-3521-413d-a766-50be1d71f00e",
@@ -31,17 +26,27 @@
             "score": 35
         },
         {
+            "uuid": "53f7e4c8-9469-4829-997d-f9a522e04b95",
+            "capes": 14,
+            "score": 35
+        },
+        {
+            "uuid": "e3e96a4f-92ab-47a9-bc8e-6b72894316d6",
+            "capes": 13,
+            "score": 34
+        },
+        {
             "uuid": "b274b907-073e-41c7-b447-6ad6e9307f18",
             "capes": 13,
             "score": 30
         },
         {
-            "uuid": "1e514849-5be0-4ab1-91e8-4b078f4f33a5",
+            "uuid": "0030df85-0a07-44d4-b22d-9c5ca1dc5167",
             "capes": 13,
             "score": 28
         },
         {
-            "uuid": "0030df85-0a07-44d4-b22d-9c5ca1dc5167",
+            "uuid": "1e514849-5be0-4ab1-91e8-4b078f4f33a5",
             "capes": 13,
             "score": 28
         },
@@ -51,9 +56,9 @@
             "score": 28
         },
         {
-            "uuid": "e3e96a4f-92ab-47a9-bc8e-6b72894316d6",
+            "uuid": "fa0f91ac-8dbf-4d7c-b2d0-296ee7631986",
             "capes": 12,
-            "score": 26
+            "score": 33
         },
         {
             "uuid": "16751f79-c0b1-4e53-a0b5-90d31fc1d80d",
@@ -89,11 +94,6 @@
             "uuid": "5fe443ce-3836-45a6-8ee8-a7d54b3e6250",
             "capes": 11,
             "score": 27
-        },
-        {
-            "uuid": "fa0f91ac-8dbf-4d7c-b2d0-296ee7631986",
-            "capes": 11,
-            "score": 25
         },
         {
             "uuid": "3e5eff61-a965-4519-9d66-813ceb9709d2",
@@ -577,6 +577,11 @@
         },
         {
             "uuid": "c46d7c5f-5a3a-46fd-903a-ed99d319c34d",
+            "capes": 9,
+            "score": 21
+        },
+        {
+            "uuid": "b09f6cd9-65ab-4956-b3dc-7ddd98d49c91",
             "capes": 9,
             "score": 21
         },
@@ -1706,14 +1711,14 @@
             "score": 10
         },
         {
+            "uuid": "8ecf8beb-720c-442c-911a-c9744e65bd9d",
+            "capes": 8,
+            "score": 45
+        },
+        {
             "uuid": "802a9453-1f0b-46d7-a776-0532e3672ad4",
             "capes": 8,
             "score": 14
-        },
-        {
-            "uuid": "b09f6cd9-65ab-4956-b3dc-7ddd98d49c91",
-            "capes": 8,
-            "score": 13
         },
         {
             "uuid": "958a3da8-acf0-44dc-b5c0-7f7132b4bf9c",
@@ -1731,9 +1736,79 @@
             "score": 9
         },
         {
+            "uuid": "0086e09d-0451-4ea3-98c2-8026bd9707e5",
+            "capes": 8,
+            "score": 9
+        },
+        {
+            "uuid": "b5137553-a0e8-4116-9b78-065d18e48d5f",
+            "capes": 7,
+            "score": 8
+        },
+        {
+            "uuid": "fb63b2b1-2862-4d9c-9271-24202f66c31c",
+            "capes": 7,
+            "score": 7
+        },
+        {
+            "uuid": "1b42ff62-b4cb-4b8e-8fbd-efd24e70ced2",
+            "capes": 6,
+            "score": 35
+        },
+        {
+            "uuid": "fe5d6f18-6b24-4afb-8fba-fd8768d96e4b",
+            "capes": 5,
+            "score": 37
+        },
+        {
+            "uuid": "a6eb2491-7365-4649-a795-2f032c9919f0",
+            "capes": 5,
+            "score": 5
+        },
+        {
+            "uuid": "6d752bb0-ef41-432a-825a-4d44185de121",
+            "capes": 4,
+            "score": 22
+        },
+        {
+            "uuid": "5399b615-3440-4c66-939d-ab1375952ac3",
+            "capes": 4,
+            "score": 17
+        },
+        {
             "uuid": "3da6b9a1-beca-485e-97be-d2e619044dba",
             "capes": 4,
             "score": 15
+        },
+        {
+            "uuid": "a8179ff3-c201-4a75-bdaa-9d14aca6f83f",
+            "capes": 3,
+            "score": 11
+        },
+        {
+            "uuid": "5797c479-ad5a-43b0-87ca-8852d65ac639",
+            "capes": 2,
+            "score": 13
+        },
+        {
+            "uuid": "861e3cb8-0e2e-4f53-a50f-fbd5356fa8c0",
+            "capes": 2,
+            "score": 13
+        },
+        {
+            "uuid": "0da8bb6c-4450-486d-bcef-2112f4ae857c",
+            "capes": 2,
+            "score": 6
+        },
+        {
+            "uuid": "2d6c1065-681c-40ab-9058-056995379d0d",
+            "capes": 2,
+            "score": 5
+        },
+        {
+            "uuid": "c0a062f1-4470-4095-bcd5-26d35da72e84",
+            "capes": 1,
+            "score": 10
         }
     ]
 }
