@@ -225,6 +225,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
+	update_db()
 	actualname := IGN
 	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname)
 
@@ -423,6 +424,49 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func update_db() {
+	// Lire le fichier JSON du classement
+	filePath := "./site/infos/z_db_classement.json"
+	file, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		log.Fatalf("Erreur lors de la lecture du fichier : %v", err)
+	}
+
+	// Désérialiser le fichier JSON dans la structure de classement
+	var classement Classement
+	err = json.Unmarshal(file, &classement)
+	if err != nil {
+		log.Fatalf("Erreur lors de la désérialisation du JSON : %v", err)
+	}
+
+	// Compteur pour les 10 premiers vides
+	count := 0
+
+	// Parcours des joueurs dans le classement
+	for i := 0; i < len(classement.Joueurs) && count < 10; i++ {
+		// Si le nom actuel est vide
+		if classement.Joueurs[i].ActualName == "" {
+			// Remplacement du nom par le nom récupéré via GetNameFast
+			classement.Joueurs[i].ActualName = minecraft.GetNameFast(classement.Joueurs[i].UUID)
+			count++
+			fmt.Println(classement.Joueurs[i].ActualName)
+		}
+	}
+
+	// Réécrire le fichier avec les données mises à jour
+	updatedFile, err := json.MarshalIndent(classement, "", "    ")
+	if err != nil {
+		log.Fatalf("Erreur lors de l'écriture du fichier JSON : %v", err)
+	}
+
+	err = ioutil.WriteFile(filePath, updatedFile, 0644)
+	if err != nil {
+		log.Fatalf("Erreur lors de la sauvegarde du fichier : %v", err)
+	}
+
+	fmt.Println("Le fichier de classement a été mis à jour avec succès.")
+}
+
 func setupFileServer(path, route string) {
 	fs := http.FileServer(http.Dir(path))
 	http.Handle(route, http.StripPrefix(route, fs))
@@ -441,7 +485,7 @@ func main() {
 	http.HandleFunc("/capes", capesHandler)
 	http.HandleFunc("/classement", classementHandler)
 
-	if err := http.ListenAndServe(":1624", nil); err != nil {
+	if err := http.ListenAndServe(":1600", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

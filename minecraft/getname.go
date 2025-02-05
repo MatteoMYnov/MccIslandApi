@@ -41,3 +41,27 @@ func GetName(UUID string) string {
 	}
 	return response.Username
 }
+
+func GetNameFast(uuid string) string {
+	url := fmt.Sprintf("https://api.minecraftservices.com/minecraft/profile/lookup/%s", uuid)
+
+	resp, err := http.Get(url)
+	if err != nil {
+		return "" // Retourne une chaîne vide si une erreur survient
+	}
+	defer resp.Body.Close()
+
+	var data struct {
+		ID   string `json:"id"`
+		Name string `json:"name"`
+	}
+	if err := json.NewDecoder(resp.Body).Decode(&data); err != nil {
+		return "" // Retourne une chaîne vide en cas d'erreur de décodage
+	}
+
+	if data.Name != "" {
+		return data.Name // Retourne le nom si trouvé
+	}
+
+	return "" // Retourne une chaîne vide si aucun nom n'est trouvé
+}
