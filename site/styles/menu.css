@@ -987,3 +987,10 @@ body.modal-open {
 .cursor {
     cursor: pointer;
 }
+
+.refresh {
+    width: 48px;
+    height: auto;
+    image-rendering: pixelated;
+    margin-right: 2vh;
+}

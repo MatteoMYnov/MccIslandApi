@@ -14,6 +14,7 @@
                 <ul>
                     <li>
                         <form action="/menu" method="get" class="input-group">
+                            <img src="../img/utilities/refresh.png" data-tippy-content="Random Player" class="refresh no-select cursor" onclick="refreshSearch()">
                             <input type="text" name="q" placeholder="Find Player" class="find-player"
                                 id="playerInput" required>
                             <button class="show-button cursor" type="submit">Show</button>
@@ -230,6 +231,9 @@
         <script>
             function redirectToRankPage(rankPage) {
                 window.location.href = "/classement/" + rankPage;
+            }
+            function refreshSearch() {
+                window.location.href = "/menu"
             }
             tippy("[data-tippy-content]", {
                 duration: 500,
