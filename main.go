@@ -168,6 +168,9 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	if IGN == "" {
 		IGN = minecraft.GetRandomName()
 	}
+	if len(IGN) == 36 {
+		IGN = minecraft.GetNameFast(IGN)
+	}
 	fmt.Println(IGN)
 
 	playerClass := ""
