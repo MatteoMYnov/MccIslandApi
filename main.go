@@ -28,9 +28,11 @@ type Player struct {
 }
 
 type Joueur struct {
-	UUID  string `json:"uuid"`
-	Capes int    `json:"capes"`
-	Score int    `json:"score"`
+	UUID       string `json:"uuid"`
+	ActualName string `json:"actualname"`
+	Rank       int
+	Capes      int `json:"capes"`
+	Score      int `json:"score"`
 }
 
 type Classement struct {
@@ -223,7 +225,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails)
+	actualname := IGN
+	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname)
 
 	badgeInfos := []BadgeInfo{}
 	for _, badgeName := range playerBadgesJSON {
@@ -390,6 +393,14 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if len(classement.Joueurs) > 25 {
+		classement.Joueurs = classement.Joueurs[:25]
+	}
+
+	for i := range classement.Joueurs {
+		classement.Joueurs[i].Rank = i + 1
+	}
+
 	// Renvoyer la page HTML avec les données du classement
 	tmplPath := filepath.Join("site", "template", "classement.html")
 	tmpl, err := template.New("classement.html").ParseFiles(tmplPath)
@@ -424,7 +435,7 @@ func main() {
 	setupFileServer("./site/img", "/img/")
 	setupFileServer("./site/js", "/js/")
 
-	http.HandleFunc("/download", downloadFileHandler) // pour Download la database des joueurs
+	http.HandleFunc("/dbdl", downloadFileHandler) // pour Download la database des joueurs
 
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)

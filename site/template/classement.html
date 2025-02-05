@@ -31,12 +31,13 @@
                         <div class="interclassement-body">
                             {{if .Classement}}
                                 {{range .Classement}}
-                                    <div class="player-card" data-playername="{{.UUID}}">
+                                    <div class="player-card" data-playername="{{.UUID}}" data-playeractualname="{{.ActualName}}">
                                         <div class="player-info">
+                                            <p>#{{.Rank}}</p>
                                             <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select">
-                                            <p>{{.UUID}}</p>
+                                            <p>{{.ActualName}}</p>
                                         </div>
-                                    </div> 
+                                    </div>
                                 {{end}}
                             {{else}}
                                 <p>La liste ne charge pas</p>
@@ -64,5 +65,20 @@
         </main>
         <script src="../js/scroll.js"></script>
         <script src="../js/modal.js"></script>
+        <script>
+            // Sélectionner tous les éléments .player-card
+            const playerCards = document.querySelectorAll('.player-card');
+
+            // Ajouter un événement de clic sur chaque carte
+            playerCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Récupérer le nom du joueur à partir de l'attribut data-playeractualname
+                    const playerName = card.getAttribute('data-playeractualname');
+                    
+                    // Rediriger vers la page /menu?q=playerName
+                    window.location.href = `/menu?q=${playerName}`;
+                });
+            });
+        </script>
     </body>
 </html>

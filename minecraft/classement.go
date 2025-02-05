@@ -9,9 +9,10 @@ import (
 )
 
 type PlayerRank struct {
-	UUID  string `json:"uuid"`
-	Capes int    `json:"capes"`
-	Score int    `json:"score"`
+	UUID       string `json:"uuid"`
+	Capes      int    `json:"capes"`
+	Score      int    `json:"score"`
+	ActualName string `json:"actualname"` // Nouveau champ pour le pseudonyme
 }
 
 type Classement struct {
@@ -21,7 +22,7 @@ type Classement struct {
 func UpdateClassement(uuid string, listCapes []struct {
 	Name    string
 	Removed bool
-}) int {
+}, actualName string) int { // Ajout d'un paramètre pour le nom actuel
 	filePath := "./site/infos/z_db_classement.json"
 
 	// Lire le fichier
@@ -79,9 +80,10 @@ func UpdateClassement(uuid string, listCapes []struct {
 	found := false
 	for i, player := range classement.Classement {
 		if player.UUID == uuid {
-			// Mettre à jour le nombre de capes et le score du joueur
+			// Mettre à jour le nombre de capes, le score et le pseudonyme du joueur
 			classement.Classement[i].Capes = capesCount
 			classement.Classement[i].Score = totalScore
+			classement.Classement[i].ActualName = actualName
 			found = true
 			break
 		}
@@ -89,7 +91,12 @@ func UpdateClassement(uuid string, listCapes []struct {
 
 	// Ajouter le joueur s'il n'existe pas encore
 	if !found {
-		classement.Classement = append(classement.Classement, PlayerRank{UUID: uuid, Capes: capesCount, Score: totalScore})
+		classement.Classement = append(classement.Classement, PlayerRank{
+			UUID:       uuid,
+			Capes:      capesCount,
+			Score:      totalScore,
+			ActualName: actualName, // Ajouter le nom actuel
+		})
 	}
 
 	// Trier le classement : priorité au nombre de capes, puis au score
