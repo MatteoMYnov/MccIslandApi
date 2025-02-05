@@ -223,6 +223,12 @@
             "actualname": "Xeronsis"
         },
         {
+            "uuid": "0b3013d0-a05f-4760-bf84-d897fe295715",
+            "capes": 10,
+            "score": 26,
+            "actualname": "Notta"
+        },
+        {
             "uuid": "0534fa77-2961-4976-983b-d3f0f34afaa0",
             "capes": 10,
             "score": 24,
@@ -371,12 +377,6 @@
             "capes": 10,
             "score": 17,
             "actualname": "Shae"
-        },
-        {
-            "uuid": "",
-            "capes": 10,
-            "score": 17,
-            "actualname": "28da5e16-6380-4c6e-96c4-039a9bde5e34"
         },
         {
             "uuid": "28da5e16-6380-4c6e-96c4-039a9bde5e34",
@@ -2369,6 +2369,42 @@
             "capes": 1,
             "score": 1,
             "actualname": "xXGeometricalXx"
+        },
+        {
+            "uuid": "369704ed-a353-4332-b783-49024d752c61",
+            "capes": 1,
+            "score": 1,
+            "actualname": "NoobNooby"
+        },
+        {
+            "uuid": "1f085b2d-9548-4159-a8c7-f3ccdf0c2054",
+            "capes": 1,
+            "score": 1,
+            "actualname": "Kezz101"
+        },
+        {
+            "uuid": "197c2a1b-5605-4f59-8da4-ea51a089f9c6",
+            "capes": 1,
+            "score": 1,
+            "actualname": "Disney"
+        },
+        {
+            "uuid": "8157d41a-c9e0-440c-a639-7b6e2c497270",
+            "capes": 1,
+            "score": 1,
+            "actualname": "Darts"
+        },
+        {
+            "uuid": "2d000f10-4e82-4ff4-98b9-3c8cedf47da2",
+            "capes": 1,
+            "score": 1,
+            "actualname": "tempname098"
+        },
+        {
+            "uuid": "7d6e9520-2511-4445-b2e4-68c2690cbdb9",
+            "capes": 1,
+            "score": 1,
+            "actualname": "Bidooof"
         }
     ]
 }

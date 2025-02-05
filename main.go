@@ -397,8 +397,8 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if len(classement.Joueurs) > 25 {
-		classement.Joueurs = classement.Joueurs[:25]
+	if len(classement.Joueurs) > 100 {
+		classement.Joueurs = classement.Joueurs[:100]
 	}
 
 	for i := range classement.Joueurs {
