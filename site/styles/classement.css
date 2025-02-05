@@ -62,6 +62,7 @@ body, html {
     text-align: center;
     height: 75px;
     box-sizing: border-box;
+    border-bottom: 3px solid #B7573A;
 }
 
 .navbar ul {
