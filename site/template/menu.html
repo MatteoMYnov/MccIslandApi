@@ -16,7 +16,7 @@
                         <form action="/menu" method="get" class="input-group">
                             <input type="text" name="q" placeholder="Find Player" class="find-player"
                                 id="playerInput" required>
-                            <button class="show-button" type="submit">Show</button>
+                            <button class="show-button cursor" type="submit">Show</button>
                         </form>
                     </li>
                     <li class="page-cath">
@@ -42,7 +42,7 @@
                             {{if eq .PlayerRank -1}}
                                 N/A
                             {{else}}
-                                <span class="rank-link" onclick="redirectToRankPage('{{.PlayerRankPage}}')">#{{.PlayerRank}}</span>
+                                <span class="rank-link cursor" onclick="redirectToRankPage('{{.PlayerRankPage}}')">#{{.PlayerRank}}</span>
                             {{end}}
                         </p>                            
                         <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
@@ -52,7 +52,7 @@
                         {{if .ImageURLs}}
                             {{range .ImageURLs}}
                                 <div class="cape-container">
-                                    <img src="{{.URL}}" alt="Cape Image" class="cape-image no-select {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}">
+                                    <img src="{{.URL}}" alt="Cape Image" class="cape-image no-select cursor {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}">
                                     <p class="cape-title">{{.Title}}</p>
                                 </div>
                             {{end}}
@@ -70,7 +70,7 @@
                     </div>
                     <div class="stats-body">
                         {{range .BadgeURLs}}
-                            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image no-select {{.Class}}" data-id="using-modal {{.BadgeName}}">
+                            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image cursor no-select {{.Class}}" data-id="using-modal {{.BadgeName}}">
                         {{end}}
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <div class="stats-header">
                         <img src="../img/utilities/mccicon.png" alt="MCC Icon" class="mcc-icon">
                         <h2>MCC Stats</h2>
-                        <img src="../img/utilities/i.png" data-tippy-content="Api Informations" class="infos no-select" data-id="using-modal" data-name="mcc-infos">
+                        <img src="../img/utilities/i.png" data-tippy-content="Api Informations" class="infos no-select cursor" data-id="using-modal" data-name="mcc-infos">
                     </div>
                     <div class="stats-body">
                         <div class="mcc-case mcc-case1">
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                         <!-- ICI FRIENDS -->
-                        <div class="friends-card" id="friendsCard">
+                        <div class="friends-card cursor" id="friendsCard">
                             <div class="friends-header" onclick="toggleFriends()">
                                 <img src="../img/mcc/utilities/friends.png" alt="Friends Icon" class="friends-icon no-select">
                                 <h2>Friends</h2>
