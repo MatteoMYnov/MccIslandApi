@@ -100,7 +100,8 @@ type DataMenuPage struct {
 	BonusTrophies        string
 	Friends              []FriendInfo
 	// Player Rank
-	PlayerRank int
+	PlayerRank     int
+	PlayerRankPage int
 }
 
 type FriendInfo struct {
@@ -231,6 +232,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	actualname := IGN
 	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname)
+	playerRankPage := ((playerRank - 1) / 50) + 1 //f(x)=⌊(x−1)/50⌋+1
 
 	badgeInfos := []BadgeInfo{}
 	for _, badgeName := range playerBadgesJSON {
@@ -332,7 +334,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		BonusTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Bonus),
 		Friends:              convertToFriendInfo(mccInfos.Friends),
 		// Player Rank
-		PlayerRank: playerRank,
+		PlayerRank:     playerRank,
+		PlayerRankPage: playerRankPage,
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
@@ -381,6 +384,14 @@ func capesHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func classementHandler(w http.ResponseWriter, r *http.Request) {
+	// Extraire le numéro de page depuis l'URL
+	var page int
+	_, err := fmt.Sscanf(r.URL.Path, "/classement/%d", &page)
+	if err != nil || page < 1 {
+		http.Error(w, "Page invalide", http.StatusBadRequest)
+		return
+	}
+
 	// Lire le fichier JSON du classement
 	filePath := "./site/infos/z_db_classement.json"
 	file, err := ioutil.ReadFile(filePath)
@@ -397,12 +408,27 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if len(classement.Joueurs) > 100 {
-		classement.Joueurs = classement.Joueurs[:100]
+	// Définir la taille du groupe de joueurs par page
+	const pageSize = 50
+	startIndex := (page - 1) * pageSize
+	endIndex := startIndex + pageSize
+
+	// Vérifier que l'index ne dépasse pas la taille du classement
+	if startIndex >= len(classement.Joueurs) {
+		http.Error(w, "Page inexistante", http.StatusNotFound)
+		return
 	}
 
-	for i := range classement.Joueurs {
-		classement.Joueurs[i].Rank = i + 1
+	if endIndex > len(classement.Joueurs) {
+		endIndex = len(classement.Joueurs)
+	}
+
+	// Extraire les joueurs pour la page demandée
+	joueursPage := classement.Joueurs[startIndex:endIndex]
+
+	// Mettre à jour le rang des joueurs pour refléter leur position globale
+	for i := range joueursPage {
+		joueursPage[i].Rank = startIndex + i + 1
 	}
 
 	// Renvoyer la page HTML avec les données du classement
@@ -413,11 +439,16 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Créer un objet de données pour le template
 	data := struct {
 		Classement []Joueur
+		Page       int
+		HasNext    bool
+		HasPrev    bool
 	}{
-		Classement: classement.Joueurs,
+		Classement: joueursPage,
+		Page:       page,
+		HasPrev:    page > 1,
+		HasNext:    endIndex < len(classement.Joueurs),
 	}
 
 	// Exécuter le template avec les données
@@ -440,12 +471,13 @@ func main() {
 	setupFileServer("./site/js", "/js/")
 
 	http.HandleFunc("/dbdl", downloadFileHandler) // pour Download la database des joueurs
-
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
-	http.HandleFunc("/classement", classementHandler)
 
-	if err := http.ListenAndServe(":1601", nil); err != nil {
+	// Redirection de /classement vers /classement/1
+	http.HandleFunc("/classement/", classementHandler)
+
+	if err := http.ListenAndServe(":1603", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

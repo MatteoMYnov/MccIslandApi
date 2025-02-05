@@ -39,8 +39,12 @@
                 <div class="minecraftstats-card" id="minecraftStatsCard">
                     <div class="stats-header">
                         <p class="playerRank" data-tippy-content="{{if eq .PlayerRank -1}}Le joueur ne peut pas être classé{{else}}Rank #{{.PlayerRank}} Database classement{{end}}">
-                            {{if eq .PlayerRank -1}}N/A{{else}}#{{.PlayerRank}}{{end}}
-                        </p>
+                            {{if eq .PlayerRank -1}}
+                                N/A
+                            {{else}}
+                                <span class="rank-link" onclick="redirectToRankPage('{{.PlayerRankPage}}')">#{{.PlayerRank}}</span>
+                            {{end}}
+                        </p>                            
                         <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
                         <h2>Minecraft Capes</h2>
                     </div>
@@ -224,6 +228,9 @@
         <script src ="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
         <script src ="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
         <script>
+            function redirectToRankPage(rankPage) {
+                window.location.href = "/classement/" + rankPage;
+            }
             tippy("[data-tippy-content]", {
                 duration: 500,
             });
