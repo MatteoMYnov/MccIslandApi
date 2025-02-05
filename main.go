@@ -177,7 +177,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		playerClass = "playerName"
 	}
 
-	playerUUID := minecraft.GetUUID(IGN) // Utilisation de playerUUID pour obtenir les infos MCC
+	playerUUID, IGN := minecraft.GetUUID(IGN) // Utilisation de playerUUID pour obtenir les infos MCC
 	playerCapesJSON := minecraft.LoadCapesByName(IGN)
 	playerBadgesJSON := minecraft.LoadBadgesByName(IGN)
 

@@ -23,7 +23,7 @@ func formatUUID(uuid string) string {
 }
 
 // GetUUID prend un nom de joueur et retourne son UUID formaté
-func GetUUID(name string) string {
+func GetUUID(name string) (string, string) {
 	// Construire l'URL
 	url := fmt.Sprintf("https://api.mojang.com/users/profiles/minecraft/%s", name)
 
@@ -31,21 +31,21 @@ func GetUUID(name string) string {
 	resp, err := http.Get(url)
 	if err != nil {
 		fmt.Printf("Erreur lors de la requête HTTP : %v\n", err)
-		return ""
+		return "", name
 	}
 	defer resp.Body.Close()
 
 	// Vérifier le statut HTTP
 	if resp.StatusCode != http.StatusOK {
 		fmt.Printf("Erreur : statut HTTP invalide %d\n", resp.StatusCode)
-		return ""
+		return "", name
 	}
 
 	// Lire le corps de la réponse
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Printf("Erreur lors de la lecture de la réponse : %v\n", err)
-		return ""
+		return "", name
 	}
 
 	// Décoder la réponse JSON
@@ -53,9 +53,9 @@ func GetUUID(name string) string {
 	err = json.Unmarshal(body, &response)
 	if err != nil {
 		fmt.Printf("Erreur de décodage JSON : %v\n", err)
-		return ""
+		return "", name
 	}
 
 	// Retourner l'UUID formaté
-	return formatUUID(response.ID)
+	return formatUUID(response.ID), response.Name
 }
