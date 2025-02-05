@@ -182,6 +182,5 @@ func GetCapes(name string, capeGroups CapeGroups) []map[string]interface{} {
 			}
 		}
 	}
-	fmt.Println(capesList)
 	return capesList
 }

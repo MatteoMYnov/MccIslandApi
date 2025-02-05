@@ -168,6 +168,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	if IGN == "" {
 		IGN = minecraft.GetRandomName()
 	}
+	fmt.Println(IGN)
 
 	playerClass := ""
 	if !minecraft.IsValidIGN(IGN) {
@@ -441,7 +442,7 @@ func main() {
 	http.HandleFunc("/capes", capesHandler)
 	http.HandleFunc("/classement", classementHandler)
 
-	if err := http.ListenAndServe(":1600", nil); err != nil {
+	if err := http.ListenAndServe(":1601", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
