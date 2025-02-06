@@ -72,6 +72,9 @@ type DataMenuPage struct {
 	BadgeURLs            []BadgeInfo
 	PlayerClass          string
 	BackgroundUUID       string
+	BackgroundNavbar     string
+	BackgroundDark       string
+	BackgroundLight      string
 	MccRank              string
 	Evolution            string
 	CrownLevel           string
@@ -189,16 +192,23 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	stylesFile := "./site/infos/styles.json"
 	var stylesData struct {
 		Players []struct {
-			UUID string `json:"uuid"`
+			UUID   string `json:"uuid"`
+			Navbar string `json:"navbar"`
+			Dark   string `json:"dark"`
+			Light  string `json:"light"`
 		} `json:"players"`
 	}
 
-	backgroundUUID := ""
+	var backgroundUUID, backgroundNavbar, backgroundDark, backgroundLight string
 	if fileContent, err := ioutil.ReadFile(stylesFile); err == nil {
 		if json.Unmarshal(fileContent, &stylesData) == nil {
+			// Parcourez les joueurs et recherchez celui qui correspond à l'UUID du joueur
 			for _, player := range stylesData.Players {
 				if player.UUID == playerUUID {
-					backgroundUUID = playerUUID
+					backgroundUUID = player.UUID
+					backgroundNavbar = player.Navbar
+					backgroundDark = player.Dark
+					backgroundLight = player.Light
 					break
 				}
 			}
@@ -317,13 +327,16 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	infos := DataMenuPage{
-		Name:           IGN,
-		ListCapes:      prioritizedCapes,
-		ImageURLs:      prioritizedCapeInfos,
-		BadgeURLs:      badgeInfos,
-		PlayerClass:    playerClass,
-		BackgroundUUID: backgroundUUID,
-		MccRank:        MccRank,
+		Name:             IGN,
+		ListCapes:        prioritizedCapes,
+		ImageURLs:        prioritizedCapeInfos,
+		BadgeURLs:        badgeInfos,
+		PlayerClass:      playerClass,
+		BackgroundUUID:   backgroundUUID,
+		BackgroundNavbar: backgroundNavbar,
+		BackgroundDark:   backgroundDark,
+		BackgroundLight:  backgroundLight,
+		MccRank:          MccRank,
 		// Crown
 		Evolution:        fmt.Sprintf("%d", mccInfos.Evolution),
 		CrownLevel:       fmt.Sprintf("%d", mccInfos.CrownLevel),
@@ -498,7 +511,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1615", nil); err != nil {
+	if err := http.ListenAndServe(":1616", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

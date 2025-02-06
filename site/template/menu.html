@@ -7,26 +7,19 @@
         <link rel="stylesheet" href="../styles/menu.css?v=1.0">
         <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
     </head>
-    {{if .BackgroundUUID}}
-        <body style="--bg-image-url: url('../img/utilities/perplayers/{{.BackgroundUUID}}/bg.png');">
-    {{else}}
-        <body style="--bg-image-url: url('../img/utilities/bg.png');">
-    {{end}}
+    <body style="--bg-image-url: url('../img/utilities{{if .BackgroundUUID}}/perplayers/{{.BackgroundUUID}}/bg.png{{else}}/bg.png{{end}}');">
         <div id="bgdark"></div>
-        <header class="navbar">
+        <header class="navbar" style="background-color: {{if .BackgroundUUID}}{{.BackgroundNavbar}}; border-bottom: 3px solid {{.BackgroundLight}}{{else}}#6E2F2F; border-bottom: 3px solid #B7573A{{end}};">
             <nav>
                 <ul>
                     <li>
                         <form action="/menu" method="get" class="input-group">
                             <img src="../img/utilities/refresh.png" data-tippy-content="Random Player" class="refresh no-select cursor" onclick="refreshSearch()">
-                            <input type="text" name="q" placeholder="Find Player" class="find-player"
-                                id="playerInput" required>
-                            <button class="show-button cursor" type="submit">Show</button>
+                            <input type="text" name="q" placeholder="Find Player" class="find-player" id="playerInput" required style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">
+                            <button class="show-button cursor" type="submit" style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">Show</button>
                         </form>
                     </li>
-                    <li class="page-cath">
-                        Menu
-                    </li>
+                    <li class="page-cath" style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">Menu</li>
                 </ul>
             </nav>
         </header>
