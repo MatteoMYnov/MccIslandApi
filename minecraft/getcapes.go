@@ -123,8 +123,6 @@ func LoadCapesFromFile(filePath string) (CapeGroups, error) {
 	return capes, nil
 }
 
-// Fonction principale pour obtenir les capes
-// Fonction pour obtenir les capes du joueur avec leur score associé
 func GetCapes(name string, capeGroups CapeGroups) []map[string]interface{} {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
@@ -133,11 +131,6 @@ func GetCapes(name string, capeGroups CapeGroups) []map[string]interface{} {
 		return nil
 	}
 	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		fmt.Printf("Erreur : statut HTTP invalide %d\n", resp.StatusCode)
-		return nil
-	}
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
