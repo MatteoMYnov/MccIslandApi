@@ -4,11 +4,11 @@ const playerCards = document.querySelectorAll('.player-card');
 // Ajouter un événement de clic sur chaque carte
 playerCards.forEach(card => {
     card.addEventListener('click', function() {
-        // Récupérer le nom du joueur à partir de l'attribut data-playeractualname
-        const playerName = card.getAttribute('data-playeractualname');
+        // Récupérer l'UUID du joueur à partir de l'attribut data-playeruuid
+        const playerUUID = card.getAttribute('data-playeruuid');
         
-        // Rediriger vers la page /menu?q=playerName
-        window.location.href = `/menu?q=${playerName}`;
+        // Rediriger vers la page en utilisant l'UUID dans l'URL
+        window.location.href = `/menu?q=${playerUUID}`;
     });
 });
 

@@ -37,7 +37,7 @@
                         <div class="interclassement-body">
                             {{if .Classement}}
                                 {{range .Classement}}
-                                    <div class="player-card" data-playername="{{.UUID}}" data-playeractualname="{{.ActualName}}">
+                                    <div class="player-card" data-playeruuid="{{.UUID}}" data-playeractualname="{{.ActualName}}">
                                         <div class="player-info">
                                             <p class="rank">#{{.Rank}}</p>
                                             <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select no-select">
