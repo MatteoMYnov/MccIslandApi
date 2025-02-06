@@ -168,8 +168,8 @@
                             </div>
                         </div>
                         <!-- ICI FRIENDS -->
-                        <div class="friends-card cursor" id="friendsCard">
-                            <div class="friends-header" onclick="toggleFriends()">
+                        <div class="friends-card" id="friendsCard">
+                            <div class="friends-header cursor" onclick="toggleFriends()">
                                 <img src="../img/mcc/utilities/friends.png" alt="Friends Icon" class="friends-icon no-select">
                                 <h2>Friends</h2>
                                 <img id="arrow" src="../img/mcc/utilities/arrow.png" alt="Arrow" class="arrow no-select">
@@ -178,7 +178,7 @@
                                 <div class="interfriends-body">
                                     {{if .Friends}}
                                         {{range .Friends}}
-                                            <div class="friend-card" data-playername="{{.Username}}" onclick="searchPlayer(this)">
+                                            <div class="friend-card cursor" data-playername="{{.Username}}" onclick="searchPlayer(this)">
                                                 <div class="friend-info">
                                                     <img src="https://mc-heads.net/head/{{.Username}}" class="friends-icon no-select">
                                                     <img src="../img/mcc/crowns/{{if .CrownLevel.Evolution}}{{.CrownLevel.Evolution}}.png{{else}}0.png{{end}}" class="friends-icon no-select" data-tippy-content="{{.CrownLevel.Level}}">
