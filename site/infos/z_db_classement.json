@@ -2125,6 +2125,12 @@
             "actualname": "BurningBarn"
         },
         {
+            "uuid": "e4446f0b-9b2a-4ccd-bbe1-5c6c12dd85f9",
+            "capes": 8,
+            "score": 8,
+            "actualname": "LolFoxy2"
+        },
+        {
             "uuid": "e6b5c088-0680-44df-9e1b-9bf11792291b",
             "capes": 7,
             "score": 45,
@@ -2173,6 +2179,12 @@
             "actualname": "Fluffion"
         },
         {
+            "uuid": "bef46daf-79b4-4c79-af0c-bc6a480fc7c4",
+            "capes": 7,
+            "score": 7,
+            "actualname": "Marzenia"
+        },
+        {
             "uuid": "069a79f4-44e9-4726-a5be-fca90e38aaf5",
             "capes": 6,
             "score": 38,
@@ -2203,6 +2215,12 @@
             "actualname": "Dinnerbone"
         },
         {
+            "uuid": "542189cf-68fb-415b-bbe6-c60da626e65a",
+            "capes": 5,
+            "score": 25,
+            "actualname": "Red"
+        },
+        {
             "uuid": "f6b1914d-b176-4850-8a06-b50380412b85",
             "capes": 5,
             "score": 20,
@@ -2213,6 +2231,12 @@
             "capes": 5,
             "score": 19,
             "actualname": "kent600"
+        },
+        {
+            "uuid": "",
+            "capes": 5,
+            "score": 7,
+            "actualname": "Conem"
         },
         {
             "uuid": "a6eb2491-7365-4649-a795-2f032c9919f0",

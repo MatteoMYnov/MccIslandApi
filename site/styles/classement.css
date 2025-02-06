@@ -393,3 +393,24 @@ main {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
     color:yellow !important;
 }
+
+.cursor {
+    cursor: pointer;
+}
+
+.no-select {
+    -webkit-user-select: none; /* Pour Safari */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer/Edge */
+    user-select: none;         /* Pour les navigateurs modernes */
+}
+
+.go-left {
+    position: absolute;
+    left: 5vh;
+}
+
+.go-right {
+    position: absolute;
+    right: 5vh;
+}

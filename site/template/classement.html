@@ -24,8 +24,14 @@
                 <!-- Classement Card -->
                 <div class="players-card" id="playersCard">
                     <div class="stats-header">
-                        <img src="../img/mcc/trophies/total_trophies.png" alt="Classement Icon" class="classement-icon">
+                        {{ if .HasPrev }}
+                            <img src="../img/mcc/utilities/arrow-left.png" alt="Classement Icon" class="classement-icon go-left cursor no-select">
+                        {{ end }}
+                        <img src="../img/mcc/trophies/total_trophies.png" alt="Classement Icon" class="classement-icon no-select">
                         <h2>Classement des Joueurs</h2>
+                        {{ if .HasNext }}
+                        <img src="../img/mcc/utilities/arrow-right.png" alt="Classement Icon" class="classement-icon go-right cursor no-select">
+                        {{ end }}
                     </div>
                     <div class="classement-body" id="classementBody">
                         <div class="interclassement-body">
@@ -34,7 +40,7 @@
                                     <div class="player-card" data-playername="{{.UUID}}" data-playeractualname="{{.ActualName}}">
                                         <div class="player-info">
                                             <p class="rank">#{{.Rank}}</p>
-                                            <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select">
+                                            <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select no-select">
                                             <p>{{.ActualName}}</p>
                                         </div>
                                     </div>
@@ -65,20 +71,6 @@
         </main>
         <script src="../js/scroll.js"></script>
         <script src="../js/modal.js"></script>
-        <script>
-            // Sélectionner tous les éléments .player-card
-            const playerCards = document.querySelectorAll('.player-card');
-
-            // Ajouter un événement de clic sur chaque carte
-            playerCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    // Récupérer le nom du joueur à partir de l'attribut data-playeractualname
-                    const playerName = card.getAttribute('data-playeractualname');
-                    
-                    // Rediriger vers la page /menu?q=playerName
-                    window.location.href = `/menu?q=${playerName}`;
-                });
-            });
-        </script>
+        <script src="../js/classement.js"></script>
     </body>
 </html>
