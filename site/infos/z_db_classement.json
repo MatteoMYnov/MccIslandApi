@@ -1045,16 +1045,16 @@
             "actualname": "FlowingWolf"
         },
         {
-            "uuid": "f4e6410c-81ad-4db1-9de0-137650ee2851",
-            "capes": 9,
-            "score": 13,
-            "actualname": "Mxn"
-        },
-        {
             "uuid": "ed94c3ac-e368-48b4-afc9-ea6d356d29fe",
             "capes": 9,
             "score": 13,
             "actualname": "Natazha"
+        },
+        {
+            "uuid": "f4e6410c-81ad-4db1-9de0-137650ee2851",
+            "capes": 9,
+            "score": 13,
+            "actualname": "Mxn"
         },
         {
             "uuid": "0eefdf6a-74a4-4367-a941-1b885532f713",
@@ -1171,16 +1171,16 @@
             "actualname": "Beb"
         },
         {
-            "uuid": "45b808d2-adf3-4b51-9b3b-b92567e0886f",
-            "capes": 9,
-            "score": 12,
-            "actualname": "CheesierPasta"
-        },
-        {
             "uuid": "2d8cf844-fa34-41c3-8d4e-597b32697909",
             "capes": 9,
             "score": 12,
             "actualname": "destruc7i0n"
+        },
+        {
+            "uuid": "45b808d2-adf3-4b51-9b3b-b92567e0886f",
+            "capes": 9,
+            "score": 12,
+            "actualname": "CheesierPasta"
         },
         {
             "uuid": "37698bcc-cd80-40b6-8b1b-1c394250cd58",
@@ -2158,7 +2158,7 @@
             "uuid": "bb6552ab-f4da-4d90-84cb-3d2d27549f4f",
             "capes": 7,
             "score": 7,
-            "actualname": "Iuligame"
+            "actualname": "iuligame"
         },
         {
             "uuid": "54efc6ef-bdd5-4749-96c3-d4b5d66ca08c",
