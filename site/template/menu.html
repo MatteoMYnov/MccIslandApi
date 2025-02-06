@@ -7,7 +7,11 @@
         <link rel="stylesheet" href="../styles/menu.css?v=1.0">
         <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
     </head>
-    <body>
+    {{if .BackgroundUUID}}
+        <body style="--bg-image-url: url('../img/utilities/perplayers/{{.BackgroundUUID}}/bg.png');">
+    {{else}}
+        <body style="--bg-image-url: url('../img/utilities/bg.png');">
+    {{end}}
         <div id="bgdark"></div>
         <header class="navbar">
             <nav>

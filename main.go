@@ -71,6 +71,7 @@ type DataMenuPage struct {
 	ImageURLs            []CapeInfo
 	BadgeURLs            []BadgeInfo
 	PlayerClass          string
+	BackgroundUUID       string
 	MccRank              string
 	Evolution            string
 	CrownLevel           string
@@ -185,6 +186,25 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	playerCapesJSON := minecraft.LoadCapesByName(IGN)
 	playerBadgesJSON := minecraft.LoadBadgesByName(IGN)
 
+	stylesFile := "./site/infos/styles.json"
+	var stylesData struct {
+		Players []struct {
+			UUID string `json:"uuid"`
+		} `json:"players"`
+	}
+
+	backgroundUUID := ""
+	if fileContent, err := ioutil.ReadFile(stylesFile); err == nil {
+		if json.Unmarshal(fileContent, &stylesData) == nil {
+			for _, player := range stylesData.Players {
+				if player.UUID == playerUUID {
+					backgroundUUID = playerUUID
+					break
+				}
+			}
+		}
+	}
+
 	var listCapes []string
 	capeInfos := []CapeInfo{}
 	for _, cape := range playerCapesJSON {
@@ -297,12 +317,13 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	infos := DataMenuPage{
-		Name:        IGN,
-		ListCapes:   prioritizedCapes,
-		ImageURLs:   prioritizedCapeInfos,
-		BadgeURLs:   badgeInfos,
-		PlayerClass: playerClass,
-		MccRank:     MccRank,
+		Name:           IGN,
+		ListCapes:      prioritizedCapes,
+		ImageURLs:      prioritizedCapeInfos,
+		BadgeURLs:      badgeInfos,
+		PlayerClass:    playerClass,
+		BackgroundUUID: backgroundUUID,
+		MccRank:        MccRank,
 		// Crown
 		Evolution:        fmt.Sprintf("%d", mccInfos.Evolution),
 		CrownLevel:       fmt.Sprintf("%d", mccInfos.CrownLevel),
@@ -477,7 +498,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1611", nil); err != nil {
+	if err := http.ListenAndServe(":1615", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
