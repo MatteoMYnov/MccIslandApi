@@ -617,8 +617,10 @@ body.modal-open {
 }
 
 .modal-image-item {
-    width: 100px;
+    max-width: 100px;
+    width: auto;
     height: auto;
+    image-rendering: pixelated;
     border-radius: 5px;
     object-fit: cover;
     background-color: #222;

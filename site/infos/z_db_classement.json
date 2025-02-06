@@ -2125,6 +2125,12 @@
             "actualname": "BurningBarn"
         },
         {
+            "uuid": "e6b5c088-0680-44df-9e1b-9bf11792291b",
+            "capes": 7,
+            "score": 45,
+            "actualname": "Grumm"
+        },
+        {
             "uuid": "b5137553-a0e8-4116-9b78-065d18e48d5f",
             "capes": 7,
             "score": 8,
@@ -2189,6 +2195,12 @@
             "capes": 6,
             "score": 7,
             "actualname": "Here"
+        },
+        {
+            "uuid": "61699b2e-d327-4a01-9f1e-0ea8c3f06bc6",
+            "capes": 5,
+            "score": 26,
+            "actualname": "Dinnerbone"
         },
         {
             "uuid": "f6b1914d-b176-4850-8a06-b50380412b85",
