@@ -888,7 +888,12 @@ body.modal-open {
 }
 
 /* FRIENDS */
-.friends-card {
+.rolls-card {
+    display: grid;
+    gap: 8px;
+}
+
+.roll-card {
     width: 99%;
     background-color: #292929;
     border: 2px solid #292929; /* Ajout de la bordure */
@@ -898,7 +903,27 @@ body.modal-open {
     transition: max-height 0.3s ease-in-out;
 }
 
-.friends-body {
+.roll-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #292929;
+}
+
+.roll-header h2 {
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.roll-icon {
+    image-rendering: pixelated;
+    width: 40px;
+    height: 40px;
+}
+
+.roll-body {
     display: flex;
     flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
     gap: 10px; /* Espace entre les cartes de joueurs */
@@ -939,20 +964,6 @@ body.modal-open {
     font-size: 16px;
     margin: 0; /* Retirer les marges par défaut */
     white-space: nowrap; /* Empêche le texte de s'étirer sur plusieurs lignes */
-}
-
-.friends-header {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 15px;
-    background-color: #292929;
-}
-
-.friends-header h2 {
-    margin-left: 10px;
-    color: white;
-    font-size: 18px;
 }
 
 .friends-icon {

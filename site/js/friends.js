@@ -1,12 +1,12 @@
-function toggleFriends() {
-    const friendsBody = document.getElementById("friendsBody");
-    const arrow = document.getElementById("arrow");
+function toggleRoll(bodyId, arrowId) {
+    const RollBody = document.getElementById(bodyId);
+    const arrow = document.getElementById(arrowId);
 
-    if (friendsBody.style.maxHeight) {
-        friendsBody.style.maxHeight = null;
+    if (RollBody.style.maxHeight) {
+        RollBody.style.maxHeight = null;
         arrow.style.transform = "rotate(0deg)"; // Remet la flèche à sa position initiale
     } else {
-        friendsBody.style.maxHeight = friendsBody.scrollHeight + "px";
+        RollBody.style.maxHeight = RollBody.scrollHeight + "px";
         arrow.style.transform = "rotate(-90deg)"; // Fait tourner la flèche
     }
 }
