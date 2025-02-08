@@ -2221,6 +2221,12 @@
             "actualname": "Here"
         },
         {
+            "uuid": "3de1be56-fd46-403b-b419-903744efe31e",
+            "capes": 6,
+            "score": 6,
+            "actualname": "refortor"
+        },
+        {
             "uuid": "61699b2e-d327-4a01-9f1e-0ea8c3f06bc6",
             "capes": 5,
             "score": 26,
@@ -2279,6 +2285,12 @@
             "capes": 4,
             "score": 4,
             "actualname": "Miclee"
+        },
+        {
+            "uuid": "3e5ef799-73bc-44fb-a279-b015c4fb4c84",
+            "capes": 4,
+            "score": 4,
+            "actualname": "iTMG"
         },
         {
             "uuid": "a8179ff3-c201-4a75-bdaa-9d14aca6f83f",
@@ -2411,6 +2423,18 @@
             "capes": 1,
             "score": 10,
             "actualname": "Holofoil"
+        },
+        {
+            "uuid": "21d2c289-b75f-4513-9f4f-85cc9e8c271b",
+            "capes": 1,
+            "score": 8,
+            "actualname": "uhDebug"
+        },
+        {
+            "uuid": "ce1e4038-fe6c-43e0-bbe1-b0fe55f0969f",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Delth"
         },
         {
             "uuid": "7c4a2fca-b627-4773-b8c7-22c76f3426e0",

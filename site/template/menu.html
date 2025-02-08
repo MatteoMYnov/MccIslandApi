@@ -205,7 +205,7 @@
                                     {{if ne .GameStats.TotalGames 0}} <!-- Teste si TotalGames est différent de 0 -->
                                         <div class="graph-body">
                                             <div class="graph-pre-header">
-                                                <img src="../img/mcc/games/games.png" class="roll-icon">
+                                                <img src="../img/mcc/games/games.png" class="roll-icon no-select">
                                                 <p style="color: white;">General Stats</p>
                                             </div> 
                                             <div class="general-stats">
@@ -214,32 +214,32 @@
                                                     <p style="color: white;">Games Played</p>
                                                     <div class="graph-games-played">
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/sky-battle.png" data-tippy-content="Sky Battle">
-                                                            <p class="graph-numbers-content">{{.GameStats.SBGames}}</p>
+                                                            <img src="../img/mcc/games/sky-battle.png" class="no-select" data-tippy-content="Sky Battle">
+                                                            <p class="graph-numbers-content">- {{.GameStats.SBGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/battle-box.png" data-tippy-content="Battle Box">
-                                                            <p class="graph-numbers-content">{{.GameStats.BBGames}}</p>
+                                                            <img src="../img/mcc/games/battle-box.png" class="no-select" data-tippy-content="Battle Box">
+                                                            <p class="graph-numbers-content">- {{.GameStats.BBGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/tgttos.png" data-tippy-content="TGTTOS">
-                                                            <p class="graph-numbers-content">{{.GameStats.TGTTOSGames}}</p>
+                                                            <img src="../img/mcc/games/tgttos.png" class="no-select" data-tippy-content="TGTTOS">
+                                                            <p class="graph-numbers-content">- {{.GameStats.TGTTOSGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/hole-in-the-wall.png" data-tippy-content="Hole in the Wall">
-                                                            <p class="graph-numbers-content">{{.GameStats.HITWGames}}</p>
+                                                            <img src="../img/mcc/games/hole-in-the-wall.png" class="no-select" data-tippy-content="Hole in the Wall">
+                                                            <p class="graph-numbers-content">- {{.GameStats.HITWGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/rocket-spleef.png" data-tippy-content="Rocket Spleef Rush">
-                                                            <p class="graph-numbers-content">{{.GameStats.RSGames}}</p>
+                                                            <img src="../img/mcc/games/rocket-spleef.png" class="no-select" data-tippy-content="Rocket Spleef Rush">
+                                                            <p class="graph-numbers-content">- {{.GameStats.RSGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/dynaball.png" data-tippy-content="Dynaball">
-                                                            <p class="graph-numbers-content">{{.GameStats.DBGames}}</p>
+                                                            <img src="../img/mcc/games/dynaball.png" class="no-select" data-tippy-content="Dynaball">
+                                                            <p class="graph-numbers-content">- {{.GameStats.DBGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/pws.png" data-tippy-content="Parkou Warrior Survivor">
-                                                            <p class="graph-numbers-content">{{.GameStats.PWSGames}}</p>
+                                                            <img src="../img/mcc/games/pws.png" class="no-select" data-tippy-content="Parkou Warrior Survivor">
+                                                            <p class="graph-numbers-content">- {{.GameStats.PWSGames}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
