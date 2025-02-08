@@ -1048,8 +1048,9 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    pad: 15px;
+    gap: 15px;
     width: 100%;
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
 }
 .general-stats {
     width: 100%;
@@ -1059,15 +1060,16 @@ body.modal-open {
 .general-stats {
     width: 100%;
 }
-.general-stats h3 {
+.general-stats p {
     margin-top: -5px;
 }
 .graph-numbers {
+    margin-top: -10px;
     width:30%;
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
 }
 .graph-numbers-content {
     height: 13%;
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     margin: -10px;
 }
 .graph-games-played {

@@ -206,39 +206,39 @@
                                         <div class="graph-body">
                                             <div class="graph-pre-header">
                                                 <img src="../img/mcc/games/games.png" class="roll-icon">
-                                                <h2>General Stats</h2>
+                                                <p style="color: white;">General Stats</p>
                                             </div> 
                                             <div class="general-stats">
                                                 <div id="GamesGraph" class="gamesgraph"></div>
                                                 <div class="graph-numbers">
-                                                    <h3>Games Played</h3>
+                                                    <p style="color: white;">Games Played</p>
                                                     <div class="graph-games-played">
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/sky-battle.png">
+                                                            <img src="../img/mcc/games/sky-battle.png" data-tippy-content="Sky Battle">
                                                             <p class="graph-numbers-content">{{.GameStats.SBGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/battle-box.png">
+                                                            <img src="../img/mcc/games/battle-box.png" data-tippy-content="Battle Box">
                                                             <p class="graph-numbers-content">{{.GameStats.BBGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/tgttos.png">
+                                                            <img src="../img/mcc/games/tgttos.png" data-tippy-content="TGTTOS">
                                                             <p class="graph-numbers-content">{{.GameStats.TGTTOSGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/hole-in-the-wall.png">
+                                                            <img src="../img/mcc/games/hole-in-the-wall.png" data-tippy-content="Hole in the Wall">
                                                             <p class="graph-numbers-content">{{.GameStats.HITWGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/rocket-spleef.png">
+                                                            <img src="../img/mcc/games/rocket-spleef.png" data-tippy-content="Rocket Spleef Rush">
                                                             <p class="graph-numbers-content">{{.GameStats.RSGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/dynaball.png">
+                                                            <img src="../img/mcc/games/dynaball.png" data-tippy-content="Dynaball">
                                                             <p class="graph-numbers-content">{{.GameStats.DBGames}}</p>
                                                         </div>
                                                         <div class="game-graph-content">
-                                                            <img src="../img/mcc/games/pws.png">
+                                                            <img src="../img/mcc/games/pws.png" data-tippy-content="Parkou Warrior Survivor">
                                                             <p class="graph-numbers-content">{{.GameStats.PWSGames}}</p>
                                                         </div>
                                                     </div>
@@ -246,7 +246,7 @@
                                             </div>
                                         </div>
                                     {{else}}
-                                        <p> Le Joueur n'a aucune stats sur le serveur </p>
+                                        <p>Le Joueur n'a aucune stats sur le serveur, ou n'a pas les API d'ouverts</p>
                                     {{end}}
                                 </div>
                             </div>
@@ -315,8 +315,8 @@
                             { y: '{{.GameStats.BBGames}}', label: "Battle Box" },
                             { y: '{{.GameStats.TGTTOSGames}}', label: "TGTTOS" },
                             { y: '{{.GameStats.HITWGames}}', label: "Hole in the wall" },
-                            { y: '{{.GameStats.RSGames}}', label: "Rocket Spleef" },
-                            { y: '{{.GameStats.DBGames}}', label: "DynaBall" },
+                            { y: '{{.GameStats.RSGames}}', label: "Rocket Spleef Rush" },
+                            { y: '{{.GameStats.DBGames}}', label: "Dynaball" },
                             { y: '{{.GameStats.PWSGames}}', label: "Parkour Survivor" }
                         ]
                     }],
