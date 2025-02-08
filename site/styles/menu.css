@@ -191,6 +191,21 @@ main {
     margin-right: 10px;
 }
 
+.theme-image {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    right: 3vh;
+    image-rendering: pixelated;
+    scale: 1;
+    transition: transform 0.3s ease;
+}
+
+.theme-image:hover {
+    transform: scale(1.15);
+}
+
 .playerName {
     font-size: 35px;
     font-weight: bold;
@@ -1015,4 +1030,59 @@ body.modal-open {
     height: auto;
     image-rendering: pixelated;
     margin-right: 2vh;
+}
+
+/* PIE */
+.canvasjs-chart-credit {
+    display: none !important;
+}
+.gamesgraph {
+    height: 250px;
+    width: 70%;
+    left: 10px;
+}
+.graph-body {
+    width: 100%;
+}
+.graph-pre-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pad: 15px;
+    width: 100%;
+}
+.general-stats {
+    width: 100%;
+    display: flex;
+}
+
+.general-stats {
+    width: 100%;
+}
+.general-stats h3 {
+    margin-top: -5px;
+}
+.graph-numbers {
+    width:30%;
+}
+.graph-numbers-content {
+    height: 13%;
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    margin: -10px;
+}
+.graph-games-played {
+    padding-bottom: 10px;
+    align-items: center;
+    justify-items: left;
+}
+.game-graph-content {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: left;
+}
+.game-graph-content img{
+    width: 32px;
+    height: auto;
+    image-rendering: pixelated;
 }

@@ -13,6 +13,17 @@ type GraphQLRequest struct {
 	Variables map[string]string `json:"variables,omitempty"`
 }
 
+type Statistics struct {
+	TotalGames  int `json:"total_games"`
+	SBGames     int `json:"sb_games"`
+	BBGames     int `json:"bb_games"`
+	TGTTOSGames int `json:"tgttos_games"`
+	HITWGames   int `json:"hitw_games"`
+	RSGames     int `json:"rs_games"`
+	DBGames     int `json:"db_games"`
+	PWSGames    int `json:"pws_games"`
+}
+
 type NextLevelProgress struct {
 	CrownObtained   int `json:"obtained"`
 	CrownObtainable int `json:"obtainable"`
@@ -58,6 +69,7 @@ type Friend struct {
 }
 
 type Player struct {
+	Statistics  Statistics `json:"statistics"`
 	UUID        string     `json:"uuid"`
 	Username    string     `json:"username"`
 	Ranks       []string   `json:"ranks"`
@@ -81,6 +93,7 @@ type APIConfig struct {
 }
 
 type MccInfos struct {
+	Statistics      Statistics  `json:"statistics"`
 	Ranks           []string    `json:"ranks"`
 	CrownLevel      int         `json:"crownLevel"`
 	Evolution       int         `json:"evolution"`
@@ -117,8 +130,18 @@ func GetInfos(UUID string) *MccInfos {
 
 	// Définir la requête GraphQL
 	query := `
-		query player($uuid: UUID!) {
+		query player($uuid: UUID!) {	
 			player(uuid: $uuid) {
+				statistics {
+					total_games: rotationValue(statisticKey: "games_played")
+					sb_games: rotationValue(statisticKey: "sky_battle_quads_games_played")
+					bb_games: rotationValue(statisticKey: "battle_box_quads_games_played")
+					tgttos_games: rotationValue(statisticKey: "tgttos_games_played")
+					hitw_games: rotationValue(statisticKey: "hole_in_the_wall_games_played")
+					rs_games: rotationValue(statisticKey: "rocket_spleef_games_played")
+					db_games: rotationValue(statisticKey: "dynaball_games_played")
+					pws_games: rotationValue(statisticKey: "pw_survival_games_played")
+					}
 				ranks
 				crownLevel {
 					level
@@ -223,6 +246,16 @@ func GetInfos(UUID string) *MccInfos {
 
 	// Mapper la réponse aux informations de MCC
 	Infos := &MccInfos{
+		Statistics: Statistics{
+			TotalGames:  response.Data.Player.Statistics.TotalGames,
+			SBGames:     response.Data.Player.Statistics.SBGames,
+			BBGames:     response.Data.Player.Statistics.BBGames,
+			TGTTOSGames: response.Data.Player.Statistics.TGTTOSGames,
+			HITWGames:   response.Data.Player.Statistics.HITWGames,
+			RSGames:     response.Data.Player.Statistics.RSGames,
+			DBGames:     response.Data.Player.Statistics.DBGames,
+			PWSGames:    response.Data.Player.Statistics.PWSGames,
+		},
 		Ranks:           response.Data.Player.Ranks,
 		CrownLevel:      response.Data.Player.CrownLevel.Level,
 		Evolution:       response.Data.Player.CrownLevel.Evolution,

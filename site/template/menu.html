@@ -31,6 +31,9 @@
                     <div class="profile-info">
                         <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image no-select">
                         <p id="playerName" class="{{.PlayerClass}}">{{.Name}}</p>
+                        {{if .BackgroundUUID}}
+                            <img src="../img/mcc/utilities/theme.png" alt="Player Using Theme" class="theme-image no-select" data-tippy-content="Ce Joueur a demandé au responsable du site d'avoir un thème custom">
+                        {{end}}
                     </div>
                 </div>
                 <!-- Minecraft Stats Card -->
@@ -199,7 +202,52 @@
                                     <img id="mccgames-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select">
                                 </div>
                                 <div class="roll-body" id="MccGamesBody">
-                                    <p> PlaceHolder !!! </p>
+                                    {{if ne .GameStats.TotalGames 0}} <!-- Teste si TotalGames est différent de 0 -->
+                                        <div class="graph-body">
+                                            <div class="graph-pre-header">
+                                                <img src="../img/mcc/games/games.png" class="roll-icon">
+                                                <h2>General Stats</h2>
+                                            </div> 
+                                            <div class="general-stats">
+                                                <div id="GamesGraph" class="gamesgraph"></div>
+                                                <div class="graph-numbers">
+                                                    <h3>Games Played</h3>
+                                                    <div class="graph-games-played">
+                                                        <div class="game-graph-content">
+                                                            <img src="../img/mcc/games/sky-battle.png">
+                                                            <p class="graph-numbers-content">{{.GameStats.SBGames}}</p>
+                                                        </div>
+                                                        <div class="game-graph-content">
+                                                            <img src="../img/mcc/games/battle-box.png">
+                                                            <p class="graph-numbers-content">{{.GameStats.BBGames}}</p>
+                                                        </div>
+                                                        <div class="game-graph-content">
+                                                            <img src="../img/mcc/games/tgttos.png">
+                                                            <p class="graph-numbers-content">{{.GameStats.TGTTOSGames}}</p>
+                                                        </div>
+                                                        <div class="game-graph-content">
+                                                            <img src="../img/mcc/games/hole-in-the-wall.png">
+                                                            <p class="graph-numbers-content">{{.GameStats.HITWGames}}</p>
+                                                        </div>
+                                                        <div class="game-graph-content">
+                                                            <img src="../img/mcc/games/rocket-spleef.png">
+                                                            <p class="graph-numbers-content">{{.GameStats.RSGames}}</p>
+                                                        </div>
+                                                        <div class="game-graph-content">
+                                                            <img src="../img/mcc/games/dynaball.png">
+                                                            <p class="graph-numbers-content">{{.GameStats.DBGames}}</p>
+                                                        </div>
+                                                        <div class="game-graph-content">
+                                                            <img src="../img/mcc/games/pws.png">
+                                                            <p class="graph-numbers-content">{{.GameStats.PWSGames}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {{else}}
+                                        <p> Le Joueur n'a aucune stats sur le serveur </p>
+                                    {{end}}
                                 </div>
                             </div>
                         </div>
@@ -239,6 +287,7 @@
         <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
         <script src ="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
         <script src ="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script>
             function redirectToRankPage(rankPage) {
                 window.location.href = "/classement/" + rankPage;
@@ -249,6 +298,31 @@
             tippy("[data-tippy-content]", {
                 duration: 500,
             });
+            window.onload = function () {
+                var chart = new CanvasJS.Chart("GamesGraph", {
+                    backgroundColor: "transparent",
+                    theme: "dark2",
+                    data: [{
+                        type: "pie",
+                        startAngle: 60,
+                        toolTipContent: "<b>{label}</b>: {y} Games",
+                        radius: 100,
+                        dataLabels: {
+                            fontColor: "white" // Couleur du texte des segments en blanc
+                        },
+                        dataPoints: [
+                            { y: '{{.GameStats.SBGames}}', label: "Sky Battle" },
+                            { y: '{{.GameStats.BBGames}}', label: "Battle Box" },
+                            { y: '{{.GameStats.TGTTOSGames}}', label: "TGTTOS" },
+                            { y: '{{.GameStats.HITWGames}}', label: "Hole in the wall" },
+                            { y: '{{.GameStats.RSGames}}', label: "Rocket Spleef" },
+                            { y: '{{.GameStats.DBGames}}', label: "DynaBall" },
+                            { y: '{{.GameStats.PWSGames}}', label: "Parkour Survivor" }
+                        ]
+                    }],
+                });
+                chart.render();
+            }
         </script>
     </body>
 </html>

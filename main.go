@@ -103,6 +103,7 @@ type DataMenuPage struct {
 	MaxANGLERTrophies    string
 	BonusTrophies        string
 	Friends              []FriendInfo
+	GameStats            mcc.Statistics
 	// Player Rank
 	PlayerRank     int
 	PlayerRankPage int
@@ -327,6 +328,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	infos := DataMenuPage{
+		//Player
 		Name:             IGN,
 		ListCapes:        prioritizedCapes,
 		ImageURLs:        prioritizedCapeInfos,
@@ -367,6 +369,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		MaxANGLERTrophies:    mcc.FormatNumberWithSpaces(mccInfos.TrophiesANGLER.Obtainable),
 		BonusTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Bonus),
 		Friends:              convertToFriendInfo(mccInfos.Friends),
+		GameStats:            mccInfos.Statistics,
 		// Player Rank
 		PlayerRank:     playerRank,
 		PlayerRankPage: playerRankPage,
@@ -511,7 +514,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1623", nil); err != nil {
+	if err := http.ListenAndServe(":1632", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
