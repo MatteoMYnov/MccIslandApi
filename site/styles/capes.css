@@ -3,7 +3,8 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #fff;
-    height: 200%;
+    height: auto;
+    min-height: 100%;
     position: relative;
     overflow-x: hidden;
 }

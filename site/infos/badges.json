@@ -1,11 +1,11 @@
 { 
   "badges" : [
     {"custom-model": {"restriction":"one","capes":[],"uuid":["e6b5c088-0680-44df-9e1b-9bf11792291b","61699b2e-d327-4a01-9f1e-0ea8c3f06bc6","1e18d5ff-643d-45c8-b509-43b8461d8614"]}},
+    {"unique-cape": {"restriction":"one","capes":["birthday", "dB", "millionth", "prismarine", "turtle", "sniffer", "snowman", "spade", "translatorjapanese", "bacon"],
+          "uuid":[]}},
     {"perfect-mojang-employee": {"restriction":"all","capes":["mojangold", "mojangstudios", "mojang"],
       "uuid":[]}},
     {"mojang-employee": {"restriction":"one","capes":["mojangold", "mojangstudios", "mojang"],
-          "uuid":[]}},
-    {"unique-cape": {"restriction":"one","capes":["birthday", "dB", "millionth", "prismarine", "turtle", "sniffer", "snowman", "spade", "translatorjapanese", "bacon"],
           "uuid":[]}},
     {"gift-by-mojang": {"restriction":"one","capes":["birthday", "dB", "millionth", "prismarine", "turtle", "valentine", "sniffer", "snowman", "spade", "translatorjapanese", "translatorchinese", "scrolls", "cobalt", "translator", "mojira", "realms", "bacon"],
           "uuid":["6080251c-368a-4865-9217-128212baae3e","4dbc8921-3a8a-40af-bd4f-884fb8a607f1","3da6b9a1-beca-485e-97be-d2e619044dba"]}},
