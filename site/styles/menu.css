@@ -57,7 +57,6 @@ body::before {
 
 /* Page Cathegorie */
 .page-cath {
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     position: absolute;
     padding: 5px;
     border-radius: 10px;
@@ -233,7 +232,6 @@ main {
     position: absolute;
     font-size: 25px;
     left: 5vh;
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: yellow;
 }
 
@@ -360,7 +358,6 @@ main {
 }
 
 .cape-title {
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     opacity: 0; /* Initialement invisible */
     position: absolute;
     top: 38%;
@@ -708,7 +705,6 @@ body.modal-open {
 .mcc-list-item {
     display: flex;
     align-items: center;
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #fff !important;
     gap: 5px; /* Réduit l'espacement entre l'image et le texte */
     margin: -16px; /* Réduit l'espacement vertical entre les lignes */
@@ -716,12 +712,10 @@ body.modal-open {
 }
 
 .mcc-list-item .text {
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #fff !important;
 }
 
 .mcc-list-item .text-gray {
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #999 !important;
 }
 
@@ -746,7 +740,6 @@ body.modal-open {
 }
 
 .mcc-playername {
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     font-size: 12px;
     color: #fff !important;
 }
@@ -768,13 +761,11 @@ body.modal-open {
 }
 
 .mcc-actualcrownlevel{
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     font-size: 15px;
     color: #fff !important;
 }
 
 .mcc-futurcrownlevel {
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     font-size: 15px;
     color: #777 !important;
 }
@@ -886,7 +877,6 @@ body.modal-open {
 }
 
 .mcc-crownprogress {
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     font-size: 12px;
     color: #999 !important;
     margin-top: 10px; /* Espace au-dessus du texte */
@@ -894,7 +884,6 @@ body.modal-open {
     margin-top: -10px;
 }
 .mcc-crownprogresspourcent {
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
     font-size: 12px;
     color: #ddd !important;
     margin-top: 10px; /* Espace au-dessus du texte */
@@ -964,7 +953,7 @@ body.modal-open {
 .friend-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 4px;
     padding: 0px;
     max-width: fit-content;
 }
@@ -1069,9 +1058,10 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #282828;
+    margin-bottom: 30px;
     gap: 15px;
     width: 100%;
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
 }
 .general-stats {
     width: 100%;
@@ -1087,19 +1077,20 @@ body.modal-open {
 .graph-numbers {
     margin-top: -10px;
     width:30%;
-    font-family: 'Minecraftia', 'Roboto', sans-serif;
 }
 .graph-numbers-content {
     height: 13%;
     margin: -10px;
 }
 .graph-games-played {
+    display: grid;
+    padding-left: 10px;
     padding-bottom: 10px;
     align-items: center;
     justify-items: left;
 }
 .game-graph-content {
-    gap: 20px;
+    gap: 15px;
     display: flex;
     align-items: center;
     justify-items: left;
@@ -1108,4 +1099,8 @@ body.modal-open {
     width: 32px;
     height: auto;
     image-rendering: pixelated;
+}
+
+.mc-font {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
 }

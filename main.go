@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"sort"
 )
 
 // Nouveau format JSON pour les capes
@@ -161,7 +162,7 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 			Username:     friend.Username,
 			Ranks:        rank,
 			Online:       friend.Status.Online,
-			OnlineStatus: onlineStatus, // Ajout du statut
+			OnlineStatus: onlineStatus,
 			CrownLevel: struct {
 				Evolution int
 				Level     int
@@ -171,6 +172,15 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 			},
 		})
 	}
+
+	// Trier d'abord par statut en ligne (Online en premier), puis par CrownLevel.Level décroissant
+	sort.Slice(friendInfo, func(i, j int) bool {
+		if friendInfo[i].Online == friendInfo[j].Online {
+			return friendInfo[i].CrownLevel.Level > friendInfo[j].CrownLevel.Level
+		}
+		return friendInfo[i].Online
+	})
+
 	return friendInfo
 }
 
@@ -524,7 +534,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1605", nil); err != nil {
+	if err := http.ListenAndServe(":1606", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

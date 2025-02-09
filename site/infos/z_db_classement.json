@@ -2221,6 +2221,12 @@
             "actualname": "Here"
         },
         {
+            "uuid": "38170022-87f2-4207-b219-106cf67ba8c8",
+            "capes": 6,
+            "score": 7,
+            "actualname": "Lava"
+        },
+        {
             "uuid": "3de1be56-fd46-403b-b419-903744efe31e",
             "capes": 6,
             "score": 6,
@@ -2255,6 +2261,12 @@
             "capes": 5,
             "score": 5,
             "actualname": "KaiAF"
+        },
+        {
+            "uuid": "2482ebed-44c7-4a95-81f0-853ef3a55928",
+            "capes": 5,
+            "score": 5,
+            "actualname": "Melizsa"
         },
         {
             "uuid": "66aee8d3-3796-41ee-a234-86f8a5477e6e",
@@ -2389,6 +2401,12 @@
             "actualname": "Blokky"
         },
         {
+            "uuid": "da0cd371-4f6c-481a-96a1-e4786dd60f00",
+            "capes": 2,
+            "score": 2,
+            "actualname": "Lega1410"
+        },
+        {
             "uuid": "7f0eda55-7034-4dc8-886d-d94321cdedcf",
             "capes": 1,
             "score": 12,
@@ -2461,12 +2479,6 @@
             "actualname": "i5wear"
         },
         {
-            "uuid": "da0cd371-4f6c-481a-96a1-e4786dd60f00",
-            "capes": 1,
-            "score": 1,
-            "actualname": "Lega1410"
-        },
-        {
             "uuid": "03dcea60-c134-4af5-b479-aa85c10cac53",
             "capes": 1,
             "score": 1,
@@ -2513,6 +2525,18 @@
             "capes": 1,
             "score": 1,
             "actualname": "Bidooof"
+        },
+        {
+            "uuid": "1b6ae8ca-ee31-4a81-872a-2e5316fb2e83",
+            "capes": 1,
+            "score": 1,
+            "actualname": "Oriukas"
+        },
+        {
+            "uuid": "d349cbbe-74f9-4f99-872f-945c88c71999",
+            "capes": 1,
+            "score": 1,
+            "actualname": "OnlyGolden"
         }
     ]
 }
