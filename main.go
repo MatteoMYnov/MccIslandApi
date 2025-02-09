@@ -110,9 +110,11 @@ type DataMenuPage struct {
 }
 
 type FriendInfo struct {
-	Username   string
-	Ranks      string
-	CrownLevel struct {
+	Username     string
+	Ranks        string
+	Online       bool
+	OnlineStatus string
+	CrownLevel   struct {
 		Evolution int
 		Level     int
 	}
@@ -149,9 +151,17 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 		if len(friend.Ranks) > 0 {
 			rank = friend.Ranks[0] // Récupère le premier rang
 		}
+
+		onlineStatus := "offline"
+		if friend.Status.Online {
+			onlineStatus = "online"
+		}
+
 		friendInfo = append(friendInfo, FriendInfo{
-			Username: friend.Username,
-			Ranks:    rank,
+			Username:     friend.Username,
+			Ranks:        rank,
+			Online:       friend.Status.Online,
+			OnlineStatus: onlineStatus, // Ajout du statut
 			CrownLevel: struct {
 				Evolution int
 				Level     int
@@ -514,7 +524,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1604", nil); err != nil {
+	if err := http.ListenAndServe(":1605", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

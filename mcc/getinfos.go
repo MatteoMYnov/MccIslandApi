@@ -60,8 +60,11 @@ type Currency struct {
 }
 
 type Friend struct {
-	Username   string   `json:"username"`
-	Ranks      []string `json:"ranks"`
+	Username string   `json:"username"`
+	Ranks    []string `json:"ranks"`
+	Status   struct {
+		Online bool `json:"online"`
+	} `json:"status"`
 	CrownLevel struct {
 		Evolution int `json:"evolution"`
 		Level     int `json:"level"`
@@ -188,6 +191,9 @@ func GetInfos(UUID string) *MccInfos {
 					friends {
 						username
 						ranks
+						status {
+							online
+							}
 						crownLevel {
 							level
 							evolution
