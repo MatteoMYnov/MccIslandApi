@@ -14,14 +14,39 @@ type GraphQLRequest struct {
 }
 
 type Statistics struct {
-	TotalGames  int `json:"total_games"`
-	SBGames     int `json:"sb_games"`
-	BBGames     int `json:"bb_games"`
-	TGTTOSGames int `json:"tgttos_games"`
-	HITWGames   int `json:"hitw_games"`
-	RSGames     int `json:"rs_games"`
-	DBGames     int `json:"db_games"`
-	PWSGames    int `json:"pws_games"`
+	TotalGames   int `json:"total_games"`
+	SBGames      int `json:"sb_games"`
+	BBGames      int `json:"bb_games"`
+	TGTTOSGames  int `json:"tgttos_games"`
+	HITWGames    int `json:"hitw_games"`
+	RSGames      int `json:"rs_games"`
+	DBGames      int `json:"db_games"`
+	PWSGames     int `json:"pws_games"`
+	SB_Wins      int `json:"sb_wins"`
+	SB_Loses     int
+	SB_WLR       float32
+	SB_Kills     int `json:"sb_kills"`
+	SB_Subdeaths int `json:"sb_subdeaths"`
+	SB_Deaths    int
+	SB_KDR       float32
+	BB_Wins      int `json:"bb_wins"`
+	BB_Loses     int
+	BB_WLR       float32
+	BB_Kills     int `json:"bb_kills"`
+	BB_Deaths    int `json:"bb_deaths"`
+	BB_KDR       float32
+	RS_Wins      int `json:"rs_wins"`
+	RS_Loses     int
+	RS_WLR       float32
+	RS_Kills     int `json:"rs_kills"`
+	RS_Deaths    int `json:"rs_deaths"`
+	RS_KDR       float32
+	DB_Wins      int `json:"db_wins"`
+	DB_Loses     int
+	DB_WLR       float32
+	DB_Kills     int `json:"db_kills"`
+	DB_Deaths    int
+	DB_KDR       float32
 }
 
 type NextLevelProgress struct {
@@ -41,14 +66,16 @@ type FishingData struct {
 }
 
 type CrownLevel struct {
-	Level             int               `json:"level"`
-	Evolution         int               `json:"evolution"`
-	NextLevelProgress NextLevelProgress `json:"nextLevelProgress"`
-	FishingData       FishingData       `json:"fishingLevelData"`
-	Trophies          Trophies          `json:"trophies"`
-	TrophiesSKILL     Trophies          `json:"trophiesSKILL,omitempty"`
-	TrophiesSTYLE     Trophies          `json:"trophiesSTYLE,omitempty"`
-	TrophiesANGLER    Trophies          `json:"trophiesANGLER,omitempty"`
+	LevelData struct {
+		Level             int               `json:"level"`
+		Evolution         int               `json:"evolution"`
+		NextLevelProgress NextLevelProgress `json:"nextLevelProgress"`
+	} `json:"levelData"`
+	FishingData    FishingData `json:"fishingLevelData"`
+	Trophies       Trophies    `json:"trophies"`
+	TrophiesSKILL  Trophies    `json:"trophiesSKILL,omitempty"`
+	TrophiesSTYLE  Trophies    `json:"trophiesSTYLE,omitempty"`
+	TrophiesANGLER Trophies    `json:"trophiesANGLER,omitempty"`
 }
 
 type Currency struct {
@@ -66,8 +93,10 @@ type Friend struct {
 		Online bool `json:"online"`
 	} `json:"status"`
 	CrownLevel struct {
-		Evolution int `json:"evolution"`
-		Level     int `json:"level"`
+		LevelData struct {
+			Level     int `json:"level"`
+			Evolution int `json:"evolution"`
+		} `json:"levelData"`
 	} `json:"crownLevel"`
 }
 
@@ -144,14 +173,27 @@ func GetInfos(UUID string) *MccInfos {
 					rs_games: rotationValue(statisticKey: "rocket_spleef_games_played")
 					db_games: rotationValue(statisticKey: "dynaball_games_played")
 					pws_games: rotationValue(statisticKey: "pw_survival_games_played")
+					sb_wins:rotationValue(statisticKey: "sky_battle_quads_team_placement_1")
+					sb_kills: rotationValue(statisticKey: "sky_battle_quads_players_killed")
+					sb_subdeaths: rotationValue(statisticKey: "sky_battle_quads_survival_first_place")
+					bb_wins:rotationValue(statisticKey: "battle_box_quads_team_first_place")
+					bb_kills: rotationValue(statisticKey: "battle_box_quads_players_killed")
+					bb_deaths: rotationValue(statisticKey: "battle_box_quads_times_eliminated")
+					db_wins: rotationValue(statisticKey: "dynaball_wins")
+					db_kills: rotationValue(statisticKey: "dynaball_players_eliminated")
+					rs_wins: rotationValue(statisticKey: "rocket_spleef_first_place")
+					rs_kills: rotationValue(statisticKey: "rocket_spleef_kills")
+					rs_deaths: rotationValue(statisticKey: "rocket_spleef_deaths")
 					}
 				ranks
 				crownLevel {
-					level
-					evolution
-					nextLevelProgress {
-						obtained
-						obtainable
+					levelData {
+						level
+						evolution
+						nextLevelProgress {
+							obtained
+							obtainable
+						}
 					}
 					fishingLevelData {
 						level
@@ -195,8 +237,10 @@ func GetInfos(UUID string) *MccInfos {
 							online
 							}
 						crownLevel {
-							level
-							evolution
+							levelData {
+								level
+								evolution
+							}
 						}
 					}
 				}
@@ -261,12 +305,40 @@ func GetInfos(UUID string) *MccInfos {
 			RSGames:     response.Data.Player.Statistics.RSGames,
 			DBGames:     response.Data.Player.Statistics.DBGames,
 			PWSGames:    response.Data.Player.Statistics.PWSGames,
+			//Sky Battle
+			SB_Wins:   response.Data.Player.Statistics.SB_Wins,
+			SB_Loses:  response.Data.Player.Statistics.SBGames - response.Data.Player.Statistics.SB_Wins,
+			SB_WLR:    safeDivide(response.Data.Player.Statistics.SB_Wins, response.Data.Player.Statistics.SBGames-response.Data.Player.Statistics.SB_Wins),
+			SB_Kills:  response.Data.Player.Statistics.SB_Kills,
+			SB_Deaths: response.Data.Player.Statistics.SBGames - response.Data.Player.Statistics.SB_Subdeaths,
+			SB_KDR:    safeDivide(response.Data.Player.Statistics.SB_Kills, response.Data.Player.Statistics.SBGames-response.Data.Player.Statistics.SB_Subdeaths),
+			//Battle Box
+			BB_Wins:   response.Data.Player.Statistics.BB_Wins,
+			BB_Loses:  response.Data.Player.Statistics.BBGames - response.Data.Player.Statistics.BB_Wins,
+			BB_WLR:    safeDivide(response.Data.Player.Statistics.BB_Wins, response.Data.Player.Statistics.BBGames-response.Data.Player.Statistics.BB_Wins),
+			BB_Kills:  response.Data.Player.Statistics.BB_Kills,
+			BB_Deaths: response.Data.Player.Statistics.BB_Deaths,
+			BB_KDR:    safeDivide(response.Data.Player.Statistics.BB_Kills, response.Data.Player.Statistics.BB_Deaths),
+			//Rocket Spleef Rush
+			RS_Wins:   response.Data.Player.Statistics.RS_Wins,
+			RS_Loses:  response.Data.Player.Statistics.RSGames - response.Data.Player.Statistics.RS_Wins,
+			RS_WLR:    safeDivide(response.Data.Player.Statistics.RS_Wins, response.Data.Player.Statistics.RSGames-response.Data.Player.Statistics.RS_Wins),
+			RS_Kills:  response.Data.Player.Statistics.RS_Kills,
+			RS_Deaths: response.Data.Player.Statistics.RS_Deaths,
+			RS_KDR:    safeDivide(response.Data.Player.Statistics.RS_Kills, response.Data.Player.Statistics.RS_Deaths),
+			//DynaBall
+			DB_Wins:   response.Data.Player.Statistics.DB_Wins,
+			DB_Loses:  response.Data.Player.Statistics.DBGames - response.Data.Player.Statistics.DB_Wins,
+			DB_WLR:    safeDivide(response.Data.Player.Statistics.DB_Wins, response.Data.Player.Statistics.DBGames-response.Data.Player.Statistics.DB_Wins),
+			DB_Kills:  response.Data.Player.Statistics.DB_Kills,
+			DB_Deaths: response.Data.Player.Statistics.DBGames - response.Data.Player.Statistics.DB_Wins,
+			DB_KDR:    safeDivide(response.Data.Player.Statistics.DB_Kills, response.Data.Player.Statistics.DBGames-response.Data.Player.Statistics.DB_Wins),
 		},
 		Ranks:           response.Data.Player.Ranks,
-		CrownLevel:      response.Data.Player.CrownLevel.Level,
-		Evolution:       response.Data.Player.CrownLevel.Evolution,
-		CrownObtained:   response.Data.Player.CrownLevel.NextLevelProgress.CrownObtained,
-		CrownObtainable: response.Data.Player.CrownLevel.NextLevelProgress.CrownObtainable,
+		CrownLevel:      response.Data.Player.CrownLevel.LevelData.Level,
+		Evolution:       response.Data.Player.CrownLevel.LevelData.Evolution,
+		CrownObtained:   response.Data.Player.CrownLevel.LevelData.NextLevelProgress.CrownObtained,
+		CrownObtainable: response.Data.Player.CrownLevel.LevelData.NextLevelProgress.CrownObtainable,
 		FishingData: FishingData{
 			Level:             response.Data.Player.CrownLevel.FishingData.Level,
 			NextLevelProgress: response.Data.Player.CrownLevel.FishingData.NextLevelProgress,

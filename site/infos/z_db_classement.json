@@ -859,6 +859,12 @@
             "actualname": "CygnusGD"
         },
         {
+            "uuid": "0c93fe84-02ed-480c-b5f8-9e3f7e6b580f",
+            "capes": 9,
+            "score": 17,
+            "actualname": "leovardo"
+        },
+        {
             "uuid": "2cfc8db5-71ed-4eb3-aacd-53b8abff5ee2",
             "capes": 9,
             "score": 17,
@@ -2537,6 +2543,12 @@
             "capes": 1,
             "score": 1,
             "actualname": "OnlyGolden"
+        },
+        {
+            "uuid": "d4e38500-2701-4d1b-b820-4eb69fac44da",
+            "capes": 1,
+            "score": 1,
+            "actualname": "Trolliant"
         }
     ]
 }

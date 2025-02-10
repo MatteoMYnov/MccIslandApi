@@ -929,8 +929,8 @@ body.modal-open {
 
 .roll-body {
     display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
-    gap: 10px; /* Espace entre les cartes de joueurs */
+    flex-wrap: wrap;
+    gap: 0px;
     border-radius: 0 0 10px 10px;
     max-height: 0px;
     overflow: hidden;
@@ -1047,14 +1047,25 @@ body.modal-open {
     width: 70%;
     left: 10px;
 }
-.graph-body {
+
+.upcath-body{
+    display: flex;
+    width: 100%;
     margin-bottom: 10px;
     margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.subcath-body {
     width: 100%;
     border: 2px solid #282828;
     border-radius: 10px;
 }
-.graph-pre-header{
+.subcath-header{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1067,15 +1078,8 @@ body.modal-open {
     width: 100%;
     display: flex;
 }
-
-.general-stats {
-    width: 100%;
-}
-.general-stats p {
-    margin-top: -5px;
-}
 .graph-numbers {
-    margin-top: -10px;
+    margin-top: -40px;
     width:30%;
 }
 .graph-numbers-content {
@@ -1089,18 +1093,45 @@ body.modal-open {
     align-items: center;
     justify-items: left;
 }
-.game-graph-content {
+.line-content {
     gap: 15px;
     display: flex;
     align-items: center;
     justify-items: left;
 }
-.game-graph-content img{
+
+.line-content img{
     width: 32px;
     height: auto;
     image-rendering: pixelated;
 }
 
+.line-content2 {
+    gap: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-items: left;
+}
+
+.line-content2 img{
+    width: 48px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.subcath-case {
+    flex: 1 1 calc(50% - 10px);
+    display: grid;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: 5px;
+}
+
 .mc-font {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
+}
+
+.color-white {
+    color: white !important;
 }

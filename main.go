@@ -167,8 +167,8 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 				Evolution int
 				Level     int
 			}{
-				Evolution: friend.CrownLevel.Evolution,
-				Level:     friend.CrownLevel.Level,
+				Evolution: friend.CrownLevel.LevelData.Evolution,
+				Level:     friend.CrownLevel.LevelData.Level,
 			},
 		})
 	}
@@ -534,7 +534,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1606", nil); err != nil {
+	if err := http.ListenAndServe(":1613", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

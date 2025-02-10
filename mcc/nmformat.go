@@ -1,6 +1,7 @@
 package mcc
 
 import (
+	"math"
 	"strconv"
 	"strings"
 )
@@ -23,4 +24,17 @@ func FormatNumberWithSpaces(number int) string {
 
 	// Joindre les groupes avec un espace
 	return strings.Join(groups, " ")
+}
+
+func safeDivide(numerator, denominator int) float32 {
+	if denominator == 0 {
+		return 0.00 // Évite la division par zéro
+	}
+	return roundFloat(float32(numerator)/float32(denominator), 2)
+}
+
+// Fonction d'arrondi à 2 chiffres après la virgule
+func roundFloat(value float32, precision int) float32 {
+	multiplier := float32(math.Pow(10, float64(precision)))
+	return float32(math.Round(float64(value)*float64(multiplier))) / multiplier
 }
