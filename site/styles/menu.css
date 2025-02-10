@@ -25,6 +25,13 @@ body::before {
     filter: blur(var(--blur-value, 0px)); /* Variable CSS qui sera modifiée */
 }
 
+/* Style de la boîte du tooltip */
+.tippy-box {
+    border: 1px solid #222; /* Couleur de fond (bleu) */
+    color: #fff; /* Couleur du texte */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  }
+
 /* Voile gris foncé */
 #bgdark {
     position: fixed;
