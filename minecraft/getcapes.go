@@ -35,6 +35,12 @@ type CapesResponse struct {
 
 // Fonction pour récupérer les noms des capes d'un utilisateur, incluant celles par UUID
 func GetCapeNames(name string) []string {
+	loadURL := fmt.Sprintf("https://capes.me/%s", name)
+	_, err := http.Get(loadURL)
+	if err != nil {
+		fmt.Printf("Erreur lors du chargement du profil : %v\n", err)
+	}
+
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
 	if err != nil {
