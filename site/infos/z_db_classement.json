@@ -80,7 +80,7 @@
         {
             "uuid": "fa0f91ac-8dbf-4d7c-b2d0-296ee7631986",
             "capes": 12,
-            "score": 26,
+            "score": 25,
             "actualname": "Dan",
             "badge": ""
         },
@@ -817,21 +817,21 @@
             "capes": 10,
             "score": 13,
             "actualname": "Westkidd",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "c525777b-ce9a-4304-bb97-29257fa87718",
             "capes": 10,
             "score": 13,
             "actualname": "Wurly",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "83267d44-118d-441c-a6b4-719cfe09c1a5",
             "capes": 10,
             "score": 13,
             "actualname": "zyq_09",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "c46d7c5f-5a3a-46fd-903a-ed99d319c34d",
@@ -859,14 +859,14 @@
             "capes": 9,
             "score": 20,
             "actualname": "Vezun",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "6214ef6e-9e6d-4853-885b-c732a2932eee",
             "capes": 9,
             "score": 19,
             "actualname": "Damian",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "7dd0252e-8ade-405c-80a9-fe029b75b403",
@@ -901,42 +901,42 @@
             "capes": 9,
             "score": 17,
             "actualname": "a_mason",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "bc6507a9-9063-4134-8303-a2e163e2fc55",
             "capes": 9,
             "score": 17,
             "actualname": "LateLag",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "740dec5a-214a-4206-8298-385dbc54acd9",
             "capes": 9,
             "score": 17,
             "actualname": "MiguelF84",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "1b208251-580e-4467-8ed0-dcc772337e95",
             "capes": 9,
             "score": 17,
             "actualname": "Capopanzone",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "784ed5ba-bbca-45bb-b3bf-7c2ec068ba7c",
             "capes": 9,
             "score": 17,
             "actualname": "Celesian",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "65aa8c70-0100-4291-9e93-f558bc6e49bc",
             "capes": 9,
             "score": 17,
             "actualname": "EVGENSYPERPRO",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "5d96db88-b601-4df2-aae3-a89172346f0d",
@@ -957,77 +957,77 @@
             "capes": 9,
             "score": 17,
             "actualname": "Stuffanie",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "7369956e-fe3f-4fbc-b425-3a0862cd7257",
             "capes": 9,
             "score": 17,
             "actualname": "alexanderxP",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "a81322bf-180a-487a-80f4-2df5097e956d",
             "capes": 9,
             "score": 17,
             "actualname": "PvPqnda",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "f3a8801e-71d2-4a77-b621-a4b1d4e04744",
             "capes": 9,
             "score": 17,
             "actualname": "Nick_team",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "97aa940f-ca28-4810-8629-d0f6b5a29458",
             "capes": 9,
             "score": 17,
             "actualname": "Bansed",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "413a920c-cf93-46af-ba6c-b6dc177fc281",
             "capes": 9,
             "score": 17,
             "actualname": "Sofia",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "fdf210f2-4ccd-406e-8817-79f87dad84e9",
             "capes": 9,
             "score": 17,
             "actualname": "CygnusGD",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "0c93fe84-02ed-480c-b5f8-9e3f7e6b580f",
             "capes": 9,
             "score": 17,
             "actualname": "leovardo",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "2cfc8db5-71ed-4eb3-aacd-53b8abff5ee2",
             "capes": 9,
             "score": 17,
             "actualname": "Stuffy",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "7328a9e1-3121-40cb-bb12-8a42f6eb23f0",
             "capes": 9,
             "score": 17,
             "actualname": "Kinwoo",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "52145cad-7765-4a95-808f-109b78813996",
             "capes": 9,
             "score": 16,
             "actualname": "Nagaa",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "2614078f-8a56-49f1-bec4-0a44c57da32e",
@@ -1041,77 +1041,77 @@
             "capes": 9,
             "score": 16,
             "actualname": "itvchio",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "f4af6c94-318c-4dfc-a725-6c99bfc79e94",
             "capes": 9,
             "score": 16,
             "actualname": "cresskill",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "aaa6fd94-c1fa-4a1a-b6fb-43eb96768db3",
             "capes": 9,
             "score": 16,
             "actualname": "TheblueMan003",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "46f89c4d-cde5-49e7-9920-c7b61b784335",
             "capes": 9,
             "score": 16,
             "actualname": "Snuz",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "e03ba065-7a83-4f09-ae7c-b7ab3089c695",
             "capes": 9,
             "score": 16,
             "actualname": "Kralled",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "33f74317-d423-4d61-8334-576fa31d174e",
             "capes": 9,
             "score": 16,
             "actualname": "Mats3209",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "d932c15c-1be9-46f0-8258-dd87f01175d0",
             "capes": 9,
             "score": 16,
             "actualname": "Jarmzie",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "cf35d44f-fb55-4838-8e08-3672010bbd1d",
             "capes": 9,
             "score": 16,
             "actualname": "TriLinder",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "cf42d00f-0f2b-4b1e-afa1-b600917e219c",
             "capes": 9,
             "score": 16,
             "actualname": "ChiefCo1",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "cedbfcd3-8b82-4aeb-bbf5-3e43b503f801",
             "capes": 9,
             "score": 16,
             "actualname": "Venyu",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "241fedc0-98e9-48df-ab4f-517b373c4085",
             "capes": 9,
             "score": 15,
             "actualname": "Justin",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "23d1132b-c68c-4819-baa1-129d3672f4c1",
@@ -1125,28 +1125,28 @@
             "capes": 9,
             "score": 15,
             "actualname": "Vek",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "49e9ffd0-75e6-4133-95ba-96051b3fea84",
             "capes": 9,
             "score": 15,
             "actualname": "zorslol",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "6aaa453e-c3eb-4ffb-ae73-5631da9c1010",
             "capes": 9,
             "score": 15,
             "actualname": "Minori",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "cdfff2e9-5cc7-4671-82ef-548d33c464e4",
             "capes": 9,
             "score": 15,
             "actualname": "rod3r",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "de8e264d-6f08-4b46-9c59-f85755dd607b",
@@ -1163,18 +1163,11 @@
             "badge": ""
         },
         {
-            "uuid": "b09f6cd9-65ab-4956-b3dc-7ddd98d49c91",
-            "capes": 9,
-            "score": 14,
-            "actualname": "Slender",
-            "badge": ""
-        },
-        {
             "uuid": "1cbc5eb6-e95a-4325-a660-c3b7e83b95e0",
             "capes": 9,
             "score": 14,
             "actualname": "x_x",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "958a3da8-acf0-44dc-b5c0-7f7132b4bf9c",
@@ -1188,7 +1181,7 @@
             "capes": 9,
             "score": 14,
             "actualname": "Wille",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "7297897e-21e2-4a33-8423-212ec3d02868",
@@ -1202,7 +1195,7 @@
             "capes": 9,
             "score": 14,
             "actualname": "__Piggy",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "4dd2c2a8-c3d0-47b1-8ba3-e89963a57815",
@@ -1216,56 +1209,63 @@
             "capes": 9,
             "score": 14,
             "actualname": "Yehx",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "d7fd9c09-0aac-4788-97e0-5b4859006365",
             "capes": 9,
             "score": 14,
             "actualname": "FlowingWolf",
-            "badge": ""
+            "badge": "all-commons"
+        },
+        {
+            "uuid": "b09f6cd9-65ab-4956-b3dc-7ddd98d49c91",
+            "capes": 9,
+            "score": 13,
+            "actualname": "Slender",
+            "badge": "all-events"
         },
         {
             "uuid": "ed94c3ac-e368-48b4-afc9-ea6d356d29fe",
             "capes": 9,
             "score": 13,
             "actualname": "Natazha",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "f4e6410c-81ad-4db1-9de0-137650ee2851",
             "capes": 9,
             "score": 13,
             "actualname": "Mxn",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "0eefdf6a-74a4-4367-a941-1b885532f713",
             "capes": 9,
             "score": 13,
             "actualname": "nrt",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "f5dc0bf3-364f-416e-9849-39d4eea57eda",
             "capes": 9,
             "score": 13,
             "actualname": "pdl",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "617ca751-bf5c-43d5-878a-2a1026dd4cbf",
             "capes": 9,
             "score": 13,
             "actualname": "insensivel",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "e9b911c7-8ea4-44f1-b6f9-7719f4ee3e46",
             "capes": 9,
             "score": 13,
             "actualname": "Sukram28",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "39c33571-c910-46b0-891f-80faf374b821",
@@ -1279,168 +1279,175 @@
             "capes": 9,
             "score": 13,
             "actualname": "NutsAKisJoussey",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "4aa74d7b-90e1-4f6b-af4f-2bc954037297",
             "capes": 9,
             "score": 13,
             "actualname": "SirKillian",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b124e3e9-7692-4755-a51d-8691a073de02",
             "capes": 9,
             "score": 13,
             "actualname": "qopW",
-            "badge": ""
+            "badge": "all-commons"
+        },
+        {
+            "uuid": "11b7cbd3-3b4f-48a3-b661-e8f0c3306dcb",
+            "capes": 9,
+            "score": 13,
+            "actualname": "Jzsh",
+            "badge": "all-events"
         },
         {
             "uuid": "a82263df-99be-4b81-8a26-bb20b52f9121",
             "capes": 9,
             "score": 12,
             "actualname": "Broi",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "3e8aaba6-6993-47c4-a9ee-2ee7b3a576ac",
             "capes": 9,
             "score": 12,
             "actualname": "ChemicalMixture",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "88bcf93a-9b6b-404a-a88c-51504ac52f13",
             "capes": 9,
             "score": 12,
             "actualname": "Hannahful",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "0d565263-382f-4336-87eb-45c9c6375eff",
             "capes": 9,
             "score": 12,
             "actualname": "dnab",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "7732f46f-329a-4808-94fd-7fabe20bfb90",
             "capes": 9,
             "score": 12,
             "actualname": "pokemada",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "299227a8-84b9-4f06-836c-b4123de63b80",
             "capes": 9,
             "score": 12,
             "actualname": "7wh",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "aa8a5704-852b-4f38-9768-228610a976c8",
             "capes": 9,
             "score": 12,
             "actualname": "Slightly",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "88a92f32-d103-48df-baa7-07b6419d757b",
             "capes": 9,
             "score": 12,
             "actualname": "Telmas",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "a25a72a6-949b-4f7e-8eeb-f3bc21f54fa6",
             "capes": 9,
             "score": 12,
             "actualname": "Treehero",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "faa06896-809a-49a3-ba57-f8424c21ca06",
             "capes": 9,
             "score": 12,
             "actualname": "Lootier",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "6a5a9120-3274-4742-acfd-64cb43bb2451",
             "capes": 9,
             "score": 12,
             "actualname": "Beb",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "2d8cf844-fa34-41c3-8d4e-597b32697909",
             "capes": 9,
             "score": 12,
             "actualname": "destruc7i0n",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "45b808d2-adf3-4b51-9b3b-b92567e0886f",
             "capes": 9,
             "score": 12,
             "actualname": "CheesierPasta",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "37698bcc-cd80-40b6-8b1b-1c394250cd58",
             "capes": 9,
             "score": 12,
             "actualname": "goofball",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "981be649-82cd-4207-ae5d-9951cb2510d4",
             "capes": 9,
             "score": 12,
             "actualname": "mariohessel",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "c5f90573-47ce-443b-b380-b0f50f795c93",
             "capes": 9,
             "score": 12,
             "actualname": "sunshoot",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "6824f8f7-4b43-47c8-97b0-89bdbfba8476",
             "capes": 9,
             "score": 12,
             "actualname": "superulrich123",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "cf4c0918-e435-4a88-8db8-2dd66ff8c673",
             "capes": 9,
             "score": 11,
             "actualname": "Ajwor",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "f71969fa-84d6-44c1-b752-0acbbca5d4c6",
             "capes": 9,
             "score": 11,
             "actualname": "Lantastic",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "4d568080-07a5-4961-96b2-3811f9721aa2",
             "capes": 9,
             "score": 11,
             "actualname": "Paradiscal",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "05a00610-b571-4554-89ad-5e419781da70",
             "capes": 9,
             "score": 11,
             "actualname": "Zuxt",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "cc4b7d74-bbe2-4310-9106-0e52d292c758",
@@ -1454,1260 +1461,1253 @@
             "capes": 9,
             "score": 10,
             "actualname": "_S0rrel_",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "07a7432f-a3e8-454b-8611-9767ceddf05b",
             "capes": 9,
             "score": 10,
             "actualname": "PurpleShiny",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b3390652-2ccd-4dc9-b821-8e0c6e4517ae",
             "capes": 9,
             "score": 10,
             "actualname": "Syhix",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "6610cad8-6c91-4ff0-bb1d-45ad03d7d39d",
             "capes": 9,
             "score": 10,
             "actualname": "Flaimsie",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "5821c7ab-02f9-4c49-b747-aeb44851433a",
             "capes": 9,
             "score": 10,
             "actualname": "Japanase",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7d627b75-59b1-43f6-b12e-367b1f6cd774",
             "capes": 9,
             "score": 10,
             "actualname": "Querez",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8addb25a-cba3-462c-b1c3-26db8f11594b",
             "capes": 9,
             "score": 10,
             "actualname": "WashmaButt",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7a577542-97b7-4e1f-bea8-24275ad3ee39",
             "capes": 9,
             "score": 10,
             "actualname": "Aidan",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "567770d5-0b1c-4985-8a17-713d4a5daa3c",
             "capes": 9,
             "score": 10,
             "actualname": "YMM",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "81760cdc-1996-4181-a5c5-1ce17dd86597",
             "capes": 9,
             "score": 10,
             "actualname": "johnush",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "99735eb7-e3fb-4aa5-bb1e-689d6404daa5",
             "capes": 9,
             "score": 10,
             "actualname": "OsuninnMC",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0ef63bc9-eb9e-4101-890b-0417552f43a2",
             "capes": 9,
             "score": 10,
             "actualname": "ItsRishon",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "1c3f2bdb-bb75-44fe-9795-3a8113207bb8",
             "capes": 9,
             "score": 10,
             "actualname": "qtnz",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "19413854-f473-4cd6-a513-eb62b6f1d9e1",
             "capes": 9,
             "score": 10,
             "actualname": "lucasyh",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "ef5cf93a-aa16-4e32-8484-61b234d5aba6",
             "capes": 9,
             "score": 10,
             "actualname": "__7",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b68c93d3-819e-4aee-b9b0-ce76fd9d6489",
             "capes": 9,
             "score": 10,
             "actualname": "WreeperXD",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "40b1fbaa-c5be-4b68-b50a-384cfc0cd379",
             "capes": 9,
             "score": 10,
             "actualname": "Brunolator",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "1db37ada-fe7f-4c7a-91df-aa2a50d233a2",
             "capes": 9,
             "score": 10,
             "actualname": "SimonSays",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "79916746-9e7d-4278-bac1-05a4e7103ad2",
             "capes": 9,
             "score": 10,
             "actualname": "George_2010",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8ef805f3-6b9a-49c7-af82-c0232f312ff6",
             "capes": 9,
             "score": 10,
             "actualname": "Nailery",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "fff5bbf0-f81c-48cd-977b-fddd34f71583",
             "capes": 9,
             "score": 10,
-            "actualname": "Kulanov",
-            "badge": ""
+            "actualname": "Renesi",
+            "badge": "all-commons"
         },
         {
             "uuid": "c79a9f17-bcb3-49ff-a25b-caf152bfe522",
             "capes": 9,
             "score": 10,
             "actualname": "YAGEL09",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "42951d94-5c3f-4be2-9df4-2e36970b0741",
             "capes": 9,
             "score": 10,
             "actualname": "uvn",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "55733f30-8907-4851-8af3-420f6f255856",
             "capes": 9,
             "score": 10,
             "actualname": "Danni",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "c6e25b9e-053e-4546-a46c-60459f304caa",
             "capes": 9,
             "score": 10,
             "actualname": "LidGuy",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "03eb29ad-6f09-4e04-aca1-cf29635b9b71",
             "capes": 9,
             "score": 10,
             "actualname": "Clouuhh",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "05aebf4f-f7d8-4f58-bd90-7e7302f02afc",
             "capes": 9,
             "score": 10,
             "actualname": "En",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "271afd3a-ff4d-4927-bc55-34f997357e2d",
             "capes": 9,
             "score": 10,
             "actualname": "GottenFiber5546",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "248a4bec-fe3e-4318-b526-b3bb9eeefb47",
             "capes": 9,
             "score": 10,
             "actualname": "ItsMoDz",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "540ac9af-d940-4201-bcf9-722b8a01c1d0",
             "capes": 9,
             "score": 10,
             "actualname": "Kubii_",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "bc9d4256-cf6c-4848-81b9-9e453e646890",
             "capes": 9,
             "score": 10,
             "actualname": "ppppp",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "2212ef6d-b37a-4443-8e70-d13ae541bf8d",
             "capes": 9,
             "score": 10,
             "actualname": "tcloud",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e1326335-19df-4062-8149-0f7391790efd",
             "capes": 9,
             "score": 10,
             "actualname": "xTJAx",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "5ade12f9-efa0-4d6d-a5c7-2a5fc809f619",
             "capes": 9,
             "score": 10,
             "actualname": "DontMessWith",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "01f63bde-1ff3-465a-98ca-4d42d68bdffb",
             "capes": 9,
             "score": 10,
             "actualname": "Anguria",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0d323736-a0ec-469e-9863-e3d851e00462",
             "capes": 9,
             "score": 10,
             "actualname": "Golemed",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8151ea63-bbd9-4da9-bfcd-b9f9340548b2",
             "capes": 9,
             "score": 10,
             "actualname": "Gsmack",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "62f0982e-ec96-4a3d-9f93-56741e87fe03",
             "capes": 9,
             "score": 10,
             "actualname": "giovany2",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7e58f95e-8090-4df7-9148-54aac91d7dd9",
             "capes": 9,
             "score": 10,
             "actualname": "starwarsfreak219",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "2cc35922-62f2-4978-97d2-a9aee91747da",
             "capes": 9,
             "score": 10,
             "actualname": "ju4x",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "491fba87-73d8-482b-9214-1647d4a775bc",
             "capes": 9,
             "score": 10,
             "actualname": "grmmit",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0cf9d921-02a1-4089-a527-7eb7180eec30",
             "capes": 9,
             "score": 10,
             "actualname": "Daleyza",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8326bc39-a08f-4695-8f79-b1185778754e",
             "capes": 9,
             "score": 10,
             "actualname": "SillyMarina",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b9aa32cd-c3d3-439f-a025-b994394824f2",
             "capes": 9,
             "score": 10,
             "actualname": "k_oy",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "2df80def-eddd-4ea3-925b-37d307cd10de",
             "capes": 9,
             "score": 10,
             "actualname": "Miskam4ik",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "1aad07c2-11c3-49cc-a265-fb52818c27ca",
             "capes": 9,
             "score": 10,
             "actualname": "The_Blue_Goose",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "ca3b754b-2bdd-4165-8441-ebdbf375b355",
             "capes": 9,
             "score": 10,
             "actualname": "kenio",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7a1b122b-0d0c-4fd2-8e1b-ecfb1ed21f6f",
             "capes": 9,
             "score": 10,
             "actualname": "BearIng",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "301a1c55-822f-41ec-842b-30eab18162f1",
             "capes": 9,
             "score": 10,
             "actualname": "RodrigoBatista",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7d933d2c-489a-4e92-9952-095f756bd174",
             "capes": 9,
             "score": 10,
             "actualname": "Deo",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "cab04738-96b2-4911-8291-a5efb4792b22",
             "capes": 9,
             "score": 10,
             "actualname": "xMJGold",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "ec46c9ea-2c6e-43a3-b681-cb93598d4108",
             "capes": 9,
             "score": 10,
             "actualname": "bj9",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0c379675-abbf-4465-8283-4c0b5409515d",
             "capes": 9,
             "score": 10,
             "actualname": "JetJoshSpiky",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0666fffd-732d-428b-ae17-2992d4527ede",
             "capes": 9,
             "score": 10,
             "actualname": "Solitude",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "040c359d-ff55-4b80-9edb-f3a82176e678",
             "capes": 9,
             "score": 10,
             "actualname": "Astatine",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b4de247b-d6f7-45ed-af52-0f21e0e87666",
             "capes": 9,
             "score": 10,
             "actualname": "Krapfen",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e26f44b0-31eb-4a87-a9de-2a737c111ca1",
             "capes": 9,
             "score": 10,
             "actualname": "SimplicityPvP",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "3f516c70-727b-46c1-8958-ff7ef75b24c3",
             "capes": 9,
             "score": 10,
             "actualname": "Helvete",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "626ba37d-871b-44c7-93ba-2d3023789799",
             "capes": 9,
             "score": 10,
             "actualname": "Knarfy",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "380b2168-09ea-4b51-9f39-d235aeb604e5",
             "capes": 9,
             "score": 10,
             "actualname": "smepy",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "9916bd6c-ff8b-496c-a08e-be0844ee7f2c",
             "capes": 9,
             "score": 10,
             "actualname": "ThatsWhatSheSaid",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "f337f5a5-af62-4310-9019-6e08bcfdbec4",
             "capes": 9,
             "score": 10,
             "actualname": "Mr0G",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "acd3f5df-187f-4c7d-8aba-e5fd19db3699",
             "capes": 9,
             "score": 10,
             "actualname": "Phobia",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8257d18d-6d3f-45b9-9e70-58a6cd35ea24",
             "capes": 9,
             "score": 10,
             "actualname": "MooreGaming1324",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "546ec193-a2b8-478c-b791-e8802f3e6751",
             "capes": 9,
             "score": 10,
             "actualname": "Charloca",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "ccb92ba0-c4f2-4e9a-acc0-bf72578c1fb5",
             "capes": 9,
             "score": 10,
             "actualname": "Huff_Plays",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "57ded6ed-ef93-424e-b292-2e1375a0af08",
             "capes": 9,
             "score": 10,
             "actualname": "Simtoh",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "08355fc1-dad7-44d6-b53f-54af273a4d00",
             "capes": 9,
             "score": 10,
             "actualname": "Midline",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "6f8f38ab-dd08-455b-9905-b846b243d5ff",
             "capes": 9,
             "score": 10,
             "actualname": "1Cebra",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "29a379db-6869-44cb-b006-0484c3bc5d02",
             "capes": 9,
             "score": 10,
             "actualname": "BuilderMaster44",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0cb21b34-e977-4a38-a279-5d8df11ea5ba",
             "capes": 9,
             "score": 10,
             "actualname": "BoyGamerTV",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "d369d4a8-8764-4f59-936a-db0f6d1cd2e5",
             "capes": 9,
             "score": 10,
             "actualname": "Pag3",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "a6a1a723-10df-415c-afbe-b1477fbdd32d",
             "capes": 9,
             "score": 10,
             "actualname": "YazB",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "45ac4566-50b3-409f-b619-add066e08350",
             "capes": 9,
             "score": 10,
             "actualname": "Garden",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "14ebedb3-824f-4ef3-ad0e-2d98f2f81b5d",
             "capes": 9,
             "score": 10,
             "actualname": "Minute",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "903f5abc-267b-4bf8-9b52-b89c9dd112e6",
             "capes": 9,
             "score": 10,
             "actualname": "Callum",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "fd94487f-9cf9-4ec0-b0b8-e9c00ea1215d",
             "capes": 9,
             "score": 10,
             "actualname": "jcson",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "62a2c5b5-e554-4a9e-ab02-198355fa5e64",
             "capes": 9,
             "score": 10,
             "actualname": "Beatriz",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "2c6dd47b-8259-439b-ad87-5730c1cbd4f2",
             "capes": 9,
             "score": 10,
             "actualname": "Wintahh",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "d94f2078-8586-467f-90dd-66613e6ce7e8",
             "capes": 9,
             "score": 10,
             "actualname": "DuneEryksson",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "698a8c8a-4e93-41f0-bf31-e072ee0bb3c0",
             "capes": 9,
             "score": 10,
             "actualname": "Neutrovertido",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "d36344ae-a300-4beb-acad-7d789d14b339",
             "capes": 9,
             "score": 10,
             "actualname": "Nanda18",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e91517c8-d9d0-4650-b177-a9caf6b22b16",
             "capes": 9,
             "score": 10,
             "actualname": "Dodgeball",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0183d05e-be91-42c9-808a-313bd0875a6d",
             "capes": 9,
             "score": 10,
             "actualname": "Gwisp",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "1f8e65d2-a194-4632-bff4-b4f6b02d9567",
             "capes": 9,
             "score": 10,
             "actualname": "mlgboi",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "4073e049-575a-4dc7-941d-15573d56acce",
             "capes": 9,
             "score": 10,
             "actualname": "thesasuke35",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "a6eb2fb8-f7f4-4a4e-a721-6185c068ece1",
             "capes": 9,
             "score": 10,
             "actualname": "Nisutec",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "5a0978fd-c812-409b-9dac-97c0c9d0f7f6",
             "capes": 9,
             "score": 10,
             "actualname": "hpwhite",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "79544ba3-b84f-4d69-b2ba-8d86724ec0e6",
             "capes": 9,
             "score": 10,
             "actualname": "Scorpionem",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "76e78cf7-81de-4a5b-8a07-197f63984495",
             "capes": 9,
             "score": 10,
             "actualname": "Anchorspam",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b0296b88-b058-43b8-ae31-b4d01a0aa688",
             "capes": 9,
             "score": 10,
             "actualname": "Colebowl",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "868f143e-99bd-409d-965d-78e1be16fd49",
             "capes": 9,
             "score": 10,
             "actualname": "Ogmoe",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "231b4cf2-6720-4351-9155-e1e87e2f763e",
             "capes": 9,
             "score": 10,
             "actualname": "Wreeper",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "dd1eb329-7da7-4c86-8dc2-b3ef3a96d4a6",
             "capes": 9,
             "score": 10,
             "actualname": "ofks",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8eb18a92-27fb-4b36-9471-77babab261cd",
             "capes": 9,
             "score": 10,
             "actualname": "kipanator",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "6e06755c-491e-4f75-afcb-8e63b0d874f2",
             "capes": 9,
             "score": 10,
             "actualname": "fusou",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7e51e411-b7c4-42b0-957d-93058c382593",
             "capes": 9,
             "score": 10,
             "actualname": "Honzu",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e8c26ec9-c3d1-43a1-8b01-ae14b41089e3",
             "capes": 9,
             "score": 10,
             "actualname": "MrForgy",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "26f0d7b6-1e66-4dba-abc5-29473b7c1061",
             "capes": 9,
             "score": 10,
             "actualname": "Dunkelmann",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "48fab423-04f2-4ff6-bb55-a63d468e2330",
             "capes": 9,
             "score": 10,
             "actualname": "Gameur83",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "4910ab16-7d9b-478c-ad49-033727d794b1",
             "capes": 9,
             "score": 10,
             "actualname": "lil_kevin6",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "d0f7d37f-848d-4165-b3b4-0ee2d4ece832",
             "capes": 9,
             "score": 10,
             "actualname": "EsJoseG",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "1eea92e2-4ea1-49ea-ba6e-10deba940c25",
             "capes": 9,
             "score": 10,
             "actualname": "PaxonicYT",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "515db074-feb0-475a-9ff9-75548f2157e1",
             "capes": 9,
             "score": 10,
             "actualname": "Tabbyploert",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "349f9063-3b80-4dfe-9eef-80ed69a0fd98",
             "capes": 9,
             "score": 10,
             "actualname": "MrBeenie",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "a945cbed-da0f-4f05-a782-c29c2113b3cb",
             "capes": 9,
             "score": 10,
             "actualname": "kouri",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "a6f8ac28-bec3-4551-a559-8ebca1f1fd5b",
             "capes": 9,
             "score": 10,
             "actualname": "Seme_Barbone",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "f8cf2730-4d05-43af-b870-346eb8de5458",
             "capes": 9,
             "score": 10,
             "actualname": "Taizeur",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "5532c11b-3f2c-490d-810a-4c9ec8832153",
             "capes": 9,
             "score": 10,
             "actualname": "Ciguato",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "9930d607-095b-4330-89db-ab759a1e534a",
             "capes": 9,
             "score": 10,
             "actualname": "AyaDu",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0e6fc66f-e2b7-4bac-9ab4-5de88680cb11",
             "capes": 9,
             "score": 10,
             "actualname": "ostroznie",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "91928d1a-f851-4b54-8abf-9fa3ff294908",
             "capes": 9,
             "score": 10,
             "actualname": "bemancer",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "f6342aec-88d8-426b-9a30-b26e8e7626e3",
             "capes": 9,
             "score": 10,
             "actualname": "Marcelo15BR",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "1555d87a-2d44-4131-9e07-d046f484d5ff",
             "capes": 9,
             "score": 10,
             "actualname": "Evie",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e1b5a8a9-b0f5-4700-a4b2-ffbe88ddf319",
             "capes": 9,
             "score": 10,
             "actualname": "ZIIK",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "db35033c-1feb-4119-aaa4-aa023dcf94c3",
             "capes": 9,
             "score": 10,
             "actualname": "abugonline",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "df04208c-f088-497a-96d7-b3e3283f3fcf",
             "capes": 9,
             "score": 10,
             "actualname": "4307",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "43f3d593-13a9-4da1-9b40-7b4abd67e487",
             "capes": 9,
             "score": 10,
             "actualname": "Jesun",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "212d17b2-f4c7-4555-9dee-b2700042dc44",
             "capes": 9,
             "score": 10,
             "actualname": "pkpro",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "fce0323d-7f50-4317-9720-5f6b14cf78ea",
             "capes": 9,
             "score": 10,
             "actualname": "tr7zw",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e13daf95-77c1-4552-80c7-3fad858f2e91",
             "capes": 9,
             "score": 10,
             "actualname": "T0biii",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "eb0f2383-7f55-4b92-850c-a288d6a9f41a",
             "capes": 9,
             "score": 10,
             "actualname": "ImPlayingTooMuch",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "54f030b5-7141-4ad3-bf7d-0e932df538f0",
             "capes": 9,
             "score": 10,
             "actualname": "louizlar",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "db6cfa01-ab35-47cf-8549-967fc2cb3762",
             "capes": 9,
             "score": 10,
             "actualname": "Netanel",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "81ddf4f5-37c6-4ed5-8f60-b90e8528661a",
             "capes": 9,
             "score": 10,
             "actualname": "Zacronium_",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "220ee113-7745-4c04-97e0-23458c221a7d",
             "capes": 9,
             "score": 10,
             "actualname": "Bobicraft",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "6e240cb7-bd72-4cc4-9713-f9082fc8ffb1",
             "capes": 9,
             "score": 10,
             "actualname": "silentwisperer_",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7bb4365e-ed94-4ee3-b22a-243c35265713",
             "capes": 9,
             "score": 10,
             "actualname": "Raid",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "818f7a34-b042-4437-8b30-56bac8704fa6",
             "capes": 9,
             "score": 10,
             "actualname": "Letfordlay",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "65f2523c-0b79-4811-90a0-a87c3afb549d",
             "capes": 9,
             "score": 10,
             "actualname": "Mallysek",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "ef9f21df-c554-4c19-920c-88eda9585bf3",
             "capes": 9,
             "score": 10,
             "actualname": "Bloodletting",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8d68f461-061c-492d-ae30-6f90cd2c4ff1",
             "capes": 9,
             "score": 10,
             "actualname": "DascooleSchaf",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "30e95d64-07b7-4dca-ac38-c2e374428ea9",
             "capes": 9,
             "score": 10,
             "actualname": "smi",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "5df6ee7b-3671-4037-bbba-f6bcefd3462b",
             "capes": 9,
             "score": 10,
             "actualname": "LinZiMo7184",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "531892df-b29b-4a2b-ad2d-71901f2c264a",
             "capes": 9,
             "score": 10,
             "actualname": "Charles",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0b479054-9412-4793-a42a-b978f6442836",
             "capes": 9,
             "score": 10,
             "actualname": "Mitch",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "dcbbf0a5-c12e-4e8b-ab3d-fcf4f510a6ef",
             "capes": 9,
             "score": 10,
             "actualname": "Ramezsushi",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "745dd1c1-8fca-4d95-9f36-1aacfd9ea83b",
             "capes": 9,
             "score": 10,
             "actualname": "iWasted25Dollars",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "63781be2-b6b3-4b25-8af4-3d963f6bc164",
             "capes": 9,
             "score": 10,
             "actualname": "Furti_Two",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "57f9d29f-03a8-4491-8a0c-e391a6986869",
             "capes": 9,
             "score": 10,
             "actualname": "P529",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "5544a70e-7cc9-4e46-b9d7-79943908efed",
             "capes": 9,
             "score": 10,
             "actualname": "Info",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "f0ea82d7-8e6d-400e-bf40-121c072c2875",
             "capes": 9,
             "score": 10,
             "actualname": "Mystec",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "81049b33-4a25-45f8-82e7-d81c8d7165a2",
             "capes": 9,
             "score": 10,
             "actualname": "Trin",
-            "badge": ""
-        },
-        {
-            "uuid": "a5c9bd19-b033-4f0d-b05e-c0dcdbf73db8",
-            "capes": 9,
-            "score": 10,
-            "actualname": "ayloh",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "32bf3f58-7781-43ad-b907-2e7f7b31dc3c",
             "capes": 9,
             "score": 10,
             "actualname": "feoyezz",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "c2ab6feb-15e1-4c67-88f0-9209f586e4ac",
             "capes": 9,
             "score": 10,
             "actualname": "Variant404",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "205da846-db9e-4fd4-a4fe-bb0768031212",
             "capes": 9,
             "score": 10,
             "actualname": "DylanJ10908",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "722bca1f-d5e7-4cf6-9fac-702df29e76ce",
             "capes": 9,
             "score": 10,
             "actualname": "HudBudU",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "646fda8f-2ace-4e42-ae71-6d6deac826c7",
             "capes": 9,
             "score": 10,
             "actualname": "SkullerG",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e412d9d1-53df-4702-9731-151744960c56",
             "capes": 9,
             "score": 10,
             "actualname": "Parker",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "bde72dae-bb46-40ae-90ee-096f26bb5f85",
             "capes": 9,
             "score": 10,
             "actualname": "mohtele",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "065fd5b7-bbaa-4e14-81b5-d7e7acd3d29c",
             "capes": 9,
             "score": 10,
             "actualname": "Olivia_Rodrigo",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "31323f4d-58fa-496e-a059-e31732c8aafc",
             "capes": 9,
             "score": 10,
             "actualname": "Vow",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "4ade2ace-d750-466a-9396-ffe89a9523ad",
             "capes": 9,
             "score": 10,
             "actualname": "_P5",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b1910be7-b92b-447e-bfc7-b3fb12433994",
             "capes": 9,
             "score": 10,
             "actualname": "7onic",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "a3c12f1a-8b25-4e98-9e4e-e2ff694236af",
             "capes": 9,
             "score": 10,
             "actualname": "Ajj",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "498c2c75-0e3f-4b37-81bd-f122cde988e4",
             "capes": 9,
             "score": 10,
             "actualname": "wtapgod",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "2f6994e5-b8d3-4199-8222-67419f1b2ae7",
             "capes": 9,
             "score": 10,
             "actualname": "Restricts",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b97628f0-40a2-42ae-95ba-54ec11dce325",
             "capes": 9,
             "score": 10,
             "actualname": "Kayzuko",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "c20bdcbc-54f7-406f-a6f0-14c6a67b6ae0",
             "capes": 9,
             "score": 10,
             "actualname": "ffahc",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "d90e9f46-5bf1-438c-8035-2065d47aa809",
             "capes": 9,
             "score": 10,
             "actualname": "Medieval",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "9bf57169-3340-4272-9521-d7f518b11942",
             "capes": 9,
             "score": 10,
             "actualname": "Apan",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "5196aa23-3fed-4b3b-994d-04f2dd0f8c8b",
             "capes": 9,
             "score": 10,
             "actualname": "TriikPERVERSO",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7120f3c4-c18a-4753-baf3-d90af928f860",
             "capes": 9,
             "score": 10,
             "actualname": "enderdrxgon",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "4d58160c-b370-46bd-8483-f27364240e33",
             "capes": 9,
             "score": 10,
             "actualname": "MulherTrans",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "9ac5ba5e-4b56-49b6-ba95-e158056ef383",
             "capes": 9,
             "score": 10,
             "actualname": "Unknown",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "bd168dfa-55e5-4856-a01f-22b8ee8a8351",
             "capes": 9,
             "score": 10,
             "actualname": "612",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "ac38802e-9eb0-4fb2-ad79-739796e8c5d6",
             "capes": 9,
             "score": 10,
             "actualname": "Greninja",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b3855ab3-da60-4b31-87f8-e21d85531bff",
             "capes": 9,
             "score": 10,
             "actualname": "Sanctified",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "36c2d81c-ed80-45ba-9f2a-e7e69a664ee3",
             "capes": 9,
             "score": 10,
             "actualname": "colonizes",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "3c0316d4-a5cb-40e5-b9ff-8a793a4d2b63",
             "capes": 9,
             "score": 10,
             "actualname": "3_9",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "1b8b4dd0-ca71-43e9-8c7d-f2840bb6b57b",
             "capes": 9,
             "score": 10,
             "actualname": "2b_2t",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "31192189-3829-4fe0-b474-c972c21632e0",
             "capes": 9,
             "score": 10,
             "actualname": "Melonfr",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0a793922-44d2-4dbf-a5aa-1c2f6829918e",
             "capes": 9,
             "score": 10,
             "actualname": "Nellie",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "6427ae0a-c966-4a82-86a8-e5f1f3632dfc",
             "capes": 9,
             "score": 10,
             "actualname": "qoaz",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "5e0c8c22-5a62-4175-92d1-aa46eb764181",
             "capes": 9,
             "score": 10,
             "actualname": "HyacinthChen",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b4516213-f488-4bc4-a189-c786dae64f23",
             "capes": 9,
             "score": 10,
             "actualname": "J4yBirb",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8ef1a6ad-960f-4f63-bbbe-f9b1132c194b",
             "capes": 9,
             "score": 10,
             "actualname": "9507",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0256010f-23a9-4cac-b73b-523db26242d0",
             "capes": 9,
             "score": 10,
             "actualname": "6Q3",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "f289e0f5-1aa4-4137-9b9e-e86f4341aff9",
             "capes": 9,
             "score": 10,
             "actualname": "Yzedeka",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "27747387-a92c-4de2-a474-0f998b74a11d",
@@ -2805,231 +2805,252 @@
             "capes": 9,
             "score": 10,
             "actualname": "Yzcen",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "f15fa7b0-d4e5-4239-9b01-210701641f93",
             "capes": 9,
             "score": 10,
             "actualname": "NakanoMC",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "522b3126-050b-45a0-85f5-17c9271d8d9a",
             "capes": 9,
             "score": 10,
             "actualname": "Luzay",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "b13d01ad-cef1-4a77-a2b1-f58ab22f4d82",
             "capes": 9,
             "score": 10,
             "actualname": "FrenchGuiana",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8c804fac-8253-43c1-98a2-5d3385d410ed",
             "capes": 9,
             "score": 10,
             "actualname": "_HuaYou",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "38c44922-fa27-47d9-9c48-ba1d4605e313",
             "capes": 9,
             "score": 10,
             "actualname": "Denis789",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "7663199f-f927-422d-a38a-065b0d26121f",
             "capes": 9,
             "score": 10,
             "actualname": "4CVIT",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "c2de3558-7175-4b28-a18e-08ac94ae7af3",
             "capes": 9,
             "score": 10,
             "actualname": "CoveWolfYT",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "8995cacd-ff07-4c67-bd4b-514a2c89cdaf",
             "capes": 9,
             "score": 10,
             "actualname": "Sommer2019",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "61c23904-8956-4162-a007-76c3df7993f2",
             "capes": 9,
             "score": 10,
             "actualname": "DeadBush",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "f9b28dcf-5dda-423d-a85c-6a0039f811c1",
             "capes": 9,
             "score": 10,
             "actualname": "Hubert",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "2053a14c-85f6-4ad2-a4ea-2d8ed48f55c2",
             "capes": 9,
             "score": 10,
             "actualname": "WarriorAlexOne",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e1980e75-f8c9-4ce9-a1ed-1f49dad59214",
             "capes": 9,
             "score": 10,
             "actualname": "Unbricked",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "687efaf3-5038-42c4-b696-ad12b1227a3a",
             "capes": 9,
             "score": 10,
             "actualname": "Tuwt",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "a6dc352e-b433-43f1-85af-35201a84ad25",
             "capes": 9,
             "score": 10,
             "actualname": "skydei",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "d590ecce-5589-419d-9936-996e65f630a6",
             "capes": 9,
             "score": 10,
             "actualname": "BlizzardGame1",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "df6f1a96-2179-4cfe-b6f3-0cb9cc6b7a7a",
             "capes": 9,
             "score": 10,
             "actualname": "yarnis",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "4ad3c13a-6f49-4b75-8a59-d7705469ab89",
             "capes": 9,
             "score": 10,
             "actualname": "troytimmer",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "c0bfb3fd-8f5c-4c0e-ad37-9a1798b3bc01",
             "capes": 9,
             "score": 10,
             "actualname": "whathap",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "a1dcba01-88e3-4915-864f-284ce0c775bf",
             "capes": 9,
             "score": 10,
             "actualname": "MICKEYY",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "0e97879a-fc74-4326-9d8d-d1563484a80d",
             "capes": 9,
             "score": 10,
             "actualname": "AlexDGD",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "6aba16b6-54d9-4694-8713-7b1bf0bd6d31",
             "capes": 9,
             "score": 10,
             "actualname": "Crazed_49_TW",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "e9becc5e-11f6-4485-a62f-10c9dffa5f5b",
             "capes": 9,
             "score": 10,
             "actualname": "rek42",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "65d5bcf5-7884-4a46-acd6-36445c855619",
             "capes": 9,
             "score": 10,
             "actualname": "Valkoni",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "6429095e-f13d-4b34-b1be-8b562965e49a",
             "capes": 9,
             "score": 10,
             "actualname": "TheDrownedZodiac",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "02c059b2-f557-481f-b7f4-3e533e5b8406",
             "capes": 9,
             "score": 10,
             "actualname": "BadCandy",
-            "badge": ""
+            "badge": "all-commons"
         },
         {
             "uuid": "168e478f-653a-4ccb-8eda-be3aa63cedca",
             "capes": 9,
             "score": 10,
             "actualname": "orangutade",
-            "badge": ""
+            "badge": "all-commons"
+        },
+        {
+            "uuid": "e8e8dc69-8af6-45fa-b9fc-8df26e9b2a9e",
+            "capes": 9,
+            "score": 10,
+            "actualname": "Lethargian",
+            "badge": "all-commons"
+        },
+        {
+            "uuid": "167da0a1-3b2f-42bc-b95c-41ab7da3d1dc",
+            "capes": 9,
+            "score": 10,
+            "actualname": "chipsZzzz",
+            "badge": "all-commons"
+        },
+        {
+            "uuid": "a5c9bd19-b033-4f0d-b05e-c0dcdbf73db8",
+            "capes": 9,
+            "score": 9,
+            "actualname": "ayloh",
+            "badge": "all-events"
         },
         {
             "uuid": "8ecf8beb-720c-442c-911a-c9744e65bd9d",
             "capes": 8,
             "score": 45,
             "actualname": "MansOlson",
-            "badge": ""
+            "badge": "mojang-employee"
         },
         {
             "uuid": "b9583ca4-3e64-488a-9c8c-4ab27e482255",
             "capes": 8,
             "score": 44,
             "actualname": "xlson",
-            "badge": ""
+            "badge": "perfect-mojang-employee"
         },
         {
             "uuid": "89893e8f-920e-40a9-947a-fbfdb93effd5",
             "capes": 8,
             "score": 41,
             "actualname": "Bopogamel",
-            "badge": ""
-        },
-        {
-            "uuid": "7125ba8b-1c86-4508-b92b-b5c042ccfe2b",
-            "capes": 8,
-            "score": 36,
-            "actualname": "KrisJelbring",
-            "badge": ""
+            "badge": "mojang-employee"
         },
         {
             "uuid": "c30c16fa-05e2-4751-9f32-2b6dca5026b3",
             "capes": 8,
             "score": 36,
             "actualname": "_tommo_",
-            "badge": ""
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "7125ba8b-1c86-4508-b92b-b5c042ccfe2b",
+            "capes": 8,
+            "score": 35,
+            "actualname": "KrisJelbring",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "92961c3f-fd6b-46a9-93cf-e8d80187bad1",
             "capes": 8,
             "score": 25,
             "actualname": "Aquezer",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "837b4c2a-2649-480e-8786-d5b2b10274af",
@@ -3057,7 +3078,7 @@
             "capes": 8,
             "score": 17,
             "actualname": "Aerh",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "c508bd39-ca66-47a4-b271-4326651ee712",
@@ -3071,35 +3092,35 @@
             "capes": 8,
             "score": 16,
             "actualname": "JarlPenguin",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "b6682564-b60f-46b3-94d7-5fa7a7d51a58",
             "capes": 8,
             "score": 16,
             "actualname": "Collage",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "90a46aff-6666-431b-9076-6dc96ae6b235",
             "capes": 8,
             "score": 16,
             "actualname": "Mighty_Pant",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "a44bc1df-dc16-41fc-9696-e3f3ce7de3f3",
             "capes": 8,
             "score": 16,
             "actualname": "KeepYourHairOn",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "6ee71b2d-3ae5-49ee-8b4c-c206a556044f",
             "capes": 8,
             "score": 16,
             "actualname": "groomlakeroad",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "09666f50-51d1-4563-9b26-3a3f396b8d38",
@@ -3127,126 +3148,126 @@
             "capes": 8,
             "score": 15,
             "actualname": "Player_XX",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "6a4e5100-5908-4973-8681-dab8091cc442",
             "capes": 8,
             "score": 15,
             "actualname": "UberKritsCupcake",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "e5cc3534-10dd-4b5c-85cb-8a670de1d34a",
             "capes": 8,
             "score": 15,
             "actualname": "SD27",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "7387d8a3-1f75-4064-8189-78a34b06ee70",
             "capes": 8,
             "score": 15,
             "actualname": "Ico",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "4d88c8c0-e5af-44ea-9289-3815bfab6b74",
             "capes": 8,
             "score": 15,
             "actualname": "Bird",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "be1b8c32-ff34-4e98-9103-19d5bb0bda2d",
             "capes": 8,
             "score": 15,
             "actualname": "_Classic",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "2e3ee46b-3541-4bbb-b591-9393bcde8c5a",
             "capes": 8,
             "score": 15,
             "actualname": "cu_",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "0ddf9cd4-3ae0-4740-b628-5994a5f92120",
             "capes": 8,
             "score": 15,
             "actualname": "Elwinz",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "48b5375e-8846-4d7f-94a2-fa13c628b45a",
             "capes": 8,
             "score": 15,
             "actualname": "GlxyLuke",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "f4558c98-fe28-426b-ab68-601fb2013603",
             "capes": 8,
             "score": 15,
             "actualname": "Halbrave",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "2caae3b6-991f-4c03-baae-ef8df4fae112",
             "capes": 8,
             "score": 15,
             "actualname": "Aeltumn",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "4fdadb70-b4ee-4bc0-af86-0eddc0db7ff8",
             "capes": 8,
             "score": 15,
             "actualname": "Slarox",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "dab20673-5f30-4eaf-ab67-ab84a84f4a58",
             "capes": 8,
             "score": 15,
             "actualname": "Benjamin874",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "ccce8cf3-e2c1-41de-bf36-db62305e4abc",
             "capes": 8,
             "score": 15,
             "actualname": "Lucuma",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "04e3ef9e-eb11-458b-b8cc-f7dcc756c4fc",
             "capes": 8,
             "score": 15,
             "actualname": "Lazybrush2",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "6b1c1d3d-bdc3-4385-9650-638da098af81",
             "capes": 8,
             "score": 15,
             "actualname": "Thunderie",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "acf01027-b6f9-43ad-9bec-9ca999a14c9b",
             "capes": 8,
             "score": 15,
             "actualname": "Risely",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "85eb0d11-10d5-4e25-8d06-7f6e545b3bc5",
             "capes": 8,
             "score": 15,
             "actualname": "Neylz",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "82f75c9f-dbc9-40ce-90e8-0ba3c4240425",
@@ -3267,7 +3288,7 @@
             "capes": 8,
             "score": 14,
             "actualname": "tearsofavarel",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "8de28b3c-e827-49f2-8870-aa80a2a6bcdd",
@@ -3288,54 +3309,54 @@
             "capes": 8,
             "score": 14,
             "actualname": "Skillnium",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "2b17f562-570c-4f6d-86a4-3a5c528cf24c",
             "capes": 8,
             "score": 14,
             "actualname": "Zachie",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "e85619c5-618a-48bb-af6d-71e190de3493",
             "capes": 8,
             "score": 14,
             "actualname": "tinylmao",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "775cfa24-3940-4747-88af-0f4bf4d0d475",
             "capes": 8,
             "score": 14,
             "actualname": "Tlense",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "87c9ec9f-f25c-4aa4-9837-d74c87739ff4",
             "capes": 8,
             "score": 14,
             "actualname": "ThompsonSMG",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "9709b4ea-d04b-4460-8ce9-4cae79b3ba38",
             "capes": 8,
             "score": 14,
             "actualname": "qqaEE",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "71b15da0-82ea-4802-af07-986c4b0b357e",
             "capes": 8,
             "score": 14,
             "actualname": "gengarjuice69",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "32bcfb0b-8872-4b59-b8d7-84b0f26284af",
             "capes": 8,
-            "score": 14,
+            "score": 13,
             "actualname": "borkiee",
             "badge": ""
         },
@@ -3344,14 +3365,14 @@
             "capes": 8,
             "score": 13,
             "actualname": "Echens",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "633b4704-2eaa-47e3-8c21-05b967fbecd4",
             "capes": 8,
             "score": 13,
             "actualname": "KingZombie",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "89398c37-9639-467e-a800-7f811033b261",
@@ -3365,21 +3386,21 @@
             "capes": 8,
             "score": 13,
             "actualname": "KillIt",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "ccb9e36a-523b-4151-8874-be5aa9e75c89",
             "capes": 8,
             "score": 13,
             "actualname": "Blockades",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "42eabb15-805a-4f88-9895-c6cb0c0ceb1c",
             "capes": 8,
             "score": 13,
             "actualname": "educarv",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "d61d1719-58ea-4070-8eff-6301a1986945",
@@ -3393,7 +3414,7 @@
             "capes": 8,
             "score": 12,
             "actualname": "64w",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "91084895-dc7e-4387-b278-b3ae6f9dc9c2",
@@ -3407,14 +3428,14 @@
             "capes": 8,
             "score": 12,
             "actualname": "Sours",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "bc6c4414-20e8-4380-aa7c-5cbf1367d8b8",
             "capes": 8,
             "score": 12,
             "actualname": "Ogmeo",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "ba66a314-ab78-4b86-8831-425b586c57f0",
@@ -3428,21 +3449,21 @@
             "capes": 8,
             "score": 12,
             "actualname": "Nibbling",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "0ac5dd46-6138-42f7-b092-e2c16afac9df",
             "capes": 8,
             "score": 12,
             "actualname": "Sweetness",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "9055935d-379e-4448-a8b5-6e3ff7fc000e",
             "capes": 8,
             "score": 12,
             "actualname": "Agartha_10",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "82a95a5e-e0cf-450c-b47a-ce33c77b0e46",
@@ -3477,14 +3498,14 @@
             "capes": 8,
             "score": 11,
             "actualname": "Ailg",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "2eacacec-7f4c-4fba-aaf8-44c644373dac",
             "capes": 8,
             "score": 11,
             "actualname": "khous",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "18c22d1e-6940-44cb-a7c1-10dcbe196ee3",
@@ -3498,21 +3519,21 @@
             "capes": 8,
             "score": 11,
             "actualname": "Bethy",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "318cf92b-6cc0-46db-9f40-edf0466b9f2f",
             "capes": 8,
             "score": 11,
             "actualname": "hukia",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "f326f15b-6fab-42ad-83fe-3f0f0ba9994b",
             "capes": 8,
             "score": 11,
             "actualname": "Coduhy",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "3eef2769-4dd2-4337-839a-5daa1bf1c50a",
@@ -3526,14 +3547,14 @@
             "capes": 8,
             "score": 11,
             "actualname": "Killoran",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "6ce78380-53a5-4f26-8631-6b659656c02f",
             "capes": 8,
             "score": 11,
             "actualname": "L33T",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "10c8085d-631d-4088-b414-b687dbb16250",
@@ -3547,7 +3568,7 @@
             "capes": 8,
             "score": 11,
             "actualname": "Fersy",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "0f553dc9-fc6b-4ca7-addf-6c7c9ab1e84a",
@@ -3561,21 +3582,14 @@
             "capes": 8,
             "score": 11,
             "actualname": "Markkyx",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "dbde5f37-ec18-43f2-8aea-2600fba85030",
             "capes": 8,
             "score": 11,
             "actualname": "Chrstin",
-            "badge": ""
-        },
-        {
-            "uuid": "11b7cbd3-3b4f-48a3-b661-e8f0c3306dcb",
-            "capes": 8,
-            "score": 11,
-            "actualname": "Jzsh",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "a6e783b3-f2a3-4842-b916-4c318f1c5b03",
@@ -3589,14 +3603,14 @@
             "capes": 8,
             "score": 11,
             "actualname": "Owenpsteve2",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "b2b30608-b074-4cdf-a551-2f7f2fa06408",
             "capes": 8,
             "score": 11,
             "actualname": "Woomy",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "b1b9a3b4-9f4d-4a6f-831f-3362e56fcc6d",
@@ -3610,119 +3624,119 @@
             "capes": 8,
             "score": 10,
             "actualname": "MODKILLER1001",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "82cf070b-cb39-4fcd-bf8c-50c125f6a9d1",
             "capes": 8,
             "score": 10,
             "actualname": "Michaelmcchill",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "0a843063-c513-4c74-a250-a1b343d3b303",
             "capes": 8,
             "score": 10,
             "actualname": "Roydrick",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "76461bef-2c1d-4440-b8d0-1f992398c1a0",
             "capes": 8,
             "score": 9,
             "actualname": "Doblou",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "0086e09d-0451-4ea3-98c2-8026bd9707e5",
             "capes": 8,
             "score": 9,
             "actualname": "BurningBarn",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "2e3544e7-34bd-499c-9353-660984f6dac1",
             "capes": 8,
             "score": 9,
             "actualname": "MARKz99",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "65b12839-d0fe-41d2-8bad-7cfd3c0a946f",
             "capes": 8,
             "score": 9,
             "actualname": "mmy",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "9dc8dc7b-0506-42e4-bffb-da9398e32121",
             "capes": 8,
             "score": 9,
             "actualname": "Down",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "5e295775-a85d-467f-b041-bf817b28241c",
             "capes": 8,
             "score": 9,
             "actualname": "Lorzz",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "392b0f1d-2bb1-45d8-b526-e5e11d2fb857",
             "capes": 8,
             "score": 9,
             "actualname": "games2day",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "47142528-34f0-4104-be73-cce5c12e4a2e",
             "capes": 8,
             "score": 9,
             "actualname": "Spell",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "e3a46002-e789-4ac4-9f12-bc41e59ad93d",
             "capes": 8,
             "score": 9,
             "actualname": "s5my",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "e24a0fb0-3345-4f3c-a1d6-7f2962f19a3e",
             "capes": 8,
             "score": 9,
             "actualname": "osma",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "12584693-5a1a-49e6-84b4-f26d07516e23",
             "capes": 8,
             "score": 9,
             "actualname": "pawciu2086",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "2be060b9-0768-496a-adc6-1d1f658efafd",
             "capes": 8,
             "score": 9,
             "actualname": "Will",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "bfb01773-67d2-49dc-908b-e64d1cd89e96",
             "capes": 8,
             "score": 9,
             "actualname": "Nirplay",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "780ef5d5-d2d2-43e8-a536-267892770415",
             "capes": 8,
             "score": 9,
             "actualname": "ht06",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "a16ac801-a3fb-4465-a6f1-203d244e1d1f",
@@ -3736,28 +3750,28 @@
             "capes": 8,
             "score": 9,
             "actualname": "Magnus",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "84fa8bd0-8694-490c-8bc0-e13357b72faf",
             "capes": 8,
             "score": 9,
             "actualname": "godakame",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "037a1727-407c-45fd-ab29-19382764e896",
             "capes": 8,
             "score": 9,
             "actualname": "Void",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "3a19318e-66e4-4c06-8f81-cd7d33b3c556",
             "capes": 8,
             "score": 9,
             "actualname": "Resister",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "a730b990-c7e3-40c1-b64d-2cc273d4f570",
@@ -3771,28 +3785,28 @@
             "capes": 8,
             "score": 9,
             "actualname": "lliili",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "820c9dbf-0c0e-4675-a9a7-5cfe4240104d",
             "capes": 8,
             "score": 9,
             "actualname": "Musical",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "983a1826-13e0-4127-8852-6c5b3fbb1034",
             "capes": 8,
             "score": 9,
             "actualname": "Rosie",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "0fce8973-031a-4c0c-8669-776bd220b639",
             "capes": 8,
             "score": 9,
             "actualname": "Hurt",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "6f38813c-da1b-461e-86c2-8d0919467b12",
@@ -3806,28 +3820,28 @@
             "capes": 8,
             "score": 9,
             "actualname": "3rst",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "d72d0252-4152-40d4-ad2c-21c14099ce77",
             "capes": 8,
             "score": 9,
             "actualname": "Daelen",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "6d02e572-a447-4bd8-bba5-c1e2b5b9923b",
             "capes": 8,
             "score": 9,
             "actualname": "TheKingVillager",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "8cacc7fb-caab-43d5-bc21-21b9609dce91",
             "capes": 8,
             "score": 9,
             "actualname": "NotVixios",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "2ffa806c-cbad-4274-8175-eb2494b7fd66",
@@ -3841,28 +3855,28 @@
             "capes": 8,
             "score": 9,
             "actualname": "Fliffan",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "528eb07c-76fe-4cf6-ab2f-b0ef1abb90ca",
             "capes": 8,
             "score": 9,
             "actualname": "Gsmacker",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "18bc1b14-5219-4d12-9c2e-851dbba146c9",
             "capes": 8,
             "score": 9,
             "actualname": "bibimcat",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "73a2bf17-7b56-48fa-8f7e-a8a36f358148",
             "capes": 8,
             "score": 9,
             "actualname": "Snowballcps",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "9793c6bb-9482-4ad8-91f7-db4aa5a7a272",
@@ -3876,28 +3890,28 @@
             "capes": 8,
             "score": 9,
             "actualname": "SeedTech",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "d7cf460c-6646-41fd-98a7-14efe09bdb0e",
             "capes": 8,
             "score": 9,
             "actualname": "Earn",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "ca7b1782-2d95-4385-a42e-25912f9d2e7a",
             "capes": 8,
             "score": 9,
             "actualname": "Seedling",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "cd6ae6f1-0f96-47f6-a1b9-4467415c63e7",
             "capes": 8,
             "score": 9,
             "actualname": "Slander",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "aea25ef5-d8cb-407c-9ca1-5a379404ebbe",
@@ -3932,7 +3946,7 @@
             "capes": 8,
             "score": 9,
             "actualname": "Inpuzah",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "26938964-3222-40bc-9b02-46a07743d1c5",
@@ -3946,14 +3960,14 @@
             "capes": 8,
             "score": 9,
             "actualname": "mtishi",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "7e4a45bd-6564-4572-a005-4e1328df4b4c",
             "capes": 8,
             "score": 9,
             "actualname": "Sinner",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "238045b3-3f94-4eb2-adf5-064436a5b9af",
@@ -3974,21 +3988,21 @@
             "capes": 8,
             "score": 9,
             "actualname": "_Sangri",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "5a4b78e3-437f-4197-9a2f-5fbf357bce4c",
             "capes": 8,
             "score": 9,
             "actualname": "ecstsy",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "891c8f09-4a03-4c3f-8f62-1b02067ec553",
             "capes": 8,
             "score": 9,
             "actualname": "The_Hangel",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "ef8e99e4-fa77-45b4-b588-9174651c5020",
@@ -4009,21 +4023,21 @@
             "capes": 8,
             "score": 9,
             "actualname": "TheFlyKid",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "2c50e6ed-678b-4a89-891a-e3bc987fb760",
             "capes": 8,
             "score": 9,
             "actualname": "Joi",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "4a66d3d8-7eed-42e6-a479-e4139e9041ee",
             "capes": 8,
             "score": 9,
             "actualname": "M6yo",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "4718c932-24dd-4528-9fa4-aadb5129719d",
@@ -4037,14 +4051,14 @@
             "capes": 8,
             "score": 9,
             "actualname": "plask",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "c1d2e315-7c3a-4a97-8a8e-ffd188cad54d",
             "capes": 8,
             "score": 9,
             "actualname": "PocketSage",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "e06fe2df-b20c-4951-b21e-c3d93fadf1f0",
@@ -4068,18 +4082,11 @@
             "badge": ""
         },
         {
-            "uuid": "e8e8dc69-8af6-45fa-b9fc-8df26e9b2a9e",
-            "capes": 8,
-            "score": 9,
-            "actualname": "Lethargian",
-            "badge": ""
-        },
-        {
             "uuid": "18bd2bc4-4291-4c50-ae9c-0e8464b96188",
             "capes": 8,
             "score": 9,
             "actualname": "QGC",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "ceb0cc3b-29c9-4121-8c20-543549ff1490",
@@ -4093,7 +4100,7 @@
             "capes": 8,
             "score": 9,
             "actualname": "NinjaSir",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "e55eea8b-66f8-4cd4-9361-ad6925d8f735",
@@ -4121,14 +4128,14 @@
             "capes": 8,
             "score": 9,
             "actualname": "LoveWhitey",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "ba648977-a49f-4e09-b60e-a97d2c58d1e2",
             "capes": 8,
             "score": 9,
             "actualname": "Lopa",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "9333fd9a-cca6-4237-b3a5-26aedf10fe24",
@@ -4163,28 +4170,28 @@
             "capes": 8,
             "score": 9,
             "actualname": "10minutetimer",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "88d102b7-fc9c-431f-969c-95366d8c8fed",
             "capes": 8,
             "score": 9,
             "actualname": "greffen",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "3f0e1d2c-b5df-46c4-8ed9-af5a797a7f81",
             "capes": 8,
             "score": 9,
             "actualname": "Robby",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "427278b0-2b66-457c-a0dc-e9a2eb35f88e",
             "capes": 8,
             "score": 9,
             "actualname": "pinkboo",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "b123056a-a193-42ac-a6c5-b193156cc6d3",
@@ -4198,21 +4205,14 @@
             "capes": 8,
             "score": 9,
             "actualname": "Admere",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "bd802df3-f4f0-4186-ba4c-eb320a32dd06",
             "capes": 8,
             "score": 9,
             "actualname": "Arten",
-            "badge": ""
-        },
-        {
-            "uuid": "167da0a1-3b2f-42bc-b95c-41ab7da3d1dc",
-            "capes": 8,
-            "score": 9,
-            "actualname": "chipsZzzz",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "c7db1087-3e1c-495b-b9ed-f23038e05385",
@@ -4226,7 +4226,7 @@
             "capes": 8,
             "score": 9,
             "actualname": "Mr_Jvav",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "32afaa6b-6ed9-4fb8-a713-0402f39116c8",
@@ -5934,14 +5934,14 @@
             "capes": 7,
             "score": 45,
             "actualname": "Grumm",
-            "badge": ""
+            "badge": "custom-model"
         },
         {
             "uuid": "0535d36f-aee6-4398-9355-a942b4a7f66b",
             "capes": 7,
             "score": 36,
             "actualname": "ProfMobius",
-            "badge": ""
+            "badge": "perfect-mojang-employee"
         },
         {
             "uuid": "ced27185-3676-4f6a-9ef1-088f305692ef",
@@ -5955,7 +5955,7 @@
             "capes": 7,
             "score": 35,
             "actualname": "LydiaWinters",
-            "badge": ""
+            "badge": "mojang-employee"
         },
         {
             "uuid": "55a2e72e-0161-4c85-b191-a0b227ff758a",
@@ -5969,7 +5969,7 @@
             "capes": 7,
             "score": 33,
             "actualname": "shoghicp",
-            "badge": ""
+            "badge": "perfect-mojang-employee"
         },
         {
             "uuid": "9c2ac958-5de9-45a8-8ca1-4122eb4c0b9e",
@@ -6501,19 +6501,19 @@
             "capes": 7,
             "score": 7,
             "actualname": "39HD",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "3ae80695-7200-4bcc-97ff-453e1494c81d",
             "capes": 7,
             "score": 7,
             "actualname": "Fluffion",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "bef46daf-79b4-4c79-af0c-bc6a480fc7c4",
             "capes": 7,
-            "score": 7,
+            "score": 0,
             "actualname": "Marzenia",
             "badge": ""
         },
@@ -6522,21 +6522,84 @@
             "capes": 6,
             "score": 38,
             "actualname": "Notch",
-            "badge": ""
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d8f9a434-0f2d-415f-9acf-cd70341c75ec",
+            "capes": 6,
+            "score": 38,
+            "actualname": "kappe",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "1b42ff62-b4cb-4b8e-8fbd-efd24e70ced2",
             "capes": 6,
             "score": 35,
             "actualname": "Fox",
-            "badge": ""
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "93ba8758-0abd-4a3e-a009-d812d0d22d13",
+            "capes": 6,
+            "score": 34,
+            "actualname": "Vaktis",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "ed4da3ab-a7e1-4b44-b913-22eb38fdae4b",
+            "capes": 6,
+            "score": 32,
+            "actualname": "eldrone",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "bd3eec5f-d158-4256-841f-481a80abb377",
+            "capes": 6,
+            "score": 30,
+            "actualname": "Mega_Spud",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "f0fe3b50-9fee-43e2-a165-6c4526ac6473",
+            "capes": 6,
+            "score": 29,
+            "actualname": "Moesh",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "4e1256f5-c48d-4e4b-8dad-f248108ee2ee",
+            "capes": 6,
+            "score": 27,
+            "actualname": "Hampus",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "a6484c2f-cd05-460f-81d1-36e92d8f8f9e",
+            "capes": 6,
+            "score": 26,
+            "actualname": "Cojomax99",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "6a085b2c-19fb-4986-b453-231aa942bbec",
+            "capes": 6,
+            "score": 25,
+            "actualname": "LadyAgnes",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "951b54fc-6189-4fbd-8b9c-affd70ab8449",
             "capes": 6,
             "score": 22,
             "actualname": "bemoty",
-            "badge": ""
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "898ed213-79b2-49f9-8602-d1bb03d19ba2",
+            "capes": 6,
+            "score": 22,
+            "actualname": "boq",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "c07edab6-e3e7-4ce2-930f-8b5c5de69366",
@@ -6550,7 +6613,7 @@
             "capes": 6,
             "score": 7,
             "actualname": "Lava",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "3de1be56-fd46-403b-b419-903744efe31e",
@@ -6560,11 +6623,81 @@
             "badge": ""
         },
         {
+            "uuid": "4b84ef8f-ff95-4e6a-bf51-82a0f439234e",
+            "capes": 6,
+            "score": 5,
+            "actualname": "underpapyrusr",
+            "badge": ""
+        },
+        {
+            "uuid": "78114290-566b-4467-a335-a2499775bd55",
+            "capes": 6,
+            "score": 0,
+            "actualname": "PersianCat",
+            "badge": ""
+        },
+        {
+            "uuid": "3ce72668-b8f9-497f-bfb4-809e47365e17",
+            "capes": 5,
+            "score": 34,
+            "actualname": "carlmanneh",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "baef75ab-f194-4ad2-8b13-e60ecc6a3484",
+            "capes": 5,
+            "score": 28,
+            "actualname": "Duel",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "0e3c6e97-fce6-4e2a-a4a9-0fd17ee3f5a4",
+            "capes": 5,
+            "score": 28,
+            "actualname": "Wrex",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "c91bfc22-d2ad-4e85-a97d-2d071a67bd5f",
+            "capes": 5,
+            "score": 28,
+            "actualname": "Aconitin",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "c1bc0c6e-1b4f-4aff-a0e8-a17eefb408b2",
+            "capes": 5,
+            "score": 28,
+            "actualname": "unborncorn",
+            "badge": "perfect-mojang-employee"
+        },
+        {
             "uuid": "61699b2e-d327-4a01-9f1e-0ea8c3f06bc6",
             "capes": 5,
             "score": 26,
             "actualname": "Dinnerbone",
-            "badge": ""
+            "badge": "custom-model"
+        },
+        {
+            "uuid": "fb967fd2-d9f9-4b0f-bcc8-8f61a1b136a8",
+            "capes": 5,
+            "score": 26,
+            "actualname": "Haffu",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "37aab126-de21-4638-a8dc-aef244744c15",
+            "capes": 5,
+            "score": 26,
+            "actualname": "iFlyingCrab",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "d7155343-ffae-4c8b-b654-aaecfaa29ed2",
+            "capes": 5,
+            "score": 26,
+            "actualname": "vubui",
+            "badge": "perfect-mojang-employee"
         },
         {
             "uuid": "542189cf-68fb-415b-bbe6-c60da626e65a",
@@ -6574,18 +6707,74 @@
             "badge": "all-minecons"
         },
         {
+            "uuid": "afde557c-6032-47f8-b336-9fe57b352259",
+            "capes": 5,
+            "score": 25,
+            "actualname": "rockenroll4life",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "61887403-c799-4288-b680-d7d5859a20fe",
+            "capes": 5,
+            "score": 25,
+            "actualname": "modhelius",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "63b31801-739e-4057-9c7a-88482c3aacc8",
+            "capes": 5,
+            "score": 24,
+            "actualname": "darngeek",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "13655ac1-584d-4785-b227-650308195121",
+            "capes": 5,
+            "score": 23,
+            "actualname": "kingbdogz",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "364beb7e-6506-4a8d-8e50-569c4ab97eea",
+            "capes": 5,
+            "score": 22,
+            "actualname": "NeonMaster",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d786764f-32cc-48b3-8326-3bdb6abc6ac0",
+            "capes": 5,
+            "score": 21,
+            "actualname": "Sunken_City",
+            "badge": "mojang-employee"
+        },
+        {
             "uuid": "f6b1914d-b176-4850-8a06-b50380412b85",
             "capes": 5,
             "score": 20,
             "actualname": "Vilder50",
-            "badge": ""
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "a51a8da4-85f8-4e82-b05e-675c26e1de4e",
+            "capes": 5,
+            "score": 19,
+            "actualname": "gnembon",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "89a02e3f-ccc2-4b30-88b4-d05eed940ac6",
+            "capes": 5,
+            "score": 19,
+            "actualname": "wChi",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "fe5d6f18-6b24-4afb-8fba-fd8768d96e4b",
             "capes": 5,
-            "score": 19,
+            "score": 17,
             "actualname": "kent600",
-            "badge": ""
+            "badge": "mojang-employee"
         },
         {
             "uuid": "a6eb2491-7365-4649-a795-2f032c9919f0",
@@ -6602,38 +6791,507 @@
             "badge": ""
         },
         {
+            "uuid": "f8cdb683-9e90-43ee-a819-39f85d9c5d69",
+            "capes": 4,
+            "score": 26,
+            "actualname": "mollstam",
+            "badge": "mojang-employee"
+        },
+        {
             "uuid": "66aee8d3-3796-41ee-a234-86f8a5477e6e",
             "capes": 4,
             "score": 25,
             "actualname": "Nrp123",
-            "badge": ""
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "f8818616-5d47-4272-9947-fbc6d729cb4d",
+            "capes": 4,
+            "score": 25,
+            "actualname": "Kottizen",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "fc24fbda-f5d2-47c0-89f6-420c1970b482",
+            "capes": 4,
+            "score": 25,
+            "actualname": "peterixxx",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "32002a6b-5586-4c0d-9cb2-30abc739f566",
+            "capes": 4,
+            "score": 25,
+            "actualname": "popshaped",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "4f843993-cd42-4cf5-9f9b-a46237fade57",
+            "capes": 4,
+            "score": 25,
+            "actualname": "klumpig",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "9c6209cb-931c-4d39-a037-9529827aa6ed",
+            "capes": 4,
+            "score": 25,
+            "actualname": "felnious_monk",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "626e9b69-73ec-4a18-b0cd-1e53b37eb895",
+            "capes": 4,
+            "score": 25,
+            "actualname": "Heliaq",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "db6c3fe8-0969-4ec4-bebb-269e0e673f1f",
+            "capes": 4,
+            "score": 25,
+            "actualname": "peterix",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "8808d2ce-9eaa-45ee-a9fd-d9e5fb0e478d",
+            "capes": 4,
+            "score": 24,
+            "actualname": "Janeator",
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "6d752bb0-ef41-432a-825a-4d44185de121",
             "capes": 4,
             "score": 22,
             "actualname": "Gr8Bizzo",
-            "badge": ""
+            "badge": "unique-cape"
+        },
+        {
+            "uuid": "ee531ba1-534a-4720-9f69-2605dbf58a10",
+            "capes": 4,
+            "score": 21,
+            "actualname": "amir343",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "e0a4a12d-da4c-40fd-8009-6725ed21bfb1",
+            "capes": 4,
+            "score": 21,
+            "actualname": "Blurpi",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "658ce1aa-6b26-4f1f-8643-ed26848c4996",
+            "capes": 4,
+            "score": 18,
+            "actualname": "laderbogen",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "4f4fe77f-66d5-42f4-bde2-314dca0c7317",
+            "capes": 4,
+            "score": 18,
+            "actualname": "MarBoDin",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "df18cfe1-b7a7-43d0-ae4d-c9b4611cf153",
+            "capes": 4,
+            "score": 18,
+            "actualname": "mgatland",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "8bd809bd-9aba-4d02-9078-5c1b06063819",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Cynycal",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "504bfb4e-4ac6-4b55-9c59-31baf2fff90d",
+            "capes": 4,
+            "score": 18,
+            "actualname": "ZergGirl",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "e6716524-9ccc-4dc7-8dd6-2671d1f04b4a",
+            "capes": 4,
+            "score": 18,
+            "actualname": "mr_zott",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "bac1668c-8ef6-4a35-a52c-6ea8012a404f",
+            "capes": 4,
+            "score": 18,
+            "actualname": "chewBexxa",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "b4f276f3-b55c-4734-aa10-d3309cbc30c8",
+            "capes": 4,
+            "score": 18,
+            "actualname": "highbrowtripod",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "7b71b80e-bf47-469b-a23e-980c2c93c8d4",
+            "capes": 4,
+            "score": 18,
+            "actualname": "TehCasanova",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "4caa46bd-ecda-47d5-a8a4-98bb8a7f9b79",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Nekofresa",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "013754dc-35fe-417f-8b20-cc8625a807af",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Lysandelasse",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "aba9fb17-20e7-40ea-8431-9f7f24a09861",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Gammelmorot",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "89c5c56c-ca5e-4e3e-9dac-05823b2b8d02",
+            "capes": 4,
+            "score": 18,
+            "actualname": "TheMaybeMonster",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "dc6e5b77-03b3-4c6c-b46a-423e98cb2897",
+            "capes": 4,
+            "score": 18,
+            "actualname": "JohnnyBoiu",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "19e58609-fa62-4cd0-a01b-f038e645fbc5",
+            "capes": 4,
+            "score": 18,
+            "actualname": "DanDerg",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d9f2e079-143a-4af8-a11c-cedcaf2924f0",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Banjo77",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d6096fa6-5270-46f9-abad-fd4e6c3515f8",
+            "capes": 4,
+            "score": 18,
+            "actualname": "abomb67",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "371a3bea-cba4-482c-8df7-6e044681ad5c",
+            "capes": 4,
+            "score": 18,
+            "actualname": "littlewoo",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "a052bcf5-e99a-4e02-8d3f-c3d0764475e9",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Flegmar",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "0347bd5f-4dfb-4ad5-a433-3f4cd395b435",
+            "capes": 4,
+            "score": 18,
+            "actualname": "slamp00",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "2034438c-04c9-47d4-ac27-0f2ace7d4a59",
+            "capes": 4,
+            "score": 18,
+            "actualname": "marlonicus",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "af020ea5-45d3-4ec9-b1d3-d87d514d3302",
+            "capes": 4,
+            "score": 18,
+            "actualname": "TheFanciestFish",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "4fef8c70-3f4a-4d49-83c8-ebe10c73e744",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Mochromatic",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "c19d5137-e94b-4685-9c10-6929d1533016",
+            "capes": 4,
+            "score": 18,
+            "actualname": "C4RTO",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "54faa1dd-559f-4f53-8149-5f860f37a83d",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Alterrok",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "1b5c9a31-eb6f-4b73-bb60-f5c801964b4d",
+            "capes": 4,
+            "score": 18,
+            "actualname": "wraag",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "2e665300-945f-4962-a97d-06948e079542",
+            "capes": 4,
+            "score": 18,
+            "actualname": "sbqp3",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "39083559-00bf-43b4-9d4f-df258476d03d",
+            "capes": 4,
+            "score": 18,
+            "actualname": "ProfessorOakie",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "bec2968f-48ab-4504-a7b4-bde54a789bdb",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Ined",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "f2d2215a-8a50-47b3-acef-ca9f18ccb3a3",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Dwizzard",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "59ef9275-b31f-4d9f-a7bf-e5a9a8567f51",
+            "capes": 4,
+            "score": 18,
+            "actualname": "mcskware",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "05a6ee96-48f1-45e4-8dcb-9ef7a4977431",
+            "capes": 4,
+            "score": 18,
+            "actualname": "pirelenito",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "1ad8df93-5545-4d0e-8026-9ce56a8e6c2e",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Badgeri",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "6cc34184-d9b9-4b7a-8d57-1e5d56889786",
+            "capes": 4,
+            "score": 18,
+            "actualname": "JustJosIt",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "bc351903-2915-45fb-8e25-6b3fceba0e3a",
+            "capes": 4,
+            "score": 18,
+            "actualname": "SoftieDog",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "199aac18-563e-460d-abeb-c2577ed7580f",
+            "capes": 4,
+            "score": 18,
+            "actualname": "lucaslsf",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "8eb57c51-5df2-4ad7-9a07-01d67d1e0a41",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Jappaa",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "e927107a-68af-420c-99df-fc78d2ec01fa",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Pertan85",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "44c1d616-f54d-44dc-91c6-8ec348ffaa82",
+            "capes": 4,
+            "score": 18,
+            "actualname": "klibbiddi",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "f68c953f-a3d1-4fa0-94c3-9e36760f5967",
+            "capes": 4,
+            "score": 18,
+            "actualname": "khiliarkos",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "52b2c908-dbbc-4979-b4e3-1c434a66faaa",
+            "capes": 4,
+            "score": 18,
+            "actualname": "MrHenrik",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "8099dc06-80ca-4fe4-a623-dd8844e20eb3",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Quinnelton",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "3a2ab141-2d8f-4178-9129-414ece648540",
+            "capes": 4,
+            "score": 18,
+            "actualname": "dunderdash",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "93787699-563d-4ef2-b2a0-3ea52e136674",
+            "capes": 4,
+            "score": 18,
+            "actualname": "havsmonstret",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "a7be1514-8665-4fd7-895a-8c972a271c96",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Skurpi",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "717932a8-62ed-43a6-a2a7-f8031eb75526",
+            "capes": 4,
+            "score": 18,
+            "actualname": "L4xis",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "71d3f067-40c8-4a46-b9c0-14033abb2153",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Lumahlin",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "8b637bd5-97a0-40f4-af7d-f8922399bf27",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Drkrdr",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "59e7329b-a9a3-4ee2-907b-9237eb5ff4cf",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Pulluxx",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "bb7434c7-0610-4979-9a5b-dde2c9b56e28",
+            "capes": 4,
+            "score": 18,
+            "actualname": "kirre_bylund",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "ebe72c06-0767-4e43-83cc-dd7c3488a558",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Dklsjxldd",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "9a22a8e0-ba84-4276-98b2-fcce2e40eb02",
+            "capes": 4,
+            "score": 18,
+            "actualname": "iAnna_na_na",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "a5d04fe9-69ea-4f12-bf2b-7f52172e839b",
+            "capes": 4,
+            "score": 18,
+            "actualname": "theopard",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "3dba96d4-cb25-458d-8322-9e7f02cc1ed0",
+            "capes": 4,
+            "score": 18,
+            "actualname": "ExcitedZe",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "23510139-0b12-4101-bbcf-686fea2e5559",
+            "capes": 4,
+            "score": 18,
+            "actualname": "Geuder",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "bf2ae63b-9cd7-406e-b3c3-d3a3a996cb0f",
+            "capes": 4,
+            "score": 18,
+            "actualname": "hlx_",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "5399b615-3440-4c66-939d-ab1375952ac3",
             "capes": 4,
             "score": 17,
             "actualname": "Drullkus",
-            "badge": ""
+            "badge": "unique-cape"
+        },
+        {
+            "uuid": "0da56a7e-1a0d-4cd3-845d-fc2be2559142",
+            "capes": 4,
+            "score": 17,
+            "actualname": "Mojangsta",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "20d64d21-e622-41c0-96e0-06ce6e705f27",
             "capes": 4,
             "score": 10,
             "actualname": "nejuer",
-            "badge": ""
-        },
-        {
-            "uuid": "3da6b9a1-beca-485e-97be-d2e619044dba",
-            "capes": 4,
-            "score": 4,
-            "actualname": "Miclee",
             "badge": ""
         },
         {
@@ -6644,11 +7302,228 @@
             "badge": ""
         },
         {
+            "uuid": "3da6b9a1-beca-485e-97be-d2e619044dba",
+            "capes": 4,
+            "score": 3,
+            "actualname": "Miclee",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "139a70ba-bbab-4650-b267-61ed71e6492c",
+            "capes": 4,
+            "score": 2,
+            "actualname": "CatCrusader28",
+            "badge": ""
+        },
+        {
+            "uuid": "46610280-3fd5-4e24-bc6d-f45995bd8475",
+            "capes": 3,
+            "score": 24,
+            "actualname": "SuperPlateau",
+            "badge": "perfect-mojang-employee"
+        },
+        {
+            "uuid": "e540ac63-39ee-482b-aba2-05524d8d7635",
+            "capes": 3,
+            "score": 19,
+            "actualname": "jonkagstrom",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "4792366c-9c5b-4eb7-8d0e-5278f86bb8e6",
+            "capes": 3,
+            "score": 17,
+            "actualname": "velociraptoaster",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "eed9099e-3b1e-4086-b48e-afa5087948b7",
+            "capes": 3,
+            "score": 17,
+            "actualname": "vCraftingTable",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "c602a11d-b0ab-4c79-9d98-d0a783bcd927",
+            "capes": 3,
+            "score": 17,
+            "actualname": "TigerNinjaShark",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "e84f65bd-768e-4b20-804d-d5e0db34c098",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Sazzamanazza",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "9f2312e9-52a2-455b-a51f-b4197fcff29a",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Braskan",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "daba50ea-6457-4d3d-a5fe-e08612bfd322",
+            "capes": 3,
+            "score": 17,
+            "actualname": "nintellect",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "7cfc9ea7-18a8-472c-8406-a80d5af58ecf",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Pumpkin3445",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "9c8560a8-2098-4a0c-a5e6-c06f6f9a8053",
+            "capes": 3,
+            "score": 17,
+            "actualname": "yacoobe",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d89393c1-59cc-400e-a93e-df5599e96856",
+            "capes": 3,
+            "score": 17,
+            "actualname": "CeilingPanda",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "5927e6e6-0e7d-4107-881b-65c657809008",
+            "capes": 3,
+            "score": 17,
+            "actualname": "TheNoMonster",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "9b050c86-eaab-4576-b6be-e4ccbf883eb0",
+            "capes": 3,
+            "score": 17,
+            "actualname": "TheYesMonster",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "96ea68e2-4e1f-4cbf-910b-dfa4bc2f896d",
+            "capes": 3,
+            "score": 17,
+            "actualname": "yassal",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "0629f5e7-c4dd-437d-b984-20186ed91cba",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Lord_Galin",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "189be084-b123-4ffa-97cd-c46598671c04",
+            "capes": 3,
+            "score": 17,
+            "actualname": "MineChris1130",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "cc20d625-d4f6-4e78-980b-f441c8655967",
+            "capes": 3,
+            "score": 17,
+            "actualname": "minecrabs",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "77970885-3e52-4626-a942-7a29405e97c8",
+            "capes": 3,
+            "score": 17,
+            "actualname": "jfmb",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "062eb2cd-12df-4359-ac72-a413af0bf402",
+            "capes": 3,
+            "score": 17,
+            "actualname": "ericog",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "3da5e679-e2ca-4c62-9f0c-97161c7ae766",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Edotho",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "a8cbe660-6555-44a2-a911-33004c57eb33",
+            "capes": 3,
+            "score": 17,
+            "actualname": "ebbsjepp",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "9fa92aee-6134-4c3b-9a96-e0bcda64573b",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Premster",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "848650bf-283f-4dc4-80ab-669bec2fcf61",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Kirin",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "2def7121-2200-4dcf-83dc-11d7f08cb32c",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Paprikafreja",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d77b661e-95ad-41e3-85c5-8c585858cfda",
+            "capes": 3,
+            "score": 17,
+            "actualname": "kattbilden",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "ad93d738-2b67-4b44-9847-92918b8925f7",
+            "capes": 3,
+            "score": 17,
+            "actualname": "AngryEm",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "ff8f2167-5ba0-4d33-a84e-ed78f613d890",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Olle",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "696a82ce-41f4-4b51-aa31-b8709b8686f0",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Searge",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "aaccfbd4-1145-4547-91e9-c3370a4303a7",
+            "capes": 3,
+            "score": 17,
+            "actualname": "Rexipotamus",
+            "badge": "mojang-employee"
+        },
+        {
             "uuid": "a8179ff3-c201-4a75-bdaa-9d14aca6f83f",
             "capes": 3,
             "score": 11,
             "actualname": "kennytv",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "047bcb7f-d352-411d-be68-0c449b33d028",
@@ -6660,8 +7535,15 @@
         {
             "uuid": "2645cc99-4f9b-4275-8bc6-0f366b5663b8",
             "capes": 3,
-            "score": 3,
+            "score": 2,
             "actualname": "NoobyToBe74",
+            "badge": ""
+        },
+        {
+            "uuid": "4283ff70-ef08-4c64-a46f-b191c4c5caa3",
+            "capes": 3,
+            "score": 2,
+            "actualname": "InternetKitten",
             "badge": ""
         },
         {
@@ -6669,21 +7551,105 @@
             "capes": 2,
             "score": 20,
             "actualname": "etanaratsastaja",
-            "badge": ""
+            "badge": "unique-cape"
+        },
+        {
+            "uuid": "1c2d93c7-e5db-4def-b361-d5368f90a881",
+            "capes": 2,
+            "score": 16,
+            "actualname": "superdupernova",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "582a2376-5553-451b-972c-926f641fd9fc",
+            "capes": 2,
+            "score": 16,
+            "actualname": "aldrigawesome",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "b7eec1c5-b35f-4e73-9172-1de6df20ba8f",
+            "capes": 2,
+            "score": 16,
+            "actualname": "SnowfrostTofs",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "344a29cf-67c9-4e08-8d30-7d2322545121",
+            "capes": 2,
+            "score": 16,
+            "actualname": "jnkboy",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "6aa836ce-0532-43fa-a520-94efc50fe48c",
+            "capes": 2,
+            "score": 16,
+            "actualname": "oddlop",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "a7ec0883-0ab4-49b3-acc4-cdcf9ab44cf4",
+            "capes": 2,
+            "score": 16,
+            "actualname": "FruktHamster",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "6239656e-c315-456c-82b0-03443cdfb16d",
+            "capes": 2,
+            "score": 16,
+            "actualname": "Searge_DP",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "3c87f351-50c7-4af9-92b4-de83c34a109a",
+            "capes": 2,
+            "score": 16,
+            "actualname": "YoloSwag4Lyfe",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d41283a1-11ca-4568-b115-0bc4725ca07a",
+            "capes": 2,
+            "score": 14,
+            "actualname": "sjjklh",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "3c422202-ae03-49be-ba0d-6e54f807847c",
+            "capes": 2,
+            "score": 14,
+            "actualname": "Atmaz",
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "5797c479-ad5a-43b0-87ca-8852d65ac639",
             "capes": 2,
             "score": 13,
             "actualname": "cheapsh0t",
-            "badge": ""
+            "badge": "unique-cape"
         },
         {
             "uuid": "861e3cb8-0e2e-4f53-a50f-fbd5356fa8c0",
             "capes": 2,
             "score": 13,
             "actualname": "billyK_",
-            "badge": ""
+            "badge": "unique-cape"
+        },
+        {
+            "uuid": "4b870d90-1d2c-4bd3-a647-846757930e2e",
+            "capes": 2,
+            "score": 11,
+            "actualname": "olofcarlson",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d787563c-ef8b-4720-8654-e7f74c4fb0a2",
+            "capes": 2,
+            "score": 11,
+            "actualname": "Lisa",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "3e7a89ee-c4e2-4392-a317-444b861b0794",
@@ -6691,6 +7657,27 @@
             "score": 10,
             "actualname": "Noxite",
             "badge": ""
+        },
+        {
+            "uuid": "935c8063-3915-45de-b5ec-8e7a41fbdd67",
+            "capes": 2,
+            "score": 9,
+            "actualname": "Timur_N",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "0b8b2245-8018-456c-945d-4282121e1b1e",
+            "capes": 2,
+            "score": 9,
+            "actualname": "C418",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "17d349da-73ff-4e6d-94de-49d64258d39e",
+            "capes": 2,
+            "score": 9,
+            "actualname": "Binni",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "0da8bb6c-4450-486d-bcef-2112f4ae857c",
@@ -6728,38 +7715,38 @@
             "badge": ""
         },
         {
-            "uuid": "82a5be28-eb0f-48f4-9751-1b302c9c663e",
-            "capes": 2,
-            "score": 2,
-            "actualname": "NanGong17",
-            "badge": ""
-        },
-        {
             "uuid": "4e9186a5-2282-43a6-946b-d84946b7ed8f",
             "capes": 2,
             "score": 2,
             "actualname": "Font",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "bffb1b32-55e3-4c03-a006-e602f06cffb3",
             "capes": 2,
             "score": 2,
             "actualname": "OhMatronux",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "9a00f057-7602-4c10-a7bc-80b3d113c719",
             "capes": 2,
             "score": 2,
             "actualname": "Blokky",
-            "badge": ""
+            "badge": "all-events"
         },
         {
             "uuid": "da0cd371-4f6c-481a-96a1-e4786dd60f00",
             "capes": 2,
             "score": 2,
             "actualname": "Lega1410",
+            "badge": "all-events"
+        },
+        {
+            "uuid": "82a5be28-eb0f-48f4-9751-1b302c9c663e",
+            "capes": 2,
+            "score": 1,
+            "actualname": "NanGong17",
             "badge": ""
         },
         {
@@ -6767,63 +7754,455 @@
             "capes": 1,
             "score": 12,
             "actualname": "MrMessiah",
-            "badge": ""
+            "badge": "unique-cape"
         },
         {
             "uuid": "d90b68bc-8172-4329-a047-f1186dcd4336",
             "capes": 1,
             "score": 12,
             "actualname": "akronman1",
-            "badge": ""
+            "badge": "unique-cape"
         },
         {
             "uuid": "144ad5f0-e879-4141-a489-8ed5d496cab9",
             "capes": 1,
             "score": 12,
             "actualname": "JulianClark",
-            "badge": ""
+            "badge": "unique-cape"
         },
         {
             "uuid": "1c063715-395b-4db9-bc2a-d5dfd20366f7",
             "capes": 1,
             "score": 12,
             "actualname": "Debuggg",
-            "badge": ""
+            "badge": "unique-cape"
         },
         {
             "uuid": "c38eefa2-cf57-4a4b-b3a0-0c823636835d",
             "capes": 1,
             "score": 11,
             "actualname": "powup333",
-            "badge": ""
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "c5bc4a7e-8441-4393-a164-c6dee0771c4f",
+            "capes": 1,
+            "score": 11,
+            "actualname": "Craft_Lawrence",
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "c0a062f1-4470-4095-bcd5-26d35da72e84",
             "capes": 1,
             "score": 10,
             "actualname": "_antirad_",
-            "badge": ""
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "6e0a52f8-7b7c-4c39-bc65-535c47aec0c1",
             "capes": 1,
             "score": 10,
             "actualname": "Holofoil",
-            "badge": ""
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "2229ee26-d3e7-4960-a3a2-05c9769b5043",
+            "capes": 1,
+            "score": 10,
+            "actualname": "Innixma",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "9bf52935-870e-4212-ba5f-76d03d2f5947",
+            "capes": 1,
+            "score": 10,
+            "actualname": "ribal0",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "148bd270-cc00-4e3e-a7ce-1f69bad78780",
+            "capes": 1,
+            "score": 10,
+            "actualname": "OrzDisrupter",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "a85bcdea-3773-4cce-a3c4-062ca90d0f2d",
+            "capes": 1,
+            "score": 10,
+            "actualname": "MortissMonster",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "20746bc9-af2c-4380-8326-a1781d611a6c",
+            "capes": 1,
+            "score": 10,
+            "actualname": "Muriako",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "f48faa1f-aab2-44d5-94d2-8b0404f3a227",
+            "capes": 1,
+            "score": 10,
+            "actualname": "Quijx",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "5f95641f-4d1c-49c1-9542-2d145a1cf6eb",
+            "capes": 1,
+            "score": 10,
+            "actualname": "Meow_J",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "8869f0a7-5e85-46a8-b4e1-135f70dd73ff",
+            "capes": 1,
+            "score": 10,
+            "actualname": "attr",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "0dfcd017-445a-4caf-a0d6-d2c20da2923c",
+            "capes": 1,
+            "score": 10,
+            "actualname": "Tundmatu",
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "a6013dc0-ea62-4d98-bf40-fbae21d7d227",
+            "capes": 1,
+            "score": 10,
+            "actualname": "catlover38",
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "21d2c289-b75f-4513-9f4f-85cc9e8c271b",
             "capes": 1,
             "score": 8,
             "actualname": "uhDebug",
-            "badge": ""
+            "badge": "mojang-employee"
         },
         {
             "uuid": "ce1e4038-fe6c-43e0-bbe1-b0fe55f0969f",
             "capes": 1,
             "score": 8,
             "actualname": "Delth",
-            "badge": ""
+            "badge": "gift-by-mojang"
+        },
+        {
+            "uuid": "d6fa9517-09fe-48eb-ab28-b61b5d0c8120",
+            "capes": 1,
+            "score": 8,
+            "actualname": "octodaddy_mac",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "ca371e6f-e5d0-48ea-919c-1e6e347bc527",
+            "capes": 1,
+            "score": 8,
+            "actualname": "DaggeDirrmask",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "9552730d-25b9-44c5-93ad-f028621f5192",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Nimecrafts",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "b17ef012-f82e-42ab-9a89-884fd204371b",
+            "capes": 1,
+            "score": 8,
+            "actualname": "nictheturbochick",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "1ce0c717-43de-4ff9-8f4b-b2389acf6e0b",
+            "capes": 1,
+            "score": 8,
+            "actualname": "_Pad78_",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "b5377910-97ca-45f7-bd0c-7b63e3ff00fa",
+            "capes": 1,
+            "score": 8,
+            "actualname": "AlasYorick",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "f77c68f6-389d-4bdc-b3a1-f3649d3375c1",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Strawberry_Taint",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "7687d30c-3c38-4b9f-a63c-cf4b916f64a6",
+            "capes": 1,
+            "score": 8,
+            "actualname": "mrkeen",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "92a8462f-aaba-4de5-b256-83b52ebe3d42",
+            "capes": 1,
+            "score": 8,
+            "actualname": "elektriskk",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "5a07ffa7-6e0b-4618-8187-711c30e5657a",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Konnichiwakim",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "a868d85b-f885-4da3-80a8-49d012035cdc",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Gnivom",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "48f589ab-a728-4f90-a6a5-e1cd52e48cb0",
+            "capes": 1,
+            "score": 8,
+            "actualname": "DrThoms",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "d396ab9b-9e77-4b0c-bff1-0cd40ebb4f2d",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Atamtis",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "c9d3386a-3f18-45de-90b1-4ccd3c82e949",
+            "capes": 1,
+            "score": 8,
+            "actualname": "_NoPanDa_",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "abe3167e-5290-4bd4-a6cf-733015c62a2a",
+            "capes": 1,
+            "score": 8,
+            "actualname": "HannaJoe",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "1217d9e4-f3aa-4383-bde9-b44367561423",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Pikkalina",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "6322267a-475f-444e-bcc0-3d202916ca3c",
+            "capes": 1,
+            "score": 8,
+            "actualname": "agrdev",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "9769ecf6-3314-48f3-ace6-7ae06cec64a3",
+            "capes": 1,
+            "score": 8,
+            "actualname": "mollstam_",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "c14a0514-ec8f-400d-893e-7acc4712c917",
+            "capes": 1,
+            "score": 8,
+            "actualname": "kevve_",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "560fbacf-de95-4a40-b23a-4766c30886cf",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Sivermork",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "e66853de-6c97-4a73-83b6-da981f5e4f43",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Qatten",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "296ab231-5ef4-4234-aaed-544e048b059f",
+            "capes": 1,
+            "score": 8,
+            "actualname": "MarledFox",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "414dfcee-951b-4dd6-94f8-10c7066744e6",
+            "capes": 1,
+            "score": 8,
+            "actualname": "jaehichu",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "225a47c7-b792-4233-8d6d-d51e102b08f8",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Panda4994",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "33497914-a7cb-4459-be39-6a7a18bda1d1",
+            "capes": 1,
+            "score": 8,
+            "actualname": "gapraomoosap",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "e86fd287-2fb4-4757-a2b4-2b7df6acd8e3",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Mimicik",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "ba760709-4edd-467f-8d4b-ef5778c93f23",
+            "capes": 1,
+            "score": 8,
+            "actualname": "iworkatmojang",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "3ecc5d11-e635-44fb-aedb-3abfc552a393",
+            "capes": 1,
+            "score": 8,
+            "actualname": "DrMikachu",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "87e57e43-123c-4f1c-82db-eaccb0765023",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Moizrgi",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "ba7695a3-0bb6-4e45-9e5f-d783f8befed7",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Hummuz",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "84734234-56c0-4e09-9f52-2b035950f74d",
+            "capes": 1,
+            "score": 8,
+            "actualname": "mojangifer",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "9d3609a9-f4b5-4af1-a94b-d719cd49a736",
+            "capes": 1,
+            "score": 8,
+            "actualname": "kvinnamedklass",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "4303c9f7-7f88-42d1-8856-5c6be3bd413d",
+            "capes": 1,
+            "score": 8,
+            "actualname": "fry_",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "91f8e3e1-7c46-4cd7-9ff9-925c9abd8a3d",
+            "capes": 1,
+            "score": 8,
+            "actualname": "xsson",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "eb6449ff-a3d1-4fe3-8e68-cec0bf2fc11a",
+            "capes": 1,
+            "score": 8,
+            "actualname": "elevenen",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "82f0dda5-5077-49c2-9144-b3ca655befc1",
+            "capes": 1,
+            "score": 8,
+            "actualname": "mojangjonas",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "6bef7b04-87cf-4045-8cd1-fe1ef23c427d",
+            "capes": 1,
+            "score": 8,
+            "actualname": "engst",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "22cc6d73-101f-4e19-81cc-9a985f0aa364",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Hoodad",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "2a7eee3d-6a29-498a-85cf-b53867d95fd7",
+            "capes": 1,
+            "score": 8,
+            "actualname": "____FOX____",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "1c0945aa-6853-4925-93f2-92d3c1693f20",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Marc_IRL",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "1be04a48-aaf6-4eea-af63-845f321bf7af",
+            "capes": 1,
+            "score": 8,
+            "actualname": "hey",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "975836b9-8c11-4424-a08c-b6cc3d8b146b",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Mahuldur",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "c3021db0-192c-41df-bc85-62f7ec51d7ef",
+            "capes": 1,
+            "score": 8,
+            "actualname": "MidnightEnforcer",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "36e409d4-a16f-471d-84a0-c2d3b87824ad",
+            "capes": 1,
+            "score": 8,
+            "actualname": "Phreakholm",
+            "badge": "mojang-employee"
+        },
+        {
+            "uuid": "dcf0d602-c03b-460a-b8da-36cbe3e06ec6",
+            "capes": 1,
+            "score": 8,
+            "actualname": "CWERS",
+            "badge": "mojang-employee"
         },
         {
             "uuid": "7c4a2fca-b627-4773-b8c7-22c76f3426e0",
@@ -6936,6 +8315,13 @@
             "score": 1,
             "actualname": "Pieter31",
             "badge": ""
+        },
+        {
+            "uuid": "6080251c-368a-4865-9217-128212baae3e",
+            "capes": 1,
+            "score": 1,
+            "actualname": "_Kaptanbey0_",
+            "badge": "gift-by-mojang"
         }
     ]
 }

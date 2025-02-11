@@ -63,7 +63,7 @@ func UpdateClassement(uuid string, listCapes []struct {
 
 	for _, cape := range listCapes {
 		if cape.Removed {
-			totalScore += 1 // Si la cape est supprimée, elle vaut 1 point
+			totalScore += 0 // Si la cape est supprimée, elle vaut 1 point
 		} else if score, exists := capeScores[cape.Name]; exists {
 			totalScore += score // Sinon, on prend son score normal
 		}
