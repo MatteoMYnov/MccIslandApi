@@ -32,8 +32,9 @@ type Joueur struct {
 	UUID       string `json:"uuid"`
 	ActualName string `json:"actualname"`
 	Rank       int
-	Capes      int `json:"capes"`
-	Score      int `json:"score"`
+	Capes      int    `json:"capes"`
+	Score      int    `json:"score"`
+	Badge      string `json:"badge"`
 }
 
 type Classement struct {
@@ -210,6 +211,11 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	playerCapesJSON := minecraft.LoadCapesByName(IGN)
 	playerBadgesJSON := minecraft.LoadBadgesByName(IGN)
 
+	firstBadge := ""
+	if len(playerBadgesJSON) > 0 {
+		firstBadge = playerBadgesJSON[0]
+	}
+
 	stylesFile := "./site/infos/styles.json"
 	var stylesData struct {
 		Players []struct {
@@ -282,7 +288,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	actualname := IGN
-	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname)
+	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname, firstBadge)
 	playerRankPage := ((playerRank - 1) / 50) + 1 //f(x)=⌊(x−1)/50⌋+1
 
 	badgeInfos := []BadgeInfo{}
@@ -534,7 +540,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1617", nil); err != nil {
+	if err := http.ListenAndServe(":1601", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

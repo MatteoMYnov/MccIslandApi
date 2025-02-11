@@ -13,6 +13,7 @@ type PlayerRank struct {
 	Capes      int    `json:"capes"`
 	Score      int    `json:"score"`
 	ActualName string `json:"actualname"` // Nouveau champ pour le pseudonyme
+	Badge      string `json:"badge"`      // Nouveau champ pour le premier badge
 }
 
 type Classement struct {
@@ -22,7 +23,7 @@ type Classement struct {
 func UpdateClassement(uuid string, listCapes []struct {
 	Name    string
 	Removed bool
-}, actualName string) int { // Ajout d'un paramètre pour le nom actuel
+}, actualName string, badge string) int {
 	filePath := "./site/infos/z_db_classement.json"
 
 	// Lire le fichier
@@ -80,10 +81,11 @@ func UpdateClassement(uuid string, listCapes []struct {
 	found := false
 	for i, player := range classement.Classement {
 		if player.UUID == uuid {
-			// Mettre à jour le nombre de capes, le score et le pseudonyme du joueur
+			// Mettre à jour le nombre de capes, le score, le pseudonyme et le badge du joueur
 			classement.Classement[i].Capes = capesCount
 			classement.Classement[i].Score = totalScore
 			classement.Classement[i].ActualName = actualName
+			classement.Classement[i].Badge = badge
 			found = true
 			break
 		}
@@ -95,7 +97,8 @@ func UpdateClassement(uuid string, listCapes []struct {
 			UUID:       uuid,
 			Capes:      capesCount,
 			Score:      totalScore,
-			ActualName: actualName, // Ajouter le nom actuel
+			ActualName: actualName,
+			Badge:      badge,
 		})
 	}
 

@@ -109,7 +109,7 @@ main {
 /* Cards */
 .players-card {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     flex-shrink: 0;
     background-color: #323232;
     border-radius: 15px;
@@ -337,6 +337,7 @@ main {
 }
 
 .player-card {
+    position: relative;
     display: flex;
     align-items: center;
     background-color: #292929;
@@ -349,12 +350,21 @@ main {
 }
 
 .player-info {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 0px;
     max-width: fit-content;
 }
+
+.badge {
+    position: absolute;
+    image-rendering: pixelated;
+    width: 40px;
+    height: 40px;
+    right: 1vh;
+}   
 
 .player-card:hover {
     background-color: #3c3c3c; /* Change la couleur de fond pour la rendre plus claire */

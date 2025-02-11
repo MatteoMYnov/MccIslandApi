@@ -42,6 +42,9 @@
                                             <p class="rank">#{{.Rank}}</p>
                                             <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select no-select">
                                             <p>{{.ActualName}}</p>
+                                            {{if .Badge}}
+                                                <img src="../img/badges/{{.Badge}}.png" class="badge no-select no-select">
+                                            {{end}}
                                         </div>
                                     </div>
                                 {{end}}
