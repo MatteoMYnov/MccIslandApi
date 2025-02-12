@@ -341,6 +341,50 @@
                                                 <div class="subcath-body2">
                                                     <div class="subcath-header mc-font">
                                                         <div class="subcath-header-content">
+                                                            <img src="../img/mcc/games/tgttos.png" class="roll-icon no-select">
+                                                            <p style="color: white;">TGTTOS Stats</p>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="general-stats">
+                                                        <div class="subcath-case">
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins">
+                                                                <p class="mc-font color-white">Wins: </p>
+                                                                <p class="mc-font">{{.GameStats.TGTTOS_Wins}}</p>
+                                                            </div>
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses">
+                                                                <p class="mc-font color-white">Loses: </p>
+                                                                <p class="mc-font">{{.GameStats.TGTTOS_Loses}}</p>
+                                                            </div>
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.TGTTOS_WLR 0.05}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.05">
+                                                                <p class="mc-font color-white">WLR: </p>
+                                                                <p class="mc-font">({{.GameStats.TGTTOS_WLR}})</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="subcath-case">
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/tgttos.png" class="no-select" data-tippy-content="Chickens Punched">
+                                                                <p class="mc-font color-white">Chicks: </p>
+                                                                <p class="mc-font">{{.GameStats.TGTTOS_Chicks}}</p>
+                                                            </div>
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/games.png" class="no-select" data-tippy-content="Games">
+                                                                <p class="mc-font color-white">Games: </p>
+                                                                <p class="mc-font">{{.GameStats.TGTTOSGames}}</p>
+                                                            </div>
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.TGTTOS_CGR 2.8}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Chicks per Game) Average - 2.8">
+                                                                <p class="mc-font color-white">CGR: </p>
+                                                                <p class="mc-font">({{.GameStats.TGTTOS_CGR}})</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="subcath-body2">
+                                                    <div class="subcath-header mc-font">
+                                                        <div class="subcath-header-content">
                                                             <img src="../img/mcc/games/hole-in-the-wall.png" class="roll-icon no-select">
                                                             <p style="color: white;">Hole-In-The-Wall Stats</p>
                                                         </div>

@@ -35,6 +35,11 @@ type Statistics struct {
 	BB_Kills         int `json:"bb_kills"`
 	BB_Deaths        int `json:"bb_deaths"`
 	BB_KDR           float32
+	TGTTOS_Wins      int `json:"tgttos_wins"`
+	TGTTOS_Loses     int
+	TGTTOS_WLR       float32
+	TGTTOS_Chicks    int `json:"tgttos_chicks"`
+	TGTTOS_CGR       float32
 	HITW_Wins        int `json:"hitw_wins"`
 	HITW_Loses       int
 	HITW_WLR         float32
@@ -184,6 +189,8 @@ func GetInfos(UUID string) *MccInfos {
 					bb_wins:rotationValue(statisticKey: "battle_box_quads_team_first_place")
 					bb_kills: rotationValue(statisticKey: "battle_box_quads_players_killed")
 					bb_deaths: rotationValue(statisticKey: "battle_box_quads_times_eliminated")
+					tgttos_wins: rotationValue(statisticKey: "tgttos_first_place")
+					tgttos_chicks: rotationValue(statisticKey: "tgttos_chickens_punched")
 					hitw_wins: rotationValue(statisticKey: "hole_in_the_wall_first_place")
       				hitw_wallsdodged: rotationValue(statisticKey: "hole_in_the_wall_walls_dodged")
 					rs_wins: rotationValue(statisticKey: "rocket_spleef_first_place")
@@ -326,6 +333,12 @@ func GetInfos(UUID string) *MccInfos {
 			BB_Kills:  response.Data.Player.Statistics.BB_Kills,
 			BB_Deaths: response.Data.Player.Statistics.BB_Deaths,
 			BB_KDR:    safeDivide(response.Data.Player.Statistics.BB_Kills, response.Data.Player.Statistics.BB_Deaths),
+			//To Go To The Other Side
+			TGTTOS_Wins:   response.Data.Player.Statistics.TGTTOS_Wins,
+			TGTTOS_Loses:  response.Data.Player.Statistics.TGTTOSGames - response.Data.Player.Statistics.TGTTOS_Wins,
+			TGTTOS_WLR:    safeDivide(response.Data.Player.Statistics.TGTTOS_Wins, response.Data.Player.Statistics.TGTTOSGames-response.Data.Player.Statistics.TGTTOS_Wins),
+			TGTTOS_Chicks: response.Data.Player.Statistics.TGTTOS_Chicks,
+			TGTTOS_CGR:    safeDivide(response.Data.Player.Statistics.TGTTOS_Chicks, response.Data.Player.Statistics.TGTTOSGames),
 			//Hole In The Wall
 			HITW_Wins:        response.Data.Player.Statistics.HITW_Wins,
 			HITW_Loses:       response.Data.Player.Statistics.HITWGames - response.Data.Player.Statistics.HITW_Wins,

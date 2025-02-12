@@ -28,7 +28,7 @@ func FormatNumberWithSpaces(number int) string {
 
 func safeDivide(numerator, denominator int) float32 {
 	if denominator == 0 {
-		return 0.00 // Évite la division par zéro
+		return roundFloat(float32(numerator)/1, 2)
 	}
 	return roundFloat(float32(numerator)/float32(denominator), 2)
 }
