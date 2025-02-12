@@ -14,39 +14,44 @@ type GraphQLRequest struct {
 }
 
 type Statistics struct {
-	TotalGames   int `json:"total_games"`
-	SBGames      int `json:"sb_games"`
-	BBGames      int `json:"bb_games"`
-	TGTTOSGames  int `json:"tgttos_games"`
-	HITWGames    int `json:"hitw_games"`
-	RSGames      int `json:"rs_games"`
-	DBGames      int `json:"db_games"`
-	PWSGames     int `json:"pws_games"`
-	SB_Wins      int `json:"sb_wins"`
-	SB_Loses     int
-	SB_WLR       float32
-	SB_Kills     int `json:"sb_kills"`
-	SB_Subdeaths int `json:"sb_subdeaths"`
-	SB_Deaths    int
-	SB_KDR       float32
-	BB_Wins      int `json:"bb_wins"`
-	BB_Loses     int
-	BB_WLR       float32
-	BB_Kills     int `json:"bb_kills"`
-	BB_Deaths    int `json:"bb_deaths"`
-	BB_KDR       float32
-	RS_Wins      int `json:"rs_wins"`
-	RS_Loses     int
-	RS_WLR       float32
-	RS_Kills     int `json:"rs_kills"`
-	RS_Deaths    int `json:"rs_deaths"`
-	RS_KDR       float32
-	DB_Wins      int `json:"db_wins"`
-	DB_Loses     int
-	DB_WLR       float32
-	DB_Kills     int `json:"db_kills"`
-	DB_Deaths    int
-	DB_KDR       float32
+	TotalGames       int `json:"total_games"`
+	SBGames          int `json:"sb_games"`
+	BBGames          int `json:"bb_games"`
+	TGTTOSGames      int `json:"tgttos_games"`
+	HITWGames        int `json:"hitw_games"`
+	RSGames          int `json:"rs_games"`
+	DBGames          int `json:"db_games"`
+	PWSGames         int `json:"pws_games"`
+	SB_Wins          int `json:"sb_wins"`
+	SB_Loses         int
+	SB_WLR           float32
+	SB_Kills         int `json:"sb_kills"`
+	SB_Subdeaths     int `json:"sb_subdeaths"`
+	SB_Deaths        int
+	SB_KDR           float32
+	BB_Wins          int `json:"bb_wins"`
+	BB_Loses         int
+	BB_WLR           float32
+	BB_Kills         int `json:"bb_kills"`
+	BB_Deaths        int `json:"bb_deaths"`
+	BB_KDR           float32
+	HITW_Wins        int `json:"hitw_wins"`
+	HITW_Loses       int
+	HITW_WLR         float32
+	HITW_Wallsdodged int `json:"hitw_wallsdodged"`
+	HITW_WGR         float32
+	RS_Wins          int `json:"rs_wins"`
+	RS_Loses         int
+	RS_WLR           float32
+	RS_Kills         int `json:"rs_kills"`
+	RS_Deaths        int `json:"rs_deaths"`
+	RS_KDR           float32
+	DB_Wins          int `json:"db_wins"`
+	DB_Loses         int
+	DB_WLR           float32
+	DB_Kills         int `json:"db_kills"`
+	DB_Deaths        int
+	DB_KDR           float32
 }
 
 type NextLevelProgress struct {
@@ -179,11 +184,13 @@ func GetInfos(UUID string) *MccInfos {
 					bb_wins:rotationValue(statisticKey: "battle_box_quads_team_first_place")
 					bb_kills: rotationValue(statisticKey: "battle_box_quads_players_killed")
 					bb_deaths: rotationValue(statisticKey: "battle_box_quads_times_eliminated")
-					db_wins: rotationValue(statisticKey: "dynaball_wins")
-					db_kills: rotationValue(statisticKey: "dynaball_players_eliminated")
+					hitw_wins: rotationValue(statisticKey: "hole_in_the_wall_first_place")
+      				hitw_wallsdodged: rotationValue(statisticKey: "hole_in_the_wall_walls_dodged")
 					rs_wins: rotationValue(statisticKey: "rocket_spleef_first_place")
 					rs_kills: rotationValue(statisticKey: "rocket_spleef_kills")
 					rs_deaths: rotationValue(statisticKey: "rocket_spleef_deaths")
+					db_wins: rotationValue(statisticKey: "dynaball_wins")
+					db_kills: rotationValue(statisticKey: "dynaball_players_eliminated")
 					}
 				ranks
 				crownLevel {
@@ -319,6 +326,12 @@ func GetInfos(UUID string) *MccInfos {
 			BB_Kills:  response.Data.Player.Statistics.BB_Kills,
 			BB_Deaths: response.Data.Player.Statistics.BB_Deaths,
 			BB_KDR:    safeDivide(response.Data.Player.Statistics.BB_Kills, response.Data.Player.Statistics.BB_Deaths),
+			//Hole In The Wall
+			HITW_Wins:        response.Data.Player.Statistics.HITW_Wins,
+			HITW_Loses:       response.Data.Player.Statistics.HITWGames - response.Data.Player.Statistics.HITW_Wins,
+			HITW_WLR:         safeDivide(response.Data.Player.Statistics.HITW_Wins, response.Data.Player.Statistics.HITWGames-response.Data.Player.Statistics.HITW_Wins),
+			HITW_Wallsdodged: response.Data.Player.Statistics.HITW_Wallsdodged,
+			HITW_WGR:         safeDivide(response.Data.Player.Statistics.HITW_Wallsdodged, response.Data.Player.Statistics.HITWGames),
 			//Rocket Spleef Rush
 			RS_Wins:   response.Data.Player.Statistics.RS_Wins,
 			RS_Loses:  response.Data.Player.Statistics.RSGames - response.Data.Player.Statistics.RS_Wins,

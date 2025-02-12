@@ -270,24 +270,24 @@
                                                                 <p class="mc-font">{{.GameStats.SB_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.SB_WLR 0.125}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="Average - 0.125">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.SB_WLR 0.125}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.125">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.SB_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills">
                                                                 <p class="mc-font color-white">Kills: </p>
                                                                 <p class="mc-font">{{.GameStats.SB_Kills}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths">
                                                                 <p class="mc-font color-white">Deaths: </p>
                                                                 <p class="mc-font">{{.GameStats.SB_Deaths}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.SB_KDR 0.9}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="Average - 0.9">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.SB_KDR 0.9}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 0.9">
                                                                 <p class="mc-font color-white">KDR: </p>
                                                                 <p class="mc-font">({{.GameStats.SB_KDR}})</p>
                                                             </div>
@@ -314,26 +314,70 @@
                                                                 <p class="mc-font">{{.GameStats.BB_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.BB_WLR 0.125}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="Average - 0.125">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.BB_WLR 0.125}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose)Average - 0.125">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.BB_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills">
                                                                 <p class="mc-font color-white">Kills: </p>
                                                                 <p class="mc-font">{{.GameStats.BB_Kills}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths">
                                                                 <p class="mc-font color-white">Deaths: </p>
                                                                 <p class="mc-font">{{.GameStats.BB_Deaths}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.BB_KDR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="Average - 1.0">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.BB_KDR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) - 1.0">
                                                                 <p class="mc-font color-white">KDR: </p>
                                                                 <p class="mc-font">({{.GameStats.BB_KDR}})</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="subcath-body2">
+                                                    <div class="subcath-header mc-font">
+                                                        <div class="subcath-header-content">
+                                                            <img src="../img/mcc/games/hole-in-the-wall.png" class="roll-icon no-select">
+                                                            <p style="color: white;">Hole-In-The-Wall Stats</p>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="general-stats">
+                                                        <div class="subcath-case">
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins">
+                                                                <p class="mc-font color-white">Wins: </p>
+                                                                <p class="mc-font">{{.GameStats.HITW_Wins}}</p>
+                                                            </div>
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses">
+                                                                <p class="mc-font color-white">Loses: </p>
+                                                                <p class="mc-font">{{.GameStats.HITW_Loses}}</p>
+                                                            </div>
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.HITW_WLR 0.1}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.1">
+                                                                <p class="mc-font color-white">WLR: </p>
+                                                                <p class="mc-font">({{.GameStats.HITW_WLR}})</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="subcath-case">
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/hole-in-the-wall.png" class="no-select" data-tippy-content="Walls Dodged">
+                                                                <p class="mc-font color-white">Walls: </p>
+                                                                <p class="mc-font">{{.GameStats.HITW_Wallsdodged}}</p>
+                                                            </div>
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/games.png" class="no-select" data-tippy-content="Games">
+                                                                <p class="mc-font color-white">Games: </p>
+                                                                <p class="mc-font">{{.GameStats.HITWGames}}</p>
+                                                            </div>
+                                                            <div class="line-content2">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.HITW_WGR 10.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wall per Game) Average - 10.0">
+                                                                <p class="mc-font color-white">WGR: </p>
+                                                                <p class="mc-font">({{.GameStats.HITW_WGR}})</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -358,24 +402,24 @@
                                                                 <p class="mc-font">{{.GameStats.RS_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.RS_WLR 0.1}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="Average - 0.1">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.RS_WLR 0.1}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.1">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.RS_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills">
                                                                 <p class="mc-font color-white">Kills: </p>
                                                                 <p class="mc-font">{{.GameStats.RS_Kills}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths">
                                                                 <p class="mc-font color-white">Deaths: </p>
                                                                 <p class="mc-font">{{.GameStats.RS_Deaths}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.RS_KDR 0.5}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="Average - 0.5">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.RS_KDR 0.5}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 0.5">
                                                                 <p class="mc-font color-white">KDR: </p>
                                                                 <p class="mc-font">({{.GameStats.RS_KDR}})</p>
                                                             </div>
@@ -400,24 +444,24 @@
                                                                 <p class="mc-font">{{.GameStats.DB_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.DB_WLR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="Average - 1.0">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.DB_WLR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 1.0">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.DB_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills">
                                                                 <p class="mc-font color-white">Kills: </p>
                                                                 <p class="mc-font">{{.GameStats.DB_Kills}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths">
                                                                 <p class="mc-font color-white">Deaths: </p>
                                                                 <p class="mc-font">{{.GameStats.DB_Deaths}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.DB_KDR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="Average - 1.0">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.DB_KDR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 1.0">
                                                                 <p class="mc-font color-white">KDR: </p>
                                                                 <p class="mc-font">({{.GameStats.DB_KDR}})</p>
                                                             </div>
