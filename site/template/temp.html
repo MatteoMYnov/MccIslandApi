@@ -59,6 +59,9 @@
         .button-container button.selected {
             transform: scale(1.1);
         }
+        .pixel {
+            image-rendering: pixelated;
+        }
         .button-container button.selected .text {
             max-width: 100px; /* La largeur maximale du texte quand il devient visible */
             opacity: 1;
@@ -69,37 +72,38 @@
 <body>
     <div class="container">
         <div class="button-container">
-            <button onclick="changeImage(this, 'character.png', 'Character')" class="selected">
-                <img src="../img/badges/all-commons.png" alt="Character">
-                <span class="text">Character</span>
+            <button onclick="changeImage(this, 'Equipped.png', 'Equipped')" class="selected">
+                <img class="pixel" src="../img/mcc/cos/Equipped.png" alt="Equipped">
+                <span class="text">Equipped</span>
             </button>
             <button onclick="changeImage(this, 'hats.png', 'Hats')">
-                <img src="../img/badges/all-commons.png" alt="Hats">
+                <img class="pixel" src="../img/mcc/cos/Hats.png" alt="Hats">
                 <span class="text">Hats</span>
             </button>
             <button onclick="changeImage(this, 'accessories.png', 'Accessories')">
-                <img src="../img/badges/all-commons.png" alt="Accessories">
+                <img class="pixel" src="../img/mcc/cos/Accessories.png" alt="Accessories">
                 <span class="text">Accessories</span>
             </button>
             <button onclick="changeImage(this, 'auras.png', 'Auras')">
-                <img src="../img/badges/all-commons.png" alt="Auras">
+                <img class="pixel" src="../img/mcc/cos/Auras.png" alt="Auras">
                 <span class="text">Auras</span>
             </button>
             <button onclick="changeImage(this, 'trails.png', 'Trails')">
-                <img src="../img/badges/all-commons.png" alt="Trails">
+                <img class="pixel" src="../img/mcc/cos/Trails.png" alt="Trails">
                 <span class="text">Trails</span>
             </button>
             <button onclick="changeImage(this, 'backs.png', 'Backs')">
-                <img src="../img/badges/all-commons.png" alt="Backs">
+                <img class="pixel" src="../img/mcc/cos/Backs.png" alt="Backs">
                 <span class="text">Backs</span>
             </button>
             <button onclick="changeImage(this, 'fishing_rods.png', 'Fishing Rods')">
-                <img src="../img/badges/all-commons.png" alt="Fishing Rods">
+                <img class="pixel"  src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods">
                 <span class="text">Fishing Rods</span>
             </button>
         </div>
         <div class="display-box" id="display-box">
-            <img id="display-image" src="../img/badges/all-commons.png" alt="Character">
+            <p>TEST</p>
+            <img id="display-image" src="../img/badges/all-commons.png" alt="Equipped">
         </div>
     </div>
 
