@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .display-box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            background-color: #f0f0f0;
+        }
+        .display-box img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .button-container button {
+            display: inline-flex; /* Affiche image et texte dans la même ligne */
+            background: none;
+            border: none;
+            cursor: pointer;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .button-container img {
+            width: 50px;
+            height: 50px;
+        }
+        .button-container .text {
+            max-width: 0; /* Le texte prend aucune largeur au départ */
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 16px;
+            margin-left: 10px;
+            transition: max-width 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+            opacity: 0;
+            padding: 0;
+        }
+        .button-container button.selected {
+            transform: scale(1.1);
+        }
+        .button-container button.selected .text {
+            max-width: 100px; /* La largeur maximale du texte quand il devient visible */
+            opacity: 1;
+            padding-left: 10px; /* Ajouter un espacement lorsque le texte est visible */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <button onclick="changeImage(this, 'character.png', 'Character')" class="selected">
+                <img src="../img/badges/all-commons.png" alt="Character">
+                <span class="text">Character</span>
+            </button>
+            <button onclick="changeImage(this, 'hats.png', 'Hats')">
+                <img src="../img/badges/all-commons.png" alt="Hats">
+                <span class="text">Hats</span>
+            </button>
+            <button onclick="changeImage(this, 'accessories.png', 'Accessories')">
+                <img src="../img/badges/all-commons.png" alt="Accessories">
+                <span class="text">Accessories</span>
+            </button>
+            <button onclick="changeImage(this, 'auras.png', 'Auras')">
+                <img src="../img/badges/all-commons.png" alt="Auras">
+                <span class="text">Auras</span>
+            </button>
+            <button onclick="changeImage(this, 'trails.png', 'Trails')">
+                <img src="../img/badges/all-commons.png" alt="Trails">
+                <span class="text">Trails</span>
+            </button>
+            <button onclick="changeImage(this, 'backs.png', 'Backs')">
+                <img src="../img/badges/all-commons.png" alt="Backs">
+                <span class="text">Backs</span>
+            </button>
+            <button onclick="changeImage(this, 'fishing_rods.png', 'Fishing Rods')">
+                <img src="../img/badges/all-commons.png" alt="Fishing Rods">
+                <span class="text">Fishing Rods</span>
+            </button>
+        </div>
+        <div class="display-box" id="display-box">
+            <img id="display-image" src="../img/badges/all-commons.png" alt="Character">
+        </div>
+    </div>
+
+    <script>
+        function changeImage(button, image, name) {
+            const displayImage = document.getElementById('display-image');
+
+            // Ajoute une transition en rendant l'image invisible
+            displayImage.style.opacity = 0;
+
+            setTimeout(() => {
+                displayImage.src = '../img/badges/all-commons.png';
+                displayImage.style.opacity = 1; // Réafficher l'image après le changement
+            }, 300);
+
+            // Retirer la classe 'selected' de tous les boutons
+            document.querySelectorAll('.button-container button').forEach(btn => btn.classList.remove('selected'));
+
+            // Ajouter la classe 'selected' au bouton cliqué
+            button.classList.add('selected');
+        }
+    </script>
+</body>
+</html>
