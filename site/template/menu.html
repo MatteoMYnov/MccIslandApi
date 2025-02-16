@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{.Name}} | Profile</title>
         <link rel="stylesheet" href="../styles/menu.css?v=1.0">
+        <link rel="stylesheet" href="../styles/cos.css?v=1.0">
         <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
     </head>
     <body style="--bg-image-url: url('../img/utilities{{if .BackgroundUUID}}/perplayers/{{.BackgroundUUID}}/bg.png{{else}}/bg.png{{end}}');">
@@ -527,7 +528,73 @@
                                     <img id="cosmetics-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select">
                                 </div>
                                 <div class="roll-body" id="CosmeticsBody">
-                                    <p>Will be  available soon!!!</p>
+                                    <div class="cos-selector">
+                                        <button onclick="changeContent(this, 'equipped-content')" class="selected">
+                                            <img src="../img/mcc/cos/Equipped.png" alt="Equipped">
+                                            <span class="cos-text mc-font">Equipped</span>
+                                        </button>
+                                        <button onclick="changeContent(this, 'hats-content')">
+                                            <img src="../img/mcc/cos/Hats.png" alt="Hats">
+                                            <span class="cos-text mc-font">Hats</span>
+                                        </button>
+                                        <button onclick="changeContent(this, 'accessories-content')">
+                                            <img src="../img/mcc/cos/Accessories.png" alt="Accessories">
+                                            <span class="cos-text mc-font">Accessories</span>
+                                        </button>
+                                        <button onclick="changeContent(this, 'auras-content')">
+                                            <img src="../img/mcc/cos/Auras.png" alt="Auras">
+                                            <span class="cos-text mc-font">Auras</span>
+                                        </button>
+                                        <button onclick="changeContent(this, 'trails-content')">
+                                            <img src="../img/mcc/cos/Trails.png" alt="Trails">
+                                            <span class="cos-text mc-font">Trails</span>
+                                        </button>
+                                        <button onclick="changeContent(this, 'backs-content')">
+                                            <img src="../img/mcc/cos/Backs.png" alt="Backs">
+                                            <span class="cos-text mc-font">Backs</span>
+                                        </button>
+                                        <button onclick="changeContent(this, 'fishing-content')">
+                                            <img src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods">
+                                            <span class="cos-text mc-font">Fishing Rods</span>
+                                        </button>
+                                    </div>
+                                    <div class="cos-display-box">
+                                        <div id="equipped-content" class="content active">
+                                            <h2>Équipé</h2>
+                                            <p>Voici les objets actuellement équipés.</p>
+                                            <p>Ceci est un PlaceHolder</p>
+                                        </div>
+                                        <div id="hats-content" class="content hidden">
+                                            <h2>Chapeaux</h2>
+                                            <p>Voici les cheapeaux actuellement possédés.</p>
+                                            <p>Ceci est un PlaceHolder</p>
+                                        </div>
+                                        <div id="accessories-content" class="content hidden">
+                                            <h2>Accessoires</h2>
+                                            <p>Voici les Accessoires actuellement possédés.</p>
+                                            <p>Ceci est un PlaceHolder</p>
+                                        </div>
+                                        <div id="auras-content" class="content hidden">
+                                            <h2>Auras</h2>
+                                            <p>Voici les Auras actuellement possédées.</p>
+                                            <p>Ceci est un PlaceHolder</p>
+                                        </div>
+                                        <div id="trails-content" class="content hidden">
+                                            <h2>Trails</h2>
+                                            <p>Voici les Trails actuellement possédées.</p>
+                                            <p>Ceci est un PlaceHolder</p>
+                                        </div>
+                                        <div id="backs-content" class="content hidden">
+                                            <h2>Backs</h2>
+                                            <p>Voici les objets à porter sur le dos actuellement possédés.</p>
+                                            <p>Ceci est un PlaceHolder</p>
+                                        </div>
+                                        <div id="fishing-content" class="content hidden">
+                                            <h2>Fishing Rods</h2>
+                                            <p>Voici les Cannes à pèches actuellement possédés.</p>
+                                            <p>Ceci est un PlaceHolder</p>
+                                        </div>
+                                    </div>
                                 </div>                           
                             </div>
                         </div>
@@ -563,6 +630,7 @@
         </main>
         <script src="../js/scroll.js"></script>
         <script src="../js/modal.js"></script>
+        <script src="../js/cos.js"></script>
         <script src="../js/friends.js"></script>
         <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
         <script src ="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Selector</title>
+    <title>Content Selector</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,8 +13,8 @@
             margin-top: 20px;
         }
         .display-box {
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            min-height: 200px;
             border: 2px solid #000;
             display: flex;
             flex-direction: column;
@@ -22,11 +22,21 @@
             justify-content: center;
             margin: 20px auto;
             background-color: #f0f0f0;
-        }
-        .display-box img {
-            max-width: 100%;
-            max-height: 100%;
+            padding: 10px;
             transition: opacity 0.5s ease-in-out;
+            position: relative;
+        }
+        .content {
+            display: none; /* Caché par défaut */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+        }
+        .content.active {
+            display: block; /* Affiché quand sélectionné */
         }
         .button-container {
             display: flex;
@@ -35,7 +45,7 @@
             flex-wrap: wrap;
         }
         .button-container button {
-            display: inline-flex; /* Affiche image et texte dans la même ligne */
+            display: inline-flex;
             background: none;
             border: none;
             cursor: pointer;
@@ -45,9 +55,10 @@
         .button-container img {
             width: 50px;
             height: 50px;
+            image-rendering: pixelated;
         }
         .button-container .text {
-            max-width: 0; /* Le texte prend aucune largeur au départ */
+            max-width: 0;
             overflow: hidden;
             white-space: nowrap;
             font-size: 16px;
@@ -59,70 +70,96 @@
         .button-container button.selected {
             transform: scale(1.1);
         }
-        .pixel {
-            image-rendering: pixelated;
-        }
         .button-container button.selected .text {
-            max-width: 100px; /* La largeur maximale du texte quand il devient visible */
+            max-width: 100px;
             opacity: 1;
-            padding-left: 10px; /* Ajouter un espacement lorsque le texte est visible */
+            padding-left: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="button-container">
-            <button onclick="changeImage(this, 'Equipped.png', 'Equipped')" class="selected">
-                <img class="pixel" src="../img/mcc/cos/Equipped.png" alt="Equipped">
+            <button onclick="changeContent(this, 'equipped-content')" class="selected">
+                <img src="../img/mcc/cos/Equipped.png" alt="Equipped">
                 <span class="text">Equipped</span>
             </button>
-            <button onclick="changeImage(this, 'hats.png', 'Hats')">
-                <img class="pixel" src="../img/mcc/cos/Hats.png" alt="Hats">
+            <button onclick="changeContent(this, 'hats-content')">
+                <img src="../img/mcc/cos/Hats.png" alt="Hats">
                 <span class="text">Hats</span>
             </button>
-            <button onclick="changeImage(this, 'accessories.png', 'Accessories')">
-                <img class="pixel" src="../img/mcc/cos/Accessories.png" alt="Accessories">
+            <button onclick="changeContent(this, 'accessories-content')">
+                <img src="../img/mcc/cos/Accessories.png" alt="Accessories">
                 <span class="text">Accessories</span>
             </button>
-            <button onclick="changeImage(this, 'auras.png', 'Auras')">
-                <img class="pixel" src="../img/mcc/cos/Auras.png" alt="Auras">
+            <button onclick="changeContent(this, 'auras-content')">
+                <img src="../img/mcc/cos/Auras.png" alt="Auras">
                 <span class="text">Auras</span>
             </button>
-            <button onclick="changeImage(this, 'trails.png', 'Trails')">
-                <img class="pixel" src="../img/mcc/cos/Trails.png" alt="Trails">
+            <button onclick="changeContent(this, 'trails-content')">
+                <img src="../img/mcc/cos/Trails.png" alt="Trails">
                 <span class="text">Trails</span>
             </button>
-            <button onclick="changeImage(this, 'backs.png', 'Backs')">
-                <img class="pixel" src="../img/mcc/cos/Backs.png" alt="Backs">
+            <button onclick="changeContent(this, 'backs-content')">
+                <img src="../img/mcc/cos/Backs.png" alt="Backs">
                 <span class="text">Backs</span>
             </button>
-            <button onclick="changeImage(this, 'fishing_rods.png', 'Fishing Rods')">
-                <img class="pixel"  src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods">
+            <button onclick="changeContent(this, 'fishing-content')">
+                <img src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods">
                 <span class="text">Fishing Rods</span>
             </button>
         </div>
-        <div class="display-box" id="display-box">
-            <p>TEST</p>
-            <img id="display-image" src="../img/badges/all-commons.png" alt="Equipped">
+        <div class="display-box">
+            <div id="equipped-content" class="content active" style="opacity: 1;">
+                <h2>Équipé</h2>
+                <p>Voici les objets actuellement équipés.</p>
+            </div>
+            <div id="hats-content" class="content">
+                <h2>Chapeaux</h2>
+                <p>Collection de chapeaux disponibles.</p>
+            </div>
+            <div id="accessories-content" class="content">
+                <h2>Accessoires</h2>
+                <p>Tous les accessoires à collectionner.</p>
+            </div>
+            <div id="auras-content" class="content">
+                <h2>Auras</h2>
+                <p>Choisissez une aura magique.</p>
+            </div>
+            <div id="trails-content" class="content">
+                <h2>Trails</h2>
+                <p>Découvrez les différentes traînées.</p>
+            </div>
+            <div id="backs-content" class="content">
+                <h2>Backs</h2>
+                <p>Objets à porter sur le dos.</p>
+            </div>
+            <div id="fishing-content" class="content">
+                <h2>Fishing Rods</h2>
+                <p>Personnalisez votre canne à pêche.</p>
+            </div>
         </div>
     </div>
 
     <script>
-        function changeImage(button, image, name) {
-            const displayImage = document.getElementById('display-image');
+        function changeContent(button, contentId) {
+            const allContents = document.querySelectorAll('.content');
+            const selectedContent = document.getElementById(contentId);
 
-            // Ajoute une transition en rendant l'image invisible
-            displayImage.style.opacity = 0;
+            // Masquer tout le contenu
+            allContents.forEach(content => {
+                content.style.opacity = 0;
+                setTimeout(() => content.classList.remove('active'), 500);
+            });
 
+            // Afficher le contenu sélectionné
             setTimeout(() => {
-                displayImage.src = '../img/badges/all-commons.png';
-                displayImage.style.opacity = 1; // Réafficher l'image après le changement
-            }, 300);
+                selectedContent.classList.add('active');
+                selectedContent.style.opacity = 1;
+            }, 500);
 
-            // Retirer la classe 'selected' de tous les boutons
+            // Gérer la sélection des boutons
             document.querySelectorAll('.button-container button').forEach(btn => btn.classList.remove('selected'));
-
-            // Ajouter la classe 'selected' au bouton cliqué
             button.classList.add('selected');
         }
     </script>

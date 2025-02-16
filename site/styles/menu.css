@@ -692,6 +692,7 @@ body.modal-open {
     border-radius: 10px; /* Bordure arrondie */
     padding: 10px; /* Ajoute un peu de marge interne */
     margin: 5px; /* Augmente l'espacement autour de chaque case */
+    overflow: hidden;
 }
 
 .mcc-bigcase {
