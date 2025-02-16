@@ -59,6 +59,11 @@ type Statistics struct {
 	DB_KDR           float32
 }
 
+type EquippedCosmetic struct {
+	Category string `json:"category"`
+	Name     string `json:"name"`
+}
+
 type NextLevelProgress struct {
 	CrownObtained   int `json:"obtained"`
 	CrownObtainable int `json:"obtainable"`
@@ -117,7 +122,8 @@ type Player struct {
 	Ranks       []string   `json:"ranks"`
 	CrownLevel  CrownLevel `json:"crownLevel"`
 	Collections struct {
-		Currency Currency `json:"currency"`
+		Currency Currency           `json:"currency"`
+		Equipped []EquippedCosmetic `json:"equippedCosmetics"`
 	} `json:"collections"`
 	Social struct {
 		Friends []Friend `json:"friends"`
@@ -135,19 +141,20 @@ type APIConfig struct {
 }
 
 type MccInfos struct {
-	Statistics      Statistics  `json:"statistics"`
-	Ranks           []string    `json:"ranks"`
-	CrownLevel      int         `json:"crownLevel"`
-	Evolution       int         `json:"evolution"`
-	CrownObtained   int         `json:"crownObtained"`
-	CrownObtainable int         `json:"crownObtainable"`
-	FishingData     FishingData `json:"fishingData"`
-	Currency        Currency    `json:"currency"`
-	Trophies        Trophies    `json:"trophies"`
-	TrophiesSKILL   Trophies    `json:"trophiesSKILL"`
-	TrophiesSTYLE   Trophies    `json:"trophiesSTYLE"`
-	TrophiesANGLER  Trophies    `json:"trophiesANGLER"`
-	Friends         []Friend    `json:"friends"` // Liste des amis avec leurs informations
+	Statistics        Statistics         `json:"statistics"`
+	Ranks             []string           `json:"ranks"`
+	CrownLevel        int                `json:"crownLevel"`
+	Evolution         int                `json:"evolution"`
+	CrownObtained     int                `json:"crownObtained"`
+	CrownObtainable   int                `json:"crownObtainable"`
+	FishingData       FishingData        `json:"fishingData"`
+	Currency          Currency           `json:"currency"`
+	Trophies          Trophies           `json:"trophies"`
+	TrophiesSKILL     Trophies           `json:"trophiesSKILL"`
+	TrophiesSTYLE     Trophies           `json:"trophiesSTYLE"`
+	TrophiesANGLER    Trophies           `json:"trophiesANGLER"`
+	Friends           []Friend           `json:"friends"`
+	EquippedCosmetics []EquippedCosmetic `json:"equippedCosmetics"`
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -242,6 +249,10 @@ func GetInfos(UUID string) *MccInfos {
 						materialDust
 						anglrTokens
 					}
+					equippedCosmetics {
+						category
+						name
+					}
 				}
 				social {
 					friends {
@@ -308,6 +319,14 @@ func GetInfos(UUID string) *MccInfos {
 		return nil
 	}
 
+	equippedCosmetics := []EquippedCosmetic{}
+	for _, cosmetic := range response.Data.Player.Collections.Equipped {
+		equippedCosmetics = append(equippedCosmetics, EquippedCosmetic{
+			Category: cosmetic.Category,
+			Name:     cosmetic.Name,
+		})
+	}
+
 	// Mapper la réponse aux informations de MCC
 	Infos := &MccInfos{
 		Statistics: Statistics{
@@ -369,12 +388,13 @@ func GetInfos(UUID string) *MccInfos {
 			Level:             response.Data.Player.CrownLevel.FishingData.Level,
 			NextLevelProgress: response.Data.Player.CrownLevel.FishingData.NextLevelProgress,
 		},
-		Currency:       response.Data.Player.Collections.Currency,
-		Trophies:       response.Data.Player.CrownLevel.Trophies,
-		TrophiesSKILL:  response.Data.Player.CrownLevel.TrophiesSKILL,
-		TrophiesSTYLE:  response.Data.Player.CrownLevel.TrophiesSTYLE,
-		TrophiesANGLER: response.Data.Player.CrownLevel.TrophiesANGLER,
-		Friends:        response.Data.Player.Social.Friends, // Liste des amis avec leurs infos
+		Currency:          response.Data.Player.Collections.Currency,
+		Trophies:          response.Data.Player.CrownLevel.Trophies,
+		TrophiesSKILL:     response.Data.Player.CrownLevel.TrophiesSKILL,
+		TrophiesSTYLE:     response.Data.Player.CrownLevel.TrophiesSTYLE,
+		TrophiesANGLER:    response.Data.Player.CrownLevel.TrophiesANGLER,
+		Friends:           response.Data.Player.Social.Friends,
+		EquippedCosmetics: equippedCosmetics,
 	}
 	return Infos
 }
