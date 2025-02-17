@@ -396,6 +396,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		BonusTrophies:        mcc.FormatNumberWithSpaces(mccInfos.Trophies.Bonus),
 		Friends:              convertToFriendInfo(mccInfos.Friends),
 		GameStats:            mccInfos.Statistics,
+		// Cosmetics
 		// Player Rank
 		PlayerRank:     playerRank,
 		PlayerRankPage: playerRankPage,
