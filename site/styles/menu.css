@@ -362,6 +362,7 @@ main {
     image-rendering: pixelated;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    box-shadow: 0px 4px 10px #00000080;
 }
 
 .cape-title {
@@ -397,27 +398,27 @@ main {
 }
 
 .legendary-cape:hover {
-    transform: scale(1.02);
+    transform: scale(1.07);
     box-shadow: 0 0 10px 2px #ffbf00;
 }
 
 .special-cape:hover {
-    transform: scale(1.02);
+    transform: scale(1.07);
     box-shadow: 0 0 10px 2px #9f00e9;
 }
 
 .rare-cape:hover {
-    transform: scale(1.02);
+    transform: scale(1.07);
     box-shadow: 0 0 10px 2px #007ed2;
 }
 
 .common-cape:hover {
-    transform: scale(1.02);
+    transform: scale(1.07);
     box-shadow: 0 0 10px 2px gray;
 }
 
 .optifine-cape:hover {
-    transform: scale(1.02);
+    transform: scale(1.07);
     box-shadow: 0 0 10px 2px #ff0000;
 }
 
