@@ -48,7 +48,7 @@
 
 .cos-display-box {
     width: 400px;
-    min-height: 200px;
+    min-height: 50px;
     border: 2px solid #1C2A45;
     background-color: #314A7F;
     border-radius: 10px;
@@ -58,9 +58,11 @@
     justify-content: center;
     margin: 20px auto;
     padding: 10px;
+    padding-top: 52px;
+    padding-bottom: 35px;
     transition: opacity 0.5s ease-in-out;
     position: relative;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
 }
 .cos-content {
     display: none; /* Caché par défaut */
@@ -75,6 +77,140 @@
     display: block; /* Affiché quand sélectionné */
 }
 
+.cos-allcontents {
+    width: 100%;
+}
+
 .hidden {
     display: none !important;
 }
+
+.cos-case-header {
+    width: 108%; /* Ajuste la largeur pour couvrir toute la boîte */
+    height: auto;
+    image-rendering: pixelated;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -20px; /* Décale l'image vers le haut */
+    left: 50%;
+    transform: translateX(-50%); /* Centre l'image horizontalement */
+}
+
+.cos-case-downer {
+    width: 108%; /* Ajuste la largeur pour couvrir toute la boîte */
+    height: auto;
+    image-rendering: pixelated;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -20px; /* Décale l'image vers le bas */
+    left: 50%;
+    transform: translateX(-50%); /* Centre l'image horizontalement */
+}
+
+.cos-equipped-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; /* Répartit les éléments horizontalement */
+    align-items: center;
+}
+
+.equip-cases {
+    max-width: 33%;
+    flex: 1; /* Permet aux colonnes de prendre toute la place disponible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equip-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
+}
+
+.equip-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
+}
+
+.equip-center {
+    position: relative; /* Nécessaire pour le positionnement absolu de l'overlay */
+    padding: 20px;
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cos-profile {
+    width: 80%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.cos-head-overlay {
+    position: absolute;
+    width: 19%;
+    height: auto;
+    image-rendering: pixelated;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.cos-crown-overlay {
+    position: absolute;
+    width: 24%;
+    height: auto;
+    image-rendering: pixelated;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.inv-case {
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/mcc/cos/invs/slot.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+    display: flex; /* Permet d'utiliser flexbox */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    position: relative;
+}
+
+
+.inv-item {
+    width: 85%;
+    height: auto;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: filter 0.3s;
+    will-change: transform, filter;
+    backface-visibility: hidden;
+}
+
+.inv-item:hover {
+    filter: brightness(1.5);
+}
+
