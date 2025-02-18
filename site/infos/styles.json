@@ -1,5 +1,6 @@
 {
     "players" : [
-        {"uuid":"cc4b7d74-bbe2-4310-9106-0e52d292c758","navbar":"#2A3462","dark":"#1C2241","light":"#3872AF"}
+        {"uuid":"cc4b7d74-bbe2-4310-9106-0e52d292c758","navbar":"#2A3462","dark":"#1C2241","light":"#3872AF"},
+        {"uuid":"63781be2-b6b3-4b25-8af4-3d963f6bc164","navbar":"#7C4521","dark":"#522E16","light":"#D3901E"}
     ]
 }

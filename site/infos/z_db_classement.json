@@ -6154,6 +6154,13 @@
             "badge": "gift-by-mojang"
         },
         {
+            "uuid": "18c5d3e3-c089-42b1-8504-2d3faa56e1c7",
+            "capes": 7,
+            "score": 14,
+            "actualname": "TheWorfer27",
+            "badge": "gift-by-mojang"
+        },
+        {
             "uuid": "4f5b9374-7085-43b6-9a5d-224d86461488",
             "capes": 7,
             "score": 13,
@@ -7701,13 +7708,6 @@
             "badge": "mojang-employee"
         },
         {
-            "uuid": "18c5d3e3-c089-42b1-8504-2d3faa56e1c7",
-            "capes": 2,
-            "score": 9,
-            "actualname": "TheWorfer27",
-            "badge": "gift-by-mojang"
-        },
-        {
             "uuid": "b61a6ad4-da78-46b1-9e3d-7be4290e867c",
             "capes": 2,
             "score": 9,
@@ -8433,6 +8433,13 @@
             "capes": 1,
             "score": 1,
             "actualname": "ae_KCl",
+            "badge": ""
+        },
+        {
+            "uuid": "137bbaf8-ab72-4547-9467-0efe75ac7905",
+            "capes": 1,
+            "score": 1,
+            "actualname": "ZeeTheCatLady",
             "badge": ""
         }
     ]
