@@ -116,6 +116,9 @@ type DataMenuPage struct {
 type EquippedCosmetics struct {
 	Hats        Cosmetic
 	Accessories Cosmetic
+	Auras       Cosmetic
+	Trails      Cosmetic
+	Backs       Cosmetic
 	Rods        Cosmetic
 }
 
@@ -367,7 +370,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		fishingcalculatedPercent = 0
 	}
 
-	var hat, accessory, rod Cosmetic
+	var hat, accessory, aura, trail, cloak, rod Cosmetic
 	if mccInfos != nil && len(mccInfos.EquippedCosmetics) > 0 {
 		for _, cosmetic := range mccInfos.EquippedCosmetics {
 			cleanedCosmeticName := mcc.CleanCosmeticName(cosmetic.Name)
@@ -376,6 +379,12 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 				hat = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
 			case "ACCESSORY":
 				accessory = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+			case "AURA":
+				aura = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+			case "TRAIL":
+				trail = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+			case "CLOAK":
+				cloak = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
 			case "ROD":
 				rod = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
 			}
@@ -429,6 +438,9 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		Equipped: EquippedCosmetics{
 			Hats:        hat,
 			Accessories: accessory,
+			Auras:       aura,
+			Trails:      trail,
+			Backs:       cloak,
 			Rods:        rod,
 		},
 		// Player Rank
@@ -576,7 +588,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1607", nil); err != nil {
+	if err := http.ListenAndServe(":1613", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

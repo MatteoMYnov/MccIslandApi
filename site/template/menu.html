@@ -565,13 +565,17 @@
                                             <div class="cos-equipped-content">
                                                 <div class="equip-left equip-cases">
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/hats/None.png" class="inv-item no-select">
+                                                        <img src="../img/mcc/cos/hats/None.png" class="inv-item no-select" data-tippy-content="Soon ?">
                                                     </div>                                                    
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/accessories/None.png" class="inv-item no-select">
+                                                        <img src="../img/mcc/cos/accessories/None.png" class="inv-item no-select" data-tippy-content="Soon ?">
                                                     </div>
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/auras/None.png" class="inv-item no-select">
+                                                        {{if .Equipped.Auras.Name}}
+                                                            <img src="../img/mcc/cos/auras/{{.Equipped.Auras.Name}}.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Auras.RealName}}" data-theme="{{.Equipped.Auras.Rarity}}">
+                                                        {{else}}
+                                                            <img src="../img/mcc/cos/auras/None.png" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON">
+                                                        {{end}}
                                                     </div>
                                                 </div>
                                                 <div class="equip-center equip-cases">
@@ -581,10 +585,10 @@
                                                 </div>
                                                 <div class="equip-right equip-cases">
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/trails/None.png" class="inv-item no-select">
+                                                        <img src="../img/mcc/cos/trails/None.png" class="inv-item no-select" data-tippy-content="Soon ?">
                                                     </div>
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select">
+                                                        <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select" data-tippy-content="Soon ?">
                                                     </div>
                                                     <div class="inv-case">
                                                         {{if .Equipped.Rods.Name}}

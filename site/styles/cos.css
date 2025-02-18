@@ -201,16 +201,17 @@
     width: 85%;
     height: auto;
     image-rendering: pixelated;
+    image-rendering: crisp-edges;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: filter 0.2s;
-    will-change: transform, filter;
+    transition: filter 0s;
     backface-visibility: hidden;
 }
 
 .inv-item:hover {
     filter: brightness(1.5);
+    image-rendering: pixelated;
 }
 

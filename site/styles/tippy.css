@@ -40,7 +40,8 @@
 .tippy-box[data-theme="COMMON"] {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #FCFCFC;
-    border: 2px solid #859494;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, #859494, #A8B9BA) 1;
 }
 
 .tippy-box[data-theme~="COMMON"] > .tippy-arrow::before {
@@ -62,7 +63,8 @@
 .tippy-box[data-theme="UNCOMMON"] {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #1EFC00;
-    border: 2px solid #0B9200;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, #0B9200, #18C50A) 1;
 }
 
 .tippy-box[data-theme~="UNCOMMON"] > .tippy-arrow::before {
@@ -84,7 +86,8 @@
 .tippy-box[data-theme="RARE"] {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #006FDA;
-    border: 2px solid #004FB5;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, #004FB5, #006FFC) 1;
 }
 
 .tippy-box[data-theme~="RARE"] > .tippy-arrow::before {
@@ -106,7 +109,8 @@
 .tippy-box[data-theme="EPIC"] {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #A134EB;
-    border: 2px solid #9E32E7;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, #9E32E7, #CB81FC) 1;
 }
 
 .tippy-box[data-theme~="EPIC"] > .tippy-arrow::before {
@@ -128,7 +132,8 @@
 .tippy-box[data-theme="LEGENDARY"] {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #FC7E00;
-    border: 2px solid #F57B00;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, #F57B00, #FCAF55) 1;
 }
 
 .tippy-box[data-theme~="LEGENDARY"] > .tippy-arrow::before {
@@ -150,7 +155,8 @@
 .tippy-box[data-theme="MYTHIC"] {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #F64141;
-    border: 2px solid #B42626;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, #B42626, #F64141) 1;
     box-shadow: 0 3px 5px #B4262650;
 }
 
