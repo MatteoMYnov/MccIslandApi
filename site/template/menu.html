@@ -552,7 +552,7 @@
                                         </button>
                                         <button onclick="changeContent(this, 'backs-content')">
                                             <img src="../img/mcc/cos/Backs.png" alt="Backs" class="no-select">
-                                            <span class="cos-text mc-font">Backs</span>
+                                            <span class="cos-text mc-font">Cloaks</span>
                                         </button>
                                         <button onclick="changeContent(this, 'fishing-content')">
                                             <img src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods" class="no-select">
@@ -566,16 +566,16 @@
                                                 <div class="equip-left equip-cases">
                                                     <div class="inv-case">
                                                         {{if .Equipped.Hats.Name}}
-                                                            <img src="../img/mcc/cos/hats/None.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Hats.RealName}} Soon ?" data-theme="{{.Equipped.Hats.Rarity}}">
+                                                            <img src="../img/mcc/cos/hats/NoTexture.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Hats.RealName}}" data-theme="{{.Equipped.Hats.Rarity}}">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/hats/None.png" class="inv-item no-select" data-tippy-content="Soon ?" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/hats/None.png" class="inv-item no-select" data-tippy-content="" data-theme="COMMON">
                                                         {{end}}
                                                     </div>                                                    
                                                     <div class="inv-case">
                                                         {{if .Equipped.Accessories.Name}}
-                                                            <img src="../img/mcc/cos/accessories/None.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Accessories.RealName}} Soon ?" data-theme="{{.Equipped.Accessories.Rarity}}">
+                                                            <img src="../img/mcc/cos/accessories/NoTexture.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Accessories.RealName}}" data-theme="{{.Equipped.Accessories.Rarity}}">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/accessories/None.png" class="inv-item no-select" data-tippy-content="Soon ?" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/accessories/None.png" class="inv-item no-select" data-tippy-content="" data-theme="COMMON">
                                                         {{end}}
                                                     </div>
                                                     <div class="inv-case">
@@ -601,9 +601,9 @@
                                                     </div>
                                                     <div class="inv-case">
                                                         {{if .Equipped.Backs.Name}}
-                                                            <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Backs.RealName}} Soon ?" data-theme="{{.Equipped.Backs.Rarity}}">
+                                                            <img src="../img/mcc/cos/backs/NoTexture.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Backs.RealName}}" data-theme="{{.Equipped.Backs.Rarity}}">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select" data-tippy-content="Soon ?" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select" data-tippy-content="" data-theme="COMMON">
                                                         {{end}}
                                                     </div>
                                                     <div class="inv-case">
@@ -647,7 +647,7 @@
                                         </div>
                                         <div id="backs-content" class="cos-allcontents content hidden">
                                             <img src="../img/mcc/cos/invs/Backs.png" class="cos-case-header no-select">
-                                            <h2>Backs</h2>
+                                            <h2>Cloaks</h2>
                                             <p>Voici les objets à porter sur le dos actuellement possédés.</p>
                                             <p>Ceci est un PlaceHolder</p>
                                             <img src="../img/mcc/cos/invs/Backs_Bottom.png" class="cos-case-downer no-select">
