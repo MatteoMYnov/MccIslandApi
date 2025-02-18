@@ -565,10 +565,18 @@
                                             <div class="cos-equipped-content">
                                                 <div class="equip-left equip-cases">
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/hats/None.png" class="inv-item no-select" data-tippy-content="Soon ?">
+                                                        {{if .Equipped.Hats.Name}}
+                                                            <img src="../img/mcc/cos/hats/None.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Hats.RealName}} Soon ?" data-theme="{{.Equipped.Hats.Rarity}}">
+                                                        {{else}}
+                                                            <img src="../img/mcc/cos/hats/None.png" class="inv-item no-select" data-tippy-content="Soon ?" data-theme="COMMON">
+                                                        {{end}}
                                                     </div>                                                    
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/accessories/None.png" class="inv-item no-select" data-tippy-content="Soon ?">
+                                                        {{if .Equipped.Accessories.Name}}
+                                                            <img src="../img/mcc/cos/accessories/None.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Accessories.RealName}} Soon ?" data-theme="{{.Equipped.Accessories.Rarity}}">
+                                                        {{else}}
+                                                            <img src="../img/mcc/cos/accessories/None.png" class="inv-item no-select" data-tippy-content="Soon ?" data-theme="COMMON">
+                                                        {{end}}
                                                     </div>
                                                     <div class="inv-case">
                                                         {{if .Equipped.Auras.Name}}
@@ -585,10 +593,18 @@
                                                 </div>
                                                 <div class="equip-right equip-cases">
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/trails/None.png" class="inv-item no-select" data-tippy-content="Soon ?">
+                                                        {{if .Equipped.Trails.Name}}
+                                                            <img src="../img/mcc/cos/trails/{{.Equipped.Trails.Name}}.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Trails.RealName}}" data-theme="{{.Equipped.Trails.Rarity}}">
+                                                        {{else}}
+                                                            <img src="../img/mcc/cos/trails/None.png" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON">
+                                                        {{end}}
                                                     </div>
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select" data-tippy-content="Soon ?">
+                                                        {{if .Equipped.Backs.Name}}
+                                                            <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Backs.RealName}} Soon ?" data-theme="{{.Equipped.Backs.Rarity}}">
+                                                        {{else}}
+                                                            <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select" data-tippy-content="Soon ?" data-theme="COMMON">
+                                                        {{end}}
                                                     </div>
                                                     <div class="inv-case">
                                                         {{if .Equipped.Rods.Name}}
