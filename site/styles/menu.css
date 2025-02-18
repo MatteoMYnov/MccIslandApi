@@ -1086,7 +1086,7 @@ body.modal-open {
 }
 
 .subcath-body2 {
-    width: calc(50% - 9px);
+    width: calc(49% - 7px);
     border: 2px solid #282828;
     border-radius: 10px;
 }
