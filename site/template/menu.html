@@ -92,11 +92,11 @@
                     <div class="stats-body">
                         <div class="mcc-case mcc-case1">
                             <div class="mcc-header">
-                                <img class="mcc-image mcc-rank no-select" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}.png{{else}}PLAYER.png{{end}}" data-tippy-content="{{if .MccRank}}{{.MccRank}}{{else}}PLAYER{{end}}">
+                                <img class="mcc-image mcc-rank no-select" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}{{else}}PLAYER{{end}}.png" data-tippy-content="{{if .MccRank}}{{.MccRank}}{{else}}PLAYER{{end}}">
                                 <p class="mcc-playername mc-font">{{.Name}}</p>
                             </div>
                             <div class="mcc-image mcc-crown">
-                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}" data-tippy-content="Crown Level">
+                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}{{else}}0{{end}}.png" data-tippy-content="Crown Level">
                                 <p class="mcc-actualcrownlevel mc-font">{{.CrownLevel}}</p>
                                 <!-- Progress Bar -->
                                 <progress class="mcc-crownbar mcc-crown{{.Evolution}}" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
@@ -106,7 +106,7 @@
                                 <p class="mcc-crownprogress mc-font">Progress: </p><p class="mcc-crownprogresspourcent mc-font">{{.CrownPourcentage}}%</p><p class="mcc-crownprogress mc-font"> ({{.CrownObtained}}/{{.CrownObtainable}})</p>
                             </div>
                             <div class="mcc-image mcc-crown">
-                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}.png{{else}}0.png{{end}}" data-tippy-content="Fishing Level">
+                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}{{else}}0{{end}}.png" data-tippy-content="Fishing Level">
                                 <p class="mcc-actualcrownlevel mc-font">{{.FishingLevel}}</p>
                                 <!-- Progress Bar -->
                                 <progress class="mcc-crownbar mcc-crown{{.FishingEvolution}}" value="{{.FishingObtained}}" max="{{.FishingObtainable}}"></progress>
@@ -186,8 +186,8 @@
                                                             <img src="https://mc-heads.net/head/{{.Username}}" class="friends-icon no-select">
                                                             <div class="online-status {{if .Online}}online{{else}}offline{{end}}" data-tippy-content="{{if .Online}}Online{{else}}Offline{{end}}"></div>
                                                         </div>
-                                                        <img src="../img/mcc/crowns/{{if .CrownLevel.Evolution}}{{.CrownLevel.Evolution}}.png{{else}}0.png{{end}}" class="friends-icon no-select" data-tippy-content="{{.CrownLevel.Level}}">
-                                                        <img src="../img/mcc/ranks/{{if .Ranks}}{{.Ranks}}.png{{else}}PLAYER.png{{end}}" class="friends-icon no-select" data-tippy-content="{{if .Ranks}}{{.Ranks}}{{else}}PLAYER{{end}}">
+                                                        <img src="../img/mcc/crowns/{{if .CrownLevel.Evolution}}{{.CrownLevel.Evolution}}{{else}}0{{end}}.png" class="friends-icon no-select" data-tippy-content="{{.CrownLevel.Level}}">
+                                                        <img src="../img/mcc/ranks/{{if .Ranks}}{{.Ranks}}{{else}}PLAYER{{end}}.png" class="friends-icon no-select" data-tippy-content="{{if .Ranks}}{{.Ranks}}{{else}}PLAYER{{end}}">
                                                         <p class="">{{.Username}}</p>
                                                     </div>
                                                 </div>
@@ -565,7 +565,7 @@
                                                 <div class="equip-left equip-cases">
                                                     <div class="inv-case">
                                                         <img src="../img/mcc/cos/hats/None.png" class="inv-item">
-                                                    </div>
+                                                    </div>                                                    
                                                     <div class="inv-case">
                                                         <img src="../img/mcc/cos/accessories/None.png" class="inv-item">
                                                     </div>
@@ -576,7 +576,7 @@
                                                 <div class="equip-center equip-cases">
                                                     <img src="../img/mcc/cos/invs/profile.png" class="cos-profile no-select">
                                                     <img src="https://mc-heads.net/avatar/{{.Name}}" class="cos-head-overlay no-select">
-                                                    <img src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}.png{{else}}0.png{{end}}" class="cos-crown-overlay no-select" data-tippy-content="Level {{.CrownLevel}}">
+                                                    <img src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}{{else}}0{{end}}.png" class="cos-crown-overlay no-select" data-tippy-content="Level {{.CrownLevel}}">
                                                 </div>
                                                 <div class="equip-right equip-cases">
                                                     <div class="inv-case">
@@ -586,7 +586,7 @@
                                                         <img src="../img/mcc/cos/backs/None.png" class="inv-item">
                                                     </div>
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/fishing_rod/None.png" class="inv-item">
+                                                        <img src="../img/mcc/cos/fishing_rod/{{if .Equipped.Rods}}{{.Equipped.Rods}}{{else}}None{{end}}.png" class="inv-item">
                                                     </div>
                                                 </div>
                                             </div>

@@ -2,6 +2,7 @@ package mcc
 
 import (
 	"math"
+	"regexp"
 	"strconv"
 	"strings"
 )
@@ -37,4 +38,9 @@ func safeDivide(numerator, denominator int) float32 {
 func roundFloat(value float32, precision int) float32 {
 	multiplier := float32(math.Pow(10, float64(precision)))
 	return float32(math.Round(float64(value)*float64(multiplier))) / multiplier
+}
+
+func CleanCosmeticName(name string) string {
+	re := regexp.MustCompile(`[^a-zA-Z0-9]`) // Expression régulière pour tout sauf lettres et chiffres
+	return re.ReplaceAllString(name, "")     // Remplacer tout ce qui n'est pas une lettre ou un chiffre par rien
 }

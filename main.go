@@ -106,9 +106,17 @@ type DataMenuPage struct {
 	BonusTrophies        string
 	Friends              []FriendInfo
 	GameStats            mcc.Statistics
+	//Cos
+	Equipped EquippedCosmetics
 	// Player Rank
 	PlayerRank     int
 	PlayerRankPage int
+}
+
+type EquippedCosmetics struct {
+	Hats        string
+	Accessories string
+	Rods        string
 }
 
 type FriendInfo struct {
@@ -353,6 +361,21 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		fishingcalculatedPercent = 0
 	}
 
+	var hat, accessory, rod string
+	if mccInfos != nil && len(mccInfos.EquippedCosmetics) > 0 {
+		for _, cosmetic := range mccInfos.EquippedCosmetics {
+			cleanedCosmeticName := mcc.CleanCosmeticName(cosmetic.Name)
+			switch cosmetic.Category {
+			case "HAT":
+				hat = cleanedCosmeticName
+			case "ACCESSORY":
+				accessory = cleanedCosmeticName
+			case "ROD":
+				rod = cleanedCosmeticName
+			}
+		}
+	}
+
 	infos := DataMenuPage{
 		//Player
 		Name:             IGN,
@@ -397,6 +420,11 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		Friends:              convertToFriendInfo(mccInfos.Friends),
 		GameStats:            mccInfos.Statistics,
 		// Cosmetics
+		Equipped: EquippedCosmetics{
+			Hats:        hat,
+			Accessories: accessory,
+			Rods:        rod,
+		},
 		// Player Rank
 		PlayerRank:     playerRank,
 		PlayerRankPage: playerRankPage,
@@ -542,7 +570,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1618", nil); err != nil {
+	if err := http.ListenAndServe(":1600", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
