@@ -62,6 +62,7 @@ type Statistics struct {
 type EquippedCosmetic struct {
 	Category string `json:"category"`
 	Name     string `json:"name"`
+	Rarity   string `json:"rarity"`
 }
 
 type NextLevelProgress struct {
@@ -252,6 +253,7 @@ func GetInfos(UUID string) *MccInfos {
 					equippedCosmetics {
 						category
 						name
+						rarity
 					}
 				}
 				social {
@@ -324,6 +326,7 @@ func GetInfos(UUID string) *MccInfos {
 		equippedCosmetics = append(equippedCosmetics, EquippedCosmetic{
 			Category: cosmetic.Category,
 			Name:     cosmetic.Name,
+			Rarity:   cosmetic.Rarity,
 		})
 	}
 

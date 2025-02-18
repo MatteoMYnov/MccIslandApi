@@ -6,6 +6,7 @@
         <title>{{.Name}} | Profile</title>
         <link rel="stylesheet" href="../styles/menu.css?v=1.0">
         <link rel="stylesheet" href="../styles/cos.css?v=1.0">
+        <link rel="stylesheet" href="../styles/tippy.css?v=1.0">
         <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
     </head>
     <body style="--bg-image-url: url('../img/utilities{{if .BackgroundUUID}}/perplayers/{{.BackgroundUUID}}/bg.png{{else}}/bg.png{{end}}');">
@@ -33,7 +34,7 @@
                         <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image no-select">
                         <p id="playerName" class="{{.PlayerClass}}">{{.Name}}</p>
                         {{if .BackgroundUUID}}
-                            <img src="../img/mcc/utilities/theme.png" alt="Player Using Theme" class="theme-image no-select" data-tippy-content="Ce Joueur a demandé au responsable du site d'avoir un thème custom">
+                            <img src="../img/mcc/utilities/theme.png" alt="Player Using Theme" class="theme-image no-select" data-tippy-content="Ce Joueur a demandé au responsable du site d'avoir un thème custom" data-theme="theme">
                         {{end}}
                     </div>
                 </div>
@@ -586,7 +587,11 @@
                                                         <img src="../img/mcc/cos/backs/None.png" class="inv-item no-select">
                                                     </div>
                                                     <div class="inv-case">
-                                                        <img src="../img/mcc/cos/fishing_rod/{{if .Equipped.Rods}}{{.Equipped.Rods}}{{else}}None{{end}}.png" class="inv-item no-select">
+                                                        {{if .Equipped.Rods.Name}}
+                                                            <img src="../img/mcc/cos/fishing_rod/{{.Equipped.Rods.Name}}.png" class="inv-item no-select" data-tippy-content="{{.Equipped.Rods.RealName}}" data-theme="{{.Equipped.Rods.Rarity}}">
+                                                        {{else}}
+                                                            <img src="../img/mcc/cos/fishing_rod/None.png" class="inv-item no-select" data-tippy-content="None">
+                                                        {{end}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -685,6 +690,10 @@
             }
             tippy("[data-tippy-content]", {
                 duration: 500,
+                onShow(instance) {
+                    const theme = instance.reference.getAttribute("data-theme") || "default";
+                    instance.popper.querySelector('.tippy-box').setAttribute("data-theme", theme);
+                }
             });
             window.onload = function () {
                 var chart = new CanvasJS.Chart("GamesGraph", {

@@ -114,9 +114,15 @@ type DataMenuPage struct {
 }
 
 type EquippedCosmetics struct {
-	Hats        string
-	Accessories string
-	Rods        string
+	Hats        Cosmetic
+	Accessories Cosmetic
+	Rods        Cosmetic
+}
+
+type Cosmetic struct {
+	Name     string
+	RealName string
+	Rarity   string
 }
 
 type FriendInfo struct {
@@ -361,17 +367,17 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		fishingcalculatedPercent = 0
 	}
 
-	var hat, accessory, rod string
+	var hat, accessory, rod Cosmetic
 	if mccInfos != nil && len(mccInfos.EquippedCosmetics) > 0 {
 		for _, cosmetic := range mccInfos.EquippedCosmetics {
 			cleanedCosmeticName := mcc.CleanCosmeticName(cosmetic.Name)
 			switch cosmetic.Category {
 			case "HAT":
-				hat = cleanedCosmeticName
+				hat = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
 			case "ACCESSORY":
-				accessory = cleanedCosmeticName
+				accessory = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
 			case "ROD":
-				rod = cleanedCosmeticName
+				rod = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
 			}
 		}
 	}
@@ -570,7 +576,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1603", nil); err != nil {
+	if err := http.ListenAndServe(":1607", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('fonts/Minecraftia.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.tippy-box {
+    border: 1px solid #222;
+    color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tippy-box[data-theme="theme"] {
+    color: #fff;
+    border: 2px solid #ff0000;
+    box-shadow: 0 3px 5px #ff000050;
+}
+
+.tippy-box[data-theme~="theme"] > .tippy-arrow::before {
+    border-top-color: #ff0000;
+}
+.tippy-box[data-theme~="theme"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #ff0000;
+}
+.tippy-box[data-theme~="theme"][data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #ff0000;
+}
+.tippy-box[data-theme~="theme"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #ff0000;
+}
+.tippy-box[data-theme~="theme"][data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #ff0000;
+}
+
+
+
+/* ItemsRarity */
+/* Common */
+.tippy-box[data-theme="COMMON"] {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #FCFCFC;
+    border: 2px solid #859494;
+}
+
+.tippy-box[data-theme~="COMMON"] > .tippy-arrow::before {
+    border-top-color: #859494;
+}
+.tippy-box[data-theme~="COMMON"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #859494;
+}
+.tippy-box[data-theme~="COMMON"][data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #859494;
+}
+.tippy-box[data-theme~="COMMON"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #859494;
+}
+.tippy-box[data-theme~="COMMON"][data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #859494;
+}
+/* UnCommon */
+.tippy-box[data-theme="UNCOMMON"] {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #1EFC00;
+    border: 2px solid #0B9200;
+}
+
+.tippy-box[data-theme~="UNCOMMON"] > .tippy-arrow::before {
+    border-top-color: #0B9200;
+}
+.tippy-box[data-theme~="UNCOMMON"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #0B9200;
+}
+.tippy-box[data-theme~="UNCOMMON"][data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #0B9200;
+}
+.tippy-box[data-theme~="UNCOMMON"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #0B9200;
+}
+.tippy-box[data-theme~="UNCOMMON"][data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #0B9200;
+}
+/* Rare */
+.tippy-box[data-theme="RARE"] {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #006FDA;
+    border: 2px solid #004FB5;
+}
+
+.tippy-box[data-theme~="RARE"] > .tippy-arrow::before {
+    border-top-color: #004FB5;
+}
+.tippy-box[data-theme~="RARE"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #004FB5;
+}
+.tippy-box[data-theme~="RARE"][data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #004FB5;
+}
+.tippy-box[data-theme~="RARE"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #004FB5;
+}
+.tippy-box[data-theme~="RARE"][data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #004FB5;
+}
+/* Epic */
+.tippy-box[data-theme="EPIC"] {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #A134EB;
+    border: 2px solid #9E32E7;
+}
+
+.tippy-box[data-theme~="EPIC"] > .tippy-arrow::before {
+    border-top-color: #9E32E7;
+}
+.tippy-box[data-theme~="EPIC"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #9E32E7;
+}
+.tippy-box[data-theme~="EPIC"][data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #9E32E7;
+}
+.tippy-box[data-theme~="EPIC"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #9E32E7;
+}
+.tippy-box[data-theme~="EPIC"][data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #9E32E7;
+}
+/* Legendary */
+.tippy-box[data-theme="LEGENDARY"] {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #FC7E00;
+    border: 2px solid #F57B00;
+}
+
+.tippy-box[data-theme~="LEGENDARY"] > .tippy-arrow::before {
+    border-top-color: #F57B00;
+}
+.tippy-box[data-theme~="LEGENDARY"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #F57B00;
+}
+.tippy-box[data-theme~="LEGENDARY"][data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #F57B00;
+}
+.tippy-box[data-theme~="LEGENDARY"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #F57B00;
+}
+.tippy-box[data-theme~="LEGENDARY"][data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #F57B00;
+}
+/* Mythic ?!?!? */
+.tippy-box[data-theme="MYTHIC"] {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
+    color: #F64141;
+    border: 2px solid #B42626;
+    box-shadow: 0 3px 5px #B4262650;
+}
+
+.tippy-box[data-theme~="MYTHIC"] > .tippy-arrow::before {
+    border-top-color: #B42626;
+}
+.tippy-box[data-theme~="MYTHIC"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #B42626;
+}
+.tippy-box[data-theme~="MYTHIC"][data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #B42626;
+}
+.tippy-box[data-theme~="MYTHIC"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #B42626;
+}
+.tippy-box[data-theme~="MYTHIC"][data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #B42626;
+}
