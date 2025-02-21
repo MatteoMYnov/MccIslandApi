@@ -6483,6 +6483,13 @@
             "badge": "all-events"
         },
         {
+            "uuid": "8b303bac-056a-4b03-b5b0-8c7c262b86ef",
+            "capes": 7,
+            "score": 8,
+            "actualname": "Proofreader",
+            "badge": "all-events"
+        },
+        {
             "uuid": "fb63b2b1-2862-4d9c-9271-24202f66c31c",
             "capes": 7,
             "score": 7,
@@ -6803,6 +6810,20 @@
             "score": 5,
             "actualname": "Melizsa",
             "badge": ""
+        },
+        {
+            "uuid": "51ab051a-d975-402c-a9d5-3ae82d394adf",
+            "capes": 5,
+            "score": 5,
+            "actualname": "Pieter31",
+            "badge": ""
+        },
+        {
+            "uuid": "af3bfa0d-0a9f-4d1b-8d94-523829aca570",
+            "capes": 5,
+            "score": 5,
+            "actualname": "Maethyrr",
+            "badge": "all-events"
         },
         {
             "uuid": "f8cdb683-9e90-43ee-a819-39f85d9c5d69",
@@ -7820,6 +7841,13 @@
             "badge": ""
         },
         {
+            "uuid": "a9ff9685-d110-4d85-8c3d-c092a605c9a1",
+            "capes": 2,
+            "score": 2,
+            "actualname": "ModdingArt",
+            "badge": ""
+        },
+        {
             "uuid": "82a5be28-eb0f-48f4-9751-1b302c9c663e",
             "capes": 2,
             "score": 1,
@@ -8391,13 +8419,6 @@
             "capes": 1,
             "score": 1,
             "actualname": "MrsSnowBtw",
-            "badge": ""
-        },
-        {
-            "uuid": "51ab051a-d975-402c-a9d5-3ae82d394adf",
-            "capes": 1,
-            "score": 1,
-            "actualname": "Pieter31",
             "badge": ""
         },
         {
