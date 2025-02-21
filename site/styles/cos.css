@@ -196,6 +196,20 @@
     position: relative;
 }
 
+.inv-case2 {
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/mcc/cos/invs/slot2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+    display: flex; /* Permet d'utiliser flexbox */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    position: relative;
+}
+
 
 .inv-item {
     width: 85%;
@@ -214,4 +228,42 @@
     filter: brightness(1.5);
     image-rendering: pixelated;
 }
+.cos-inventory {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
 
+.cos-inventory .line {
+    display: flex;
+    justify-content: center;
+}
+
+.cos-inventory .mid {
+    width: auto;
+}
+
+.page-arrow {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    transition: filter 0s;
+}
+.page-arrow:hover {
+    filter: brightness(1.5);
+    image-rendering: pixelated;
+}
+
+.cos-inventory .left {
+    width: 48px;
+}
+
+.cos-inventory .right {
+    width: 48px;
+}
