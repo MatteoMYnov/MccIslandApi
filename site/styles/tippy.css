@@ -175,3 +175,8 @@
 .tippy-box[data-theme~="MYTHIC"][data-placement^="right"] > .tippy-arrow::before {
     border-right-color: #B42626;
 }
+
+.pixelated {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges; /* Pour assurer la netteté dans certains navigateurs */
+}
