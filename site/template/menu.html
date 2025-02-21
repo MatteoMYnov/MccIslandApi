@@ -50,12 +50,12 @@
                         </p>                            
                         <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
                         <h2>Minecraft Capes</h2>
-                    </div>
+                    </div>  
                     <div class="stats-body">
                         {{if .ImageURLs}}
                             {{range .ImageURLs}}
                                 <div class="cape-container">
-                                    <img src="{{.URL}}" alt="Cape Image" class="cape-image no-select cursor {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}">
+                                    <img src="{{.URL}}" onerror="this.onerror=null; this.src='../img/capes/NoTexture.png';" alt="Cape Image" class="cape-image no-select cursor {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}">
                                     <p class="cape-title mc-font">{{.Title}}</p>
                                 </div>
                             {{end}}
