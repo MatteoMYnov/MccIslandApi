@@ -152,7 +152,34 @@
     border-right-color: #F57B00;
 }
 /* Mythic ?!?!? */
+@keyframes mythic-light {
+    0% {
+        transform: translate(-150%, -150%) rotate(-45deg);
+    }
+    50% {
+        transform: translate(150%, 150%) rotate(-45deg);
+    }
+    100% {
+        transform: translate(150%, 150%) rotate(-45deg);
+    }
+}
+
+.tippy-box[data-theme="MYTHIC"]::before {
+    content: "";
+    position: absolute;
+    width: 200%; /* Large pour couvrir toute la boîte */
+    height: 7px; /* Épaisseur de la ligne */
+    background: #F64141A0; /* Couleur lumineuse */
+    box-shadow: 0 0 10px #F68941A0; /* Effet de glow */
+    top: 0;
+    left: 0;
+    transform: translate(-150%, -150%) rotate(-45deg);
+    animation: mythic-light 5s linear infinite;
+}
+
 .tippy-box[data-theme="MYTHIC"] {
+    position: relative;
+    overflow: hidden;
     font-family: 'Minecraftia', 'Roboto', sans-serif;
     color: #F64141;
     border: 2px solid transparent;
