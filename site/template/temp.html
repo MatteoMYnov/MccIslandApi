@@ -1,167 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Selector</title>
+    <title>Barre de progression 3D</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .container {
-            margin-top: 20px;
-        }
-        .display-box {
-            width: 400px;
-            min-height: 200px;
-            border: 2px solid #000;
+        /* Conteneur principal centré */
+        .progress-wrapper {
             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 20px auto;
-            background-color: #f0f0f0;
-            padding: 10px;
-            transition: opacity 0.5s ease-in-out;
-            position: relative;
+            gap: 20px;
         }
-        .content {
-            display: none; /* Caché par défaut */
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            padding: 10px;
-        }
-        .content.active {
-            display: block; /* Affiché quand sélectionné */
-        }
-        .button-container {
+
+        /* Conteneur de la barre */
+        .progress-container {
+            width: 50%;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            overflow: visible; /* Permet de faire sortir les tooltips */
             display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border: 2px solid #aaa;
         }
-        .button-container button {
-            display: inline-flex;
-            background: none;
-            border: none;
-            cursor: pointer;
-            align-items: center;
-            transition: transform 0.3s ease-in-out;
+
+        /* Effet rayé + effet 3D */
+        .bar-segment {
+            height: 100%;
+            transition: width 0.5s ease-in-out;
+            background-size: 20px 20px;
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2));
+            box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3);
+            position: relative; /* Pour que le tooltip soit positionné par rapport à ce div */
         }
-        .button-container img {
-            width: 50px;
-            height: 50px;
-            image-rendering: pixelated;
-        }
-        .button-container .text {
-            max-width: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            font-size: 16px;
-            margin-left: 10px;
-            transition: max-width 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+        /* Couleurs des segments */
+        .bar-a { background-color: #3498db; }
+        .bar-b { background-color: #e74c3c; }
+        .bar-c { background-color: #2ecc71; }
+
+        /* Tooltip pour la barre */
+        .bar-segment .tooltip {
+            position: absolute;
+            top: -25px; /* Positionne le tooltip juste au-dessus du segment */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
             opacity: 0;
-            padding: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+            z-index: 1000; /* Assure que le tooltip est au-dessus */
         }
-        .button-container button.selected {
-            transform: scale(1.1);
-        }
-        .button-container button.selected .text {
-            max-width: 100px;
+
+        .bar-segment:hover .tooltip {
             opacity: 1;
-            padding-left: 10px;
+        }
+
+        /* Bouton */
+        .refresh-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .refresh-btn:hover {
+            background-color: #777;
+        }
+
+        /* Conteneur des valeurs */
+        .values-container {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        /* Tooltip des valeurs */
+        .tooltip-value {
+            position: relative;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .tooltip-value::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .tooltip-value:hover::after {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="button-container">
-            <button onclick="changeContent(this, 'equipped-content')" class="selected">
-                <img src="../img/mcc/cos/Equipped.png" alt="Equipped">
-                <span class="text">Equipped</span>
-            </button>
-            <button onclick="changeContent(this, 'hats-content')">
-                <img src="../img/mcc/cos/Hats.png" alt="Hats">
-                <span class="text">Hats</span>
-            </button>
-            <button onclick="changeContent(this, 'accessories-content')">
-                <img src="../img/mcc/cos/Accessories.png" alt="Accessories">
-                <span class="text">Accessories</span>
-            </button>
-            <button onclick="changeContent(this, 'auras-content')">
-                <img src="../img/mcc/cos/Auras.png" alt="Auras">
-                <span class="text">Auras</span>
-            </button>
-            <button onclick="changeContent(this, 'trails-content')">
-                <img src="../img/mcc/cos/Trails.png" alt="Trails">
-                <span class="text">Trails</span>
-            </button>
-            <button onclick="changeContent(this, 'backs-content')">
-                <img src="../img/mcc/cos/Backs.png" alt="Backs">
-                <span class="text">Backs</span>
-            </button>
-            <button onclick="changeContent(this, 'fishing-content')">
-                <img src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods">
-                <span class="text">Fishing Rods</span>
-            </button>
+
+    <div class="progress-wrapper">
+        <button class="refresh-btn" onclick="generateRandomBar()">🔄 Générer une nouvelle barre</button>
+        <div class="progress-container">
+            <div class="bar-segment bar-a"><span class="tooltip">A</span></div>
+            <div class="bar-segment bar-b"><span class="tooltip">B</span></div>
+            <div class="bar-segment bar-c"><span class="tooltip">C</span></div>
         </div>
-        <div class="display-box">
-            <div id="equipped-content" class="content active" style="opacity: 1;">
-                <h2>Équipé</h2>
-                <p>Voici les objets actuellement équipés.</p>
-            </div>
-            <div id="hats-content" class="content">
-                <h2>Chapeaux</h2>
-                <p>Collection de chapeaux disponibles.</p>
-            </div>
-            <div id="accessories-content" class="content">
-                <h2>Accessoires</h2>
-                <p>Tous les accessoires à collectionner.</p>
-            </div>
-            <div id="auras-content" class="content">
-                <h2>Auras</h2>
-                <p>Choisissez une aura magique.</p>
-            </div>
-            <div id="trails-content" class="content">
-                <h2>Trails</h2>
-                <p>Découvrez les différentes traînées.</p>
-            </div>
-            <div id="backs-content" class="content">
-                <h2>Backs</h2>
-                <p>Objets à porter sur le dos.</p>
-            </div>
-            <div id="fishing-content" class="content">
-                <h2>Fishing Rods</h2>
-                <p>Personnalisez votre canne à pêche.</p>
-            </div>
+        <div class="values-container">
+            <span class="tooltip-value" id="value-a" data-tooltip="Valeur de A"></span>
+            <span class="tooltip-value" id="value-b" data-tooltip="Valeur de B"></span>
+            <span class="tooltip-value" id="value-c" data-tooltip="Valeur de C"></span>
         </div>
     </div>
 
     <script>
-        function changeContent(button, contentId) {
-            const allContents = document.querySelectorAll('.content');
-            const selectedContent = document.getElementById(contentId);
-
-            // Masquer tout le contenu
-            allContents.forEach(content => {
-                content.style.opacity = 0;
-                setTimeout(() => content.classList.remove('active'), 500);
-            });
-
-            // Afficher le contenu sélectionné
-            setTimeout(() => {
-                selectedContent.classList.add('active');
-                selectedContent.style.opacity = 1;
-            }, 500);
-
-            // Gérer la sélection des boutons
-            document.querySelectorAll('.button-container button').forEach(btn => btn.classList.remove('selected'));
-            button.classList.add('selected');
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         }
+
+        function generateRandomBar() {
+            let a = getRandomNumber(10, 100);
+            let b = getRandomNumber(10, 100);
+            let c = getRandomNumber(10, 100);
+            
+            updateBar({ a, b, c });
+        }
+
+        function updateBar(values) {
+            const total = values.a + values.b + values.c;
+            document.querySelector('.bar-a').style.width = (values.a / total * 100) + "%";
+            document.querySelector('.bar-b').style.width = (values.b / total * 100) + "%";
+            document.querySelector('.bar-c').style.width = (values.c / total * 100) + "%";
+
+            document.getElementById('value-a').textContent = `A: ${values.a}`;
+            document.getElementById('value-b').textContent = `B: ${values.b}`;
+            document.getElementById('value-c').textContent = `C: ${values.c}`;
+
+            document.getElementById('value-a').setAttribute('data-tooltip', `Valeur exacte: ${values.a}`);
+            document.getElementById('value-b').setAttribute('data-tooltip', `Valeur exacte: ${values.b}`);
+            document.getElementById('value-c').setAttribute('data-tooltip', `Valeur exacte: ${values.c}`);
+
+            document.querySelector('.bar-a .tooltip').textContent = values.a;
+            document.querySelector('.bar-b .tooltip').textContent = values.b;
+            document.querySelector('.bar-c .tooltip').textContent = values.c;
+        }
+
+        // Génère une barre au chargement de la page
+        window.onload = generateRandomBar;
     </script>
+
 </body>
 </html>
