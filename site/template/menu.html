@@ -827,6 +827,15 @@
                     document.getElementById(arrowRightId).src = currentPage < totalPages - 1 
                         ? "../img/mcc/utilities/arrow-right.png" 
                         : "../img/mcc/utilities/arrow-right-off.png";
+                    
+                    tippy("[data-tippy-content]", {
+                        duration: 500,
+                        allowHTML: true,
+                        onShow(instance) {
+                            const theme = instance.reference.getAttribute("data-theme") || "default";
+                            instance.popper.querySelector('.tippy-box').setAttribute("data-theme", theme);
+                        }
+                    });
                 }
 
                 document.getElementById(arrowLeftId).addEventListener("click", () => {
