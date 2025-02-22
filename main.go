@@ -107,10 +107,11 @@ type DataMenuPage struct {
 	Friends              []FriendInfo
 	GameStats            mcc.Statistics
 	//Cos
-	Equipped EquippedCosmetics
-	Hats     []mcc.InvCos
-	Auras    []mcc.InvCos
-	Trails   []mcc.InvCos
+	Equipped    EquippedCosmetics
+	Hats        []mcc.InvCos
+	Accessories []mcc.InvCos
+	Auras       []mcc.InvCos
+	Trails      []mcc.InvCos
 	// Player Rank
 	PlayerRank     int
 	PlayerRankPage int
@@ -446,9 +447,10 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 			Backs:       cloak,
 			Rods:        rod,
 		},
-		Hats:   mccInfos.Hats,
-		Auras:  mccInfos.Auras,
-		Trails: mccInfos.Trails,
+		Hats:        mccInfos.Hats,
+		Accessories: mccInfos.Accessories,
+		Auras:       mccInfos.Auras,
+		Trails:      mccInfos.Trails,
 		// Player Rank
 		PlayerRank:     playerRank,
 		PlayerRankPage: playerRankPage,
@@ -468,6 +470,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+	fmt.Println(mccInfos.Accessories)
 	tmpl.Execute(w, infos)
 }
 
@@ -599,7 +602,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1619", nil); err != nil {
+	if err := http.ListenAndServe(":1602", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

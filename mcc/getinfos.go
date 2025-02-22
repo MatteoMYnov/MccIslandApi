@@ -140,11 +140,12 @@ type Player struct {
 	Ranks       []string   `json:"ranks"`
 	CrownLevel  CrownLevel `json:"crownLevel"`
 	Collections struct {
-		Currency Currency           `json:"currency"`
-		Equipped []EquippedCosmetic `json:"equippedCosmetics"`
-		Hats     []Cosmetic         `json:"hats"`
-		Auras    []Cosmetic         `json:"auras"`
-		Trails   []Cosmetic         `json:"trails"`
+		Currency    Currency           `json:"currency"`
+		Equipped    []EquippedCosmetic `json:"equippedCosmetics"`
+		Hats        []Cosmetic         `json:"hats"`
+		Accessories []Cosmetic         `json:"accessories"`
+		Auras       []Cosmetic         `json:"auras"`
+		Trails      []Cosmetic         `json:"trails"`
 	} `json:"collections"`
 	Social struct {
 		Friends []Friend `json:"friends"`
@@ -177,6 +178,7 @@ type MccInfos struct {
 	Friends           []Friend           `json:"friends"`
 	EquippedCosmetics []EquippedCosmetic `json:"equippedCosmetics"`
 	Hats              []InvCos
+	Accessories       []InvCos
 	Auras             []InvCos
 	Trails            []InvCos
 }
@@ -285,6 +287,13 @@ func GetInfos(UUID string) *MccInfos {
 							name
 						}
 					}
+					accessories: cosmetics(category: ACCESSORY) {
+						owned
+						cosmetic {
+							rarity 
+							name
+						}
+					}
 					auras: cosmetics(category: AURA) {
 						owned
 						cosmetic {
@@ -375,6 +384,7 @@ func GetInfos(UUID string) *MccInfos {
 	}
 
 	hats := []InvCos{}
+	accessories := []InvCos{}
 	auras := []InvCos{}
 	trails := []InvCos{}
 	for _, hat := range response.Data.Player.Collections.Hats {
@@ -383,6 +393,14 @@ func GetInfos(UUID string) *MccInfos {
 			Name:     CleanCosmeticName(hat.Cosmetic.Name),
 			RealName: hat.Cosmetic.Name,
 			Rarity:   hat.Cosmetic.Rarity,
+		})
+	}
+	for _, accessory := range response.Data.Player.Collections.Accessories {
+		accessories = append(accessories, InvCos{
+			Owned:    accessory.Owned, // Ajout du champ Owned
+			Name:     CleanCosmeticName(accessory.Cosmetic.Name),
+			RealName: accessory.Cosmetic.Name,
+			Rarity:   accessory.Cosmetic.Rarity,
 		})
 	}
 	for _, aura := range response.Data.Player.Collections.Auras {
@@ -471,6 +489,7 @@ func GetInfos(UUID string) *MccInfos {
 		Friends:           response.Data.Player.Social.Friends,
 		EquippedCosmetics: equippedCosmetics,
 		Hats:              SortCosmetics(hats),
+		Accessories:       SortCosmetics(accessories),
 		Auras:             SortCosmetics(auras),
 		Trails:            SortCosmetics(trails),
 	}

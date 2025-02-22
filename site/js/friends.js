@@ -6,7 +6,7 @@ function toggleRoll(bodyId, arrowId) {
         RollBody.style.maxHeight = null;
         arrow.style.transform = "rotate(0deg)"; // Remet la flèche à sa position initiale
     } else {
-        RollBody.style.maxHeight = RollBody.scrollHeight + 100 + "px";
+        RollBody.style.maxHeight = RollBody.scrollHeight + 300 + "px";
         arrow.style.transform = "rotate(-90deg)"; // Fait tourner la flèche
     }
 }

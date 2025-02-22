@@ -634,9 +634,17 @@
                                         </div>                                        
                                         <div id="accessories-content" class="cos-allcontents content hidden">
                                             <img src="../img/mcc/cos/invs/Accessories.png" class="cos-case-header no-select">
-                                            <h2>Accessories</h2>
-                                            <p>Comming Soon!</p>
-                                            <p>PlaceHolder</p>
+                                            <div class="cos-inventory">
+                                                <div class="left">
+                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left">
+                                                </div>
+                                                <div class="mid" id="accessories-container">
+                                                    <!-- Les accessories seront insérées ici via JS -->
+                                                </div>
+                                                <div class="right">
+                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right">
+                                                </div>
+                                            </div>
                                             <img src="../img/mcc/cos/invs/Accessories_Bottom.png" class="cos-case-downer no-select">
                                         </div>
                                         <div id="auras-content" class="cos-allcontents content hidden">
@@ -656,23 +664,31 @@
                                         </div>                                        
                                         <div id="trails-content" class="cos-allcontents content hidden">
                                             <img src="../img/mcc/cos/invs/Trails.png" class="cos-case-header no-select">
-                                            <h2>Trails</h2>
-                                            <p>Comming Soon!</p>
-                                            <p>PlaceHolder</p>
+                                            <div class="cos-inventory">
+                                                <div class="left">
+                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left">
+                                                </div>
+                                                <div class="mid" id="trails-container">
+                                                    <!-- Les trails seront insérés ici via JS -->
+                                                </div>
+                                                <div class="right">
+                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right">
+                                                </div>
+                                            </div>
                                             <img src="../img/mcc/cos/invs/Trails_Bottom.png" class="cos-case-downer no-select">
-                                        </div>
+                                        </div>                                        
                                         <div id="backs-content" class="cos-allcontents content hidden">
                                             <img src="../img/mcc/cos/invs/Backs.png" class="cos-case-header no-select">
                                             <h2>Cloaks</h2>
                                             <p>Comming Soon!</p>
-                                            <p>PlaceHolder</p>
+                                            <p>(MccIsland Api don't work yet)</p>
                                             <img src="../img/mcc/cos/invs/Backs_Bottom.png" class="cos-case-downer no-select">
                                         </div>
                                         <div id="fishing-content" class="cos-allcontents content hidden">
                                             <img src="../img/mcc/cos/invs/Fishing_Rods.png" class="cos-case-header no-select">
                                             <h2>Rods</h2>
                                             <p>Comming Soon!</p>
-                                            <p>PlaceHolder</p>
+                                            <p>(MccIsland Api don't work yet)</p>
                                             <img src="../img/mcc/cos/invs/Fishing_Rods_Bottom.png" class="cos-case-downer no-select">
                                         </div>
                                     </div>
@@ -721,15 +737,15 @@
             function displayItems(items, containerId, pageSize = 35) {
                 let currentPage = 0;
                 let totalPages = Math.ceil(items.length / pageSize);
-
+        
                 function updateDisplay() {
                     let start = currentPage * pageSize;
                     let end = start + pageSize;
                     let pageItems = items.slice(start, end);
-
+        
                     let container = document.getElementById(containerId);
                     container.innerHTML = ""; // Réinitialiser le contenu
-
+        
                     let row = null;
                     pageItems.forEach((item, index) => {
                         if (index % 7 === 0) {
@@ -737,19 +753,19 @@
                             row.classList.add("line");
                             container.appendChild(row);
                         }
-
+        
                         let itemDiv = document.createElement("div");
                         itemDiv.classList.add("inv-case2");
-
+        
                         let img = document.createElement("img");
                         img.classList.add("inv-item", "no-select");
-
-                        // Ajuster le chemin en fonction du type de contenu (auras ou hats)
+        
+                        // Ajuster le chemin en fonction du type de contenu (auras, hats, accessories, trails)
                         let basePath = "";
                         let tooltipContent = "";
                         let tooltipTheme = "";
                         let itemType = ""; // Variable pour gérer le type d'objet
-
+        
                         if (containerId.toLowerCase() === "auras-container") {
                             basePath = "../img/mcc/cos/auras/";  // Pour les auras
                             itemType = "Auras"; // Type = Auras
@@ -758,11 +774,19 @@
                             basePath = "../img/mcc/cos/hats/";  // Pour les hats
                             itemType = "Hats"; // Type = Hats
                             tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'></div>`;
+                        } else if (containerId.toLowerCase() === "accessories-container") {
+                            basePath = "../img/mcc/cos/accessories/";  // Pour les accessoires
+                            itemType = "Accessories"; // Type = Accessories
+                            tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'></div>`;
+                        } else if (containerId.toLowerCase() === "trails-container") {
+                            basePath = "../img/mcc/cos/trails/";  // Pour les trails
+                            itemType = "Trails"; // Type = Trails
+                            tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>`;
                         }
-
+        
                         // Définir le tooltip theme (basé sur la rareté)
                         tooltipTheme = item.Rarity;
-
+        
                         // Si l'élément est possédé, on met l'image correspondante, sinon on met l'image NoTexture.png
                         if (item && item.Owned) {
                             img.src = `${basePath}${item.Name}.png`;  // Utilisation du chemin dynamique
@@ -772,15 +796,15 @@
                         } else {
                             img.src = "../img/mcc/cos/invs/lock.png";  // Image de verrouillage pour les éléments non possédés
                         }
-
+        
                         // Ajouter les attributs de tooltip
                         img.setAttribute("data-tippy-content", tooltipContent);
                         img.setAttribute("data-theme", tooltipTheme);
-
+        
                         itemDiv.appendChild(img);
                         row.appendChild(itemDiv);
                     });
-
+        
                     // Ajouter des cases vides si la page a moins de 35 éléments
                     while (pageItems.length < pageSize) {
                         if (pageItems.length % 7 === 0) {
@@ -788,48 +812,56 @@
                             row.classList.add("line");
                             container.appendChild(row);
                         }
-
+        
                         let emptyDiv = document.createElement("div");
                         emptyDiv.classList.add("inv-case2");
                         row.appendChild(emptyDiv);
                         pageItems.push(null);
                     }
-
+        
                     // Mettre à jour les flèches
                     document.getElementById("arrow-left").src = currentPage > 0 
                         ? "../img/mcc/utilities/arrow-left.png" 
                         : "../img/mcc/utilities/arrow-left-off.png";
-
+        
                     document.getElementById("arrow-right").src = currentPage < totalPages - 1 
                         ? "../img/mcc/utilities/arrow-right.png" 
                         : "../img/mcc/utilities/arrow-right-off.png";
                 }
-
+        
                 document.getElementById("arrow-left").addEventListener("click", () => {
                     if (currentPage > 0) {
                         currentPage--;
                         updateDisplay();
                     }
                 });
-
+        
                 document.getElementById("arrow-right").addEventListener("click", () => {
                     if (currentPage < totalPages - 1) {
                         currentPage++;
                         updateDisplay();
                     }
                 });
-
+        
                 updateDisplay();
             }
-
+        
             // Initialiser l'affichage avec Auras
             let auras = {{ .Auras }};  // Liste des auras envoyée par Go
             displayItems(auras, "auras-container");
-
-            // Initialiser l'affichage avec Hats (ou autre liste)
+        
+            // Initialiser l'affichage avec Hats
             let hats = {{ .Hats }};  // Liste des hats envoyée par Go
             displayItems(hats, "hats-container");
-        </script>                     
+        
+            // Initialiser l'affichage avec Accessories
+            let accessories = {{ .Accessories }};  // Liste des accessoires envoyée par Go
+            displayItems(accessories, "accessories-container");
+        
+            // Initialiser l'affichage avec Trails
+            let trails = {{ .Trails }};  // Liste des trails envoyée par Go
+            displayItems(trails, "trails-container");
+        </script>                           
         <script>
             function redirectToRankPage(rankPage) {
                 window.location.href = "/classement/" + rankPage;
