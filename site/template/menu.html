@@ -421,7 +421,7 @@
                                                                 <p class="mc-font">{{.GameStats.HITWGames}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.HITW_WGR 10.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wall per Game) Average - 10.0">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.HITW_WGR 12.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wall per Game) Average - 12.0">
                                                                 <p class="mc-font color-white">WGR: </p>
                                                                 <p class="mc-font">({{.GameStats.HITW_WGR}})</p>
                                                             </div>
@@ -633,9 +633,48 @@
                                         </div>
                                         <div id="auras-content" class="cos-allcontents content hidden">
                                             <img src="../img/mcc/cos/invs/Auras.png" class="cos-case-header no-select">
-                                            <h2>Auras</h2>
-                                            <p>Comming Soon!</p>
-                                            <p>PlaceHolder</p>
+                                            <div class="cos-inventory">
+                                                <div class="left"><img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select"></div>
+                                                <div class="mid">
+                                                    {{ $index := 0 }}
+                                                    {{ range .Auras }}
+                                                        {{ if eq (mod $index 7) 0 }} 
+                                                            <div class="line">
+                                                        {{ end }}
+                                                        <div class="inv-case2">
+                                                            {{ if .Owned }}
+                                                                <img src="../img/mcc/cos/auras/{{.Name}}.png" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{ .RealName }}</b><br><img src='../img/mcc/tooltip/{{ .Rarity }}.png' height='17' class='pixelated' style='margin-right: 3px;'></div>" data-theme="{{ .Rarity }}">
+                                                            {{ else }}
+                                                                <img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{ .RealName }}</b><br><img src='../img/mcc/tooltip/{{ .Rarity }}.png' height='17' class='pixelated' style='margin-right: 3px;'></div>" data-theme="{{ .Rarity }}">
+                                                            {{ end }}
+                                                        </div>
+                                                    
+                                                        <!-- Si $index mod 7 == 6, on ferme la ligne -->
+                                                        {{ if eq (mod (add $index 1) 7) 0 }} 
+                                                            </div> <!-- Fermeture de la ligne -->
+                                                        {{ end }}
+                                                    
+                                                        {{ $index = add $index 1 }} <!-- Incrémenter l'index -->
+                                                    {{ end }}
+                                            
+                                                    <!-- Ajouter des cases vides si le nombre d'éléments est inférieur à 35 -->
+                                                    {{ $remaining := sub 35 (len .Auras) }}
+                                                    {{ if gt $remaining 0 }}
+                                                        {{ range $i := seq 1 $remaining }}
+                                                            <!-- Remplir les cases restantes -->
+                                                            {{ if eq (mod $index 7) 0 }}
+                                                                <div class="line">
+                                                            {{ end }}
+                                                            <div class="inv-case2"></div>
+                                                            {{ if eq (mod (add $index 1) 7) 0 }}
+                                                                </div> <!-- Fermeture de la ligne -->
+                                                            {{ end }}
+                                                            {{ $index = add $index 1 }} <!-- Incrémenter l'index -->
+                                                        {{ end }}
+                                                    {{ end }}
+                                                </div>
+                                                <div class="right"><img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select"></div>
+                                            </div>                                                                                                                                    
                                             <img src="../img/mcc/cos/invs/Auras_Bottom.png" class="cos-case-downer no-select">
                                         </div>
                                         <div id="trails-content" class="cos-allcontents content hidden">
@@ -654,57 +693,9 @@
                                         </div>
                                         <div id="fishing-content" class="cos-allcontents content hidden">
                                             <img src="../img/mcc/cos/invs/Fishing_Rods.png" class="cos-case-header no-select">
-                                            <div class="cos-inventory">
-                                                <div class="left"><img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select"></div>
-                                                <div class="mid">
-                                                    <div class="line">
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                    </div>
-                                                    <div class="line">
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                    </div>
-                                                    <div class="line">
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                    </div>
-                                                    <div class="line">
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                    </div>
-                                                    <div class="line">
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                        <div class="inv-case2"><img src="../img/mcc/cos/invs/lock.png" class="inv-item no-select"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="right"><img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select"></div>
-                                            </div>
+                                            <h2>Rods</h2>
+                                            <p>Comming Soon!</p>
+                                            <p>PlaceHolder</p>
                                             <img src="../img/mcc/cos/invs/Fishing_Rods_Bottom.png" class="cos-case-downer no-select">
                                         </div>
                                     </div>

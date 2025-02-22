@@ -3,6 +3,7 @@ package mcc
 import (
 	"math"
 	"regexp"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -43,4 +44,32 @@ func roundFloat(value float32, precision int) float32 {
 func CleanCosmeticName(name string) string {
 	re := regexp.MustCompile(`[^a-zA-Z0-9]`) // Expression régulière pour tout sauf lettres et chiffres
 	return re.ReplaceAllString(name, "")     // Remplacer tout ce qui n'est pas une lettre ou un chiffre par rien
+}
+
+func SortCosmetics(cosmetics []InvCos) []InvCos {
+	// Définir l'ordre des rarités
+	rarityOrder := map[string]int{
+		"COMMON":    0,
+		"UNCOMMON":  1,
+		"RARE":      2,
+		"EPIC":      3,
+		"LEGENDARY": 4,
+		"MYTHIC":    5,
+	}
+
+	// Trier en utilisant sort.SliceStable
+	sort.SliceStable(cosmetics, func(i, j int) bool {
+		// Trier d'abord par owned (true avant false)
+		if cosmetics[i].Owned != cosmetics[j].Owned {
+			return cosmetics[i].Owned
+		}
+		// Puis par rareté en utilisant rarityOrder
+		if rarityOrder[cosmetics[i].Rarity] != rarityOrder[cosmetics[j].Rarity] {
+			return rarityOrder[cosmetics[i].Rarity] < rarityOrder[cosmetics[j].Rarity]
+		}
+		// Enfin par nom (ordre alphabétique)
+		return cosmetics[i].Name < cosmetics[j].Name
+	})
+
+	return cosmetics
 }

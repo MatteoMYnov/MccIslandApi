@@ -6896,6 +6896,13 @@
             "badge": "gift-by-mojang"
         },
         {
+            "uuid": "1e6e79ca-12a6-4a25-ae05-35cfa0ae576d",
+            "capes": 4,
+            "score": 24,
+            "actualname": "ezfe",
+            "badge": "gift-by-mojang"
+        },
+        {
             "uuid": "6d752bb0-ef41-432a-825a-4d44185de121",
             "capes": 4,
             "score": 22,
@@ -7575,10 +7582,24 @@
             "badge": "gift-by-mojang"
         },
         {
+            "uuid": "48fe3a11-67dd-48a0-901f-3e9959aa231d",
+            "capes": 3,
+            "score": 6,
+            "actualname": "Expert_Builder",
+            "badge": ""
+        },
+        {
             "uuid": "047bcb7f-d352-411d-be68-0c449b33d028",
             "capes": 3,
             "score": 3,
             "actualname": "JoinGrave",
+            "badge": ""
+        },
+        {
+            "uuid": "166235a6-5759-4e58-8dc2-601086e59653",
+            "capes": 3,
+            "score": 3,
+            "actualname": "ae_KCl",
             "badge": ""
         },
         {
@@ -7761,13 +7782,6 @@
             "capes": 2,
             "score": 5,
             "actualname": "DheargDoom",
-            "badge": ""
-        },
-        {
-            "uuid": "48fe3a11-67dd-48a0-901f-3e9959aa231d",
-            "capes": 2,
-            "score": 5,
-            "actualname": "Expert_Builder",
             "badge": ""
         },
         {
@@ -8454,13 +8468,6 @@
             "capes": 1,
             "score": 1,
             "actualname": "Pose1dan",
-            "badge": ""
-        },
-        {
-            "uuid": "166235a6-5759-4e58-8dc2-601086e59653",
-            "capes": 1,
-            "score": 1,
-            "actualname": "ae_KCl",
             "badge": ""
         },
         {

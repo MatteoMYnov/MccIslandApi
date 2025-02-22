@@ -93,3 +93,27 @@ func IsValidIGN(name string) bool {
 	matched, _ := regexp.MatchString(validIGNPattern, name)
 	return matched
 }
+
+func Mod(a, b int) int {
+	return a % b
+}
+
+func Seq(start, end int) []int {
+	var result []int
+	for i := start; i <= end; i++ {
+		result = append(result, i)
+	}
+	return result
+}
+
+func Sub(a, b int) int {
+	return a - b
+}
+
+func Add(x, y int) int {
+	return x + y
+}
+
+func Mul(x, y int) int {
+	return x * y
+}

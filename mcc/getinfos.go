@@ -65,6 +65,23 @@ type EquippedCosmetic struct {
 	Rarity   string `json:"rarity"`
 }
 
+type InvCos struct {
+	Owned    bool
+	Name     string
+	RealName string
+	Rarity   string
+}
+
+type CosmeticInfos struct {
+	Name   string `json:"name"`
+	Rarity string `json:"rarity"`
+}
+
+type Cosmetic struct {
+	Owned    bool          `json:"owned"`
+	Cosmetic CosmeticInfos `json:"cosmetic"`
+}
+
 type NextLevelProgress struct {
 	CrownObtained   int `json:"obtained"`
 	CrownObtainable int `json:"obtainable"`
@@ -125,6 +142,7 @@ type Player struct {
 	Collections struct {
 		Currency Currency           `json:"currency"`
 		Equipped []EquippedCosmetic `json:"equippedCosmetics"`
+		Auras    []Cosmetic         `json:"auras"`
 	} `json:"collections"`
 	Social struct {
 		Friends []Friend `json:"friends"`
@@ -156,6 +174,7 @@ type MccInfos struct {
 	TrophiesANGLER    Trophies           `json:"trophiesANGLER"`
 	Friends           []Friend           `json:"friends"`
 	EquippedCosmetics []EquippedCosmetic `json:"equippedCosmetics"`
+	Auras             []InvCos
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -255,6 +274,13 @@ func GetInfos(UUID string) *MccInfos {
 						name
 						rarity
 					}
+					auras: cosmetics(category: AURA) {
+						owned
+						cosmetic {
+							rarity 
+							name
+						}
+					}
 				}
 				social {
 					friends {
@@ -330,6 +356,16 @@ func GetInfos(UUID string) *MccInfos {
 		})
 	}
 
+	auras := []InvCos{}
+	for _, aura := range response.Data.Player.Collections.Auras {
+		auras = append(auras, InvCos{
+			Owned:    aura.Owned, // Ajout du champ Owned
+			Name:     CleanCosmeticName(aura.Cosmetic.Name),
+			RealName: aura.Cosmetic.Name,
+			Rarity:   aura.Cosmetic.Rarity,
+		})
+	}
+
 	// Mapper la réponse aux informations de MCC
 	Infos := &MccInfos{
 		Statistics: Statistics{
@@ -398,6 +434,7 @@ func GetInfos(UUID string) *MccInfos {
 		TrophiesANGLER:    response.Data.Player.CrownLevel.TrophiesANGLER,
 		Friends:           response.Data.Player.Social.Friends,
 		EquippedCosmetics: equippedCosmetics,
+		Auras:             SortCosmetics(auras),
 	}
 	return Infos
 }
