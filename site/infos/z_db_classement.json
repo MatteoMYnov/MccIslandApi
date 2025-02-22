@@ -6525,6 +6525,13 @@
             "badge": "all-events"
         },
         {
+            "uuid": "4d16bc6b-2ff3-40c7-910c-e7472d12e6cd",
+            "capes": 7,
+            "score": 7,
+            "actualname": "derNiklaas",
+            "badge": ""
+        },
+        {
             "uuid": "bef46daf-79b4-4c79-af0c-bc6a480fc7c4",
             "capes": 7,
             "score": 0,
@@ -8482,6 +8489,13 @@
             "capes": 1,
             "score": 1,
             "actualname": "RelitoPlaysCg",
+            "badge": ""
+        },
+        {
+            "uuid": "4e832e0d-14b6-4f8f-ace2-280a9bf9dd98",
+            "capes": 1,
+            "score": 1,
+            "actualname": "TheMysterys",
             "badge": ""
         }
     ]

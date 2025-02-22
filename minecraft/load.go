@@ -2,6 +2,7 @@ package minecraft
 
 import (
 	"encoding/json"
+	"html/template"
 	"io/ioutil"
 	"log"
 	"math/rand"
@@ -116,4 +117,12 @@ func Add(x, y int) int {
 
 func Mul(x, y int) int {
 	return x * y
+}
+
+func ToJSON(data interface{}) template.JS {
+	bytes, err := json.Marshal(data)
+	if err != nil {
+		return template.JS("[]") // Retourne un tableau vide si erreur
+	}
+	return template.JS(bytes)
 }

@@ -108,6 +108,7 @@ type DataMenuPage struct {
 	GameStats            mcc.Statistics
 	//Cos
 	Equipped EquippedCosmetics
+	Hats     []mcc.InvCos
 	Auras    []mcc.InvCos
 	Trails   []mcc.InvCos
 	// Player Rank
@@ -445,6 +446,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 			Backs:       cloak,
 			Rods:        rod,
 		},
+		Hats:   mccInfos.Hats,
 		Auras:  mccInfos.Auras,
 		Trails: mccInfos.Trails,
 		// Player Rank
@@ -460,6 +462,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		"sub":      minecraft.Sub,
 		"add":      minecraft.Add,
 		"mul":      minecraft.Mul,
+		"toJson":   minecraft.ToJSON,
 	}).ParseFiles(tmplPath)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -596,7 +599,7 @@ func main() {
 	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1616", nil); err != nil {
+	if err := http.ListenAndServe(":1619", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
