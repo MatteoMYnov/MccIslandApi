@@ -712,14 +712,14 @@
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="../img/capes/default-placeholder.png" alt="Image" class="modal-image no-select">
+                        <img src="../img/capes/NoTexture.png" alt="Image" class="modal-image no-select">
                     </div>
                     <div class="modal-body">
                         <p class="modal-name">Name PlaceHolder</p>
                         <p class="modal-date">Date PlaceHolder</p>
                         <p class="modal-desc">Description PlaceHolder</p>
                         <div class="modal-images no-select" style="display: block;">
-                            <img src="../img/capes/default-placeholder.png" title="Default Title" alt="Default Alt" class="modal-image-item no-select" id="modalImage1">
+                            <img src="../img/capes/NoTexture.png" title="Default Title" alt="Default Alt" class="modal-image-item no-select" id="modalImage1">
                         </div>
                     </div>
                 </div>
@@ -808,18 +808,28 @@
                             // Si l'élément est verrouillé et qu'il n'a pas encore été déverrouillé
                             if (item && !item.Owned) {
                                 // Si un élément était déjà déverrouillé, le remettre à son état de verrouillage
-                                if (lastUnlockedItem) {
+                                if (lastUnlockedItem && lastUnlockedItem !== img) {
                                     lastUnlockedItem.src = "../img/mcc/cos/invs/lock.png";  // Retour à l'état de verrouillage
+                                    lastUnlockedItem.setAttribute("data-locked", "false");
                                 }
-        
-                                // Mettre l'image actuelle à son état déverrouillé
-                                img.src = `${basePath}${item.Name}.png`;  // Afficher l'image de l'item
-                                img.onerror = function () {
-                                    this.src = `${basePath}NoTexture.png`;  // Image de remplacement si erreur
-                                };
-        
-                                // Mettre à jour le dernier élément déverrouillé
-                                lastUnlockedItem = img;
+
+                                // Vérifier l'état actuel de l'élément
+                                if (img.getAttribute("data-locked") === "true") {
+                                    // Revenir à l'état verrouillé
+                                    img.src = "../img/mcc/cos/invs/lock.png";
+                                    img.setAttribute("data-locked", "false");
+                                    lastUnlockedItem = null; // Réinitialiser si on clique à nouveau sur l'élément déverrouillé
+                                } else {
+                                    // Afficher l'image de l'item
+                                    img.src = `${basePath}${item.Name}.gif`;
+                                    img.onerror = function () {
+                                        this.src = `${basePath}NoTexture.gif`;
+                                    };
+                                    img.setAttribute("data-locked", "true");
+
+                                    // Mettre à jour le dernier élément déverrouillé
+                                    lastUnlockedItem = img;
+                                }
                             }
                         });
         

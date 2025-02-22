@@ -73,7 +73,7 @@
         {
             "uuid": "e3e96a4f-92ab-47a9-bc8e-6b72894316d6",
             "capes": 13,
-            "score": 27,
+            "score": 26,
             "actualname": "evilETH",
             "badge": "all-commons"
         },
@@ -6630,6 +6630,13 @@
             "badge": "mojang-employee"
         },
         {
+            "uuid": "10404504-d771-4ccb-bf17-a36401630c49",
+            "capes": 6,
+            "score": 14,
+            "actualname": "Nauzea",
+            "badge": "gift-by-mojang"
+        },
+        {
             "uuid": "c07edab6-e3e7-4ce2-930f-8b5c5de69366",
             "capes": 6,
             "score": 7,
@@ -7603,10 +7610,10 @@
             "badge": ""
         },
         {
-            "uuid": "047bcb7f-d352-411d-be68-0c449b33d028",
+            "uuid": "",
             "capes": 3,
-            "score": 3,
-            "actualname": "JoinGrave",
+            "score": 6,
+            "actualname": "Expert_Builder",
             "badge": ""
         },
         {
@@ -7614,6 +7621,13 @@
             "capes": 3,
             "score": 3,
             "actualname": "ae_KCl",
+            "badge": ""
+        },
+        {
+            "uuid": "047bcb7f-d352-411d-be68-0c449b33d028",
+            "capes": 3,
+            "score": 2,
+            "actualname": "JoinGrave",
             "badge": ""
         },
         {
@@ -8366,13 +8380,6 @@
             "badge": ""
         },
         {
-            "uuid": "03dcea60-c134-4af5-b479-aa85c10cac53",
-            "capes": 1,
-            "score": 1,
-            "actualname": "Fuzzlyman",
-            "badge": ""
-        },
-        {
             "uuid": "47572aeb-69c9-4aca-b565-a2932b013521",
             "capes": 1,
             "score": 1,
@@ -8503,6 +8510,13 @@
             "capes": 1,
             "score": 1,
             "actualname": "TheMysterys",
+            "badge": ""
+        },
+        {
+            "uuid": "03dcea60-c134-4af5-b479-aa85c10cac53",
+            "capes": 1,
+            "score": 0,
+            "actualname": "Fuzzlyman",
             "badge": ""
         }
     ]
