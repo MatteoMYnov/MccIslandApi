@@ -109,6 +109,7 @@ type DataMenuPage struct {
 	//Cos
 	Equipped EquippedCosmetics
 	Auras    []mcc.InvCos
+	Trails   []mcc.InvCos
 	// Player Rank
 	PlayerRank     int
 	PlayerRankPage int
@@ -444,7 +445,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 			Backs:       cloak,
 			Rods:        rod,
 		},
-		Auras: mccInfos.Auras,
+		Auras:  mccInfos.Auras,
+		Trails: mccInfos.Trails,
 		// Player Rank
 		PlayerRank:     playerRank,
 		PlayerRankPage: playerRankPage,
@@ -463,7 +465,6 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	fmt.Println(mccInfos.Auras)
 	tmpl.Execute(w, infos)
 }
 

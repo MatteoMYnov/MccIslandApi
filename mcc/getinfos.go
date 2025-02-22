@@ -142,7 +142,9 @@ type Player struct {
 	Collections struct {
 		Currency Currency           `json:"currency"`
 		Equipped []EquippedCosmetic `json:"equippedCosmetics"`
+		Hats     []Cosmetic         `json:"hats"`
 		Auras    []Cosmetic         `json:"auras"`
+		Trails   []Cosmetic         `json:"trails"`
 	} `json:"collections"`
 	Social struct {
 		Friends []Friend `json:"friends"`
@@ -174,7 +176,9 @@ type MccInfos struct {
 	TrophiesANGLER    Trophies           `json:"trophiesANGLER"`
 	Friends           []Friend           `json:"friends"`
 	EquippedCosmetics []EquippedCosmetic `json:"equippedCosmetics"`
+	Hats              []InvCos
 	Auras             []InvCos
+	Trails            []InvCos
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -274,7 +278,21 @@ func GetInfos(UUID string) *MccInfos {
 						name
 						rarity
 					}
+					hats: cosmetics(category: HAT) {
+						owned
+						cosmetic {
+							rarity 
+							name
+						}
+					}
 					auras: cosmetics(category: AURA) {
+						owned
+						cosmetic {
+							rarity 
+							name
+						}
+					}
+					trails: cosmetics(category: TRAIL) {
 						owned
 						cosmetic {
 							rarity 
@@ -356,13 +374,31 @@ func GetInfos(UUID string) *MccInfos {
 		})
 	}
 
+	hats := []InvCos{}
 	auras := []InvCos{}
+	trails := []InvCos{}
+	for _, hat := range response.Data.Player.Collections.Hats {
+		hats = append(hats, InvCos{
+			Owned:    hat.Owned, // Ajout du champ Owned
+			Name:     CleanCosmeticName(hat.Cosmetic.Name),
+			RealName: hat.Cosmetic.Name,
+			Rarity:   hat.Cosmetic.Rarity,
+		})
+	}
 	for _, aura := range response.Data.Player.Collections.Auras {
 		auras = append(auras, InvCos{
 			Owned:    aura.Owned, // Ajout du champ Owned
 			Name:     CleanCosmeticName(aura.Cosmetic.Name),
 			RealName: aura.Cosmetic.Name,
 			Rarity:   aura.Cosmetic.Rarity,
+		})
+	}
+	for _, trail := range response.Data.Player.Collections.Trails {
+		trails = append(trails, InvCos{
+			Owned:    trail.Owned, // Ajout du champ Owned
+			Name:     CleanCosmeticName(trail.Cosmetic.Name),
+			RealName: trail.Cosmetic.Name,
+			Rarity:   trail.Cosmetic.Rarity,
 		})
 	}
 
@@ -434,7 +470,9 @@ func GetInfos(UUID string) *MccInfos {
 		TrophiesANGLER:    response.Data.Player.CrownLevel.TrophiesANGLER,
 		Friends:           response.Data.Player.Social.Friends,
 		EquippedCosmetics: equippedCosmetics,
+		Hats:              SortCosmetics(hats),
 		Auras:             SortCosmetics(auras),
+		Trails:            SortCosmetics(trails),
 	}
 	return Infos
 }
