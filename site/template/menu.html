@@ -737,35 +737,37 @@
             function displayItems(items, containerId, arrowLeftId, arrowRightId, pageSize = 35) {
                 let currentPage = 0;
                 let totalPages = Math.ceil(items.length / pageSize);
-
+        
                 function updateDisplay() {
                     let start = currentPage * pageSize;
                     let end = start + pageSize;
                     let pageItems = items.slice(start, end);
-
+        
                     let container = document.getElementById(containerId);
                     container.innerHTML = ""; // Réinitialiser le contenu
-
+        
                     let row = null;
+                    let lastUnlockedItem = null; // Variable pour suivre l'élément déverrouillé
+        
                     pageItems.forEach((item, index) => {
                         if (index % 7 === 0) {
                             row = document.createElement("div");
                             row.classList.add("line");
                             container.appendChild(row);
                         }
-
+        
                         let itemDiv = document.createElement("div");
                         itemDiv.classList.add("inv-case2");
-
+        
                         let img = document.createElement("img");
                         img.classList.add("inv-item", "no-select");
-
+        
                         // Ajuster le chemin en fonction du type de contenu (auras, hats, accessories, trails)
                         let basePath = "";
                         let tooltipContent = "";
                         let tooltipTheme = "";
                         let itemType = ""; // Variable pour gérer le type d'objet
-
+        
                         if (containerId.toLowerCase() === "auras-container") {
                             basePath = "../img/mcc/cos/auras/";  // Pour les auras
                             itemType = "Auras"; // Type = Auras
@@ -783,10 +785,10 @@
                             itemType = "Trails"; // Type = Trails
                             tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>`;
                         }
-
+        
                         // Définir le tooltip theme (basé sur la rareté)
                         tooltipTheme = item.Rarity;
-
+        
                         // Si l'élément est possédé, on met l'image correspondante, sinon on met l'image NoTexture.png
                         if (item && item.Owned) {
                             img.src = `${basePath}${item.Name}.png`;  // Utilisation du chemin dynamique
@@ -796,15 +798,35 @@
                         } else {
                             img.src = "../img/mcc/cos/invs/lock.png";  // Image de verrouillage pour les éléments non possédés
                         }
-
+        
                         // Ajouter les attributs de tooltip
                         img.setAttribute("data-tippy-content", tooltipContent);
                         img.setAttribute("data-theme", tooltipTheme);
-
+        
+                        // Ajouter un gestionnaire de clic pour changer l'image du lock
+                        img.addEventListener("click", function () {
+                            // Si l'élément est verrouillé et qu'il n'a pas encore été déverrouillé
+                            if (item && !item.Owned) {
+                                // Si un élément était déjà déverrouillé, le remettre à son état de verrouillage
+                                if (lastUnlockedItem) {
+                                    lastUnlockedItem.src = "../img/mcc/cos/invs/lock.png";  // Retour à l'état de verrouillage
+                                }
+        
+                                // Mettre l'image actuelle à son état déverrouillé
+                                img.src = `${basePath}${item.Name}.png`;  // Afficher l'image de l'item
+                                img.onerror = function () {
+                                    this.src = `${basePath}NoTexture.png`;  // Image de remplacement si erreur
+                                };
+        
+                                // Mettre à jour le dernier élément déverrouillé
+                                lastUnlockedItem = img;
+                            }
+                        });
+        
                         itemDiv.appendChild(img);
                         row.appendChild(itemDiv);
                     });
-
+        
                     // Ajouter des cases vides si la page a moins de 35 éléments
                     while (pageItems.length < pageSize) {
                         if (pageItems.length % 7 === 0) {
@@ -812,18 +834,18 @@
                             row.classList.add("line");
                             container.appendChild(row);
                         }
-
+        
                         let emptyDiv = document.createElement("div");
                         emptyDiv.classList.add("inv-case2");
                         row.appendChild(emptyDiv);
                         pageItems.push(null);
                     }
-
+        
                     // Mettre à jour les flèches
                     document.getElementById(arrowLeftId).src = currentPage > 0 
                         ? "../img/mcc/utilities/arrow-left.png" 
                         : "../img/mcc/utilities/arrow-left-off.png";
-
+        
                     document.getElementById(arrowRightId).src = currentPage < totalPages - 1 
                         ? "../img/mcc/utilities/arrow-right.png" 
                         : "../img/mcc/utilities/arrow-right-off.png";
@@ -837,40 +859,40 @@
                         }
                     });
                 }
-
+        
                 document.getElementById(arrowLeftId).addEventListener("click", () => {
                     if (currentPage > 0) {
                         currentPage--;
                         updateDisplay();
                     }
                 });
-
+        
                 document.getElementById(arrowRightId).addEventListener("click", () => {
                     if (currentPage < totalPages - 1) {
                         currentPage++;
                         updateDisplay();
                     }
                 });
-
+        
                 updateDisplay();
             }
-
+        
             // Initialiser l'affichage avec Auras
-            let auras = {{ .Auras }};  // Liste des auras envoyée par Go
+            let auras = {{ .Auras }};
             displayItems(auras, "auras-container", "arrow-left-auras", "arrow-right-auras");
-
+        
             // Initialiser l'affichage avec Hats
-            let hats = {{ .Hats }};  // Liste des hats envoyée par Go
+            let hats = {{ .Hats }};
             displayItems(hats, "hats-container", "arrow-left-hats", "arrow-right-hats");
-
+        
             // Initialiser l'affichage avec Accessories
-            let accessories = {{ .Accessories }};  // Liste des accessoires envoyée par Go
+            let accessories = {{ .Accessories }};
             displayItems(accessories, "accessories-container", "arrow-left-accessories", "arrow-right-accessories");
-
+        
             // Initialiser l'affichage avec Trails
-            let trails = {{ .Trails }};  // Liste des trails envoyée par Go
+            let trails = {{ .Trails }};
             displayItems(trails, "trails-container", "arrow-left-trails", "arrow-right-trails");
-        </script>                           
+        </script>                                         
         <script>
             function redirectToRankPage(rankPage) {
                 window.location.href = "/classement/" + rankPage;
