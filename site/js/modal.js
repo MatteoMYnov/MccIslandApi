@@ -479,6 +479,7 @@ function openModal(event) {
             imgElement.alt = image.Alt || "Image";
             imgElement.title = image.Alt || "Image";
             imgElement.className = "modal-image-item";
+            imgElement.draggable = "false"
             modalImagesContainer.appendChild(imgElement);
         });
     } else {

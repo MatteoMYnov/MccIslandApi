@@ -714,14 +714,14 @@
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="../img/capes/NoTexture.png" alt="Image" class="modal-image no-select">
+                        <img src="../img/capes/NoTexture.png" alt="Image" class="modal-image no-select" draggable="false">
                     </div>
                     <div class="modal-body">
                         <p class="modal-name">Name PlaceHolder</p>
                         <p class="modal-date">Date PlaceHolder</p>
                         <p class="modal-desc">Description PlaceHolder</p>
                         <div class="modal-images no-select" style="display: block;">
-                            <img src="../img/capes/NoTexture.png" title="Default Title" alt="Default Alt" class="modal-image-item no-select" id="modalImage1">
+                            <img src="../img/capes/NoTexture.png" title="Default Title" alt="Default Alt" class="modal-image-item no-select" id="modalImage1" draggable="false">
                         </div>
                     </div>
                 </div>
@@ -797,6 +797,7 @@
                             };
                         } else {
                             img.src = "../img/mcc/cos/invs/lock.png";
+                            img.classList.add("cursor");
                         }
         
                         img.setAttribute("data-tippy-content", tooltipContent);
@@ -841,6 +842,21 @@
                         emptyDiv.classList.add("inv-case2");
                         row.appendChild(emptyDiv);
                         pageItems.push(null);
+                    }
+
+                    let leftArrow = document.getElementById(arrowLeftId);
+                    let rightArrow = document.getElementById(arrowRightId);
+            
+                    if (currentPage > 0) {
+                        leftArrow.classList.add("cursor");
+                    } else {
+                        leftArrow.classList.remove("cursor");
+                    }
+            
+                    if (currentPage < totalPages - 1) {
+                        rightArrow.classList.add("cursor");
+                    } else {
+                        rightArrow.classList.remove("cursor");
                     }
         
                     document.getElementById(arrowLeftId).src = currentPage > 0 
