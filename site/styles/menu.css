@@ -156,11 +156,12 @@ main {
     width: 100%;
     max-width: 600px;
     flex-shrink: 0;
-    background-color: #323232;
-    border-radius: 15px;
+    background-color: var(--main-gray);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
     overflow: hidden;
     color: #fff;
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
+    border: 0.125rem solid var(--main-black)
 }
 
 /* Player-Card */
@@ -169,10 +170,14 @@ main {
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    padding: 20px;
-    position: relative;
+    padding: 1.5rem;
+    border: 0.125rem solid var(--main-black);
     text-align: center;
     margin-bottom: 50px;
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
+    background-color: var(--main-dark-gray);
+    position: relative;
+    text-align: center;
     z-index: 2
 }
 
@@ -242,11 +247,12 @@ main {
 }
 
 .minecraftstats-card .stats-header {
-    background-color: #292929;
+    background-color: var(--main-dark-gray);
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
 }
 
 .minecraftstats-card .stats-header .minecraft-icon {
@@ -264,28 +270,37 @@ main {
 
 .minecraftstats-card .stats-body {
     display: flex;
+}
+
+.cape-hole {
+    border: .125rem solid var(--main-black);
+    background: var(--hole-gray);
+    box-shadow: inset 0 .375rem 0 0 rgba(0, 0, 0, .5);
+    margin: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    padding: 10px;
+    padding: 15px
 }
 /* Badge Card */
 .badge-card {
     position: absolute;
-    top: calc(285px);
+    top: 297px;
     left: calc(50% + 320px);
-    background-color: #323232;
-    border-radius: 15px;
     width: 300px;
     color: #fff;
 }
 
 .badge-card .stats-header {
-    background-color: #292929;
+    background-color: var(--main-dark-gray);
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
 }
 
 .badge-card .stats-header .badge-icon {
@@ -337,7 +352,7 @@ main {
 }
 /* Capes et leurs affichage*/
 .cape-container {
-    width: calc(70% / 6 - 10px);
+    width: calc(90% / 5 - 30px);
     height: auto;
     object-fit: contain;
     border-radius: 5px;
@@ -390,27 +405,27 @@ main {
 }
 
 .legendary-cape:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     box-shadow: 0 0 10px 2px #ffbf00;
 }
 
 .special-cape:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     box-shadow: 0 0 10px 2px #9f00e9;
 }
 
 .rare-cape:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     box-shadow: 0 0 10px 2px #007ed2;
 }
 
 .common-cape:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     box-shadow: 0 0 10px 2px gray;
 }
 
 .optifine-cape:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     box-shadow: 0 0 10px 2px #ff0000;
 }
 
@@ -448,11 +463,12 @@ main {
 }
 
 .hypixelstats-card .stats-header {
-    background-color: #292929;
+    background-color: var(--main-dark-gray);
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
 }
 
 .hypixelstats-card .stats-header .hypixel-icon {
@@ -487,11 +503,12 @@ main {
 }
 
 .mccstats-card .stats-header {
-    background-color: #292929;
+    background-color: var(--main-dark-gray);
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
 }
 
 .mccstats-card .stats-header .mcc-icon {
@@ -681,7 +698,7 @@ body.modal-open {
 .mcc-case {
     position: relative; /* Assure que l'en-tête est positionné par rapport à la case */
     padding-top: 40px; /* Ajoute un padding en haut pour éviter que le contenu ne recouvre le header */
-    border: 2px solid #282828; /* Couleur de la bordure */
+    border: 2px solid var(--main-black);
     border-radius: 10px; /* Bordure arrondie */
     padding: 10px; /* Ajoute un peu de marge interne */
     margin: 5px; /* Augmente l'espacement autour de chaque case */
@@ -693,6 +710,7 @@ body.modal-open {
     gap: 10px;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .mcc-case2, .mcc-case3 {
@@ -701,6 +719,8 @@ body.modal-open {
     align-items: center;
     width: 50%;
     padding: 15px;
+    background-color: var(--hole-gray);
+    box-shadow: inset 0 .375rem 0 0 rgba(0, 0, 0, .5);
 }
 
 .mcc-list-item {
@@ -768,7 +788,7 @@ body.modal-open {
 
 .mcc-futurcrownlevel {
     font-size: 15px;
-    color: #777 !important;
+    color: var(--text-grey-2) !important;
 }
 
 .mcc-crownbar {
@@ -776,7 +796,6 @@ body.modal-open {
     height: 20px;
     appearance: none;
     border-radius: 10px;
-    background-color: #444;
     margin-bottom: -5px;
 }
 
@@ -785,88 +804,74 @@ body.modal-open {
 }
 
 .mcc-crownbar::-webkit-progress-bar {
-    background-color: #444;
+    background-color: var(--hole-gray);
     border-radius: 10px;
 }
 
 .mcc-crownbar::-webkit-progress-value{
-    background-color: #525252;
+    background-color: var(--crown-level-0);
     border-radius: 10px;
 }
 
 .mcc-crownbar::-moz-progress-bar{
-    background-color: #525252;
+    background-color: var(--crown-level-0);
     border-radius: 10px;
 }
 
 .mcc-crownbar.mcc-crown1::-webkit-progress-value {
-    background-color: #adadad;
-    border-radius: 10px;
+    background-color: var(--crown-level-1);
 }
 
 .mcc-crownbar.mcc-crown1::-moz-progress-bar {
-    background-color: #adadad;
-    border-radius: 10px;
+    background-color: var(--crown-level-1);
 }
 
 .mcc-crownbar.mcc-crown2::-webkit-progress-value {
-    background-color: #4caf50;
-    border-radius: 10px;
+    background-color: var(--crown-level-2);
 }
 
 .mcc-crownbar.mcc-crown2::-moz-progress-bar {
-    background-color: #4caf50;
-    border-radius: 10px;
+    background-color: var(--crown-level-2);
 }
 
 .mcc-crownbar.mcc-crown3::-webkit-progress-value {
-    background-color: #3b60c7;
-    border-radius: 10px;
+    background-color: var(--crown-level-3);
 }
 
 .mcc-crownbar.mcc-crown3::-moz-progress-bar {
-    background-color: #3b60c7;
-    border-radius: 10px;
+    background-color: var(--crown-level-3);
 }
 
 .mcc-crownbar.mcc-crown4::-webkit-progress-value {
-    background-color: #833bc7;
-    border-radius: 10px;
+    background-color: var(--crown-level-4);
 }
 
 .mcc-crownbar.mcc-crown4::-moz-progress-bar {
-    background-color: #833bc7;
-    border-radius: 10px;
+    background-color: var(--crown-level-4);
 }
 
 .mcc-crownbar.mcc-crown5::-webkit-progress-value {
-    background-color: #d18410;
-    border-radius: 10px;
+    background-color: var(--crown-level-5);
 }
 
 .mcc-crownbar.mcc-crown5::-moz-progress-bar {
-    background-color: #d18410;
-    border-radius: 10px;
+    background-color: var(--crown-level-5);
 }
 
 .mcc-crownbar.mcc-crown6::-webkit-progress-value {
-    background-color: #9b1b1b;
-    border-radius: 10px;
+    background-color: var(--crown-level-6);
 }
 
 .mcc-crownbar.mcc-crown6::-moz-progress-bar {
-    background-color: #9b1b1b;
-    border-radius: 10px;
+    background-color: var(--crown-level-6);
 }
 
 .mcc-crownbar.mcc-crown7::-webkit-progress-value {
-    background-color: #1ab4cf;
-    border-radius: 10px;
+    background-color: var(--crown-level-7);
 }
 
 .mcc-crownbar.mcc-crown7::-moz-progress-bar {
-    background-color: #1ab4cf;
-    border-radius: 10px;
+    background-color: var(--crown-level-7);
 }
 
 .mcc-pourcentprogress {
@@ -879,7 +884,7 @@ body.modal-open {
 
 .mcc-crownprogress {
     font-size: 12px;
-    color: #999 !important;
+    color: var(--text-grey-2) !important;
     margin-top: 10px; /* Espace au-dessus du texte */
     text-align: center;
     margin-top: -10px;
@@ -900,8 +905,8 @@ body.modal-open {
 
 .roll-card {
     width: 99%;
-    background-color: #292929;
-    border: 2px solid #292929; /* Ajout de la bordure */
+    background-color: var(--main-dark-gray);
+    border: 2px solid var(--main-black);
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 0px; /* Espacement entre les cartes */
@@ -913,7 +918,7 @@ body.modal-open {
     align-items: center;
     cursor: pointer;
     padding: 15px;
-    background-color: #292929;
+    background-color: var(--main-dark-gray);
 }
 
 .roll-header h2 {
@@ -935,20 +940,37 @@ body.modal-open {
     border-radius: 0 0 10px 10px;
     max-height: 0px;
     overflow: hidden;
-    background-color: #323232;
+    background-color: var(--main-mid-gray);
     padding: 0 15px;
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.3) inset;
     transition: max-height 0.3s ease-in-out;
 }
 
 .friend-card {
+    position: relative; /* Nécessaire pour le placement de ::before */
+    box-shadow: inset 0 -0.3rem 0 0 rgba(0, 0, 0, 0.25); /* Ombre interne en bas */
     display: flex;
     align-items: center;
-    background-color: #292929;
-    border-radius: 10px;
-    padding: 7px;
-    flex: 1 1 calc(33% - 10px); /* Chaque carte prendra un tiers de la largeur disponible, avec une petite marge */
-    box-sizing: border-box; /* Inclut les paddings et les bordures dans la taille */
-    transition: background-color 0.3s, filter 0.3s; /* Transition pour les changements de couleur et d'effet */
+    background-color: var(--main-dark-gray);
+    border: 2px solid var(--main-black);
+    border-radius: 5px;
+    padding: 5px;
+    padding-bottom: 8px;
+    flex: 1 1 calc(33% - 10px);
+    box-sizing: border-box;
+    transition: background-color 0.3s, filter 0.3s;
+}
+
+.friend-card::before {
+    content: ""; /* Élément pseudo pour la bordure */
+    position: absolute;
+    top: 2px; /* Ajuste la position pour ne pas toucher l'outline */
+    left: 2px;
+    right: 2px;
+    height: 4px; /* Épaisseur de la bordure */
+    background: rgba(255, 255, 255, 0.01); /* Couleur plus claire */
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .friend-info {
@@ -1165,4 +1187,24 @@ body.modal-open {
 
 .color-white {
     color: white !important;
+}
+
+:root {
+    --main-dark-gray: #292929;
+    --main-gray: #3D3938;
+    --main-mid-gray: #333131;
+    --main-black: #171615;
+    --hole-gray: #262423;
+    --abs-white: #fff;
+    --text-grey-1: #D0C5C0;
+    --text-grey-2: #C1B8B4;
+
+    --crown-level-0: #525252;
+    --crown-level-1: #ADADAD;
+    --crown-level-2: #4CAF50;
+    --crown-level-3: #3B60C7;
+    --crown-level-4: #833BC7;
+    --crown-level-5: #D18410;
+    --crown-level-6: #9B1B1B;
+    --crown-level-7: #1AB4CF;
 }
