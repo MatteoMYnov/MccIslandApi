@@ -7624,6 +7624,13 @@
             "badge": ""
         },
         {
+            "uuid": "bffb1b32-55e3-4c03-a006-e602f06cffb3",
+            "capes": 3,
+            "score": 3,
+            "actualname": "OhMatronux",
+            "badge": "all-events"
+        },
+        {
             "uuid": "047bcb7f-d352-411d-be68-0c449b33d028",
             "capes": 3,
             "score": 2,
@@ -7831,13 +7838,6 @@
             "capes": 2,
             "score": 2,
             "actualname": "Font",
-            "badge": "all-events"
-        },
-        {
-            "uuid": "bffb1b32-55e3-4c03-a006-e602f06cffb3",
-            "capes": 2,
-            "score": 2,
-            "actualname": "OhMatronux",
             "badge": "all-events"
         },
         {
