@@ -16,7 +16,7 @@
                 <ul>
                     <li>
                         <form action="/menu" method="get" class="input-group">
-                            <img src="../img/utilities/refresh.png" data-tippy-content="Random Player" class="refresh no-select cursor" onclick="refreshSearch()">
+                            <img src="../img/utilities/refresh.png" data-tippy-content="Random Player" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
                             <input type="text" name="q" placeholder="Find Player" class="find-player" id="playerInput" required style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">
                             <button class="show-button cursor" type="submit" style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">Show</button>
                         </form>
@@ -31,10 +31,10 @@
                 <!-- Player Card -->
                 <div class="player-card" id="playerCard">
                     <div class="profile-info">
-                        <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image no-select">
+                        <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image no-select" draggable="false">
                         <p id="playerName" class="{{.PlayerClass}}">{{.Name}}</p>
                         {{if .BackgroundUUID}}
-                            <img src="../img/mcc/utilities/theme.png" alt="Player Using Theme" class="theme-image no-select" data-tippy-content="Ce Joueur a demandé au responsable du site d'avoir un thème custom" data-theme="theme">
+                            <img src="../img/mcc/utilities/theme.png" alt="Player Using Theme" class="theme-image no-select" data-tippy-content="Ce Joueur a demandé au responsable du site d'avoir un thème custom" data-theme="theme" draggable="false">
                         {{end}}
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                                 <span class="rank-link cursor" onclick="redirectToRankPage('{{.PlayerRankPage}}')">#{{.PlayerRank}}</span>
                             {{end}}
                         </p>                            
-                        <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon">
+                        <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon" draggable="false">
                         <h2>Minecraft Capes</h2>
                     </div>  
                     <div class="stats-body">
@@ -56,7 +56,7 @@
                             <div class="cape-hole">
                                 {{range .ImageURLs}}
                                     <div class="cape-container">
-                                        <img src="{{.URL}}" onerror="this.onerror=null; this.src='../img/capes/NoTexture.png';" alt="Cape Image" class="cape-image no-select cursor {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}">
+                                        <img src="{{.URL}}" onerror="this.onerror=null; this.src='../img/capes/NoTexture.png';" alt="Cape Image" class="cape-image no-select cursor {{.Class}}" data-id="using-modal" data-name="{{.CapeName}}" draggable="false">
                                         <p class="cape-title mc-font">{{.Title}}</p>
                                     </div>
                                 {{end}}
@@ -70,36 +70,36 @@
                 {{if .BadgeURLs}}
                 <div class="badge-card" id="badgeCard">
                     <div class="stats-header">
-                        <img src="../img/utilities/badgesicon.png" alt="Badge Icon" class="badge-icon">
+                        <img src="../img/utilities/badgesicon.png" alt="Badge Icon" class="badge-icon" draggable="false">
                         <h2>Badges</h2>
                     </div>
                     <div class="stats-body">
                         {{range .BadgeURLs}}
-                            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image cursor no-select {{.Class}}" data-id="using-modal {{.BadgeName}}">
+                            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image cursor no-select {{.Class}}" data-id="using-modal {{.BadgeName}}" draggable="false">
                         {{end}}
                     </div>
                 </div>
                 {{end}}
                 <div class="skin-3d no-select" id="PlayerSkin">
                     <div class="stats-header">
-                        <img src="https://nmsr.nickac.dev/fullbody/{{.Name}}" style="width: 350px; height: auto;">
+                        <img src="https://nmsr.nickac.dev/fullbody/{{.Name}}" style="width: 350px; height: auto;" draggable="false">
                     </div>
                 </div>
                 <!-- MCC Stats Card -->
                 <div class="mccstats-card" id="mccStatsCard">
                     <div class="stats-header">
-                        <img src="../img/utilities/mccicon.png" alt="MCC Icon" class="mcc-icon">
+                        <img src="../img/utilities/mccicon.png" alt="MCC Icon" class="mcc-icon" draggable="false">
                         <h2>MCC Island Stats</h2>
-                        <img src="../img/utilities/i.png" data-tippy-content="Api Informations" class="infos no-select cursor" data-id="using-modal" data-name="mcc-infos">
+                        <img src="../img/utilities/i.png" data-tippy-content="Api Informations" class="infos no-select cursor" data-id="using-modal" data-name="mcc-infos" draggable="false">
                     </div>
                     <div class="stats-body">
                         <div class="mcc-case mcc-case1">
                             <div class="mcc-header">
-                                <img class="mcc-image mcc-rank no-select" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}{{else}}PLAYER{{end}}.png" data-tippy-content="{{if .MccRank}}{{.MccRank}}{{else}}PLAYER{{end}}">
+                                <img class="mcc-image mcc-rank no-select" src="../img/mcc/ranks/{{if .MccRank}}{{.MccRank}}{{else}}PLAYER{{end}}.png" data-tippy-content="{{if .MccRank}}{{.MccRank}}{{else}}PLAYER{{end}}" draggable="false">
                                 <p class="mcc-playername mc-font">{{.Name}}</p>
                             </div>
                             <div class="mcc-image mcc-crown">
-                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}{{else}}0{{end}}.png" data-tippy-content="Crown Level">
+                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}{{else}}0{{end}}.png" data-tippy-content="Crown Level" draggable="false">
                                 <p class="mcc-actualcrownlevel mc-font">{{.CrownLevel}}</p>
                                 <!-- Progress Bar -->
                                 <progress class="mcc-crownbar mcc-crown{{.Evolution}}" value="{{.CrownObtained}}" max="{{.CrownObtainable}}"></progress>
@@ -109,7 +109,7 @@
                                 <p class="mcc-crownprogress mc-font">Progress: </p><p class="mcc-crownprogresspourcent mc-font">{{.CrownPourcentage}}%</p><p class="mcc-crownprogress mc-font"> ({{.CrownObtained}}/{{.CrownObtainable}})</p>
                             </div>
                             <div class="mcc-image mcc-crown">
-                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}{{else}}0{{end}}.png" data-tippy-content="Fishing Level">
+                                <img class="mcc-actualcrown no-select" src="../img/mcc/crowns/fishing{{if .FishingEvolution}}{{.FishingEvolution}}{{else}}0{{end}}.png" data-tippy-content="Fishing Level" draggable="false">
                                 <p class="mcc-actualcrownlevel mc-font">{{.FishingLevel}}</p>
                                 <!-- Progress Bar -->
                                 <progress class="mcc-crownbar mcc-crown{{.FishingEvolution}}" value="{{.FishingObtained}}" max="{{.FishingObtainable}}"></progress>
@@ -123,50 +123,50 @@
                             <div class="mcc-case mcc-case2">
                                 <h3>Wallet</h3>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/wallet/coins.png" data-tippy-content="Coins">
+                                    <img class="no-select" src="../img/mcc/wallet/coins.png" data-tippy-content="Coins" draggable="false">
                                     <p class="text">{{.CurrencyCoins}}</p>
                                 </div>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/wallet/silver.png " data-tippy-content="Silver">
+                                    <img class="no-select" src="../img/mcc/wallet/silver.png " data-tippy-content="Silver" draggable="false">
                                     <p class="text">{{.CurrencySilver}}</p>
                                 </div>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/wallet/material_dust.png" data-tippy-content="Dust">
+                                    <img class="no-select" src="../img/mcc/wallet/material_dust.png" data-tippy-content="Dust" draggable="false">
                                     <p class="text">{{.CurrencyMaterialDust}}</p>
                                 </div>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/wallet/royal_reputation.png" data-tippy-content="Royal Reputation">
+                                    <img class="no-select" src="../img/mcc/wallet/royal_reputation.png" data-tippy-content="Royal Reputation" draggable="false">
                                     <p class="text">{{.CurrencyRoyalRep}}</p>
                                 </div>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/wallet/anglr_token.png" data-tippy-content="Angler Token">
+                                    <img class="no-select" src="../img/mcc/wallet/anglr_token.png" data-tippy-content="Angler Token" draggable="false">
                                     <p class="text">{{.CurrencyAnglrTokens}}</p>
                                 </div>
                             </div>
                             <div class="mcc-case mcc-case3">
                                 <h3>Trophies</h3>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/trophies/total_trophies.png" data-tippy-content="Total Trophies">
+                                    <img class="no-select" src="../img/mcc/trophies/total_trophies.png" data-tippy-content="Total Trophies" draggable="false">
                                     <p class="text">{{.TotalTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxTotalTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/trophies/skill_trophies.png" data-tippy-content="Skill Trophies">
+                                    <img class="no-select" src="../img/mcc/trophies/skill_trophies.png" data-tippy-content="Skill Trophies" draggable="false">
                                     <p class="text">{{.SKILLTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxSKILLTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/trophies/style_trophies.png" data-tippy-content="Style Trophies">
+                                    <img class="no-select" src="../img/mcc/trophies/style_trophies.png" data-tippy-content="Style Trophies" draggable="false">
                                     <p class="text">{{.STYLETrophies}}</p>
                                     <p class="text-gray"> /{{.MaxSTYLETrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/trophies/angler_trophies.png" data-tippy-content="Angler Trophies">
+                                    <img class="no-select" src="../img/mcc/trophies/angler_trophies.png" data-tippy-content="Angler Trophies" draggable="false">
                                     <p class="text">{{.ANGLERTrophies}}</p>
                                     <p class="text-gray"> /{{.MaxANGLERTrophies}}</p>
                                 </div>
                                 <div class="mcc-list-item mc-font">
-                                    <img class="no-select" src="../img/mcc/trophies/bonus_trophies.png" data-tippy-content="Bonus Trophies">
+                                    <img class="no-select" src="../img/mcc/trophies/bonus_trophies.png" data-tippy-content="Bonus Trophies" draggable="false">
                                     <p class="text">{{.BonusTrophies}}</p>
                                 </div>
                             </div>
@@ -175,9 +175,9 @@
                             <!-- Friends Roll -->
                             <div class="roll-card friends-card" id="friendsCard">
                                 <div class="roll-header friends-header cursor" onclick="toggleRoll('friendsBody', 'friends-arrow')">
-                                    <img src="../img/mcc/utilities/friends.png" alt="Friends Icon" class="roll-icon no-select">
+                                    <img src="../img/mcc/utilities/friends.png" alt="Friends Icon" class="roll-icon no-select" draggable="false">
                                     <h2>Friends</h2>
-                                    <img id="friends-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select">
+                                    <img id="friends-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select" draggable="false">
                                 </div>
                                 <div class="roll-body" id="friendsBody">
                                     <div class="interfriends-body">
@@ -186,11 +186,11 @@
                                                 <div class="friend-card cursor" data-playername="{{.Username}}" onclick="searchPlayer(this)">
                                                     <div class="friend-info">
                                                         <div class="friend-head">
-                                                            <img src="https://mc-heads.net/head/{{.Username}}" class="friends-icon no-select">
+                                                            <img src="https://mc-heads.net/head/{{.Username}}" class="friends-icon no-select" draggable="false">
                                                             <div class="online-status {{if .Online}}online{{else}}offline{{end}}" data-tippy-content="{{if .Online}}Online{{else}}Offline{{end}}"></div>
                                                         </div>
-                                                        <img src="../img/mcc/crowns/{{if .CrownLevel.Evolution}}{{.CrownLevel.Evolution}}{{else}}0{{end}}.png" class="friends-icon no-select" data-tippy-content="{{.CrownLevel.Level}}">
-                                                        <img src="../img/mcc/ranks/{{if .Ranks}}{{.Ranks}}{{else}}PLAYER{{end}}.png" class="friends-icon no-select" data-tippy-content="{{if .Ranks}}{{.Ranks}}{{else}}PLAYER{{end}}">
+                                                        <img src="../img/mcc/crowns/{{if .CrownLevel.Evolution}}{{.CrownLevel.Evolution}}{{else}}0{{end}}.png" class="friends-icon no-select" data-tippy-content="{{.CrownLevel.Level}}" draggable="false">
+                                                        <img src="../img/mcc/ranks/{{if .Ranks}}{{.Ranks}}{{else}}PLAYER{{end}}.png" class="friends-icon no-select" data-tippy-content="{{if .Ranks}}{{.Ranks}}{{else}}PLAYER{{end}}" draggable="false">
                                                         <p class="">{{.Username}}</p>
                                                     </div>
                                                 </div>
@@ -204,16 +204,16 @@
                             <!-- MccGames Roll-->
                             <div class="roll-card mccgames-card" id="MccGamesCard">
                                 <div class="roll-header rollstat-header cursor" onclick="toggleRoll('MccGamesBody', 'mccgames-arrow')">
-                                    <img src="../img/mcc/trophies/total_trophies.png" alt="MccGames Icon" class="roll-icon no-select">
+                                    <img src="../img/mcc/trophies/total_trophies.png" alt="MccGames Icon" class="roll-icon no-select" draggable="false">
                                     <h2>Stats</h2>
-                                    <img id="mccgames-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select">
+                                    <img id="mccgames-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select" draggable="false">
                                 </div>
                                 <div class="roll-body" id="MccGamesBody">
                                     {{if ne .GameStats.TotalGames 0}} <!-- Teste si TotalGames est différent de 0 -->
                                         <div class="upcath-body">
                                             <div class="subcath-body">
                                                 <div class="subcath-header mc-font">
-                                                    <img src="../img/mcc/games/games.png" class="roll-icon no-select">
+                                                    <img src="../img/mcc/games/games.png" class="roll-icon no-select" draggable="false">
                                                     <p style="color: white;">General Stats</p>
                                                 </div> 
                                                 <div class="general-stats">
@@ -222,31 +222,31 @@
                                                         <p style="color: white;">Games Played</p>
                                                         <div class="graph-games-played">
                                                             <div class="line-content">
-                                                                <img src="../img/mcc/games/sky-battle.png" class="no-select" data-tippy-content="Sky Battle">
+                                                                <img src="../img/mcc/games/sky-battle.png" class="no-select" data-tippy-content="Sky Battle" draggable="false">
                                                                 <p class="graph-numbers-content">- {{.GameStats.SBGames}}</p>
                                                             </div>
                                                             <div class="line-content">
-                                                                <img src="../img/mcc/games/battle-box.png" class="no-select" data-tippy-content="Battle Box">
+                                                                <img src="../img/mcc/games/battle-box.png" class="no-select" data-tippy-content="Battle Box" draggable="false">
                                                                 <p class="graph-numbers-content">- {{.GameStats.BBGames}}</p>
                                                             </div>
                                                             <div class="line-content">
-                                                                <img src="../img/mcc/games/tgttos.png" class="no-select" data-tippy-content="TGTTOS">
+                                                                <img src="../img/mcc/games/tgttos.png" class="no-select" data-tippy-content="TGTTOS" draggable="false">
                                                                 <p class="graph-numbers-content">- {{.GameStats.TGTTOSGames}}</p>
                                                             </div>
                                                             <div class="line-content">
-                                                                <img src="../img/mcc/games/hole-in-the-wall.png" class="no-select" data-tippy-content="Hole in the Wall">
+                                                                <img src="../img/mcc/games/hole-in-the-wall.png" class="no-select" data-tippy-content="Hole in the Wall" draggable="false">
                                                                 <p class="graph-numbers-content">- {{.GameStats.HITWGames}}</p>
                                                             </div>
                                                             <div class="line-content">
-                                                                <img src="../img/mcc/games/rocket-spleef.png" class="no-select" data-tippy-content="Rocket Spleef Rush">
+                                                                <img src="../img/mcc/games/rocket-spleef.png" class="no-select" data-tippy-content="Rocket Spleef Rush" draggable="false">
                                                                 <p class="graph-numbers-content">- {{.GameStats.RSGames}}</p>
                                                             </div>
                                                             <div class="line-content">
-                                                                <img src="../img/mcc/games/dynaball.png" class="no-select" data-tippy-content="Dynaball">
+                                                                <img src="../img/mcc/games/dynaball.png" class="no-select" data-tippy-content="Dynaball" draggable="false">
                                                                 <p class="graph-numbers-content">- {{.GameStats.DBGames}}</p>
                                                             </div>
                                                             <div class="line-content">
-                                                                <img src="../img/mcc/games/pws.png" class="no-select" data-tippy-content="Parkour Warrior Survivor">
+                                                                <img src="../img/mcc/games/pws.png" class="no-select" data-tippy-content="Parkour Warrior Survivor" draggable="false">
                                                                 <p class="graph-numbers-content">- {{.GameStats.PWSGames}}</p>
                                                             </div>
                                                         </div>
@@ -257,41 +257,41 @@
                                                 <div class="subcath-body2">
                                                     <div class="subcath-header mc-font">
                                                         <div class="subcath-header-content">
-                                                            <img src="../img/mcc/games/sky-battle.png" class="roll-icon no-select">
+                                                            <img src="../img/mcc/games/sky-battle.png" class="roll-icon no-select" draggable="false">
                                                             <p style="color: white;">Sky-Battle Stats</p>
                                                         </div>
                                                     </div>
                                                     <div class="general-stats">
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins" draggable="false">
                                                                 <p class="mc-font color-white">Wins: </p>
                                                                 <p class="mc-font">{{.GameStats.SB_Wins}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses" draggable="false">
                                                                 <p class="mc-font color-white">Loses: </p>
                                                                 <p class="mc-font">{{.GameStats.SB_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.SB_WLR 0.125}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.125">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.SB_WLR 0.125}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.125" draggable="false">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.SB_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills">
+                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills" draggable="false">
                                                                 <p class="mc-font color-white">Kills: </p>
                                                                 <p class="mc-font">{{.GameStats.SB_Kills}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths">
+                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths" draggable="false">
                                                                 <p class="mc-font color-white">Deaths: </p>
                                                                 <p class="mc-font">{{.GameStats.SB_Deaths}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.SB_KDR 0.9}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 0.9">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.SB_KDR 0.9}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 0.9" draggable="false">
                                                                 <p class="mc-font color-white">KDR: </p>
                                                                 <p class="mc-font">({{.GameStats.SB_KDR}})</p>
                                                             </div>
@@ -301,41 +301,41 @@
                                                 <div class="subcath-body2">
                                                     <div class="subcath-header mc-font">
                                                         <div class="subcath-header-content">
-                                                            <img src="../img/mcc/games/battle-box.png" class="roll-icon no-select">
+                                                            <img src="../img/mcc/games/battle-box.png" class="roll-icon no-select" draggable="false">
                                                             <p style="color: white;">Battle-Box Stats</p>
                                                         </div>
                                                     </div>
                                                     <div class="general-stats">
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins" draggable="false">
                                                                 <p class="mc-font color-white">Wins: </p>
                                                                 <p class="mc-font">{{.GameStats.BB_Wins}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses" draggable="false">
                                                                 <p class="mc-font color-white">Loses: </p>
                                                                 <p class="mc-font">{{.GameStats.BB_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.BB_WLR 0.125}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.125">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.BB_WLR 0.125}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.125" draggable="false">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.BB_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills">
+                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills" draggable="false">
                                                                 <p class="mc-font color-white">Kills: </p>
                                                                 <p class="mc-font">{{.GameStats.BB_Kills}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths">
+                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths" draggable="false">
                                                                 <p class="mc-font color-white">Deaths: </p>
                                                                 <p class="mc-font">{{.GameStats.BB_Deaths}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.BB_KDR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 1.0">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.BB_KDR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 1.0" draggable="false">
                                                                 <p class="mc-font color-white">KDR: </p>
                                                                 <p class="mc-font">({{.GameStats.BB_KDR}})</p>
                                                             </div>
@@ -345,41 +345,41 @@
                                                 <div class="subcath-body2">
                                                     <div class="subcath-header mc-font">
                                                         <div class="subcath-header-content">
-                                                            <img src="../img/mcc/games/tgttos.png" class="roll-icon no-select">
+                                                            <img src="../img/mcc/games/tgttos.png" class="roll-icon no-select" draggable="false">
                                                             <p style="color: white;">TGTTOS Stats</p>
                                                         </div>
                                                     </div> 
                                                     <div class="general-stats">
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins" draggable="false">
                                                                 <p class="mc-font color-white">Wins: </p>
                                                                 <p class="mc-font">{{.GameStats.TGTTOS_Wins}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses" draggable="false">
                                                                 <p class="mc-font color-white">Loses: </p>
                                                                 <p class="mc-font">{{.GameStats.TGTTOS_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.TGTTOS_WLR 0.05}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.05">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.TGTTOS_WLR 0.05}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.05" draggable="false">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.TGTTOS_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/tgttos.png" class="no-select" data-tippy-content="Chickens Punched">
+                                                                <img src="../img/mcc/games/tgttos.png" class="no-select" data-tippy-content="Chickens Punched" draggable="false">
                                                                 <p class="mc-font color-white">Chicks: </p>
                                                                 <p class="mc-font">{{.GameStats.TGTTOS_Chicks}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/games.png" class="no-select" data-tippy-content="Games">
+                                                                <img src="../img/mcc/games/games.png" class="no-select" data-tippy-content="Games" draggable="false">
                                                                 <p class="mc-font color-white">Games: </p>
                                                                 <p class="mc-font">{{.GameStats.TGTTOSGames}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.TGTTOS_CGR 2.8}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Chicks per Game) Average - 2.8">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.TGTTOS_CGR 2.8}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Chicks per Game) Average - 2.8" draggable="false">
                                                                 <p class="mc-font color-white">CGR: </p>
                                                                 <p class="mc-font">({{.GameStats.TGTTOS_CGR}})</p>
                                                             </div>
@@ -389,41 +389,41 @@
                                                 <div class="subcath-body2">
                                                     <div class="subcath-header mc-font">
                                                         <div class="subcath-header-content">
-                                                            <img src="../img/mcc/games/hole-in-the-wall.png" class="roll-icon no-select">
+                                                            <img src="../img/mcc/games/hole-in-the-wall.png" class="roll-icon no-select" draggable="false">
                                                             <p style="color: white;">Hole-In-The-Wall Stats</p>
                                                         </div>
                                                     </div> 
                                                     <div class="general-stats">
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins" draggable="false">
                                                                 <p class="mc-font color-white">Wins: </p>
                                                                 <p class="mc-font">{{.GameStats.HITW_Wins}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses" draggable="false">
                                                                 <p class="mc-font color-white">Loses: </p>
                                                                 <p class="mc-font">{{.GameStats.HITW_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.HITW_WLR 0.1}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.1">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.HITW_WLR 0.1}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.1" draggable="false">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.HITW_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/hole-in-the-wall.png" class="no-select" data-tippy-content="Walls Dodged">
+                                                                <img src="../img/mcc/games/hole-in-the-wall.png" class="no-select" data-tippy-content="Walls Dodged" draggable="false">
                                                                 <p class="mc-font color-white">Walls: </p>
                                                                 <p class="mc-font">{{.GameStats.HITW_Wallsdodged}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/games.png" class="no-select" data-tippy-content="Games">
+                                                                <img src="../img/mcc/games/games.png" class="no-select" data-tippy-content="Games" draggable="false">
                                                                 <p class="mc-font color-white">Games: </p>
                                                                 <p class="mc-font">{{.GameStats.HITWGames}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.HITW_WGR 12.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wall per Game) Average - 12.0">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.HITW_WGR 12.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wall per Game) Average - 12.0" draggable="false">
                                                                 <p class="mc-font color-white">WGR: </p>
                                                                 <p class="mc-font">({{.GameStats.HITW_WGR}})</p>
                                                             </div>
@@ -433,41 +433,41 @@
                                                 <div class="subcath-body2">
                                                     <div class="subcath-header mc-font">
                                                         <div class="subcath-header-content">
-                                                            <img src="../img/mcc/games/rocket-spleef.png" class="roll-icon no-select">
+                                                            <img src="../img/mcc/games/rocket-spleef.png" class="roll-icon no-select" draggable="false">
                                                             <p style="color: white;">Rocket-Spleef-Rush Stats</p>
                                                         </div>
                                                     </div> 
                                                     <div class="general-stats">
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins" draggable="false">
                                                                 <p class="mc-font color-white">Wins: </p>
                                                                 <p class="mc-font">{{.GameStats.RS_Wins}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses" draggable="false">
                                                                 <p class="mc-font color-white">Loses: </p>
                                                                 <p class="mc-font">{{.GameStats.RS_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.RS_WLR 0.1}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.1">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.RS_WLR 0.1}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 0.1" draggable="false">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.RS_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills">
+                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills" draggable="false">
                                                                 <p class="mc-font color-white">Kills: </p>
                                                                 <p class="mc-font">{{.GameStats.RS_Kills}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths">
+                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths" draggable="false">
                                                                 <p class="mc-font color-white">Deaths: </p>
                                                                 <p class="mc-font">{{.GameStats.RS_Deaths}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.RS_KDR 0.5}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 0.5">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.RS_KDR 0.5}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 0.5" draggable="false">
                                                                 <p class="mc-font color-white">KDR: </p>
                                                                 <p class="mc-font">({{.GameStats.RS_KDR}})</p>
                                                             </div>
@@ -476,40 +476,40 @@
                                                 </div>
                                                 <div class="subcath-body2">
                                                     <div class="subcath-header mc-font">
-                                                        <img src="../img/mcc/games/dynaball.png" class="roll-icon no-select">
+                                                        <img src="../img/mcc/games/dynaball.png" class="roll-icon no-select" draggable="false">
                                                         <p style="color: white;">Dynaball Stats</p>
                                                     </div> 
                                                     <div class="general-stats">
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins">
+                                                                <img src="../img/mcc/games/stats/win.png" class="no-select" data-tippy-content="Wins" draggable="false">
                                                                 <p class="mc-font color-white">Wins: </p>
                                                                 <p class="mc-font">{{.GameStats.DB_Wins}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses">
+                                                                <img src="../img/mcc/games/stats/lose.png" class="no-select" data-tippy-content="Loses" draggable="false">
                                                                 <p class="mc-font color-white">Loses: </p>
                                                                 <p class="mc-font">{{.GameStats.DB_Loses}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.DB_WLR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 1.0">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.DB_WLR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Wins per Lose) Average - 1.0" draggable="false">
                                                                 <p class="mc-font color-white">WLR: </p>
                                                                 <p class="mc-font">({{.GameStats.DB_WLR}})</p>
                                                             </div>
                                                         </div>
                                                         <div class="subcath-case">
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills">
+                                                                <img src="../img/mcc/games/stats/kill.png" class="no-select" data-tippy-content="Kills" draggable="false">
                                                                 <p class="mc-font color-white">Kills: </p>
                                                                 <p class="mc-font">{{.GameStats.DB_Kills}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths">
+                                                                <img src="../img/mcc/games/stats/death.png" class="no-select" data-tippy-content="Deaths" draggable="false">
                                                                 <p class="mc-font color-white">Deaths: </p>
                                                                 <p class="mc-font">{{.GameStats.DB_Deaths}}</p>
                                                             </div>
                                                             <div class="line-content2">
-                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.DB_KDR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 1.0">
+                                                                <img src="../img/mcc/games/stats/{{if ge .GameStats.DB_KDR 1.0}}up{{else}}down{{end}}.png" class="no-select" data-tippy-content="(Kills per Death) Average - 1.0" draggable="false">
                                                                 <p class="mc-font color-white">KDR: </p>
                                                                 <p class="mc-font">({{.GameStats.DB_KDR}})</p>
                                                             </div>
@@ -526,172 +526,172 @@
                             <!-- Cosmetics Roll -->
                             <div class="roll-card cosmetics-card" id="CosmeticsCard">
                                 <div class="roll-header cosmetics-header cursor" onclick="toggleRoll('CosmeticsBody', 'cosmetics-arrow')">
-                                    <img src="../img/mcc/utilities/theme.png" alt="Cosmetics Icon" class="roll-icon no-select">
+                                    <img src="../img/mcc/utilities/theme.png" alt="Cosmetics Icon" class="roll-icon no-select" draggable="false">
                                     <h2>Cosmetics</h2>
                                     <img id="cosmetics-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select">
                                 </div>
                                 <div class="roll-body" id="CosmeticsBody">
                                     <div class="cos-selector">
                                         <button onclick="changeContent(this, 'equipped-content')" class="selected">
-                                            <img src="../img/mcc/cos/Equipped.png" alt="Equipped" class="no-select">
+                                            <img src="../img/mcc/cos/Equipped.png" alt="Equipped" class="no-select" draggable="false">
                                             <span class="cos-text mc-font">Equipped</span>
                                         </button>
                                         <button onclick="changeContent(this, 'hats-content')">
-                                            <img src="../img/mcc/cos/Hats.png" alt="Hats" class="no-select">
+                                            <img src="../img/mcc/cos/Hats.png" alt="Hats" class="no-select" draggable="false">
                                             <span class="cos-text mc-font">Hats</span>
                                         </button>
                                         <button onclick="changeContent(this, 'accessories-content')">
-                                            <img src="../img/mcc/cos/Accessories.png" alt="Accessories" class="no-select">
+                                            <img src="../img/mcc/cos/Accessories.png" alt="Accessories" class="no-select" draggable="false">
                                             <span class="cos-text mc-font">Accessories</span>
                                         </button>
                                         <button onclick="changeContent(this, 'auras-content')">
-                                            <img src="../img/mcc/cos/Auras.png" alt="Auras" class="no-select">
+                                            <img src="../img/mcc/cos/Auras.png" alt="Auras" class="no-select" draggable="false">
                                             <span class="cos-text mc-font">Auras</span>
                                         </button>
                                         <button onclick="changeContent(this, 'trails-content')">
-                                            <img src="../img/mcc/cos/Trails.png" alt="Trails" class="no-select">
+                                            <img src="../img/mcc/cos/Trails.png" alt="Trails" class="no-select" draggable="false">
                                             <span class="cos-text mc-font">Trails</span>
                                         </button>
                                         <button onclick="changeContent(this, 'backs-content')">
-                                            <img src="../img/mcc/cos/Backs.png" alt="Backs" class="no-select">
+                                            <img src="../img/mcc/cos/Backs.png" alt="Backs" class="no-select" draggable="false">
                                             <span class="cos-text mc-font">Cloaks</span>
                                         </button>
                                         <button onclick="changeContent(this, 'fishing-content')">
-                                            <img src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods" class="no-select">
+                                            <img src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods" class="no-select" draggable="false">
                                             <span class="cos-text mc-font">Fishing Rods</span>
                                         </button>
                                     </div>
                                     <div class="cos-display-box">
                                         <div id="equipped-content" class="cos-allcontents content active">
-                                            <img src="../img/mcc/cos/invs/Equipped.png" class="cos-case-header no-select">
+                                            <img src="../img/mcc/cos/invs/Equipped.png" class="cos-case-header no-select" draggable="false">
                                             <div class="cos-equipped-content">
                                                 <div class="equip-left equip-cases">
                                                     <div class="inv-case">
                                                         {{if .Equipped.Hats.Name}}
-                                                            <img src="../img/mcc/cos/hats/{{.Equipped.Hats.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/hats/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Hats.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Hats.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Hats.Rarity}}">
+                                                            <img src="../img/mcc/cos/hats/{{.Equipped.Hats.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/hats/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Hats.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Hats.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Hats.Rarity}}" draggable="false">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/hats/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/hats/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                         {{end}}
                                                     </div>                                                    
                                                     <div class="inv-case">
                                                         {{if .Equipped.Accessories.Name}}
-                                                            <img src="../img/mcc/cos/accessories/{{.Equipped.Accessories.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/accessories/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Accessories.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Accessories.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Accessories.Rarity}}">
+                                                            <img src="../img/mcc/cos/accessories/{{.Equipped.Accessories.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/accessories/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Accessories.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Accessories.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Accessories.Rarity}}" draggable="false">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/accessories/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/accessories/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                         {{end}}
                                                     </div>
                                                     <div class="inv-case">
                                                         {{if .Equipped.Auras.Name}}
-                                                            <img src="../img/mcc/cos/auras/{{.Equipped.Auras.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/auras/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Auras.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Auras.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/aura.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Auras.Rarity}}">
+                                                            <img src="../img/mcc/cos/auras/{{.Equipped.Auras.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/auras/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Auras.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Auras.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/aura.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Auras.Rarity}}" draggable="false">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/auras/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/auras/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                         {{end}}
                                                     </div>
                                                 </div>
                                                 <div class="equip-center equip-cases">
-                                                    <img src="../img/mcc/cos/invs/profile.png" class="cos-profile no-select">
-                                                    <img src="https://mc-heads.net/avatar/{{.Name}}" class="cos-head-overlay no-select" data-tippy-content="{{.Name}}">
-                                                    <img src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}{{else}}0{{end}}.png" class="cos-crown-overlay no-select" data-tippy-content="Level {{.CrownLevel}}">
+                                                    <img src="../img/mcc/cos/invs/profile.png" class="cos-profile no-select" draggable="false">
+                                                    <img src="https://mc-heads.net/avatar/{{.Name}}" class="cos-head-overlay no-select" data-tippy-content="{{.Name}}" draggable="false">
+                                                    <img src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}{{else}}0{{end}}.png" class="cos-crown-overlay no-select" data-tippy-content="Level {{.CrownLevel}}" draggable="false">
                                                 </div>
                                                 <div class="equip-right equip-cases">
                                                     <div class="inv-case">
                                                         {{if .Equipped.Trails.Name}}
-                                                            <img src="../img/mcc/cos/trails/{{.Equipped.Trails.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/trails/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Trails.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Trails.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Trails.Rarity}}">
+                                                            <img src="../img/mcc/cos/trails/{{.Equipped.Trails.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/trails/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Trails.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Trails.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Trails.Rarity}}" draggable="false">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/trails/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/trails/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                         {{end}}
                                                     </div>
                                                     <div class="inv-case">
                                                         {{if .Equipped.Backs.Name}}
-                                                            <img src="../img/mcc/cos/backs/{{.Equipped.Backs.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/backs/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Backs.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Backs.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/cloak.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Backs.Rarity}}">
+                                                            <img src="../img/mcc/cos/backs/{{.Equipped.Backs.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/backs/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Backs.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Backs.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/cloak.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Backs.Rarity}}" draggable="false">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/backs/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/backs/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                         {{end}}
                                                     </div>
                                                     <div class="inv-case">
                                                         {{if .Equipped.Rods.Name}}
-                                                            <img src="../img/mcc/cos/fishing_rod/{{.Equipped.Rods.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/fishing_rod/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Rods.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Rods.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/rod.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Rods.Rarity}}">
+                                                            <img src="../img/mcc/cos/fishing_rod/{{.Equipped.Rods.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/fishing_rod/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Rods.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Rods.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/rod.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Rods.Rarity}}" draggable="false">
                                                         {{else}}
-                                                            <img src="../img/mcc/cos/fishing_rod/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON">
+                                                            <img src="../img/mcc/cos/fishing_rod/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                         {{end}}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Equipped_Bottom.png" class="cos-case-downer no-select">
+                                            <img src="../img/mcc/cos/invs/Equipped_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                         </div>
                                         <div id="hats-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Hats.png" class="cos-case-header no-select">
+                                            <img src="../img/mcc/cos/invs/Hats.png" class="cos-case-header no-select" draggable="false">
                                             <div class="cos-inventory">
                                                 <div class="left">
-                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-hats">
+                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-hats" draggable="false">
                                                 </div>
                                                 <div class="mid" id="hats-container">
                                                     <!-- Les hats seront insérés ici via JS -->
                                                 </div>
                                                 <div class="right">
-                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-hats">
+                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-hats" draggable="false">
                                                 </div>
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Hats_Bottom.png" class="cos-case-downer no-select">
+                                            <img src="../img/mcc/cos/invs/Hats_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                         </div>
                                         <div id="accessories-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Accessories.png" class="cos-case-header no-select">
+                                            <img src="../img/mcc/cos/invs/Accessories.png" class="cos-case-header no-select" draggable="false">
                                             <div class="cos-inventory">
                                                 <div class="left">
-                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-accessories">
+                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-accessories" draggable="false">
                                                 </div>
                                                 <div class="mid" id="accessories-container">
                                                     <!-- Les accessories seront insérés ici via JS -->
                                                 </div>
                                                 <div class="right">
-                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-accessories">
+                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-accessories" draggable="false">
                                                 </div>
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Accessories_Bottom.png" class="cos-case-downer no-select">
+                                            <img src="../img/mcc/cos/invs/Accessories_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                         </div>
                                         <div id="auras-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Auras.png" class="cos-case-header no-select">
+                                            <img src="../img/mcc/cos/invs/Auras.png" class="cos-case-header no-select" draggable="false">
                                             <div class="cos-inventory">
                                                 <div class="left">
-                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-auras">
+                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-auras" draggable="false">
                                                 </div>
                                                 <div class="mid" id="auras-container">
                                                     <!-- Les auras seront insérées ici via JS -->
                                                 </div>
                                                 <div class="right">
-                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-auras">
+                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-auras" draggable="false">
                                                 </div>
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Auras_Bottom.png" class="cos-case-downer no-select">
+                                            <img src="../img/mcc/cos/invs/Auras_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                         </div>
                                         <div id="trails-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Trails.png" class="cos-case-header no-select">
+                                            <img src="../img/mcc/cos/invs/Trails.png" class="cos-case-header no-select" draggable="false">
                                             <div class="cos-inventory">
                                                 <div class="left">
-                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-trails">
+                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-trails" draggable="false">
                                                 </div>
                                                 <div class="mid" id="trails-container">
                                                     <!-- Les trails seront insérés ici via JS -->
                                                 </div>
                                                 <div class="right">
-                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-trails">
+                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-trails" draggable="false">
                                                 </div>
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Trails_Bottom.png" class="cos-case-downer no-select">
+                                            <img src="../img/mcc/cos/invs/Trails_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                         </div>                                                                               
                                         <div id="backs-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Backs.png" class="cos-case-header no-select">
+                                            <img src="../img/mcc/cos/invs/Backs.png" class="cos-case-header no-select" draggable="false">
                                             <h2>Cloaks</h2>
                                             <p>Comming Soon!</p>
                                             <p>(MCCIsland api not working yet)</p>
-                                            <img src="../img/mcc/cos/invs/Backs_Bottom.png" class="cos-case-downer no-select">
+                                            <img src="../img/mcc/cos/invs/Backs_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                         </div>
                                         <div id="fishing-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Fishing_Rods.png" class="cos-case-header no-select">
+                                            <img src="../img/mcc/cos/invs/Fishing_Rods.png" class="cos-case-header no-select" draggable="false">
                                             <h2>Rods</h2>
                                             <p>Comming Soon!</p>
                                             <p>(MCCIsland api not working yet)</p>
-                                            <img src="../img/mcc/cos/invs/Fishing_Rods_Bottom.png" class="cos-case-downer no-select">
+                                            <img src="../img/mcc/cos/invs/Fishing_Rods_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                         </div>
                                     </div>
                                 </div>                           
@@ -731,6 +731,7 @@
         <script src="../js/modal.js"></script>
         <script src="../js/cos.js"></script>
         <script src="../js/friends.js"></script>
+        <script src="../js/sounds.js"></script>
         <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
         <script src ="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
         <script src ="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
@@ -764,72 +765,62 @@
                         let img = document.createElement("img");
                         img.classList.add("inv-item", "no-select");
         
-                        // Ajuster le chemin en fonction du type de contenu (auras, hats, accessories, trails)
                         let basePath = "";
                         let tooltipContent = "";
                         let tooltipTheme = "";
-                        let itemType = ""; // Variable pour gérer le type d'objet
+                        let itemType = "";
         
                         if (containerId.toLowerCase() === "auras-container") {
-                            basePath = "../img/mcc/cos/auras/";  // Pour les auras
-                            itemType = "Auras"; // Type = Auras
+                            basePath = "../img/mcc/cos/auras/";
+                            itemType = "Auras";
                             tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/aura.png' height='17' class='pixelated'></div>`;
                         } else if (containerId.toLowerCase() === "hats-container") {
-                            basePath = "../img/mcc/cos/hats/";  // Pour les hats
-                            itemType = "Hats"; // Type = Hats
+                            basePath = "../img/mcc/cos/hats/";
+                            itemType = "Hats";
                             tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'></div>`;
                         } else if (containerId.toLowerCase() === "accessories-container") {
-                            basePath = "../img/mcc/cos/accessories/";  // Pour les accessoires
-                            itemType = "Accessories"; // Type = Accessories
+                            basePath = "../img/mcc/cos/accessories/";
+                            itemType = "Accessories";
                             tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'></div>`;
                         } else if (containerId.toLowerCase() === "trails-container") {
-                            basePath = "../img/mcc/cos/trails/";  // Pour les trails
-                            itemType = "Trails"; // Type = Trails
+                            basePath = "../img/mcc/cos/trails/";
+                            itemType = "Trails";
                             tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>`;
                         }
         
-                        // Définir le tooltip theme (basé sur la rareté)
                         tooltipTheme = item.Rarity;
         
-                        // Si l'élément est possédé, on met l'image correspondante, sinon on met l'image NoTexture.png
                         if (item && item.Owned) {
-                            img.src = `${basePath}${item.Name}.gif`;  // Utilisation du chemin dynamique
+                            img.src = `${basePath}${item.Name}.gif`;
                             img.onerror = function () {
-                                this.src = `${basePath}NoTexture.gif`;  // Image de remplacement en cas d'erreur
+                                this.src = `${basePath}NoTexture.gif`;
                             };
                         } else {
-                            img.src = "../img/mcc/cos/invs/lock.png";  // Image de verrouillage pour les éléments non possédés
+                            img.src = "../img/mcc/cos/invs/lock.png";
                         }
         
-                        // Ajouter les attributs de tooltip
                         img.setAttribute("data-tippy-content", tooltipContent);
                         img.setAttribute("data-theme", tooltipTheme);
+                        img.setAttribute("draggable", "false")
         
-                        // Ajouter un gestionnaire de clic pour changer l'image du lock
                         img.addEventListener("click", function () {
-                            // Si l'élément est verrouillé et qu'il n'a pas encore été déverrouillé
-                            if (item && !item.Owned) {
-                                // Si un élément était déjà déverrouillé, le remettre à son état de verrouillage
+                            if (item && !item.Owned) {      
+                                playUiClickSound();
                                 if (lastUnlockedItem && lastUnlockedItem !== img) {
-                                    lastUnlockedItem.src = "../img/mcc/cos/invs/lock.png";  // Retour à l'état de verrouillage
+                                    lastUnlockedItem.src = "../img/mcc/cos/invs/lock.png";
                                     lastUnlockedItem.setAttribute("data-locked", "false");
                                 }
-
-                                // Vérifier l'état actuel de l'élément
+        
                                 if (img.getAttribute("data-locked") === "true") {
-                                    // Revenir à l'état verrouillé
                                     img.src = "../img/mcc/cos/invs/lock.png";
                                     img.setAttribute("data-locked", "false");
-                                    lastUnlockedItem = null; // Réinitialiser si on clique à nouveau sur l'élément déverrouillé
+                                    lastUnlockedItem = null;
                                 } else {
-                                    // Afficher l'image de l'item
                                     img.src = `${basePath}${item.Name}.gif`;
                                     img.onerror = function () {
                                         this.src = `${basePath}NoTexture.gif`;
                                     };
                                     img.setAttribute("data-locked", "true");
-
-                                    // Mettre à jour le dernier élément déverrouillé
                                     lastUnlockedItem = img;
                                 }
                             }
@@ -839,7 +830,6 @@
                         row.appendChild(itemDiv);
                     });
         
-                    // Ajouter des cases vides si la page a moins de 35 éléments
                     while (pageItems.length < pageSize) {
                         if (pageItems.length % 7 === 0) {
                             row = document.createElement("div");
@@ -853,7 +843,6 @@
                         pageItems.push(null);
                     }
         
-                    // Mettre à jour les flèches
                     document.getElementById(arrowLeftId).src = currentPage > 0 
                         ? "../img/mcc/utilities/arrow-left.png" 
                         : "../img/mcc/utilities/arrow-left-off.png";
@@ -862,6 +851,9 @@
                         ? "../img/mcc/utilities/arrow-right.png" 
                         : "../img/mcc/utilities/arrow-right-off.png";
                     
+                    document.getElementById(arrowLeftId).setAttribute("draggable", "false");
+                    document.getElementById(arrowRightId).setAttribute("draggable", "false");
+
                     tippy("[data-tippy-content]", {
                         duration: 500,
                         allowHTML: true,
@@ -876,6 +868,7 @@
                     if (currentPage > 0) {
                         currentPage--;
                         updateDisplay();
+                        playUiClickSound();
                     }
                 });
         
@@ -883,28 +876,25 @@
                     if (currentPage < totalPages - 1) {
                         currentPage++;
                         updateDisplay();
+                        playUiClickSound();
                     }
                 });
         
                 updateDisplay();
             }
         
-            // Initialiser l'affichage avec Auras
             let auras = {{ .Auras }};
             displayItems(auras, "auras-container", "arrow-left-auras", "arrow-right-auras");
         
-            // Initialiser l'affichage avec Hats
             let hats = {{ .Hats }};
             displayItems(hats, "hats-container", "arrow-left-hats", "arrow-right-hats");
         
-            // Initialiser l'affichage avec Accessories
             let accessories = {{ .Accessories }};
             displayItems(accessories, "accessories-container", "arrow-left-accessories", "arrow-right-accessories");
         
-            // Initialiser l'affichage avec Trails
             let trails = {{ .Trails }};
             displayItems(trails, "trails-container", "arrow-left-trails", "arrow-right-trails");
-        </script>                                         
+        </script>                        
         <script>
             function redirectToRankPage(rankPage) {
                 window.location.href = "/classement/" + rankPage;

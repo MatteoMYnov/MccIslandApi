@@ -593,15 +593,15 @@ func main() {
 	setupFileServer("./site/styles", "/styles/")
 	setupFileServer("./site/img", "/img/")
 	setupFileServer("./site/js", "/js/")
+	setupFileServer("./site/sounds", "/sounds/")
 
-	http.HandleFunc("/dbdl", downloadFileHandler) // pour Download la database des joueurs
+	http.HandleFunc("/dbdl", downloadFileHandler)
 	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	// Redirection de /classement vers /classement/1
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1603", nil); err != nil {
+	if err := http.ListenAndServe(":1604", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

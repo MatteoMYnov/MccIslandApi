@@ -1099,6 +1099,7 @@ body.modal-open {
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .subcath-body2 {
