@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #fff;
+    color: var(--abs-white);
     height: auto;
     min-height: 100%;
     position: relative;
@@ -43,8 +43,8 @@ body::before {
 .stats-container .hypixelstats-card,
 .stats-container .mccstats-card,
 .badge-card .skin-3d {
-    position: relative; /* Assurez un contexte de pile pour le z-index */
-    z-index: 2; /* Priorité sur #bgdark */
+    position: relative;
+    z-index: 2;
 }
 
 @font-face {
@@ -63,7 +63,7 @@ body::before {
     top: 50%;     /* Centre verticalement */
     transform: translateY(-50%); /* Ajuste pour un centrage parfait */
     font-size: 18px;
-    color: #fff;
+    color: var(--abs-white);
 }
 
 /* bar de Navigation */
@@ -104,7 +104,7 @@ body::before {
     border: 0px solid;
     border-radius: 5px;
     font-size: 20px;
-    color: #fff;
+    color: var(--abs-white);
     width: 300px;
     text-align: center;
     box-sizing: border-box;
@@ -124,7 +124,7 @@ body::before {
     margin-left: 10px;
     padding: 10px 20px;
     font-size: 18px;
-    color: #fff;
+    color: var(--abs-white);
     border: none;
     border-radius: 20px;
     transition: filter 0.2s;
@@ -159,7 +159,7 @@ main {
     background-color: var(--main-gray);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
     overflow: hidden;
-    color: #fff;
+    color: var(--abs-white);
     box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
     border: 0.125rem solid var(--main-black)
 }
@@ -264,12 +264,13 @@ main {
 .minecraftstats-card .stats-header h2 {
     font-size: 24px;
     margin: 0;
-    color: #fff;
+    color: var(--abs-white);
     text-align: center;
 }
 
 .minecraftstats-card .stats-body {
     display: flex;
+    justify-content: center;
 }
 
 .cape-hole {
@@ -291,7 +292,7 @@ main {
     top: 297px;
     left: calc(50% + 320px);
     width: 300px;
-    color: #fff;
+    color: var(--abs-white);
 }
 
 .badge-card .stats-header {
@@ -313,7 +314,7 @@ main {
 .badge-card .stats-header h2 {
     font-size: 24px;
     margin: 0;
-    color: #fff;
+    color: var(--abs-white);
     text-align: center;
 }
 
@@ -379,7 +380,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%); /* Centrage par rapport à l'image */
     font-size: 12px;
-    color: #fff;
+    color: var(--abs-white);
     background-color: rgba(0, 0, 0, 0.4);
     padding: 5px;
     border-radius: 5px;
@@ -431,11 +432,11 @@ main {
 
 .no-cape {
     font-size: 20px;
-    color: #fff;
+    color: var(--abs-white);
     text-align: center;
     padding: 20px;
     font-weight: bold;
-    background-color: #292929;
+    background-color: var(--main-dark-gray);
     border-radius: 15px;
     margin-top: 20px;
 }
@@ -480,7 +481,7 @@ main {
 .hypixelstats-card .stats-header h2 {
     font-size: 24px;
     margin: 0;
-    color: #fff;
+    color: var(--abs-white);
     text-align: center;
 }
 
@@ -528,7 +529,7 @@ main {
 .mccstats-card .stats-header h2 {
     font-size: 24px;
     margin: 0;
-    color: #fff;
+    color: var(--abs-white);
     text-align: center;
 }
 
@@ -589,7 +590,7 @@ body.modal-open {
     border-radius: 10px;
     width: 80%;
     max-width: 600px;
-    color: #fff;
+    color: var(--abs-white);
     animation: slideInFromLeft 0.5s ease-out; /* Animation d'entrée */
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
@@ -623,7 +624,7 @@ body.modal-open {
     font-size: 36px;
     font-weight: bold;
     text-align: center;
-    color: #fff ;
+    color: var(--abs-white) ;
     margin-top: 20px;
 }
 
@@ -726,14 +727,14 @@ body.modal-open {
 .mcc-list-item {
     display: flex;
     align-items: center;
-    color: #fff !important;
+    color: var(--abs-white) !important;
     gap: 5px; /* Réduit l'espacement entre l'image et le texte */
     margin: -16px; /* Réduit l'espacement vertical entre les lignes */
     width: 100%; /* Assure que l'élément prend toute la largeur */
 }
 
 .mcc-list-item .text {
-    color: #fff !important;
+    color: var(--abs-white) !important;
 }
 
 .mcc-list-item .text-gray {
@@ -762,7 +763,7 @@ body.modal-open {
 
 .mcc-playername {
     font-size: 12px;
-    color: #fff !important;
+    color: var(--abs-white) !important;
 }
 
 .mcc-crown {
@@ -783,7 +784,7 @@ body.modal-open {
 
 .mcc-actualcrownlevel{
     font-size: 15px;
-    color: #fff !important;
+    color: var(--abs-white) !important;
 }
 
 .mcc-futurcrownlevel {
@@ -918,7 +919,7 @@ body.modal-open {
     align-items: center;
     cursor: pointer;
     padding: 15px;
-    background-color: var(--main-dark-gray);
+    background-color: var(--hole-gray);
 }
 
 .roll-header h2 {
