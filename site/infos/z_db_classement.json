@@ -6819,6 +6819,13 @@
             "badge": "mojang-employee"
         },
         {
+            "uuid": "85736c50-3c7e-472c-a63a-a3551a77631e",
+            "capes": 5,
+            "score": 12,
+            "actualname": "Jonah_",
+            "badge": "gift-by-mojang"
+        },
+        {
             "uuid": "a6eb2491-7365-4649-a795-2f032c9919f0",
             "capes": 5,
             "score": 5,
@@ -8517,6 +8524,13 @@
             "capes": 1,
             "score": 1,
             "actualname": "TheMysterys",
+            "badge": ""
+        },
+        {
+            "uuid": "76485afb-1f3d-45e5-8b9d-2f0de5210428",
+            "capes": 1,
+            "score": 1,
+            "actualname": "Marmor1001",
             "badge": ""
         },
         {
