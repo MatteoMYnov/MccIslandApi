@@ -743,13 +743,20 @@
                 const trophyType = item.IsBonusTrophies ? "Bonus Trophies" : "Style Trophies";
                 const trophyIcon = item.IsBonusTrophies ? 'bonus_trophies.png' : 'style_trophies.png';
                 
-                const trophyColor = item.Owned ? "#00FF00" : "var(--abs-white)";  // Vert si possédé, blanc sinon
+                const trophyColor = item.Owned ? "#00FF00" : "var(--abs-white)";
 
                 tooltipContent += `<div style="display: flex; align-items: center; gap: 5px;">
                     <span style="color: var(--text-grey-2);">${trophyType}:</span> 
                     <img src='../img/mcc/trophies/${trophyIcon}' height='17' class='pixelated'>
                     <span style="color: ${trophyColor};">${item.Trophies}</span>
                 </div>`;
+
+                if (!item.Owned) {
+                    tooltipContent += `<br><img src='../img/mcc/utilities/left-click.png' height='17' class='pixelated' style='margin-right: -4px;'> 
+                                    <span style="color: var(--mctext-§8);">></span> 
+                                    <span style="color: var(--mctext-yellow1);">Left-Click to</span> 
+                                    <span style="color: var(--mctext-yellow2);">preview</span>`;
+                }
 
                 return tooltipContent;
             }
@@ -885,6 +892,7 @@
                     document.getElementById(arrowRightId).setAttribute("draggable", "false");
 
                     tippy("[data-tippy-content]", {
+                        hideOnClick: false,
                         duration: 200,
                         allowHTML: true,
                         onShow(instance) {
@@ -934,7 +942,7 @@
             }
             tippy("[data-tippy-content]", {
                 duration: 200,
-                allowHTML: true,  // Permet d'afficher du HTML dans le tooltip
+                allowHTML: true,
                 onShow(instance) {
                     const theme = instance.reference.getAttribute("data-theme") || "default";
                     instance.popper.querySelector('.tippy-box').setAttribute("data-theme", theme);
