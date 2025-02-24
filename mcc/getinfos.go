@@ -66,15 +66,19 @@ type EquippedCosmetic struct {
 }
 
 type InvCos struct {
-	Owned    bool
-	Name     string
-	RealName string
-	Rarity   string
+	Owned           bool
+	Name            string
+	RealName        string
+	Rarity          string
+	IsBonusTrophies bool
+	Trophies        int
 }
 
 type CosmeticInfos struct {
-	Name   string `json:"name"`
-	Rarity string `json:"rarity"`
+	Name            string `json:"name"`
+	Rarity          string `json:"rarity"`
+	IsBonusTrophies bool   `json:"isBonusTrophies"`
+	Trophies        int    `json:"trophies"`
 }
 
 type Cosmetic struct {
@@ -285,6 +289,8 @@ func GetInfos(UUID string) *MccInfos {
 						cosmetic {
 							rarity 
 							name
+							isBonusTrophies
+							trophies
 						}
 					}
 					accessories: cosmetics(category: ACCESSORY) {
@@ -292,6 +298,8 @@ func GetInfos(UUID string) *MccInfos {
 						cosmetic {
 							rarity 
 							name
+							isBonusTrophies
+							trophies
 						}
 					}
 					auras: cosmetics(category: AURA) {
@@ -299,6 +307,8 @@ func GetInfos(UUID string) *MccInfos {
 						cosmetic {
 							rarity 
 							name
+							isBonusTrophies
+							trophies
 						}
 					}
 					trails: cosmetics(category: TRAIL) {
@@ -306,6 +316,8 @@ func GetInfos(UUID string) *MccInfos {
 						cosmetic {
 							rarity 
 							name
+							isBonusTrophies
+							trophies
 						}
 					}
 				}
@@ -389,34 +401,42 @@ func GetInfos(UUID string) *MccInfos {
 	trails := []InvCos{}
 	for _, hat := range response.Data.Player.Collections.Hats {
 		hats = append(hats, InvCos{
-			Owned:    hat.Owned, // Ajout du champ Owned
-			Name:     CleanCosmeticName(hat.Cosmetic.Name),
-			RealName: hat.Cosmetic.Name,
-			Rarity:   hat.Cosmetic.Rarity,
+			Owned:           hat.Owned, // Ajout du champ Owned
+			Name:            CleanCosmeticName(hat.Cosmetic.Name),
+			RealName:        hat.Cosmetic.Name,
+			Rarity:          hat.Cosmetic.Rarity,
+			IsBonusTrophies: hat.Cosmetic.IsBonusTrophies,
+			Trophies:        hat.Cosmetic.Trophies,
 		})
 	}
 	for _, accessory := range response.Data.Player.Collections.Accessories {
 		accessories = append(accessories, InvCos{
-			Owned:    accessory.Owned, // Ajout du champ Owned
-			Name:     CleanCosmeticName(accessory.Cosmetic.Name),
-			RealName: accessory.Cosmetic.Name,
-			Rarity:   accessory.Cosmetic.Rarity,
+			Owned:           accessory.Owned, // Ajout du champ Owned
+			Name:            CleanCosmeticName(accessory.Cosmetic.Name),
+			RealName:        accessory.Cosmetic.Name,
+			Rarity:          accessory.Cosmetic.Rarity,
+			IsBonusTrophies: accessory.Cosmetic.IsBonusTrophies,
+			Trophies:        accessory.Cosmetic.Trophies,
 		})
 	}
 	for _, aura := range response.Data.Player.Collections.Auras {
 		auras = append(auras, InvCos{
-			Owned:    aura.Owned, // Ajout du champ Owned
-			Name:     CleanCosmeticName(aura.Cosmetic.Name),
-			RealName: aura.Cosmetic.Name,
-			Rarity:   aura.Cosmetic.Rarity,
+			Owned:           aura.Owned, // Ajout du champ Owned
+			Name:            CleanCosmeticName(aura.Cosmetic.Name),
+			RealName:        aura.Cosmetic.Name,
+			Rarity:          aura.Cosmetic.Rarity,
+			IsBonusTrophies: aura.Cosmetic.IsBonusTrophies,
+			Trophies:        aura.Cosmetic.Trophies,
 		})
 	}
 	for _, trail := range response.Data.Player.Collections.Trails {
 		trails = append(trails, InvCos{
-			Owned:    trail.Owned, // Ajout du champ Owned
-			Name:     CleanCosmeticName(trail.Cosmetic.Name),
-			RealName: trail.Cosmetic.Name,
-			Rarity:   trail.Cosmetic.Rarity,
+			Owned:           trail.Owned, // Ajout du champ Owned
+			Name:            CleanCosmeticName(trail.Cosmetic.Name),
+			RealName:        trail.Cosmetic.Name,
+			Rarity:          trail.Cosmetic.Rarity,
+			IsBonusTrophies: trail.Cosmetic.IsBonusTrophies,
+			Trophies:        trail.Cosmetic.Trophies,
 		})
 	}
 

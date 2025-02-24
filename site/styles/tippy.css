@@ -184,7 +184,6 @@
     color: #F64141;
     border: 2px solid transparent;
     border-image: linear-gradient(to top, #B42626, #F64141) 1;
-    box-shadow: 0 4px 7px #AD3126A0;
 }
 
 .tippy-box[data-theme~="MYTHIC"] > .tippy-arrow::before {

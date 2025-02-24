@@ -6861,6 +6861,13 @@
             "badge": ""
         },
         {
+            "uuid": "ab146d1c-7a57-4263-aac0-ca3e6ea90200",
+            "capes": 5,
+            "score": 5,
+            "actualname": "Conem",
+            "badge": ""
+        },
+        {
             "uuid": "f8cdb683-9e90-43ee-a819-39f85d9c5d69",
             "capes": 4,
             "score": 26,
@@ -6957,6 +6964,13 @@
             "score": 21,
             "actualname": "Blurpi",
             "badge": "mojang-employee"
+        },
+        {
+            "uuid": "",
+            "capes": 4,
+            "score": 20,
+            "actualname": "Kumasasa",
+            "badge": "gift-by-mojang"
         },
         {
             "uuid": "212c6adb-6aad-4b04-ab21-0d52a98931c0",
@@ -7618,13 +7632,6 @@
         },
         {
             "uuid": "48fe3a11-67dd-48a0-901f-3e9959aa231d",
-            "capes": 3,
-            "score": 6,
-            "actualname": "Expert_Builder",
-            "badge": ""
-        },
-        {
-            "uuid": "",
             "capes": 3,
             "score": 6,
             "actualname": "Expert_Builder",

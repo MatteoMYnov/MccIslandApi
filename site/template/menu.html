@@ -737,6 +737,22 @@
         <script src ="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script>
+            function generateTooltipContent(item, itemType) {
+                let tooltipContent = `<div style='text-align:start;'>${item.RealName}<br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/${itemType}.png' height='17' class='pixelated'></div>`;
+
+                const trophyType = item.IsBonusTrophies ? "Bonus Trophies" : "Style Trophies";
+                const trophyIcon = item.IsBonusTrophies ? 'bonus_trophies.png' : 'style_trophies.png';
+                
+                const trophyColor = item.Owned ? "#00FF00" : "var(--abs-white)";  // Vert si possédé, blanc sinon
+
+                tooltipContent += `<div style="display: flex; align-items: center; gap: 5px;">
+                    <span style="color: var(--text-grey-2);">${trophyType}:</span> 
+                    <img src='../img/mcc/trophies/${trophyIcon}' height='17' class='pixelated'>
+                    <span style="color: ${trophyColor};">${item.Trophies}</span>
+                </div>`;
+
+                return tooltipContent;
+            }
             function displayItems(items, containerId, arrowLeftId, arrowRightId, pageSize = 35) {
                 let currentPage = 0;
                 let totalPages = Math.ceil(items.length / pageSize);
@@ -769,24 +785,22 @@
                         let tooltipContent = "";
                         let tooltipTheme = "";
                         let itemType = "";
-        
+                        
                         if (containerId.toLowerCase() === "auras-container") {
                             basePath = "../img/mcc/cos/auras/";
-                            itemType = "Auras";
-                            tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/aura.png' height='17' class='pixelated'></div>`;
+                            itemType = "aura";
                         } else if (containerId.toLowerCase() === "hats-container") {
                             basePath = "../img/mcc/cos/hats/";
-                            itemType = "Hats";
-                            tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'></div>`;
+                            itemType = "hat";
                         } else if (containerId.toLowerCase() === "accessories-container") {
                             basePath = "../img/mcc/cos/accessories/";
-                            itemType = "Accessories";
-                            tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'></div>`;
+                            itemType = "accessory";
                         } else if (containerId.toLowerCase() === "trails-container") {
                             basePath = "../img/mcc/cos/trails/";
-                            itemType = "Trails";
-                            tooltipContent = `<div style='text-align:start;'><b>${item.RealName}</b><br><img src='../img/mcc/tooltip/${item.Rarity}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>`;
+                            itemType = "trail";
                         }
+
+                        tooltipContent = generateTooltipContent(item, itemType);
         
                         tooltipTheme = item.Rarity;
         
@@ -871,7 +885,7 @@
                     document.getElementById(arrowRightId).setAttribute("draggable", "false");
 
                     tippy("[data-tippy-content]", {
-                        duration: 500,
+                        duration: 200,
                         allowHTML: true,
                         onShow(instance) {
                             const theme = instance.reference.getAttribute("data-theme") || "default";
@@ -919,7 +933,7 @@
                 window.location.href = "/menu"
             }
             tippy("[data-tippy-content]", {
-                duration: 500,
+                duration: 200,
                 allowHTML: true,  // Permet d'afficher du HTML dans le tooltip
                 onShow(instance) {
                     const theme = instance.reference.getAttribute("data-theme") || "default";
