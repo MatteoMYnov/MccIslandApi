@@ -8,13 +8,11 @@
 .tippy-box {
     border: 1px solid #222;
     color: #fff;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .tippy-box[data-theme="theme"] {
     color: #fff;
     border: 2px solid #ff0000;
-    box-shadow: 0 3px 5px #ff000050;
 }
 
 .tippy-box[data-theme~="theme"] > .tippy-arrow::before {

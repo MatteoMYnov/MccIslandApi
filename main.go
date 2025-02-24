@@ -601,7 +601,7 @@ func main() {
 
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1608", nil); err != nil {
+	if err := http.ListenAndServe(":1600", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

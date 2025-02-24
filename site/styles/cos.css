@@ -87,29 +87,31 @@
 }
 
 .cos-case-header {
-    width: 108%; /* Ajuste la largeur pour couvrir toute la boîte */
+    width: 108%;
     height: auto;
     image-rendering: pixelated;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: -20px; /* Décale l'image vers le haut */
+    top: -20px;
     left: 50%;
-    transform: translateX(-50%); /* Centre l'image horizontalement */
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
 .cos-case-downer {
-    width: 108%; /* Ajuste la largeur pour couvrir toute la boîte */
+    width: 108%;
     height: auto;
     image-rendering: pixelated;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: -20px; /* Décale l'image vers le bas */
+    bottom: -20px;
     left: 50%;
-    transform: translateX(-50%); /* Centre l'image horizontalement */
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
 .cos-equipped-content {
