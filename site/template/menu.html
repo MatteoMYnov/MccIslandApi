@@ -823,7 +823,22 @@
         
                         img.setAttribute("data-tippy-content", tooltipContent);
                         img.setAttribute("data-theme", tooltipTheme);
-                        img.setAttribute("draggable", "false")
+                        img.setAttribute("draggable", "false");
+                        itemDiv.appendChild(img);
+
+                        const equippedItems = {
+                            hat: "{{.Equipped.Hats.Name}}",
+                            accessory: "{{.Equipped.Accessories.Name}}",
+                            aura: "{{.Equipped.Auras.Name}}",
+                            trail: "{{.Equipped.Trails.Name}}"
+                        };
+
+                        if (item.Name === equippedItems[itemType]) {
+                            let overlay = document.createElement("img");
+                            overlay.src = "../img/mcc/cos/Selected.png";
+                            overlay.classList.add("equipped-overlay");
+                            itemDiv.appendChild(overlay);
+                        }
         
                         img.addEventListener("click", function () {
                             if (item && !item.Owned) {      
