@@ -32,9 +32,10 @@ type Joueur struct {
 	UUID       string `json:"uuid"`
 	ActualName string `json:"actualname"`
 	Rank       int
-	Capes      int    `json:"capes"`
-	Score      int    `json:"score"`
-	Badge      string `json:"badge"`
+	Capes      int           `json:"capes"`
+	Score      int           `json:"score"`
+	Badge      string        `json:"badge"`
+	Capelist   []interface{} `json:"capelist"`
 }
 
 type Classement struct {
@@ -214,7 +215,18 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	IGN := r.FormValue("q")
 	if IGN == "" {
-		IGN = minecraft.GetRandomName()
+		classementData, err := ioutil.ReadFile("./site/infos/z_db_classement.json")
+		if err == nil {
+			var classement Classement
+			if json.Unmarshal(classementData, &classement) == nil {
+				for _, joueur := range classement.Joueurs {
+					if joueur.Capelist == nil {
+						IGN = joueur.UUID
+						break
+					}
+				}
+			}
+		}
 	}
 	if len(IGN) == 36 {
 		IGN = minecraft.GetNameFast(IGN)
