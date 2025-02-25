@@ -12,8 +12,11 @@ type PlayerRank struct {
 	UUID       string `json:"uuid"`
 	Capes      int    `json:"capes"`
 	Score      int    `json:"score"`
-	ActualName string `json:"actualname"` // Nouveau champ pour le pseudonyme
-	Badge      string `json:"badge"`      // Nouveau champ pour le premier badge
+	ActualName string `json:"actualname"`
+	Badge      string `json:"badge"`
+	CapeList   []struct {
+		Name string `json:"name"`
+	} `json:"capelist"`
 }
 
 type Classement struct {
@@ -57,9 +60,12 @@ func UpdateClassement(uuid string, listCapes []struct {
 		capeScores[cape.Name] = cape.Score
 	}
 
-	// Calculer le score total du joueur
+	// Calculer le score total du joueur et récupérer la liste des capes
 	totalScore := 0
 	capesCount := 0
+	capeList := []struct {
+		Name string `json:"name"`
+	}{}
 
 	for _, cape := range listCapes {
 		if cape.Removed {
@@ -67,6 +73,11 @@ func UpdateClassement(uuid string, listCapes []struct {
 		} else if score, exists := capeScores[cape.Name]; exists {
 			totalScore += score // Sinon, on prend son score normal
 		}
+
+		// Ajouter à la liste des capes possédées
+		capeList = append(capeList, struct {
+			Name string `json:"name"`
+		}{Name: cape.Name})
 
 		// On compte toutes les capes, qu'elles soient supprimées ou non
 		capesCount++
@@ -81,11 +92,12 @@ func UpdateClassement(uuid string, listCapes []struct {
 	found := false
 	for i, player := range classement.Classement {
 		if player.UUID == uuid {
-			// Mettre à jour le nombre de capes, le score, le pseudonyme et le badge du joueur
+			// Mettre à jour le nombre de capes, le score, le pseudonyme, le badge et la liste des capes du joueur
 			classement.Classement[i].Capes = capesCount
 			classement.Classement[i].Score = totalScore
 			classement.Classement[i].ActualName = actualName
 			classement.Classement[i].Badge = badge
+			classement.Classement[i].CapeList = capeList
 			found = true
 			break
 		}
@@ -99,6 +111,7 @@ func UpdateClassement(uuid string, listCapes []struct {
 			Score:      totalScore,
 			ActualName: actualName,
 			Badge:      badge,
+			CapeList:   capeList,
 		})
 	}
 

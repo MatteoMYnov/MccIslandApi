@@ -1225,7 +1225,22 @@ body.modal-open {
     --crown-level-6: #9B1B1B;
     --crown-level-7: #1AB4CF;
 
+    --mctext-§0: #000000;
+    --mctext-§1: #0000BE;
+    --mctext-§2: #00BE00;
+    --mctext-§3: #00BEBE;
+    --mctext-§4: #BE0000;
+    --mctext-§5: #BE00BE;
+    --mctext-§6: #D9A334;
+    --mctext-§7: #BEBEBE;
     --mctext-§8: #4F4F4F;
+    --mctext-§9: #3F3FFE;
+    --mctext-§a: #3FFE3F;
+    --mctext-§b: #3FFEFE;
+    --mctext-§c: #FE3F3F;
+    --mctext-§d: #FE3FFE;
+    --mctext-§e: #FEFE3F;
+    --mctext-§f: #FFFFFF;
     --mctext-yellow1: #E9D282;
     --mctext-yellow2: #FBE460;
 }
