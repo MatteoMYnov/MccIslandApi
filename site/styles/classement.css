@@ -73,6 +73,7 @@ body::before {
     padding: 15px 0;
     width: 100%;
     position: fixed;
+    margin-left: -8px;
     top: 0;
     z-index: 1000;
     text-align: center;
