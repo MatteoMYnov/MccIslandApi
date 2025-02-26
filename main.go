@@ -215,18 +215,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	IGN := r.FormValue("q")
 	if IGN == "" {
-		classementData, err := ioutil.ReadFile("./site/infos/z_db_classement.json")
-		if err == nil {
-			var classement Classement
-			if json.Unmarshal(classementData, &classement) == nil {
-				for _, joueur := range classement.Joueurs {
-					if joueur.Capelist == nil {
-						IGN = joueur.UUID
-						break
-					}
-				}
-			}
-		}
+		IGN = minecraft.GetRandomName()
 	}
 	if len(IGN) == 36 {
 		IGN = minecraft.GetNameFast(IGN)
@@ -613,7 +602,7 @@ func main() {
 
 	http.HandleFunc("/classement/", classementHandler)
 
-	if err := http.ListenAndServe(":1603", nil); err != nil {
+	if err := http.ListenAndServe(":1609", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
