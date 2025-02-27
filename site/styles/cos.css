@@ -248,8 +248,10 @@
 
 .cos-inventory .mid {
     width: auto;
-    border: 3px solid #1C2A45;
+    border: 3px solid #314A7F; /* Bordure bleue */
+    box-shadow: 0 0 0 3px #1C2A45; /* Bordure noire supplémentaire */
 }
+
 
 .page-arrow {
     width: 100%;
