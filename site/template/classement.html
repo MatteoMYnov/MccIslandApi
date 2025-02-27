@@ -12,6 +12,13 @@
         <header class="navbar">
             <nav>
                 <ul>
+                    <li>
+                        <form action="/{{.Lang}}/menu" method="get" class="input-group">
+                            <img src="/img/utilities/refresh.png" data-tippy-content="Random Player" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
+                            <input type="text" name="q" placeholder="Find Player" class="find-player" id="playerInput" required>
+                            <button class="show-button cursor" type="submit">Show</button>
+                        </form>
+                    </li>
                     <li class="page-cath">
                         Classement
                     </li>
