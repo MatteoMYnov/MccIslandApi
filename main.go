@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"html/template"
+	"hypixel-info/load"
 	"hypixel-info/mcc"
 	"hypixel-info/minecraft"
 	"io/ioutil"
@@ -12,6 +13,7 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
+	"strings"
 )
 
 // Nouveau format JSON pour les capes
@@ -116,6 +118,9 @@ type DataMenuPage struct {
 	// Player Rank
 	PlayerRank     int
 	PlayerRankPage int
+	//lang
+	Lang         string
+	Translations load.Translations
 }
 
 type EquippedCosmetics struct {
@@ -147,7 +152,7 @@ type FriendInfo struct {
 // Structure principale du fichier JSON
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/menu", http.StatusFound)
+	http.Redirect(w, r, "/en-US/menu", http.StatusFound)
 }
 
 func downloadFileHandler(w http.ResponseWriter, r *http.Request) {
@@ -207,7 +212,56 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 	return friendInfo
 }
 
+func capesHandler(w http.ResponseWriter, r *http.Request) {
+	capeGroups, err := minecraft.LoadCapeGroups()
+	if err != nil {
+		http.Error(w, "Erreur lors du chargement des capes", http.StatusInternalServerError)
+		return
+	}
+
+	var capeInfos []CapeInfo
+	for _, cape := range capeGroups.Capes {
+		capeInfos = append(capeInfos, CapeInfo{
+			URL:      "/img/capes/" + cape.Name + ".png",
+			Class:    cape.Type + "-cape",
+			CapeName: cape.Name,
+			Title:    cape.Title,
+			Removed:  false,
+		})
+	}
+
+	data := struct {
+		ImageURLs []CapeInfo
+	}{
+		ImageURLs: capeInfos,
+	}
+
+	tmplPath := filepath.Join("site", "template", "capes.html")
+	tmpl, err := template.ParseFiles(tmplPath)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	tmpl.Execute(w, data)
+}
+
 func menuHandler(w http.ResponseWriter, r *http.Request) {
+	parts := strings.Split(r.URL.Path, "/")
+	if len(parts) < 2 {
+		http.NotFound(w, r)
+		return
+	}
+	lang := parts[1]
+
+	supportedLangs := map[string]bool{"fr-FR": true, "en-US": true}
+
+	if _, ok := supportedLangs[lang]; !ok {
+		lang = "en-US"
+	}
+
+	translations := load.LoadTranslations(lang)
+
 	capeGroups, err := minecraft.LoadCapeGroups()
 	if err != nil {
 		log.Fatal("Erreur de chargement des groupes de capes:", err)
@@ -455,6 +509,9 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		// Player Rank
 		PlayerRank:     playerRank,
 		PlayerRankPage: playerRankPage,
+		//lang
+		Lang:         lang,         // Ajoutez la langue ici
+		Translations: translations, // Ajoutez les traductions ici
 	}
 
 	tmplPath := filepath.Join("site", "template", "menu.html")
@@ -474,44 +531,18 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, infos)
 }
 
-func capesHandler(w http.ResponseWriter, r *http.Request) {
-	capeGroups, err := minecraft.LoadCapeGroups()
-	if err != nil {
-		http.Error(w, "Erreur lors du chargement des capes", http.StatusInternalServerError)
-		return
-	}
-
-	var capeInfos []CapeInfo
-	for _, cape := range capeGroups.Capes {
-		capeInfos = append(capeInfos, CapeInfo{
-			URL:      "/img/capes/" + cape.Name + ".png",
-			Class:    cape.Type + "-cape",
-			CapeName: cape.Name,
-			Title:    cape.Title,
-			Removed:  false,
-		})
-	}
-
-	data := struct {
-		ImageURLs []CapeInfo
-	}{
-		ImageURLs: capeInfos,
-	}
-
-	tmplPath := filepath.Join("site", "template", "capes.html")
-	tmpl, err := template.ParseFiles(tmplPath)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	tmpl.Execute(w, data)
-}
-
 func classementHandler(w http.ResponseWriter, r *http.Request) {
-	// Extraire le numéro de page depuis l'URL
+	// Extraire les parties de l'URL
+	parts := strings.Split(r.URL.Path, "/")
+	if len(parts) < 4 {
+		http.Error(w, "URL mal formée", http.StatusBadRequest)
+		return
+	}
+
+	// Extraire la langue et le numéro de page
+	lang := parts[1] // Langue (par exemple 'fr-FR' ou 'en-US')
 	var page int
-	_, err := fmt.Sscanf(r.URL.Path, "/classement/%d", &page)
+	_, err := fmt.Sscanf(parts[3], "%d", &page)
 	if err != nil || page < 1 {
 		http.Error(w, "Page invalide", http.StatusBadRequest)
 		return
@@ -532,6 +563,14 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Erreur lors du décodage du JSON", http.StatusInternalServerError)
 		return
 	}
+
+	// Charger les traductions en fonction de la langue
+	supportedLangs := map[string]bool{"fr-FR": true, "en-US": true}
+	if _, ok := supportedLangs[lang]; !ok {
+		lang = "en-US" // Langue par défaut
+	}
+
+	translations := load.LoadTranslations(lang)
 
 	// Définir la taille du groupe de joueurs par page
 	const pageSize = 50
@@ -558,22 +597,34 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Renvoyer la page HTML avec les données du classement
 	tmplPath := filepath.Join("site", "template", "classement.html")
-	tmpl, err := template.New("classement.html").ParseFiles(tmplPath)
+	tmpl, err := template.New("classement.html").Funcs(template.FuncMap{
+		"contains": minecraft.Contains,
+		"mod":      minecraft.Mod,
+		"seq":      minecraft.Seq,
+		"sub":      minecraft.Sub,
+		"add":      minecraft.Add,
+		"mul":      minecraft.Mul,
+		"toJson":   minecraft.ToJSON,
+	}).ParseFiles(tmplPath)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	data := struct {
-		Classement []Joueur
-		Page       int
-		HasNext    bool
-		HasPrev    bool
+		Classement   []Joueur
+		Page         int
+		HasNext      bool
+		HasPrev      bool
+		Lang         string
+		Translations load.Translations // Ajouter ici les traductions
 	}{
-		Classement: joueursPage,
-		Page:       page,
-		HasPrev:    page > 1,
-		HasNext:    endIndex < len(classement.Joueurs),
+		Classement:   joueursPage,
+		Page:         page,
+		HasPrev:      page > 1,
+		HasNext:      endIndex < len(classement.Joueurs),
+		Lang:         lang,
+		Translations: translations, // Passer les traductions au template
 	}
 
 	// Exécuter le template avec les données
@@ -596,13 +647,17 @@ func main() {
 	setupFileServer("./site/js", "/js/")
 	setupFileServer("./site/sounds", "/sounds/")
 
+	// Définir les routes pour chaque langue
+	http.HandleFunc("/en-US/menu", menuHandler)
+	http.HandleFunc("/fr-FR/menu", menuHandler)
+
+	http.HandleFunc("/en-US/classement/", classementHandler)
+	http.HandleFunc("/fr-FR/classement/", classementHandler)
+
 	http.HandleFunc("/dbdl", downloadFileHandler)
-	http.HandleFunc("/menu", menuHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	http.HandleFunc("/classement/", classementHandler)
-
-	if err := http.ListenAndServe(":1609", nil); err != nil {
+	if err := http.ListenAndServe(":1612", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

@@ -5,7 +5,9 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"regexp"
 	"sort"
+	"strings"
 )
 
 type PlayerRank struct {
@@ -133,13 +135,30 @@ func UpdateClassement(uuid string, listCapes []struct {
 	}
 
 	// Sauvegarder les modifications
-	updatedData, err := json.MarshalIndent(classement, "", "    ")
+	rawData, err := json.MarshalIndent(classement, "", "  ")
 	if err != nil {
 		log.Printf("Erreur lors de la conversion en JSON : %v", err)
 		return -1
 	}
 
-	err = ioutil.WriteFile(filePath, updatedData, 0644)
+	// Convertir en string pour manipulation
+	formattedJSON := string(rawData)
+
+	// Expression régulière pour détecter les capes sous forme de liste
+	re := regexp.MustCompile(`"capelist": \[\s*([\s\S]*?)\s*\]`)
+
+	// Reformater la liste pour qu'elle tienne sur une seule ligne
+	formattedJSON = re.ReplaceAllStringFunc(formattedJSON, func(match string) string {
+		// Supprimer les sauts de ligne et espaces inutiles
+		compactList := strings.ReplaceAll(match, "\n", "")
+		compactList = strings.ReplaceAll(compactList, "  ", "")  // Retire les espaces d'indentation
+		compactList = strings.ReplaceAll(compactList, " ]", "]") // Corrige la fermeture
+		compactList = strings.ReplaceAll(compactList, "[ ", "[") // Corrige l'ouverture
+		return compactList
+	})
+
+	// Sauvegarder le JSON modifié
+	err = ioutil.WriteFile(filePath, []byte(formattedJSON), 0644)
 	if err != nil {
 		log.Printf("Erreur lors de l'écriture du fichier classement : %v", err)
 		return -1

@@ -15,7 +15,7 @@
             <nav>
                 <ul>
                     <li>
-                        <form action="/menu" method="get" class="input-group">
+                        <form action="/{{.Lang}}/menu" method="get" class="input-group">
                             <img src="../img/utilities/refresh.png" data-tippy-content="Random Player" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
                             <input type="text" name="q" placeholder="Find Player" class="find-player" id="playerInput" required style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">
                             <button class="show-button cursor" type="submit" style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">Show</button>
@@ -41,7 +41,7 @@
                 <!-- Minecraft Stats Card -->
                 <div class="minecraftstats-card" id="minecraftStatsCard">
                     <div class="stats-header">
-                        <p class="playerRank mc-font" data-tippy-content="{{if eq .PlayerRank -1}}Le joueur ne peut pas être classé{{else}}Rank #{{.PlayerRank}} Database classement{{end}}">
+                        <p class="playerRank mc-font" data-tippy-content='{{if eq .PlayerRank -1}}{{index .Translations .Lang "no_classement"}}{{else}}Rank #{{.PlayerRank}} Database classement{{end}}'>
                             {{if eq .PlayerRank -1}}
                                 N/A
                             {{else}}
@@ -62,7 +62,7 @@
                                 {{end}}
                             </div>
                         {{else}}
-                            <p class="no-cape">Ce joueur ne possède aucune cape</p>
+                            <p class="no-cape">{{index .Translations .Lang "no_cape"}}</p>
                         {{end}}
                     </div>
                 </div>  
@@ -176,7 +176,7 @@
                             <div class="roll-card friends-card" id="friendsCard">
                                 <div class="roll-header friends-header cursor" onclick="toggleRoll('friendsBody', 'friends-arrow')">
                                     <img src="../img/mcc/utilities/friends.png" alt="Friends Icon" class="roll-icon no-select" draggable="false">
-                                    <h2>Friends</h2>
+                                    <h2>{{index .Translations .Lang "roll-friends"}}</h2>
                                     <img id="friends-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select" draggable="false">
                                 </div>
                                 <div class="roll-body" id="friendsBody">
@@ -196,7 +196,7 @@
                                                 </div>
                                             {{end}}
                                         {{else}}
-                                            <p>Le Joueur ne possède aucun ami, ou n'a pas les API ouvertes.</p>
+                                            <p>{{index .Translations .Lang "no_friend"}}</p>
                                         {{end}}
                                     </div>
                                 </div>                           
@@ -205,7 +205,7 @@
                             <div class="roll-card mccgames-card" id="MccGamesCard">
                                 <div class="roll-header rollstat-header cursor" onclick="toggleRoll('MccGamesBody', 'mccgames-arrow')">
                                     <img src="../img/mcc/trophies/total_trophies.png" alt="MccGames Icon" class="roll-icon no-select" draggable="false">
-                                    <h2>Stats</h2>
+                                    <h2>{{index .Translations .Lang "roll-stats"}}</h2>
                                     <img id="mccgames-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select" draggable="false">
                                 </div>
                                 <div class="roll-body" id="MccGamesBody">
@@ -519,7 +519,7 @@
                                             </div>
                                         </div>
                                     {{else}}
-                                        <p>Le Joueur n'a aucune stats sur le serveur, ou n'a pas les API d'ouverts</p>
+                                        <p>{{index .Translations .Lang "no_stats"}}</p>
                                     {{end}}
                                 </div>
                             </div>
@@ -527,184 +527,188 @@
                             <div class="roll-card cosmetics-card" id="CosmeticsCard">
                                 <div class="roll-header cosmetics-header cursor" onclick="toggleRoll('CosmeticsBody', 'cosmetics-arrow')">
                                     <img src="../img/mcc/utilities/theme.png" alt="Cosmetics Icon" class="roll-icon no-select" draggable="false">
-                                    <h2>Cosmetics</h2>
+                                    <h2>{{index .Translations .Lang "roll-cos"}}</h2>
                                     <img id="cosmetics-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select">
                                 </div>
                                 <div class="roll-body" id="CosmeticsBody">
-                                    <div class="cos-selector">
-                                        <button onclick="changeContent(this, 'equipped-content')" class="selected">
-                                            <img src="../img/mcc/cos/Equipped.png" alt="Equipped" class="no-select" draggable="false">
-                                            <span class="cos-text mc-font">Equipped</span>
-                                        </button>
-                                        <button onclick="changeContent(this, 'hats-content')">
-                                            <img src="../img/mcc/cos/Hats.png" alt="Hats" class="no-select" draggable="false">
-                                            <span class="cos-text mc-font">Hats</span>
-                                        </button>
-                                        <button onclick="changeContent(this, 'accessories-content')">
-                                            <img src="../img/mcc/cos/Accessories.png" alt="Accessories" class="no-select" draggable="false">
-                                            <span class="cos-text mc-font">Accessories</span>
-                                        </button>
-                                        <button onclick="changeContent(this, 'auras-content')">
-                                            <img src="../img/mcc/cos/Auras.png" alt="Auras" class="no-select" draggable="false">
-                                            <span class="cos-text mc-font">Auras</span>
-                                        </button>
-                                        <button onclick="changeContent(this, 'trails-content')">
-                                            <img src="../img/mcc/cos/Trails.png" alt="Trails" class="no-select" draggable="false">
-                                            <span class="cos-text mc-font">Trails</span>
-                                        </button>
-                                        <button onclick="changeContent(this, 'backs-content')">
-                                            <img src="../img/mcc/cos/Backs.png" alt="Backs" class="no-select" draggable="false">
-                                            <span class="cos-text mc-font">Cloaks</span>
-                                        </button>
-                                        <button onclick="changeContent(this, 'fishing-content')">
-                                            <img src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods" class="no-select" draggable="false">
-                                            <span class="cos-text mc-font">Fishing Rods</span>
-                                        </button>
-                                    </div>
-                                    <div class="cos-display-box">
-                                        <div id="equipped-content" class="cos-allcontents content active">
-                                            <img src="../img/mcc/cos/invs/Equipped.png" class="cos-case-header no-select" draggable="false">
-                                            <div class="cos-equipped-content">
-                                                <div class="equip-left equip-cases">
-                                                    <div class="inv-case">
-                                                        {{if .Equipped.Hats.Name}}
-                                                            <img src="../img/mcc/cos/hats/{{.Equipped.Hats.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/hats/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Hats.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Hats.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Hats.Rarity}}" draggable="false">
-                                                        {{else}}
-                                                            <img src="../img/mcc/cos/hats/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
-                                                        {{end}}
-                                                    </div>                                                    
-                                                    <div class="inv-case">
-                                                        {{if .Equipped.Accessories.Name}}
-                                                            <img src="../img/mcc/cos/accessories/{{.Equipped.Accessories.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/accessories/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Accessories.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Accessories.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Accessories.Rarity}}" draggable="false">
-                                                        {{else}}
-                                                            <img src="../img/mcc/cos/accessories/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
-                                                        {{end}}
+                                    {{if .Hats}}
+                                        <div class="cos-selector">
+                                            <button onclick="changeContent(this, 'equipped-content')" class="selected">
+                                                <img src="../img/mcc/cos/Equipped.png" alt="Equipped" class="no-select" draggable="false">
+                                                <span class="cos-text mc-font">Equipped</span>
+                                            </button>
+                                            <button onclick="changeContent(this, 'hats-content')">
+                                                <img src="../img/mcc/cos/Hats.png" alt="Hats" class="no-select" draggable="false">
+                                                <span class="cos-text mc-font">Hats</span>
+                                            </button>
+                                            <button onclick="changeContent(this, 'accessories-content')">
+                                                <img src="../img/mcc/cos/Accessories.png" alt="Accessories" class="no-select" draggable="false">
+                                                <span class="cos-text mc-font">Accessories</span>
+                                            </button>
+                                            <button onclick="changeContent(this, 'auras-content')">
+                                                <img src="../img/mcc/cos/Auras.png" alt="Auras" class="no-select" draggable="false">
+                                                <span class="cos-text mc-font">Auras</span>
+                                            </button>
+                                            <button onclick="changeContent(this, 'trails-content')">
+                                                <img src="../img/mcc/cos/Trails.png" alt="Trails" class="no-select" draggable="false">
+                                                <span class="cos-text mc-font">Trails</span>
+                                            </button>
+                                            <button onclick="changeContent(this, 'backs-content')">
+                                                <img src="../img/mcc/cos/Backs.png" alt="Backs" class="no-select" draggable="false">
+                                                <span class="cos-text mc-font">Cloaks</span>
+                                            </button>
+                                            <button onclick="changeContent(this, 'fishing-content')">
+                                                <img src="../img/mcc/cos/Fishing_Rods.png" alt="Fishing Rods" class="no-select" draggable="false">
+                                                <span class="cos-text mc-font">Fishing Rods</span>
+                                            </button>
+                                        </div>
+                                        <div class="cos-display-box">
+                                            <div id="equipped-content" class="cos-allcontents content active">
+                                                <img src="../img/mcc/cos/invs/Equipped.png" class="cos-case-header no-select" draggable="false">
+                                                <div class="cos-equipped-content">
+                                                    <div class="equip-left equip-cases">
+                                                        <div class="inv-case">
+                                                            {{if .Equipped.Hats.Name}}
+                                                                <img src="../img/mcc/cos/hats/{{.Equipped.Hats.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/hats/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Hats.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Hats.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Hats.Rarity}}" draggable="false">
+                                                            {{else}}
+                                                                <img src="../img/mcc/cos/hats/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
+                                                            {{end}}
+                                                        </div>                                                    
+                                                        <div class="inv-case">
+                                                            {{if .Equipped.Accessories.Name}}
+                                                                <img src="../img/mcc/cos/accessories/{{.Equipped.Accessories.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/accessories/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Accessories.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Accessories.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Accessories.Rarity}}" draggable="false">
+                                                            {{else}}
+                                                                <img src="../img/mcc/cos/accessories/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
+                                                            {{end}}
+                                                        </div>
+                                                        <div class="inv-case">
+                                                            {{if .Equipped.Auras.Name}}
+                                                                <img src="../img/mcc/cos/auras/{{.Equipped.Auras.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/auras/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Auras.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Auras.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/aura.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Auras.Rarity}}" draggable="false">
+                                                            {{else}}
+                                                                <img src="../img/mcc/cos/auras/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
+                                                            {{end}}
+                                                        </div>
                                                     </div>
-                                                    <div class="inv-case">
-                                                        {{if .Equipped.Auras.Name}}
-                                                            <img src="../img/mcc/cos/auras/{{.Equipped.Auras.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/auras/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Auras.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Auras.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/aura.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Auras.Rarity}}" draggable="false">
-                                                        {{else}}
-                                                            <img src="../img/mcc/cos/auras/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
-                                                        {{end}}
+                                                    <div class="equip-center equip-cases">
+                                                        <img src="../img/mcc/cos/invs/profile.png" class="cos-profile no-select" draggable="false">
+                                                        <img src="https://mc-heads.net/avatar/{{.Name}}" class="cos-head-overlay no-select" data-tippy-content="{{.Name}}" draggable="false">
+                                                        <img src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}{{else}}0{{end}}.png" class="cos-crown-overlay no-select" data-tippy-content="Level {{.CrownLevel}}" draggable="false">
+                                                    </div>
+                                                    <div class="equip-right equip-cases">
+                                                        <div class="inv-case">
+                                                            {{if .Equipped.Trails.Name}}
+                                                                <img src="../img/mcc/cos/trails/{{.Equipped.Trails.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/trails/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Trails.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Trails.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Trails.Rarity}}" draggable="false">
+                                                            {{else}}
+                                                                <img src="../img/mcc/cos/trails/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
+                                                            {{end}}
+                                                        </div>
+                                                        <div class="inv-case">
+                                                            {{if .Equipped.Backs.Name}}
+                                                                <img src="../img/mcc/cos/backs/{{.Equipped.Backs.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/backs/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Backs.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Backs.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/cloak.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Backs.Rarity}}" draggable="false">
+                                                            {{else}}
+                                                                <img src="../img/mcc/cos/backs/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
+                                                            {{end}}
+                                                        </div>
+                                                        <div class="inv-case">
+                                                            {{if .Equipped.Rods.Name}}
+                                                                <img src="../img/mcc/cos/fishing_rod/{{.Equipped.Rods.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/fishing_rod/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Rods.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Rods.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/rod.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Rods.Rarity}}" draggable="false">
+                                                            {{else}}
+                                                                <img src="../img/mcc/cos/fishing_rod/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
+                                                            {{end}}
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="equip-center equip-cases">
-                                                    <img src="../img/mcc/cos/invs/profile.png" class="cos-profile no-select" draggable="false">
-                                                    <img src="https://mc-heads.net/avatar/{{.Name}}" class="cos-head-overlay no-select" data-tippy-content="{{.Name}}" draggable="false">
-                                                    <img src="../img/mcc/crowns/{{if .Evolution}}{{.Evolution}}{{else}}0{{end}}.png" class="cos-crown-overlay no-select" data-tippy-content="Level {{.CrownLevel}}" draggable="false">
-                                                </div>
-                                                <div class="equip-right equip-cases">
-                                                    <div class="inv-case">
-                                                        {{if .Equipped.Trails.Name}}
-                                                            <img src="../img/mcc/cos/trails/{{.Equipped.Trails.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/trails/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Trails.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Trails.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Trails.Rarity}}" draggable="false">
-                                                        {{else}}
-                                                            <img src="../img/mcc/cos/trails/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
-                                                        {{end}}
+                                                <img src="../img/mcc/cos/invs/Equipped_Bottom.png" class="cos-case-downer no-select" draggable="false">
+                                            </div>
+                                            <div id="hats-content" class="cos-allcontents content hidden">
+                                                <img src="../img/mcc/cos/invs/Hats.png" class="cos-case-header no-select" draggable="false">
+                                                <div class="cos-inventory">
+                                                    <div class="left">
+                                                        <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-hats" draggable="false">
                                                     </div>
-                                                    <div class="inv-case">
-                                                        {{if .Equipped.Backs.Name}}
-                                                            <img src="../img/mcc/cos/backs/{{.Equipped.Backs.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/backs/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Backs.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Backs.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/cloak.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Backs.Rarity}}" draggable="false">
-                                                        {{else}}
-                                                            <img src="../img/mcc/cos/backs/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
-                                                        {{end}}
+                                                    <div class="mid" id="hats-container">
+                                                        <!-- Les hats seront insérés ici via JS -->
                                                     </div>
-                                                    <div class="inv-case">
-                                                        {{if .Equipped.Rods.Name}}
-                                                            <img src="../img/mcc/cos/fishing_rod/{{.Equipped.Rods.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/fishing_rod/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Rods.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Rods.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/rod.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Rods.Rarity}}" draggable="false">
-                                                        {{else}}
-                                                            <img src="../img/mcc/cos/fishing_rod/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
-                                                        {{end}}
+                                                    <div class="right">
+                                                        <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-hats" draggable="false">
                                                     </div>
                                                 </div>
+                                                <img src="../img/mcc/cos/invs/Hats_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Equipped_Bottom.png" class="cos-case-downer no-select" draggable="false">
-                                        </div>
-                                        <div id="hats-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Hats.png" class="cos-case-header no-select" draggable="false">
-                                            <div class="cos-inventory">
-                                                <div class="left">
-                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-hats" draggable="false">
+                                            <div id="accessories-content" class="cos-allcontents content hidden">
+                                                <img src="../img/mcc/cos/invs/Accessories.png" class="cos-case-header no-select" draggable="false">
+                                                <div class="cos-inventory">
+                                                    <div class="left">
+                                                        <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-accessories" draggable="false">
+                                                    </div>
+                                                    <div class="mid" id="accessories-container">
+                                                        <!-- Les accessories seront insérés ici via JS -->
+                                                    </div>
+                                                    <div class="right">
+                                                        <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-accessories" draggable="false">
+                                                    </div>
                                                 </div>
-                                                <div class="mid" id="hats-container">
-                                                    <!-- Les hats seront insérés ici via JS -->
-                                                </div>
-                                                <div class="right">
-                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-hats" draggable="false">
-                                                </div>
+                                                <img src="../img/mcc/cos/invs/Accessories_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Hats_Bottom.png" class="cos-case-downer no-select" draggable="false">
-                                        </div>
-                                        <div id="accessories-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Accessories.png" class="cos-case-header no-select" draggable="false">
-                                            <div class="cos-inventory">
-                                                <div class="left">
-                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-accessories" draggable="false">
+                                            <div id="auras-content" class="cos-allcontents content hidden">
+                                                <img src="../img/mcc/cos/invs/Auras.png" class="cos-case-header no-select" draggable="false">
+                                                <div class="cos-inventory">
+                                                    <div class="left">
+                                                        <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-auras" draggable="false">
+                                                    </div>
+                                                    <div class="mid" id="auras-container">
+                                                        <!-- Les auras seront insérées ici via JS -->
+                                                    </div>
+                                                    <div class="right">
+                                                        <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-auras" draggable="false">
+                                                    </div>
                                                 </div>
-                                                <div class="mid" id="accessories-container">
-                                                    <!-- Les accessories seront insérés ici via JS -->
-                                                </div>
-                                                <div class="right">
-                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-accessories" draggable="false">
-                                                </div>
+                                                <img src="../img/mcc/cos/invs/Auras_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Accessories_Bottom.png" class="cos-case-downer no-select" draggable="false">
-                                        </div>
-                                        <div id="auras-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Auras.png" class="cos-case-header no-select" draggable="false">
-                                            <div class="cos-inventory">
-                                                <div class="left">
-                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-auras" draggable="false">
+                                            <div id="trails-content" class="cos-allcontents content hidden">
+                                                <img src="../img/mcc/cos/invs/Trails.png" class="cos-case-header no-select" draggable="false">
+                                                <div class="cos-inventory">
+                                                    <div class="left">
+                                                        <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-trails" draggable="false">
+                                                    </div>
+                                                    <div class="mid" id="trails-container">
+                                                        <!-- Les trails seront insérés ici via JS -->
+                                                    </div>
+                                                    <div class="right">
+                                                        <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-trails" draggable="false">
+                                                    </div>
                                                 </div>
-                                                <div class="mid" id="auras-container">
-                                                    <!-- Les auras seront insérées ici via JS -->
-                                                </div>
-                                                <div class="right">
-                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-auras" draggable="false">
-                                                </div>
+                                                <img src="../img/mcc/cos/invs/Trails_Bottom.png" class="cos-case-downer no-select" draggable="false">
+                                            </div>                                                                               
+                                            <div id="backs-content" class="cos-allcontents content hidden">
+                                                <img src="../img/mcc/cos/invs/Backs.png" class="cos-case-header no-select" draggable="false">
+                                                <h2>Cloaks</h2>
+                                                <p>{{index .Translations .Lang "coming_soon"}}</p>
+                                                <p>{{index .Translations .Lang "api_not_working"}}</p>
+                                                <img src="../img/mcc/cos/invs/Backs_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Auras_Bottom.png" class="cos-case-downer no-select" draggable="false">
-                                        </div>
-                                        <div id="trails-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Trails.png" class="cos-case-header no-select" draggable="false">
-                                            <div class="cos-inventory">
-                                                <div class="left">
-                                                    <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-trails" draggable="false">
-                                                </div>
-                                                <div class="mid" id="trails-container">
-                                                    <!-- Les trails seront insérés ici via JS -->
-                                                </div>
-                                                <div class="right">
-                                                    <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-trails" draggable="false">
-                                                </div>
+                                            <div id="fishing-content" class="cos-allcontents content hidden">
+                                                <img src="../img/mcc/cos/invs/Fishing_Rods.png" class="cos-case-header no-select" draggable="false">
+                                                <h2>Rods</h2>
+                                                <p>{{index .Translations .Lang "coming_soon"}}</p>
+                                                <p>{{index .Translations .Lang "api_not_working"}}</p>
+                                                <img src="../img/mcc/cos/invs/Fishing_Rods_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                             </div>
-                                            <img src="../img/mcc/cos/invs/Trails_Bottom.png" class="cos-case-downer no-select" draggable="false">
-                                        </div>                                                                               
-                                        <div id="backs-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Backs.png" class="cos-case-header no-select" draggable="false">
-                                            <h2>Cloaks</h2>
-                                            <p>Comming Soon!</p>
-                                            <p>(MCCIsland api not working yet)</p>
-                                            <img src="../img/mcc/cos/invs/Backs_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                         </div>
-                                        <div id="fishing-content" class="cos-allcontents content hidden">
-                                            <img src="../img/mcc/cos/invs/Fishing_Rods.png" class="cos-case-header no-select" draggable="false">
-                                            <h2>Rods</h2>
-                                            <p>Comming Soon!</p>
-                                            <p>(MCCIsland api not working yet)</p>
-                                            <img src="../img/mcc/cos/invs/Fishing_Rods_Bottom.png" class="cos-case-downer no-select" draggable="false">
-                                        </div>
-                                    </div>
+                                    {{else}}
+                                        <p>{{index .Translations .Lang "no_cos"}}</p>
+                                    {{end}}
                                 </div>                           
                             </div>
                             <!-- Fishs Roll -->
                             <div class="roll-card fishs-card" id="FishsCard">
                                 <div class="roll-header fishs-header cursor" onclick="toggleRoll('FishsBody', 'fishs-arrow')">
                                     <img src="../img/mcc/fishing/fish/verdant_woods/forest_cod.png" alt="Fishs Icon" class="roll-icon no-select" draggable="false">
-                                    <h2>Fishing</h2>
+                                    <h2>{{index .Translations .Lang "roll-fishing"}}</h2>
                                     <img id="fishs-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select">
                                 </div>
                                 <div class="roll-body" id="FishsBody">
-                                    <p>Comming Soon</p>
+                                    <p>{{index .Translations .Lang "coming_soon"}}</p>
                                 </div>
                             </div>  
                         </div>
@@ -717,7 +721,7 @@
                         <h2>Hypixel Stats</h2>
                     </div>
                     <div class="stats-body">
-                        <p id="hypixelStats">Will be  available soon!!!</p>
+                        <p id="hypixelStats">{{index .Translations .Lang "coming_soon"}}</p>
                     </div>
                 </div>
             </div>
@@ -961,10 +965,10 @@
         </script>                        
         <script>
             function redirectToRankPage(rankPage) {
-                window.location.href = "/classement/" + rankPage;
+                window.location.href = "/{{.Lang}}/classement/" + rankPage;
             }
             function refreshSearch() {
-                window.location.href = "/menu"
+                window.location.href = "/{{.Lang}}/menu"
             }
             tippy("[data-tippy-content]", {
                 duration: 200,

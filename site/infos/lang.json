@@ -1,0 +1,30 @@
+{
+    "fr-FR": {
+        "roll-friends": "Amis",
+        "roll-stats": "Statistiques",
+        "roll-cos": "Cosmetiques",
+        "roll-fishing": "Pêche",
+        "no_classement": "Le Joueur ne peut pas être classé",
+        "no_cape": "Ce joueur ne possède aucune cape",
+        "no_friend": "Le joueur n'a aucun ami ou n'a pas ouvert ses APIs.",
+        "no_stats": "Le joueur n'a aucune statistique sur le serveur ou n'a pas ouvert ses APIs.",
+        "no_cos": "Le joueur ne possède pas de cosmétiques ou n'a pas ouvert ses APIs.",
+        "api_not_working": "L'API est actuellement hors service.",
+        "coming_soon": "Bientôt disponible !",
+        "cl-classement": "Classement des Joueurs"
+    },
+    "en-US": {
+        "roll-friends": "Friends",
+        "roll-stats": "Statistics",
+        "roll-cos": "Cosmetics",
+        "roll-fishing": "Fishing",
+        "no_classement": "The player cannot be ranked",
+        "no_cape": "This player has no cape",
+        "no_friend": "The player has no friends or has not opened their APIs.",
+        "no_stats": "The player has no stats on the server or has not opened their APIs.",
+        "no_cos": "The player has no cosmetics or has not opened their APIs.",
+        "api_not_working": "The API is currently down.",
+        "coming_soon": "Coming soon!",
+        "cl-classement": "Player Rankings"
+    }
+}
