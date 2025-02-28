@@ -590,27 +590,59 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
+	// Extraire les capes demandées dans l'URL
+	capesParam := r.URL.Query().Get("capes")
+	var requestedCapes []string
+	if capesParam != "" {
+		requestedCapes = strings.Split(capesParam, ",")
+	}
+
+	// Avant de filtrer, mettez à jour les rangs de tous les joueurs
+	for i := range classement.Joueurs {
+		classement.Joueurs[i].Rank = i + 1 // Récupère le rang global
+	}
+
+	// Filtrer tous les joueurs en fonction des capes avant de paginer
+	var filteredPlayers []Joueur
+	for _, joueur := range classement.Joueurs {
+		// Vérifier si le joueur possède toutes les capes demandées
+		hasAllRequestedCapes := true
+		for _, cape := range requestedCapes {
+			if !playerHasCape(joueur, cape) {
+				hasAllRequestedCapes = false
+				break
+			}
+		}
+
+		// Ajouter le joueur à la liste filtrée s'il possède toutes les capes
+		if hasAllRequestedCapes {
+			filteredPlayers = append(filteredPlayers, joueur)
+		}
+	}
+
 	// Définir la taille du groupe de joueurs par page
 	const pageSize = 50
 	startIndex := (page - 1) * pageSize
 	endIndex := startIndex + pageSize
 
-	// Vérifier que l'index ne dépasse pas la taille du classement
-	if startIndex >= len(classement.Joueurs) {
+	// Vérifier que l'index ne dépasse pas la taille du classement filtré
+	if startIndex >= len(filteredPlayers) {
 		http.Error(w, "Page inexistante", http.StatusNotFound)
 		return
 	}
 
-	if endIndex > len(classement.Joueurs) {
-		endIndex = len(classement.Joueurs)
+	if endIndex > len(filteredPlayers) {
+		endIndex = len(filteredPlayers)
 	}
 
 	// Extraire les joueurs pour la page demandée
-	joueursPage := classement.Joueurs[startIndex:endIndex]
+	joueursPage := filteredPlayers[startIndex:endIndex]
 
-	// Mettre à jour le rang des joueurs pour refléter leur position globale
+	// Mettre à jour le rang des joueurs filtrés pour refléter leur position globale
 	for i := range joueursPage {
-		joueursPage[i].Rank = startIndex + i + 1
+		// Utilisez la position originale du joueur dans la liste complète
+		originalPlayer := findPlayerByUUID(classement.Joueurs, joueursPage[i].UUID)
+		joueursPage[i].Rank = originalPlayer.Rank
 	}
 
 	// Renvoyer la page HTML avec les données du classement
@@ -641,7 +673,7 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		Classement:   joueursPage,
 		Page:         page,
 		HasPrev:      page > 1,
-		HasNext:      endIndex < len(classement.Joueurs),
+		HasNext:      endIndex < len(filteredPlayers),
 		Lang:         lang,
 		Translations: translations, // Passer les traductions au template
 		ImageURLs:    capeInfos,    // Passer les capes au template
@@ -652,6 +684,28 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
+}
+
+func findPlayerByUUID(players []Joueur, uuid string) *Joueur {
+	for i := range players {
+		if players[i].UUID == uuid {
+			return &players[i]
+		}
+	}
+	return nil
+}
+
+func playerHasCape(joueur Joueur, capeName string) bool {
+	// Parcourir la liste des capes du joueur
+	for _, cape := range joueur.Capelist {
+		// Assumer que chaque élément de Capelist est une structure contenant un champ Name
+		if capeMap, ok := cape.(map[string]interface{}); ok {
+			if name, exists := capeMap["name"].(string); exists && name == capeName {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 func setupFileServer(path, route string) {
@@ -677,7 +731,7 @@ func main() {
 	http.HandleFunc("/dbdl", downloadFileHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1607", nil); err != nil {
+	if err := http.ListenAndServe(":1609", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

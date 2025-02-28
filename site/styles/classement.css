@@ -543,6 +543,7 @@ main {
     display: flex;
     flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
     gap: 5px;
+    width: 100%;
     margin: 5px 5px;
 }
 
