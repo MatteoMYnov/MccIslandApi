@@ -128,7 +128,8 @@
                     selectedCapes.push(image.getAttribute('data-name'));
                 });
                 let currentUrl = new URL(window.location.href);
-                currentUrl.searchParams.set("capes", selectedCapes.join(","));
+                currentUrl.searchParams.set("capes", selectedCapes.join(",")); // Ajouter les capes sélectionnées à l'URL
+                currentUrl.pathname = `/{{.Lang}}/classement/1`; // Assurez-vous de rediriger vers la première page du classement
                 window.location.href = currentUrl.toString(); // Redirige vers l'URL mise à jour
             });
 

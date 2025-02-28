@@ -620,6 +620,12 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	// Si aucun joueur ne correspond au filtre, rediriger vers la page 1 sans filtre
+	if len(filteredPlayers) == 0 {
+		http.Redirect(w, r, fmt.Sprintf("/%s/classement/1", lang), http.StatusFound)
+		return
+	}
+
 	// Définir la taille du groupe de joueurs par page
 	const pageSize = 50
 	startIndex := (page - 1) * pageSize
