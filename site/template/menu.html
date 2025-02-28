@@ -34,7 +34,7 @@
                         <img id="profileImage" src="https://mc-heads.net/head/{{.Name}}" alt="Player Image" class="profile-image no-select" draggable="false">
                         <p id="playerName" class="{{.PlayerClass}}">{{.Name}}</p>
                         {{if .BackgroundUUID}}
-                            <img src="../img/mcc/utilities/theme.png" alt="Player Using Theme" class="theme-image no-select" data-tippy-content="Ce Joueur a demandé au responsable du site d'avoir un thème custom" data-theme="theme" draggable="false">
+                            <img src="../img/mcc/utilities/theme.png" alt="Player Using Theme" class="theme-image no-select" data-tippy-content='{{index .Translations .Lang "asked_for_theme"}}' data-theme="theme" draggable="false">
                         {{end}}
                     </div>
                 </div>

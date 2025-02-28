@@ -1,8 +1,9 @@
 {
     "fr-FR": {
+        "asked_for_theme": "Ce joueur a demandé à l'administrateur du site de lui attribuer un thème personnalisé.",
         "roll-friends": "Amis",
         "roll-stats": "Statistiques",
-        "roll-cos": "Cosmetiques",
+        "roll-cos": "Cosmétiques",
         "roll-fishing": "Pêche",
         "no_classement": "Le Joueur ne peut pas être classé",
         "no_cape": "Ce joueur ne possède aucune cape",
@@ -15,6 +16,7 @@
         "cl-filter": "Filtre de Capes"
     },
     "en-US": {
+        "asked_for_theme": "This player has requested the site administrator to assign them a custom theme.",
         "roll-friends": "Friends",
         "roll-stats": "Statistics",
         "roll-cos": "Cosmetics",
