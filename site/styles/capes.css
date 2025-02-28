@@ -172,8 +172,13 @@ main {
     object-fit: cover;
     border-radius: 5px;
     image-rendering: pixelated;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     position: relative;
+    filter: none;
+}
+
+.cape-image.selected {
+    filter: brightness(1) saturate(1) hue-rotate(90deg); /* Applique un effet vert uniquement quand sélectionné */
 }
 
 .cape-title {

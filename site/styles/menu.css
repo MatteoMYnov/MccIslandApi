@@ -962,18 +962,6 @@ body.modal-open {
     transition: background-color 0.3s, filter 0.3s;
 }
 
-.friend-card::before {
-    content: ""; /* Élément pseudo pour la bordure */
-    position: absolute;
-    top: 2px; /* Ajuste la position pour ne pas toucher l'outline */
-    left: 2px;
-    right: 2px;
-    height: 4px; /* Épaisseur de la bordure */
-    background: rgba(255, 255, 255, 0.01); /* Couleur plus claire */
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-
 .friend-info {
     display: flex;
     align-items: center;

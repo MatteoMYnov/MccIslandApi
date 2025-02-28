@@ -98,6 +98,201 @@ body::before {
     height: 100%;
 }
 
+/* Modal */
+@keyframes slide {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.filter {
+    display: flex; /* Utilisation de flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.filter-content {
+    overflow-y: auto;
+    background-color: var(--main-gray);
+    width: 80%;
+    max-width: 600px;
+    color: #fff;
+    animation: slide 0.5s ease-out;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+    margin: 0 auto; /* Centrer horizontalement */
+}
+
+.filter-body {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 300px;
+    background-color: var(--main-gray);
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+.filter-button {
+    width: 32px; /* Ajuster selon l'image */
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    image-rendering: pixelated;
+}
+
+.filter-button:hover {
+    transform: scale(1.1);
+}
+
+.filter-content .stats-header {
+    background-color: var(--main-dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.25), 0.125rem -0.125rem 0 0 rgba(0, 0, 0, 0.3) inset, -0.125rem 0.125rem 0 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+.cape-hole {
+    border: .125rem solid var(--main-black);
+    background: var(--hole-gray);
+    box-shadow: inset 0 .375rem 0 0 rgba(0, 0, 0, .5);
+    margin: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px
+}
+
+.cape-container {
+    position: relative;
+    width: calc(90% / 5 - 30px);
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    image-rendering: pixelated;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cape-container:hover {
+    transform: scale(1.05); /* Appliquer le scale lors du survol */
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+
+.cape-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%; /* Assurez-vous que l'overlay occupe également toute la hauteur de son conteneur */
+    background-color: rgba(0, 255, 0, 0); /* Transparent par défaut */
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    pointer-events: none; /* Empêche l'interaction avec l'overlay */
+}
+
+.cape-container:hover .cape-overlay {
+    transform: scale(1.05); /* Agrandit l'overlay en même temps que la cape */
+    transition: transform 0.3s ease; /* Ajoute une transition pour que l'effet soit fluide */
+}
+
+.cape-container.selected .cape-overlay {
+    background-color: rgba(0, 255, 0, 0.2); /* Vert semi-transparent */
+    outline: 1px solid rgba(0, 255, 0, 1);
+}
+
+.cape-image {
+    width: 100%;
+    height: 100%; /* Assurez-vous que l'image occupe toute la hauteur de son conteneur */
+    object-fit: cover;
+    border-radius: 5px;
+    image-rendering: pixelated;
+    position: relative;
+    z-index: 0;
+}
+
+
+.cape-title {
+    opacity: 0;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: var(--abs-white);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.cape-container:hover .cape-title {
+    opacity: 1;
+}
+
+.removed-cape {
+    filter: grayscale(100%) brightness(1.1);
+}
+
+.legendary-cape:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 2px #ffbf00;
+}
+
+.special-cape:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 2px #9f00e9;
+}
+
+.rare-cape:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 2px #007ed2;
+}
+
+.common-cape:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 2px gray;
+}
+
+.optifine-cape:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 2px #ff0000;
+}
+
+.apply-filter-image {
+    width: 48px; /* Ajuste la taille de l'image */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    image-rendering: pixelated;
+    position: absolute;
+    right: 20px; /* Colle l'image à droite */
+    top: .7rem;
+}
+
+.apply-filter-image:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+
 .find-player {
     background-color: #491F1F;
     padding: 10px;
@@ -260,115 +455,6 @@ main {
     z-index: 3
 }
 
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-}
-
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.modal.show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: slideInFromLeft 0.5s ease-out;
-}
-
-.modal-content {
-    overflow-y: auto;
-    background-color: #323232;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    color: #fff;
-    animation: slideInFromLeft 0.5s ease-out;
-    transform: translateX(0);
-    transition: transform 0.5s ease-in-out;
-}
-
-.modal-header {
-    background-color: #292929;
-    text-align: center;
-    padding: 10px;
-}
-
-.modal-image {
-    width: 100px;
-    height: auto;
-    border-radius: 5px;
-    image-rendering: pixelated;
-    object-fit: cover;
-    background-color: #222;
-    padding: 10px;
-}
-
-.modal-body {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.modal-name{
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    color: #fff ;
-    margin-top: 20px;
-}
-
-.modal-date {
-    font-size: 18px;
-    color: #ddd;
-}
-
-.modal-desc {
-    font-size: 18px;
-    color: #aaa;
-}
-
-.modal-content {
-    transition: max-height 0.3s ease-in-out;
-}
-
-.modal-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.modal-images:empty {
-    display: none !important;
-}
-
-.modal-image-item {
-    width: 100px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-    background-color: #222;
-    padding: 5px !important;
-}
-
 /* classement */
 .classement-card {
     width: 99%;
@@ -491,6 +577,10 @@ main {
 }
 .go-arrow:hover {
     scale: 1.1;
+}
+
+.mc-font {
+    font-family: 'Minecraftia', 'Roboto', sans-serif;
 }
 
 :root {

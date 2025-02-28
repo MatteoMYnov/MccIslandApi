@@ -89,14 +89,6 @@
       "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2015"},{"name": "2013"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "realms"},{"name": "mojangoffice"}]
     },
     {
-      "uuid": "",
-      "capes": 13,
-      "score": 26,
-      "actualname": "evilETH",
-      "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2015"},{"name": "2013"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "realms"},{"name": "mojangoffice"}]
-    },
-    {
       "uuid": "fa0f91ac-8dbf-4d7c-b2d0-296ee7631986",
       "capes": 12,
       "score": 25,
@@ -9791,6 +9783,14 @@
       "actualname": "crvshasx",
       "badge": "",
       "capelist": [{"name": "mcc"}]
+    },
+    {
+      "uuid": "",
+      "capes": 1,
+      "score": 0,
+      "actualname": "Fuzzlyman",
+      "badge": "",
+      "capelist": [{"name": "turtle"}]
     },
     {
       "uuid": "03dcea60-c134-4af5-b479-aa85c10cac53",

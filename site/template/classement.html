@@ -26,9 +26,7 @@
             </nav>
         </header>
         <main>
-            <!-- Conteneur général pour les cartes -->
             <div class="players-container">
-                <!-- Classement Card -->
                 <div class="players-card" id="playersCard">
                     <div class="stats-header">
                         {{ if .HasPrev }}
@@ -47,14 +45,15 @@
                                     <div class="player-card" data-playeruuid="{{.UUID}}" data-playeractualname="{{.ActualName}}">
                                         <div class="player-info">
                                             <p class="rank">#{{.Rank}}</p>
-                                            <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select no-select">
+                                            <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select">
                                             <p>{{.ActualName}}</p>
                                             {{if .Badge}}
-                                                <img src="/img/badges/{{.Badge}}.png" class="badge no-select no-select">
+                                                <img src="/img/badges/{{.Badge}}.png" class="badge no-select">
                                             {{end}}
                                         </div>
                                     </div>
                                 {{end}}
+                                <img id="openFilter" src="/img/mcc/utilities/filter.png" class="filter-button no-select cursor" alt="Filtrer les capes">
                             {{else}}
                                 <p>La liste ne charge pas</p>
                             {{end}}
@@ -62,36 +61,81 @@
                     </div> 
                 </div>  
             </div>
-            <!-- Modal -->
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <img src="/img/capes/default-placeholder.png" alt="Image" class="modal-image">
+            <div id="filterModal" class="filter" style="display: none;">
+                <div class="filter-content">
+                    <div class="stats-header">
+                        <h2>{{index .Translations .Lang "cl-filter"}}</h2>
+                        <img src="/img/mcc/utilities/layers/check.png" id="applyFilterImage" class="apply-filter-image no-select cursor" alt="Appliquer les filtres">
                     </div>
-                    <div class="modal-body">
-                        <p class="modal-name">Name PlaceHolder</p>
-                        <p class="modal-date">Date PlaceHolder</p>
-                        <p class="modal-desc">Description PlaceHolder</p>
-                        <div class="modal-images" style="display: block;">
-                            <img src="/img/capes/default-placeholder.png" title="Default Title" alt="Default Alt" class="modal-image-item" id="modalImage1">
+                    <div class="filter-body">
+                        <div class="cape-hole">
+                            {{if .ImageURLs}}
+                                {{range .ImageURLs}}
+                                    <div class="cape-container">
+                                        <div class="cape-overlay"></div> <!-- Surcouche invisible au départ -->
+                                        <img src="{{.URL}}" alt="Cape Image" class="cape-image {{.Class}}" data-name="{{.CapeName}}">
+                                        <p class="cape-title mc-font">{{.Title}}</p>
+                                    </div>                                 
+                                {{end}}
+                            {{else}}
+                                <p class="no-cape">Aucune cape disponible</p>
+                            {{end}}
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>            
         </main>
         <script src="/js/scroll.js"></script>
         <script src="/js/modal.js"></script>
         <script>
-            // Sélectionner tous les éléments .player-card
-            const playerCards = document.querySelectorAll('.player-card');
+            document.getElementById("openFilter").addEventListener("click", function() {
+                document.getElementById("filterModal").style.display = "flex"; // Affiche le modal en utilisant "flex"
+            });
 
-            // Ajouter un événement de clic sur chaque carte
+            // Fermer le modal lorsque l'utilisateur clique en dehors de celui-ci
+            document.addEventListener("click", function(event) {
+                let modal = document.getElementById("filterModal");
+                if (event.target === modal) {
+                    modal.style.display = "none"; // Cache le modal
+                }
+            });
+
+            // Gestion du clic sur les images des capes
+            const capeImages = document.querySelectorAll('.cape-image');
+            capeImages.forEach(image => {
+                image.addEventListener('click', function() {
+                    const capeContainer = image.closest('.cape-container');
+                    capeContainer.classList.toggle('selected');
+                    image.classList.toggle('selected'); // Toggle l'état sélectionné
+                    updateURL(); // Met à jour l'URL en fonction des capes sélectionnées
+                });
+            });
+
+            function updateURL() {
+                let selectedCapes = [];
+                document.querySelectorAll('.cape-image.selected').forEach(image => {
+                    selectedCapes.push(image.getAttribute('data-name'));
+                });
+                let currentUrl = new URL(window.location.href);
+                currentUrl.searchParams.set("capes", selectedCapes.join(","));
+                window.history.pushState({}, "", currentUrl.toString()); // Met à jour l'URL sans recharger la page
+            }
+
+            // Appliquer les filtres
+            document.getElementById("applyFilterImage").addEventListener("click", function() {
+                let selectedCapes = [];
+                document.querySelectorAll('.cape-image.selected').forEach(image => {
+                    selectedCapes.push(image.getAttribute('data-name'));
+                });
+                let currentUrl = new URL(window.location.href);
+                currentUrl.searchParams.set("capes", selectedCapes.join(","));
+                window.location.href = currentUrl.toString(); // Redirige vers l'URL mise à jour
+            });
+
+            const playerCards = document.querySelectorAll('.player-card');
             playerCards.forEach(card => {
                 card.addEventListener('click', function() {
-                    // Récupérer l'UUID du joueur à partir de l'attribut data-playeruuid
                     const playerUUID = card.getAttribute('data-playeruuid');
-                    
-                    // Rediriger vers la page en utilisant l'UUID dans l'URL
                     window.location.href = `/{{.Lang}}/menu?q=${playerUUID}`;
                 });
             });
@@ -99,12 +143,18 @@
             document.addEventListener("DOMContentLoaded", function () {
                 function getCurrentPageNumber() {
                     const match = window.location.pathname.match(/\/classement\/(\d+)/);
-                    return match ? parseInt(match[1], 10) : 1; // Par défaut, page 1 si non trouvé
+                    return match ? parseInt(match[1], 10) : 1;
                 }
 
                 function navigateToPage(pageNumber) {
-                    if (pageNumber > 0) { // Empêche d'aller en dessous de 1
-                        window.location.href = `/{{.Lang}}/classement/${pageNumber}`;
+                    if (pageNumber > 0) {
+                        const currentUrl = new URL(window.location.href);
+                        const capesParam = currentUrl.searchParams.get("capes"); // Récupérer le paramètre capes actuel
+                        if (capesParam) {
+                            currentUrl.searchParams.set("capes", capesParam); // Maintenir les capes
+                        }
+                        currentUrl.pathname = `/{{.Lang}}/classement/${pageNumber}`; // Mettre à jour le chemin de la page
+                        window.location.href = currentUrl.toString(); // Rediriger avec l'URL mise à jour
                     }
                 }
 
@@ -120,6 +170,20 @@
                 if (goRightButton) {
                     goRightButton.addEventListener('click', function () {
                         navigateToPage(getCurrentPageNumber() + 1);
+                    });
+                }
+
+                // Récupérer les capes sélectionnées dans l'URL et les marquer comme sélectionnées
+                const urlParams = new URLSearchParams(window.location.search);
+                const capesParam = urlParams.get('capes');
+                if (capesParam) {
+                    const selectedCapes = capesParam.split(',');
+                    selectedCapes.forEach(capeName => {
+                        document.querySelectorAll(`.cape-image[data-name="${capeName}"]`).forEach(image => {
+                            image.classList.add('selected');
+                            const capeContainer = image.closest('.cape-container');
+                            capeContainer.classList.add('selected'); // Ajouter la classe "selected" sur le conteneur également
+                        });
                     });
                 }
             });

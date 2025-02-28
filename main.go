@@ -572,6 +572,24 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 
 	translations := load.LoadTranslations(lang)
 
+	// Charger les capes
+	capeGroups, err := minecraft.LoadCapeGroups()
+	if err != nil {
+		http.Error(w, "Erreur lors du chargement des capes", http.StatusInternalServerError)
+		return
+	}
+
+	var capeInfos []CapeInfo
+	for _, cape := range capeGroups.Capes {
+		capeInfos = append(capeInfos, CapeInfo{
+			URL:      "/img/capes/" + cape.Name + ".png",
+			Class:    cape.Type + "-cape",
+			CapeName: cape.Name,
+			Title:    cape.Title,
+			Removed:  false,
+		})
+	}
+
 	// Définir la taille du groupe de joueurs par page
 	const pageSize = 50
 	startIndex := (page - 1) * pageSize
@@ -618,6 +636,7 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		HasPrev      bool
 		Lang         string
 		Translations load.Translations // Ajouter ici les traductions
+		ImageURLs    []CapeInfo        // Ajouter les capes
 	}{
 		Classement:   joueursPage,
 		Page:         page,
@@ -625,6 +644,7 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		HasNext:      endIndex < len(classement.Joueurs),
 		Lang:         lang,
 		Translations: translations, // Passer les traductions au template
+		ImageURLs:    capeInfos,    // Passer les capes au template
 	}
 
 	// Exécuter le template avec les données
@@ -657,7 +677,7 @@ func main() {
 	http.HandleFunc("/dbdl", downloadFileHandler)
 	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1601", nil); err != nil {
+	if err := http.ListenAndServe(":1607", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

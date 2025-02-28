@@ -11,7 +11,8 @@
         "no_cos": "Le joueur ne possède pas de cosmétiques ou n'a pas ouvert ses APIs.",
         "api_not_working": "L'API est actuellement hors service.",
         "coming_soon": "Bientôt disponible !",
-        "cl-classement": "Classement des Joueurs"
+        "cl-classement": "Classement des Joueurs",
+        "cl-filter": "Filtre de Capes"
     },
     "en-US": {
         "roll-friends": "Friends",
@@ -25,6 +26,7 @@
         "no_cos": "The player has no cosmetics or has not opened their APIs.",
         "api_not_working": "The API is currently down.",
         "coming_soon": "Coming soon!",
-        "cl-classement": "Player Rankings"
+        "cl-classement": "Player Rankings",
+        "cl-filter": "Capes Filter"
     }
 }
