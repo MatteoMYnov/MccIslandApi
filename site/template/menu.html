@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../styles/menu.css?v=1.0">
         <link rel="stylesheet" href="../styles/cos.css?v=1.0">
         <link rel="stylesheet" href="../styles/tippy.css?v=1.0">
+        <link rel="stylesheet" href="../styles/loading.css?v=1.0">
         <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
     </head>
     <body style="--bg-image-url: url('../img/utilities{{if .BackgroundUUID}}/perplayers/{{.BackgroundUUID}}/bg.png{{else}}/bg.png{{end}}');">
@@ -741,12 +742,16 @@
                     </div>
                 </div>
             </div>
+            <div id="loadingOverlay" class="loadingOverlay">
+                <img src="../img/utilities/loading.gif" class="loadingGif" alt="Loading..." id="loadingGif" draggable="false">
+            </div>
         </main>
         <script src="../js/scroll.js"></script>
         <script src="../js/modal.js"></script>
         <script src="../js/cos.js"></script>
         <script src="../js/friends.js"></script>
         <script src="../js/sounds.js"></script>
+        <script src="../js/loading.js"></script>
         <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
         <script src ="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
         <script src ="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
@@ -761,6 +766,10 @@
 
                 // Redirection vers l'URL du joueur comme le ferait le formulaire
                 window.location.href = `${baseUrl}/${lang}/menu?q=${playerName}`;
+                document.getElementById("loadingOverlay").style.display = "flex";
+                setTimeout(function() {
+                    document.getElementById("loadingOverlay").style.display = "none";
+                }, 5000);
             }
 
             function generateTooltipContent(item, itemType) {
@@ -977,9 +986,17 @@
         <script>
             function redirectToRankPage(rankPage) {
                 window.location.href = "/{{.Lang}}/classement/" + rankPage;
+                document.getElementById("loadingOverlay").style.display = "flex";
+                setTimeout(function() {
+                    document.getElementById("loadingOverlay").style.display = "none";
+                }, 5000);
             }
             function refreshSearch() {
                 window.location.href = "/{{.Lang}}/menu"
+                document.getElementById("loadingOverlay").style.display = "flex";
+                setTimeout(function() {
+                    document.getElementById("loadingOverlay").style.display = "none";
+                }, 5000);
             }
             tippy("[data-tippy-content]", {
                 duration: 200,

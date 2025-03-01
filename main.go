@@ -212,40 +212,6 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 	return friendInfo
 }
 
-func capesHandler(w http.ResponseWriter, r *http.Request) {
-	capeGroups, err := minecraft.LoadCapeGroups()
-	if err != nil {
-		http.Error(w, "Erreur lors du chargement des capes", http.StatusInternalServerError)
-		return
-	}
-
-	var capeInfos []CapeInfo
-	for _, cape := range capeGroups.Capes {
-		capeInfos = append(capeInfos, CapeInfo{
-			URL:      "/img/capes/" + cape.Name + ".png",
-			Class:    cape.Type + "-cape",
-			CapeName: cape.Name,
-			Title:    cape.Title,
-			Removed:  false,
-		})
-	}
-
-	data := struct {
-		ImageURLs []CapeInfo
-	}{
-		ImageURLs: capeInfos,
-	}
-
-	tmplPath := filepath.Join("site", "template", "capes.html")
-	tmpl, err := template.ParseFiles(tmplPath)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	tmpl.Execute(w, data)
-}
-
 func menuHandler(w http.ResponseWriter, r *http.Request) {
 	parts := strings.Split(r.URL.Path, "/")
 	if len(parts) < 2 {
@@ -735,9 +701,8 @@ func main() {
 	http.HandleFunc("/fr-FR/classement/", classementHandler)
 
 	http.HandleFunc("/dbdl", downloadFileHandler)
-	http.HandleFunc("/capes", capesHandler)
 
-	if err := http.ListenAndServe(":1609", nil); err != nil {
+	if err := http.ListenAndServe(":1603", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Players Classement</title>
         <link rel="stylesheet" href="/styles/classement.css?v=1.0">
+        <link rel="stylesheet" href="/styles/loading.css?v=1.0">
         <link id="favicon" rel="icon" href="/img/mcc/trophies/total_trophies.png" type="image/png">
     </head>
     <body>
@@ -83,9 +84,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="loadingOverlay" class="loadingOverlay">
+                <img src="/img/utilities/loading.gif" class="loadingGif" alt="Loading..." id="loadingGif" draggable="false">
             </div>            
         </main>
         <script src="/js/scroll.js"></script>
+        <script src="../js/loading.js"></script>
         <script src="/js/modal.js"></script>
         <script>
             document.getElementById("openFilter").addEventListener("click", function() {
@@ -138,6 +143,10 @@
                 card.addEventListener('click', function() {
                     const playerUUID = card.getAttribute('data-playeruuid');
                     window.location.href = `/{{.Lang}}/menu?q=${playerUUID}`;
+                    document.getElementById("loadingOverlay").style.display = "flex";
+                    setTimeout(function() {
+                        document.getElementById("loadingOverlay").style.display = "none";
+                    }, 5000);
                 });
             });
 

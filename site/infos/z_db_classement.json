@@ -385,6 +385,14 @@
       "capelist": [{"name": "migrator_cape"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "mojira"}]
     },
     {
+      "uuid": "5f522562-d86e-4874-93a5-7bd8cdbb0561",
+      "capes": 10,
+      "score": 19,
+      "actualname": "Spiralio",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "twitch"},{"name": "tiktok"}]
+    },
+    {
       "uuid": "de3b1b83-309f-4804-bec7-6d1e646f5722",
       "capes": 10,
       "score": 18,
@@ -1071,6 +1079,14 @@
       "actualname": "NotStove",
       "badge": "",
       "capelist": [{"name": "2015"},{"name": "2012"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "15A"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "",
+      "capes": 9,
+      "score": 17,
+      "actualname": "EVGENSYPERPRO",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "15A"},{"name": "mojira"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"}]
     },
     {
       "uuid": "bfae6390-cf66-445f-b5ca-5895adc60a69",
@@ -3599,6 +3615,14 @@
       "actualname": "Spintown",
       "badge": "",
       "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"}]
+    },
+    {
+      "uuid": "d58023e0-5d55-47f5-9ef2-0886c5fd4e40",
+      "capes": 8,
+      "score": 18,
+      "actualname": "ChildOfStars",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2015"},{"name": "realms"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mojangoffice"}]
     },
     {
       "uuid": "dbba4003-2ef3-4857-ab28-610501f34d51",
@@ -6945,6 +6969,22 @@
       "capelist": [{"name": "mcc"},{"name": "mojangoffice"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "mojira"}]
     },
     {
+      "uuid": "06da95e1-5e9a-47ef-9d21-a7e75571f42c",
+      "capes": 7,
+      "score": 15,
+      "actualname": "tiliba",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "mcexp"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "79dc6617-9266-43ee-a357-9b2c57fe3b2c",
+      "capes": 7,
+      "score": 15,
+      "actualname": "Stannya",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"},{"name": "15A"},{"name": "vanilla_cape"},{"name": "twitch"},{"name": "tiktok"},{"name": "mojangoffice"}]
+    },
+    {
       "uuid": "c5fce668-9c85-4731-ba4a-b2d351bb8ec1",
       "capes": 7,
       "score": 14,
@@ -7039,6 +7079,14 @@
       "actualname": "TheWorfer27",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "realms"},{"name": "15A"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "mcc"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "a45a578a-3cdd-40e0-a401-6d5c37cfd096",
+      "capes": 7,
+      "score": 14,
+      "actualname": "Kragast",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "cherry"}]
     },
     {
       "uuid": "4f5b9374-7085-43b6-9a5d-224d86461488",
@@ -7421,7 +7469,7 @@
       "capes": 7,
       "score": 7,
       "actualname": "Dalmatin_",
-      "badge": "",
+      "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"}]
     },
     {
@@ -7545,6 +7593,14 @@
       "capelist": [{"name": "2015"},{"name": "2013"},{"name": "mojang"},{"name": "mojangstudios"},{"name": "migrator_cape"},{"name": "vanilla_cape"}]
     },
     {
+      "uuid": "b9ee0092-c639-4eb5-b5a6-d19dfcc91053",
+      "capes": 6,
+      "score": 27,
+      "actualname": "rhian",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
       "uuid": "a6484c2f-cd05-460f-81d1-36e92d8f8f9e",
       "capes": 6,
       "score": 26,
@@ -7577,12 +7633,100 @@
       "capelist": [{"name": "2015"},{"name": "mojang"},{"name": "mojangstudios"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "turtle"}]
     },
     {
+      "uuid": "4f35f9ed-57e7-417f-97ef-3e4e90b75094",
+      "capes": 6,
+      "score": 15,
+      "actualname": "Onnowhere",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"}]
+    },
+    {
       "uuid": "10404504-d771-4ccb-bf17-a36401630c49",
       "capes": 6,
       "score": 14,
       "actualname": "Nauzea",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "translator"},{"name": "15A"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"}]
+    },
+    {
+      "uuid": "d64a24da-c464-47fe-86b8-e7a03a9ead9e",
+      "capes": 6,
+      "score": 14,
+      "actualname": "akifunk",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"}]
+    },
+    {
+      "uuid": "8631ebcb-78a0-4af3-8145-6d8134c1c7e1",
+      "capes": 6,
+      "score": 14,
+      "actualname": "Danish_Pirate",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"}]
+    },
+    {
+      "uuid": "735f472c-2dc3-4101-94a0-cb2d933bc091",
+      "capes": 6,
+      "score": 13,
+      "actualname": "Armero",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "realms"}]
+    },
+    {
+      "uuid": "fe16890d-0178-43e4-98d9-a0e647764384",
+      "capes": 6,
+      "score": 13,
+      "actualname": "Soccby",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "f2f83006-3369-4349-8d52-e866aface31e",
+      "capes": 6,
+      "score": 13,
+      "actualname": "Chrosteellium",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "9b88b409-fc79-4b95-8acc-dded95c18bcd",
+      "capes": 6,
+      "score": 13,
+      "actualname": "LeBleury",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "e584054b-3d8f-41f7-addd-fc9eacca0429",
+      "capes": 6,
+      "score": 13,
+      "actualname": "BiffTannen_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "15A"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "9581d3bf-3d38-4501-bb2d-bd675a047129",
+      "capes": 6,
+      "score": 13,
+      "actualname": "digi_x3",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"}]
+    },
+    {
+      "uuid": "47cac620-788f-4131-829c-c813e960312b",
+      "capes": 6,
+      "score": 13,
+      "actualname": "PopularYouTube",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "714e9487-3f76-4252-8bb0-03eb054c5ea2",
+      "capes": 6,
+      "score": 13,
+      "actualname": "Theticman",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mojangoffice"}]
     },
     {
       "uuid": "c07edab6-e3e7-4ce2-930f-8b5c5de69366",
@@ -7745,6 +7889,14 @@
       "capelist": [{"name": "mojang"},{"name": "mojangstudios"},{"name": "2016"},{"name": "migrator_cape"},{"name": "2015"}]
     },
     {
+      "uuid": "e3ece8b9-ba2f-4037-a32c-96d007cfdfe9",
+      "capes": 5,
+      "score": 24,
+      "actualname": "K1ll1er",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2015"},{"name": "realms"},{"name": "2012"},{"name": "2013"},{"name": "migrator_cape"}]
+    },
+    {
       "uuid": "13655ac1-584d-4785-b227-650308195121",
       "capes": 5,
       "score": 23,
@@ -7801,12 +7953,68 @@
       "capelist": [{"name": "mojang"},{"name": "turtle"},{"name": "migrator_cape"},{"name": "mojangstudios"},{"name": "realms"}]
     },
     {
+      "uuid": "7d401f91-14f3-4297-847a-0ac2bb7ec65c",
+      "capes": 5,
+      "score": 17,
+      "actualname": "ChrisBoi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "2015"},{"name": "migrator_cape"},{"name": "vanilla_cape"}]
+    },
+    {
+      "uuid": "a3445c78-b630-428c-b69e-9cfc163c4ed8",
+      "capes": 5,
+      "score": 13,
+      "actualname": "phjtieudoc",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"}]
+    },
+    {
+      "uuid": "4e228741-0852-4ab8-a993-90af6d5a9a97",
+      "capes": 5,
+      "score": 13,
+      "actualname": "NeunEinser",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mojangoffice"}]
+    },
+    {
       "uuid": "85736c50-3c7e-472c-a63a-a3551a77631e",
       "capes": 5,
       "score": 12,
       "actualname": "Jonah_",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "15A"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "5fc3f207-6fd7-4c77-adfc-b53ae1f0aa00",
+      "capes": 5,
+      "score": 12,
+      "actualname": "SmartyAlek",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "realms"}]
+    },
+    {
+      "uuid": "191e65db-ae25-4355-960f-5c03bb177486",
+      "capes": 5,
+      "score": 12,
+      "actualname": "BuiIds",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "1f9f6b43-4941-472f-9f35-74d6ca2f6c57",
+      "capes": 5,
+      "score": 12,
+      "actualname": "Elmarchio_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "15A"},{"name": "mojangoffice"},{"name": "twitch"},{"name": "tiktok"}]
+    },
+    {
+      "uuid": "28645dec-8d9e-478f-9fb1-089e0d15dd04",
+      "capes": 5,
+      "score": 12,
+      "actualname": "MagicTin",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"}]
     },
     {
       "uuid": "a6eb2491-7365-4649-a795-2f032c9919f0",
@@ -7983,6 +8191,14 @@
       "actualname": "Kumasasa",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "translator"},{"name": "mojira"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "7f2df5ab-ff01-43c3-a1ce-ab5440e5fc36",
+      "capes": 4,
+      "score": 19,
+      "actualname": "Axyy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
     },
     {
       "uuid": "658ce1aa-6b26-4f1f-8643-ed26848c4996",
@@ -8441,6 +8657,14 @@
       "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2013"},{"name": "2015"}]
     },
     {
+      "uuid": "93e590ac-6913-4a7b-bec5-e8c9f2aea51b",
+      "capes": 4,
+      "score": 18,
+      "actualname": "Kris_Madas",
+      "badge": "mojang-employee",
+      "capelist": [{"name": "realms"},{"name": "mojangstudios"},{"name": "migrator_cape"},{"name": "vanilla_cape"}]
+    },
+    {
       "uuid": "5399b615-3440-4c66-939d-ab1375952ac3",
       "capes": 4,
       "score": 17,
@@ -8457,12 +8681,172 @@
       "capelist": [{"name": "mojang"},{"name": "cobalt"},{"name": "mojangstudios"},{"name": "migrator_cape"}]
     },
     {
+      "uuid": "ec4919c6-5198-4a97-a369-2140f7afb3f3",
+      "capes": 4,
+      "score": 17,
+      "actualname": "mrmidi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2011"},{"name": "realms"},{"name": "migrator_cape"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "82b9d7b2-24df-4205-8be3-dcdb7a74a635",
+      "capes": 4,
+      "score": 17,
+      "actualname": "CDFDMAN",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "2013"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "f7c77d99-9f15-4a66-a87d-c4a51ef30d19",
+      "capes": 4,
+      "score": 16,
+      "actualname": "hypixel",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2012"},{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"}]
+    },
+    {
+      "uuid": "3d0e51fc-4ea3-4bc5-be43-248a8983a192",
+      "capes": 4,
+      "score": 13,
+      "actualname": "Veriti",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "2cef6d05-ec9a-44b3-bedc-53359c68ae65",
+      "capes": 4,
+      "score": 12,
+      "actualname": "BGMP",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "7094b9d0-093e-4a7c-a15d-752460dbd6d4",
+      "capes": 4,
+      "score": 12,
+      "actualname": "Cybereggs1337",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "b2afd28e-c864-4e2c-92e5-21f8c2726e8a",
+      "capes": 4,
+      "score": 12,
+      "actualname": "Dieguinho",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "vanilla_cape"},{"name": "mcc"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "c7e1e823-83c3-4070-898b-1dd5f5cd458e",
+      "capes": 4,
+      "score": 11,
+      "actualname": "StuartA",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "mcc"}]
+    },
+    {
+      "uuid": "02d525f3-9b26-4c7d-9259-c4115ea918c6",
+      "capes": 4,
+      "score": 11,
+      "actualname": "EELAA",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "vanilla_cape"},{"name": "realms"},{"name": "migrator_cape"},{"name": "mcc"}]
+    },
+    {
+      "uuid": "0203446b-7ab1-40e5-b30b-8c3ae8b2d6cc",
+      "capes": 4,
+      "score": 11,
+      "actualname": "Piglins",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"}]
+    },
+    {
+      "uuid": "b6e1b68b-4b5b-460b-aad9-729eb359fb53",
+      "capes": 4,
+      "score": 11,
+      "actualname": "Mrinin_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "945f36b9-6e5f-4f5f-b7ed-0bd6136ca51b",
+      "capes": 4,
+      "score": 11,
+      "actualname": "CheckMC",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"}]
+    },
+    {
+      "uuid": "8aa20f67-3a6e-4c74-b64c-0f98dbf0e2f9",
+      "capes": 4,
+      "score": 11,
+      "actualname": "Captonium",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "d34fbe18-4848-4ac0-801c-8e96ade1daa4",
+      "capes": 4,
+      "score": 11,
+      "actualname": "citrus_fruity",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "15A"}]
+    },
+    {
+      "uuid": "02f0a41b-656c-4da4-a357-4fa84141fce0",
+      "capes": 4,
+      "score": 11,
+      "actualname": "heeeeeeenry",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"}]
+    },
+    {
+      "uuid": "ce5669b7-f3ef-4ece-95fd-1bb1db4181f8",
+      "capes": 4,
+      "score": 11,
+      "actualname": "Hielke",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"}]
+    },
+    {
+      "uuid": "6a02d9b9-d267-4aa3-a075-854de26c2691",
+      "capes": 4,
+      "score": 11,
+      "actualname": "Dwittyy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "915c613d-e8e6-4048-9c01-2a883434b095",
+      "capes": 4,
+      "score": 11,
+      "actualname": "dragonmaster95",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "mojangoffice"}]
+    },
+    {
+      "uuid": "417dfc9b-a30f-408f-9ba9-4a3c8cafb380",
+      "capes": 4,
+      "score": 11,
+      "actualname": "Aksiome",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
       "uuid": "20d64d21-e622-41c0-96e0-06ce6e705f27",
       "capes": 4,
       "score": 10,
       "actualname": "nejuer",
       "badge": "",
       "capelist": [{"name": "2011"},{"name": "15A"},{"name": "tiktok"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "c72d1b7a-5000-4943-8ee0-b07ed70d38f8",
+      "capes": 4,
+      "score": 5,
+      "actualname": "Pair",
+      "badge": "all-events",
+      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "mcexp"},{"name": "mojangoffice"}]
     },
     {
       "uuid": "3e5ef799-73bc-44fb-a279-b015c4fb4c84",
@@ -8729,6 +9113,38 @@
       "capelist": [{"name": "mojang"},{"name": "mojangstudios"},{"name": "migrator_cape"}]
     },
     {
+      "uuid": "2c697507-16f5-470e-ad37-161cedda5351",
+      "capes": 3,
+      "score": 16,
+      "actualname": "Lil_Jeffy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "translator"},{"name": "2015"}]
+    },
+    {
+      "uuid": "c6810d86-aa0c-415e-8f38-c65670eb224a",
+      "capes": 3,
+      "score": 15,
+      "actualname": "FantomLX",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "2015"}]
+    },
+    {
+      "uuid": "1abcf19a-729b-4b30-8aa1-6d497a01cd6a",
+      "capes": 3,
+      "score": 15,
+      "actualname": "Pebble",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "2015"}]
+    },
+    {
+      "uuid": "3e4401c8-62ea-41e2-8496-3cb23004034d",
+      "capes": 3,
+      "score": 12,
+      "actualname": "EJPete",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
       "uuid": "a8179ff3-c201-4a75-bdaa-9d14aca6f83f",
       "capes": 3,
       "score": 11,
@@ -8745,12 +9161,252 @@
       "capelist": [{"name": "mojira"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
     },
     {
+      "uuid": "642102ea-467b-443a-8f05-22a862c882bf",
+      "capes": 3,
+      "score": 11,
+      "actualname": "Susko3",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "959eb178-8e41-4c3c-8259-d86d1af7b18b",
+      "capes": 3,
+      "score": 11,
+      "actualname": "NatsuALT",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "a6f37e8b-fbae-40b2-bab2-05122fc42df9",
+      "capes": 3,
+      "score": 11,
+      "actualname": "PixlPlex",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "15A"},{"name": "mcc"}]
+    },
+    {
+      "uuid": "67acb547-ec71-492c-9707-7a556e6269d0",
+      "capes": 3,
+      "score": 11,
+      "actualname": "Bilguun",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "de89666c-7a50-44f9-b9b5-550755e1eec0",
+      "capes": 3,
+      "score": 11,
+      "actualname": "Webess",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "twitch"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "523d5915-c976-4f20-8cdd-b48b7df7bf56",
+      "capes": 3,
+      "score": 11,
+      "actualname": "FumblerX",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "587b6c3b-45f6-4f4a-9553-c519b65f82a8",
+      "capes": 3,
+      "score": 11,
+      "actualname": "remu01",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "6d5744e0-8487-4af5-a520-1f9cb426b74d",
+      "capes": 3,
+      "score": 11,
+      "actualname": "urielsalis",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "4259cb27-b2e0-44ef-a2bf-579df2ebcd53",
+      "capes": 3,
+      "score": 11,
+      "actualname": "tryashtar",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "94576c40-f18a-428d-8093-1b44e9ef1ebd",
+      "capes": 3,
+      "score": 11,
+      "actualname": "DrAwesome4333",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "d83fbd7a-8305-476a-b38d-a78f90484154",
+      "capes": 3,
+      "score": 11,
+      "actualname": "SuperGeniusZeb",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
       "uuid": "9bab2784-62a8-4df6-8c23-95d13e71b8ed",
       "capes": 3,
       "score": 10,
       "actualname": "Dominexis",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "f8e98310-65cb-4b03-ba31-2fb55e888532",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Frozen11111",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "7e3b0675-a832-458a-9fe7-0e4b33daa236",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Nexuio",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "mojangoffice"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "8657fb9a-727f-4a6f-8ff7-ca3adc73a316",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Limies",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "efd2463d-250e-4078-891e-f098e4f84c74",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Techno_Guy_KWP",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "a2616acb-4f92-45ab-9237-3aead0eebcd8",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Tobies",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "800a5b78-dee0-4090-b173-e56b67211cdd",
+      "capes": 3,
+      "score": 10,
+      "actualname": "CiderLove",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "15A"},{"name": "vanilla_cape"}]
+    },
+    {
+      "uuid": "616871b9-7e3f-481a-8880-7e65bd28d6e8",
+      "capes": 3,
+      "score": 10,
+      "actualname": "MagicBlaster",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "b0d94a65-358f-4a02-ba4a-4b11e2bcb42f",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Laxford",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "15A"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "2ab86c83-903b-4656-bca0-0a84fefd7869",
+      "capes": 3,
+      "score": 10,
+      "actualname": "limoch",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "15A"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "5169dcaa-b3f7-41c9-922e-9b5f62a1e003",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Burgle",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "08ea0f6a-3909-48c8-8d25-3f8f80613bce",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Peepsibabe",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "7b390d89-2761-4f97-95ed-7f9b1533b190",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Illibrams",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "3fd4e74b-c8da-4365-aef0-4ea36f9f314c",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Creeper_Juice",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "12ab3160-9861-4810-ba48-31cfb2bf1d7e",
+      "capes": 3,
+      "score": 10,
+      "actualname": "robotalf",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "b0dbe6a3-8447-4c1e-9f4b-c5f4f68560f2",
+      "capes": 3,
+      "score": 10,
+      "actualname": "oRain",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"}]
+    },
+    {
+      "uuid": "7926df95-2570-4eb3-b57e-364a1ff9b398",
+      "capes": 3,
+      "score": 10,
+      "actualname": "DutchMC",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "d7ce92f2-aedd-45f3-83e2-29ecc5daa16e",
+      "capes": 3,
+      "score": 10,
+      "actualname": "ElectroBleach",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"}]
+    },
+    {
+      "uuid": "bc6823d2-bf31-4d04-9e19-7d66aa08c8e3",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Chopper2112",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "21ef397c-3a76-4eb7-aa17-a99d3fc658e2",
+      "capes": 3,
+      "score": 10,
+      "actualname": "Xisuma",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "mojangoffice"}]
     },
     {
       "uuid": "48fe3a11-67dd-48a0-901f-3e9959aa231d",
@@ -8881,6 +9537,14 @@
       "capelist": [{"name": "mojang"},{"name": "mojangold"}]
     },
     {
+      "uuid": "6b8c14b5-2533-472e-9c44-1ba034b6bf48",
+      "capes": 2,
+      "score": 15,
+      "actualname": "Kupo",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2011"},{"name": "realms"}]
+    },
+    {
       "uuid": "d41283a1-11ca-4568-b115-0bc4725ca07a",
       "capes": 2,
       "score": 14,
@@ -8897,6 +9561,14 @@
       "capelist": [{"name": "2015"},{"name": "scrolls"}]
     },
     {
+      "uuid": "c6da74e2-1ea2-46c2-bdae-78e591f7ab51",
+      "capes": 2,
+      "score": 14,
+      "actualname": "Cubehamster",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2012"},{"name": "realms"}]
+    },
+    {
       "uuid": "5797c479-ad5a-43b0-87ca-8852d65ac639",
       "capes": 2,
       "score": 13,
@@ -8911,6 +9583,54 @@
       "actualname": "billyK_",
       "badge": "unique-cape",
       "capelist": [{"name": "turtle"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "7f36a470-992d-4869-b249-e7df0e3c7899",
+      "capes": 2,
+      "score": 13,
+      "actualname": "Celisio",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2013"},{"name": "realms"}]
+    },
+    {
+      "uuid": "d70dabc4-f690-40d3-9ed1-970d0ab02818",
+      "capes": 2,
+      "score": 13,
+      "actualname": "Bulix",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2013"},{"name": "realms"}]
+    },
+    {
+      "uuid": "9e4cab13-9502-44d9-a6c4-67826f2c7921",
+      "capes": 2,
+      "score": 13,
+      "actualname": "Mustek",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2015"},{"name": "mojira"}]
+    },
+    {
+      "uuid": "33d27085-844a-4be7-ab27-941c217b48f5",
+      "capes": 2,
+      "score": 12,
+      "actualname": "qmagnet",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2015"},{"name": "realms"}]
+    },
+    {
+      "uuid": "2f855ebb-7a0f-4920-ad96-ba58e0742216",
+      "capes": 2,
+      "score": 12,
+      "actualname": "mavflex",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2015"},{"name": "realms"}]
+    },
+    {
+      "uuid": "5e9ad16b-a94f-45fe-a9c3-3d23fb0ca45e",
+      "capes": 2,
+      "score": 12,
+      "actualname": "roelie333",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2015"},{"name": "realms"}]
     },
     {
       "uuid": "4b870d90-1d2c-4bd3-a647-846757930e2e",
@@ -8935,6 +9655,182 @@
       "actualname": "Noxite",
       "badge": "",
       "capelist": [{"name": "2012"},{"name": "2015"}]
+    },
+    {
+      "uuid": "21dfa479-381e-4575-89eb-a3694a56ab4e",
+      "capes": 2,
+      "score": 10,
+      "actualname": "WelcomeHome",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "mcexp"}]
+    },
+    {
+      "uuid": "f15cfaa4-43ad-4ee8-9c31-afe81115dec0",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Blaxxi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "mcexp"}]
+    },
+    {
+      "uuid": "be594c83-339b-4382-b127-82ca7785cfa0",
+      "capes": 2,
+      "score": 10,
+      "actualname": "koko01",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "32d6d67d-645d-4341-9173-765426cd4bc3",
+      "capes": 2,
+      "score": 10,
+      "actualname": "PandaChan",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "d75ef7b3-43a7-4d09-8a0d-87b499caed4f",
+      "capes": 2,
+      "score": 10,
+      "actualname": "agrastiOs",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "a4e11efc-7feb-4e2a-acb5-4b642438f6a7",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Renzotom",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "1bf16cd2-1c26-4f59-a482-32195c3ed392",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Bentroen",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "67fb764f-152a-45bb-82b8-16a5fe4d1c0c",
+      "capes": 2,
+      "score": 10,
+      "actualname": "BayuAH",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "77912861-9fc0-45fa-aac5-aa455614edbf",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Nanu",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "093b4247-f87d-4c76-a379-2fe1eaf3fe9d",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Lxd2",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "f5a23dc7-b01e-48d6-a682-398fa3e9e0f1",
+      "capes": 2,
+      "score": 10,
+      "actualname": "maggstrom",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "581a3f25-db2c-4e52-9823-62e9e4730daa",
+      "capes": 2,
+      "score": 10,
+      "actualname": "robotkoer",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "fa17e147-062a-4164-84f9-89fa915bb6a7",
+      "capes": 2,
+      "score": 10,
+      "actualname": "j_p_smith",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "d3e8b81c-401f-4de6-823f-707e52601091",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Thumpbacker",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "dd7e8cae-5d41-4dd2-b381-9e857af32300",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Greymagic27",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "8a72fc5a-c33b-4f3b-ae70-d954f5a20a82",
+      "capes": 2,
+      "score": 10,
+      "actualname": "IonicEcko",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "c8d56a19-79ef-45a8-b5d8-38d322560687",
+      "capes": 2,
+      "score": 10,
+      "actualname": "MatthewSpaz",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "40636c29-7c8d-4e71-a7b8-ce2d7d727388",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Les3awe",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "vanilla_cape"}]
+    },
+    {
+      "uuid": "eb121687-8b1a-4944-bd4d-e0a818d9dfe2",
+      "capes": 2,
+      "score": 10,
+      "actualname": "kashike",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "0668b3c9-8985-4c23-be47-4f67673cf33f",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Asteraoth",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "e9cc55c0-8a9d-49ca-94e6-065c59102278",
+      "capes": 2,
+      "score": 10,
+      "actualname": "elite041802",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "e3748c1b-6bf3-48a0-9148-e4a08155f475",
+      "capes": 2,
+      "score": 10,
+      "actualname": "Galaxy_2Alex",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"},{"name": "migrator_cape"}]
     },
     {
       "uuid": "935c8063-3915-45de-b5ec-8e7a41fbdd67",
@@ -8965,6 +9861,294 @@
       "capes": 2,
       "score": 9,
       "actualname": "Roypase",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "7e0bccb8-38fc-42f7-b728-29cfc193579f",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Marilakos",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "fcf7a2c9-3847-4ac8-b468-41fdfe1e10d0",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Pilllager",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "f7a03960-20d4-4ea7-9f7e-167af198efc9",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Strongis13",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"}]
+    },
+    {
+      "uuid": "dff18b42-aafe-416d-9a21-2a14c4a765ee",
+      "capes": 2,
+      "score": 9,
+      "actualname": "TwelfthShield115",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "445a50a3-b976-4a99-ba3e-f33b9a03c211",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Rabnutt",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "61732010-f199-49e4-b825-2c80504dc800",
+      "capes": 2,
+      "score": 9,
+      "actualname": "sodapoppet",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "6bf8a3ee-25cf-4a40-af3f-c05df40e08f5",
+      "capes": 2,
+      "score": 9,
+      "actualname": "0SirAwesome",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "2ceb0d45-3e86-4d55-87b6-45fd2b7838f3",
+      "capes": 2,
+      "score": 9,
+      "actualname": "birrbo",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "cherry"},{"name": "realms"}]
+    },
+    {
+      "uuid": "eda82675-201c-46a3-a6c9-3eb131aa69d6",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Aqmd",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "442c85f6-3e3b-49ed-9432-00611ccea37d",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Evtema3",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "c791b47a-9c39-40a5-8f74-6ccec361abae",
+      "capes": 2,
+      "score": 9,
+      "actualname": "ExMonolith",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "1d467d96-bb04-4cca-bfec-1145cd67702a",
+      "capes": 2,
+      "score": 9,
+      "actualname": "AetherWitch",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "15b8f695-2c0c-424f-9053-2c652b3d2e95",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Salty0nTheInside",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "9c34529d-bdda-471f-bf9d-b1e5167b37d2",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Primt",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "1cc18d8d-ab28-4354-8cce-f93fb06423bf",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Fetch",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "841a37db-bad4-438c-b56f-445063f8e15b",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Ioneh",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "twitch"}]
+    },
+    {
+      "uuid": "cdbb2a7e-a15a-49fe-a1aa-17901f9c1ce5",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Boog",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "d8eddfc1-c376-43df-9e19-b031e72bfa78",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Jerozgen",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "1aad55f7-2dea-4f22-85ca-ad9de3a78609",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Technodono",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "9c3cb860-b6d7-4d9a-96de-4210eb1424fb",
+      "capes": 2,
+      "score": 9,
+      "actualname": "hilligans",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "06db3d3f-e5e1-4f6b-8953-194291625e40",
+      "capes": 2,
+      "score": 9,
+      "actualname": "SirPuffy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "585e6b77-79f7-4ce6-9822-d224f7dea23b",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Soup_Man",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "d9d7eb72-bfbd-4195-a3b7-a5c18aa612ab",
+      "capes": 2,
+      "score": 9,
+      "actualname": "hm4",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "327178e6-da2d-4ce6-9e18-7a1e0b4d2902",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Rman",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "08eb26c3-80d6-489b-86d3-f7a3fae1806e",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Grafisch",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "mcc"}]
+    },
+    {
+      "uuid": "785bc0bb-0a7c-4122-8493-0e4a04636472",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Neoko",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "fb556a13-e3f1-4729-87dc-0f667a1db756",
+      "capes": 2,
+      "score": 9,
+      "actualname": "flcme",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "bd383032-0bc2-405e-8098-f9794a460bb6",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Sparkour",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "778524e0-5164-45e7-9fd7-acc62e49aef1",
+      "capes": 2,
+      "score": 9,
+      "actualname": "ThatGreenGem",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "654129af-00ac-4c8c-82bf-f421e0e316c1",
+      "capes": 2,
+      "score": 9,
+      "actualname": "BrandShei",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "ddb37577-1b38-47d9-b005-6aee46a5ade1",
+      "capes": 2,
+      "score": 9,
+      "actualname": "SirSheepe",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "cherry"}]
+    },
+    {
+      "uuid": "94058df3-4408-4b74-b9a6-ea7e37585553",
+      "capes": 2,
+      "score": 9,
+      "actualname": "BigNinjaChicken",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "e96c7928-4847-4bf7-8d58-c2bec860ba31",
+      "capes": 2,
+      "score": 9,
+      "actualname": "SirFrasier",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "a7b8bf90-ddd1-4070-a8da-c64a1bb14539",
+      "capes": 2,
+      "score": 9,
+      "actualname": "ChildOfMoon",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
+    },
+    {
+      "uuid": "b3307ae1-6a74-4310-888b-b4d147611838",
+      "capes": 2,
+      "score": 9,
+      "actualname": "LetzTaco",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "tiktok"}]
+    },
+    {
+      "uuid": "e75e2d26-3b72-4a93-a3e7-a2491f4c454f",
+      "capes": 2,
+      "score": 9,
+      "actualname": "Plagiatus",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
     },
@@ -9095,6 +10279,14 @@
       "actualname": "NanGong17",
       "badge": "",
       "capelist": [{"name": "15A"},{"name": "cobalt"}]
+    },
+    {
+      "uuid": "ed655a84-07b8-4a54-a507-510d487f4fa2",
+      "capes": 2,
+      "score": 1,
+      "actualname": "swaglord72",
+      "badge": "",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"}]
     },
     {
       "uuid": "7f0eda55-7034-4dc8-886d-d94321cdedcf",
@@ -9239,6 +10431,534 @@
       "actualname": "catlover38",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "cobalt"}]
+    },
+    {
+      "uuid": "ca668096-6e09-42b1-a95a-3c2d93afab23",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Kokobashky",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "b176abf1-cd60-4b14-b3d4-b787a237a267",
+      "capes": 1,
+      "score": 9,
+      "actualname": "fetalfeast",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "a16ef5d2-02ce-4f9d-82e6-6428f6c2b359",
+      "capes": 1,
+      "score": 9,
+      "actualname": "zubiden",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "3b375b41-ed06-43f7-8e6c-70d5dc9a7722",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Gatinhos",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "0fb98c6a-c69b-4bc1-9a4f-1ec38978a5b2",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Alexq",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "5c24c157-320f-4d9c-a1c9-fdb8f7448bf1",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Stubkan",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "a924413b-c7d8-4f44-b1d5-4bc7666cb527",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Dread_Boy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "0bc2d416-6026-4496-b045-ae18a0cca22d",
+      "capes": 1,
+      "score": 9,
+      "actualname": "KillA2k18",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "8fc394b6-5e4f-42f3-affc-de616bedddef",
+      "capes": 1,
+      "score": 9,
+      "actualname": "_Spitz",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "8bde2c4b-d4a8-46ec-986d-538bd7925429",
+      "capes": 1,
+      "score": 9,
+      "actualname": "SaziumR_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "d2b3d066-c8b2-41b5-b8b2-26023d8f868e",
+      "capes": 1,
+      "score": 9,
+      "actualname": "MI7MHARX",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "59e24191-8134-4a9c-9906-bcd9ea711e57",
+      "capes": 1,
+      "score": 9,
+      "actualname": "DarkShadow_TNT",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "5887a901-308f-4575-a329-792a5ce56ffc",
+      "capes": 1,
+      "score": 9,
+      "actualname": "takatalvi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "7ff6689e-ccd4-472f-9548-eed77824d285",
+      "capes": 1,
+      "score": 9,
+      "actualname": "EleazarAM",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "342f800b-20b2-46b3-85c0-67a724aefb90",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Cultist_O",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "e852fa5d-eb72-4048-8150-bd2115dd6f26",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Saibot_Tasi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "96feec3d-e5ba-43c3-83f9-d4780e9512d5",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Sumpfhytte",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "87d4e2ff-fa29-4ada-83e7-4a9c0b8d79bb",
+      "capes": 1,
+      "score": 9,
+      "actualname": "HarryHo90sHK",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "30a3bcc8-b10a-430d-a9f6-b43b43f1b8d8",
+      "capes": 1,
+      "score": 9,
+      "actualname": "NaRabbit",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "55a15b51-a7ee-4b09-bd10-3564e6a01f61",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Ajzak",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "dfbe626b-04d3-4868-8d0d-87cbc1bff025",
+      "capes": 1,
+      "score": 9,
+      "actualname": "FlubberFrosch",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "a1f42267-f8c1-49c9-a827-24b179b66041",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Irakli",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "f43ad6ed-f106-4303-8c7d-7fa04166e75a",
+      "capes": 1,
+      "score": 9,
+      "actualname": "XXLuigiMario",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "906b6f6e-94ab-4e78-b8ee-3c964856e3ba",
+      "capes": 1,
+      "score": 9,
+      "actualname": "SilverMike",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "0f29ddcd-a313-4271-8289-c85153bacb23",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Hyperspacemaster",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "3ef56ccd-488a-405e-86bc-4d50eacd36c8",
+      "capes": 1,
+      "score": 9,
+      "actualname": "branza",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "a9398537-8129-4b34-bc1a-a2ef937d4e11",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Burkes",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "57798a5e-5bde-4664-8abe-dd7687694b45",
+      "capes": 1,
+      "score": 9,
+      "actualname": "dwi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "4d8c4943-00c9-4d7a-b9ad-dc56def0f8ee",
+      "capes": 1,
+      "score": 9,
+      "actualname": "MustaphaTR",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "d2c6f5e7-a0f3-49b4-9b70-f00ba95fd641",
+      "capes": 1,
+      "score": 9,
+      "actualname": "R3gi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "24eee21e-de53-450f-a0ca-f2286d9d06e9",
+      "capes": 1,
+      "score": 9,
+      "actualname": "MPlaneswalker",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "e36da992-13f2-4636-a3e0-53e4824199f1",
+      "capes": 1,
+      "score": 9,
+      "actualname": "moomoohk",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "815a552e-5b96-4dca-aa3a-d61545fbd600",
+      "capes": 1,
+      "score": 9,
+      "actualname": "FerdErik",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "e28ea0ac-84ee-4598-9d64-53d1fa880bd8",
+      "capes": 1,
+      "score": 9,
+      "actualname": "jokubolakis",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "1c59cd6e-90e4-4281-bdd1-5cc87c7ecd64",
+      "capes": 1,
+      "score": 9,
+      "actualname": "jvith",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "df5900bd-3045-4c23-b1ff-471d363ea367",
+      "capes": 1,
+      "score": 9,
+      "actualname": "d3rive",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "5a63d37a-9d3a-4aa5-aeb6-1b50e726c117",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Remora",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "5692bf87-5e10-42c2-a938-20ee131186c2",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Brownd",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "bb4f5cb3-806b-41a3-b898-c2d836f329a6",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Dragory",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "1796eb3b-fc03-46cd-a5fc-dd139a2d87d2",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Forfal",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "5ce67d43-e65b-431a-962a-e67447688d17",
+      "capes": 1,
+      "score": 9,
+      "actualname": "sa3dany",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "f8e273cc-a7c4-4990-8032-7e15de919b8c",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Flying_Bunny",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "372f5d9a-9a01-4c33-887e-2a10b7decc59",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Space__man",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "65bdc3e6-5b65-41d3-9cf1-050ed499a2e5",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Dywen_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "translator"}]
+    },
+    {
+      "uuid": "8d089430-7793-4048-9eaa-5d47d453773b",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Auldrick_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "dc888a14-8b2b-4873-b1db-723bcb8ab062",
+      "capes": 1,
+      "score": 9,
+      "actualname": "thechandlers2",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "aa29ede7-0817-4c65-b192-77a32e772b9c",
+      "capes": 1,
+      "score": 9,
+      "actualname": "fuj1n",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "ceaf912c-8fcf-4a4e-9552-d46527727a48",
+      "capes": 1,
+      "score": 9,
+      "actualname": "KillerbeeNL83",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "8c454485-fc25-4566-a45f-86357ff349ed",
+      "capes": 1,
+      "score": 9,
+      "actualname": "TheWorstPHO",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "6c8976e3-99a9-4d8b-a98e-d4c0c09b305b",
+      "capes": 1,
+      "score": 9,
+      "actualname": "pokechu22",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "d41b28a1-a216-441c-9743-5da0e80b4425",
+      "capes": 1,
+      "score": 9,
+      "actualname": "__null",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "5c7e366a-a249-454f-b41b-c8277b616e05",
+      "capes": 1,
+      "score": 9,
+      "actualname": "miwob",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "85cbea6a-e845-46f5-8937-8a4f1ef36768",
+      "capes": 1,
+      "score": 9,
+      "actualname": "_SunCat_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "060ca0e5-88eb-454b-b23e-10672d819edc",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Tails_D",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "71a5b252-73c6-4ee1-8e0c-525ef9210ee6",
+      "capes": 1,
+      "score": 9,
+      "actualname": "LuXBran",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "c6d461c1-f495-40c5-a475-dda1b993490a",
+      "capes": 1,
+      "score": 9,
+      "actualname": "redstonehelper",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "35ada10d-40f5-4a4f-9d31-91a2c2a7c682",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Nicktheredstoner",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "43a664ac-9812-4064-8393-baf30fc0bf13",
+      "capes": 1,
+      "score": 9,
+      "actualname": "rplatham",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "d5347fb8-be7a-44b2-8cbc-547fcc23ba2e",
+      "capes": 1,
+      "score": 9,
+      "actualname": "catnepeta",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "41fec037-12a5-4b19-868e-b62e39952e96",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Torabi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "9b85b425-0db3-4fe7-8303-082f98fc9136",
+      "capes": 1,
+      "score": 9,
+      "actualname": "GrygrFlzr",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "e1d4f967-a056-427c-9bb8-f85761e4a1a7",
+      "capes": 1,
+      "score": 9,
+      "actualname": "anon_ymus",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "3f8fc8fb-d3d8-497a-a701-4f369d394728",
+      "capes": 1,
+      "score": 9,
+      "actualname": "Amaranthus",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "2ce88e96-f7e2-43bf-8b0c-e6dba4e6d891",
+      "capes": 1,
+      "score": 9,
+      "actualname": "cubethethird",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "53dd215d-701b-40c2-ac38-03cab78c009e",
+      "capes": 1,
+      "score": 9,
+      "actualname": "AbandonedAccount",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
+    },
+    {
+      "uuid": "e360f072-8f09-42d9-8b5c-b055f4789fd3",
+      "capes": 1,
+      "score": 9,
+      "actualname": "lutzee",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mojira"}]
     },
     {
       "uuid": "21d2c289-b75f-4513-9f4f-85cc9e8c271b",
@@ -9625,6 +11345,1358 @@
       "capelist": [{"name": "realms"}]
     },
     {
+      "uuid": "c5df0aab-5b4f-4fa1-aabf-aaca59095112",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Terraball",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "fa9aeaa5-bc69-4bf7-aad1-64ab58dfc1a9",
+      "capes": 1,
+      "score": 8,
+      "actualname": "ipukeapples",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "1e779442-4c40-4ffa-b14b-f63cec381e5b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "laystar",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "e6cf90b0-78ac-4fac-a241-461e20d66e60",
+      "capes": 1,
+      "score": 8,
+      "actualname": "requand",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "4d0dfba5-d6fb-4601-9522-6e41a46afe3d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Qoco",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ce1d3257-4897-498e-b3da-eaf09f41ce58",
+      "capes": 1,
+      "score": 8,
+      "actualname": "DemitriMaximoff",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "e9699bcb-dfc3-4bfe-9e64-7d1d3ba5c7b5",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Slap",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "6056e9c1-e817-4c6e-9a8e-01830d8b803d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Slime",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "83348270-9484-412f-9b01-2edc9936c7c0",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Grazed",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "c5b53320-fde9-4876-9243-a8c6196bb8c4",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Dad_L0Y",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "29968394-463e-4a66-83dc-dd125b848dce",
+      "capes": 1,
+      "score": 8,
+      "actualname": "hemfi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "402bab9c-205f-48c3-a330-a777b0c1e2bf",
+      "capes": 1,
+      "score": 8,
+      "actualname": "AzethMeron",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "25f98ce6-f48b-4115-a87d-075bc6ddf80b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "coolm205",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "e7b1fbc5-d450-4434-9966-9763daba994a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Bimmeren",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b4f1b41d-91b4-4377-8e64-46260ea50718",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Horace_Altman",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "d3b923c6-528c-4b90-8fea-05bb00683c7e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Qu1nten",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "78b4a3a6-bd69-479a-a8cd-18eee54a29e8",
+      "capes": 1,
+      "score": 8,
+      "actualname": "joelzoboyo",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "9c9de887-1c72-4bb9-b40c-932a8fd08ea7",
+      "capes": 1,
+      "score": 8,
+      "actualname": "NapkiinsA",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "373420a6-9863-40ae-9061-5bb4b257420e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "WonkyMushroom",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f662606b-10ae-460c-92f7-da79689c34fc",
+      "capes": 1,
+      "score": 8,
+      "actualname": "EurekaX",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f2773540-bd2e-4de8-80ca-84077cd99093",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Traiectus",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "15a03072-213f-48ec-a10a-ceb246d4ba3e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "sadical",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "e1d1b081-334c-4ffc-9590-6c1b50acce5a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "RiceFarmer11",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b6b89930-636a-44ea-97f2-9bd3a9155954",
+      "capes": 1,
+      "score": 8,
+      "actualname": "SimonDMCPlayer",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "453f9c8c-19cb-4c72-949e-7cb033c54270",
+      "capes": 1,
+      "score": 8,
+      "actualname": "HoneyBearxxx",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "8e3bfbed-c52d-4fc4-9d5a-0d8d31d4e651",
+      "capes": 1,
+      "score": 8,
+      "actualname": "_ird",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "674e094b-fee7-4a4a-b937-0b480fd94d2b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "baranek",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "3e1bc794-3c1c-41f9-ac5f-86f23c3d72e6",
+      "capes": 1,
+      "score": 8,
+      "actualname": "CC69",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "a4c26e90-46e5-4bd8-ac02-3cb69703d28d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Godlander",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "bc2f4f41-8a50-4d13-aa8b-7b96c2d0e347",
+      "capes": 1,
+      "score": 8,
+      "actualname": "ChubinsRainbow",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "37500953-fd85-4f77-a114-cf9eca83ea10",
+      "capes": 1,
+      "score": 8,
+      "actualname": "qwqLW",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "a279e594-8118-4cfe-810a-8555aed0d8b4",
+      "capes": 1,
+      "score": 8,
+      "actualname": "AriaZeroQueen",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "39f40f90-3f6a-402a-a386-e71c8e34d09d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Zombie1111",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b346fa64-b960-4c93-98cc-25231895a8b9",
+      "capes": 1,
+      "score": 8,
+      "actualname": "spad4",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "00257f5f-0955-4653-8d9e-e64a02ee5aa3",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Meddi",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "73bdffba-2326-4541-827d-71ee4fe75477",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Waebeii",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "d4b9a93b-86b6-42d9-b21b-785ad8a7ed19",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Shout",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "41ea6892-0598-4d81-9442-c9d7798feded",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Joshgiddey6",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "377a80db-abec-443d-bf9a-05c0a8240422",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Abgott",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "27cf5429-ec01-499a-9edf-23b47df8d4f5",
+      "capes": 1,
+      "score": 8,
+      "actualname": "NadiaMayer",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "bbde2f23-57d4-410d-857f-45d5ee5bd919",
+      "capes": 1,
+      "score": 8,
+      "actualname": "shurik204",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ff2098f4-ec17-4a29-a7df-7b8bb7c36b56",
+      "capes": 1,
+      "score": 8,
+      "actualname": "MrHixu",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "e3937bc8-2b73-4861-8093-203c3d60fa1a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "J_Brimstone",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "84fcf2b8-1545-453e-bf37-0c3e698facdb",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Akittylover",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "d89830b7-6760-4b5d-84a5-a43f6fa0fa8c",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Zhengy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "973917ad-009f-4ef3-be18-63bf772c9e9b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Frilled",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "5007cd3a-ae7b-4893-8a2a-abed38bef44f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Tomm2000",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "be71d2f9-3710-434a-9d25-3e18dd3552e8",
+      "capes": 1,
+      "score": 8,
+      "actualname": "LorenOLoren",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "65e6ced1-e1fe-4ff5-b9dc-40a2edeb00f5",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Dolllan",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b8fba554-4f69-41c5-bd7d-92907386281a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "maskedlemon",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "383650ad-38aa-497b-aa08-3c8021689d93",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Frenderman",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "60490991-ca55-4158-ad45-7ecb6ba44fad",
+      "capes": 1,
+      "score": 8,
+      "actualname": "sodium12",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "20454261-d6f1-4f36-8f83-e52efcf4cd92",
+      "capes": 1,
+      "score": 8,
+      "actualname": "LiamHenricson",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "666ff64a-41ce-4b73-82d7-e63532335f58",
+      "capes": 1,
+      "score": 8,
+      "actualname": "_Elton",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "0ff0e7d9-66ca-4ce5-a256-3fb03b415a27",
+      "capes": 1,
+      "score": 8,
+      "actualname": "g_rm",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "07270730-7cf6-48f4-8850-11847f4d61a3",
+      "capes": 1,
+      "score": 8,
+      "actualname": "ColdFusionGaming",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ffddd9df-ea2e-461f-9606-b92de09d85df",
+      "capes": 1,
+      "score": 8,
+      "actualname": "BobaFate",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "a1ccabb3-08f6-4bcb-a063-112c78baeb43",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Bagee",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "92b45e63-92e5-407f-9df4-d74186126b38",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Spy_Guy1",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "7d7581eb-f79b-4dc8-bdc0-ca31b34a89ad",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Theo8",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f049d293-fc3d-4934-997c-5827367d128b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "osme",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ae09bd6c-11e2-4a2a-9c02-b4c98adb8946",
+      "capes": 1,
+      "score": 8,
+      "actualname": "aerojet",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "39ee38f3-116d-4f86-80cd-d93128e84e52",
+      "capes": 1,
+      "score": 8,
+      "actualname": "TheBarfCreations",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "29f35a57-95db-4961-aaa5-2815253e5a53",
+      "capes": 1,
+      "score": 8,
+      "actualname": "JojoGlick",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "91c54b11-5fdb-4ba2-b554-b8d09f7ed06f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "LardTom",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "fbeac4f6-5c66-40a2-889d-d7c417e87053",
+      "capes": 1,
+      "score": 8,
+      "actualname": "InternetAlien",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "7aa7a90e-c92f-49dd-a5be-83b4e8dc481c",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Jayjo_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "5597f94c-7a6f-4fbc-a125-5601a75453b4",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Denniss",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b0b80edc-51d6-4f8a-aa37-9fa03b986e3b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "TheTypicalMex",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "db3af546-af3a-4c44-812e-4f634cc144c5",
+      "capes": 1,
+      "score": 8,
+      "actualname": "cxve",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "712f47bb-1cb6-47e4-b9f5-a9ca77ecc933",
+      "capes": 1,
+      "score": 8,
+      "actualname": "jan00bl",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b38513f2-c6c2-402f-bdbb-de56f6f4d92e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "aminerman",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "5ebe7e62-6b15-45f9-91be-2346f306934b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "jominerman",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "8b47f0d1-dc61-4bd5-8692-9379877c734b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "anyminerman",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "4f123a29-3bf5-4b72-9b55-225765982960",
+      "capes": 1,
+      "score": 8,
+      "actualname": "underminerman",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "cc7214fd-8bde-4eca-82bb-a0272d99dc04",
+      "capes": 1,
+      "score": 8,
+      "actualname": "ImADiamondPotato",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "440f94e9-a440-4da8-a819-37a8ab53761f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Edou_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ffe5fe06-9602-46cd-983c-4534b00e864f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Fasading",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "125e4fdb-713d-4513-8e2e-07e9166c1b4e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Hilloy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "5af5c91c-e11d-49f2-a619-bfff1844471a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "J70",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "3665bc37-2fff-45e5-b733-2704fa42c231",
+      "capes": 1,
+      "score": 8,
+      "actualname": "blueloving",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "807813c7-0e54-46e6-a80a-07be39ed242e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "EyeCloud",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "4d53e0a8-4fed-44ba-a5f1-f507f728bade",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Mynckey",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "eeb0d878-8ead-410f-af4b-c93f6bb2a325",
+      "capes": 1,
+      "score": 8,
+      "actualname": "GhostFarts",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "84261282-d1cb-40b2-aa85-3ddc48cb4076",
+      "capes": 1,
+      "score": 8,
+      "actualname": "FalconReign",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "87c6361f-3511-47c5-843d-f530ecaf6fcc",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Acented",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "3e34172e-bbbd-4b81-b2eb-32ec54659059",
+      "capes": 1,
+      "score": 8,
+      "actualname": "AryFireZ",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "46650960-056d-44c0-ba62-e21da9e79442",
+      "capes": 1,
+      "score": 8,
+      "actualname": "_RaZZoR__409_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "eedda6db-d9ff-4eeb-9ca2-2b327cef311b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "123maarten123",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "494aa021-9393-4fd5-9e5d-109df13ca2e7",
+      "capes": 1,
+      "score": 8,
+      "actualname": "TyAngry",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "bc0bd10f-19a3-4498-8c0b-cbbce7d4372b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "DTplayers",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f7b4a85d-c0e3-472f-a7f9-7eb78770cbe4",
+      "capes": 1,
+      "score": 8,
+      "actualname": "likeabauws",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "3ab55a5d-31fe-4ceb-86e0-69c5b3ea91d6",
+      "capes": 1,
+      "score": 8,
+      "actualname": "steve283",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "80fa407c-cd19-4609-b10a-64607f5e56b8",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Arrgs",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "67d8b064-72d4-40e3-902f-312a507e9c3d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "icupo3",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f06098c4-10b3-44ee-8531-264ca71daf5b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "FatalVortex",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "8c0661a4-768d-42f4-9287-cab076ebb6b5",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Brenden_MC",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "1396c60d-e7a2-4112-a315-8b00473f0b2a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Kalendarz2",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b30bd8f8-babb-4025-af74-e450f37d1cc7",
+      "capes": 1,
+      "score": 8,
+      "actualname": "TheSkilerPL",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "c2be8aa8-39e5-4350-a15f-e6584343aa59",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Flytre",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "7caa359e-834f-4b83-b9c0-055a05552913",
+      "capes": 1,
+      "score": 8,
+      "actualname": "MelonBP",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "2692a1eb-b017-475e-9bcf-146fbd20b90e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "b3nj1",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ebc1e72d-3d8e-40c0-ae79-1907fac5a42a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "gibbsly",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "5552c37c-c3ab-4c0e-880c-2b7af9859175",
+      "capes": 1,
+      "score": 8,
+      "actualname": "LegoBro",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "485e24ca-63d0-4c18-8c20-ac328a90c67c",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Jontohil2",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "c832aeeb-dbad-4119-a091-1a70d1363e69",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Enlighten",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "22f389e6-b191-476f-ac4d-7d5d67cfd06e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Piyotato",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "51cbaaea-dc0a-4bb5-88e6-7761780cac57",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Tumblrr",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "dcd7570c-a9fb-4b13-9b2a-6526d1a4a5a2",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Persp3ctive",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "652b360c-6676-45ff-824b-233dc7f9f1b7",
+      "capes": 1,
+      "score": 8,
+      "actualname": "wrigglygiggly",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "d674d7df-9601-49d5-9165-d6581cffb137",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Jbip",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "24de81e7-71f4-4d2c-accb-7afd703ccb61",
+      "capes": 1,
+      "score": 8,
+      "actualname": "The_Artist123",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "79198361-e85e-4604-bce5-e1180a1a57f4",
+      "capes": 1,
+      "score": 8,
+      "actualname": "christina_12",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "1320671f-62e6-4bfb-b428-9d6a14ab047d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "warco311",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "8069e003-c654-4077-937f-45a017a1321b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "5uso",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "c3a78c55-8c6b-468a-b2cd-55a81d24048b",
+      "capes": 1,
+      "score": 8,
+      "actualname": "59_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f7c6483f-8960-4633-87ba-a4430250f47a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "GenericallyNamed",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "83624e2c-9480-42b3-ba9d-7d506133a0eb",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Meeepy12",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "fd77e9c4-425f-4f50-bf1f-3d00276a550c",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Dank_Assassin",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "3a688727-1b38-4bed-90d1-458fb56b9a0f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "thelennylord",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f2ad75ed-37df-4844-bf7a-3a45c70a4483",
+      "capes": 1,
+      "score": 8,
+      "actualname": "SirBenet",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "7221a1cd-03f6-4440-896d-d4b4c407098d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "QKuroire",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "47e78025-d53e-4283-b8ff-05d97bf9fa0f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "BlendedSpider",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "699673df-ea62-4fc6-943e-634f4a8253c3",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Wector11211",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "0fc52d23-2eb0-446f-9ed8-a2c20d0d22e0",
+      "capes": 1,
+      "score": 8,
+      "actualname": "NICO_THE_PR0",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "9657e8ee-2e37-459c-900b-6d8d5445939e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "ALEX_CY",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "a227ace8-5157-47cf-8bf4-f4d2c72be3a6",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Dieuwt",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "3f6a1d70-c9ce-4f92-90b6-f7b49074ea35",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Swifter_1243",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "fad26458-7060-446a-83e5-b3251325ec1e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "lefserull",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "c9499ade-3569-428a-a1f4-aba11527cab2",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Krissix",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "575522d9-b550-465c-a390-c07a6654c94a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "federick90",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "867eab3d-39fd-4d7b-be4f-39575bbb5822",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Chumbleweasel",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "2f414ce1-b6dc-4214-b097-d261bf8e2b82",
+      "capes": 1,
+      "score": 8,
+      "actualname": "DarkPiep",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b5ee6a32-0b64-4cb9-baff-3706e7f0e2fc",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Kooleyy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "1c361569-6b3e-4ab0-b27f-b9f0df43f336",
+      "capes": 1,
+      "score": 8,
+      "actualname": "renderXR",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ac1fd5ea-8068-4a05-bb04-86640b1d163f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Master_Nati",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ada4e9ec-c675-4211-9636-b49d31b42e1f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "NotMitchu",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "33f0d207-4d90-4f6a-9142-5427d378be1f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "RealWither",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "5d176d8e-0e2b-4248-afe7-874ba9b63b6d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Ds43m",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "762f0a5d-af01-4266-9af4-310c4c4cddd8",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Nusiq",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "b392dea4-e960-4793-8ed9-27667548915f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Pszemo",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "157515bd-4fed-4027-8b46-c104e00fd21e",
+      "capes": 1,
+      "score": 8,
+      "actualname": "ShinkoNet",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "befc826a-75b1-432d-8b1d-50a2cb593b9d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Tobikativ",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "d3740797-6a76-42a8-a0c6-b021fe633288",
+      "capes": 1,
+      "score": 8,
+      "actualname": "EnderPig",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "a439c59b-29d4-4390-9c99-2ea9589afb4c",
+      "capes": 1,
+      "score": 8,
+      "actualname": "_tsts_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "05688f80-37b3-47a2-a44d-05491fc83520",
+      "capes": 1,
+      "score": 8,
+      "actualname": "marhjo",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "dc82daa4-7c2b-4a9d-88a8-518fdbd8df1d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Rogue_Baron",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "73a8cfef-cd45-4611-ba3a-7159b32ed25f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "hgbf",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "d668d334-67bc-494f-a940-23ac3a93a7ef",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Code__",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "a648628b-c8fb-4041-9429-604da9f6cb21",
+      "capes": 1,
+      "score": 8,
+      "actualname": "ChainsawNinja",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "94dd516b-61b6-4a5f-8979-1de92cbdd5f5",
+      "capes": 1,
+      "score": 8,
+      "actualname": "MrMakistein",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f05ee78d-21d2-4b3b-b285-198bd584d83f",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Arth2000",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "9b2eeefd-1d7a-482c-aff2-99ea6fd0b293",
+      "capes": 1,
+      "score": 8,
+      "actualname": "PingiPuck",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "44a138b3-9d4d-4405-8514-fb68657e5a60",
+      "capes": 1,
+      "score": 8,
+      "actualname": "zMin95",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "5c84f0d1-d69b-4f00-be2c-c44940bd8d41",
+      "capes": 1,
+      "score": 8,
+      "actualname": "wxssil",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "e095ee0f-f80e-43aa-82ef-102bae378741",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Chaz_",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "c73e6f85-b38a-4c22-bb05-15abc5731f17",
+      "capes": 1,
+      "score": 8,
+      "actualname": "BREEZ90",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "39524846-90e5-4a05-a93e-18018e3ecc50",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Mithey",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "df7e8ab8-8e45-4da6-8b00-428f5787d18d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "desservaux",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "05af30dc-4083-4fb7-9db8-d041d0369879",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Keel",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "8f25b890-0bd9-4b0a-8a0b-ced84f936d1d",
+      "capes": 1,
+      "score": 8,
+      "actualname": "NateT_Bird",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "93b08fc5-4921-4ca5-b3d1-a08ec37aa571",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Twett",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "3ba7e860-b073-4eb8-b7c4-393f94565781",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Pe3tr",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "6ce461c1-6381-4e40-b87d-dd2c4ae0d08a",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Huntondoom",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "f2b167cd-5155-4f79-a5ac-8a4bcdfc4426",
+      "capes": 1,
+      "score": 8,
+      "actualname": "quazymoodo",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "34318bc2-7ee1-4eda-b475-8a96675e1602",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Springstof",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "1531a8f2-a17a-4ac5-89eb-3437a1973be1",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Skypit",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "ff971ae2-d706-4d54-bb5e-3deda31f0353",
+      "capes": 1,
+      "score": 8,
+      "actualname": "Aikiebo",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
+      "uuid": "63e8589f-8982-46b3-8e31-a3961949a496",
+      "capes": 1,
+      "score": 8,
+      "actualname": "EpicMelon",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"}]
+    },
+    {
       "uuid": "7c4a2fca-b627-4773-b8c7-22c76f3426e0",
       "capes": 1,
       "score": 1,
@@ -9785,12 +12857,44 @@
       "capelist": [{"name": "mcc"}]
     },
     {
-      "uuid": "",
+      "uuid": "f17a39c2-511d-48d5-a033-244178dc56d7",
       "capes": 1,
-      "score": 0,
-      "actualname": "Fuzzlyman",
+      "score": 1,
+      "actualname": "Amenverson5982",
       "badge": "",
-      "capelist": [{"name": "turtle"}]
+      "capelist": [{"name": "mcc"}]
+    },
+    {
+      "uuid": "aac1c9e2-0066-477f-97cd-9c25d41e165d",
+      "capes": 1,
+      "score": 1,
+      "actualname": "CFVN",
+      "badge": "",
+      "capelist": [{"name": "mcc"}]
+    },
+    {
+      "uuid": "5fe4ab04-3c0a-4688-b4e9-1d8c559f1988",
+      "capes": 1,
+      "score": 1,
+      "actualname": "yuanpeng3855",
+      "badge": "",
+      "capelist": [{"name": "mcc"}]
+    },
+    {
+      "uuid": "aa9c238d-2319-48db-881a-78b0b09a44fd",
+      "capes": 1,
+      "score": 1,
+      "actualname": "xleborezzz",
+      "badge": "",
+      "capelist": [{"name": "mcc"}]
+    },
+    {
+      "uuid": "bf1bc33c-5f4f-45e3-9352-734252c9f1a6",
+      "capes": 1,
+      "score": 1,
+      "actualname": "Nasty_Ray",
+      "badge": "",
+      "capelist": [{"name": "mcc"}]
     },
     {
       "uuid": "03dcea60-c134-4af5-b479-aa85c10cac53",
@@ -9799,6 +12903,14 @@
       "actualname": "Fuzzlyman",
       "badge": "",
       "capelist": [{"name": "turtle"}]
+    },
+    {
+      "uuid": "a8cfd96e-ea3a-4d71-8c49-5c6fbfc807e0",
+      "capes": 1,
+      "score": 0,
+      "actualname": "Talven81",
+      "badge": "",
+      "capelist": [{"name": "mojira"}]
     }
   ]
 }
