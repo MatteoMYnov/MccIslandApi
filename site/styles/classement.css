@@ -219,6 +219,11 @@ body::before {
     outline: 1px solid rgba(0, 255, 0, 1);
 }
 
+.cape-container.noowned .cape-overlay {
+    background-color: rgba(255, 0, 0, 0.2); /* Vert semi-transparent */
+    outline: 1px solid rgba(255, 0, 0, 1);
+}
+
 .cape-image {
     width: 100%;
     height: 100%; /* Assurez-vous que l'image occupe toute la hauteur de son conteneur */

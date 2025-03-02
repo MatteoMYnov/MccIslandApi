@@ -88,6 +88,7 @@
             </div>
         </main>
         <script src="/js/scroll.js"></script>
+        <script src="/js/sounds.js"></script>
         <script src="/js/loading.js"></script>
         <script src="/js/modal.js"></script>
         <script>
@@ -148,6 +149,7 @@
 
             document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("openFilter").addEventListener("click", function() {
+                    playUiClickSound()
                     document.getElementById("filterModal").style.display = "flex";
                 });
 
@@ -160,8 +162,8 @@
                         window.location.href = currentUrl.toString();
                     }
                 }
-                if (goLeftButton) goLeftButton.addEventListener('click', () => navigateToPage(getCurrentPageNumber() - 1));
-                if (goRightButton) goRightButton.addEventListener('click', () => navigateToPage(getCurrentPageNumber() + 1));
+                if (goLeftButton) goLeftButton.addEventListener('click', () => navigateToPage(getCurrentPageNumber() - 1), playUiClickSound());
+                if (goRightButton) goRightButton.addEventListener('click', () => navigateToPage(getCurrentPageNumber() + 1), playUiClickSound());
 
                 function getCurrentPageNumber() {
                     const match = window.location.pathname.match(/\/classement\/(\d+)/);
@@ -183,7 +185,12 @@
             });
 
             function refreshSearch() {
+                playUiClickSound()
                 window.location.href = "/{{.Lang}}/menu";
+                document.getElementById("loadingOverlay").style.display = "flex";
+                setTimeout(function() {
+                    document.getElementById("loadingOverlay").style.display = "none";
+                }, 5000);
             }
         </script>
     </body>

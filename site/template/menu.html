@@ -992,6 +992,7 @@
                 }, 5000);
             }
             function refreshSearch() {
+                playUiClickSound()
                 window.location.href = "/{{.Lang}}/menu"
                 document.getElementById("loadingOverlay").style.display = "flex";
                 setTimeout(function() {
