@@ -1081,14 +1081,6 @@
       "capelist": [{"name": "2015"},{"name": "2012"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "15A"},{"name": "mojangoffice"}]
     },
     {
-      "uuid": "",
-      "capes": 9,
-      "score": 17,
-      "actualname": "EVGENSYPERPRO",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "15A"},{"name": "mojira"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"}]
-    },
-    {
       "uuid": "bfae6390-cf66-445f-b5ca-5895adc60a69",
       "capes": 9,
       "score": 17,
@@ -9543,6 +9535,14 @@
       "actualname": "Kupo",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "2011"},{"name": "realms"}]
+    },
+    {
+      "uuid": "",
+      "capes": 2,
+      "score": 14,
+      "actualname": "Atmaz",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2015"},{"name": "scrolls"}]
     },
     {
       "uuid": "d41283a1-11ca-4568-b115-0bc4725ca07a",

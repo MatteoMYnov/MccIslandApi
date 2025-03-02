@@ -60,29 +60,6 @@
                     </div>
                 </div>
             </div>
-            <div id="filterModal" class="filter" style="display: none;">
-                <div class="filter-content">
-                    <div class="stats-header">
-                        <h2>{{index .Translations .Lang "cl-filter"}}</h2>
-                        <img src="/img/mcc/utilities/layers/check.png" id="applyFilterImage" class="apply-filter-image no-select cursor" alt="Appliquer les filtres">
-                    </div>
-                    <div class="filter-body">
-                        <div class="cape-hole">
-                            {{if .ImageURLs}}
-                                {{range .ImageURLs}}
-                                    <div class="cape-container">
-                                        <div class="cape-overlay"></div> <!-- Surcouche invisible au départ -->
-                                        <img src="{{.URL}}" alt="Cape Image" class="cape-image {{.Class}}" data-name="{{.CapeName}}">
-                                        <p class="cape-title mc-font">{{.Title}}</p>
-                                    </div>                                 
-                                {{end}}
-                            {{else}}
-                                <p class="no-cape">Aucune cape disponible</p>
-                            {{end}}
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div id="loadingOverlay" class="loadingOverlay" style="display: none;">
                 <img src="/img/utilities/loading.gif" class="loadingGif" alt="Loading..." id="loadingGif" draggable="false">
             </div>
@@ -91,61 +68,6 @@
         <script src="/js/loading.js"></script>
         <script src="/js/modal.js"></script>
         <script>
-            const playerCards = document.querySelectorAll('.player-card');
-            playerCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    const playerUUID = card.getAttribute('data-playeruuid');
-                    window.location.href = `/{{.Lang}}/menu?q=${playerUUID}`;
-                    document.getElementById("loadingOverlay").style.display = "flex";
-                    setTimeout(function() {
-                        document.getElementById("loadingOverlay").style.display = "none";
-                    }, 5000);
-                });
-            });
-
-            document.getElementById("openFilter").addEventListener("click", function() {
-                document.getElementById("filterModal").style.display = "flex"; // Affiche le modal en utilisant "flex"
-            });
-
-            // Fermer le modal lorsque l'utilisateur clique en dehors de celui-ci
-            document.addEventListener("click", function(event) {
-                let modal = document.getElementById("filterModal");
-                if (event.target === modal) {
-                    modal.style.display = "none"; // Cache le modal
-                }
-            });
-
-            const capeImages = document.querySelectorAll('.cape-image');
-            capeImages.forEach(image => {
-                image.addEventListener('click', function() {
-                    const capeContainer = image.closest('.cape-container');
-                    capeContainer.classList.toggle('selected');
-                    image.classList.toggle('selected'); // Toggle l'état sélectionné
-                    updateURL(); // Met à jour l'URL en fonction des capes sélectionnées
-                });
-            });
-
-            function updateURL() {
-                let selectedCapes = [];
-                document.querySelectorAll('.cape-image.selected').forEach(image => {
-                    selectedCapes.push(image.getAttribute('data-name'));
-                });
-                let currentUrl = new URL(window.location.href);
-                currentUrl.searchParams.set("capes", selectedCapes.join(","));
-                window.history.pushState({}, "", currentUrl.toString()); // Met à jour l'URL sans recharger la page
-            }
-
-            document.getElementById("applyFilterImage").addEventListener("click", function() {
-                let selectedCapes = [];
-                document.querySelectorAll('.cape-image.selected').forEach(image => {
-                    selectedCapes.push(image.getAttribute('data-name'));
-                });
-                let currentUrl = new URL(window.location.href);
-                currentUrl.searchParams.set("capes", selectedCapes.join(",")); // Ajouter les capes sélectionnées à l'URL
-                currentUrl.pathname = `/{{.Lang}}/classement/1`; // Assurez-vous de rediriger vers la première page du classement
-                window.location.href = currentUrl.toString(); // Redirige vers l'URL mise à jour
-            });
-
             document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("openFilter").addEventListener("click", function() {
                     document.getElementById("filterModal").style.display = "flex";
@@ -166,19 +88,6 @@
                 function getCurrentPageNumber() {
                     const match = window.location.pathname.match(/\/classement\/(\d+)/);
                     return match ? parseInt(match[1], 10) : 1;
-                }
-
-                const urlParams = new URLSearchParams(window.location.search);
-                const capesParam = urlParams.get('capes');
-                if (capesParam) {
-                    const selectedCapes = capesParam.split(',');
-                    selectedCapes.forEach(capeName => {
-                        document.querySelectorAll(`.cape-image[data-name="${capeName}"]`).forEach(image => {
-                            image.classList.add('selected');
-                            const capeContainer = image.closest('.cape-container');
-                            capeContainer.classList.add('selected'); // Ajouter la classe "selected" sur le conteneur également
-                        });
-                    });
                 }
             });
 

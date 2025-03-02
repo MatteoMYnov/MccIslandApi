@@ -30,14 +30,12 @@ func GetUUID(name string) (string, string) {
 	// Effectuer la requête HTTP
 	resp, err := http.Get(url)
 	if err != nil {
-		fmt.Printf("Erreur lors de la requête HTTP : %v\n", err)
 		return "", name
 	}
 	defer resp.Body.Close()
 
 	// Vérifier le statut HTTP
 	if resp.StatusCode != http.StatusOK {
-		fmt.Printf("Erreur : statut HTTP invalide %d\n", resp.StatusCode)
 		return "", name
 	}
 

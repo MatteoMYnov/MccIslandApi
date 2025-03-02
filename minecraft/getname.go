@@ -23,13 +23,11 @@ func GetName(UUID string) string {
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		fmt.Printf("Erreur : statut HTTP invalide %d pour UUID %s\n", resp.StatusCode, UUID)
 		return ""
 	}
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		fmt.Printf("Erreur lors de la lecture de la réponse : %v\n", err)
 		return ""
 	}
 

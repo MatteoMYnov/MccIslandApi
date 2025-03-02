@@ -44,19 +44,16 @@ func GetCapeNames(name string) []string {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
 	if err != nil {
-		fmt.Printf("Erreur lors de la requête HTTP : %v\n", err)
 		return nil
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		fmt.Printf("Erreur : statut HTTP invalide %d\n", resp.StatusCode)
 		return nil
 	}
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		fmt.Printf("Erreur lors de la lecture de la réponse : %v\n", err)
 		return nil
 	}
 
@@ -133,7 +130,6 @@ func GetCapes(name string, capeGroups CapeGroups) []map[string]interface{} {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
 	resp, err := http.Get(url)
 	if err != nil {
-		fmt.Printf("Erreur lors de la requête HTTP : %v\n", err)
 		return nil
 	}
 	defer resp.Body.Close()
