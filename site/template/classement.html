@@ -97,10 +97,7 @@
                 card.addEventListener('click', function() {
                     const playerUUID = card.getAttribute('data-playeruuid');
                     window.location.href = `/{{.Lang}}/menu?q=${playerUUID}`;
-                    document.getElementById("loadingOverlay").style.display = "flex";
-                    setTimeout(function() {
-                        document.getElementById("loadingOverlay").style.display = "none";
-                    }, 5000);
+                    loading();
                 });
             });
 
@@ -187,10 +184,7 @@
             function refreshSearch() {
                 playUiClickSound()
                 window.location.href = "/{{.Lang}}/menu";
-                document.getElementById("loadingOverlay").style.display = "flex";
-                setTimeout(function() {
-                    document.getElementById("loadingOverlay").style.display = "none";
-                }, 5000);
+                loading();
             }
         </script>
     </body>

@@ -220,7 +220,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	lang := parts[1]
 
-	supportedLangs := map[string]bool{"fr-FR": true, "en-US": true}
+	supportedLangs := map[string]bool{"fr-FR": true, "en-US": true, "es-ES": true, "de-DE": true}
 
 	if _, ok := supportedLangs[lang]; !ok {
 		lang = "en-US"
@@ -531,7 +531,7 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Charger les traductions en fonction de la langue
-	supportedLangs := map[string]bool{"fr-FR": true, "en-US": true}
+	supportedLangs := map[string]bool{"fr-FR": true, "en-US": true, "es-ES": true, "de-DE": true}
 	if _, ok := supportedLangs[lang]; !ok {
 		lang = "en-US" // Langue par défaut
 	}
@@ -696,13 +696,17 @@ func main() {
 	// Définir les routes pour chaque langue
 	http.HandleFunc("/en-US/menu", menuHandler)
 	http.HandleFunc("/fr-FR/menu", menuHandler)
+	http.HandleFunc("/es-ES/menu", menuHandler)
+	http.HandleFunc("/de-DE/menu", menuHandler)
 
 	http.HandleFunc("/en-US/classement/", classementHandler)
 	http.HandleFunc("/fr-FR/classement/", classementHandler)
+	http.HandleFunc("/es-ES/classement/", classementHandler)
+	http.HandleFunc("/de-DE/classement/", classementHandler)
 
 	http.HandleFunc("/dbdl", downloadFileHandler)
 
-	if err := http.ListenAndServe(":1603", nil); err != nil {
+	if err := http.ListenAndServe(":1611", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

@@ -13,7 +13,10 @@
         "api_not_working": "L'API est actuellement hors service.",
         "coming_soon": "Bientôt disponible !",
         "cl-classement": "Classement des Joueurs",
-        "cl-filter": "Filtre de Capes"
+        "cl-filter": "Filtre de Capes",
+        "wallet": "Porte-feuille",
+        "trophies": "Trophées",
+        "badges": "Badges"
     },
     "en-US": {
         "asked_for_theme": "This player has requested the site administrator to assign them a custom theme.",
@@ -29,6 +32,47 @@
         "api_not_working": "The API is currently down.",
         "coming_soon": "Coming soon!",
         "cl-classement": "Player Rankings",
-        "cl-filter": "Capes Filter"
+        "cl-filter": "Capes Filter",
+        "wallet": "Wallet",
+        "trophies": "Trophies",
+        "badges": "Badges"
+    },
+    "es-ES": {
+        "asked_for_theme": "Este jugador ha solicitado al administrador del sitio que le asigne un tema personalizado.",
+        "roll-friends": "Amigos",
+        "roll-stats": "Estadísticas",
+        "roll-cos": "Cosméticos",
+        "roll-fishing": "Pesca",
+        "no_classement": "El jugador no puede ser clasificado",
+        "no_cape": "Este jugador no tiene capa",
+        "no_friend": "El jugador no tiene amigos o no ha abierto sus APIs.",
+        "no_stats": "El jugador no tiene estadísticas en el servidor o no ha abierto sus APIs.",
+        "no_cos": "El jugador no posee cosméticos o no ha abierto sus APIs.",
+        "api_not_working": "La API está actualmente fuera de servicio.",
+        "coming_soon": "¡Próximamente!",
+        "cl-classement": "Clasificación de Jugadores",
+        "cl-filter": "Filtro de Capas",
+        "wallet": "Cartera",
+        "trophies": "Trofeos",
+        "badges": "Insignias"
+    },
+    "de-DE": {
+        "asked_for_theme": "Dieser Spieler hat den Administrator der Website gebeten, ihm ein benutzerdefiniertes Thema zuzuweisen.",
+        "roll-friends": "Freunde",
+        "roll-stats": "Statistiken",
+        "roll-cos": "Kosmetika",
+        "roll-fishing": "Angeln",
+        "no_classement": "Der Spieler kann nicht eingestuft werden",
+        "no_cape": "Dieser Spieler hat kein Cape",
+        "no_friend": "Der Spieler hat keine Freunde oder hat seine APIs nicht geöffnet.",
+        "no_stats": "Der Spieler hat keine Statistiken auf dem Server oder hat seine APIs nicht geöffnet.",
+        "no_cos": "Der Spieler besitzt keine Kosmetika oder hat seine APIs nicht geöffnet.",
+        "api_not_working": "Die API ist derzeit nicht verfügbar.",
+        "coming_soon": "Demnächst verfügbar!",
+        "cl-classement": "Spieler-Rangliste",
+        "cl-filter": "Cape-Filter",
+        "wallet": "Geldbörse",
+        "trophies": "Trophäen",
+        "badges": "Abzeichen"
     }
 }

@@ -3,5 +3,14 @@ document.querySelector("form").addEventListener("submit", function() {
     document.getElementById("loadingOverlay").style.display = "flex";
     setTimeout(function() {
         document.getElementById("loadingOverlay").style.display = "none";
-    }, 5000);
+    }, 8000);
 });
+
+function loading() {
+    document.getElementById("loadingOverlay").style.display = "flex";
+    setTimeout(function() {
+        document.getElementById("loadingOverlay").style.display = "none";
+    }, 8000);
+}
+
+window.loading = loading;
