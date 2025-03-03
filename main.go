@@ -16,6 +16,20 @@ import (
 	"strings"
 )
 
+type ImageInfo struct {
+	URL string `json:"URL"`
+	Alt string `json:"Alt"`
+}
+
+type ModalEntry struct {
+	Name        string      `json:"name"`
+	Date        string      `json:"date"`
+	Images      []ImageInfo `json:"images"`
+	Description string      `json:"description"`
+}
+
+type ModalData map[string]ModalEntry
+
 // Nouveau format JSON pour les capes
 type Cape struct {
 	Name  string   `json:"name"`
@@ -119,6 +133,7 @@ type DataMenuPage struct {
 	PlayerRank     int
 	PlayerRankPage int
 	//lang
+	ModalData    ModalData
 	Lang         string
 	Translations load.Translations
 }
@@ -357,6 +372,17 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	modalFile := fmt.Sprintf("./site/infos/modals/modal_infos_%s.json", lang)
+	var modalData ModalData
+
+	if fileContent, err := ioutil.ReadFile(modalFile); err == nil {
+		if err := json.Unmarshal(fileContent, &modalData); err != nil {
+			log.Println("Erreur de parsing du JSON modal_infos:", err)
+		}
+	} else {
+		log.Println("Erreur de lecture du fichier modal_infos.json:", err)
+	}
+
 	// Obtenez les informations du MCC pour le joueur
 	mccInfos := mcc.GetInfos(playerUUID)
 
@@ -476,6 +502,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		PlayerRank:     playerRank,
 		PlayerRankPage: playerRankPage,
 		//lang
+		ModalData:    modalData,
 		Lang:         lang,         // Ajoutez la langue ici
 		Translations: translations, // Ajoutez les traductions ici
 	}
@@ -706,7 +733,7 @@ func main() {
 
 	http.HandleFunc("/dbdl", downloadFileHandler)
 
-	if err := http.ListenAndServe(":1611", nil); err != nil {
+	if err := http.ListenAndServe(":1613", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

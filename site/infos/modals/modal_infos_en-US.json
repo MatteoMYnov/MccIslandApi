@@ -1,0 +1,448 @@
+{
+    "2011": {
+        "name": "Minecon 2011",
+        "date": "Obtained: April 7, 2011, in Las Vegas, USA",
+        "images": [
+            {"URL": "../img/capes/dummy/2011-cape.png", "Alt": "Minecon 2011 Cape"},
+            {"URL": "../img/capes/dummy/2011-elytra.png", "Alt": "Minecon 2011 Elytra"}
+        ],
+        "description": "This cape was given to attendees of Minecon 2011. It was awarded based on their username, marking the first and last time this method was used."
+    },
+    "2012": {
+        "name": "Minecon 2012",
+        "date": "Obtained: July 18, 2012, at Disneyland Paris, France",
+        "images": [
+            {"URL": "../img/capes/dummy/2012-cape.png", "Alt": "Minecon 2012 Cape"},
+            {"URL": "../img/capes/dummy/2012-elytra.png", "Alt": "Minecon 2012 Elytra"}
+        ],
+        "description": "This cape was given to attendees of Minecon 2012. Players received a code by email that they had to enter on minecraft.net to claim their reward."
+    },
+    "2013": {
+        "name": "Minecon 2013",
+        "date": "Obtained: July 1, 2013, in Orlando, Florida",
+        "images": [
+            {"URL": "../img/capes/dummy/2013-cape.png", "Alt": "Minecon 2013 Cape"},
+            {"URL": "../img/capes/dummy/2013-elytra.png", "Alt": "Minecon 2013 Elytra"}
+        ],
+        "description": "This cape was given to attendees of Minecon 2013. Players received a code by email that they had to enter on minecraft.net to claim their reward."
+    },
+    "2015": {
+        "name": "Minecon 2015",
+        "date": "Obtained: July 4-5, 2015, in London, UK",
+        "images": [
+            {"URL": "../img/capes/dummy/2015-cape.png", "Alt": "Minecon 2015 Cape"},
+            {"URL": "../img/capes/dummy/2015-elytra.png", "Alt": "Minecon 2015 Elytra"}
+        ],
+        "description": "This cape was given to attendees of Minecon 2015. Players received a code by email only after scanning their ticket onsite, which they then had to enter on minecraft.net to claim their reward."
+    },
+    "2016": {
+        "name": "Minecon 2016",
+        "date": "Obtained: September 24-25, 2016, in Anaheim, USA",
+        "images": [
+            {"URL": "../img/capes/dummy/2016-cape.png", "Alt": "Minecon 2016 Cape"},
+            {"URL": "../img/capes/dummy/2016-elytra.png", "Alt": "Minecon 2016 Elytra"}
+        ],
+        "description": "This cape was given to attendees of Minecon 2016. Players received a code by email only after scanning their ticket onsite, which they then had to enter on minecraft.net to claim their reward."
+    },
+    "mojangold": {
+        "name": "Mojang Cape (Classic)",
+        "date": "Obtained: December 20, 2010 - October 7, 2015",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangold-cape.png", "Alt": "Mojang Cape (Classic)"},
+            {"URL": "../img/capes/dummy/mojangold-elytra.png", "Alt": "Mojang Elytra (Classic)"}
+        ],
+        "description": "This cape was given to Mojang Studios employees between these dates."
+    },
+    "mojang": {
+        "name": "Mojang Cape",
+        "date": "Obtained: October 7, 2015 - July 26, 2021",
+        "images": [
+            {"URL": "../img/capes/dummy/mojang-cape.png", "Alt": "Mojang Cape"},
+            {"URL": "../img/capes/dummy/mojang-elytra.png", "Alt": "Mojang Elytra"}
+        ],
+        "description": "This cape was given to Mojang Studios employees between these dates. Its color was modified to better align with Mojang Studios' new visual identity."
+    },
+    "mojangstudios": {
+        "name": "Mojang Studios Cape",
+        "date": "Obtained: July 26, 2021 - present",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangstudios-cape.png", "Alt": "Mojang Studios Cape"},
+            {"URL": "../img/capes/dummy/mojangstudios-elytra.png", "Alt": "Mojang Studios Elytra"}
+        ],
+        "description": "This cape has been awarded to Mojang Studios employees since the logo redesign by Johan Aronson."
+    },
+    "migrator_cape": {
+        "name": "Migrator Cape",
+        "date": "Obtained: July 9, 2021",
+        "images": [
+            {"URL": "../img/capes/dummy/migrator_cape-cape.png", "Alt": "Migrator Cape"},
+            {"URL": "../img/capes/dummy/migrator_cape-elytra.png", "Alt": "Migrator Elytra"}
+        ],
+        "description": "This cape was awarded to players who had an account before December 1, 2020, and migrated their Mojang account to a Microsoft account."
+    },
+    "vanilla_cape": {
+        "name": "Vanilla Cape",
+        "date": "Obtained: August 31, 2022",
+        "images": [
+            {"URL": "../img/capes/dummy/vanilla_cape-cape.png", "Alt": "Vanilla Cape"},
+            {"URL": "../img/capes/dummy/vanilla_cape-elytra.png", "Alt": "Vanilla Elytra"}
+        ],
+        "description": "This cape was awarded to players who bought Minecraft Java Edition and Minecraft Bedrock Edition before June 6, 2022, using the same email address, before the two editions merged."
+    },
+    "15A": {
+        "name": "15th Anniversary Cape",
+        "date": "Obtained: May 17, 2024 - June 21, 2024",
+        "images": [
+            {"URL": "../img/capes/dummy/15A-cape.png", "Alt": "15th Anniversary Cape"},
+            {"URL": "../img/capes/dummy/15A-elytra.png", "Alt": "15th Anniversary Elytra"}
+        ],
+        "description": "This cape was given to players who clicked a button on the 15th Anniversary page on minecraft.net between May 17, 2024, and June 21, 2024. The API endpoint allowed players to exchange it after June 21, which was fixed four days later. It was also called the 'Creepy Cape' on the main minecraft.net page."
+    },
+    "tiktok": {
+        "name": "Follower's Cape",
+        "date": "Obtained: May 17, 2024 - June 18, 2024",
+        "images": [
+            {"URL": "../img/capes/dummy/tiktok-cape.png", "Alt": "Follower's Cape"},
+            {"URL": "../img/capes/dummy/tiktok-elytra.png", "Alt": "Follower's Elytra"}
+        ],
+        "description": "This cape was given to players who redeemed the code during the 15th Anniversary event. Users could unlock an exchangeable code for the cape by watching a Minecraft livestream on TikTok. Depending on the user's region, additional conditions were imposed, such as watching for a certain number of minutes or typing 'minecraft' in the live chat. The event started on May 17, 2024, and ended on June 18, 2024. Players who unlocked the cape first received it on Bedrock Edition and then it was gradually extended to Java Edition in July 2024. All codes for the cape were deactivated on June 30, 2024."
+    },
+    "twitch": {
+        "name": "Purple Heart Cape",
+        "date": "Obtained: May 15, 2024 - May 31, 2024",
+        "images": [
+            {"URL": "../img/capes/dummy/twitch-cape.png", "Alt": "Purple Heart Cape"},
+            {"URL": "../img/capes/dummy/twitch-elytra.png", "Alt": "Purple Heart Elytra"}
+        ],
+        "description": "This cape was given to players who redeemed the code during the 15th Anniversary event. Users could unlock a Twitch Drop code for the cape by watching any Minecraft streamer with Drops enabled for at least 15 minutes. The Drop ran from May 15, 2024, to May 31, 2024. All codes for the cape were deactivated on June 30, 2024."
+    },
+    "cherry": {
+        "name": "Cherry Blossom Cape",
+        "date": "Obtained: October 12, 2023",
+        "images": [
+            {"URL": "../img/capes/dummy/cherry-cape.png", "Alt": "Cherry Blossom Cape"},
+            {"URL": "../img/capes/dummy/cherry-elytra.png", "Alt": "Cherry Blossom Elytra"}
+        ],
+        "description": "This cape was given to everyone who joined the Mob Vote 2023 event server or voted through the Minecraft launcher."
+    },
+    "mcc": {
+        "name": "MCC 15th Year Cape",
+        "date": "Obtained: August 5, 2024",
+        "images": [
+            {"URL": "../img/capes/dummy/mcc-cape.png", "Alt": "MCC 15th Year Cape"},
+            {"URL": "../img/capes/dummy/mcc-elytra.png", "Alt": "MCC 15th Year Elytra"}
+        ],
+        "description": "This cape was given to players who completed the 15 challenges of the MCChampionship mini-games event server, which started on July 22, 2024. 10 of the challenges required players to reach certain stats in mini-games, and 4 were for completing each mini-game. The remaining challenge was the Mystery Cave, which involved 7 tasks based on the cave's drawings. From July 22, 2024, a new task was revealed each day, allowing players to earn the cape from July 28 to August 5, 2024. Initially exclusive to the Bedrock Edition, it was later made available for Java Edition after community feedback. It was made available for Java after the event ended on August 5, 2024, as announced."
+    },
+    "mojangoffice": {
+        "name": "Mojang Office Cape",
+        "date": "Obtained: December 7, 2024",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png", "Alt": "Mojang Office Cape"},
+            {"URL": "../img/capes/dummy/mojangoffice-elytra.png", "Alt": "Mojang Office Elytra"}
+        ],
+        "description": "This cape was leaked on November 25, 2024, on the Minecraft website with the title 'Buy a cape, get a cape'. The cape was removed from the page shortly afterward. However, players discovered that by purchasing a Creeper cape of any size from the official Minecraft store starting December 7, 2024, they would receive a code to unlock an exclusive in-game cape called the Eyeblossom cape. On November 28, 2024, the Creeper cape store page was updated to include information that purchasing this cape would unlock an in-game exclusive cape. This note was later removed and replaced with a promotion for a Bedrock Character Creator item. On December 9, 2024, Mojang announced the Eerie Mojang Office Party event server, which would award the cape after completing 5 daily challenges. The name of the cape was revealed as the 'Mojang Office cape'. On December 7, 2024, a Mojang employee confirmed that the cape would be multiplatform, and at 9:23 AM EST that day, it was added to the backend of the Java Edition. After completing the fifth and final daily challenge on the event server, players could immediately access the cape in both game versions."
+    },
+    "mcexp": {
+        "name": "Minecraft Experience Cape",
+        "date": "Obtained: October 23, 2024 to present, Dallas (Texas), USA",
+        "images": [
+            {"URL": "../img/capes/dummy/mcexp-cape.png", "Alt": "MC Experience Cape"},
+            {"URL": "../img/capes/dummy/mcexp-elytra.png", "Alt": "MC Experience Elytra"}
+        ],
+        "description": "This cape was awarded to players who participated in the Minecraft Experience: Villager Rescue interactive event. Once participants validated their tickets at the event, a code for the cape was sent to their email, which could be redeemed on minecraft.net/redeem. It has been available for Java since October 23, 2024, for those who used a code for the cape on Bedrock Edition. The internal name of this cape in Bedrock Edition is LBE, meaning Location Based Entertainment. Initially, the Elytra texture for the Java Edition featured an unfinished dark purple monochrome design, which was first uploaded to the Bedrock Edition test server. On October 25, 2024, the Java Edition cape texture was updated to resemble the Bedrock Edition with a zombie villager face on the wings."
+    },
+    "realms": {
+        "name": "Realms MapMaker Cape",
+        "date": "Obtained: December 14, 2015 to present",
+        "images": [
+            {"URL": "../img/capes/dummy/realms-cape.png", "Alt": "Realms MapMaker Cape"},
+            {"URL": "../img/capes/dummy/realms-elytra.png", "Alt": "Realms MapMaker Elytra"}
+        ],
+        "description": "This cape is awarded to MapMakers in the Java Realms content creation program, given to those who meet the criteria specified on the Atlas website. However, it has also been the most revoked due to account theft, boosting, or inappropriate behavior. This cape is intended exclusively for map creators, and its sale or use for boosting other players is strictly prohibited."
+    },
+    "translator": {
+        "name": "Translator Cape",
+        "date": "Obtained: May 16, 2012",
+        "images": [
+            {"URL": "../img/capes/dummy/translator-cape.png", "Alt": "Translator Cape"},
+            {"URL": "../img/capes/dummy/translator-elytra.png", "Alt": "Translator Elytra"}
+        ],
+        "description": "This cape is awarded to certain experienced translators who have moderation permissions for their language on the Minecraft translation project on Crowdin. These capes were distributed on May 16, 2012, to 29 contributors through a fair draw, with the intention of distributing more from time to time. However, after noticing abusive behavior from some translators, such as using auto-translation and down-voting legitimate translations, Jeb canceled the project. The cape was later used a few years later to reward some translators for their significant contributions to the project. It is also one of the rare capes that can be revoked from an account due to account selling or misconduct."
+    },
+    "mojira": {
+        "name": "Mojira Moderator Cape",
+        "date": "Obtained: December 25, 2014 to present",
+        "images": [
+            {"URL": "../img/capes/dummy/mojira-cape.png", "Alt": "Mojira Moderator Cape"},
+            {"URL": "../img/capes/dummy/mojira-elytra.png", "Alt": "Mojira Moderator Elytra"}
+        ],
+        "description": "This cape is awarded to moderators on the Mojira bug tracker. It is also one of the rare capes that can be revoked from an account due to account selling or misconduct."
+    },
+    "cobalt": {
+        "name": "Cobalt Cape",
+        "date": "Obtained: 2016",
+        "images": [
+            {"URL": "../img/capes/dummy/cobalt-cape.png", "Alt": "Cobalt Cape"},
+            {"URL": "../img/capes/dummy/cobalt-elytra.png", "Alt": "Cobalt Elytra"}
+        ],
+        "description": "This cape was awarded to certain participants/winners of the Cobalt League level creation contests and tournaments, with the Elytra texture based on the Cobalt wasp enemy."
+    },
+    "scrolls": {
+        "name": "Scrolls Champion Cape",
+        "date": "Obtained: July 4 and 5, 2015",
+        "images": [
+            {"URL": "../img/capes/dummy/scrolls-cape.png", "Alt": "Scrolls Champion Cape"},
+            {"URL": "../img/capes/dummy/scrolls-elytra.png", "Alt": "Scrolls Champion Elytra"}
+        ],
+        "description": "This cape was awarded to players who earned the first place weekly badge five times in Scrolls starting November 7, 2014. During MINECON 2015, the Open MINECON Scrolls event was also held to win in-game Scrolls items and other prizes, including the cape in Minecraft. Since September 30, 2015, it has no longer been possible to earn this cape. On December 11 and 12, 2014, all players were temporarily shown with this cape to celebrate the release of Scrolls."
+    },
+    "translatorchinese": {
+        "name": "Translator Cape (Chinese)",
+        "date": "Obtained: June 4, 2015",
+        "images": [
+            {"URL": "../img/capes/dummy/translatorchinese-cape.png", "Alt": "Translator Cape (Chinese)"},
+            {"URL": "../img/capes/dummy/translatorchinese-elytra.png", "Alt": "Translator Elytra (Chinese)"}
+        ],
+        "description": "Awarded to Powup333, Craft_Lawrence, and sjjklh on June 4, 2015 for playing an essential role in the Minecraft translation project on Crowdin in Chinese. The cape is identical to the translator cape, except for the Chinese flag on the underside of the cape."
+    },
+    "turtle": {
+        "name": "Turtle Cape",
+        "date": "Obtained: February 14, 2018",
+        "images": [
+            {"URL": "../img/capes/dummy/turtle-cape.png","Alt": "Turtle Cape"},
+            {"URL": "../img/capes/dummy/turtle-elytra.png","Alt": "Turtle Elytra"}
+        ],
+        "description": "The cape was awarded to billyK_ for suggesting adding turtles to the game. It was also given to Michael, Andersson, and el_hefe_, Mojang employees, for testing the cape's endpoints. It was later removed from all accounts except the original holder's. His account was hacked, but he did not give up and was one of the few players assisted by Mojang themselves to recover his account."
+    },
+    "valentine": {
+        "name": "Valentine Cape",
+        "date": "Obtained: August 13, 2022",
+        "images": [
+            {"URL": "../img/capes/dummy/valentine-cape.png","Alt": "Valentine Cape"},
+            {"URL": "../img/capes/dummy/valentine-elytra.png","Alt": "Valentine Elytra"}
+        ],
+        "description": "Given to LolFoxy2 by a Mojang Studios employee after resolving migration issues with their Mojang account. The cape was removed after the employee realized its rarity. On January 24, 2023, it was also discovered for a brief period on the JoinGrave account. The cape had never been seen before."
+    },
+    "birthday": {
+        "name": "Birthday Cape",
+        "date": "Obtained: No date given",
+        "images": [
+            {"URL": "../img/capes/dummy/birthday-cape.png","Alt": "Birthday Cape"},
+            {"URL": "../img/capes/dummy/birthday-elytra.png","Alt": "Birthday Elytra"}
+        ],
+        "description": "Given to Gr8Bizzo, a Mojang Studios employee, supposedly as a birthday gift."
+    },
+    "dB": {
+        "name": "dannyBstyle's Cape",
+        "date": "December 14, 2010",
+        "images": [
+            {"URL": "../img/capes/dummy/dB-cape.png","Alt": "dannyBstyle's Cape"},
+            {"URL": "../img/capes/dummy/dB-elytra.png","Alt": "dannyBstyle's Elytra"}
+        ],
+        "description": "This cape was given to DannyBstyle by Notch, who was a fan of his music. However, on September 8, 2015, his account was hacked after his passwords leaked in a database security breach. A hacker named Hostage stole it, gave it a Megaman skin, and sold it for about $300 to someone named Tre. The account was renamed to TreIsAGod, but five hours after this change, Mojang restored access to the original owner and forced the return of the name and original skin. Six months later, on March 12, 2016, the account was hacked again by someone named Fox. Mojang blocked the account before returning it to dBstyle. Then, in 2020, it was hacked a third time, during which the attacker changed the associated email address before selling the account to someone named debuggg. The latter is known for having accessed several accounts, including those of Mojang employees, like one he renamed uhDebug. Surprisingly, DannyBstyle seems unconcerned, and to this day, he still doesn't have his account."
+    },
+    "millionth": {
+        "name": "Millionth Customer Cape",
+        "date": "Obtained: January 20, 2011",
+        "images": [
+            {"URL": "../img/capes/dummy/millionth-cape.png","Alt": "Millionth Customer Cape"},
+            {"URL": "../img/capes/dummy/millionth-elytra.png","Alt": "Millionth Customer Elytra"}
+        ],
+        "description": "This cape was given to akronman1, the lucky buyer of the 1,000,000th copy of Minecraft. The cape was designed by Kinten. After that, he was hacked by SIM swap, lost his email address, and the account was lost."
+    },
+    "prismarine": {
+        "name": "Prismarine Cape",
+        "date": "Obtained: July 22, 2015",
+        "images": [
+            {"URL": "../img/capes/dummy/prismarine-cape.png","Alt": "Prismarine Cape"},
+            {"URL": "../img/capes/dummy/prismarine-elytra.png","Alt": "Prismarine Elytra"}
+        ],
+        "description": "This cape was given to Drullkus for recreating the Prismarine block for use in Minecraft rather than in his mod Chisel. Jeb had the cape made before contacting Drullkus, but it had no owner. Before it was given out, a Mojang employee, KrisJelbring, had it on his account, but it was later removed."
+    },
+    "snowman": {
+        "name": "JulianClark's Cape",
+        "date": "Obtained: December 25, 2010",
+        "images": [
+            {"URL": "../img/capes/dummy/snowman-cape.png","Alt": "JulianClark's Cape"},
+            {"URL": "../img/capes/dummy/snowman-elytra.png","Alt": "JulianClark's Elytra"}
+        ],
+        "description": "This cape was given to JulianClark for introducing Ray Cokes, the TV presenter and actor, to Notch."
+    },
+    "spade": {
+        "name": "Spade Cape",
+        "date": "Obtained: July 14, 2011",
+        "images": [
+            {"URL": "../img/capes/dummy/spade-cape.png","Alt": "Spade Cape"},
+            {"URL": "../img/capes/dummy/spade-elytra.png","Alt": "Spade Elytra"}
+        ],
+        "description": "This cape was given to MrMessiah as a 'thank you' for creating the BetterLight mod, responsible for some lighting and grass features in Minecraft. The cape was mentioned in 2011, but it was only granted in 2015."
+    },
+    "sniffer": {
+        "name": "Test Cape",
+        "date": "Obtained: October 10, 2023",
+        "images": [
+            {"URL": "../img/capes/dummy/sniffer-cape.png","Alt": "Test Cape"},
+            {"URL": "../img/capes/dummy/sniffer-elytra.png","Alt": "Test Elytra"}
+        ],
+        "description": "This cape was placed on the account of etanaratsastaja, a Mojang employee, during a test on Mojang's API. The design is similar to a Sniffer. It was uploaded to Mojang's texture server on October 10, 2023, and to the production texture server 7 days later, on October 17, 2023. The cape was first seen on two accounts in Mojang's staging server database."
+    },
+    "translatorjapanese": {
+        "name": "Translator Cape (Japanese)",
+        "date": "Obtained: October 19, 2013",
+        "images": [
+            {"URL": "../img/capes/dummy/translatorjapanese-cape.png","Alt": "Translator Cape (Japanese)"},
+            {"URL": "../img/capes/dummy/translatorjapanese-elytra.png","Alt": "Translator Elytra (Japanese)"}
+        ],
+        "description": "This cape was given to cheapsh0t in October 2013 for helping the Mojang team in Tokyo. The cape is identical to the translator cape, except for the Japanese flag on the underside."
+    },
+    "bacon": {
+        "name": "Bacon Cape",
+        "date": "Obtained: 2010",
+        "images": [
+            {"URL": "../img/capes/dummy/bacon-cape.png","Alt": "Bacon Cape"},
+            {"URL": "../img/capes/dummy/bacon-elytra.png","Alt": "Bacon Elytra"}
+        ],
+        "description": "Given to Miclee by Notch for his idea to add Pigmen. The cape was made by Miclee himself. However, it was revoked due to a large influx of players asking Notch for their own in-game capes. It is also the only cape not to have an Elytra version, as it was removed before Elytra was added to the game."
+    },
+    "realmsnew": {
+        "name": "New Realms Cape",
+        "date": "Obtained: N/A",
+        "images": [
+            {"URL": "../img/capes/dummy/realmsnew-cape.png","Alt": "New Realms Cape"},
+            {"URL": "../img/capes/dummy/realmsnew-elytra.png","Alt": "New Realms Elytra"}
+        ],
+        "description": "No more info"
+    },
+    "mojang-employee": {
+        "name": "Mojang Employee Badge",
+        "date": " ",
+        "description": "This badge is given to all Mojang employees who have an employee cape on their account.",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangold-cape.png","Alt": "Mojang Cape (Classic)"},
+            {"URL": "../img/capes/dummy/mojangstudios-cape.png","Alt": "Mojang Studios Cape"},
+            {"URL": "../img/capes/dummy/mojang-cape.png","Alt": "Mojang Cape"}
+        ]
+    },
+    "perfect-mojang-employee": {
+        "name": "Perfect Mojang Employee Badge",
+        "date": " ",
+        "description": "This badge is given to all Mojang employees who have all the team capes on their account. They have been there since the very beginning of the game and are still working for Mojang.",
+        "images": [
+            {"URL": "../img/capes/dummy/mojangold-cape.png","Alt": "Mojang Cape (Classic)"},
+            {"URL": "../img/capes/dummy/mojangstudios-cape.png","Alt": "Mojang Studios Cape"},
+            {"URL": "../img/capes/dummy/mojang-cape.png","Alt": "Mojang Cape"}
+        ]
+    },
+    "unusual-squad": {
+        "name": "UnusualSquad Badge",
+        "date": " ",
+        "description": "This badge is given to all members of the Unusual Squad."
+    },
+    "website-dev": {
+        "name": "Website Developer Badge",
+        "date": " ",
+        "description": "This badge is given to Leroidesafk for creating the website."
+    },
+    "all-events": {
+        "name": "All Events Badge",
+        "date": " ",
+        "description": "This badge is given to all players who have all the event capes in-game.",
+        "images": [
+            {"URL": "../img/capes/dummy/mcc-cape.png","Alt": "MCC 15th Year Cape"},
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"}
+        ]
+    },
+    "all-commons": {
+        "name": "All Commons Badge",
+        "date": " ",
+        "description": "This badge is awarded to all players who own all the common capes in the game.",
+        "images": [
+            {"URL": "../img/capes/dummy/mcc-cape.png", "Alt": "MCC 15th Year Cape"},
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png", "Alt": "Mojang Office Cape"},
+            {"URL": "../img/capes/dummy/tiktok-cape.png", "Alt": "Follower's Cape"},
+            {"URL": "../img/capes/dummy/twitch-cape.png", "Alt": "Purple Heart Cape"},
+            {"URL": "../img/capes/dummy/cherry-cape.png", "Alt": "Cherry Blossom Cape"},
+            {"URL": "../img/capes/dummy/vanilla_cape-cape.png", "Alt": "Vanilla Cape"},
+            {"URL": "../img/capes/dummy/15A-cape.png", "Alt": "15th Anniversary Cape"},
+            {"URL": "../img/capes/dummy/migrator_cape-cape.png", "Alt": "Migrator Cape"}
+        ]
+    },
+    "all-minecons": {
+        "name": "All Minecons Badge",
+        "date": " ",
+        "description": "This badge is awarded to all players who own all the Minecon capes in the game.",
+        "images": [
+            {"URL": "../img/capes/dummy/2011-cape.png", "Alt": "Minecon 2011 Cape"},
+            {"URL": "../img/capes/dummy/2012-cape.png", "Alt": "Minecon 2012 Cape"},
+            {"URL": "../img/capes/dummy/2013-cape.png", "Alt": "Minecon 2013 Cape"},
+            {"URL": "../img/capes/dummy/2015-cape.png", "Alt": "Minecon 2015 Cape"},
+            {"URL": "../img/capes/dummy/2016-cape.png", "Alt": "Minecon 2016 Cape"}
+        ]
+    },
+    "muscles": {
+        "name": "Muscles Badge",
+        "date": " ",
+        "description": "This prestigious badge is awarded to Taizeur, in recognition of his impressive biceps worthy of a legend and his exemplary role as a model firefighter. One might almost think he lifts trucks for breakfast and extinguishes fires just by frowning! I would add some pictures to prove my words, but for obvious reasons (and to avoid a sudden wave of fainting), I will refrain... You'll have to take my word for it!"
+    },
+    "gift-by-mojang": {
+        "name": "Gift By Mojang Badge",
+        "date": " ",
+        "description": "This badge is awarded to all players who have received a special gift from Mojang on their account.",
+        "images": [
+            {"URL": "../img/capes/dummy/bacon-cape.png", "Alt": "Bacon Cape"},
+            {"URL": "../img/capes/dummy/valentine-cape.png", "Alt": "Valentine Cape"},
+            {"URL": "../img/capes/dummy/translatorjapanese-cape.png", "Alt": "Translator Cape (Japanese)"},
+            {"URL": "../img/capes/dummy/turtle-cape.png", "Alt": "Turtle Cape"},
+            {"URL": "../img/capes/dummy/birthday-cape.png", "Alt": "Birthday Cape"},
+            {"URL": "../img/capes/dummy/dB-cape.png", "Alt": "dannyBstyle's Cape"},
+            {"URL": "../img/capes/dummy/millionth-cape.png", "Alt": "Millionth Customer Cape"},
+            {"URL": "../img/capes/dummy/prismarine-cape.png", "Alt": "Prismarine Cape"},
+            {"URL": "../img/capes/dummy/snowman-cape.png", "Alt": "JulianClark's Cape"},
+            {"URL": "../img/capes/dummy/spade-cape.png", "Alt": "Spade Cape"},
+            {"URL": "../img/capes/dummy/sniffer-cape.png", "Alt": "Test Cape"},
+            {"URL": "../img/capes/dummy/translatorchinese-cape.png", "Alt": "Translator Cape (Chinese)"},
+            {"URL": "../img/capes/dummy/scrolls-cape.png", "Alt": "Scrolls Champion Cape"},
+            {"URL": "../img/capes/dummy/cobalt-cape.png", "Alt": "Cobalt Cape"},
+            {"URL": "../img/capes/dummy/mojira-cape.png", "Alt": "Mojira Moderator Cape"},
+            {"URL": "../img/capes/dummy/translator-cape.png", "Alt": "Translator Cape"},
+            {"URL": "../img/capes/dummy/realms-cape.png", "Alt": "Realms MapMaker Cape"}
+        ]
+    },
+    "unique-cape": {
+        "name": "Unique Cape",
+        "date": " ",
+        "description": "This badge is awarded to all players who have had a one-of-a-kind cape.",
+        "images": [
+            {"URL": "../img/capes/dummy/bacon-cape.png", "Alt": "Bacon Cape"},
+            {"URL": "../img/capes/dummy/valentine-cape.png", "Alt": "Valentine Cape"},
+            {"URL": "../img/capes/dummy/translatorjapanese-cape.png", "Alt": "Translator Cape (Japanese)"},
+            {"URL": "../img/capes/dummy/turtle-cape.png", "Alt": "Turtle Cape"},
+            {"URL": "../img/capes/dummy/birthday-cape.png", "Alt": "Birthday Cape"},
+            {"URL": "../img/capes/dummy/dB-cape.png", "Alt": "dannyBstyle's Cape"},
+            {"URL": "../img/capes/dummy/millionth-cape.png", "Alt": "Millionth Customer Cape"},
+            {"URL": "../img/capes/dummy/prismarine-cape.png", "Alt": "Prismarine Cape"},
+            {"URL": "../img/capes/dummy/snowman-cape.png", "Alt": "JulianClark's Cape"},
+            {"URL": "../img/capes/dummy/spade-cape.png", "Alt": "Spade Cape"},
+            {"URL": "../img/capes/dummy/sniffer-cape.png", "Alt": "Test Cape"},
+            {"URL": "../img/capes/dummy/translatorchinese-cape.png", "Alt": "Translator Cape (Chinese)"}
+        ]
+    },
+    "custom-model": {
+        "name": "Custom Model",
+        "date": " ",
+        "description": "This badge is awarded to all players who have a custom skin model. There are currently 3 in the game."
+    },
+    "mcc-infos": {
+        "name": "API Information",
+        "date": " ",
+        "description": "If the information and friends list are not displaying, we recommend enabling the APIs on the server by connecting to play.mccisland.net, accessing the Pocket Menu, then going to Settings > API Settings and enabling the settings you want to appear on the site.",
+        "images": [
+            {"URL": "../img/mcc/utilities/api/1.png", "Alt": "API Settings"},
+            {"URL": "../img/mcc/utilities/api/arrow.png", "Alt": "API Settings"},
+            {"URL": "../img/mcc/utilities/api/2.png", "Alt": "API Settings"},
+            {"URL": "../img/mcc/utilities/api/arrow.png", "Alt": "API Settings"},
+            {"URL": "../img/mcc/utilities/api/3.png", "Alt": "API Settings"}
+        ]
+    }
+}
