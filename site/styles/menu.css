@@ -667,7 +667,7 @@ body.modal-open {
 
 /* SkinRender */
 .skin-3d {
-    position: absolute;
+    position: fixed;
     top: 100px;
     right: calc(50% + 320px);
     width: 100;
