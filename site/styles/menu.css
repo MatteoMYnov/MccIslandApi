@@ -92,6 +92,10 @@ body::before {
     margin: 0 20px;
 }
 
+.navbar-actioners {
+    max-width: 100%;
+}
+
 .input-group {
     display: flex;
     align-items: center;
@@ -106,6 +110,7 @@ body::before {
     font-size: 20px;
     color: var(--abs-white);
     width: 300px;
+    min-width: 150px;
     text-align: center;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
@@ -151,6 +156,25 @@ main {
     z-index: 2
 }
 
+@media screen and (max-width: 768px) {
+    .stats-container {
+        width: 100%;
+    }
+    .page-cath {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .badge-card {
+        position: static !important;
+        width: 100% !important;
+    }
+    .skin-3d {
+        display: none;
+    }
+}
+
 /* Cards */
 .player-card, .minecraftstats-card, .hypixelstats-card, .mccstats-card, .badge-card {
     width: 100%;
@@ -168,8 +192,8 @@ main {
 .player-card {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    width: 100vw;
+    /* justify-content: flex-start; */
+    width: 100%; /* 100% moins le padding total */
     padding: 1.5rem;
     border: 0.125rem solid var(--main-black);
     text-align: center;
@@ -178,7 +202,8 @@ main {
     background-color: var(--main-dark-gray);
     position: relative;
     text-align: center;
-    z-index: 2
+    z-index: 2;
+    box-sizing: border-box; /* Assure que padding ne dépasse pas la largeur */
 }
 
 .profile-info {
@@ -235,7 +260,7 @@ main {
 .playerRank {
     position: absolute;
     font-size: 25px;
-    left: 5vh;
+    left: 5%;
     color: yellow;
 }
 
@@ -333,6 +358,7 @@ main {
 /* Badges et leurs affichage */
 .badge-image {
     width: calc(140% / 6 - 10px);
+    max-width: 8vh;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
@@ -354,6 +380,7 @@ main {
 /* Capes et leurs affichage*/
 .cape-container {
     width: calc(90% / 5 - 30px);
+    min-width: 40px;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
@@ -523,7 +550,7 @@ main {
     height: auto;
     image-rendering: pixelated;
     position: absolute;
-    right: 3vh;
+    right: 5%;;
 }
 
 .mccstats-card .stats-header h2 {

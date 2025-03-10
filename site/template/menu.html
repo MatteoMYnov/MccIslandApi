@@ -15,7 +15,7 @@
         <header class="navbar" style="background-color: {{if .BackgroundUUID}}{{.BackgroundNavbar}}; border-bottom: 3px solid {{.BackgroundLight}}{{else}}#6E2F2F; border-bottom: 3px solid #B7573A{{end}};">
             <nav>
                 <ul>
-                    <li>
+                    <li class="navbar-actioners">
                         <form action="/{{.Lang}}/menu" method="get" class="input-group">
                             <img src="../img/utilities/refresh.png" data-tippy-content="Random Player" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
                             <input type="text" name="q" placeholder="Find Player" class="find-player" id="playerInput" required style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">
