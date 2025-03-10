@@ -156,22 +156,43 @@ main {
     z-index: 2
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .stats-container {
         width: 100%;
     }
     .page-cath {
         display: none !important;
     }
+    .cos-selector button {
+        width: 50px;
+    }
+    .cos-display-box {
+        width: 80% !important;
+    }
+    .cos-inventory {
+        padding-top: 5px !important;
+        padding-bottom: 10px !important;
+    }
+    .inv-case {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .inv-case2 {
+        width: 35px !important;
+        height: 35px !important;
+    }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .badge-card {
         position: static !important;
         width: 100% !important;
     }
     .skin-3d {
         display: none;
+    }
+    .subcath-body2 {
+        width: calc(99% - 7px) !important;
     }
 }
 
