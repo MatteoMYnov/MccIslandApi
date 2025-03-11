@@ -633,7 +633,7 @@ body.modal-open {
 /* Contenu du modal */
 .modal-content {
     overflow-y: auto;
-    background-color: #323232;
+    background-color: var(--main-gray);
     padding: 20px;
     border-radius: 10px;
     width: 80%;
@@ -646,9 +646,15 @@ body.modal-open {
 
 /* En-tête du modal */
 .modal-header {
-    background-color: #292929;
-    text-align: center;
-    padding: 10px;
+    border: .125rem solid var(--main-black);
+    background: var(--hole-gray);
+    box-shadow: inset 0 .375rem 0 0 rgba(0, 0, 0, .5);
+    margin: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px;
 }
 
 /* Image du modal */
@@ -658,7 +664,7 @@ body.modal-open {
     border-radius: 5px;
     image-rendering: pixelated;
     object-fit: cover;
-    background-color: #222;
+    background-color: rgba(0, 0, 0, .3);
     padding: 10px;
 }
 
@@ -689,6 +695,7 @@ body.modal-open {
 /* Pour un défilement fluide dans le modal */
 .modal-content {
     transition: max-height 0.3s ease-in-out;
+    border: .125rem solid var(--main-black);
 }
 
 .modal-images {
@@ -1041,7 +1048,7 @@ body.modal-open {
     flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
     gap: 10px; /* Espace entre les cartes de joueurs */
     border-radius: 0 0 10px 10px;
-    background-color: #323232;
+    background-color: var(--main-gray);
     padding: 0 15px;
     transition: max-height 0.3s ease-in-out;
 }
