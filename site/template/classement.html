@@ -46,10 +46,10 @@
                                             <p class="rank">#{{.Rank}}</p>
                                             <img src="https://mc-heads.net/head/{{.UUID}}" class="player-icon no-select">
                                             <p>{{.ActualName}}</p>
-                                            {{if .Badge}}
-                                                <img src="/img/badges/{{.Badge}}.png" class="badge no-select">
-                                            {{end}}
                                         </div>
+                                        {{if .Badge}}
+                                            <img src="/img/badges/{{.Badge}}.png" class="badge no-select">
+                                        {{end}}
                                     </div>
                                 {{end}}
                                 <img id="openFilter" src="/img/mcc/utilities/filter.png" class="filter-button no-select cursor" alt="Filtrer les capes">

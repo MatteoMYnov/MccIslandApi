@@ -6,13 +6,14 @@
         <title>{{.Name}} | Profile</title>
         <link rel="stylesheet" href="../styles/menu.css?v=1.0">
         <link rel="stylesheet" href="../styles/cos.css?v=1.0">
+        <link rel="stylesheet" href="../styles/fishing.css?v=1.0">
         <link rel="stylesheet" href="../styles/tippy.css?v=1.0">
         <link rel="stylesheet" href="../styles/loading.css?v=1.0">
         <link id="favicon" rel="icon" href="https://mc-heads.net/avatar/{{.Name}}" type="image/png">
     </head>
     <body style="--bg-image-url: url('../img/utilities{{if .BackgroundUUID}}/perplayers/{{.BackgroundUUID}}/bg.png{{else}}/bg.png{{end}}');">
         <div id="bgdark"></div>
-        <header class="navbar" style="background-color: {{if .BackgroundUUID}}{{.BackgroundNavbar}}; border-bottom: 3px solid {{.BackgroundLight}}{{else}}#6E2F2F; border-bottom: 3px solid #B7573A{{end}};">
+        <header class="navbar" style="background-color: {{if .BackgroundUUID}}{{.BackgroundNavbar}}; border-bottom: 2px solid {{.BackgroundLight}}{{else}}#6E2F2F; border-bottom: 2px solid #B7573A{{end}};">
             <nav>
                 <ul>
                     <li class="navbar-actioners">
@@ -709,7 +710,83 @@
                                     <img id="fishs-arrow" src="../img/mcc/utilities/arrow-left.png" alt="Arrow" class="arrow no-select">
                                 </div>
                                 <div class="roll-body" id="FishsBody">
-                                    <p>{{index .Translations .Lang "coming_soon"}}</p>
+                                    <h2>{{index .Translations .Lang "coming_soon"}}</h2>
+                                    <div class="fishing-display-box">
+                                        <div class="fishing-allcontents">
+                                            <img src="../img/mcc/fishing/ui/Fishing.png" class="fishing-case-header no-select" draggable="false">
+                                            <div class="fishing-inventory">
+                                                <div class="fishing-selector">
+                                                    <div class="fishing-line">
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/Chosen.png" class="island-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/verdant_woods.png" class="fish-island no-select" data-tippy-content="Verdant Woods" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/floral_forest.png" class="fish-island no-select" data-tippy-content="Floral Forest" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/dark_grove.png" class="fish-island no-select" data-tippy-content="Dark Grove" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/sunken_swamp.png" class="fish-island no-select" data-tippy-content="Sunken Swamp" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/temperate_crab_spot.png" class="fish-island no-select" data-tippy-content="Temperate Crab Spot" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                    </div>
+                                                    <div class="fishing-line">
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/tropical_overgrowth.png" class="fish-island no-select" data-tippy-content="Tropical OverGrowth" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/coral_shores.png" class="fish-island no-select" data-tippy-content="Coral Shores" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/twisted_swamp.png" class="fish-island no-select" data-tippy-content="Twisted Swamp" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/mirrored_oasis.png" class="fish-island no-select" data-tippy-content="Mirrored Oasis" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/tropical_crab_spot.png" class="fish-island no-select" data-tippy-content="Tropical Crab Spot" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                    </div>
+                                                    <div class="fishing-line">
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/ancient_sands.png" class="fish-island no-select" data-tippy-content="Ancient Sands" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/blazing_canyon.png" class="fish-island no-select" data-tippy-content="Blazing Canyon" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/ashen_wastes.png" class="fish-island no-select" data-tippy-content="Ashen Wastes" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/volcanic_springs.png" class="fish-island no-select" data-tippy-content="Volcanic Springs" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                        <div class="fishing-case">
+                                                            <img src="../img/mcc/utilities/layers/locked.png" class="island-diagonal-overlay no-select">
+                                                            <img src="../img/mcc/fishing/fish/barren_crab_spot.png" class="fish-island no-select" data-tippy-content="Barren Crab Spot" data-theme="COMMON" draggable="false">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src="../img/mcc/fishing/ui/Fishing_Bottom.png" class="fishing-case-downer no-select" draggable="false">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>  
                         </div>

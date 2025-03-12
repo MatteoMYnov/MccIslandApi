@@ -59,9 +59,7 @@
     align-items: center;
     justify-content: center;
     margin: 20px auto;
-    padding: 10px;
-    padding-top: 52px;
-    padding-bottom: 25px;
+    padding: 51px 10px 25px;
     transition: opacity 0.5s ease-in-out;
     position: relative;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
@@ -123,6 +121,17 @@
     display: flex;
     justify-content: space-between; /* Répartit les éléments horizontalement */
     align-items: center;
+}
+
+.equipped-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    scale: 1.3;
 }
 
 .equip-cases {
