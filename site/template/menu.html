@@ -571,21 +571,21 @@
                                                     <div class="equip-left equip-cases">
                                                         <div class="inv-case">
                                                             {{if .Equipped.Hats.Name}}
-                                                                <img src="../img/mcc/cos/hats/{{.Equipped.Hats.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/hats/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Hats.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Hats.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Hats.Rarity}}" draggable="false">
+                                                                <img src="../img/mcc/cos/hats/{{.Equipped.Hats.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/hats/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Hats.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Hats.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/hat.png' height='17' class='pixelated'><br><br><div style='display: flex; align-items: center; gap: 2px; line-height: 1.1;'><span style='color: var(--mctext-description); font-style: italic;'>{{.Equipped.Hats.Description}}</span></div></div>" data-theme="{{.Equipped.Hats.Rarity}}" draggable="false">
                                                             {{else}}
                                                                 <img src="../img/mcc/cos/hats/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                             {{end}}
                                                         </div>                                                    
                                                         <div class="inv-case">
                                                             {{if .Equipped.Accessories.Name}}
-                                                                <img src="../img/mcc/cos/accessories/{{.Equipped.Accessories.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/accessories/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Accessories.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Accessories.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Accessories.Rarity}}" draggable="false">
+                                                                <img src="../img/mcc/cos/accessories/{{.Equipped.Accessories.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/accessories/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Accessories.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Accessories.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/accessory.png' height='17' class='pixelated'><br><br><div style='display: flex; align-items: center; gap: 2px; line-height: 1.1;'><span style='color: var(--mctext-description); font-style: italic;'>{{.Equipped.Accessories.Description}}</span></div></div>" data-theme="{{.Equipped.Accessories.Rarity}}" draggable="false">
                                                             {{else}}
                                                                 <img src="../img/mcc/cos/accessories/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                             {{end}}
                                                         </div>
                                                         <div class="inv-case">
                                                             {{if .Equipped.Auras.Name}}
-                                                                <img src="../img/mcc/cos/auras/{{.Equipped.Auras.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/auras/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Auras.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Auras.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/aura.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Auras.Rarity}}" draggable="false">
+                                                                <img src="../img/mcc/cos/auras/{{.Equipped.Auras.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/auras/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Auras.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Auras.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/aura.png' height='17' class='pixelated'><br><br><div style='display: flex; align-items: center; gap: 2px; line-height: 1.1;'><span style='color: var(--mctext-description); font-style: italic;'>{{.Equipped.Auras.Description}}</span></div></div>" data-theme="{{.Equipped.Auras.Rarity}}" draggable="false">
                                                             {{else}}
                                                                 <img src="../img/mcc/cos/auras/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                             {{end}}
@@ -599,21 +599,21 @@
                                                     <div class="equip-right equip-cases">
                                                         <div class="inv-case">
                                                             {{if .Equipped.Trails.Name}}
-                                                                <img src="../img/mcc/cos/trails/{{.Equipped.Trails.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/trails/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Trails.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Trails.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Trails.Rarity}}" draggable="false">
+                                                                <img src="../img/mcc/cos/trails/{{.Equipped.Trails.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/trails/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Trails.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Trails.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/trail.png' height='17' class='pixelated'><br><br><div style='display: flex; align-items: center; gap: 2px; line-height: 1.1;'><span style='color: var(--mctext-description); font-style: italic;'>{{.Equipped.Trails.Description}}</span></div></div>" data-theme="{{.Equipped.Trails.Rarity}}" draggable="false">
                                                             {{else}}
                                                                 <img src="../img/mcc/cos/trails/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                             {{end}}
                                                         </div>
                                                         <div class="inv-case">
                                                             {{if .Equipped.Backs.Name}}
-                                                                <img src="../img/mcc/cos/backs/{{.Equipped.Backs.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/backs/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Backs.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Backs.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/cloak.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Backs.Rarity}}" draggable="false">
+                                                                <img src="../img/mcc/cos/backs/{{.Equipped.Backs.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/backs/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Backs.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Backs.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/cloak.png' height='17' class='pixelated'><br><br><div style='display: flex; align-items: center; gap: 2px; line-height: 1.1;'><span style='color: var(--mctext-description); font-style: italic;'>{{.Equipped.Backs.Description}}</span></div></div>" data-theme="{{.Equipped.Backs.Rarity}}" draggable="false">
                                                             {{else}}
                                                                 <img src="../img/mcc/cos/backs/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                             {{end}}
                                                         </div>
                                                         <div class="inv-case">
                                                             {{if .Equipped.Rods.Name}}
-                                                                <img src="../img/mcc/cos/fishing_rod/{{.Equipped.Rods.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/fishing_rod/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Rods.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Rods.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/rod.png' height='17' class='pixelated'></div>" data-theme="{{.Equipped.Rods.Rarity}}" draggable="false">
+                                                                <img src="../img/mcc/cos/fishing_rod/{{.Equipped.Rods.Name}}.gif" onerror="this.onerror=null; this.src='../img/mcc/cos/fishing_rod/NoTexture.gif';" class="inv-item no-select" data-tippy-content="<div style='text-align:start;'><b>{{.Equipped.Rods.RealName}}</b><br><img src='../img/mcc/tooltip/{{.Equipped.Rods.Rarity}}.png' height='17' class='pixelated' style='margin-right: 3px;'><img src='../img/mcc/tooltip/rod.png' height='17' class='pixelated'><br><br><div style='display: flex; align-items: center; gap: 2px; line-height: 1.1;'><span style='color: var(--mctext-description); font-style: italic;'>{{.Equipped.Rods.Description}}</span></div></div>" data-theme="{{.Equipped.Rods.Rarity}}" draggable="false">
                                                             {{else}}
                                                                 <img src="../img/mcc/cos/fishing_rod/None.gif" class="inv-item no-select" data-tippy-content="None" data-theme="COMMON" draggable="false">
                                                             {{end}}
@@ -684,16 +684,32 @@
                                             </div>                                                                               
                                             <div id="backs-content" class="cos-allcontents content hidden">
                                                 <img src="../img/mcc/cos/invs/Backs.png" class="cos-case-header no-select" draggable="false">
-                                                <h2>Cloaks</h2>
-                                                <p>{{index .Translations .Lang "coming_soon"}}</p>
-                                                <p>{{index .Translations .Lang "api_not_working"}}</p>
+                                                <div class="cos-inventory">
+                                                    <div class="left">
+                                                        <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-cloaks" draggable="false">
+                                                    </div>
+                                                    <div class="mid" id="cloaks-container">
+                                                        <!-- Les cloaks seront insérés ici via JS -->
+                                                    </div>
+                                                    <div class="right">
+                                                        <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-cloaks" draggable="false">
+                                                    </div>
+                                                </div>
                                                 <img src="../img/mcc/cos/invs/Backs_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                             </div>
                                             <div id="fishing-content" class="cos-allcontents content hidden">
                                                 <img src="../img/mcc/cos/invs/Fishing_Rods.png" class="cos-case-header no-select" draggable="false">
-                                                <h2>Rods</h2>
-                                                <p>{{index .Translations .Lang "coming_soon"}}</p>
-                                                <p>{{index .Translations .Lang "api_not_working"}}</p>
+                                                <div class="cos-inventory">
+                                                    <div class="left">
+                                                        <img src="../img/mcc/utilities/arrow-left-off.png" class="page-arrow no-select" id="arrow-left-rods" draggable="false">
+                                                    </div>
+                                                    <div class="mid" id="rods-container">
+                                                        <!-- Les rods seront insérés ici via JS -->
+                                                    </div>
+                                                    <div class="right">
+                                                        <img src="../img/mcc/utilities/arrow-right-off.png" class="page-arrow no-select" id="arrow-right-rods" draggable="false">
+                                                    </div>
+                                                </div>
                                                 <img src="../img/mcc/cos/invs/Fishing_Rods_Bottom.png" class="cos-case-downer no-select" draggable="false">
                                             </div>
                                         </div>
@@ -860,6 +876,11 @@
                     <span style="color: ${trophyColor};">${item.Trophies}</span>
                 </div>`;
 
+                tooltipContent += `<br>
+                    <div style="display: flex; align-items: center; gap: 2px; line-height: 1.1;">
+                    <span style="color: var(--mctext-description); font-style: italic;">${item.Description}</span>
+                    </div>`;
+
                 if (!item.Owned) {
                     tooltipContent += `<br><img src='../img/mcc/utilities/left-click.png' height='17' class='pixelated' style='margin-right: -4px; margin-bottom: -2px;'> 
                                     <span style="color: var(--mctext-§8);">></span> 
@@ -914,6 +935,12 @@
                         } else if (containerId.toLowerCase() === "trails-container") {
                             basePath = "../img/mcc/cos/trails/";
                             itemType = "trail";
+                        } else if (containerId.toLowerCase() === "cloaks-container") {
+                            basePath = "../img/mcc/cos/backs/";
+                            itemType = "cloak";
+                        } else if (containerId.toLowerCase() === "rods-container") {
+                            basePath = "../img/mcc/cos/fishing_rod/";
+                            itemType = "rod";
                         }
 
                         tooltipContent = generateTooltipContent(item, itemType);
@@ -1056,6 +1083,12 @@
         
             let trails = {{ .Trails }};
             displayItems(trails, "trails-container", "arrow-left-trails", "arrow-right-trails");
+
+            let cloaks = {{ .Cloaks }};
+            displayItems(cloaks, "cloaks-container", "arrow-left-cloaks", "arrow-right-cloaks");
+
+            let rods = {{ .Rods }};
+            displayItems(rods, "rods-container", "arrow-left-rods", "arrow-right-rods");
         </script>                        
         <script>
             function redirectToRankPage(rankPage) {

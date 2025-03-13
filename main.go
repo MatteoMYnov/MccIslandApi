@@ -129,6 +129,8 @@ type DataMenuPage struct {
 	Accessories []mcc.InvCos
 	Auras       []mcc.InvCos
 	Trails      []mcc.InvCos
+	Cloaks      []mcc.InvCos
+	Rods        []mcc.InvCos
 	// Player Rank
 	PlayerRank     int
 	PlayerRankPage int
@@ -148,9 +150,10 @@ type EquippedCosmetics struct {
 }
 
 type Cosmetic struct {
-	Name     string
-	RealName string
-	Rarity   string
+	Name        string
+	RealName    string
+	Rarity      string
+	Description string
 }
 
 type FriendInfo struct {
@@ -427,17 +430,17 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 			cleanedCosmeticName := mcc.CleanCosmeticName(cosmetic.Name)
 			switch cosmetic.Category {
 			case "HAT":
-				hat = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+				hat = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity, Description: cosmetic.Description}
 			case "ACCESSORY":
-				accessory = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+				accessory = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity, Description: cosmetic.Description}
 			case "AURA":
-				aura = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+				aura = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity, Description: cosmetic.Description}
 			case "TRAIL":
-				trail = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+				trail = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity, Description: cosmetic.Description}
 			case "CLOAK":
-				cloak = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+				cloak = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity, Description: cosmetic.Description}
 			case "ROD":
-				rod = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity}
+				rod = Cosmetic{Name: cleanedCosmeticName, RealName: cosmetic.Name, Rarity: cosmetic.Rarity, Description: cosmetic.Description}
 			}
 		}
 	}
@@ -498,6 +501,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		Accessories: mccInfos.Accessories,
 		Auras:       mccInfos.Auras,
 		Trails:      mccInfos.Trails,
+		Cloaks:      mccInfos.Cloaks,
+		Rods:        mccInfos.Rods,
 		// Player Rank
 		PlayerRank:     playerRank,
 		PlayerRankPage: playerRankPage,
@@ -733,7 +738,7 @@ func main() {
 
 	http.HandleFunc("/dbdl", downloadFileHandler)
 
-	if err := http.ListenAndServe(":1637", nil); err != nil {
+	if err := http.ListenAndServe(":1640", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

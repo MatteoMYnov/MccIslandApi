@@ -49,6 +49,14 @@
       "capelist": [{"name": "2016"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}]
     },
     {
+      "uuid": "",
+      "capes": 14,
+      "score": 35,
+      "actualname": "Jeff",
+      "badge": "all-minecons",
+      "capelist": [{"name": "2016"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}]
+    },
+    {
       "uuid": "b274b907-073e-41c7-b447-6ad6e9307f18",
       "capes": 13,
       "score": 30,
@@ -6793,6 +6801,14 @@
       "capelist": [{"name": "mojangoffice"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"}]
     },
     {
+      "uuid": "fb63b2b1-2862-4d9c-9271-24202f66c31c",
+      "capes": 8,
+      "score": 8,
+      "actualname": "Dalmatin_",
+      "badge": "all-commons",
+      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mojangoffice"}]
+    },
+    {
       "uuid": "e19e315c-1df9-43ce-89d9-527bbe27762e",
       "capes": 8,
       "score": 7,
@@ -7455,14 +7471,6 @@
       "actualname": "Proofreader",
       "badge": "all-events",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "mcexp"}]
-    },
-    {
-      "uuid": "fb63b2b1-2862-4d9c-9271-24202f66c31c",
-      "capes": 7,
-      "score": 7,
-      "actualname": "Dalmatin_",
-      "badge": "all-commons",
-      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"}]
     },
     {
       "uuid": "bb6552ab-f4da-4d90-84cb-3d2d27549f4f",
@@ -9535,14 +9543,6 @@
       "actualname": "Kupo",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "2011"},{"name": "realms"}]
-    },
-    {
-      "uuid": "",
-      "capes": 2,
-      "score": 14,
-      "actualname": "Atmaz",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "2015"},{"name": "scrolls"}]
     },
     {
       "uuid": "d41283a1-11ca-4568-b115-0bc4725ca07a",
