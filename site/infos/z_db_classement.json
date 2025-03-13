@@ -49,14 +49,6 @@
       "capelist": [{"name": "2016"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}]
     },
     {
-      "uuid": "",
-      "capes": 14,
-      "score": 35,
-      "actualname": "Jeff",
-      "badge": "all-minecons",
-      "capelist": [{"name": "2016"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}]
-    },
-    {
       "uuid": "b274b907-073e-41c7-b447-6ad6e9307f18",
       "capes": 13,
       "score": 30,
@@ -12893,6 +12885,22 @@
       "capes": 1,
       "score": 1,
       "actualname": "Nasty_Ray",
+      "badge": "",
+      "capelist": [{"name": "mcc"}]
+    },
+    {
+      "uuid": "c155e77d-9919-40d9-946e-261a96c6ca14",
+      "capes": 1,
+      "score": 1,
+      "actualname": "kispintyi",
+      "badge": "",
+      "capelist": [{"name": "mcc"}]
+    },
+    {
+      "uuid": "747d2307-d54a-4a38-a8d7-6954568b1fc7",
+      "capes": 1,
+      "score": 1,
+      "actualname": "HoveringVya",
       "badge": "",
       "capelist": [{"name": "mcc"}]
     },
