@@ -992,7 +992,7 @@ body.modal-open {
 
 .roll-body {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0px;
     border-radius: 0 0 10px 10px;
     max-height: 0px;
