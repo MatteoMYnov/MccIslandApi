@@ -3,7 +3,6 @@ package mcc
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -577,6 +576,5 @@ func GetInfos(UUID string) *MccInfos {
 		Cloaks:            SortCosmetics(cloaks),
 		Rods:              SortCosmetics(rods),
 	}
-	fmt.Println(Infos.Currency)
 	return Infos
 }
