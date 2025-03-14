@@ -30,7 +30,6 @@ type ModalEntry struct {
 
 type ModalData map[string]ModalEntry
 
-// Nouveau format JSON pour les capes
 type Cape struct {
 	Name  string   `json:"name"`
 	Type  string   `json:"type"`
@@ -561,7 +560,7 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Décoder le fichier JSON
+	// Décoder le fichier JSON du classement
 	var classement Classement
 	err = json.Unmarshal(file, &classement)
 	if err != nil {
@@ -656,6 +655,22 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 		joueursPage[i].Rank = originalPlayer.Rank
 	}
 
+	// Lire le fichier JSON du classement MCC
+	mccFilePath := "./site/infos/z_db_mccclassement.json"
+	mccFile, err := ioutil.ReadFile(mccFilePath)
+	if err != nil {
+		http.Error(w, "Erreur de lecture du fichier de classement MCC", http.StatusInternalServerError)
+		return
+	}
+
+	// Décoder le fichier JSON du classement MCC
+	var mccClassement minecraft.MccClassement
+	err = json.Unmarshal(mccFile, &mccClassement)
+	if err != nil {
+		http.Error(w, "Erreur lors du décodage du JSON du classement MCC", http.StatusInternalServerError)
+		return
+	}
+
 	// Renvoyer la page HTML avec les données du classement
 	tmplPath := filepath.Join("site", "template", "classement.html")
 	tmpl, err := template.New("classement.html").Funcs(template.FuncMap{
@@ -673,21 +688,23 @@ func classementHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	data := struct {
-		Classement   []Joueur
-		Page         int
-		HasNext      bool
-		HasPrev      bool
-		Lang         string
-		Translations load.Translations // Ajouter ici les traductions
-		ImageURLs    []CapeInfo        // Ajouter les capes
+		Classement    []Joueur
+		Page          int
+		HasNext       bool
+		HasPrev       bool
+		Lang          string
+		Translations  load.Translations   // Ajouter ici les traductions
+		ImageURLs     []CapeInfo          // Ajouter les capes
+		MccClassement []minecraft.MccRank // Ajouter ici les données MCC
 	}{
-		Classement:   joueursPage,
-		Page:         page,
-		HasPrev:      page > 1,
-		HasNext:      endIndex < len(filteredPlayers),
-		Lang:         lang,
-		Translations: translations, // Passer les traductions au template
-		ImageURLs:    capeInfos,    // Passer les capes au template
+		Classement:    joueursPage,
+		Page:          page,
+		HasPrev:       page > 1,
+		HasNext:       endIndex < len(filteredPlayers),
+		Lang:          lang,
+		Translations:  translations,             // Passer les traductions au template
+		ImageURLs:     capeInfos,                // Passer les capes au template
+		MccClassement: mccClassement.Classement, // Passer le classement MCC au template
 	}
 
 	// Exécuter le template avec les données
