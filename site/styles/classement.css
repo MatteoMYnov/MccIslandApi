@@ -194,6 +194,10 @@ body::before {
     padding: 15px
 }
 
+.cape-image.filtered {
+    filter: grayscale(50%);
+}
+
 .cape-container {
     position: relative;
     width: calc(90% / 5 - 30px);
@@ -602,6 +606,25 @@ main {
 
 .mc-font {
     font-family: 'Minecraftia', 'Roboto', sans-serif;
+}
+
+.mcc-icon {
+    height: 50px;
+    width: auto;
+}
+
+.mcc-options {
+    position: absolute;
+    gap: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.mcc-switch {
+    height: 30px;
+    width: auto;
+    image-rendering: pixelated;
 }
 
 :root {

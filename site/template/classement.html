@@ -63,6 +63,10 @@
             <div id="filterModal" class="filter" style="display: none;">
                 <div class="filter-content">
                     <div class="stats-header">
+                        <div class="mcc-options">
+                            <img src="/img/utilities/mccicon.png" class="no-select mcc-icon">
+                            <img id="switch" src="/img/mcc/utilities/switch-off.png" class="no-select mcc-switch cursor" alt="Switch" onclick="toggleSwitch()">
+                        </div>
                         <h2>{{index .Translations .Lang "cl-filter"}}</h2>
                         <img src="/img/mcc/utilities/layers/check.png" id="applyFilterImage" class="apply-filter-image no-select cursor" alt="Appliquer les filtres">
                     </div>
@@ -72,7 +76,7 @@
                                 {{range .ImageURLs}}
                                     <div class="cape-container">
                                         <div class="cape-overlay"></div> <!-- Surcouche invisible au départ -->
-                                        <img src="{{.URL}}" alt="Cape Image" class="cape-image {{.Class}}" data-name="{{.CapeName}}">
+                                        <img src="{{.URL}}" alt="Cape Image" class="cape-image {{.Class}} cursor" data-name="{{.CapeName}}">
                                         <p class="cape-title mc-font">{{.Title}}</p>
                                     </div>                                 
                                 {{end}}
@@ -100,11 +104,42 @@
                     loading();
                 });
             });
+            
+            function toggleSwitch() {
+                const switchImage = document.getElementById("switch");
+                const urlParams = new URLSearchParams(window.location.search);
+                if (switchImage.src.includes("switch-off.png")) {
+                    // Switch ON - supprime les capes des paramètres et change l'image
+                    switchImage.src = "/img/mcc/utilities/switch-on.png"; // Change l'image en switch-on
+                    urlParams.delete("capes"); // Supprime les capes de l'URL
+                    urlParams.set("type", "mcc"); // Ajoute type=mcc à la query string
+        
+                    // Désélectionne toutes les capes actuellement sélectionnées
+                    document.querySelectorAll('.cape-image.selected').forEach(image => {
+                        image.classList.remove('selected');
+                        const capeContainer = image.closest('.cape-container');
+                        capeContainer.classList.remove('selected');
+                    });
+                    
+                    capeImages.forEach(image => {
+                        image.classList.add('filtered');
+                    });
+                } else {
+                    // Switch OFF - rétablit les capes si elles sont sélectionnées
+                    switchImage.src = "/img/mcc/utilities/switch-off.png"; // Change l'image en switch-off
+                    urlParams.delete("type"); // Supprime le type=mcc si switch est désactivé
 
+                    capeImages.forEach(image => {
+                        image.classList.remove('filtered');
+                    });
+                }
+                window.history.pushState({}, "", "?" + urlParams.toString()); // Met à jour l'URL sans recharger la page
+            }
+        
             document.getElementById("openFilter").addEventListener("click", function() {
                 document.getElementById("filterModal").style.display = "flex"; // Affiche le modal en utilisant "flex"
             });
-
+        
             // Fermer le modal lorsque l'utilisateur clique en dehors de celui-ci
             document.addEventListener("click", function(event) {
                 let modal = document.getElementById("filterModal");
@@ -112,17 +147,22 @@
                     modal.style.display = "none"; // Cache le modal
                 }
             });
-
+        
             const capeImages = document.querySelectorAll('.cape-image');
             capeImages.forEach(image => {
                 image.addEventListener('click', function() {
+                    const switchImage = document.getElementById("switch");
+                    if (switchImage.src.includes("switch-on.png")) {
+                        // Si le switch est activé et que la cape est sélectionnée, désactive le switch
+                        toggleSwitch();
+                    }
                     const capeContainer = image.closest('.cape-container');
-                    capeContainer.classList.toggle('selected');
-                    image.classList.toggle('selected'); // Toggle l'état sélectionné
-                    updateURL(); // Met à jour l'URL en fonction des capes sélectionnées
+                        capeContainer.classList.toggle('selected');
+                        image.classList.toggle('selected'); // Toggle l'état sélectionné
+                        updateURL(); // Met à jour l'URL en fonction des capes sélectionnées
                 });
             });
-
+        
             function updateURL() {
                 let selectedCapes = [];
                 document.querySelectorAll('.cape-image.selected').forEach(image => {
@@ -132,7 +172,7 @@
                 currentUrl.searchParams.set("capes", selectedCapes.join(","));
                 window.history.pushState({}, "", currentUrl.toString()); // Met à jour l'URL sans recharger la page
             }
-
+        
             document.getElementById("applyFilterImage").addEventListener("click", function() {
                 let selectedCapes = [];
                 document.querySelectorAll('.cape-image.selected').forEach(image => {
@@ -143,13 +183,13 @@
                 currentUrl.pathname = `/{{.Lang}}/classement/1`; // Assurez-vous de rediriger vers la première page du classement
                 window.location.href = currentUrl.toString(); // Redirige vers l'URL mise à jour
             });
-
+        
             document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("openFilter").addEventListener("click", function() {
                     playUiClickSound()
                     document.getElementById("filterModal").style.display = "flex";
                 });
-
+        
                 const goLeftButton = document.querySelector('.go-left');
                 const goRightButton = document.querySelector('.go-right');
                 function navigateToPage(pageNumber) {
@@ -161,14 +201,20 @@
                 }
                 if (goLeftButton) goLeftButton.addEventListener('click', () => navigateToPage(getCurrentPageNumber() - 1), playUiClickSound());
                 if (goRightButton) goRightButton.addEventListener('click', () => navigateToPage(getCurrentPageNumber() + 1), playUiClickSound());
-
+        
                 function getCurrentPageNumber() {
                     const match = window.location.pathname.match(/\/classement\/(\d+)/);
                     return match ? parseInt(match[1], 10) : 1;
                 }
-
+        
                 const urlParams = new URLSearchParams(window.location.search);
                 const capesParam = urlParams.get('capes');
+                const typeParam = urlParams.get('type');
+                if (typeParam === "mcc") {
+                    // Active le switch en changeant l'image du switch
+                    const switchImage = document.getElementById("switch");
+                    switchImage.src = "/img/mcc/utilities/switch-on.png"; // Change l'image du switch
+                }
                 if (capesParam) {
                     const selectedCapes = capesParam.split(',');
                     selectedCapes.forEach(capeName => {
@@ -180,12 +226,12 @@
                     });
                 }
             });
-
+        
             function refreshSearch() {
                 playUiClickSound()
                 window.location.href = "/{{.Lang}}/menu";
                 loading();
             }
-        </script>
+        </script>   
     </body>
 </html>
