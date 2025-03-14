@@ -175,21 +175,32 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func downloadFileHandler(w http.ResponseWriter, r *http.Request) {
-	// Définir le chemin du fichier que tu veux télécharger
-	filePath := "./site/infos/z_db_classement.json"
+	// Définir les chemins des fichiers à télécharger
+	filePath1 := "./site/infos/z_db_classement.json"
+	filePath2 := "./site/infos/z_db_mccclassement.json"
 
-	// Vérifie si le fichier existe
-	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		http.Error(w, "Fichier non trouvé", http.StatusNotFound)
+	// Vérifie si le premier fichier existe
+	if _, err := os.Stat(filePath1); os.IsNotExist(err) {
+		http.Error(w, "Fichier z_db_classement.json non trouvé", http.StatusNotFound)
 		return
 	}
 
-	// Définir les en-têtes pour indiquer que le fichier est à télécharger
+	// Vérifie si le second fichier existe
+	if _, err := os.Stat(filePath2); os.IsNotExist(err) {
+		http.Error(w, "Fichier z_db_mccclassement.json non trouvé", http.StatusNotFound)
+		return
+	}
+
+	// Définir les en-têtes pour indiquer que les fichiers sont à télécharger
 	w.Header().Set("Content-Disposition", "attachment; filename=z_db_classement.json")
 	w.Header().Set("Content-Type", "application/json")
 
-	// Utilise http.ServeFile pour envoyer le fichier
-	http.ServeFile(w, r, filePath)
+	// Envoie du premier fichier
+	http.ServeFile(w, r, filePath1)
+
+	// Envoie du second fichier
+	w.Header().Set("Content-Disposition", "attachment; filename=z_db_mccclassement.json")
+	http.ServeFile(w, r, filePath2)
 }
 
 func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
