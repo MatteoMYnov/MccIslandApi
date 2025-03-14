@@ -60,9 +60,10 @@ type Statistics struct {
 }
 
 type EquippedCosmetic struct {
-	Category string `json:"category"`
-	Name     string `json:"name"`
-	Rarity   string `json:"rarity"`
+	Category    string `json:"category"`
+	Name        string `json:"name"`
+	Rarity      string `json:"rarity"`
+	Description string `json:"description"`
 }
 
 type InvCos struct {
@@ -72,6 +73,7 @@ type InvCos struct {
 	Rarity          string
 	IsBonusTrophies bool
 	Trophies        int
+	Description     string
 }
 
 type CosmeticInfos struct {
@@ -79,6 +81,7 @@ type CosmeticInfos struct {
 	Rarity          string `json:"rarity"`
 	IsBonusTrophies bool   `json:"isBonusTrophies"`
 	Trophies        int    `json:"trophies"`
+	Description     string `json:"description"`
 }
 
 type Cosmetic struct {
@@ -154,6 +157,8 @@ type Player struct {
 		Accessories []Cosmetic         `json:"accessories"`
 		Auras       []Cosmetic         `json:"auras"`
 		Trails      []Cosmetic         `json:"trails"`
+		Cloaks      []Cosmetic         `json:"cloaks"`
+		Rods        []Cosmetic         `json:"rods"`
 	} `json:"collections"`
 	Social struct {
 		Friends []Friend `json:"friends"`
@@ -189,6 +194,8 @@ type MccInfos struct {
 	Accessories       []InvCos
 	Auras             []InvCos
 	Trails            []InvCos
+	Cloaks            []InvCos
+	Rods              []InvCos
 }
 
 func GetInfos(UUID string) *MccInfos {
@@ -278,15 +285,16 @@ func GetInfos(UUID string) *MccInfos {
 				collections {
 					currency {
 						coins
-						royalReputation
-						silver
 						materialDust
+						royalReputation
 						anglrTokens
+						silver
 					}
 					equippedCosmetics {
 						category
 						name
 						rarity
+						description
 					}
 					hats: cosmetics(category: HAT) {
 						owned
@@ -295,6 +303,7 @@ func GetInfos(UUID string) *MccInfos {
 							name
 							isBonusTrophies
 							trophies
+							description
 						}
 					}
 					accessories: cosmetics(category: ACCESSORY) {
@@ -304,6 +313,7 @@ func GetInfos(UUID string) *MccInfos {
 							name
 							isBonusTrophies
 							trophies
+							description
 						}
 					}
 					auras: cosmetics(category: AURA) {
@@ -313,6 +323,7 @@ func GetInfos(UUID string) *MccInfos {
 							name
 							isBonusTrophies
 							trophies
+							description
 						}
 					}
 					trails: cosmetics(category: TRAIL) {
@@ -322,6 +333,27 @@ func GetInfos(UUID string) *MccInfos {
 							name
 							isBonusTrophies
 							trophies
+							description
+						}
+					}
+					cloaks: cosmetics(category: CLOAK) {
+						owned
+						cosmetic {
+							rarity 
+							name
+							isBonusTrophies
+							trophies
+							description
+						}
+					}
+					rods: cosmetics(category: ROD) {
+						owned
+						cosmetic {
+							rarity 
+							name
+							isBonusTrophies
+							trophies
+							description
 						}
 					}
 				}
@@ -397,9 +429,10 @@ func GetInfos(UUID string) *MccInfos {
 	equippedCosmetics := []EquippedCosmetic{}
 	for _, cosmetic := range response.Data.Player.Collections.Equipped {
 		equippedCosmetics = append(equippedCosmetics, EquippedCosmetic{
-			Category: cosmetic.Category,
-			Name:     cosmetic.Name,
-			Rarity:   cosmetic.Rarity,
+			Category:    cosmetic.Category,
+			Name:        cosmetic.Name,
+			Rarity:      cosmetic.Rarity,
+			Description: cosmetic.Description,
 		})
 	}
 
@@ -407,6 +440,8 @@ func GetInfos(UUID string) *MccInfos {
 	accessories := []InvCos{}
 	auras := []InvCos{}
 	trails := []InvCos{}
+	cloaks := []InvCos{}
+	rods := []InvCos{}
 	for _, hat := range response.Data.Player.Collections.Hats {
 		hats = append(hats, InvCos{
 			Owned:           hat.Owned, // Ajout du champ Owned
@@ -415,6 +450,7 @@ func GetInfos(UUID string) *MccInfos {
 			Rarity:          hat.Cosmetic.Rarity,
 			IsBonusTrophies: hat.Cosmetic.IsBonusTrophies,
 			Trophies:        hat.Cosmetic.Trophies,
+			Description:     hat.Cosmetic.Description,
 		})
 	}
 	for _, accessory := range response.Data.Player.Collections.Accessories {
@@ -425,6 +461,7 @@ func GetInfos(UUID string) *MccInfos {
 			Rarity:          accessory.Cosmetic.Rarity,
 			IsBonusTrophies: accessory.Cosmetic.IsBonusTrophies,
 			Trophies:        accessory.Cosmetic.Trophies,
+			Description:     accessory.Cosmetic.Description,
 		})
 	}
 	for _, aura := range response.Data.Player.Collections.Auras {
@@ -435,6 +472,7 @@ func GetInfos(UUID string) *MccInfos {
 			Rarity:          aura.Cosmetic.Rarity,
 			IsBonusTrophies: aura.Cosmetic.IsBonusTrophies,
 			Trophies:        aura.Cosmetic.Trophies,
+			Description:     aura.Cosmetic.Description,
 		})
 	}
 	for _, trail := range response.Data.Player.Collections.Trails {
@@ -445,6 +483,29 @@ func GetInfos(UUID string) *MccInfos {
 			Rarity:          trail.Cosmetic.Rarity,
 			IsBonusTrophies: trail.Cosmetic.IsBonusTrophies,
 			Trophies:        trail.Cosmetic.Trophies,
+			Description:     trail.Cosmetic.Description,
+		})
+	}
+	for _, cloak := range response.Data.Player.Collections.Cloaks {
+		cloaks = append(cloaks, InvCos{
+			Owned:           cloak.Owned, // Ajout du champ Owned
+			Name:            CleanCosmeticName(cloak.Cosmetic.Name),
+			RealName:        cloak.Cosmetic.Name,
+			Rarity:          cloak.Cosmetic.Rarity,
+			IsBonusTrophies: cloak.Cosmetic.IsBonusTrophies,
+			Trophies:        cloak.Cosmetic.Trophies,
+			Description:     cloak.Cosmetic.Description,
+		})
+	}
+	for _, rod := range response.Data.Player.Collections.Rods {
+		rods = append(rods, InvCos{
+			Owned:           rod.Owned, // Ajout du champ Owned
+			Name:            CleanCosmeticName(rod.Cosmetic.Name),
+			RealName:        rod.Cosmetic.Name,
+			Rarity:          rod.Cosmetic.Rarity,
+			IsBonusTrophies: rod.Cosmetic.IsBonusTrophies,
+			Trophies:        rod.Cosmetic.Trophies,
+			Description:     rod.Cosmetic.Description,
 		})
 	}
 
@@ -520,6 +581,8 @@ func GetInfos(UUID string) *MccInfos {
 		Accessories:       SortCosmetics(accessories),
 		Auras:             SortCosmetics(auras),
 		Trails:            SortCosmetics(trails),
+		Cloaks:            SortCosmetics(cloaks),
+		Rods:              SortCosmetics(rods),
 	}
 	return Infos
 }
