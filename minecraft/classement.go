@@ -21,8 +21,20 @@ type PlayerRank struct {
 	} `json:"capelist"`
 }
 
+type MccRank struct {
+	UUID       string `json:"uuid"`
+	ActualName string `json:"actualname"`
+	CrownLevel int    `json:"crownlevel"`
+	Trophies   int    `json:"trophies"`
+	Rank       string `json:"rank"`
+}
+
 type Classement struct {
 	Classement []PlayerRank `json:"classement"`
+}
+
+type MccClassement struct {
+	Classement []MccRank `json:"classement"`
 }
 
 func UpdateClassement(uuid string, listCapes []struct {
@@ -161,6 +173,74 @@ func UpdateClassement(uuid string, listCapes []struct {
 	err = ioutil.WriteFile(filePath, []byte(formattedJSON), 0644)
 	if err != nil {
 		log.Printf("Erreur lors de l'écriture du fichier classement : %v", err)
+		return -1
+	}
+
+	return playerPosition
+}
+
+func UpdateMccClassement(uuid string, actualName string, crownLevel int, trophies int, rank string) int {
+	filePath := "./site/infos/z_db_mccclassement.json"
+
+	file, err := ioutil.ReadFile(filePath)
+	if err != nil && !os.IsNotExist(err) {
+		log.Printf("Erreur lors de la lecture du fichier classement MCC : %v", err)
+		return -1
+	}
+
+	var classement MccClassement
+
+	if len(file) > 0 {
+		err = json.Unmarshal(file, &classement)
+		if err != nil {
+			log.Printf("Erreur lors de l'analyse du JSON : %v", err)
+			return -1
+		}
+	}
+
+	found := false
+	for i, player := range classement.Classement {
+		if player.UUID == uuid {
+			classement.Classement[i].ActualName = actualName
+			classement.Classement[i].CrownLevel = crownLevel
+			classement.Classement[i].Trophies = trophies
+			classement.Classement[i].Rank = rank
+			found = true
+			break
+		}
+	}
+
+	if !found {
+		classement.Classement = append(classement.Classement, MccRank{
+			UUID:       uuid,
+			ActualName: actualName,
+			CrownLevel: crownLevel,
+			Trophies:   trophies,
+			Rank:       rank,
+		})
+	}
+
+	sort.Slice(classement.Classement, func(i, j int) bool {
+		return classement.Classement[i].Trophies > classement.Classement[j].Trophies
+	})
+
+	playerPosition := -1
+	for i, player := range classement.Classement {
+		if player.UUID == uuid {
+			playerPosition = i + 1
+			break
+		}
+	}
+
+	rawData, err := json.MarshalIndent(classement, "", "  ")
+	if err != nil {
+		log.Printf("Erreur lors de la conversion en JSON : %v", err)
+		return -1
+	}
+
+	err = ioutil.WriteFile(filePath, []byte(rawData), 0644)
+	if err != nil {
+		log.Printf("Erreur lors de l'écriture du fichier classement MCC : %v", err)
 		return -1
 	}
 

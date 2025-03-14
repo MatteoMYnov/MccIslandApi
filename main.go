@@ -155,9 +155,11 @@ type Cosmetic struct {
 
 type FriendInfo struct {
 	Username     string
+	Uuid         string
 	Ranks        string
 	Online       bool
 	OnlineStatus string
+	Trophies     int
 	CrownLevel   struct {
 		Evolution int
 		Level     int
@@ -203,9 +205,11 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 
 		friendInfo = append(friendInfo, FriendInfo{
 			Username:     friend.Username,
+			Uuid:         friend.Uuid,
 			Ranks:        rank,
 			Online:       friend.Status.Online,
 			OnlineStatus: onlineStatus,
+			Trophies:     friend.CrownLevel.Trophies.Obtained,
 			CrownLevel: struct {
 				Evolution int
 				Level     int
@@ -214,6 +218,7 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 				Level:     friend.CrownLevel.LevelData.Level,
 			},
 		})
+		minecraft.UpdateMccClassement(friend.Uuid, friend.Username, friend.CrownLevel.LevelData.Level, friend.CrownLevel.Trophies.Obtained, rank)
 	}
 
 	// Trier d'abord par statut en ligne (Online en premier), puis par CrownLevel.Level décroissant
@@ -391,6 +396,8 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	if mccInfos != nil && len(mccInfos.Ranks) > 0 {
 		MccRank = mccInfos.Ranks[0]
 	}
+
+	minecraft.UpdateMccClassement(playerUUID, actualname, mccInfos.CrownLevel, mccInfos.Trophies.Obtained, MccRank)
 
 	// Calculer l'évolution et le niveau de couronne pour le joueur
 	crownLevelPlus1 := mccInfos.CrownLevel + 1
