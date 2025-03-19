@@ -200,7 +200,7 @@ body::before {
 
 .cape-container {
     position: relative;
-    width: calc(90% / 5 - 30px);
+    width: calc(90% / 6 - 30px);
     min-width: 40px;
     height: auto;
     object-fit: contain;
