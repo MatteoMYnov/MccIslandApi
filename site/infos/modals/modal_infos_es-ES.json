@@ -98,6 +98,24 @@
         ],
         "description": "This cape was given to players who clicked a button on the 15th Anniversary page on minecraft.net between May 17, 2024, and June 21, 2024. The API endpoint allowed players to exchange it after June 21, which was fixed four days later. It was also called the 'Creepy Cape' on the main minecraft.net page."
     },
+    "menace_cape": {
+        "name": "Menace Cape",
+        "date": "Obtention : 17 mai 2024 - 18 juin 2024",
+        "images": [
+            {"URL": "../img/capes/dummy/menace-cape.png","Alt": "Menace Cape"},
+            {"URL": "../img/capes/dummy/menace-elytra.png","Alt": "Menace Elytra"}
+        ],
+        "description": "???"
+    },
+    "home_cape": {
+        "name": "Home Cape",
+        "date": "???",
+        "images": [
+            {"URL": "../img/capes/dummy/home-cape.png","Alt": "Home Cape"},
+            {"URL": "../img/capes/dummy/home-elytra.png","Alt": "Home Elytra"}
+        ],
+        "description": "???"
+    },
     "tiktok": {
         "name": "Follower's Cape",
         "date": "Obtained: May 17, 2024 - June 18, 2024",
