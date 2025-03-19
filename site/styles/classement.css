@@ -9,6 +9,29 @@ headerbody, html {
     overflow-x: hidden;
 }
 
+@media screen and (max-width: 767px) {
+    .cape-hole {
+        gap: 5px !important;
+    }
+    .cape-container {
+        width: calc(100% / 4 - 27px) !important;
+        min-width: 30px !important;
+    }
+    .mcc-icon {
+        height: 30px !important;
+        width: auto !important;
+    }
+    .mcc-switch {
+        height: 20px !important;
+        width: auto !important;
+        image-rendering: pixelated !important;
+    }
+    .mcc-options {
+        gap: 2px !important;
+        left: 8px !important;
+    }
+}
+
 /* Pseudo-élément pour le fond */
 body::before {
     content: "";
