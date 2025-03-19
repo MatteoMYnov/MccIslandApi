@@ -100,7 +100,7 @@
     },
     "menace": {
         "name": "Menace Cape",
-        "date": "???",
+        "date": "Obtained : March 19, 2025 - April 6, 2025",
         "images": [
             {"URL": "../img/capes/dummy/menace-cape.png","Alt": "Menace Cape"},
             {"URL": "../img/capes/dummy/menace-elytra.png","Alt": "Menace Elytra"}
@@ -109,7 +109,7 @@
     },
     "home": {
         "name": "Home Cape",
-        "date": "???",
+        "date": "Obtained : March 19, 2025 - April 6, 2025",
         "images": [
             {"URL": "../img/capes/dummy/home-cape.png","Alt": "Home Cape"},
             {"URL": "../img/capes/dummy/home-elytra.png","Alt": "Home Elytra"}
