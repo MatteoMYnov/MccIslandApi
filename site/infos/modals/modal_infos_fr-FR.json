@@ -98,16 +98,16 @@
         ],
         "description": "Cette cape a été offerte aux joueurs qui ont cliqué sur un bouton sur la page de l'anniversaire des 15 ans sur minecraft.net entre le 17 mai 2024 et le 21 juin 2024. Le point de terminaison de l'API permettait aux joueurs de l'échanger après le 21 juin, ce qui a été corrigé quatre jours plus tard. Elle était également appelée « Creepy Cape » sur la page principale de minecraft.net."
     },
-    "menace_cape": {
+    "menace": {
         "name": "Menace Cape",
-        "date": "Obtention : 17 mai 2024 - 18 juin 2024",
+        "date": "???",
         "images": [
             {"URL": "../img/capes/dummy/menace-cape.png","Alt": "Menace Cape"},
             {"URL": "../img/capes/dummy/menace-elytra.png","Alt": "Menace Elytra"}
         ],
         "description": "???"
     },
-    "home_cape": {
+    "home": {
         "name": "Home Cape",
         "date": "???",
         "images": [
