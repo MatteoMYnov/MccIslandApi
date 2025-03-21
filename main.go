@@ -1,12 +1,14 @@
 package main
 
 import (
+	"archive/zip"
 	"encoding/json"
 	"fmt"
 	"html/template"
 	"hypixel-info/load"
 	"hypixel-info/mcc"
 	"hypixel-info/minecraft"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -175,32 +177,56 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func downloadFileHandler(w http.ResponseWriter, r *http.Request) {
-	// Définir les chemins des fichiers à télécharger
-	filePath1 := "./site/infos/z_db_classement.json"
-	filePath2 := "./site/infos/z_db_mccclassement.json"
-
-	// Vérifie si le premier fichier existe
-	if _, err := os.Stat(filePath1); os.IsNotExist(err) {
-		http.Error(w, "Fichier z_db_classement.json non trouvé", http.StatusNotFound)
-		return
+	// Définir les fichiers à télécharger
+	files := map[string]string{
+		"z_db_classement.json":    "./site/infos/z_db_classement.json",
+		"z_db_mccclassement.json": "./site/infos/z_db_mccclassement.json",
 	}
 
-	// Vérifie si le second fichier existe
-	if _, err := os.Stat(filePath2); os.IsNotExist(err) {
-		http.Error(w, "Fichier z_db_mccclassement.json non trouvé", http.StatusNotFound)
-		return
+	// Vérifier si tous les fichiers existent
+	for _, path := range files {
+		if _, err := os.Stat(path); os.IsNotExist(err) {
+			http.Error(w, fmt.Sprintf("Fichier non trouvé: %s", path), http.StatusNotFound)
+			return
+		}
 	}
 
-	// Définir les en-têtes pour indiquer que les fichiers sont à télécharger
-	w.Header().Set("Content-Disposition", "attachment; filename=z_db_classement.json")
-	w.Header().Set("Content-Type", "application/json")
+	// Définir les headers HTTP pour le téléchargement d'un fichier ZIP
+	w.Header().Set("Content-Disposition", "attachment; filename=classements.zip")
+	w.Header().Set("Content-Type", "application/zip")
 
-	// Envoie du premier fichier
-	http.ServeFile(w, r, filePath1)
+	// Créer un writer ZIP attaché à la réponse HTTP
+	zipWriter := zip.NewWriter(w)
+	defer zipWriter.Close()
 
-	// Envoie du second fichier
-	w.Header().Set("Content-Disposition", "attachment; filename=z_db_mccclassement.json")
-	http.ServeFile(w, r, filePath2)
+	// Ajouter les fichiers dans le ZIP
+	for name, path := range files {
+		// Ouvrir le fichier source
+		file, err := os.Open(path)
+		if err != nil {
+			http.Error(w, "Erreur lors de l'ouverture d'un fichier", http.StatusInternalServerError)
+			return
+		}
+
+		// Créer un fichier dans le ZIP avec juste le nom du fichier (sans le chemin complet)
+		zipFile, err := zipWriter.Create(name)
+		if err != nil {
+			file.Close()
+			http.Error(w, "Erreur lors de la création du fichier dans l'archive", http.StatusInternalServerError)
+			return
+		}
+
+		// Copier le contenu du fichier dans l'archive ZIP
+		_, err = io.Copy(zipFile, file)
+		file.Close() // Fermer immédiatement après la lecture
+		if err != nil {
+			http.Error(w, "Erreur lors de l'écriture du fichier dans l'archive", http.StatusInternalServerError)
+			return
+		}
+	}
+
+	// S'assurer que tout est bien écrit dans le ZIP avant de fermer
+	zipWriter.Flush()
 }
 
 func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {

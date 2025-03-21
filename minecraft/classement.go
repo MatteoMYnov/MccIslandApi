@@ -182,7 +182,6 @@ func UpdateClassement(uuid string, listCapes []struct {
 func UpdateMccClassement(uuid string, actualName string, crownLevel int, trophies int, rank string) int {
 	// Vérifier si l'UUID est vide ou si le nombre de trophées est égal à 0
 	if uuid == "" || trophies == 0 {
-		log.Printf("Le joueur ne sera pas ajouté ou mis à jour : UUID vide ou trophées égaux à 0")
 		return -1
 	}
 
