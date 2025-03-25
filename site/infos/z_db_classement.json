@@ -37,13 +37,22 @@
       "db_version": 1
     },
     {
+      "uuid": "1ccef50b-f6ae-4542-b1a9-d434384a5b25",
+      "capes": 16,
+      "score": 37,
+      "actualname": "Jeff",
+      "badge": "all-minecons",
+      "capelist": [{"name": "2016"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
       "uuid": "b274b907-073e-41c7-b447-6ad6e9307f18",
       "capes": 15,
       "score": 32,
       "actualname": "Zenection",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "realms"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "ec071825-56b4-44d3-8e9a-f48bf74bde82",
@@ -52,7 +61,7 @@
       "actualname": "Dog",
       "badge": "all-commons",
       "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "0030df85-0a07-44d4-b22d-9c5ca1dc5167",
@@ -61,16 +70,16 @@
       "actualname": "Nimble",
       "badge": "all-commons",
       "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
-      "uuid": "1ccef50b-f6ae-4542-b1a9-d434384a5b25",
-      "capes": 14,
-      "score": 35,
-      "actualname": "Jeff",
-      "badge": "all-minecons",
-      "capelist": [{"name": "2016"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "uuid": "1e514849-5be0-4ab1-91e8-4b078f4f33a5",
+      "capes": 15,
+      "score": 30,
+      "actualname": "BlockLocked",
+      "badge": "all-commons",
+      "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
     },
     {
       "uuid": "53f7e4c8-9469-4829-997d-f9a522e04b95",
@@ -79,7 +88,7 @@
       "actualname": "Wam",
       "badge": "all-minecons",
       "capelist": [{"name": "2016"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "c338518c-ebfc-4bcd-a3d7-7cd2141af37e",
@@ -88,7 +97,7 @@
       "actualname": "Blaine",
       "badge": "all-commons",
       "capelist": [{"name": "2016"},{"name": "2015"},{"name": "2013"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "16751f79-c0b1-4e53-a0b5-90d31fc1d80d",
@@ -97,16 +106,34 @@
       "actualname": "TimeDeo",
       "badge": "all-commons",
       "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "15A"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
-      "uuid": "1e514849-5be0-4ab1-91e8-4b078f4f33a5",
-      "capes": 13,
-      "score": 28,
-      "actualname": "BlockLocked",
+      "uuid": "151eae30-2635-4162-be1d-cec2ac58c3e7",
+      "capes": 14,
+      "score": 24,
+      "actualname": "fangirl",
       "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "be1fab1b-2348-4bf9-a8d5-27d94a35efa6",
+      "capes": 13,
+      "score": 34,
+      "actualname": "Volgar",
+      "badge": "perfect-mojang-employee",
+      "capelist": [{"name": "mojang"},{"name": "mojangstudios"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "mojangold"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "5fe443ce-3836-45a6-8ee8-a7d54b3e6250",
+      "capes": 13,
+      "score": 29,
+      "actualname": "Avoma",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "vanilla_cape"},{"name": "realms"},{"name": "mojira"},{"name": "migrator_cape"},{"name": "15A"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "b0e9158d-8885-489d-8bfb-bb47cf5a3dca",
@@ -122,9 +149,54 @@
       "capes": 13,
       "score": 26,
       "actualname": "evilETH",
-      "badge": "all-commons",
+      "badge": "all-events",
       "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2015"},{"name": "2013"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "realms"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
+    },
+    {
+      "uuid": "3e5eff61-a965-4519-9d66-813ceb9709d2",
+      "capes": 13,
+      "score": 26,
+      "actualname": "victormurone",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2012"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "bb2f590f-c158-457f-bb87-2927d17b3cb4",
+      "capes": 13,
+      "score": 24,
+      "actualname": "Mercedes",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "2011"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "bb77a607-e531-44db-a312-ed30311c0b9a",
+      "capes": 13,
+      "score": 23,
+      "actualname": "722",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "35c923ec-8290-4952-9d7c-1855f8e608ec",
+      "capes": 13,
+      "score": 23,
+      "actualname": "Qwervito",
+      "badge": "",
+      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcc"},{"name": "mcexp"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "4150a1d2-3181-49e7-aeea-2cb74b4843c3",
+      "capes": 13,
+      "score": 23,
+      "actualname": "kjh",
+      "badge": "all-events",
+      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "tiktok"},{"name": "15A"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "2223b9fa-b318-4f08-a8fa-1e1b183b3600",
@@ -136,13 +208,85 @@
       "db_version": 1
     },
     {
+      "uuid": "a7f14d3a-167f-4b92-9b24-525652bddf61",
+      "capes": 13,
+      "score": 21,
+      "actualname": "Stormsx4",
+      "badge": "all-commons",
+      "capelist": [{"name": "2015"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "2013"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
       "uuid": "1cf1a286-acbd-4810-8137-0fcd7a0969f2",
       "capes": 13,
       "score": 20,
       "actualname": "Faavz",
       "badge": "all-commons",
       "capelist": [{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "2011"},{"name": "yearn"}],
-      "db_version": 0
+      "db_version": 1
+    },
+    {
+      "uuid": "40e301e0-6e34-4561-853d-ca9655279869",
+      "capes": 13,
+      "score": 20,
+      "actualname": "Tripieye",
+      "badge": "all-commons",
+      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "8502878d-22ba-4a93-bcbd-9319caa9b555",
+      "capes": 13,
+      "score": 19,
+      "actualname": "Electroplated",
+      "badge": "all-commons",
+      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "mcc"},{"name": "15A"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "b882042a-09cd-4a61-8fd6-302927f49c4a",
+      "capes": 13,
+      "score": 19,
+      "actualname": "Doctorious",
+      "badge": "all-commons",
+      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "15A"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "6e5b6db6-f3ce-4d9c-8cdd-576424a634bd",
+      "capes": 13,
+      "score": 19,
+      "actualname": "Orianna",
+      "badge": "all-commons",
+      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "15A"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "80701b73-cc47-4a9b-9d1e-a165347de162",
+      "capes": 13,
+      "score": 19,
+      "actualname": "vinnyc10",
+      "badge": "all-commons",
+      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "vanilla_cape"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "mcexp"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "fc94aa0f-0ff9-43a4-a1ff-c3d58d765465",
+      "capes": 13,
+      "score": 16,
+      "actualname": "lethalweapon9",
+      "badge": "all-commons",
+      "capelist": [{"name": "2016"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "yearn"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "0534fa77-2961-4976-983b-d3f0f34afaa0",
+      "capes": 12,
+      "score": 26,
+      "actualname": "CornerHard",
+      "badge": "mojang-employee",
+      "capelist": [{"name": "mojang"},{"name": "mojangstudios"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "fa0f91ac-8dbf-4d7c-b2d0-296ee7631986",
@@ -151,25 +295,25 @@
       "actualname": "Dan",
       "badge": "",
       "capelist": [{"name": "2016"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "cherry"},{"name": "vanilla_cape"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
-      "uuid": "151eae30-2635-4162-be1d-cec2ac58c3e7",
+      "uuid": "b0790bf5-6203-449d-9cab-2911050c27c7",
       "capes": 12,
-      "score": 22,
-      "actualname": "fangirl",
-      "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "score": 24,
+      "actualname": "Fey",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "2013"},{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "12ecedbc-e19b-448c-ad38-aa4f57f3afda",
       "capes": 12,
       "score": 22,
       "actualname": "Bikkie",
-      "badge": "all-commons",
+      "badge": "all-events",
       "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "15A"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "0226661d-f437-4c50-8f63-4fd4deb2112d",
@@ -178,7 +322,16 @@
       "actualname": "Conlon",
       "badge": "all-events",
       "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
+    },
+    {
+      "uuid": "fccf6295-789c-4b84-b15a-35627eaf49a0",
+      "capes": 12,
+      "score": 22,
+      "actualname": "uPilot",
+      "badge": "all-events",
+      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "mcc"},{"name": "tiktok"},{"name": "15A"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
     },
     {
       "uuid": "b19a07a0-75a9-47d4-a735-4ceb888b1bc6",
@@ -187,7 +340,7 @@
       "actualname": "OLYWoods",
       "badge": "all-commons",
       "capelist": [{"name": "2013"},{"name": "2012"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "cherry"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "b9400082-ea88-4349-a994-649aa35865c4",
@@ -199,13 +352,22 @@
       "db_version": 1
     },
     {
+      "uuid": "42643840-8882-4a0f-8d2e-f7cf48e9c347",
+      "capes": 12,
+      "score": 21,
+      "actualname": "Jiingy",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "mojira"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
       "uuid": "eb3e74f0-ef61-471a-be63-405f0e15934f",
       "capes": 12,
       "score": 20,
       "actualname": "cobra063",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "cab04738-96b2-4911-8291-a5efb4792b22",
@@ -214,7 +376,7 @@
       "actualname": "xMJGold",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "realms"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "3103cdc6-de65-4044-9e16-492c2c8c040e",
@@ -223,7 +385,7 @@
       "actualname": "Mooshroom",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "2d208b85-9a0c-463b-88ca-4948c000491a",
@@ -232,7 +394,97 @@
       "actualname": "MegaCow",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "15A"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "realms"},{"name": "mcexp"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
+    },
+    {
+      "uuid": "de3b1b83-309f-4804-bec7-6d1e646f5722",
+      "capes": 12,
+      "score": 20,
+      "actualname": "Mr3DAlien",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "28250b61-c395-4f50-b8e5-58ecbb4921d2",
+      "capes": 12,
+      "score": 20,
+      "actualname": "Nightcart",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "f5cb2f0c-602b-4034-8103-6b9aa5a7ee4f",
+      "capes": 12,
+      "score": 20,
+      "actualname": "Sister",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "realms"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "0714435f-3ef4-4b94-8fe6-ff0c2b94fcf0",
+      "capes": 12,
+      "score": 20,
+      "actualname": "Spritzu",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "79544ba3-b84f-4d69-b2ba-8d86724ec0e6",
+      "capes": 12,
+      "score": 20,
+      "actualname": "Scorpionem",
+      "badge": "gift-by-mojang",
+      "capelist": [{"name": "mcc"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "realms"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "587e3f9a-2ddd-427f-82fd-b7c275acdf84",
+      "capes": 12,
+      "score": 19,
+      "actualname": "Shaidynn",
+      "badge": "all-commons",
+      "capelist": [{"name": "2011"},{"name": "twitch"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "06db1920-6e33-4bbc-9f2d-2d7e650f4c1f",
+      "capes": 12,
+      "score": 19,
+      "actualname": "meatboy5",
+      "badge": "all-commons",
+      "capelist": [{"name": "2011"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "ee5ef551-0dce-40fe-ac23-b5f26d21da2e",
+      "capes": 12,
+      "score": 19,
+      "actualname": "Hyfsan",
+      "badge": "all-commons",
+      "capelist": [{"name": "2011"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "tiktok"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "ae5095fb-7b04-4aa5-b446-f77c44fa747b",
+      "capes": 12,
+      "score": 19,
+      "actualname": "Shae",
+      "badge": "all-commons",
+      "capelist": [{"name": "2011"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "28da5e16-6380-4c6e-96c4-039a9bde5e34",
+      "capes": 12,
+      "score": 19,
+      "actualname": "UEUNO",
+      "badge": "all-commons",
+      "capelist": [{"name": "2011"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "dee56d8d-d279-4d64-9b06-1818cfcc34e7",
@@ -241,7 +493,7 @@
       "actualname": "ancil",
       "badge": "all-commons",
       "capelist": [{"name": "2012"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "417a5185-8899-4daa-ac37-dad1338e7451",
@@ -250,7 +502,61 @@
       "actualname": "jon8",
       "badge": "all-commons",
       "capelist": [{"name": "2012"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
+    },
+    {
+      "uuid": "de9b8350-e225-4cd6-9626-5afa17545f19",
+      "capes": 12,
+      "score": 18,
+      "actualname": "Iggen",
+      "badge": "all-commons",
+      "capelist": [{"name": "2012"},{"name": "15A"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "e01bfc2a-e084-4885-a5a4-e2bb745f1411",
+      "capes": 12,
+      "score": 18,
+      "actualname": "2fach",
+      "badge": "all-commons",
+      "capelist": [{"name": "2012"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "e0b31f8d-27bc-4ac4-bdde-33f6799e2371",
+      "capes": 12,
+      "score": 18,
+      "actualname": "Pyrotheum",
+      "badge": "all-events",
+      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "cherry"},{"name": "tiktok"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "7f07d343-d0dc-4e8d-b1ff-faf51ae084f8",
+      "capes": 12,
+      "score": 18,
+      "actualname": "mr_penguin45t",
+      "badge": "all-commons",
+      "capelist": [{"name": "2012"},{"name": "twitch"},{"name": "15A"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "89618446-aa01-48a6-9a76-ebe7ec265787",
+      "capes": 12,
+      "score": 18,
+      "actualname": "Nuisance",
+      "badge": "all-commons",
+      "capelist": [{"name": "2012"},{"name": "15A"},{"name": "twitch"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "868c3968-f676-4aca-a9af-f3dcc42eace2",
+      "capes": 12,
+      "score": 18,
+      "actualname": "Pzy_",
+      "badge": "all-events",
+      "capelist": [{"name": "2016"},{"name": "vanilla_cape"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mcc"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "26f973b5-b6f2-4ad0-adef-f1273839f283",
@@ -259,7 +565,7 @@
       "actualname": "Krispiest",
       "badge": "all-commons",
       "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "2f8f202d-e80d-4deb-9b30-0b997d322002",
@@ -268,16 +574,97 @@
       "actualname": "Aliennn",
       "badge": "all-commons",
       "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
-      "uuid": "fc94aa0f-0ff9-43a4-a1ff-c3d58d765465",
+      "uuid": "4a2920f3-bd9d-488a-8123-b7e6e17c33c7",
       "capes": 12,
-      "score": 15,
-      "actualname": "lethalweapon9",
+      "score": 17,
+      "actualname": "Furrgit",
       "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "8cbbb4ee-c155-4600-a0d1-b3c1cd499c35",
+      "capes": 12,
+      "score": 17,
+      "actualname": "Zubook",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "e250b791-6281-468e-9810-810386ff2fa7",
+      "capes": 12,
+      "score": 17,
+      "actualname": "Orbiva",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "mcc"},{"name": "twitch"},{"name": "15A"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "158e1fb5-bbfd-4227-bf9c-d257e50da423",
+      "capes": 12,
+      "score": 17,
+      "actualname": "HeavenSxFire",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "94eaacd6-22c1-46bf-8b41-1731a404031b",
+      "capes": 12,
+      "score": 17,
+      "actualname": "cchrome",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "a22d925e-e294-4a1a-aa12-cb4492b2bfe6",
+      "capes": 12,
+      "score": 17,
+      "actualname": "Slinkhits",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "828447ab-de39-4082-b214-d1c34e5494d0",
+      "capes": 12,
+      "score": 17,
+      "actualname": "Mvffin",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "ff0d7f84-8cd4-439a-8b6b-1315e5811fff",
+      "capes": 12,
+      "score": 17,
+      "actualname": "BoxBlair",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "mcc"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "13c04050-47a5-4437-8671-c713674795cc",
+      "capes": 12,
+      "score": 17,
+      "actualname": "uvns",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "f20627b4-cf6e-4c98-880c-87fa6f4c8f2f",
+      "capes": 12,
+      "score": 17,
+      "actualname": "Teba",
+      "badge": "all-commons",
+      "capelist": [{"name": "2013"},{"name": "mcexp"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "cc4b7d74-bbe2-4310-9106-0e52d292c758",
@@ -286,16 +673,7 @@
       "actualname": "Leroidesafk",
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "yearn"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "be1fab1b-2348-4bf9-a8d5-27d94a35efa6",
-      "capes": 11,
-      "score": 32,
-      "actualname": "Volgar",
-      "badge": "perfect-mojang-employee",
-      "capelist": [{"name": "mojang"},{"name": "mojangstudios"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "mojangold"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "3d6a256d-4c5e-4244-90ab-0439d17a5c6c",
@@ -304,34 +682,7 @@
       "actualname": "Dudeguy",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "tiktok"},{"name": "15A"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "realms"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "5fe443ce-3836-45a6-8ee8-a7d54b3e6250",
-      "capes": 11,
-      "score": 27,
-      "actualname": "Avoma",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "vanilla_cape"},{"name": "realms"},{"name": "mojira"},{"name": "migrator_cape"},{"name": "15A"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "3e5eff61-a965-4519-9d66-813ceb9709d2",
-      "capes": 11,
-      "score": 24,
-      "actualname": "victormurone",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "2012"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "bb2f590f-c158-457f-bb87-2927d17b3cb4",
-      "capes": 11,
-      "score": 22,
-      "actualname": "Mercedes",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "2011"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "a0cb5c81-c93d-4e8c-97e5-c90be1e77afa",
@@ -340,43 +691,16 @@
       "actualname": "7x2",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "2016"},{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
-      "uuid": "bb77a607-e531-44db-a312-ed30311c0b9a",
+      "uuid": "24aed5cf-e885-4c0b-ba06-908c47522bfc",
       "capes": 11,
       "score": 21,
-      "actualname": "722",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "2016"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "35c923ec-8290-4952-9d7c-1855f8e608ec",
-      "capes": 11,
-      "score": 21,
-      "actualname": "Qwervito",
-      "badge": "",
-      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcc"},{"name": "mcexp"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "4150a1d2-3181-49e7-aeea-2cb74b4843c3",
-      "capes": 11,
-      "score": 21,
-      "actualname": "kjh",
+      "actualname": "Jet",
       "badge": "all-events",
-      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "tiktok"},{"name": "15A"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "a7f14d3a-167f-4b92-9b24-525652bddf61",
-      "capes": 11,
-      "score": 19,
-      "actualname": "Stormsx4",
-      "badge": "all-commons",
-      "capelist": [{"name": "2015"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "2013"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "15A"},{"name": "twitch"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"}],
+      "db_version": 1
     },
     {
       "uuid": "7328a9e1-3121-40cb-bb12-8a42f6eb23f0",
@@ -385,7 +709,7 @@
       "actualname": "Kinwoo",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "mcc"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "twitch"},{"name": "tiktok"},{"name": "15A"},{"name": "realms"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "65aa8c70-0100-4291-9e93-f558bc6e49bc",
@@ -397,58 +721,22 @@
       "db_version": 1
     },
     {
-      "uuid": "40e301e0-6e34-4561-853d-ca9655279869",
+      "uuid": "8b1f5f7e-ec6b-4b06-bc5c-1fda37461351",
       "capes": 11,
       "score": 18,
-      "actualname": "Tripieye",
-      "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "actualname": "Icy",
+      "badge": "all-events",
+      "capelist": [{"name": "2015"},{"name": "2013"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mcc"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "cherry"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "3f3514c7-74a6-4a58-b993-a726add76983",
       "capes": 11,
       "score": 17,
       "actualname": "Nuggets",
-      "badge": "all-commons",
+      "badge": "all-events",
       "capelist": [{"name": "2016"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "8502878d-22ba-4a93-bcbd-9319caa9b555",
-      "capes": 11,
-      "score": 17,
-      "actualname": "Electroplated",
-      "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "mcc"},{"name": "15A"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mojangoffice"},{"name": "mcexp"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "b882042a-09cd-4a61-8fd6-302927f49c4a",
-      "capes": 11,
-      "score": 17,
-      "actualname": "Doctorious",
-      "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "15A"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "6e5b6db6-f3ce-4d9c-8cdd-576424a634bd",
-      "capes": 11,
-      "score": 17,
-      "actualname": "Orianna",
-      "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "15A"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "mcexp"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "de9b8350-e225-4cd6-9626-5afa17545f19",
-      "capes": 11,
-      "score": 17,
-      "actualname": "Iggen",
-      "badge": "all-commons",
-      "capelist": [{"name": "2012"},{"name": "15A"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "6aaa453e-c3eb-4ffb-ae73-5631da9c1010",
@@ -457,7 +745,16 @@
       "actualname": "Minori",
       "badge": "all-commons",
       "capelist": [{"name": "2011"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
+    },
+    {
+      "uuid": "2c8fcb4f-6ffa-4f7e-85f3-ee03d7752fd2",
+      "capes": 11,
+      "score": 17,
+      "actualname": "Cocoon",
+      "badge": "all-events",
+      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "15A"},{"name": "twitch"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mojangoffice"},{"name": "mcexp"}],
+      "db_version": 1
     },
     {
       "uuid": "f55ed573-7e88-4441-bb91-5194748f397b",
@@ -466,7 +763,7 @@
       "actualname": "_S0rrel_",
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "81760cdc-1996-4181-a5c5-1ce17dd86597",
@@ -475,7 +772,7 @@
       "actualname": "johnush",
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "540ac9af-d940-4201-bcf9-722b8a01c1d0",
@@ -484,7 +781,7 @@
       "actualname": "Kubii_",
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "8151ea63-bbd9-4da9-bfcd-b9f9340548b2",
@@ -493,7 +790,7 @@
       "actualname": "Gsmack",
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "ec46c9ea-2c6e-43a3-b681-cb93598d4108",
@@ -502,7 +799,7 @@
       "actualname": "bj9",
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "twitch"},{"name": "15A"},{"name": "tiktok"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "546ec193-a2b8-478c-b791-e8802f3e6751",
@@ -511,16 +808,25 @@
       "actualname": "Charloca",
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
-      "uuid": "b5137553-a0e8-4116-9b78-065d18e48d5f",
+      "uuid": "437960c5-7310-4154-9760-c9082c27c9f7",
       "capes": 11,
-      "score": 10,
-      "actualname": "wFanta",
+      "score": 12,
+      "actualname": "_Sangri",
       "badge": "all-events",
-      "capelist": [{"name": "mcc"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "unknown2"},{"name": "unknown1"}],
-      "db_version": 0
+      "capelist": [{"name": "mcc"},{"name": "twitch"},{"name": "15A"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"},{"name": "yearn"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "63781be2-b6b3-4b25-8af4-3d963f6bc164",
+      "capes": 11,
+      "score": 12,
+      "actualname": "Furti_Two",
+      "badge": "all-commons",
+      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"},{"name": "menace"}],
+      "db_version": 1
     },
     {
       "uuid": "853c80ef-3c37-49fd-aa49-938b674adae6",
@@ -529,7 +835,7 @@
       "actualname": "jeb_",
       "badge": "perfect-mojang-employee",
       "capelist": [{"name": "mojang"},{"name": "mojangold"},{"name": "mojangstudios"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "2016"},{"name": "migrator_cape"},{"name": "vanilla_cape"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "c9b54008-fd80-4742-8b23-8787b5f2401c",
@@ -538,7 +844,7 @@
       "actualname": "MinecraftChick",
       "badge": "perfect-mojang-employee",
       "capelist": [{"name": "mojang"},{"name": "mojangold"},{"name": "2011"},{"name": "2012"},{"name": "2013"},{"name": "2015"},{"name": "2016"},{"name": "mojangstudios"},{"name": "migrator_cape"},{"name": "vanilla_cape"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "615d0847-0ddd-4bc9-a410-355a79cdd519",
@@ -547,7 +853,7 @@
       "actualname": "RazzleberryFox",
       "badge": "mojang-employee",
       "capelist": [{"name": "2016"},{"name": "mojang"},{"name": "2012"},{"name": "2015"},{"name": "mojangstudios"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "mcc"},{"name": "tiktok"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "58fbdb88-57bc-4d53-8c14-17748f5c438d",
@@ -556,7 +862,7 @@
       "actualname": "Xeronsis",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "realms"},{"name": "cobalt"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "0b3013d0-a05f-4760-bf84-d897fe295715",
@@ -565,52 +871,7 @@
       "actualname": "Notta",
       "badge": "all-events",
       "capelist": [{"name": "2013"},{"name": "2011"},{"name": "2012"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "0534fa77-2961-4976-983b-d3f0f34afaa0",
-      "capes": 10,
-      "score": 24,
-      "actualname": "CornerHard",
-      "badge": "mojang-employee",
-      "capelist": [{"name": "mojang"},{"name": "mojangstudios"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "b0790bf5-6203-449d-9cab-2911050c27c7",
-      "capes": 10,
-      "score": 22,
-      "actualname": "Fey",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "2013"},{"name": "realms"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "fccf6295-789c-4b84-b15a-35627eaf49a0",
-      "capes": 10,
-      "score": 20,
-      "actualname": "uPilot",
-      "badge": "all-events",
-      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "mcc"},{"name": "tiktok"},{"name": "15A"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "24aed5cf-e885-4c0b-ba06-908c47522bfc",
-      "capes": 10,
-      "score": 20,
-      "actualname": "Jet",
-      "badge": "all-events",
-      "capelist": [{"name": "2016"},{"name": "2013"},{"name": "2015"},{"name": "15A"},{"name": "twitch"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "42643840-8882-4a0f-8d2e-f7cf48e9c347",
-      "capes": 10,
-      "score": 19,
-      "actualname": "Jiingy",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "mojira"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "628bf89c-5d77-48a2-8731-4b16512c7a1d",
@@ -619,16 +880,7 @@
       "actualname": "Pandorie",
       "badge": "",
       "capelist": [{"name": "2016"},{"name": "2011"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "496bea7a-5917-4bee-8044-929f767dd7c9",
-      "capes": 10,
-      "score": 19,
-      "actualname": "zTxrbq",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "migrator_cape"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "mojira"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "5f522562-d86e-4874-93a5-7bd8cdbb0561",
@@ -637,25 +889,7 @@
       "actualname": "Spiralio",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "2016"},{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "twitch"},{"name": "tiktok"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "de3b1b83-309f-4804-bec7-6d1e646f5722",
-      "capes": 10,
-      "score": 18,
-      "actualname": "Mr3DAlien",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "28250b61-c395-4f50-b8e5-58ecbb4921d2",
-      "capes": 10,
-      "score": 18,
-      "actualname": "Nightcart",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "mcexp"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "6c68de3c-081a-4765-b45a-e1a804073c26",
@@ -664,25 +898,7 @@
       "actualname": "RNA",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "realms"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "f5cb2f0c-602b-4034-8103-6b9aa5a7ee4f",
-      "capes": 10,
-      "score": 18,
-      "actualname": "Sister",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "realms"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "0714435f-3ef4-4b94-8fe6-ff0c2b94fcf0",
-      "capes": 10,
-      "score": 18,
-      "actualname": "Spritzu",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "realms"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "a81322bf-180a-487a-80f4-2df5097e956d",
@@ -691,16 +907,7 @@
       "actualname": "PvPqnda",
       "badge": "gift-by-mojang",
       "capelist": [{"name": "realms"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "79544ba3-b84f-4d69-b2ba-8d86724ec0e6",
-      "capes": 10,
-      "score": 18,
-      "actualname": "Scorpionem",
-      "badge": "gift-by-mojang",
-      "capelist": [{"name": "mcc"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "realms"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "3d5fde6a-a17b-4264-9770-c9fccbf997da",
@@ -709,97 +916,34 @@
       "actualname": "ChurchOfThighs",
       "badge": "all-events",
       "capelist": [{"name": "2016"},{"name": "2013"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "mcexp"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "8b1f5f7e-ec6b-4b06-bc5c-1fda37461351",
-      "capes": 10,
-      "score": 17,
-      "actualname": "Icy",
-      "badge": "all-commons",
-      "capelist": [{"name": "2015"},{"name": "2013"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mcc"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "cherry"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "ff92d17c-fd22-403b-8272-791e52f97ad6",
       "capes": 10,
       "score": 17,
       "actualname": "brunoxrambo",
-      "badge": "all-commons",
+      "badge": "all-events",
       "capelist": [{"name": "2011"},{"name": "15A"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "9ebcd3d7-09c9-4fe3-a005-bcf1a31d8cb9",
       "capes": 10,
       "score": 17,
       "actualname": "breezey",
-      "badge": "all-commons",
+      "badge": "all-events",
       "capelist": [{"name": "2011"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "587e3f9a-2ddd-427f-82fd-b7c275acdf84",
-      "capes": 10,
-      "score": 17,
-      "actualname": "Shaidynn",
-      "badge": "all-commons",
-      "capelist": [{"name": "2011"},{"name": "twitch"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "06db1920-6e33-4bbc-9f2d-2d7e650f4c1f",
-      "capes": 10,
-      "score": 17,
-      "actualname": "meatboy5",
-      "badge": "all-commons",
-      "capelist": [{"name": "2011"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "ee5ef551-0dce-40fe-ac23-b5f26d21da2e",
-      "capes": 10,
-      "score": 17,
-      "actualname": "Hyfsan",
-      "badge": "all-commons",
-      "capelist": [{"name": "2011"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mojangoffice"},{"name": "mcexp"},{"name": "tiktok"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "ae5095fb-7b04-4aa5-b446-f77c44fa747b",
-      "capes": 10,
-      "score": 17,
-      "actualname": "Shae",
-      "badge": "all-commons",
-      "capelist": [{"name": "2011"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "28da5e16-6380-4c6e-96c4-039a9bde5e34",
-      "capes": 10,
-      "score": 17,
-      "actualname": "UEUNO",
-      "badge": "all-commons",
-      "capelist": [{"name": "2011"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "cdfff2e9-5cc7-4671-82ef-548d33c464e4",
       "capes": 10,
       "score": 17,
       "actualname": "rod3r",
-      "badge": "all-commons",
+      "badge": "all-events",
       "capelist": [{"name": "2011"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "mcexp"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "e01bfc2a-e084-4885-a5a4-e2bb745f1411",
-      "capes": 10,
-      "score": 16,
-      "actualname": "2fach",
-      "badge": "all-commons",
-      "capelist": [{"name": "2012"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "c4a4d5d7-bf05-48a0-bdc9-82b9f0277d8b",
@@ -808,178 +952,34 @@
       "actualname": "Kykiro",
       "badge": "",
       "capelist": [{"name": "2016"},{"name": "2015"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "e0b31f8d-27bc-4ac4-bdde-33f6799e2371",
-      "capes": 10,
-      "score": 16,
-      "actualname": "Pyrotheum",
-      "badge": "all-events",
-      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "cherry"},{"name": "tiktok"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "7f07d343-d0dc-4e8d-b1ff-faf51ae084f8",
-      "capes": 10,
-      "score": 16,
-      "actualname": "mr_penguin45t",
-      "badge": "all-commons",
-      "capelist": [{"name": "2012"},{"name": "twitch"},{"name": "15A"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "7331dcae-7ca7-4836-b1e8-8662512195ee",
       "capes": 10,
       "score": 16,
       "actualname": "Fypsilon",
-      "badge": "all-commons",
-      "capelist": [{"name": "2012"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "89618446-aa01-48a6-9a76-ebe7ec265787",
-      "capes": 10,
-      "score": 16,
-      "actualname": "Nuisance",
-      "badge": "all-commons",
-      "capelist": [{"name": "2012"},{"name": "15A"},{"name": "twitch"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "868c3968-f676-4aca-a9af-f3dcc42eace2",
-      "capes": 10,
-      "score": 16,
-      "actualname": "Pzy_",
       "badge": "all-events",
-      "capelist": [{"name": "2016"},{"name": "vanilla_cape"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "mcc"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "2c8fcb4f-6ffa-4f7e-85f3-ee03d7752fd2",
-      "capes": 10,
-      "score": 15,
-      "actualname": "Cocoon",
-      "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "15A"},{"name": "twitch"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "80701b73-cc47-4a9b-9d1e-a165347de162",
-      "capes": 10,
-      "score": 15,
-      "actualname": "vinnyc10",
-      "badge": "all-commons",
-      "capelist": [{"name": "2016"},{"name": "2015"},{"name": "vanilla_cape"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "4a2920f3-bd9d-488a-8123-b7e6e17c33c7",
-      "capes": 10,
-      "score": 15,
-      "actualname": "Furrgit",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "8cbbb4ee-c155-4600-a0d1-b3c1cd499c35",
-      "capes": 10,
-      "score": 15,
-      "actualname": "Zubook",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "e250b791-6281-468e-9810-810386ff2fa7",
-      "capes": 10,
-      "score": 15,
-      "actualname": "Orbiva",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "mcc"},{"name": "twitch"},{"name": "15A"},{"name": "migrator_cape"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "158e1fb5-bbfd-4227-bf9c-d257e50da423",
-      "capes": 10,
-      "score": 15,
-      "actualname": "HeavenSxFire",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "94eaacd6-22c1-46bf-8b41-1731a404031b",
-      "capes": 10,
-      "score": 15,
-      "actualname": "cchrome",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "migrator_cape"},{"name": "mojangoffice"},{"name": "mcexp"}],
-      "db_version": 0
+      "capelist": [{"name": "2012"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "15A"},{"name": "cherry"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mcexp"},{"name": "mojangoffice"}],
+      "db_version": 1
     },
     {
       "uuid": "46322a62-5d3b-40c4-889d-943cb3d7db69",
       "capes": 10,
       "score": 15,
       "actualname": "HipHop",
-      "badge": "all-commons",
+      "badge": "all-events",
       "capelist": [{"name": "2013"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "a22d925e-e294-4a1a-aa12-cb4492b2bfe6",
-      "capes": 10,
-      "score": 15,
-      "actualname": "Slinkhits",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "migrator_cape"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "mcexp"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "828447ab-de39-4082-b214-d1c34e5494d0",
-      "capes": 10,
-      "score": 15,
-      "actualname": "Mvffin",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "twitch"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "ff0d7f84-8cd4-439a-8b6b-1315e5811fff",
-      "capes": 10,
-      "score": 15,
-      "actualname": "BoxBlair",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "mcc"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "13c04050-47a5-4437-8671-c713674795cc",
-      "capes": 10,
-      "score": 15,
-      "actualname": "uvns",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "f20627b4-cf6e-4c98-880c-87fa6f4c8f2f",
-      "capes": 10,
-      "score": 15,
-      "actualname": "Teba",
-      "badge": "all-commons",
-      "capelist": [{"name": "2013"},{"name": "mcexp"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "e07bf6a2-9f2e-4a48-accd-2534e1a6a462",
       "capes": 10,
       "score": 15,
       "actualname": "TheCrystalFlame",
-      "badge": "all-commons",
+      "badge": "all-events",
       "capelist": [{"name": "2013"},{"name": "mcexp"},{"name": "15A"},{"name": "mcc"},{"name": "tiktok"},{"name": "mojangoffice"},{"name": "migrator_cape"},{"name": "twitch"},{"name": "cherry"},{"name": "vanilla_cape"}],
-      "db_version": 0
+      "db_version": 1
     },
     {
       "uuid": "802a9453-1f0b-46d7-a776-0532e3672ad4",
@@ -1258,15 +1258,6 @@
       "actualname": "zyq_09",
       "badge": "all-commons",
       "capelist": [{"name": "2016"},{"name": "cherry"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "tiktok"},{"name": "mcc"},{"name": "twitch"},{"name": "15A"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
-      "uuid": "63781be2-b6b3-4b25-8af4-3d963f6bc164",
-      "capes": 10,
-      "score": 11,
-      "actualname": "Furti_Two",
-      "badge": "all-commons",
-      "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "home"}],
       "db_version": 0
     },
     {
@@ -2015,6 +2006,24 @@
       "badge": "all-commons",
       "capelist": [{"name": "2016"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mojangoffice"}],
       "db_version": 0
+    },
+    {
+      "uuid": "496bea7a-5917-4bee-8044-929f767dd7c9",
+      "capes": 9,
+      "score": 10,
+      "actualname": "zTxrbq",
+      "badge": "all-events",
+      "capelist": [{"name": "migrator_cape"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "mcexp"}],
+      "db_version": 1
+    },
+    {
+      "uuid": "b5137553-a0e8-4116-9b78-065d18e48d5f",
+      "capes": 9,
+      "score": 10,
+      "actualname": "wFanta",
+      "badge": "all-events",
+      "capelist": [{"name": "mcc"},{"name": "cherry"},{"name": "15A"},{"name": "tiktok"},{"name": "twitch"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"}],
+      "db_version": 1
     },
     {
       "uuid": "07a7432f-a3e8-454b-8611-9767ceddf05b",
@@ -5266,15 +5275,6 @@
       "db_version": 0
     },
     {
-      "uuid": "437960c5-7310-4154-9760-c9082c27c9f7",
-      "capes": 8,
-      "score": 9,
-      "actualname": "_Sangri",
-      "badge": "all-events",
-      "capelist": [{"name": "mcc"},{"name": "twitch"},{"name": "15A"},{"name": "tiktok"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 0
-    },
-    {
       "uuid": "5a4b78e3-437f-4197-9a2f-5fbf357bce4c",
       "capes": 8,
       "score": 9,
@@ -7667,6 +7667,15 @@
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mojangoffice"}],
       "db_version": 0
+    },
+    {
+      "uuid": "e2aa9b98-7648-4c2a-9d12-3154200e62dd",
+      "capes": 8,
+      "score": 8,
+      "actualname": "Waitlists",
+      "badge": "",
+      "capelist": [{"name": "mojangoffice"},{"name": "twitch"},{"name": "15A"},{"name": "home"},{"name": "cherry"},{"name": "tiktok"},{"name": "menace"},{"name": "yearn"}],
+      "db_version": 1
     },
     {
       "uuid": "e19e315c-1df9-43ce-89d9-527bbe27762e",
@@ -14525,6 +14534,15 @@
       "badge": "",
       "capelist": [{"name": "mcc"}],
       "db_version": 0
+    },
+    {
+      "uuid": "ac972b33-2b52-4af5-9a2c-bcfd4a54e8d5",
+      "capes": 1,
+      "score": 1,
+      "actualname": "alt_F4_Og",
+      "badge": "",
+      "capelist": [{"name": "mcc"}],
+      "db_version": 1
     },
     {
       "uuid": "03dcea60-c134-4af5-b479-aa85c10cac53",

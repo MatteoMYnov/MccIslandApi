@@ -74,7 +74,14 @@
       "uuid": "64264d94-7e54-4836-a4c3-1e9004800360",
       "actualname": "Unipotatoo",
       "crownlevel": 65,
-      "trophies": 82873,
+      "trophies": 83114,
+      "rank": "GRAND_CHAMP_ROYALE"
+    },
+    {
+      "uuid": "a0f1f1b2-b12f-4a10-b67c-17a788027b88",
+      "actualname": "rai2i",
+      "crownlevel": 64,
+      "trophies": 82243,
       "rank": "GRAND_CHAMP_ROYALE"
     },
     {
@@ -83,13 +90,6 @@
       "crownlevel": 64,
       "trophies": 81773,
       "rank": "MODERATOR"
-    },
-    {
-      "uuid": "a0f1f1b2-b12f-4a10-b67c-17a788027b88",
-      "actualname": "rai2i",
-      "crownlevel": 64,
-      "trophies": 81669,
-      "rank": "GRAND_CHAMP_ROYALE"
     },
     {
       "uuid": "21d749ba-5f59-4e6f-81a2-fbc7be7df099",
@@ -151,7 +151,7 @@
       "uuid": "a00847ed-51a7-4d4c-80e8-dc46e3994cb4",
       "actualname": "lynrose",
       "crownlevel": 61,
-      "trophies": 72639,
+      "trophies": 73446,
       "rank": "CREATOR"
     },
     {
@@ -171,8 +171,8 @@
     {
       "uuid": "2482ebed-44c7-4a95-81f0-853ef3a55928",
       "actualname": "Melizsa",
-      "crownlevel": 59,
-      "trophies": 69916,
+      "crownlevel": 60,
+      "trophies": 70613,
       "rank": "NOXCREW"
     },
     {
@@ -207,7 +207,7 @@
       "uuid": "8b303bac-056a-4b03-b5b0-8c7c262b86ef",
       "actualname": "Proofreader",
       "crownlevel": 58,
-      "trophies": 66927,
+      "trophies": 67332,
       "rank": "GRAND_CHAMP"
     },
     {
@@ -302,18 +302,18 @@
       "rank": "CREATOR"
     },
     {
+      "uuid": "dd3acb56-aff9-4a7a-bc3d-0b8e3010e147",
+      "actualname": "HypnoSpeaker",
+      "crownlevel": 54,
+      "trophies": 58528,
+      "rank": "MODERATOR"
+    },
+    {
       "uuid": "0b7f4c42-7e05-4d68-8ed5-30c1dabeaeb5",
       "actualname": "kayokat",
       "crownlevel": 54,
       "trophies": 58291,
       "rank": "GRAND_CHAMP_ROYALE"
-    },
-    {
-      "uuid": "dd3acb56-aff9-4a7a-bc3d-0b8e3010e147",
-      "actualname": "HypnoSpeaker",
-      "crownlevel": 54,
-      "trophies": 58000,
-      "rank": "MODERATOR"
     },
     {
       "uuid": "1bf4b224-3b62-428c-81b7-4e81967817eb",
@@ -676,7 +676,7 @@
       "uuid": "19f9fd28-558c-4959-98c2-fb1a18bed0a1",
       "actualname": "SirArchibald97",
       "crownlevel": 42,
-      "trophies": 38802,
+      "trophies": 38868,
       "rank": "MODERATOR"
     },
     {
@@ -711,7 +711,7 @@
       "uuid": "244641c7-b85e-4bc3-86c1-4117991a7d86",
       "actualname": "Snoae",
       "crownlevel": 42,
-      "trophies": 38069,
+      "trophies": 38160,
       "rank": "MODERATOR"
     },
     {
@@ -739,7 +739,7 @@
       "uuid": "b7a692f5-b74a-483b-a4e2-bb566b78bbe3",
       "actualname": "NotNate",
       "crownlevel": 41,
-      "trophies": 37322,
+      "trophies": 37387,
       "rank": "MODERATOR"
     },
     {
@@ -760,7 +760,7 @@
       "uuid": "78ffa9ba-3f80-4b6f-8d4d-39aea13f10d3",
       "actualname": "Chocolate_Orange",
       "crownlevel": 40,
-      "trophies": 36367,
+      "trophies": 36407,
       "rank": "PLAYER"
     },
     {
@@ -788,7 +788,7 @@
       "uuid": "7f2af71c-acc7-4e61-9bd7-a0eeaddcd77f",
       "actualname": "FlashCrimson",
       "crownlevel": 40,
-      "trophies": 35840,
+      "trophies": 35841,
       "rank": "GRAND_CHAMP_ROYALE"
     },
     {
@@ -886,7 +886,7 @@
       "uuid": "3e5ef799-73bc-44fb-a279-b015c4fb4c84",
       "actualname": "iTMG",
       "crownlevel": 37,
-      "trophies": 31722,
+      "trophies": 31742,
       "rank": "CREATOR"
     },
     {
@@ -904,6 +904,13 @@
       "rank": "GRAND_CHAMP_ROYALE"
     },
     {
+      "uuid": "89fb6cef-7c0b-4044-8ec1-33294e53874b",
+      "actualname": "Stilluetto",
+      "crownlevel": 36,
+      "trophies": 31155,
+      "rank": "MODERATOR"
+    },
+    {
       "uuid": "ba507ab5-57fe-4f91-8297-aaf997f0a2d8",
       "actualname": "Owuhyae",
       "crownlevel": 36,
@@ -916,13 +923,6 @@
       "crownlevel": 36,
       "trophies": 30867,
       "rank": "GRAND_CHAMP"
-    },
-    {
-      "uuid": "89fb6cef-7c0b-4044-8ec1-33294e53874b",
-      "actualname": "Stilluetto",
-      "crownlevel": 36,
-      "trophies": 30710,
-      "rank": "MODERATOR"
     },
     {
       "uuid": "861e3cb8-0e2e-4f53-a50f-fbd5356fa8c0",
@@ -1075,7 +1075,7 @@
       "uuid": "108f8ee1-417a-41d3-854c-346df003fd1c",
       "actualname": "cinnqmoroll_",
       "crownlevel": 32,
-      "trophies": 25044,
+      "trophies": 25094,
       "rank": "GRAND_CHAMP_ROYALE"
     },
     {
@@ -1156,6 +1156,13 @@
       "rank": "PLAYER"
     },
     {
+      "uuid": "0030df85-0a07-44d4-b22d-9c5ca1dc5167",
+      "actualname": "Nimble",
+      "crownlevel": 30,
+      "trophies": 23380,
+      "rank": "GRAND_CHAMP_ROYALE"
+    },
+    {
       "uuid": "76e60cb3-7daf-463e-b627-432613bf1a3c",
       "actualname": "AmpTheDamp",
       "crownlevel": 30,
@@ -1205,13 +1212,6 @@
       "rank": "PLAYER"
     },
     {
-      "uuid": "0030df85-0a07-44d4-b22d-9c5ca1dc5167",
-      "actualname": "Nimble",
-      "crownlevel": 29,
-      "trophies": 21807,
-      "rank": "GRAND_CHAMP_ROYALE"
-    },
-    {
       "uuid": "a80df7cb-ee6d-4e0f-b7be-4071509546b4",
       "actualname": "AutumnsBreeze",
       "crownlevel": 28,
@@ -1226,18 +1226,18 @@
       "rank": "GRAND_CHAMP_ROYALE"
     },
     {
+      "uuid": "4e832e0d-14b6-4f8f-ace2-280a9bf9dd98",
+      "actualname": "TheMysterys",
+      "crownlevel": 28,
+      "trophies": 21298,
+      "rank": "MODERATOR"
+    },
+    {
       "uuid": "c60b5b4d-0535-4c73-9c09-0b58e7631723",
       "actualname": "JTensei",
       "crownlevel": 28,
       "trophies": 21157,
       "rank": "GRAND_CHAMP_ROYALE"
-    },
-    {
-      "uuid": "4e832e0d-14b6-4f8f-ace2-280a9bf9dd98",
-      "actualname": "TheMysterys",
-      "crownlevel": 28,
-      "trophies": 20888,
-      "rank": "MODERATOR"
     },
     {
       "uuid": "38292156-e7d0-499f-8e30-8a951c3e92d6",
@@ -1254,6 +1254,13 @@
       "rank": "GRAND_CHAMP_ROYALE"
     },
     {
+      "uuid": "fb6090e5-55d2-433b-8c45-0ae33aa870f5",
+      "actualname": "Crazy66",
+      "crownlevel": 28,
+      "trophies": 20747,
+      "rank": "GRAND_CHAMP"
+    },
+    {
       "uuid": "c61259f6-7797-4dbd-b5c5-4ac2737b2249",
       "actualname": "Firetouch01",
       "crownlevel": 28,
@@ -1266,13 +1273,6 @@
       "crownlevel": 28,
       "trophies": 20571,
       "rank": "PLAYER"
-    },
-    {
-      "uuid": "fb6090e5-55d2-433b-8c45-0ae33aa870f5",
-      "actualname": "Crazy66",
-      "crownlevel": 28,
-      "trophies": 20560,
-      "rank": "GRAND_CHAMP"
     },
     {
       "uuid": "8cf808fe-5efd-461e-8347-ba5e054dd596",
@@ -1397,7 +1397,7 @@
       "uuid": "8e117d2f-26c2-49d9-886f-fe9b97663f02",
       "actualname": "scalse",
       "crownlevel": 25,
-      "trophies": 18250,
+      "trophies": 18271,
       "rank": "GRAND_CHAMP"
     },
     {
@@ -1516,8 +1516,15 @@
       "uuid": "0d36aac1-1f8f-4ea6-bdb3-985ad9a150af",
       "actualname": "Aliyahu",
       "crownlevel": 23,
-      "trophies": 16378,
+      "trophies": 16382,
       "rank": "GRAND_CHAMP"
+    },
+    {
+      "uuid": "aaa8eace-1c58-4d01-9ad3-606cd4b8c31a",
+      "actualname": "Jakerson66",
+      "crownlevel": 23,
+      "trophies": 16374,
+      "rank": "MODERATOR"
     },
     {
       "uuid": "b65c1051-7a67-4ce7-83d6-38b1c065ccc2",
@@ -1525,13 +1532,6 @@
       "crownlevel": 23,
       "trophies": 16281,
       "rank": "PLAYER"
-    },
-    {
-      "uuid": "aaa8eace-1c58-4d01-9ad3-606cd4b8c31a",
-      "actualname": "Jakerson66",
-      "crownlevel": 23,
-      "trophies": 15894,
-      "rank": "MODERATOR"
     },
     {
       "uuid": "acb4e75b-1050-41d9-bdff-6688f2bf0a5e",
@@ -1618,18 +1618,18 @@
       "rank": "GRAND_CHAMP_ROYALE"
     },
     {
+      "uuid": "d428201d-8e31-46a6-b91d-230e6b367e12",
+      "actualname": "Crazing",
+      "crownlevel": 21,
+      "trophies": 14166,
+      "rank": "MODERATOR"
+    },
+    {
       "uuid": "bcb03b14-e47b-4390-8c22-9875c9e97ede",
       "actualname": "Dabmaster0",
       "crownlevel": 21,
       "trophies": 13990,
       "rank": "GRAND_CHAMP_ROYALE"
-    },
-    {
-      "uuid": "d428201d-8e31-46a6-b91d-230e6b367e12",
-      "actualname": "Crazing",
-      "crownlevel": 21,
-      "trophies": 13960,
-      "rank": "MODERATOR"
     },
     {
       "uuid": "de4ad85f-13b0-4105-9ee3-1a4ac42f94f2",
@@ -1859,7 +1859,7 @@
       "uuid": "7baf28bb-81e1-436d-830c-bcd2da696c4f",
       "actualname": "rAnble_",
       "crownlevel": 17,
-      "trophies": 10575,
+      "trophies": 10650,
       "rank": "PLAYER"
     },
     {
@@ -2024,6 +2024,20 @@
       "rank": "CHAMP"
     },
     {
+      "uuid": "3f1561ed-1e33-4269-96e6-770efe13c150",
+      "actualname": "SlushieVRC",
+      "crownlevel": 14,
+      "trophies": 8396,
+      "rank": "GRAND_CHAMP_ROYALE"
+    },
+    {
+      "uuid": "1ab59c90-ef49-4e27-8e20-513cb52a64e2",
+      "actualname": "DJ_PBnJ",
+      "crownlevel": 14,
+      "trophies": 8370,
+      "rank": "GRAND_CHAMP"
+    },
+    {
       "uuid": "874b2f7a-adca-4b15-8c35-18d0f895e56c",
       "actualname": "catcrit",
       "crownlevel": 14,
@@ -2038,24 +2052,10 @@
       "rank": "PLAYER"
     },
     {
-      "uuid": "3f1561ed-1e33-4269-96e6-770efe13c150",
-      "actualname": "SlushieVRC",
-      "crownlevel": 14,
-      "trophies": 8076,
-      "rank": "GRAND_CHAMP_ROYALE"
-    },
-    {
       "uuid": "f55697fe-45d3-4634-a77a-ddf59fc16ced",
       "actualname": "MrDannyYT",
       "crownlevel": 14,
       "trophies": 8012,
-      "rank": "GRAND_CHAMP"
-    },
-    {
-      "uuid": "1ab59c90-ef49-4e27-8e20-513cb52a64e2",
-      "actualname": "DJ_PBnJ",
-      "crownlevel": 13,
-      "trophies": 7960,
       "rank": "GRAND_CHAMP"
     },
     {
@@ -2969,6 +2969,13 @@
       "rank": "CHAMP"
     },
     {
+      "uuid": "94eaacd6-22c1-46bf-8b41-1731a404031b",
+      "actualname": "cchrome",
+      "crownlevel": 1,
+      "trophies": 885,
+      "rank": "PLAYER"
+    },
+    {
       "uuid": "2cbf75dd-4ee8-4a18-9b75-6f5215974b30",
       "actualname": "ElFrosti_",
       "crownlevel": 1,
@@ -3088,11 +3095,25 @@
       "rank": "PLAYER"
     },
     {
+      "uuid": "8964fee5-5617-4b7d-b397-c8d3cc75bab5",
+      "actualname": "n98",
+      "crownlevel": 0,
+      "trophies": 440,
+      "rank": "PLAYER"
+    },
+    {
       "uuid": "a8be2f0f-0ead-4019-8404-25462545f9fc",
       "actualname": "1MCslender",
       "crownlevel": 0,
       "trophies": 430,
       "rank": "PLAYER"
+    },
+    {
+      "uuid": "cdfff2e9-5cc7-4671-82ef-548d33c464e4",
+      "actualname": "rod3r",
+      "crownlevel": 0,
+      "trophies": 429,
+      "rank": "CHAMP"
     },
     {
       "uuid": "dee56d8d-d279-4d64-9b06-1818cfcc34e7",
@@ -3120,6 +3141,13 @@
       "actualname": "Jhon_wolf",
       "crownlevel": 0,
       "trophies": 310,
+      "rank": "PLAYER"
+    },
+    {
+      "uuid": "437960c5-7310-4154-9760-c9082c27c9f7",
+      "actualname": "_Sangri",
+      "crownlevel": 0,
+      "trophies": 302,
       "rank": "PLAYER"
     },
     {
@@ -3214,6 +3242,13 @@
       "rank": "PLAYER"
     },
     {
+      "uuid": "417a5185-8899-4daa-ac37-dad1338e7451",
+      "actualname": "jon8",
+      "crownlevel": 0,
+      "trophies": 166,
+      "rank": "PLAYER"
+    },
+    {
       "uuid": "c11308b0-7542-4621-bfaf-7e5af4092d28",
       "actualname": "oToadd",
       "crownlevel": 0,
@@ -3291,13 +3326,6 @@
       "rank": "PLAYER"
     },
     {
-      "uuid": "417a5185-8899-4daa-ac37-dad1338e7451",
-      "actualname": "jon8",
-      "crownlevel": 0,
-      "trophies": 90,
-      "rank": "PLAYER"
-    },
-    {
       "uuid": "80961c9b-4357-4eb3-b0ff-39a47a6017da",
       "actualname": "Evan5896",
       "crownlevel": 0,
@@ -3307,6 +3335,13 @@
     {
       "uuid": "363de788-0985-4259-bd7e-78eb15348aa0",
       "actualname": "wtrmlns",
+      "crownlevel": 0,
+      "trophies": 60,
+      "rank": "PLAYER"
+    },
+    {
+      "uuid": "a81322bf-180a-487a-80f4-2df5097e956d",
+      "actualname": "PvPqnda",
       "crownlevel": 0,
       "trophies": 60,
       "rank": "PLAYER"
@@ -3419,6 +3454,20 @@
     {
       "uuid": "96a19c75-ccc0-4be8-807b-faaa03b0671b",
       "actualname": "OttersYaY",
+      "crownlevel": 0,
+      "trophies": 10,
+      "rank": "PLAYER"
+    },
+    {
+      "uuid": "ae5095fb-7b04-4aa5-b446-f77c44fa747b",
+      "actualname": "Shae",
+      "crownlevel": 0,
+      "trophies": 10,
+      "rank": "PLAYER"
+    },
+    {
+      "uuid": "13c04050-47a5-4437-8671-c713674795cc",
+      "actualname": "uvns",
       "crownlevel": 0,
       "trophies": 10,
       "rank": "PLAYER"

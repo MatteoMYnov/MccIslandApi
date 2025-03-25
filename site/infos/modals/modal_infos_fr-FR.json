@@ -105,7 +105,7 @@
             {"URL": "../img/capes/dummy/menace-cape.png","Alt": "Menace Cape"},
             {"URL": "../img/capes/dummy/menace-elytra.png","Alt": "Menace Elytra"}
         ],
-        "description": "???"
+        "description": "Cette cape a été attribuée aux joueurs ayant regardé un stream Minecraft sur TikTok avec les drops activés pendant au moins 3 minutes. Après cela, un code leur était fourni, qu'ils devaient ensuite entrer sur le site officiel de Minecraft pour l'obtenir. La Menace Cape a connu trois versions différentes : la première, sortie le 19 mars 2025, a été suivie d'une seconde version le 21 mars 2025, corrigeant un problème de centrage du portail présent sur le dos et ajustant un détail sur les élytres. Enfin, une dernière mise à jour le 22 mars 2025 a supprimé un seul pixel en bas des élytres qui était en trop."
     },
     "home": {
         "name": "Home Cape",
@@ -113,6 +113,15 @@
         "images": [
             {"URL": "../img/capes/dummy/home-cape.png","Alt": "Home Cape"},
             {"URL": "../img/capes/dummy/home-elytra.png","Alt": "Home Elytra"}
+        ],
+        "description": "Cette cape a été attribuée aux joueurs ayant regardé un stream Minecraft sur Twitch avec les drops activés pendant au moins 5 minutes. Après cela, un code leur était fourni, qu'ils devaient ensuite entrer sur le site officiel de Minecraft pour l'obtenir. La Home Cape a connu trois versions différentes : la première, sortie le 19 mars 2025, a été suivie d'une seconde version le 21 mars 2025, corrigeant un problème de centrage du portail présent sur le dos et ajustant un détail sur les élytres. Enfin, une dernière mise à jour le 22 mars 2025 a supprimé un seul pixel en bas des élytres qui était en trop."
+    },
+    "yearn": {
+        "name": "Yearn Cape",
+        "date": "Obtention : ??? - ???",
+        "images": [
+            {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"},
+            {"URL": "../img/capes/dummy/yearn-elytra.png","Alt": "Yearn Elytra"}
         ],
         "description": "???"
     },

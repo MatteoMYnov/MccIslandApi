@@ -105,7 +105,7 @@
             {"URL": "../img/capes/dummy/menace-cape.png","Alt": "Menace Cape"},
             {"URL": "../img/capes/dummy/menace-elytra.png","Alt": "Menace Elytra"}
         ],
-        "description": "???"
+        "description": "This cape was granted to players who watched a Minecraft stream on TikTok with drops enabled for at least 3 minutes. After that, they received a code that they had to enter on the official Minecraft website to claim it. The Menace Cape had three different versions: the first was released on March 19, 2025, followed by a second version on March 21, 2025, which fixed a centering issue with the portal on the back and adjusted a detail on the elytra. Finally, a last update on March 22, 2025, removed a single extra pixel at the bottom of the elytra."
     },
     "home": {
         "name": "Home Cape",
@@ -113,6 +113,15 @@
         "images": [
             {"URL": "../img/capes/dummy/home-cape.png","Alt": "Home Cape"},
             {"URL": "../img/capes/dummy/home-elytra.png","Alt": "Home Elytra"}
+        ],
+        "description": "This cape was granted to players who watched a Minecraft stream on Twitch with drops enabled for at least 5 minutes. After that, they received a code that they had to enter on the official Minecraft website to claim it. The Menace Cape had three different versions: the first was released on March 19, 2025, followed by a second version on March 21, 2025, which fixed a centering issue with the portal on the back and adjusted a detail on the elytra. Finally, a last update on March 22, 2025, removed a single extra pixel at the bottom of the elytra."
+    },
+    "yearn": {
+        "name": "Yearn Cape",
+        "date": "Obtained : ??? - ???",
+        "images": [
+            {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"},
+            {"URL": "../img/capes/dummy/yearn-elytra.png","Alt": "Yearn Elytra"}
         ],
         "description": "???"
     },

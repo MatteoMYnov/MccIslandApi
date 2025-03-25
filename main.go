@@ -319,7 +319,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		firstBadge = playerBadgesJSON[0]
 	}
 
-	stylesFile := "../site/infos/styles.json"
+	stylesFile := "./site/infos/styles.json"
 	var stylesData struct {
 		Players []struct {
 			UUID   string `json:"uuid"`
@@ -801,7 +801,7 @@ func main() {
 
 	http.HandleFunc("/dbdl", downloadFileHandler)
 
-	if err := http.ListenAndServe(":1646", nil); err != nil {
+	if err := http.ListenAndServe(":1648", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
