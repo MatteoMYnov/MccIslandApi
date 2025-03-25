@@ -272,6 +272,8 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
+	currentDBVersion := 1
+
 	parts := strings.Split(r.URL.Path, "/")
 	if len(parts) < 2 {
 		http.NotFound(w, r)
@@ -294,7 +296,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	IGN := r.FormValue("q")
 	if IGN == "" {
-		IGN = minecraft.GetRandomName()
+		IGN = minecraft.GetValidPlayerOrRandom("./site/infos/z_db_classement.json", currentDBVersion)
 	}
 	if len(IGN) == 36 {
 		IGN = minecraft.GetNameFast(IGN)
@@ -317,7 +319,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		firstBadge = playerBadgesJSON[0]
 	}
 
-	stylesFile := "./site/infos/styles.json"
+	stylesFile := "../site/infos/styles.json"
 	var stylesData struct {
 		Players []struct {
 			UUID   string `json:"uuid"`

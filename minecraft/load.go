@@ -11,8 +11,43 @@ import (
 	"time"
 )
 
+type Leaderboard struct {
+	Classement []Player `json:"classement"`
+}
+
+type Player struct {
+	Name      string `json:"actualname"`
+	DBVersion int    `json:"db_version"`
+}
+
 func Contains(sub, str string) bool {
 	return strings.Contains(str, sub)
+}
+
+func GetValidPlayerOrRandom(filePath string, currentVersion int) string {
+	var leaderboard Leaderboard
+
+	file, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		log.Println("Erreur de lecture du fichier de classement:", err)
+		return GetRandomName()
+	}
+
+	err = json.Unmarshal(file, &leaderboard)
+	if err != nil {
+		log.Println("Erreur de décodage JSON du classement:", err)
+		return GetRandomName()
+	}
+
+	// Vérifie le premier joueur non à jour
+	for _, player := range leaderboard.Classement {
+		if player.DBVersion != currentVersion {
+			return player.Name
+		}
+	}
+
+	// Si tous les joueurs sont à jour, retourne un nom aléatoire
+	return GetRandomName()
 }
 
 func GetRandomName() string {
