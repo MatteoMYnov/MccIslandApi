@@ -386,6 +386,11 @@ body::before {
     height: auto;
     image-rendering: pixelated;
     margin-right: 2vh;
+    content: url("../img/utilities/refresh.png");
+}
+
+.refresh:hover {
+    content: url("../img/utilities/refresh-hover.png");
 }
 
 main {

@@ -1135,6 +1135,13 @@
             }
             
             const modalData = {{ .ModalData }};
+
+            const preloadImages = ["../img/utilities/i-hover.png", "../img/utilities/refresh-hover.png"];
+
+            preloadImages.forEach((src) => {
+                const img = new Image();
+                img.src = src;
+            });
         </script>
     </body>
 </html>

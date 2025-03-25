@@ -15,7 +15,7 @@
                 <ul>
                     <li class="navbar-actioners">
                         <form action="/{{.Lang}}/menu" method="get" class="input-group">
-                            <img src="/img/utilities/refresh.png" data-tippy-content="Random Player" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
+                            <img src="../img/utilities/refresh.png" data-tippy-content="Random Player<br><br>(Using the random option helps to update the database on its current out-of-date data, thank you!)" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
                             <input type="text" name="q" placeholder="Find Player" class="find-player" id="playerInput" required>
                             <button class="show-button cursor" type="submit">Show</button>
                         </form>
@@ -95,6 +95,8 @@
         <script src="/js/sounds.js"></script>
         <script src="/js/loading.js"></script>
         <script src="/js/modal.js"></script>
+        <script src ="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src ="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
         <script>
             const playerCards = document.querySelectorAll('.player-card');
             playerCards.forEach(card => {
@@ -231,6 +233,22 @@
                 window.location.href = "/{{.Lang}}/menu";
                 loading();
             }
+            
+            tippy("[data-tippy-content]", {
+                duration: 200,
+                allowHTML: true,
+                onShow(instance) {
+                    const theme = instance.reference.getAttribute("data-theme") || "default";
+                    instance.popper.querySelector('.tippy-box').setAttribute("data-theme", theme);
+                }
+            });
+
+            const preloadImages = ["../img/utilities/refresh-hover.png"];
+
+            preloadImages.forEach((src) => {
+                const img = new Image();
+                img.src = src;
+            });
         </script>   
     </body>
 </html>

@@ -16,7 +16,7 @@ type Leaderboard struct {
 }
 
 type Player struct {
-	Name      string `json:"actualname"`
+	UUID      string `json:"uuid"`
 	DBVersion int    `json:"db_version"`
 }
 
@@ -42,7 +42,7 @@ func GetValidPlayerOrRandom(filePath string, currentVersion int) string {
 	// Vérifie le premier joueur non à jour
 	for _, player := range leaderboard.Classement {
 		if player.DBVersion != currentVersion {
-			return player.Name
+			return player.UUID
 		}
 	}
 

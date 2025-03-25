@@ -572,7 +572,12 @@ main {
     height: auto;
     image-rendering: pixelated;
     position: absolute;
-    right: 5%;;
+    right: 5%;
+    content: url("../img/utilities/i.png");
+}
+
+.infos:hover {
+    content: url("../img/utilities/i-hover.png");
 }
 
 .mccstats-card .stats-header h2 {
@@ -1105,6 +1110,11 @@ body.modal-open {
     height: auto;
     image-rendering: pixelated;
     margin-right: 2vh;
+    content: url("../img/utilities/refresh.png");
+}
+
+.refresh:hover {
+    content: url("../img/utilities/refresh-hover.png");
 }
 
 /* PIE */
