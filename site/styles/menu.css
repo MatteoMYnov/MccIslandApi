@@ -182,9 +182,6 @@ main {
         width: 32px !important;
         height: 32px !important;
     }
-    .badge-image {
-        max-width: 3vh !important;
-    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -197,9 +194,6 @@ main {
     }
     .subcath-body2 {
         width: calc(99% - 7px) !important;
-    }
-    .badge-image {
-        max-width: 3vh  !important;
     }
 }
 
