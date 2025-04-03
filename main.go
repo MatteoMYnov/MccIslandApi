@@ -272,7 +272,7 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
-	currentDBVersion := 1
+	currentDBVersion := 2
 
 	parts := strings.Split(r.URL.Path, "/")
 	if len(parts) < 2 {
