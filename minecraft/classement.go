@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-const DB_VERSION = 1 // Définissez ici la version de la base de données
+const DB_VERSION = 2 // Définissez ici la version de la base de données
 
 type PlayerRank struct {
 	UUID       string `json:"uuid"`
