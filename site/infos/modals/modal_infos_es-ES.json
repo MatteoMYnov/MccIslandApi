@@ -386,17 +386,17 @@
         "date": " ",
         "description": "This badge is awarded to all players who own all the common capes in the game.",
         "images": [
-            {"URL": "../img/capes/dummy/mcc-cape.png", "Alt": "MCC 15th Year Cape"},
-            {"URL": "../img/capes/dummy/mojangoffice-cape.png", "Alt": "Mojang Office Cape"},
-            {"URL": "../img/capes/dummy/tiktok-cape.png", "Alt": "Follower's Cape"},
-            {"URL": "../img/capes/dummy/twitch-cape.png", "Alt": "Purple Heart Cape"},
-            {"URL": "../img/capes/dummy/cherry-cape.png", "Alt": "Cherry Blossom Cape"},
-            {"URL": "../img/capes/dummy/vanilla_cape-cape.png", "Alt": "Vanilla Cape"},
-            {"URL": "../img/capes/dummy/15A-cape.png", "Alt": "15th Anniversary Cape"},
-            {"URL": "../img/capes/dummy/migrator_cape-cape.png", "Alt": "Migrator Cape"},
-            {"URL": "../img/capes/dummy/home-cape.png","Alt": "Home Cape"},
+            {"URL": "../img/capes/dummy/mcc-cape.png","Alt": "MCC 15th Year Cape"},
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"},
+            {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"},
             {"URL": "../img/capes/dummy/menace-cape.png","Alt": "Menace Cape"},
-            {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"}
+            {"URL": "../img/capes/dummy/home-cape.png","Alt": "Home Cape"},
+            {"URL": "../img/capes/dummy/tiktok-cape.png","Alt": "Follower's Cape"},
+            {"URL": "../img/capes/dummy/twitch-cape.png","Alt": "Purple Heart Cape"},
+            {"URL": "../img/capes/dummy/cherry-cape.png","Alt": "Cherry Blossom Cape"},
+            {"URL": "../img/capes/dummy/vanilla_cape-cape.png","Alt": "Vanilla Cape"},
+            {"URL": "../img/capes/dummy/15A-cape.png","Alt": "15th Anniversary Cape"},
+            {"URL": "../img/capes/dummy/migrator_cape-cape.png","Alt": "Migrator Cape"}
         ]
     },
     "all-minecons": {
