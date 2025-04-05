@@ -118,12 +118,12 @@
     },
     "yearn": {
         "name": "Yearn Cape",
-        "date": "Obtained : ??? - ???",
+        "date": "Obtained : April 3, 2025 - April 7, 2025",
         "images": [
             {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"},
             {"URL": "../img/capes/dummy/yearn-elytra.png","Alt": "Yearn Elytra"}
         ],
-        "description": "???"
+        "description": "This cape was awarded to players who participated in the \"A Minecraft Movie Live Event\" server and completed six challenges, the event itself started on March 25, 2027 making the cape accessible from April 4, 2025 until the end of the event on April 7, 2025. However, even though it was still visually locked, the sixth and final challenge could already be completed on April 2, 2025. After completing all six challenges on the server, players could immediately access the cape in both versions of the game."
     },
     "tiktok": {
         "name": "Follower's Cape",
@@ -377,7 +377,8 @@
         "description": "This badge is given to all players who have all the event capes in-game.",
         "images": [
             {"URL": "../img/capes/dummy/mcc-cape.png","Alt": "MCC 15th Year Cape"},
-            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"}
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"},
+            {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"}
         ]
     },
     "all-commons": {
@@ -392,7 +393,10 @@
             {"URL": "../img/capes/dummy/cherry-cape.png", "Alt": "Cherry Blossom Cape"},
             {"URL": "../img/capes/dummy/vanilla_cape-cape.png", "Alt": "Vanilla Cape"},
             {"URL": "../img/capes/dummy/15A-cape.png", "Alt": "15th Anniversary Cape"},
-            {"URL": "../img/capes/dummy/migrator_cape-cape.png", "Alt": "Migrator Cape"}
+            {"URL": "../img/capes/dummy/migrator_cape-cape.png", "Alt": "Migrator Cape"},
+            {"URL": "../img/capes/dummy/home-cape.png","Alt": "Home Cape"},
+            {"URL": "../img/capes/dummy/menace-cape.png","Alt": "Menace Cape"},
+            {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"}
         ]
     },
     "all-minecons": {

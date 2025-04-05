@@ -391,7 +391,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	actualname := IGN
-	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname, firstBadge)
+	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname, firstBadge, currentDBVersion)
 	playerRankPage := ((playerRank - 1) / 50) + 1 //f(x)=⌊(x−1)/50⌋+1
 
 	badgeInfos := []BadgeInfo{}
