@@ -576,6 +576,42 @@ main {
     content: url("../img/utilities/i.png");
 }
 
+.namemc {
+    width: 32px;
+    height: auto;
+    image-rendering: pixelated;
+    position: absolute;
+    right: 5%;
+    content: url("../img/utilities/namemc.png");
+    border-radius: 5px;
+}
+
+.lang-dropdown {
+    background-color: #491F1F;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: var(--abs-white);
+    border: none;
+    border-radius: 20px;
+    transition: filter 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    text-align: center;
+}
+.lang-dropdown option {
+    color: var(--abs-white);
+}
+.language-selector {
+    position: absolute;
+    left: 0px;
+}
+
+.flag {
+}
+
 .infos:hover {
     content: url("../img/utilities/i-hover.png");
 }

@@ -16,6 +16,14 @@
         <header class="navbar" style="background-color: {{if .BackgroundUUID}}{{.BackgroundNavbar}}; border-bottom: 2px solid {{.BackgroundLight}}{{else}}#6E2F2F; border-bottom: 2px solid #B7573A{{end}};">
             <nav>
                 <ul>
+                    <li class="language-selector">
+                        <select onchange="changeLanguage(this)" class="lang-dropdown" style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">
+                            <option value="fr-FR" {{if eq .Lang "fr-FR"}}selected{{end}}>🇫🇷</option>
+                            <option value="en-US" {{if eq .Lang "en-US"}}selected{{end}}>🇺🇸</option>
+                            <option value="de-DE" {{if eq .Lang "de-DE"}}selected{{end}}>🇩🇪</option>
+                            <option value="es-ES" {{if eq .Lang "es-ES"}}selected{{end}}>🇪🇸</option>
+                        </select>
+                    </li>                    
                     <li class="navbar-actioners">
                         <form action="/{{.Lang}}/menu" method="get" class="input-group">
                             <img src="../img/utilities/refresh.png" data-tippy-content="Random Player<br><br>(Using the random option helps to update the database on its current out-of-date data, thank you!)" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
@@ -52,6 +60,9 @@
                         </p>                            
                         <img src="../img/utilities/minecrafticon.png" alt="Minecraft Icon" class="minecraft-icon" draggable="false">
                         <h2>Minecraft Capes</h2>
+                        <a href="https://namemc.com/profile/{{.Name}}" target="_blank" class="namemc no-select cursor" data-tippy-content="Namemc Profile">
+                            <img src="../img/utilities/namemc.png" draggable="false">
+                        </a>
                     </div>  
                     <div class="stats-body">
                         {{if .ImageURLs}}    
@@ -850,6 +861,23 @@
         <script src ="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script>
+            function changeLanguage(select) {
+                const newLang = select.value;
+
+                // Enregistre la langue dans un cookie
+                document.cookie = "preferredLang=" + newLang + "; path=/; max-age=" + 60 * 60 * 24 * 365; // Expires dans un an
+
+                const currentUrl = new URL(window.location.href);
+                const segments = currentUrl.pathname.split('/');
+
+                if (segments.length > 1) {
+                    segments[1] = newLang;
+                }
+
+                const newUrl = segments.join('/') + currentUrl.search;
+                window.location.href = newUrl;
+            }
+
             function searchPlayer(element) {
                 var playerName = element.getAttribute('data-playername'); // Récupère le nom du joueur
                 var lang = "{{.Lang}}"; // Récupère la langue actuelle
