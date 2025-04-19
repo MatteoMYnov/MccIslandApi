@@ -80,19 +80,21 @@
                     </div>
                 </div>  
                 <!-- Badge Card -->
-                {{if .BadgeURLs}}
-                <div class="badge-card" id="badgeCard">
-                    <div class="stats-header">
-                        <img src="../img/utilities/badgesicon.png" alt="Badge Icon" class="badge-icon" draggable="false">
-                        <h2>{{index .Translations .Lang "badges"}}</h2>
+                <div class="right-side">
+                    {{if .BadgeURLs}}
+                    <div class="badge-card" id="badgeCard">
+                        <div class="stats-header">
+                            <img src="../img/utilities/badgesicon.png" alt="Badge Icon" class="badge-icon" draggable="false">
+                            <h2>{{index .Translations .Lang "badges"}}</h2>
+                        </div>
+                        <div class="stats-body">
+                            {{range .BadgeURLs}}
+                                <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image cursor no-select {{.Class}}" data-id="using-modal {{.BadgeName}}" draggable="false">
+                            {{end}}
+                        </div>
                     </div>
-                    <div class="stats-body">
-                        {{range .BadgeURLs}}
-                            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image cursor no-select {{.Class}}" data-id="using-modal {{.BadgeName}}" draggable="false">
-                        {{end}}
-                    </div>
+                    {{end}}
                 </div>
-                {{end}}
                 <div class="skin-3d no-select" id="PlayerSkin">
                     <div class="stats-header">
                         <img src="https://nmsr.nickac.dev/fullbody/{{.Name}}" style="width: 90%; height: auto;" draggable="false">

@@ -977,9 +977,9 @@
       "capes": 11,
       "score": 17,
       "actualname": "Nuggets",
-      "badge": "all-events",
+      "badge": "",
       "capelist": [{"name": "2016"},{"name": "2015"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "vanilla_cape"},{"name": "cherry"},{"name": "mcexp"},{"name": "mojangoffice"}],
-      "db_version": 1
+      "db_version": 2
     },
     {
       "uuid": "6aaa453e-c3eb-4ffb-ae73-5631da9c1010",
