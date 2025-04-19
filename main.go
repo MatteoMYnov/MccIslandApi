@@ -481,6 +481,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Obtenez les informations du MCC pour le joueur
 	mccInfos := mcc.GetInfos(playerUUID)
+	// mccInfos := mcc.Emptyinfos()
 
 	// Définir la valeur de MccRank
 	MccRank := "PLAYER"

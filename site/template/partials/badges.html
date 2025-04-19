@@ -1,0 +1,13 @@
+{{if .Badges}}
+<div class="badge-card" id="badgeCard">
+    <div class="stats-header">
+        <img src="../img/utilities/badgesicon.png" alt="Badge Icon" class="badge-icon" draggable="false">
+        <h2>Badges</h2>
+    </div>
+    <div class="stats-body">
+        {{range .Badges}}
+            <img src="{{.URL}}" data-name="{{.BadgeName}}" alt="Badge Image" class="badge-image cursor no-select {{.Class}}" data-id="using-modal {{.BadgeName}}" draggable="false">
+        {{end}}
+    </div>
+</div>
+{{end}}
