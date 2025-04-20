@@ -26,7 +26,7 @@
                     </li>                    
                     <li class="navbar-actioners">
                         <form action="/{{.Lang}}/menu" method="get" class="input-group">
-                            <img loading='lazy' src="../img/utilities/refresh.png" data-tippy-content="Random Player<br><br>(Using the random option helps to update the database on its current out-of-date data, thank you!)" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
+                            <img src="../img/utilities/refresh.png" data-tippy-content="Random Player<br><br>(Using the random option helps to update the database on its current out-of-date data, thank you!)" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
                             <input type="text" name="q" placeholder="Find Player" class="find-player" id="playerInput" required style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">
                             <button class="show-button cursor" type="submit" style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">Show</button>
                         </form>
@@ -105,7 +105,7 @@
                     <div class="stats-header">
                         <img loading='lazy' src="../img/utilities/mccicon.png" alt="MCC Icon" class="mcc-icon" draggable="false">
                         <h2>MCC Island Stats</h2>
-                        <img loading='lazy' src="../img/utilities/i.png" data-tippy-content="Api Informations" class="infos no-select cursor" data-id="using-modal" data-name="mcc-infos" draggable="false">
+                        <img src="../img/utilities/i.png" data-tippy-content="Api Informations" class="infos no-select cursor" data-id="using-modal" data-name="mcc-infos" draggable="false">
                     </div>
                     <div class="stats-body">
                         <div class="mcc-case mcc-case1">
