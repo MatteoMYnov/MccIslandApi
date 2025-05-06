@@ -71,6 +71,15 @@
         ],
         "description": "This cape has been awarded to Mojang Studios employees since the logo redesign by Johan Aronson."
     },
+    "common": {
+        "name": "Common Cape",
+        "date": "Obtention : 6 mai 2025 - 5 mai 2026",
+        "images": [
+            {"URL": "../img/capes/dummy/common-cape.png","Alt": "Common Cape"},
+            {"URL": "../img/capes/dummy/common-elytra.png","Alt": "Common Elytra"}
+        ],
+        "description": "This cape is granted to all players who log into the Bedrock platform between May 6, 2025, and May 5, 2026. The reason for this distribution is currently unknown, but it is likely related to Microsoft's 50th anniversary."
+    },
     "migrator_cape": {
         "name": "Migrator Cape",
         "date": "Obtained: July 9, 2021",
@@ -396,7 +405,8 @@
             {"URL": "../img/capes/dummy/cherry-cape.png","Alt": "Cherry Blossom Cape"},
             {"URL": "../img/capes/dummy/vanilla_cape-cape.png","Alt": "Vanilla Cape"},
             {"URL": "../img/capes/dummy/15A-cape.png","Alt": "15th Anniversary Cape"},
-            {"URL": "../img/capes/dummy/migrator_cape-cape.png","Alt": "Migrator Cape"}
+            {"URL": "../img/capes/dummy/migrator_cape-cape.png","Alt": "Migrator Cape"},
+            {"URL": "../img/capes/dummy/common_cape-cape.png","Alt": "Common Cape"}
         ]
     },
     "all-minecons": {

@@ -71,6 +71,15 @@
         ],
         "description": "Cette cape a été attribuée aux employés de Mojang Studios depuis la refonte du logo réalisée par Johan Aronson."
     },
+    "common": {
+        "name": "Common Cape",
+        "date": "Obtention : 6 mai 2025 - 5 mai 2026",
+        "images": [
+            {"URL": "../img/capes/dummy/common-cape.png","Alt": "Common Cape"},
+            {"URL": "../img/capes/dummy/common-elytra.png","Alt": "Common Elytra"}
+        ],
+        "description": "Cette cape est attribuée à tous les joueurs se connectant à la plateforme Bedrock entre le 6 mai 2025 et le 5 mai 2026. La raison de cette distribution reste inconnue à ce jour, mais il est probable qu'elle soit liée aux 50 ans de Microsoft."
+    },
     "migrator_cape": {
         "name": "Migrator Cape",
         "date": "Obtention : 9 juillet 2021",
@@ -396,8 +405,10 @@
             {"URL": "../img/capes/dummy/cherry-cape.png","Alt": "Cherry Blossom Cape"},
             {"URL": "../img/capes/dummy/vanilla_cape-cape.png","Alt": "Vanilla Cape"},
             {"URL": "../img/capes/dummy/15A-cape.png","Alt": "15th Anniversary Cape"},
-            {"URL": "../img/capes/dummy/migrator_cape-cape.png","Alt": "Migrator Cape"}
+            {"URL": "../img/capes/dummy/migrator_cape-cape.png","Alt": "Migrator Cape"},
+            {"URL": "../img/capes/dummy/common_cape-cape.png","Alt": "Common Cape"}
         ]
+
     },
     "all-minecons": {
         "name": "All Minecons Badge",

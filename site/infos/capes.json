@@ -36,6 +36,7 @@
     {"name": "cherry", "type": "common", "title": "Cherry Blossom", "score": 1, "uuid": []},
     {"name": "vanilla_cape", "type": "common", "title": "Vanilla", "score": 1, "uuid": []},
     {"name": "15A", "type": "common", "title": "15th Anniversary", "score": 1, "uuid": []},
-    {"name": "migrator_cape", "type": "common", "title": "Migrator", "score": 1, "uuid": []}
+    {"name": "migrator_cape", "type": "common", "title": "Migrator", "score": 1, "uuid": []},
+    {"name": "common", "type": "common", "title": "Common", "score": 1, "uuid": []}
   ]
 }
