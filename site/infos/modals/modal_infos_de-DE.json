@@ -71,6 +71,24 @@
         ],
         "description": "This cape has been awarded to Mojang Studios employees since the logo redesign by Johan Aronson."
     },
+    "pan": {
+        "name": "Pan Cape",
+        "date": "Obtained: May 8, 2025 - present",
+        "images": [
+            {"URL": "../img/capes/dummy/pan-cape.png","Alt": "Pan Cape"},
+            {"URL": "../img/capes/dummy/pan-elytra.png","Alt": "Pan Elytra"}
+        ],
+        "description": "This cape was granted to all players who own the game. Initially available only on the Bedrock Edition, it was later distributed to all Java players on May 8, 2025. Originally, it was intended for players who participated in the Bedrock Edition Preview testing phases, but due to a bug, the developers decided to give it to all players. It is also known to have an alternate version, which was created to replace the Mojang Studios cape that some players had managed to assign to their accounts by manipulating the Mojang API."
+    },
+    "founders": {
+        "name": "Founder's Cape",
+        "date": "Obtained: May 8, 2025",
+        "images": [
+            {"URL": "../img/capes/dummy/founders-cape.png","Alt": "Founder's Cape"},
+            {"URL": "../img/capes/dummy/founders-elytra.png","Alt": "Founder's Elytra"}
+        ],
+        "description": "This cape was given to all players who owned the \"Founder's\" skin pack on Bedrock Edition. The pack was available in the Marketplace from September 28 to October 28, 2019, in celebration of the Minecraft Live 2019 announcement. It only included Steve and Alex skins wearing the cape. Later, all players who obtained the pack through the Marketplace received the \"Founders Cape.\" On June 23, 2020, due to a bug, players were once again able to claim the cape. To fix the issue, Mojang removed the cape from all accounts, regardless of whether it had been obtained legitimately or not. On October 22, 2020, the bug was resolved, and the cape was randomly reassigned to players who were supposed to have received it legitimately. Today, the situation remains controversial, as around 33% of eligible players successfully recovered the cape, while the remaining 67% still do not have access to it and have no way to claim it. Mojang support consistently rejects all recovery requests, whether justified or not."
+    },
     "common": {
         "name": "Common Cape",
         "date": "Obtention : 6 mai 2025 - 5 mai 2026",
@@ -395,6 +413,7 @@
         "date": " ",
         "description": "This badge is awarded to all players who own all the common capes in the game.",
         "images": [
+            {"URL": "../img/capes/dummy/founders-cape.png","Alt": "Founder's Cape"},
             {"URL": "../img/capes/dummy/mcc-cape.png","Alt": "MCC 15th Year Cape"},
             {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"},
             {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"},
@@ -406,7 +425,19 @@
             {"URL": "../img/capes/dummy/vanilla_cape-cape.png","Alt": "Vanilla Cape"},
             {"URL": "../img/capes/dummy/15A-cape.png","Alt": "15th Anniversary Cape"},
             {"URL": "../img/capes/dummy/migrator_cape-cape.png","Alt": "Migrator Cape"},
-            {"URL": "../img/capes/dummy/common_cape-cape.png","Alt": "Common Cape"}
+            {"URL": "../img/capes/dummy/common-cape.png","Alt": "Common Cape"},
+            {"URL": "../img/capes/dummy/pan-cape.png","Alt": "Pan Cape"}
+        ]
+    },
+    "all-creeper": {
+        "name": "All Creeper Badge",
+        "date": " ",
+        "description": "This badge is awarded to all players with all the Creeper capes in the game.",
+        "images": [
+            {"URL": "../img/capes/dummy/2011-cape.png","Alt": "Minecon 2011 Cape"},
+            {"URL": "../img/capes/dummy/founders-cape.png","Alt": "Founder's Cape"},
+            {"URL": "../img/capes/dummy/tiktok-cape.png","Alt": "Follower's Cape"},
+            {"URL": "../img/capes/dummy/15A-cape.png","Alt": "15th Anniversary Cape"}
         ]
     },
     "all-minecons": {
