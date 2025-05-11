@@ -322,7 +322,7 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
-	currentDBVersion := 2
+	currentDBVersion := 3
 
 	parts := strings.Split(r.URL.Path, "/")
 	if len(parts) < 2 {
@@ -852,7 +852,7 @@ func main() {
 
 	http.HandleFunc("/dbdl", downloadFileHandler)
 
-	if err := http.ListenAndServe(":1657", nil); err != nil {
+	if err := http.ListenAndServe(":1658", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }
