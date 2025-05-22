@@ -173,7 +173,57 @@ type FriendInfo struct {
 // Structure principale du fichier JSON
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/en-US/menu", http.StatusFound)
+	path := r.URL.Path
+	preferredLang := getPreferredLanguageFromCookie(r)
+	if preferredLang == "" {
+		preferredLang = "en-US"
+	}
+
+	// Cas 1 : "/none/menu" → redirige vers la langue stockée
+	if strings.HasPrefix(path, "/none/menu") {
+		target := strings.Replace(path, "/none", "/"+preferredLang, 1)
+		if r.URL.RawQuery != "" {
+			target += "?" + r.URL.RawQuery
+		}
+		http.Redirect(w, r, target, http.StatusFound)
+		return
+	}
+
+	// Cas 2 : "/" → redirige vers /<lang>/menu
+	if path == "/" {
+		target := "/" + preferredLang + "/menu"
+		if r.URL.RawQuery != "" {
+			target += "?" + r.URL.RawQuery
+		}
+		http.Redirect(w, r, target, http.StatusFound)
+		return
+	}
+
+	// Sinon, pour les chemins non valides → vers /<lang>/menu
+	validPrefixes := []string{"/fr-FR/", "/en-US/", "/es-ES/", "/de-DE/"}
+	for _, prefix := range validPrefixes {
+		if strings.HasPrefix(path, prefix) {
+			// Chemin valide, rien à rediriger
+			return
+		}
+	}
+
+	// Si le chemin est invalide → redirige proprement
+	target := "/" + preferredLang + "/menu"
+	if r.URL.RawQuery != "" {
+		target += "?" + r.URL.RawQuery
+	}
+	http.Redirect(w, r, target, http.StatusFound)
+}
+
+// Fonction pour récupérer la langue préférée depuis les cookies
+func getPreferredLanguageFromCookie(r *http.Request) string {
+	cookie, err := r.Cookie("preferredLang")
+	if err != nil {
+		// Si le cookie n'existe pas, on retourne une chaîne vide
+		return ""
+	}
+	return cookie.Value
 }
 
 func downloadFileHandler(w http.ResponseWriter, r *http.Request) {
@@ -272,7 +322,7 @@ func convertToFriendInfo(friends []mcc.Friend) []FriendInfo {
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
-	currentDBVersion := 1
+	currentDBVersion := 3
 
 	parts := strings.Split(r.URL.Path, "/")
 	if len(parts) < 2 {
@@ -391,7 +441,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	actualname := IGN
-	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname, firstBadge)
+	playerRank := minecraft.UpdateClassement(playerUUID, capeDetails, actualname, firstBadge, currentDBVersion)
 	playerRankPage := ((playerRank - 1) / 50) + 1 //f(x)=⌊(x−1)/50⌋+1
 
 	badgeInfos := []BadgeInfo{}
@@ -431,6 +481,7 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Obtenez les informations du MCC pour le joueur
 	mccInfos := mcc.GetInfos(playerUUID)
+	// mccInfos := mcc.Emptyinfos()
 
 	// Définir la valeur de MccRank
 	MccRank := "PLAYER"
@@ -801,7 +852,7 @@ func main() {
 
 	http.HandleFunc("/dbdl", downloadFileHandler)
 
-	if err := http.ListenAndServe(":1650", nil); err != nil {
+	if err := http.ListenAndServe(":1658", nil); err != nil {
 		log.Fatalf("Erreur lors du démarrage du serveur: %v", err)
 	}
 }

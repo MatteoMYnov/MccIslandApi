@@ -10,8 +10,6 @@ import (
 	"strings"
 )
 
-const DB_VERSION = 1 // Définissez ici la version de la base de données
-
 type PlayerRank struct {
 	UUID       string `json:"uuid"`
 	Capes      int    `json:"capes"`
@@ -43,7 +41,7 @@ type MccClassement struct {
 func UpdateClassement(uuid string, listCapes []struct {
 	Name    string
 	Removed bool
-}, actualName string, badge string) int {
+}, actualName string, badge string, currentDBVersion int) int {
 	filePath := "./site/infos/z_db_classement.json"
 
 	// Lire le fichier
@@ -115,7 +113,7 @@ func UpdateClassement(uuid string, listCapes []struct {
 			classement.Classement[i].ActualName = actualName
 			classement.Classement[i].Badge = badge
 			classement.Classement[i].CapeList = capeList
-			classement.Classement[i].DBVersion = DB_VERSION
+			classement.Classement[i].DBVersion = currentDBVersion
 			found = true
 			break
 		}
@@ -130,7 +128,7 @@ func UpdateClassement(uuid string, listCapes []struct {
 			ActualName: actualName,
 			Badge:      badge,
 			CapeList:   capeList,
-			DBVersion:  DB_VERSION,
+			DBVersion:  currentDBVersion,
 		})
 	}
 

@@ -71,6 +71,33 @@
         ],
         "description": "This cape has been awarded to Mojang Studios employees since the logo redesign by Johan Aronson."
     },
+    "pan": {
+        "name": "Pan Cape",
+        "date": "Obtained: May 8, 2025 - present",
+        "images": [
+            {"URL": "../img/capes/dummy/pan-cape.png","Alt": "Pan Cape"},
+            {"URL": "../img/capes/dummy/pan-elytra.png","Alt": "Pan Elytra"}
+        ],
+        "description": "This cape was granted to all players who own the game. Initially available only on the Bedrock Edition, it was later distributed to all Java players on May 8, 2025. Originally, it was intended for players who participated in the Bedrock Edition Preview testing phases, but due to a bug, the developers decided to give it to all players. It is also known to have an alternate version, which was created to replace the Mojang Studios cape that some players had managed to assign to their accounts by manipulating the Mojang API."
+    },
+    "founders": {
+        "name": "Founder's Cape",
+        "date": "Obtained: May 8, 2025",
+        "images": [
+            {"URL": "../img/capes/dummy/founders-cape.png","Alt": "Founder's Cape"},
+            {"URL": "../img/capes/dummy/founders-elytra.png","Alt": "Founder's Elytra"}
+        ],
+        "description": "This cape was given to all players who owned the \"Founder's\" skin pack on Bedrock Edition. The pack was available in the Marketplace from September 28 to October 28, 2019, in celebration of the Minecraft Live 2019 announcement. It only included Steve and Alex skins wearing the cape. Later, all players who obtained the pack through the Marketplace received the \"Founders Cape.\" On June 23, 2020, due to a bug, players were once again able to claim the cape. To fix the issue, Mojang removed the cape from all accounts, regardless of whether it had been obtained legitimately or not. On October 22, 2020, the bug was resolved, and the cape was randomly reassigned to players who were supposed to have received it legitimately. Today, the situation remains controversial, as around 33% of eligible players successfully recovered the cape, while the remaining 67% still do not have access to it and have no way to claim it. Mojang support consistently rejects all recovery requests, whether justified or not."
+    },
+    "common": {
+        "name": "Common Cape",
+        "date": "Obtention : 6 mai 2025 - 5 mai 2026",
+        "images": [
+            {"URL": "../img/capes/dummy/common-cape.png","Alt": "Common Cape"},
+            {"URL": "../img/capes/dummy/common-elytra.png","Alt": "Common Elytra"}
+        ],
+        "description": "This cape is granted to all players who log into the Bedrock platform between May 6, 2025, and May 5, 2026. The reason for this distribution is currently unknown, but it is likely related to Microsoft's 50th anniversary."
+    },
     "migrator_cape": {
         "name": "Migrator Cape",
         "date": "Obtained: July 9, 2021",
@@ -118,12 +145,12 @@
     },
     "yearn": {
         "name": "Yearn Cape",
-        "date": "Obtained : ??? - ???",
+        "date": "Obtained : April 3, 2025 - April 7, 2025",
         "images": [
             {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"},
             {"URL": "../img/capes/dummy/yearn-elytra.png","Alt": "Yearn Elytra"}
         ],
-        "description": "???"
+        "description": "This cape was awarded to players who participated in the \"A Minecraft Movie Live Event\" server and completed six challenges, the event itself started on March 25, 2027 making the cape accessible from April 4, 2025 until the end of the event on April 7, 2025. However, even though it was still visually locked, the sixth and final challenge could already be completed on April 2, 2025. After completing all six challenges on the server, players could immediately access the cape in both versions of the game."
     },
     "tiktok": {
         "name": "Follower's Cape",
@@ -386,7 +413,8 @@
         "description": "This badge is given to all players who have all the event capes in-game.",
         "images": [
             {"URL": "../img/capes/dummy/mcc-cape.png","Alt": "MCC 15th Year Cape"},
-            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"}
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"},
+            {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"}
         ]
     },
     "all-commons": {
@@ -394,14 +422,31 @@
         "date": " ",
         "description": "This badge is awarded to all players who own all the common capes in the game.",
         "images": [
-            {"URL": "../img/capes/dummy/mcc-cape.png", "Alt": "MCC 15th Year Cape"},
-            {"URL": "../img/capes/dummy/mojangoffice-cape.png", "Alt": "Mojang Office Cape"},
-            {"URL": "../img/capes/dummy/tiktok-cape.png", "Alt": "Follower's Cape"},
-            {"URL": "../img/capes/dummy/twitch-cape.png", "Alt": "Purple Heart Cape"},
-            {"URL": "../img/capes/dummy/cherry-cape.png", "Alt": "Cherry Blossom Cape"},
-            {"URL": "../img/capes/dummy/vanilla_cape-cape.png", "Alt": "Vanilla Cape"},
-            {"URL": "../img/capes/dummy/15A-cape.png", "Alt": "15th Anniversary Cape"},
-            {"URL": "../img/capes/dummy/migrator_cape-cape.png", "Alt": "Migrator Cape"}
+            {"URL": "../img/capes/dummy/founders-cape.png","Alt": "Founder's Cape"},
+            {"URL": "../img/capes/dummy/mcc-cape.png","Alt": "MCC 15th Year Cape"},
+            {"URL": "../img/capes/dummy/mojangoffice-cape.png","Alt": "Mojang Office Cape"},
+            {"URL": "../img/capes/dummy/yearn-cape.png","Alt": "Yearn Cape"},
+            {"URL": "../img/capes/dummy/menace-cape.png","Alt": "Menace Cape"},
+            {"URL": "../img/capes/dummy/home-cape.png","Alt": "Home Cape"},
+            {"URL": "../img/capes/dummy/tiktok-cape.png","Alt": "Follower's Cape"},
+            {"URL": "../img/capes/dummy/twitch-cape.png","Alt": "Purple Heart Cape"},
+            {"URL": "../img/capes/dummy/cherry-cape.png","Alt": "Cherry Blossom Cape"},
+            {"URL": "../img/capes/dummy/vanilla_cape-cape.png","Alt": "Vanilla Cape"},
+            {"URL": "../img/capes/dummy/15A-cape.png","Alt": "15th Anniversary Cape"},
+            {"URL": "../img/capes/dummy/migrator_cape-cape.png","Alt": "Migrator Cape"},
+            {"URL": "../img/capes/dummy/common-cape.png","Alt": "Common Cape"},
+            {"URL": "../img/capes/dummy/pan-cape.png","Alt": "Pan Cape"}
+        ]
+    },
+    "all-creeper": {
+        "name": "All Creeper Badge",
+        "date": " ",
+        "description": "This badge is awarded to all players with all the Creeper capes in the game.",
+        "images": [
+            {"URL": "../img/capes/dummy/2011-cape.png","Alt": "Minecon 2011 Cape"},
+            {"URL": "../img/capes/dummy/founders-cape.png","Alt": "Founder's Cape"},
+            {"URL": "../img/capes/dummy/tiktok-cape.png","Alt": "Follower's Cape"},
+            {"URL": "../img/capes/dummy/15A-cape.png","Alt": "15th Anniversary Cape"}
         ]
     },
     "all-minecons": {

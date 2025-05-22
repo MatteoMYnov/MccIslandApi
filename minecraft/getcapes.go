@@ -35,52 +35,52 @@ type CapesResponse struct {
 
 // Fonction pour récupérer les noms des capes d'un utilisateur, incluant celles par UUID
 func GetCapeNames(name string) []string {
-	loadURL := fmt.Sprintf("https://capes.me/%s", name)
-	_, err := http.Get(loadURL)
-	if err != nil {
-		fmt.Printf("Erreur lors du chargement du profil : %v\n", err)
-	}
-
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
-	resp, err := http.Get(url)
+
+	// Création de la requête avec User-Agent "Mozilla/5.0"
+	req, _ := http.NewRequest("GET", url, nil)
+	req.Header.Set("User-Agent", "Mozilla/5.0")
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
 	if err != nil {
+		fmt.Printf("Erreur HTTP : %v\n", err)
 		return nil
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != http.StatusOK {
-		return nil
-	}
-
+	// Lire le corps de la réponse
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
+		fmt.Printf("Erreur lecture body : %v\n", err)
 		return nil
 	}
 
+	// Décoder la réponse JSON
 	var response CapesResponse
 	err = json.Unmarshal(body, &response)
 	if err != nil {
-		fmt.Printf("Erreur de décodage JSON : %v\n", err)
+		fmt.Printf("Erreur JSON : %v\nContenu brut : %s\n", err, body)
 		return nil
 	}
 
 	var capesList []string
 
-	// Ajouter les capes récupérées depuis l'API
+	// Ajouter les capes non supprimées de l'API
 	for _, cape := range response.Capes {
 		if !cape.Removed {
 			capesList = append(capesList, cape.Type)
 		}
 	}
 
-	// Charger les capes depuis le fichier JSON
+	// Charger les capes forcées (locale)
 	capeGroups, err := LoadCapesFromFile("./site/infos/capes.json")
 	if err != nil {
-		fmt.Printf("Erreur lors du chargement des capes : %v\n", err)
-		return capesList // Retourner uniquement les capes de l'API si une erreur survient
+		fmt.Printf("Erreur lors du chargement des capes locales : %v\n", err)
+		return capesList
 	}
 
-	// Ajouter les capes associées au joueur par UUID
+	// Ajouter les capes associées à l'utilisateur via UUID
 	normalizedPlayerName := strings.ToLower(name)
 	for _, cape := range capeGroups.Capes {
 		for _, playerUUID := range cape.UUID {
@@ -128,22 +128,27 @@ func LoadCapesFromFile(filePath string) (CapeGroups, error) {
 
 func GetCapes(name string, capeGroups CapeGroups) []map[string]interface{} {
 	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
-	resp, err := http.Get(url)
+	req, _ := http.NewRequest("GET", url, nil)
+	req.Header.Set("User-Agent", "Mozilla/5.0")
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
 	if err != nil {
+		fmt.Printf("Erreur HTTP : %v\n", err)
 		return nil
 	}
 	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		fmt.Printf("Erreur lors de la lecture de la réponse : %v\n", err)
+		fmt.Printf("Erreur lecture body : %v\n", err)
 		return nil
 	}
 
 	var response CapesResponse
 	err = json.Unmarshal(body, &response)
 	if err != nil {
-		fmt.Printf("Erreur de décodage JSON : %v\n", err)
+		fmt.Printf("Erreur JSON : %v\n", err)
 		return nil
 	}
 

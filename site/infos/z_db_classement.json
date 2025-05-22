@@ -910,9 +910,18 @@
       "db_version": 3
     },
     {
+      "uuid": "b671d255-23e2-4b5e-b027-38e019115d8c",
+      "capes": 15,
+      "score": 17,
+      "actualname": "Yehx",
+      "badge": "all-events",
+      "capelist": [{"name": "2013"},{"name": "vanilla_cape"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "yearn"},{"name": "common"},{"name": "founders"},{"name": "pan"}],
+      "db_version": 3
+    },
+    {
       "uuid": "cc4b7d74-bbe2-4310-9106-0e52d292c758",
       "capes": 15,
-      "score": 16,
+      "score": 13,
       "actualname": "Leroidesafk",
       "badge": "all-commons",
       "capelist": [{"name": "mcc"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "vanilla_cape"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "yearn"},{"name": "common"},{"name": "pan"},{"name": "founders"}],
@@ -1259,15 +1268,6 @@
       "badge": "gift-by-mojang",
       "capelist": [{"name": "mojira"},{"name": "migrator_cape"},{"name": "cherry"},{"name": "vanilla_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcc"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "yearn"}],
       "db_version": 3
-    },
-    {
-      "uuid": "b671d255-23e2-4b5e-b027-38e019115d8c",
-      "capes": 12,
-      "score": 17,
-      "actualname": "Yehx",
-      "badge": "all-events",
-      "capelist": [{"name": "2013"},{"name": "vanilla_cape"},{"name": "mcc"},{"name": "migrator_cape"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"},{"name": "mcexp"},{"name": "mojangoffice"},{"name": "menace"},{"name": "home"},{"name": "yearn"}],
-      "db_version": 2
     },
     {
       "uuid": "617ca751-bf5c-43d5-878a-2a1026dd4cbf",
@@ -8774,6 +8774,15 @@
       "badge": "",
       "capelist": [{"name": "cobalt"},{"name": "mcc"},{"name": "cherry"},{"name": "15A"},{"name": "twitch"},{"name": "tiktok"}],
       "db_version": 0
+    },
+    {
+      "uuid": "e4043e51-89ef-430f-94a5-7443f6324cea",
+      "capes": 6,
+      "score": 4,
+      "actualname": "iSxckk",
+      "badge": "",
+      "capelist": [{"name": "oxeye"},{"name": "migrator_cape"},{"name": "15A"},{"name": "menace"},{"name": "home"},{"name": "pan"}],
+      "db_version": 3
     },
     {
       "uuid": "78114290-566b-4467-a335-a2499775bd55",
