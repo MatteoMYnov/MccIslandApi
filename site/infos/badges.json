@@ -1,7 +1,7 @@
 { 
   "badges" : [
     {"custom-model": {"restriction":"one","capes":[],"uuid":["e6b5c088-0680-44df-9e1b-9bf11792291b","61699b2e-d327-4a01-9f1e-0ea8c3f06bc6","1e18d5ff-643d-45c8-b509-43b8461d8614"]}},
-    {"unique-cape": {"restriction":"one","capes":["birthday", "dB", "millionth", "prismarine", "turtle", "sniffer", "snowman", "spade", "translatorjapanese", "bacon"],
+    {"unique-cape": {"restriction":"one","capes":["birthday", "dB", "millionth", "prismarine", "turtle", "sniffer", "snowman", "spade", "translatorjapanese", "bacon","oceye"],
           "uuid":[]}},
     {"perfect-mojang-employee": {"restriction":"all","capes":["mojangold", "mojangstudios", "mojang"],
       "uuid":[]}},

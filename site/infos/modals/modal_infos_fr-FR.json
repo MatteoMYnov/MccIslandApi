@@ -251,6 +251,15 @@
         ],
         "description": "Offerte à LolFoxy2 par un employé de Mojang Studios après avoir résolu des problèmes de migration avec son compte Mojang. La cape a été retirée après que l'employé se soit rendu compte de sa rareté. Le 24 janvier 2023, elle a également été découverte pendant une courte période sur le compte JoinGrave. La cape n'avait jamais été vue auparavant."
     },
+    "oxeye": {
+        "name": "Oxeye Cape",
+        "date": "Obtention : 19 Mai 2025",
+        "images": [
+            {"URL": "../img/capes/dummy/oxeye-cape.png","Alt": "Oxeye Cape"},
+            {"URL": "../img/capes/dummy/oxeye-elytra.png","Alt": "Oxeye Elytra"}
+        ],
+        "description": "La cape Oxeye a été offerte au joueur Isxckk le 19 mai 2025 vers 20h50, sans annonce officielle ni raison connue, rappelant des cas similaires comme la cape Vanilla attribuée par un employé de Mojang. Jamais vue auparavant, elle arbore un design noir avec un logo central d'Oxeye Game Studios, tandis que sa texture comporte un fond blanc non visible en jeu, une méthode typique des anciennes capes datant probablement de 2016, ce qui laisse penser qu'elle aurait été conçue à cette époque, possiblement par Jeb, pour être offerte à l'équipe du jeu Cobalt, propriété de Mojang, sans que cela n'ait jamais été fait. Le joueur Isxckk, âgé de 22 ans et possédant 14 prénames dont \"BlackFaced\", un nom qui accentue l'idée qu'il n'évolue pas dans un cadre professionnel, n'a aucun lien connu avec Mojang, rendant l'attribution encore plus mystérieuse. Après avoir reçu la cape, il crée un compte NameMC et se connecte au serveur BlockMania, avant que la cape ne lui soit retirée dès le 20 mai 2025. Aujourd'hui, très peu de joueurs ont pu l'apercevoir en jeu ou en conserver une capture d'écran, la première connue étant celle du joueur Scorpionem, et cette apparition soudaine relance chez la communauté l'hypothèse que d'autres capes, jamais révélées mais déjà présentes dans les serveurs internes de Mojang, pourraient exister sans avoir encore été rendues publiques."
+    },
     "birthday": {
         "name": "Birthday Cape",
         "date": "Obtention : Aucune date n'a été donnée",
