@@ -487,7 +487,8 @@
             {"URL": "../img/capes/dummy/cobalt-cape.png", "Alt": "Cobalt Cape"},
             {"URL": "../img/capes/dummy/mojira-cape.png", "Alt": "Mojira Moderator Cape"},
             {"URL": "../img/capes/dummy/translator-cape.png", "Alt": "Translator Cape"},
-            {"URL": "../img/capes/dummy/realms-cape.png", "Alt": "Realms MapMaker Cape"}
+            {"URL": "../img/capes/dummy/realms-cape.png", "Alt": "Realms MapMaker Cape"},
+            {"URL": "../img/capes/dummy/oxeye-cape.png", "Alt": "Oxeye Cape"}
         ]
     },
     "unique-cape": {
@@ -506,7 +507,8 @@
             {"URL": "../img/capes/dummy/snowman-cape.png", "Alt": "JulianClark's Cape"},
             {"URL": "../img/capes/dummy/spade-cape.png", "Alt": "Spade Cape"},
             {"URL": "../img/capes/dummy/sniffer-cape.png", "Alt": "Test Cape"},
-            {"URL": "../img/capes/dummy/translatorchinese-cape.png", "Alt": "Translator Cape (Chinese)"}
+            {"URL": "../img/capes/dummy/translatorchinese-cape.png", "Alt": "Translator Cape (Chinese)"},
+            {"URL": "../img/capes/dummy/oxeye-cape.png", "Alt": "Oxeye Cape"}
         ]
     },
     "custom-model": {
