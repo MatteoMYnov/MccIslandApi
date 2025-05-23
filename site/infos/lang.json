@@ -16,7 +16,8 @@
         "cl-filter": "Filtre de Capes",
         "wallet": "Porte-feuille",
         "trophies": "Trophées",
-        "badges": "Badges"
+        "badges": "Badges",
+        "rdm-player-button": "(Utiliser l'option aléatoire aide à mettre à jour la base de données avec ses données actuellement obsolètes, merci !)"
     },
     "en-US": {
         "asked_for_theme": "This player has requested the site administrator to assign them a custom theme.",
@@ -35,7 +36,8 @@
         "cl-filter": "Capes Filter",
         "wallet": "Wallet",
         "trophies": "Trophies",
-        "badges": "Badges"
+        "badges": "Badges",
+        "rdm-player-button": "(Using the random option helps to update the database on its current out-of-date data, thank you!)"
     },
     "es-ES": {
         "asked_for_theme": "Este jugador ha solicitado al administrador del sitio que le asigne un tema personalizado.",
@@ -54,7 +56,8 @@
         "cl-filter": "Filtro de Capas",
         "wallet": "Cartera",
         "trophies": "Trofeos",
-        "badges": "Insignias"
+        "badges": "Insignias",
+        "rdm-player-button": "(¡Usar la opción aleatoria ayuda a actualizar la base de datos con sus datos actualmente desactualizados, gracias!)"
     },
     "de-DE": {
         "asked_for_theme": "Dieser Spieler hat den Administrator der Website gebeten, ihm ein benutzerdefiniertes Thema zuzuweisen.",
@@ -73,6 +76,7 @@
         "cl-filter": "Cape-Filter",
         "wallet": "Geldbörse",
         "trophies": "Trophäen",
-        "badges": "Abzeichen"
+        "badges": "Abzeichen",
+        "rdm-player-button": "(Die Zufallsoption hilft, die Datenbank mit ihren derzeit veralteten Daten zu aktualisieren, danke!)"
     }
 }

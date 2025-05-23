@@ -29,7 +29,7 @@
                     </li>                    
                     <li class="navbar-actioners">
                         <form action="/{{.Lang}}/menu" method="get" class="input-group">
-                            <img src="../img/utilities/refresh.png" data-tippy-content="Random Player<br><br>(Using the random option helps to update the database on its current out-of-date data, thank you!)" class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
+                            <img src="../img/utilities/refresh.png" data-tippy-content='Random Player<br><br>{{index .Translations .Lang "rdm-player-button"}}' class="refresh no-select cursor" onclick="refreshSearch()" draggable="false">
                             <input type="text" name="q" placeholder="Find Player" class="find-player" id="playerInput" required style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">
                             <button class="show-button cursor" type="submit" style="background-color: {{if .BackgroundUUID}}{{.BackgroundDark}}{{else}}#491F1F{{end}};">Show</button>
                         </form>
