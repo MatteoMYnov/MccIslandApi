@@ -18,15 +18,6 @@ type BadgeGroups struct {
 	Badges []map[string]BadgeGroup `json:"badges"`
 }
 
-// Fonction pour charger les badges d'un joueur à partir de son nom
-func LoadBadgesByName(name string) []string {
-	capes := GetCapeNames(name)
-	if capes == nil {
-		return LoadBadges(name, []string{})
-	}
-	return LoadBadges(name, capes)
-}
-
 // Fonction pour charger les badges en fonction des capes et du nom
 func LoadBadges(name string, capes []string) []string {
 	badges, err := LoadBadgesFromFile("./site/infos/badges.json")

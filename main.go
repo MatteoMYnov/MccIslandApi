@@ -360,9 +360,16 @@ func menuHandler(w http.ResponseWriter, r *http.Request) {
 		playerClass = "playerName"
 	}
 
+	// Utilisation des la fonctionles infos du joueur
 	playerUUID, IGN := minecraft.GetUUID(IGN) // Utilisation de playerUUID pour obtenir les infos MCC
 	playerCapesJSON := minecraft.LoadCapesByName(IGN)
-	playerBadgesJSON := minecraft.LoadBadgesByName(IGN)
+	var capeNames []string
+	for _, capeData := range playerCapesJSON {
+		if name, ok := capeData["cape"].(string); ok {
+			capeNames = append(capeNames, name)
+		}
+	}
+	playerBadgesJSON := minecraft.LoadBadges(IGN, capeNames)
 
 	firstBadge := ""
 	if len(playerBadgesJSON) > 0 {
