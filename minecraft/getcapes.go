@@ -33,67 +33,6 @@ type CapesResponse struct {
 	Capes    []Cape `json:"capes"`
 }
 
-// Fonction pour récupérer les noms des capes d'un utilisateur, incluant celles par UUID
-func GetCapeNames(name string) []string {
-	url := fmt.Sprintf("https://capes.me/api/user/%s", name)
-
-	// Création de la requête avec User-Agent "Mozilla/5.0"
-	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Set("User-Agent", "Mozilla/5.0")
-
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		fmt.Printf("Erreur HTTP : %v\n", err)
-		return nil
-	}
-	defer resp.Body.Close()
-
-	// Lire le corps de la réponse
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Printf("Erreur lecture body : %v\n", err)
-		return nil
-	}
-
-	// Décoder la réponse JSON
-	var response CapesResponse
-	err = json.Unmarshal(body, &response)
-	if err != nil {
-		fmt.Printf("Erreur JSON : %v\nContenu brut : %s\n", err, body)
-		return nil
-	}
-
-	var capesList []string
-
-	// Ajouter les capes non supprimées de l'API
-	for _, cape := range response.Capes {
-		if !cape.Removed {
-			capesList = append(capesList, cape.Type)
-		}
-	}
-
-	// Charger les capes forcées (locale)
-	capeGroups, err := LoadCapesFromFile("./site/infos/capes.json")
-	if err != nil {
-		fmt.Printf("Erreur lors du chargement des capes locales : %v\n", err)
-		return capesList
-	}
-
-	// Ajouter les capes associées à l'utilisateur via UUID
-	normalizedPlayerName := strings.ToLower(name)
-	for _, cape := range capeGroups.Capes {
-		for _, playerUUID := range cape.UUID {
-			if strings.ToLower(GetName(playerUUID)) == normalizedPlayerName {
-				capesList = append(capesList, cape.Name)
-				break
-			}
-		}
-	}
-
-	return capesList
-}
-
 // Fonction pour charger les capes par nom
 func LoadCapesByName(name string) []map[string]interface{} {
 	capesList, err := LoadCapesFromFile("./site/infos/capes.json")
