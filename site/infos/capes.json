@@ -27,6 +27,7 @@
     {"name": "2015", "type": "rare", "title": "Minecon 2015", "score": 4, "uuid": []},
     {"name": "2016", "type": "rare", "title": "Minecon 2016", "score": 3, "uuid": []},
     {"name": "mcexp", "type": "rare", "title": "Minecraft Experience", "score": 2, "uuid": []},
+    {"name": "founders", "type": "common", "title": "Founder's", "score": 2, "uuid": []},
     {"name": "mcc", "type": "common", "title": "MCC 15th Year", "score": 1, "uuid": []},
     {"name": "yearn", "type": "common", "title": "Yearn", "score": 1, "uuid": []},
     {"name": "mojangoffice", "type": "common", "title": "Mojang Office", "score": 1, "uuid": []},
@@ -37,6 +38,8 @@
     {"name": "cherry", "type": "common", "title": "Cherry Blossom", "score": 1, "uuid": []},
     {"name": "vanilla_cape", "type": "common", "title": "Vanilla", "score": 1, "uuid": []},
     {"name": "15A", "type": "common", "title": "15th Anniversary", "score": 1, "uuid": []},
+    {"name": "pan", "type": "common", "title": "Pan", "score": 1, "uuid": []},
+    {"name": "common", "type": "common", "title": "Common", "score": 1, "uuid": []},
     {"name": "migrator_cape", "type": "common", "title": "Migrator", "score": 1, "uuid": []}
   ]
 }
